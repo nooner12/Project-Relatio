@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mv \"0100 Knowledge Architect/KOS-0100 - Knowledge Architect Role Definition.md\" \"ROLE-0001 - Knowledge Architect.md\")",
+      "Bash(mv \"0101 Research Specialist.md\" \"ROLE-0002 - Research Specialist.md\")",
+      "Bash(mv \"0102 Research Council Coordinator.md\" \"ROLE-0003 - Research Council Coordinator.md\")",
+      "Bash(rmdir \"0100 Knowledge Architect\")",
+      "Bash(grep -v '```')",
+      "Bash(mkdir -p \"Entities\")",
+      "Bash(mkdir -p \"INV-0003 - Wu Wei\")",
+      "Bash(mkdir -p \"Sources\")",
+      "Bash(mv \"INV-0001 - Jesus and Daoism Teachings/SRC-0001 - Canonical Gospels.md\" \"Sources/\")",
+      "Bash(mv \"INV-0001 - Jesus and Daoism Teachings/SRC-0002 - Philosophical Daoist Corpus.md\" \"Sources/\")",
+      "Bash(mv \"INV-0002 - Phantom Traffic Jams/SRC-0003 - Sugiyama 2008 Circular-Track Experiment.md\" \"Sources/\")",
+      "Bash(mv \"INV-0002 - Phantom Traffic Jams/SRC-0004 - Traffic-Flow Instability and Jamiton Modeling.md\" \"Sources/\")",
+      "Bash(ls -a .claude/)",
+      "Bash(mkdir -p .claude/agents)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(cat .claude/settings.json)",
+      "Bash(cat .claude/settings.local.json)",
+      "Bash(python -c \"import json; d=json.load\\(open\\('.claude/settings.json'\\)\\); print\\('valid JSON'\\); print\\('ask rules:', len\\(d['permissions']['ask']\\)\\); print\\('allow rules:', len\\(d['permissions']['allow']\\)\\)\")",
+      "Bash(node -e \"const d=require\\('./.claude/settings.json'\\); console.log\\('valid JSON'\\); console.log\\('ask rules:', d.permissions.ask.length\\); console.log\\('allow rules:', d.permissions.allow.length\\)\")"
+    ]
+  }
+}

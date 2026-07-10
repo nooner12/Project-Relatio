@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "permissions": {
+    "ask": [
+      "Write(00 Constitution/**)",
+      "Edit(00 Constitution/**)",
+      "Write(01 KOS/01 Kernel/**)",
+      "Edit(01 KOS/01 Kernel/**)",
+      "Write(01 KOS/02 Standards/**)",
+      "Edit(01 KOS/02 Standards/**)",
+      "Write(01 KOS/03 Roles/**)",
+      "Edit(01 KOS/03 Roles/**)"
+    ],
+    "allow": [
+      "Write(01 KOS/06 Knowledge Base/**)",
+      "Edit(01 KOS/06 Knowledge Base/**)"
+    ]
+  }
+}

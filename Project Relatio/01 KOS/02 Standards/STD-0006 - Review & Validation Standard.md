@@ -1,0 +1,301 @@
+---
+title: STD-0006 - Review & Validation Standard
+document_type: Standards Document
+version: 1.1
+status: Adopted
+created: 2026-07-09
+category:
+  - Knowledge Operating System
+  - Standards
+  - Review Architecture
+parent_documents:
+  - KOS-0011 Governance, Stewardship & Evolution Framework
+  - KOS-0009 Knowledge Representation & Information Architecture Framework
+  - STD-0005 Lifecycle & Revision Standard
+related_documents:
+  - STD-0001 Naming & Identification Standard
+  - STD-0002 Metadata & YAML Standard
+  - STD-0003 Classification & Discovery Standard
+  - STD-0004 Relationship & Linking Standard
+  - STD-0007 Terminology & Semantic Stewardship Standard
+tags:
+  - ProjectRelatio
+  - Standards
+  - Review
+  - Validation
+  - QualityAssurance
+  - Governance
+---
+
+# STD-0006
+
+# Project Relatio Review & Validation Standard
+
+## Version 1.1
+
+## Adopted Standards Document
+
+---
+
+# 1. Purpose
+
+The Review & Validation Standard defines how compliance with the other Standards documents (STD-0001, STD-0002, STD-0003, STD-0004, STD-0005, STD-0007) is verified.
+
+A standard that defines rules but never checks them is a suggestion. STD-0006 closes that gap: it is the mechanism by which Project Relatio confirms that a Knowledge Object actually follows the architecture it claims to belong to.
+
+This standard was authored after a direct audit of the vault surfaced concrete, non-hypothetical validation failures — malformed YAML frontmatter, document_type values used inconsistently with the approved list, dangling references to documents that do not exist, and a document still in Draft being treated elsewhere as if it were Adopted. STD-0006 exists because these problems were found, not because they were anticipated.
+
+---
+
+# 2. Standard Principle
+
+Project Relatio adopts:
+
+> A rule that is never checked will eventually be violated without anyone noticing.
+
+Review and validation are not bureaucratic overhead. They are how the architecture keeps its word to itself.
+
+---
+
+# 3. Scope
+
+This standard governs:
+
+- when review and validation occur,
+- what is checked,
+- how non-conformance is recorded,
+- how findings relate to governance under KOS-0011.
+
+This standard does not define:
+
+- who performs review (a Roles-layer question, deferred — see Section 13),
+- a mandatory calendar cadence for periodic audits (an Operations-layer question, deferred until Templates and Operations are built),
+- remediation of any specific document's existing non-conformance (assigned to the Standards Architecture Retrospective, not to this standard).
+
+---
+
+# 4. Review Triggers
+
+Validation against this standard occurs at four points:
+
+---
+
+## 4.1 Creation
+
+Before a new Knowledge Object moves from Draft to Reviewed (per STD-0005 §7–8), it is checked against the Validation Checklist (Section 5).
+
+---
+
+## 4.2 Status Transition
+
+Any change to a document's Maturity State or Operational State (STD-0005 §4) re-triggers validation. A document moving to Adopted, Superseded, or Archived must have its metadata and relationships updated to match — status text alone is not sufficient.
+
+---
+
+## 4.3 Standard Amendment
+
+When a governing Standard itself changes (e.g., STD-0002's approved document_type list is widened), previously adopted documents are not automatically re-validated, but the amendment is logged as an open item for the next Standards Architecture Retrospective, so drift between old documents and the current standard is tracked rather than silently accumulating.
+
+---
+
+## 4.4 Periodic Audit
+
+Independent of any single document's lifecycle, the vault as a whole may be audited against this checklist. The Architecture Status Note produced 2026-07-09 is the first instance of this — an ad hoc audit preceding STD-0006's own adoption. Future audits follow the same checklist this standard defines.
+
+---
+
+# 5. Validation Checklist
+
+Every check below corresponds to an existing Standard. STD-0006 does not introduce new rules — it defines how the existing rules are verified.
+
+---
+
+## 5.1 Naming Conformance (STD-0001)
+
+Check that:
+
+- the identifier follows `TYPE-NNNN` with four digits,
+- the filename follows `[IDENTIFIER] - [TITLE]`,
+- the `title` field matches the filename exactly,
+- the document sits in a folder following `[number] [category]`,
+- tags use PascalCase.
+
+---
+
+## 5.2 Metadata Conformance (STD-0002)
+
+Check that:
+
+- all required fields are present (`title`, `document_type`, `version`, `status`, `created`, `category`, `tags`),
+- `document_type` uses an approved value (STD-0002 §6, as amended),
+- `status` uses an approved value (STD-0002 §6),
+- YAML is syntactically valid — no unescaped control characters, no content duplicated outside the frontmatter block,
+- field names use `lowercase_with_underscores`,
+- dates use `YYYY-MM-DD`.
+
+---
+
+## 5.3 Classification Conformance (STD-0003)
+
+Check that `category` and tag usage follow STD-0003's classification rules and do not substitute for genuine relationships.
+
+---
+
+## 5.4 Relationship Conformance (STD-0004)
+
+Check that:
+
+- every document listed in `parent_documents` or `related_documents` actually exists in the vault,
+- relationship vocabulary is specific where possible (STD-0004; `related_to` used sparingly),
+- a document does not list a Superseded or Archived document as a live parent or related document without acknowledging its status.
+
+---
+
+## 5.5 Lifecycle Conformance (STD-0005)
+
+Check that:
+
+- Maturity State and Operational State are both present and tracked independently,
+- a Superseded document identifies its successor and vice versa,
+- no document elsewhere in the vault cites a Superseded or Archived document as though it were current,
+- version numbers move in the direction implied by the Revision History.
+
+---
+
+## 5.6 Terminology Conformance (STD-0007)
+
+Check that preferred terminology (e.g., "Knowledge Object") is used consistently rather than superseded or ad hoc terms.
+
+---
+
+## 5.7 Evidence Integrity (KOS-0003 §12.1)
+
+Applies to research objects (Claim, Source, Finding, Investigation). Check that:
+
+- no source, citation, author, date, DOI, URL, page/verse reference, or numeric result has been **invented**;
+- every cited source can be **located and verified**, or its unverifiability is explicitly recorded as a limitation;
+- a cited passage **actually supports** what it is said to support (source fidelity);
+- figures are reported at the precision the evidence supports (no false precision);
+- uncertainty about a reference is **stated**, not filled in with a plausible substitute.
+
+**Fabricated or unverifiable evidence is an automatic `Blocked` verdict (§7.3).** This check is not discretionary and is never downgraded to Flagged.
+
+---
+
+# 6. Non-Conformance Handling
+
+Failing a check does not retroactively revoke a document's Adopted status, and does not require an immediate edit. Non-conformance is:
+
+1. recorded — as a finding, with the specific check that failed,
+2. attributed — to a specific document and field,
+3. scheduled — for remediation during the next governed pass over that document (a Retrospective, an Integration Update, or a direct revision), rather than fixed reactively and incrementally.
+
+This mirrors CLAUDE.md's existing rule against spontaneous restructuring: finding a problem is not, by itself, authorization to fix it outside a governed pass.
+
+---
+
+# 7. Review Outcomes
+
+A validated document receives one of three outcomes. These are review outcomes, not values for the `status` metadata field (STD-0002 §6) — a Flagged or Blocked document keeps its existing `status`; the outcome is recorded as a finding (Section 6), not as new frontmatter.
+
+---
+
+## 7.1 Conformant
+
+Passes all applicable checks in Section 5.
+
+---
+
+## 7.2 Flagged
+
+Fails one or more checks but remains usable; the finding is logged per Section 6 and does not block continued use or citation of the document.
+
+---
+
+## 7.3 Blocked
+
+Reserved for two cases:
+
+1. **Structural:** non-conformance makes a document unreadable (e.g., invalid YAML that breaks parsing). Dependents cannot verify a reference they cannot parse.
+2. **Epistemic:** **fabricated or unverifiable evidence** (KOS-0003 §12.1, checked at §5.7), an unsupported core claim, or incoherent reasoning.
+
+A Blocked object must be corrected before anything depends on it. A Blocked verdict is never resolved by lowering its severity.
+
+---
+
+## 7.4 Appeal and Preservation of Disagreement
+
+A **Blocked** verdict may be contested by the object's author. Per CON-0003 GP-004 (*Preserve Disagreement*):
+
+- A contested Blocked verdict escalates to the **Vision Steward (ROLE-0005)** with **both positions recorded in full**.
+- The dissenting position is **never deleted** when a dispute is resolved; it is retained in the object's record.
+- Disputes are classified using the Kernel's existing taxonomy (KOS-0011 §11): **CR-001** Evidence Conflict, **CR-002** Interpretation Conflict, **CR-003** Framework Conflict — and resolved by the process in CON-0003 §8.
+
+Consensus does not equal truth. A minority position may contain valid insight and is not discarded for lack of agreement.
+
+---
+
+# 8. Validation Authority
+
+Validation under this standard is discharged by two roles with **non-overlapping** authority:
+
+| Authority | Role | Warrant | Scope |
+|---|---|---|---|
+| **Structural validation** | ROLE-0001 Knowledge Architect | KOS-0011 ST-001; CON-0003 §4.2, §4.4 | §5.1–§5.6: naming, metadata, classification, relationships, lifecycle, terminology, graph integrity |
+| **Epistemic validation** | ROLE-0004 Critical Reviewer | KOS-0011 ST-004; CON-0003 §4.3, §4.5 | §5.7 and KOS-0003: evidence, reasoning, confidence calibration, bias, source fidelity, fabrication |
+
+Neither role may issue a verdict in the other's scope; each escalates such findings to the other. Disputes between them, or between either and a research author, follow §7.4.
+
+Consistent with CON-0003 GP-003 (*No Authority Over Truth*), **neither role adjudicates whether a claim is true.** They determine only whether it is *structurally sound* and *epistemically warranted*.
+
+---
+
+# 9. Relationship to Other Standards
+
+STD-0006 depends on:
+
+- STD-0001 Naming & Identification Standard
+- STD-0002 Metadata & YAML Standard
+- STD-0003 Classification & Discovery Standard
+- STD-0004 Relationship & Linking Standard
+- STD-0005 Lifecycle & Revision Standard
+- STD-0007 Terminology & Semantic Stewardship Standard
+
+STD-0006 does not supersede or restate any of them — it verifies them.
+
+---
+
+# 10. Governance
+
+STD-0006 is maintained under:
+
+KOS-0011 — Governance, Stewardship & Evolution Framework.
+
+Changes require:
+
+- documentation,
+- review,
+- version update.
+
+---
+
+# 11. Closing Principle
+
+Project Relatio adopts:
+
+> An architecture is only as trustworthy as its least-checked document.
+
+Review and validation are how Project Relatio finds out whether that trust is earned, rather than assuming it.
+
+---
+
+# 12. Revision History
+
+|Version|Date|Status|Description|
+|---|---|---|---|
+|1.0|2026-07-09|Adopted|Initial review and validation standard, grounded in findings from the pre-adoption Architecture Status Note audit|
+|1.1|2026-07-09|Adopted|Governance assessment (R2/R6/R7): added §5.7 Evidence Integrity check; expanded §7.3 Blocked to cover fabrication; added §7.4 Appeal & Preservation of Disagreement (CON-0003 GP-004, KOS-0011 §11 conflict taxonomy); replaced role-agnostic §8 with the structural/epistemic validation-authority split (ROLE-0001 / ROLE-0004)|
+
+---
+
+# End STD-0006

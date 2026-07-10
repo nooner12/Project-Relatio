@@ -1,0 +1,122 @@
+---
+title: Identifier Registry
+document_type: Navigation Document
+version: 1.4
+status: Active
+created: 2026-07-09
+parent_documents:
+  - STD-0001 Naming & Identification Standard
+  - KOS-0011 Governance, Stewardship & Evolution Framework
+related_documents:
+  - OPS-0001 Knowledge Base Organization
+  - OPS-0002 Relationship Integrity & Graph Maintenance
+tags:
+  - ProjectRelatio
+  - Operations
+  - Registry
+  - Identifiers
+---
+
+# Identifier Registry
+
+## Version 1.0
+
+## Active Navigation Document
+
+---
+
+# 1. Purpose
+
+The authoritative inventory of every assigned identifier in Project Relatio. It fulfils the registry promised by STD-0001 §18, and serves two operational functions:
+
+- **Collision prevention** — the single place to check the next free number before assigning an identifier (Pressure Test F-9).
+- **Graph source of truth** — the canonical list of what exists, so relationship integrity (OPS-0002) can flag references to non-existent objects.
+
+This is a living record; update it whenever an identifier is assigned, retired, or superseded.
+
+---
+
+# 2. Registry (as of 2026-07-09)
+
+## CON — Constitution
+CON-0001, CON-0002, CON-0003, CON-0004. — **Next: CON-0005.**
+
+## KOS — Kernel Operating System
+KOS-0001, KOS-0003, KOS-0004, KOS-0005, KOS-0006, KOS-0007, KOS-0008, KOS-0009, KOS-0010, KOS-0011, KOS-0012.
+- KOS-0002 — **Superseded** by KOS-0004 (archived).
+- KOS-0100 — **Retired**; migrated to ROLE-0001.
+- KOS-0200 — Draft ("Standards Framework"); candidate for supersession.
+- KOS-0013 … KOS-0016 — **Reserved** (deferred candidates: Human Development, Communication, Ethical Reasoning, Reality Integration — see Kernel Status §8).
+- **Next free: KOS-0017.**
+
+## STD — Standards
+STD-0001, STD-0002, STD-0003, STD-0004, STD-0005, STD-0006, STD-0007. — **Next: STD-0008.**
+
+## ADR — Architecture Decision Records
+- **ADR-GOV-0001** (Governance and Role Reconciliation) — Adopted. First ADR; inaugurates the practice.
+- ADR-KOS-0001 … ADR-KOS-0010 are **referenced but unwritten** (phantom; Retrospective C-9, Backlog GB-2026-005).
+- Format: `ADR-[CATEGORY]-NNNN` (GOV, KOS, …). — **Next: ADR-GOV-0002.**
+
+## ROLE — Roles
+- ROLE-0001 (Knowledge Architect) — **Adopted v1.1**. Implements ST-001.
+- ROLE-0002 (Research Specialist) — **Adopted v1.0**. Implements ST-002.
+- ROLE-0003 (Research Council Coordinator) — **RETIRED** 2026-07-09 (`07 Archive/`; no warrant; ADR-GOV-0001).
+- ROLE-0004 (Critical Reviewer) — **Adopted v1.0**. Implements ST-004; epistemic validation (STD-0006 §8).
+- ROLE-0005 (Vision Steward) — **Adopted v1.0**. Implements CON-0003 §4.1; owner authority (with constitutional limits).
+— **Next: ROLE-0006.** (See the **Roles Index** for the canonical Function → ST-role → ROLE mapping.)
+
+## TPL — Templates
+TPL-0001 (Claim), TPL-0002 (Source), TPL-0003 (Investigation), TPL-0004 (Finding), TPL-0005 (ADR). — **Next: TPL-0006** (candidate: Entity template, if entities recur).
+
+## OPS — Operations
+OPS-0001 (KB Organization), OPS-0002 (Relationship Integrity), OPS-0003 (Research Workflow). — **Next: OPS-0004.**
+Unnumbered Operations records: Identifier Registry, Governance Backlog, Standing Authorizations.
+
+## INV — Investigations
+INV-0001 (Jesus & Daoism), INV-0002 (Phantom Traffic Jams), INV-0003 (Wu Wei), INV-0004 (Metformin Discontinuation & T2D Remission). — **Next: INV-0005.**
+
+## CLM — Claims
+CLM-0001, CLM-0002 (INV-0001); CLM-0003, CLM-0004 (INV-0002); CLM-0005, CLM-0006 (INV-0003); CLM-0007 … CLM-0012 (INV-0004). — **Next: CLM-0013.**
+
+## SRC — Sources
+SRC-0001 (Gospels), SRC-0002 (Daoist Corpus), SRC-0003 (Sugiyama 2008), SRC-0004 (Jamiton Modeling), SRC-0005 (Slingerland), SRC-0006 (DiRECT Trial Programme), SRC-0007 (Taylor Twin-Cycle Mechanism), SRC-0008 (Virta Health Trial), SRC-0009 (STAMPEDE Surgery Trial), SRC-0010 (ADA/EASD Remission Consensus), SRC-0011 (Diet & Exercise Literature). — **Next: SRC-0012.**
+
+## ENT — Entities
+ENT-0001 (Wu Wei), ENT-0002 (Ziran). — **Next: ENT-0003.**
+
+## FND — Findings
+FND-0001 (Resonant Ethic, Opposed Ultimates), FND-0002 (Jams as Emergent Instability), FND-0003 (Wu Wei as Non-Forcing Action), FND-0004 (Evidence-Based Pathways to T2D Remission & Safe De-prescribing). — **Next: FND-0005.**
+
+---
+
+# 3. Unnumbered Meta-Documents
+
+These are authoritative navigational/architectural documents that intentionally carry **no** `TYPE-NNNN` identifier (precedent: indexes and status records):
+
+- KOS Architecture Manifest; Kernel Index; KOS Dependency Map; Kernel Status.
+- Standards Index; Standards Dependency Map; Standards Status; Standards Architecture Retrospective.
+- Roles Index.
+- Pressure Test Report – RQ-0001; Second-Run Friction Assessment – RQ-0002; Third-Run Assessment – RQ-0003.
+- Identifier Registry (this document); Governance Backlog; Standing Authorizations.
+
+---
+
+# 4. Maintenance
+
+Per OPS-0002 and STD-0006: before assigning a new identifier, consult this registry and use the listed "Next" value; after assigning, update it. Retirements and supersessions are recorded here as well as on the object (STD-0005).
+
+---
+
+# 5. Revision History
+
+|Version|Date|Status|Description|
+|---|---|---|---|
+|1.0|2026-07-09|Active|Initial registry; fulfils STD-0001 §18. Inventories all identifiers assigned through the third research workflow.|
+|1.1|2026-07-09|Active|Roles layer authored: ROLE-0001 Adopted; ROLE-0002/0003 Draft; ROLE-0004 (Critical Reviewer) added as a new proposed role. OPS-0003 (Research Workflow) registered.|
+|1.2|2026-07-09|Active|Governance assessment: ROLE-0003 retired; ROLE-0005 (Vision Steward) added; ADR class opened (ADR-GOV-0001); TPL-0005 (ADR template) added; Governance Backlog and Standing Authorizations registered.|
+|1.3|2026-07-09|Active|ROLE-0002/0004/0005 ratified to Adopted v1.0.|
+|1.4|2026-07-10|Active|Fourth research workflow (INV-0004, RQ-0004, T2D remission / metformin): registered INV-0004; CLM-0007…CLM-0012; SRC-0006…SRC-0011; FND-0004. Objects Draft, pending ROLE-0004 review and ROLE-0001 conformance.|
+
+---
+
+# End Identifier Registry

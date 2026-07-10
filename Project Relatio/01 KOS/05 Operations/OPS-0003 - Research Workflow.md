@@ -1,0 +1,144 @@
+---
+title: OPS-0003 - Research Workflow
+document_type: Operations Document
+version: 1.1
+status: Adopted
+created: 2026-07-09
+parent_documents:
+  - KOS-0008 Research Methodology & Investigation Framework
+  - KOS-0012 Knowledge Object Model
+  - STD-0006 Review & Validation Standard
+related_documents:
+  - ROLE-0001 Knowledge Architect
+  - ROLE-0002 Research Specialist
+  - ROLE-0004 Critical Reviewer
+  - ROLE-0005 Vision Steward
+  - OPS-0001 Knowledge Base Organization
+  - OPS-0002 Relationship Integrity & Graph Maintenance
+tags:
+  - ProjectRelatio
+  - Operations
+  - ResearchWorkflow
+  - Roles
+---
+
+# OPS-0003
+
+# Research Workflow
+
+## Version 1.1
+
+## Adopted Operations Document
+
+---
+
+# 1. Purpose
+
+This is the **operating procedure of Project Relatio's actual purpose**: turning a research question into thorough, disciplined, evidenced knowledge.
+
+It is not theory. It is the distilled procedure of three completed investigations (INV-0001 Jesus/Daoism, INV-0002 phantom traffic jams, INV-0003 wu wei), formalised so the next question runs the same disciplined circuit.
+
+---
+
+# 2. Scope Guardrail
+
+> Project Relatio's **current** purpose is to conduct thorough and disciplined research on the owner's questions. Being an exemplary knowledge architecture is a *consequence* of that, not the goal itself.
+
+Every step below must earn its place by making research **better**, not by making the architecture more complete. A step that adds ceremony without catching a real failure should be removed.
+
+---
+
+# 3. The Workflow
+
+```
+[Vision Steward ROLE-0005 / Owner]  poses a research question
+   │
+   ▼
+[Vision Steward + main session]  intake, triage, assign INV-NNNN from the Identifier Registry
+   │
+   ▼
+[Specialist ROLE-0002]
+   1. Refine & scope the question  (disambiguate terms, corpora; state the rationale)
+   2. Sources        → SRC records   (KOS-0003 §6 evaluation; state what each does NOT establish)
+   3. Claims         → CLM records   (type, evidence, 0–5 grading, assumptions, reasoning, confidence,
+                                      limitations, alternatives — KOS-0003 §12)
+   4. Entities       → ENT records   (where a concept is load-bearing or cross-investigation)
+   5. Synthesis      → FND records   (integrate claims; never exceed the weakest necessary link)
+   │
+   ▼
+[Critical Reviewer ROLE-0004]  independent epistemic challenge
+   reasoning risks → evidence grading → confidence calibration
+   → assumptions → steelmanned alternatives → motivated-reasoning check
+   Verdict: Conformant | Flagged | Blocked   (STD-0006 §7)
+   │
+   ├── Flagged/Blocked ──► back to Specialist: revise, defend with evidence, or LOWER confidence
+   │                        (disputes → Coordinator arbitrates process, or escalates to Owner)
+   ▼
+[Knowledge Architect ROLE-0001]  structural validation
+   conformance (STD-0001/0002/0003/0005/0007) + graph integrity (OPS-0002) + placement (OPS-0001)
+   │
+   ▼
+[Coordinator]  completeness check → friction/convergence assessment → Owner
+```
+
+---
+
+# 4. Non-Negotiables
+
+1. **No conclusion bypasses the epistemic pipeline** (KOS-0003 §2).
+2. **The Specialist does not certify its own work.** Independent review is structural, not optional.
+3. **Confidence only moves down under review.** Raising it requires new evidence.
+4. **A synthesis is never more confident than its weakest necessary claim.**
+5. **No investigation completes with an unresolved Blocked verdict.**
+6. **Alternatives are steelmanned before rejection.**
+7. **What cannot be settled is bracketed and said so** (historicity, metaphysics, contested scholarship).
+
+---
+
+# 5. Artefacts Produced
+
+| Step | Object | Template | Placement (OPS-0001) |
+|---|---|---|---|
+| Investigation | INV | TPL-0003 | `06 Knowledge Base/INV-NNNN - …/` |
+| Sources | SRC | TPL-0002 | `06 Knowledge Base/Sources/` |
+| Claims | CLM | TPL-0001 | investigation folder |
+| Entities | ENT | *(none yet — hand-author from KOS-0012 §5.5)* | `06 Knowledge Base/Entities/` |
+| Findings | FND | TPL-0004 | investigation folder |
+| Assessment | Review Report | — | investigation folder |
+
+Identifiers are drawn from and recorded in the **Identifier Registry**.
+
+---
+
+# 6. Implementation (RRI) — Roles as Claude Code Agents
+
+The Roles layer is **platform-independent architecture (RKA)**. In this Obsidian/Claude Code reference implementation (RRI), three roles are implemented as Claude Code subagents in `.claude/agents/`:
+
+| Role (RKA) | Agent (RRI) |
+|---|---|
+| ROLE-0002 Research Specialist | `research-specialist` |
+| ROLE-0004 Critical Reviewer | `critical-reviewer` |
+| ROLE-0001 Knowledge Architect | `knowledge-architect` |
+
+Coordination (intake, sequencing, completeness) is performed by the **Vision Steward (ROLE-0005) and the main session** orchestrating the agents — not by a separate agent or role. The former ROLE-0003 Coordinator was retired for adding ceremony without warrant (ADR-GOV-0001).
+
+**The separation matters:** the role definitions govern *what the function is and may decide*; the agent files govern *how it is invoked on this platform*. Changing agents does not change the architecture; changing a role's authority requires owner ratification (ROLE-0001 §4.2).
+
+---
+
+# 7. Relationship to Other Documents
+
+Roles: ROLE-0001…0004. Object model: KOS-0012. Epistemics: KOS-0003. Methodology: KOS-0008. Validation: STD-0006. Placement: OPS-0001. Graph: OPS-0002.
+
+---
+
+# 8. Revision History
+
+|Version|Date|Status|Description|
+|---|---|---|---|
+|1.0|2026-07-09|Adopted|Initial research workflow, distilled from three completed investigations; defines the role circuit and the RKA→RRI agent mapping|
+|1.1|2026-07-09|Adopted|Governance assessment: rerouted coordination from the retired ROLE-0003 to the Vision Steward (ROLE-0005) and the main session (ADR-GOV-0001)|
+
+---
+
+# End OPS-0003
