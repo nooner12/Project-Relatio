@@ -1,8 +1,9 @@
 ---
 title: CON-0001 - Project Relatio Vision, Mission & Core Principles
 document_type: Constitutional Instrument
-version: 1.0
+version: 1.1
 status: Adopted
+created: 2026-07-09
 category:
   - Constitution
 tags:
@@ -380,7 +381,7 @@ It does not create confidence where evidence is insufficient.
 
 # 11. Stewardship Functions
 
-Project Relatio recognizes two foundational stewardship functions.
+Project Relatio recognizes multiple stewardship functions. The two foundational ones are named here; the complete set of **five** — adding Research Integrity, Knowledge Management, and External Review — is defined in **CON-0003 §4**, and each is implemented by a role (see the Roles Index).
 
 ---
 
@@ -440,3 +441,4 @@ Project Relatio adopts:
 |---|---|---|---|
 |0.1|2026-07-09|Draft|Initial constitutional draft|
 |0.2|2026-07-09|Revised Draft|Incorporated architectural critique|
+|1.1|2026-07-11|Adopted|Recorded the prior v1.0 adoption (frontmatter showed Adopted without a revision entry); added the missing `created` date; reconciled §11 stewardship functions with CON-0003's five (foundational audit fixes 1–2).|

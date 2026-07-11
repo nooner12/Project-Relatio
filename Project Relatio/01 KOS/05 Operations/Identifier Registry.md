@@ -19,7 +19,7 @@ tags:
 
 # Identifier Registry
 
-## Version 1.0
+## Version 1.4
 
 ## Active Navigation Document
 
@@ -54,7 +54,7 @@ STD-0001, STD-0002, STD-0003, STD-0004, STD-0005, STD-0006, STD-0007. — **Next
 
 ## ADR — Architecture Decision Records
 - **ADR-GOV-0001** (Governance and Role Reconciliation) — Adopted. First ADR; inaugurates the practice.
-- ADR-KOS-0001 … ADR-KOS-0010 are **referenced but unwritten** (phantom; Retrospective C-9, Backlog GB-2026-005).
+- ADR-KOS-0001 … ADR-KOS-0010 — the former phantom references (Retrospective C-9) were **removed 2026-07-10** (GB-2026-005 resolved); these identifiers are now unused/available.
 - Format: `ADR-[CATEGORY]-NNNN` (GOV, KOS, …). — **Next: ADR-GOV-0002.**
 
 ## ROLE — Roles
@@ -73,19 +73,19 @@ OPS-0001 (KB Organization), OPS-0002 (Relationship Integrity), OPS-0003 (Researc
 Unnumbered Operations records: Identifier Registry, Governance Backlog, Standing Authorizations.
 
 ## INV — Investigations
-INV-0001 (Jesus & Daoism), INV-0002 (Phantom Traffic Jams), INV-0003 (Wu Wei), INV-0004 (Metformin Discontinuation & T2D Remission). — **Next: INV-0005.**
+INV-0001 (Jesus & Daoism), INV-0002 (Phantom Traffic Jams), INV-0003 (Wu Wei), INV-0004 (Metformin Discontinuation & T2D Remission), INV-0005 (Chronic Stress Interventions). — **Next: INV-0006.**
 
 ## CLM — Claims
-CLM-0001, CLM-0002 (INV-0001); CLM-0003, CLM-0004 (INV-0002); CLM-0005, CLM-0006 (INV-0003); CLM-0007 … CLM-0012 (INV-0004). — **Next: CLM-0013.**
+CLM-0001, CLM-0002 (INV-0001); CLM-0003, CLM-0004 (INV-0002); CLM-0005, CLM-0006 (INV-0003); CLM-0007 … CLM-0012 (INV-0004); CLM-0013 … CLM-0018 (INV-0005). — **Next: CLM-0019.**
 
 ## SRC — Sources
-SRC-0001 (Gospels), SRC-0002 (Daoist Corpus), SRC-0003 (Sugiyama 2008), SRC-0004 (Jamiton Modeling), SRC-0005 (Slingerland), SRC-0006 (DiRECT Trial Programme), SRC-0007 (Taylor Twin-Cycle Mechanism), SRC-0008 (Virta Health Trial), SRC-0009 (STAMPEDE Surgery Trial), SRC-0010 (ADA/EASD Remission Consensus), SRC-0011 (Diet & Exercise Literature). — **Next: SRC-0012.**
+SRC-0001 (Gospels), SRC-0002 (Daoist Corpus), SRC-0003 (Sugiyama 2008), SRC-0004 (Jamiton Modeling), SRC-0005 (Slingerland), SRC-0006 (DiRECT Trial Programme), SRC-0007 (Taylor Twin-Cycle Mechanism), SRC-0008 (Virta Health Trial), SRC-0009 (STAMPEDE Surgery Trial), SRC-0010 (ADA/EASD Remission Consensus), SRC-0011 (Diet & Exercise Literature), SRC-0012 (Khoury 2015 MBSR Meta-Analysis), SRC-0013 (de Vibe 2017 Campbell MBSR Review), SRC-0014 (Goyal 2014 JAMA Meditation Meta-Analysis), SRC-0015 (Goessl 2017 HRV Biofeedback Meta-Analysis), SRC-0016 (Cochrane Individual-Level Occupational Stress — Tamminga 2023), SRC-0017 (Cochrane Organizational-Level Occupational Stress), SRC-0018 (CBT-I Long-Term Meta-Analysis), SRC-0019 (Holt-Lunstad 2010 Social Relationships & Mortality), SRC-0020 (Physical Activity, Cortisol & Stress Literature), SRC-0021 (Nature Exposure & Stress Literature), SRC-0022 (Coping Theory & Problem-Focused Coping Literature), SRC-0023 (McEwen Allostatic Load Literature). — **Next: SRC-0024.**
 
 ## ENT — Entities
-ENT-0001 (Wu Wei), ENT-0002 (Ziran). — **Next: ENT-0003.**
+ENT-0001 (Wu Wei), ENT-0002 (Ziran), ENT-0003 (Allostatic Load). — **Next: ENT-0004.**
 
 ## FND — Findings
-FND-0001 (Resonant Ethic, Opposed Ultimates), FND-0002 (Jams as Emergent Instability), FND-0003 (Wu Wei as Non-Forcing Action), FND-0004 (Evidence-Based Pathways to T2D Remission & Safe De-prescribing). — **Next: FND-0005.**
+FND-0001 (Resonant Ethic, Opposed Ultimates), FND-0002 (Jams as Emergent Instability), FND-0003 (Wu Wei as Non-Forcing Action), FND-0004 (Evidence-Based Pathways to T2D Remission & Safe De-prescribing), FND-0005 (Durable Chronic-Stress Relief Requires Stressor Reduction Plus Response Regulation). — **Next: FND-0006.**
 
 ---
 
@@ -96,7 +96,7 @@ These are authoritative navigational/architectural documents that intentionally 
 - KOS Architecture Manifest; Kernel Index; KOS Dependency Map; Kernel Status.
 - Standards Index; Standards Dependency Map; Standards Status; Standards Architecture Retrospective.
 - Roles Index.
-- Pressure Test Report – RQ-0001; Second-Run Friction Assessment – RQ-0002; Third-Run Assessment – RQ-0003.
+- Per-run review/assessment reports: Pressure Test Report – RQ-0001; Second-Run Friction Assessment – RQ-0002; Third-Run Assessment – RQ-0003; Critical Review – RQ-0004 (ROLE-0004); Fourth-Run Assessment – RQ-0004 (coordinator).
 - Identifier Registry (this document); Governance Backlog; Standing Authorizations.
 
 ---
@@ -116,6 +116,7 @@ Per OPS-0002 and STD-0006: before assigning a new identifier, consult this regis
 |1.2|2026-07-09|Active|Governance assessment: ROLE-0003 retired; ROLE-0005 (Vision Steward) added; ADR class opened (ADR-GOV-0001); TPL-0005 (ADR template) added; Governance Backlog and Standing Authorizations registered.|
 |1.3|2026-07-09|Active|ROLE-0002/0004/0005 ratified to Adopted v1.0.|
 |1.4|2026-07-10|Active|Fourth research workflow (INV-0004, RQ-0004, T2D remission / metformin): registered INV-0004; CLM-0007…CLM-0012; SRC-0006…SRC-0011; FND-0004. Objects Draft, pending ROLE-0004 review and ROLE-0001 conformance.|
+|1.5|2026-07-10|Active|Fifth research workflow (INV-0005, RQ-0005, chronic-stress interventions & durability): registered INV-0005; CLM-0013…CLM-0018; SRC-0012…SRC-0023; ENT-0003 (Allostatic Load); FND-0005. Objects Draft, pending ROLE-0004 review and ROLE-0001 conformance.|
 
 ---
 

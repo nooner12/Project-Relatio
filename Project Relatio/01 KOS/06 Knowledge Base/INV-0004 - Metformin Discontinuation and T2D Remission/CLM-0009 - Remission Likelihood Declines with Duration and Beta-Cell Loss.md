@@ -14,7 +14,9 @@ parent_documents:
 related_documents:
   - SRC-0007 Taylor Twin-Cycle Mechanism Literature
   - SRC-0006 DiRECT Trial Programme
+  - CLM-0007 Substantial Weight Loss Can Induce T2D Remission
   - CLM-0008 Ectopic-Fat Removal Restores Insulin Sensitivity and Beta-Cell Function
+  - FND-0004 Evidence-Based Pathways to T2D Remission and Safe De-prescribing
 tags:
   - ProjectRelatio
   - KnowledgeBase

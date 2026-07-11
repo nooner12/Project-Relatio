@@ -1,7 +1,7 @@
 ---
 title: KOS-0001 - Research Operating System Foundation & Charter
 document_type: Kernel Operating System Document
-version: 1.0
+version: 1.2
 status: Adopted
 category:
   - Knowledge Operating System
@@ -29,7 +29,7 @@ tags:
 
 # Project Relatio Research Operating System Foundation & Charter
 
-## Version 1.0
+## Version 1.2
 
 ## Adopted Kernel Document
 
@@ -65,7 +65,9 @@ These relationships include:
 - societal relationships,
 - humanity’s relationship with nature,
 - humanity’s relationship with meaning,
-- humanity’s relationship with ultimate reality and creation.
+- humanity’s relationship with ultimate reality and the question of origins (including creation claims).
+
+> **Framed as open questions.** Naming "ultimate reality" or "creation" marks a *domain of inquiry* and a *class of claims to be examined* — not a metaphysical commitment. Under the project's ontological humility (CON-0004 §2), which accounts of origin and ultimate reality are warranted remains **open to evidence and revision**: a creator-based account, a naturalistic account, or another may be strengthened or set aside as inquiry and new learning warrant. The Charter presumes none.
 
 ---
 
@@ -198,7 +200,9 @@ Outputs
 
 The Kernel provides the foundational intellectual structures of Project Relatio.
 
-The Kernel currently consists of:
+> **Authoritative inventory:** the **Kernel Index** is the current, authoritative list of Kernel documents. The Kernel has grown beyond the founding set below to include **KOS-0007** (Comparative Analysis), **KOS-0008** (Research Methodology), **KOS-0009** (Knowledge Representation), **KOS-0010** (Reasoning & Synthesis), **KOS-0011** (Governance & Evolution), **KOS-0012** (Knowledge Object Model), and **ADR-GOV-0001**. The purpose sketches below are retained as the Kernel's conceptual core and are illustrative, not exhaustive.
+
+The founding Kernel documents are:
 
 ---
 
@@ -362,6 +366,8 @@ Project Relatio adopts:
 |---|---|---|---|
 |0.1|2026-07-09|Draft|Initial Research OS Charter|
 |1.0|2026-07-09|Adopted|Formalized Research OS Foundation & Charter|
+|1.1|2026-07-11|Adopted|Kernel audit (GB-2026-018): §7 corrected — the "currently consists of" list named only the five founding Kernel docs; added a note deferring to the Kernel Index as the authoritative inventory and naming the later additions (KOS-0007…0012, ADR-GOV-0001). No change to the founding conceptual core.|
+|1.2|2026-07-11|Adopted|**GB-2026-022 resolved (owner-directed):** softened §2's "ultimate reality and **creation**" → "ultimate reality and the question of origins (including creation claims)," with a note framing origin/ultimate-reality as open questions under ontological humility (CON-0004 §2) — no account (creator-based, naturalistic, or other) is presumed; all remain open to evidence and revision.|
 
 ---
 

@@ -15,6 +15,8 @@ related_documents:
   - SRC-0008 Virta Health Continuous-Care Trial
   - SRC-0010 ADA-EASD Consensus on Remission Definition
   - CLM-0007 Substantial Weight Loss Can Induce T2D Remission
+  - CLM-0011 Discontinuation Must Be Supervised and Remission Can Relapse
+  - FND-0004 Evidence-Based Pathways to T2D Remission and Safe De-prescribing
 tags:
   - ProjectRelatio
   - KnowledgeBase

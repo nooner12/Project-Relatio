@@ -1,7 +1,7 @@
 ---
 title: KOS-0003 - Epistemic Framework & Knowledge Validation System
 document_type: Kernel Operating System Document
-version: 1.1
+version: 1.4
 status: Adopted
 created: 2026-07-08
 category:
@@ -13,14 +13,7 @@ parent_documents:
   - KOS-0001 Research Operating System Foundation & Charter
   - KOS-0004 Ontological Framework & Reality Modeling System
 related_documents:
-  - ADR-KOS-0001
-  - ADR-KOS-0002
-  - ADR-KOS-0003
-  - ADR-KOS-0004
-  - ADR-KOS-0005
-  - ADR-KOS-0006
-  - ADR-KOS-0007
-  - ADR-KOS-0008
+  - STD-0006 Review & Validation Standard
 tags:
   - ProjectRelatio
   - KOS
@@ -36,7 +29,7 @@ tags:
 
 # Epistemic Framework & Knowledge Validation System
 
-## Version 1.1
+## Version 1.4
 
 ---
 
@@ -523,51 +516,43 @@ The KOS actively checks for:
 
 Every conclusion receives a confidence rating.
 
+> **Canonical scale — hybrid (Level + label).** Confidence is rated on a single canonical scale that pairs a **numeric level (0–5)** with a **qualitative label** (*Very High → Very Low*), always written together, e.g. **"Level 4 (High)."** The number gives an at-a-glance ordinal position; the label carries the meaning and keeps the rating legible in relational, non-numeric terms. Both are stated together — neither the bare number nor the bare word alone. **KOS-0008 §8 restates this same scale**; the two are one scale, not two vocabularies. (Consistent with §12.1 "no false precision," the number is an ordinal marker, not a measurement.)
+
 ---
 
 ## Level 5 — Very High Confidence
 
-Strong evidence.
-
-Multiple independent supports.
-
-Few unresolved issues.
+Strong evidence; multiple independent supports; few unresolved issues.
 
 ---
 
 ## Level 4 — High Confidence
 
-Strong support.
-
-Some limitations remain.
+Strong support; some limitations remain.
 
 ---
 
 ## Level 3 — Moderate Confidence
 
-Reasonable support.
-
-Meaningful uncertainty.
+Reasonable support; meaningful uncertainty; interpretation may vary.
 
 ---
 
 ## Level 2 — Low Confidence
 
-Limited support.
-
-Major unresolved issues.
+Limited support; major unresolved issues or significant disagreement.
 
 ---
 
-## Level 1 — Speculative
+## Level 1 — Very Low Confidence
 
-Possible but weakly supported.
+Speculative; possible but weakly supported.
 
 ---
 
 ## Level 0 — Unsupported
 
-Insufficient justification.
+Insufficient justification. An Unsupported conclusion does not qualify for the permanent Knowledge Base (§12); where it rests on fabricated or unverifiable evidence it is an automatic **Blocked** verdict (§12.1; STD-0006 §7.3).
 
 ---
 
@@ -606,7 +591,7 @@ Every major claim must identify:
 
 ## Ontological assumptions
 
-What must exist?
+What must exist, and what must relate? *(Under KOS-0004's Entity–Relationship Co-Primacy, an assumption may concern required entities, required relationships, or both.)*
 
 ---
 
@@ -740,7 +725,7 @@ Before accepting a conclusion:
 
 # Document Status
 
-**KOS-0003 Version 1.0**
+**KOS-0003 Version 1.4**
 
 Status:
 
@@ -764,6 +749,9 @@ Open review questions (for future refinement):
 |0.1|2026-07-08|Draft|Initial framework creation|
 |1.0|2026-07-09|Adopted|Upgraded to current STD-0001/STD-0002 schema and adopted under governed review (Retrospective M-2): converted `dependencies` to `parent_documents`/`related_documents`, corrected the KOS-0001 title, replaced superseded KOS-0002 with KOS-0004, retyped to Kernel Operating System Document, PascalCase tags, removed pre-standard `owner`/`architect` fields, removed a stray code-fence artifact. ADR references retained pending the deferred M-3 cleanup.|
 |1.1|2026-07-09|Adopted|Added §12.1 Evidence Integrity — Prohibition on Fabrication. Elevates the anti-fabrication guardrail from the platform layer (`.claude/agents`) into the platform-independent Kernel, per the governance assessment (R2). Fabricated or unverifiable evidence is an automatic Blocked verdict.|
+|1.2|2026-07-10|Adopted|Resolved phantom ADR references (M-3/GB-2026-005): replaced the 8 non-existent ADR-KOS-0001…0008 `related_documents` entries — surfaced as dangling failures by `graph_integrity.py` — with the genuine STD-0006 relationship (which operationalizes §12.1).|
+|1.3|2026-07-11|Adopted|Kernel audit (GB-2026-018): corrected stale "Version 1.0" reference in the Document Status block (→ 1.3); propagated KOS-0004 Entity–Relationship Co-Primacy into §10 Assumption Mapping (ontological assumptions may concern required entities, required relationships, or both).|
+|1.4|2026-07-11|Adopted|**GB-2026-021 resolved (owner-directed):** reconciled the two Kernel confidence scales into **one canonical hybrid** — numeric **Level 0–5** paired with a qualitative label (**Very High → Very Low**, plus an Unsupported floor), written together as "Level 4 (High)." §8 restated in hybrid form; KOS-0008 §8 aligned to the same scale (its label-only table gains the Level column). Level 1 label unified to "Very Low" (was "Speculative"; sense retained in the description). Matches the "Level N (Label)" form already used by Knowledge Base objects — no object migration required.|
 
 ---
 

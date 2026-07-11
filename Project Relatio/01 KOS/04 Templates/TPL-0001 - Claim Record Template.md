@@ -1,7 +1,7 @@
 ---
 title: TPL-0001 - Claim Record Template
 document_type: Template
-version: 1.0
+version: 1.1
 status: Adopted
 created: 2026-07-09
 template_type: Claim Record
@@ -85,7 +85,7 @@ Type: <Empirical | Historical | Philosophical | Experiential | Traditional | Tes
 <Deductive | Inductive | Abductive | Analogical> — <the inference>. Reasoning risks checked: <…>.
 
 # Confidence (KOS-0003 §8)
-Level <0–5> — <justification>.
+Level <0–5> (<Very High | High | Moderate | Low | Very Low | Unsupported>) — <justification>.
 
 # Limitations
 - <bounds of the claim>
@@ -113,6 +113,7 @@ Level <0–5> — <justification>.
 |Version|Date|Status|Description|
 |---|---|---|---|
 |1.0|2026-07-09|Adopted|Initial Claim Record template; encodes STD-0002 + KOS-0003 §12 per KOS-0012|
+|1.1|2026-07-11|Adopted|Confidence line updated to the canonical hybrid **Level N (Label)** format (GB-2026-021).|
 
 ---
 

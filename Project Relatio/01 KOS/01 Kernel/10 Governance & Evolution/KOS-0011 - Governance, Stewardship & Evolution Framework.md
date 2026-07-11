@@ -1,7 +1,7 @@
 ---
 title: KOS-0011 - Governance, Stewardship & Evolution Framework
 document_type: Kernel Operating System Document
-version: 1.1
+version: 1.2
 status: Adopted
 category:
   - Knowledge Operating System
@@ -15,7 +15,7 @@ parent_documents:
 related_documents:
   - KOS-0003 Epistemic Framework & Knowledge Validation System
   - KOS-0008 Research Methodology & Investigation Framework
-  - ADR-KOS-0010 Governance Architecture Decisions
+  - ADR-GOV-0001 Governance and Role Reconciliation
 tags:
   - ProjectRelatio
   - KOS
@@ -29,7 +29,7 @@ tags:
 
 # Project Relatio Governance, Stewardship & Evolution Framework
 
-## Version 1.1
+## Version 1.2
 
 ## Adopted Kernel Document
 
@@ -674,6 +674,7 @@ Project Relatio adopts:
 |0.2|2026-07-09|Revised Draft|Added backlog, review cycles, deprecation, hierarchy, AI standards|
 |1.0|2026-07-09|Adopted|Finalized governance framework|
 |1.1|2026-07-09|Adopted|Added §10 reconciliation note mapping CON-0003 Stewardship Functions → KOS-0011 ST-roles → ROLE-NNNN implementations, closing the terminology drift found in the governance assessment (R1/R4). ST-003 Domain Specialist recorded as unimplemented.|
+|1.2|2026-07-10|Adopted|Resolved a phantom ADR reference (M-3/GB-2026-005): replaced the non-existent `ADR-KOS-0010 Governance Architecture Decisions` `related_documents` entry — surfaced as dangling by `graph_integrity.py` — with the genuine, existing **ADR-GOV-0001** (Governance and Role Reconciliation).|
 
 ---
 

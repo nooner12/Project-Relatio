@@ -14,6 +14,7 @@ parent_documents:
 related_documents:
   - SRC-0011 Diet and Exercise Glycemic-Control Literature
   - CLM-0007 Substantial Weight Loss Can Induce T2D Remission
+  - FND-0004 Evidence-Based Pathways to T2D Remission and Safe De-prescribing
 tags:
   - ProjectRelatio
   - KnowledgeBase

@@ -1,7 +1,7 @@
 ---
 title: TPL-0004 - Finding Record Template
 document_type: Template
-version: 1.0
+version: 1.1
 status: Adopted
 created: 2026-07-09
 template_type: Finding Record
@@ -61,7 +61,7 @@ tags:
 - <CLM-NNNN — one line on how it supports this finding>
 
 # 3. Confidence (KOS-0003 §8)
-Level <0–5> — <justification; note if lower than the weakest supporting claim>.
+Level <0–5> (<Very High | High | Moderate | Low | Very Low | Unsupported>) — <justification; note if lower than the weakest supporting claim>.
 
 # 4. Scope & Limitations
 - <what the finding does and does not cover>
@@ -85,6 +85,7 @@ Level <0–5> — <justification; note if lower than the weakest supporting clai
 |Version|Date|Status|Description|
 |---|---|---|---|
 |1.0|2026-07-09|Adopted|Initial Finding Record template; encodes STD-0002 + KOS-0012 §5.2|
+|1.1|2026-07-11|Adopted|Confidence line updated to the canonical hybrid **Level N (Label)** format (GB-2026-021).|
 
 ---
 

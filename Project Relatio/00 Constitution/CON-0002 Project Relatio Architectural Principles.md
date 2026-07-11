@@ -1,8 +1,9 @@
 ---
 title: CON-0002 - Project Relatio Architectural Principles
 document_type: Constitutional Instrument
-version: 1.0
+version: 1.1
 status: Adopted
+created: 2026-07-09
 category:
   - Constitution
   - Architecture
@@ -79,6 +80,9 @@ Each layer depends upon foundational layers while also providing feedback that m
                       ↓
                       ↓
                Roles and Capabilities
+                      ↓
+                      ↓
+             Templates and Structures
                       ↓
                       ↓
               Research Operations
@@ -167,6 +171,20 @@ Defines:
 Roles answer:
 
 > What functions must exist?
+
+---
+
+# Layer 4b — Templates and Structures
+
+## Purpose
+
+Provides reusable object structures (templates) that implement the Standards and the object model, so that knowledge objects are produced consistently.
+
+Templates answer:
+
+> What reusable structures ensure consistency?
+
+*Note: the layer numbers here are **indicative, not strict**. The implemented architecture places Templates between Roles and Operations (folders 03 → 04 → 05). CON-0002's architectural layers and KOS-0011 §8's governance levels describe the same system at different grains and are reconciled descriptively rather than by identical enumeration (Governance Backlog GB-2026-012).*
 
 ---
 
@@ -525,6 +543,7 @@ Future instruments shall remain consistent with both.
 |---|---|---|---|
 |0.1|2026-07-09|Draft|Initial architectural principles|
 |0.2|2026-07-09|Revised Draft|Added interfaces, auditability, simplicity, expanded lineage, expanded system model|
+|1.1|2026-07-11|Adopted|Recorded the prior v1.0 adoption (frontmatter showed Adopted without a revision entry); added the missing `created` date; added the **Templates and Structures** layer and a note that layer numbering is indicative, reconciling with KOS-0011 §8 (foundational audit fixes 1 & 3, GB-2026-012).|
 
 ---
 

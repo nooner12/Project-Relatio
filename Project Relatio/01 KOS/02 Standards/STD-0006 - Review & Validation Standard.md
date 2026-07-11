@@ -1,7 +1,7 @@
 ---
 title: STD-0006 - Review & Validation Standard
 document_type: Standards Document
-version: 1.1
+version: 1.2
 status: Adopted
 created: 2026-07-09
 category:
@@ -235,6 +235,20 @@ Consensus does not equal truth. A minority position may contain valid insight an
 
 ---
 
+## 7.5 Verification Integrity — a review must disclose the strength of its own check
+
+The evidence-integrity check (§5.7) is only as strong as the verification the reviewer could actually perform. Its strongest form is **live re-location** of a sample of cited sources and figures against their primaries. When that is not possible — external tools unavailable or rate-limited, primaries inaccessible — the check degrades to internal-consistency-plus-parametric-knowledge, which is materially weaker and, for a same-model reviewer, shares the author's blind spots.
+
+Therefore:
+
+1. **A review must state the strength of its own verification.** If live re-location could not be performed, the review is marked **verification-light** and says so explicitly.
+2. **A verification-light review may issue Conformant/Flagged verdicts but may NOT clear an object for external reliance.** Reliance on such an object is **gated** pending either (a) live re-verification of the flagged figures, or (b) genuine independent review (a *different* model and/or a qualified human — CON-0003 §4.5), as the stakes require.
+3. **Silence is non-conformance.** A review that does not disclose its verification strength is itself Flagged: an undisclosed weak check is worse than a disclosed one, because it invites unwarranted confidence.
+
+This rule generalizes what the first agent-circuit run (RQ-0004) did voluntarily and correctly: the reviewer, unable to reach external tools, marked itself verification-light and gated reliance rather than presenting a weak check as a clean one. It is especially load-bearing for health, safety, financial, or otherwise externally-consequential findings.
+
+---
+
 # 8. Validation Authority
 
 Validation under this standard is discharged by two roles with **non-overlapping** authority:
@@ -295,6 +309,7 @@ Review and validation are how Project Relatio finds out whether that trust is ea
 |---|---|---|---|
 |1.0|2026-07-09|Adopted|Initial review and validation standard, grounded in findings from the pre-adoption Architecture Status Note audit|
 |1.1|2026-07-09|Adopted|Governance assessment (R2/R6/R7): added §5.7 Evidence Integrity check; expanded §7.3 Blocked to cover fabrication; added §7.4 Appeal & Preservation of Disagreement (CON-0003 GP-004, KOS-0011 §11 conflict taxonomy); replaced role-agnostic §8 with the structural/epistemic validation-authority split (ROLE-0001 / ROLE-0004)|
+|1.2|2026-07-10|Adopted|Added §7.5 Verification Integrity: a review must disclose its own verification strength; a verification-light review may not clear an object for external reliance. Owner-adopted from the RQ-0004 first-agent-circuit run (Backlog GB-2026-014).|
 
 ---
 

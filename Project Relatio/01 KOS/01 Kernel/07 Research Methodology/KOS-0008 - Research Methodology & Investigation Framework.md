@@ -1,7 +1,7 @@
 ---
 title: KOS-0008 - Research Methodology & Investigation Framework
 document_type: Kernel Operating System Document
-version: 1.0
+version: 1.1
 status: Adopted
 category:
   - Knowledge Operating System
@@ -29,7 +29,7 @@ tags:
 
 # Project Relatio Research Methodology & Investigation Framework
 
-## Version 1.0
+## Version 1.1
 
 ## Adopted Kernel Document
 
@@ -403,13 +403,16 @@ Confidence Rating
 
 Project Relatio requires explicit confidence assessment.
 
-|Rating|Meaning|
-|---|---|
-|Very High|Strong evidence with broad agreement|
-|High|Strong evidence with limited uncertainty|
-|Moderate|Evidence exists but interpretation varies|
-|Low|Limited evidence or significant disagreement|
-|Very Low|Speculative or insufficiently supported|
+> **Canonical scale defined in KOS-0003 §8.** Confidence uses a single hybrid **Level + label** scale, written as e.g. "Level 4 (High)." The table below *is* that scale — not a second vocabulary.
+
+|Level|Rating|Meaning|
+|---|---|---|
+|Level 5|Very High|Strong evidence with broad agreement|
+|Level 4|High|Strong evidence with limited uncertainty|
+|Level 3|Moderate|Evidence exists but interpretation varies|
+|Level 2|Low|Limited evidence or significant disagreement|
+|Level 1|Very Low|Speculative or weakly supported|
+|Level 0|Unsupported|Insufficient justification; not admissible to the permanent Knowledge Base (KOS-0003 §12)|
 
 ---
 
@@ -677,6 +680,7 @@ Project Relatio adopts:
 |0.1|2026-07-09|Draft|Initial methodology framework|
 |0.2|2026-07-09|Revised Draft|Added reflexivity, reproducibility, search strategy, contradiction mapping, integration|
 |1.0|2026-07-09|Adopted|Finalized research methodology framework|
+|1.1|2026-07-11|Adopted|**GB-2026-021 (owner-directed):** §8 aligned to the single canonical hybrid confidence scale defined in KOS-0003 §8 — added the numeric **Level** column (Level 5…0) to the qualitative table and an **Unsupported** (Level 0) floor, so KOS-0008 and KOS-0003 present one scale ("Level N (Label)"), not two.|
 
 ---
 

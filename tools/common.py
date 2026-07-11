@@ -1,9 +1,23 @@
 from pathlib import Path
 import re
 
+# Whole-string identifier (e.g. "KOS-0004"). Kept for backward compatibility.
 ID_PATTERN = re.compile(r"^[A-Z]{2,5}-\d{4}$")
 
+# Leading identifier, matched at the start of a filename or `title:` string.
+# Handles both TYPE-NNNN (KOS-0004, CLM-0007) and ADR-CAT-NNNN (ADR-GOV-0001).
+# Mirrors the convention used by graph_integrity.py.
+IDENTIFIER_RE = re.compile(r"^(ADR-[A-Z]{2,5}-\d{4}|[A-Z]{2,5}-\d{4})")
+
 WIKILINK_PATTERN = re.compile(r"\[\[([^\]|#]+)")
+
+
+def extract_identifier(text):
+    """Return the leading TYPE-NNNN / ADR-CAT-NNNN identifier of a string, or None."""
+    if not isinstance(text, str):
+        return None
+    match = IDENTIFIER_RE.match(text.strip())
+    return match.group(0) if match else None
 
 def find_vault_root(start: Path) -> Path:
 

@@ -1,7 +1,7 @@
 ---
 title: KOS-0009 - Knowledge Representation & Information Architecture Framework
 document_type: Kernel Operating System Document
-version: 1.0
+version: 1.1
 status: Adopted
 category:
   - Knowledge Operating System
@@ -30,7 +30,7 @@ tags:
 
 # Project Relatio Knowledge Representation & Information Architecture Framework
 
-## Version 1.0
+## Version 1.1
 
 ## Adopted Kernel Document
 
@@ -156,6 +156,8 @@ Systems
 # 5. Knowledge Object Framework
 
 Project Relatio defines standard knowledge object types.
+
+> **Authoritative typology: KOS-0012.** The object types below (KO-001…007) are the *conceptual origin* of the object model, authored before the model was formalized. The **authoritative Knowledge Object typology** — with the identifier-bearing implemented types (INV, FND, CLM, SRC, ENT) — is now **KOS-0012 (Knowledge Object Model)**. Where this section and KOS-0012 differ, **KOS-0012 governs**. This list is retained for its conceptual framing, not as the operative registry of object types.
 
 ---
 
@@ -296,6 +298,8 @@ Benefits:
 
 Project Relatio distinguishes knowledge maturity.
 
+> **Authoritative lifecycle: STD-0005.** The maturity states below (KM-001…004: Exploratory / Working / Established / Canonical) predate the adopted lifecycle standard. The **authoritative lifecycle vocabulary** is **STD-0005**, which defines two *independent* dimensions — **Maturity** (Proposed → Draft → Reviewed → Adopted) and **Operational** (Active → Superseded → Archived). Objects carry both; they must not be collapsed into a single scale. Where this section and STD-0005 differ, **STD-0005 governs**. The KM states are retained as an informal descriptive gloss only.
+
 ---
 
 # KM-001 — Exploratory
@@ -349,7 +353,9 @@ Examples:
 
 Knowledge objects should contain metadata.
 
-Required fields:
+> **Authoritative schema: STD-0002.** The sketch below predates the adopted metadata standard and does **not** match the implemented YAML convention. The **authoritative frontmatter schema** is **STD-0002** — which uses `document_type`, `status`, `created`, `parent_documents`/`related_documents` (typed graph edges per STD-0004), title-embedded identifiers (STD-0001), and PascalCase `tags`. Fields shown here that the adopted convention does **not** use (`type`, `updated`, `related`, `sources`, `confidence` as frontmatter) are superseded; confidence and sources live in object bodies (Claim records), not frontmatter. Where this section and STD-0002 differ, **STD-0002 governs**.
+
+Illustrative (superseded — see STD-0002):
 
 ```
 title:
@@ -424,6 +430,8 @@ Psychological Research
 ---
 
 # 10. Standard Relationship Types
+
+> **Authoritative relationship vocabularies — do not use the REL-00X names below as canonical.** Project Relatio maintains **two** adopted relationship layers, and this early list (REL-001…008) predates both: **(1)** the **knowledge-graph relations** that link Knowledge Objects — authoritative source **STD-0004** (`supports`, `derived_from`, `contrasts_with`, `depends_on`, `part_of`, `instance_of`, `implements`, `extends`, `supersedes`, `explains`, `related_to`); and **(2)** the **world/content relationship types** that describe the subject matter — authoritative source **KOS-0005 (RT-001…RT-009)**. The REL-00X names here (Influences, Challenges, Evolves Into, Analogous To…) are an informal precursor; where they differ from STD-0004 / KOS-0005, **those standards govern**. See KOS-0005 §5 for the two-vocabulary distinction.
 
 ---
 
@@ -682,6 +690,7 @@ Project Relatio adopts:
 |0.1|2026-07-09|Draft|Initial knowledge architecture|
 |0.2|2026-07-09|Revised Draft|Added maturity states, provenance, contradictions, AI compatibility|
 |1.0|2026-07-09|Adopted|Finalized knowledge representation framework|
+|1.1|2026-07-11|Adopted|Kernel audit (GB-2026-018): added deference notes resolving four competing-authority drifts against the later-adopted Standards — §5 object types → **KOS-0012**; §6 maturity states → **STD-0005** (two-dimensional lifecycle); §7 metadata schema → **STD-0002**; §10 relationship types → **STD-0004** (graph relations) and **KOS-0005** (world/content types). No new definitions introduced; KOS-0009's early vocabularies are retained as conceptual precursors, with the adopted Standards governing.|
 
 ---
 

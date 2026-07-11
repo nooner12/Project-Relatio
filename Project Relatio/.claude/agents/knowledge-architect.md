@@ -23,8 +23,9 @@ Read `01 KOS/03 Roles/ROLE-0001 - Knowledge Architect.md` (your Adopted definiti
 - Lifecycle fields honest (STD-0005); revision history maintained.
 
 **Graph integrity (OPS-0002) — this is the one that matters most:**
-- Every `related_documents` entry resolves to an object that **exists** (check the Identifier Registry).
-- Relationships are **bidirectional**: if A→B, then B→A, with the correct reciprocal relation (`supports` ↔ `derived_from`, etc.).
+- **Run the tool, don't trace by hand.** Execute `python tools/graph_integrity.py` (from the `tools/` dir, one level above `Project Relatio/`). It reports **dangling references** (any `parent_documents`/`related_documents` entry resolving to nothing — a failure) and **one-directional KB links** (advisory). Adjudicate its output; don't re-derive it manually.
+- **Dangling references** must be resolved (or, if they are the known deferred phantom ADRs, left and noted — do not remove them without owner approval, since M-3 is owner-deferred).
+- **One-directional links** are OPS-0002 §5 low-severity advisories — surface them, but do **not** mass-reciprocate for symmetry alone (that is over-completeness the scope guardrail warns against). Repair a reciprocal only where a genuine peer relationship is missing a side.
 - Relations are **typed and semantic** (STD-0004). `related_to` is the weakest — prefer a specific relation.
 
 Report findings as **Conformant / Flagged / Blocked** (STD-0006 §7).

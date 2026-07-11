@@ -8,9 +8,8 @@ from common import (
     find_vault_root,
     markdown_files,
     parse_frontmatter,
-    wikilinks,
     note_name,
-    ID_PATTERN,
+    extract_identifier,
 )
 
 ROOT = Path(__file__).parent
@@ -84,32 +83,56 @@ for file in files:
             errors.append(f"Invalid metadata object: {file}")
             continue
 
-        if rule["requires_id"]:
+        if rule.get("requires_identifier"):
 
-            identifier = meta.get("id")
+            # Per STD-0001/STD-0002 the identifier is embedded in the filename and
+            # the `title:` field (e.g. "KOS-0004 …"), not a separate `id:` field.
+            # Check: filename carries a valid identifier, title carries one, they
+            # agree, and the identifier is unique across the vault.
 
-            if identifier is None:
+            filename_id = extract_identifier(file.stem)
+            title = meta.get("title")
+            title_id = extract_identifier(title)
 
-                errors.append(f"Missing id: {file}")
+            if filename_id is None:
 
-            else:
+                errors.append(f"Filename has no valid identifier: {file.name}")
 
-                if not ID_PATTERN.match(identifier):
+            elif title is None:
+
+                errors.append(
+                    f"Missing title (identifier lives in the title): {file.name}"
+                )
+
+            elif title_id is None:
+
+                errors.append(
+                    f"Title has no valid identifier: {file.name}\n"
+                    f"  title: {title!r}"
+                )
+
+            elif title_id != filename_id:
+
+                errors.append(
+                    f"Identifier mismatch (filename vs title): {file.name}\n"
+                    f"  filename: {filename_id}\n"
+                    f"  title:    {title_id}"
+                )
+
+            if filename_id is not None:
+
+                if filename_id in ids:
 
                     errors.append(
-                        f"Invalid id: {identifier}"
-                    )
-
-                if identifier in ids:
-
-                    errors.append(
-                        f"Duplicate id:\n"
-                        f"  {identifier}\n"
-                        f"  {ids[identifier]}\n"
+                        f"Duplicate identifier:\n"
+                        f"  {filename_id}\n"
+                        f"  {ids[filename_id]}\n"
                         f"  {file}"
                     )
 
-                ids[identifier] = file
+                else:
+
+                    ids[filename_id] = file
 
     stem = note_name(file)
 
@@ -122,23 +145,11 @@ for file in files:
         names[stem] = file
 
 # ----------------------------
-# Second pass
-# ----------------------------
-
-known = set(names.keys())
-
-for file in files:
-
-    text = file.read_text(encoding="utf-8")
-
-    for link in wikilinks(text):
-
-        if link not in known:
-
-            warnings.append(
-                f"Broken link: [[{link}]] in {file.name}"
-            )
-
+# NOTE: The adopted STD-0001/STD-0002 convention does not use [[wikilinks]] for the
+# knowledge graph — relationships live in `related_documents`/`parent_documents` and
+# are validated by graph_integrity.py. The old broken-[[wikilink]] pass was removed
+# here (GB-2026-016): it did not match the convention and false-flagged prose that
+# merely mentioned "[[wikilinks]]".
 # ----------------------------
 
 print()

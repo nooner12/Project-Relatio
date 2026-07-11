@@ -1,7 +1,7 @@
 ---
 title: KOS-0006 - Systems Modeling & Complexity Framework
 document_type: Kernel Operating System Document
-version: 1.0
+version: 1.1
 status: Adopted
 category:
   - Knowledge Operating System
@@ -28,7 +28,7 @@ tags:
 
 # Project Relatio Systems Modeling & Complexity Framework
 
-## Version 1.0
+## Version 1.1
 
 ## Adopted Kernel Document
 
@@ -479,9 +479,11 @@ The system cannot detect or correct problems.
 
 ---
 
-# 10. Flourishing Assessment
+# 10. Flourishing Assessment *(normative overlay — see KOS-0005 §6A; declare standpoint; does not determine descriptive or factual conclusions)*
 
-Project Relatio recognizes that systems affecting human life should be evaluated according to their effects on:
+> **Normative overlay.** Flourishing assessment is an **evaluative overlay**, governed by the descriptive/normative separation established in **KOS-0005 §6A**. Because value is standpoint-relative (*whose* flourishing, *which* frame), this assessment applies only when the inquiry is explicitly evaluative, **must declare its standpoint**, and **never determines** the system's descriptive or factual analysis (CON-0001 §5.3 human benefit ≠ evidence; §8.9 Non-Advocacy; CON-0004 EP-008). Descriptive systems modeling (§3–§9) stands on its own, prior to and independent of this overlay.
+
+Project Relatio recognizes that systems affecting human life may be evaluated according to their effects on:
 
 - wellbeing,
 - meaning,
@@ -496,7 +498,7 @@ A system may be:
 - historically significant,
 - socially powerful,
 
-while still requiring ethical evaluation.
+while still being open to ethical evaluation under this overlay.
 
 ---
 
@@ -682,6 +684,7 @@ Project Relatio adopts:
 |0.1|2026-07-09|Draft|Initial systems framework|
 |0.2|2026-07-09|Revised Draft|Added agency, system interaction, historical evolution, flourishing|
 |1.0|2026-07-09|Adopted|Finalized systems modeling framework|
+|1.1|2026-07-11|Adopted|Kernel audit (GB-2026-018): scoped §10 Flourishing Assessment as a **normative overlay** under KOS-0005 §6A — declares standpoint, does not determine descriptive/factual conclusions (CON-0001 §5.3/§8.9, CON-0004 EP-008). Aligns KOS-0006 with the descriptive/normative separation already applied to KOS-0005.|
 
 ---
 

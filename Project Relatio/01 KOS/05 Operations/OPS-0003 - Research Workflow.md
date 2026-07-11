@@ -1,7 +1,7 @@
 ---
 title: OPS-0003 - Research Workflow
 document_type: Operations Document
-version: 1.1
+version: 1.2
 status: Adopted
 created: 2026-07-09
 parent_documents:
@@ -48,6 +48,19 @@ Every step below must earn its place by making research **better**, not by makin
 
 ---
 
+# 2.1 Proportionality — Tier by Stakes
+
+The full circuit is rigorous but resource-intensive (Fourth-Run Assessment F-14). Not every question needs it. The coordinator triages by stakes:
+
+- **Full circuit** — Specialist → *independent* Critical Reviewer → Knowledge Architect → external-verification gate — for **high-stakes / externally-consequential** questions: health, safety, financial, public-facing, or anything a person will act on. (RQ-0004 was correctly full-circuit.)
+- **Lean path** — Specialist + a structured **self-red-team** + the **automated structural check** — for exploratory, internal, or low-consequence questions.
+
+**Rule: default to the full circuit whenever the stakes are uncertain.** Triage is cheap; under-reviewing a consequential question is not. **Independence is never waived on high-stakes work** — the Specialist never certifies its own high-stakes conclusions, and STD-0006 §7.5 still gates reliance on verification strength.
+
+*(The lean path is used on demand. A fuller build-out of tiering awaits demonstrated need — GB-2026-013 — and is deliberately not over-built on a single data point.)*
+
+---
+
 # 3. The Workflow
 
 ```
@@ -80,6 +93,14 @@ Every step below must earn its place by making research **better**, not by makin
    ▼
 [Coordinator]  completeness check → friction/convergence assessment → Owner
 ```
+
+---
+
+# 3.1 Workflow Refinements (v1.2)
+
+- **Review-targeting handoff.** The Specialist ends by naming its weakest claims, what it could not verify, and its most contestable calls (as it did in RQ-0004). The Critical Reviewer uses this brief to focus its expensive verification on the genuinely uncertain points instead of re-deriving everything — sharper *and* cheaper, without reducing coverage.
+- **Reviewer and Architect run in parallel.** Epistemic review (ROLE-0004) and structural/graph validation (ROLE-0001) are independent — they check different things — so they run concurrently after the Specialist finishes, shortening the critical path and reducing the risk of an interrupted run.
+- **Structural validation is automated.** The Knowledge Architect runs `tools/graph_integrity.py` (OPS-0002 §6) for dangling-reference and reciprocity checks and adjudicates its output, rather than tracing links by hand. Mechanical validation no longer costs manual effort — an agent's judgment is spent only on what the tool flags.
 
 ---
 
@@ -138,6 +159,7 @@ Roles: ROLE-0001…0004. Object model: KOS-0012. Epistemics: KOS-0003. Methodolo
 |---|---|---|---|
 |1.0|2026-07-09|Adopted|Initial research workflow, distilled from three completed investigations; defines the role circuit and the RKA→RRI agent mapping|
 |1.1|2026-07-09|Adopted|Governance assessment: rerouted coordination from the retired ROLE-0003 to the Vision Steward (ROLE-0005) and the main session (ADR-GOV-0001)|
+|1.2|2026-07-10|Adopted|Efficiency refinements from the first agent-circuit run (RQ-0004): §2.1 proportionality/tiering by stakes; §3.1 review-targeting handoff, parallel Reviewer∥Architect, and automated structural check (`tools/graph_integrity.py`). Owner-authorized; ADR waived by owner. Full tiering build remains trigger-gated (GB-2026-013).|
 
 ---
 

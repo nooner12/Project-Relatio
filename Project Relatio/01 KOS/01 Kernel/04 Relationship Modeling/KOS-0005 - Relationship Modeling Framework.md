@@ -1,7 +1,7 @@
 ---
 title: KOS-0005 - Relationship Modeling Framework
 document_type: Kernel Operating System Document
-version: 1.0
+version: 1.3
 status: Adopted
 category:
   - Knowledge Operating System
@@ -25,7 +25,7 @@ tags:
 
 # Project Relatio Relationship Modeling Framework
 
-## Version 1.0
+## Version 1.3
 
 ## Adopted Kernel Document
 
@@ -61,6 +61,8 @@ Project Relatio adopts:
 
 # Relational Systems Modeling
 
+This framework is the **operational expression of the relationalism adopted in CON-0004 §2**: relationships are treated as fundamental to understanding, held under ontological humility.
+
 Reality is understood not only through individual components but through the relationships among components.
 
 A complete understanding requires examination of:
@@ -86,6 +88,8 @@ A thing cannot always be fully understood independently from:
 - what it depends upon,
 - what meaning it carries.
 
+> **Co-primacy as the working lens.** Relationship centrality is operationalized as **co-primacy with entities** (KOS-0004 §2 Entity–Relationship Co-Primacy, OP-003; GB-2026-019): relationships are foundational to understanding, yet they presuppose the entities they relate, and an entity's identity is in turn typically shaped in part by its relationships. This framework foregrounds relationships **as its default modeling lens** — without asserting that entity-first or strong-relational ontologies are false. Those remain viable perspectives held under ontological humility (KOS-0004 OP-006 / OP-008), to be settled only by substantiated evidence in a given case.
+
 ---
 
 # 4. Relationship Architecture
@@ -104,6 +108,8 @@ Relationships are modeled according to:
 ---
 
 # 5. Relationship Types
+
+> **Two relationship vocabularies — do not confuse them.** The relationship *types* below (RT-001…RT-009) describe relationships **in the world being studied** — causal, ethical, spiritual, and so on: the *content* of research. They are distinct from the **knowledge-graph relations** defined in **STD-0004** (`supports`, `derived_from`, `contrasts_with`, `part_of`, `instance_of`, …), which connect **Knowledge Objects to one another** (a claim to its source, a finding to its claims). Content/world relationships are modeled *inside* objects (see §8, the Relationship Mapping Standard); knowledge-graph relations *link* objects across the vault. A single investigation uses both layers, and they must not be conflated.
 
 ---
 
@@ -338,8 +344,10 @@ Cosmic
 
 ↓
 
-Transcendent
+Transcendent (claimed)
 ```
+
+> The upper levels — especially *Transcendent* — name **claimed** levels of reality, not confirmed ones. Under the project's ontological humility (CON-0004 §2), this scale maps where relationships are *posited*, held open to inquiry; it does not assert that each level exists.
 
 ---
 
@@ -395,7 +403,7 @@ Examples:
 
 ---
 
-# RP-012 — Flourishing Impact
+# RP-012 — Flourishing Impact *(normative overlay — see §6A; not a descriptive property)*
 
 Relationship systems should be evaluated according to their effects on:
 
@@ -407,7 +415,27 @@ Relationship systems should be evaluated according to their effects on:
 
 ---
 
-# 7. Relationship Health Evaluation
+# 6A. Descriptive Modeling vs. Normative Evaluation
+
+Project Relatio separates two activities this framework previously blended.
+
+**Descriptive relationship modeling** — identifying a relationship's type (§5), properties (§6), and structure (§8), and assessing the *evidence* for it (§10: Evidence, Coherence, Explanatory Power, Limitations). This layer is standpoint-neutral: it describes what the relationship *is*, not whether it is good.
+
+**Normative relationship evaluation (overlay)** — judging a relationship as supportive/harmful, healthy, or flourishing-promoting.
+
+The separation is required because **value is itself relational**. Whether a relationship is "good" or "harmful" depends on the standpoint from which it is judged — *whose* flourishing, *which* frame, *what* purpose. A normative judgment is therefore always partial and perspectival (a "relationship to the relationship"); treated as descriptive fact, it becomes bias disguised as analysis.
+
+Therefore:
+
+- Descriptive modeling comes first and stands on its own.
+- Normative evaluation is an **optional overlay**, applied only when the inquiry is *explicitly* evaluative, and it **must declare its standpoint** (whose good, which values).
+- Normative evaluation **never determines descriptive or factual conclusions** (CON-0001 §5.3 human benefit ≠ evidence; §8.9 Non-Advocacy; CON-0004 EP-008 evidence/meaning separation).
+
+The normative-overlay elements in this document — **RP-012 (Flourishing Impact), §7 (Relationship Health Evaluation), and §10's "Human Impact"** — are retained for evaluative inquiry but are scoped to this overlay, not to descriptive modeling.
+
+---
+
+# 7. Relationship Health Evaluation *(normative overlay — see §6A; declare standpoint; does not determine facts)*
 
 Project Relatio shall evaluate relationships according to:
 
@@ -620,7 +648,7 @@ Does the relationship explain observed phenomena?
 
 ---
 
-## Human Impact
+## Human Impact *(normative overlay — see §6A; declare standpoint; separate from the descriptive criteria above)*
 
 What outcomes does the relationship produce?
 
@@ -699,6 +727,9 @@ Project Relatio adopts:
 |0.1|2026-07-09|Draft|Initial relationship framework|
 |0.2|2026-07-09|Revised Draft|Added relationship health, emergence, flourishing|
 |1.0|2026-07-09|Adopted|Finalized relationship modeling framework|
+|1.1|2026-07-11|Adopted|Foundational audit (owner-directed). **A:** §5 note distinguishing world/content relationship *types* (RT-001…009) from STD-0004 knowledge-graph *relations*. **B:** added §6A separating descriptive modeling from a **normative overlay** (value is standpoint-relative; RP-012/§7/§10-Human-Impact scoped to the overlay, never determining facts — CON-0001 §5.3/§8.9, CON-0004 EP-008). **C:** softened RP-005 "Transcendent (claimed)" under ontological humility. **D:** §2 cross-referenced as the operational expression of CON-0004 §2 relationalism.|
+|1.2|2026-07-11|Adopted|GB-2026-019 co-primary decision: §3 note operationalizing relationship centrality as **co-primacy with entities**, coherent with KOS-0004 (OP-003). *(Refined in v1.3.)*|
+|1.3|2026-07-11|Adopted|Refined the §3 note (owner-directed, tracking KOS-0004 v1.3): co-primacy stated as the **default modeling lens**, with entity-first and strong-relational ontologies held as viable perspectives under ontological humility (OP-006/OP-008) rather than rejected.|
 
 ---
 

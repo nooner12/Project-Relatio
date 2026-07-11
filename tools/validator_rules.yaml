@@ -16,7 +16,12 @@ document_types:
       - FND-
 
     requires_yaml: true
-    requires_id: true
+    # Per STD-0001/STD-0002 the identifier is embedded in the `title`/filename
+    # (e.g. "KOS-0004 …"), NOT in a separate `id:` field. When true, validate.py
+    # checks that the filename carries a valid identifier, the `title:` carries the
+    # same one, and the identifier is unique across the vault (GB-2026-016).
+    # Relationship-graph integrity is checked separately by graph_integrity.py.
+    requires_identifier: true
 
   infrastructure_documents:
     filename_contains:
@@ -31,8 +36,8 @@ document_types:
       - CLAUDE
 
     requires_yaml: false
-    requires_id: false
+    requires_identifier: false
 
 defaults:
   requires_yaml: false
-  requires_id: false
+  requires_identifier: false

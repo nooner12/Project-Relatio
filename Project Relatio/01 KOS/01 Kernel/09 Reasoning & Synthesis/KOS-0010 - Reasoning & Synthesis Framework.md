@@ -1,7 +1,7 @@
 ---
 title: KOS-0010 - Reasoning & Synthesis Framework
 document_type: Kernel Operating System Document
-version: 1.0
+version: 1.2
 status: Adopted
 category:
   - Knowledge Operating System
@@ -30,7 +30,7 @@ tags:
 
 # Project Relatio Reasoning & Synthesis Framework
 
-## Version 1.0
+## Version 1.2
 
 ## Adopted Kernel Document
 
@@ -462,6 +462,8 @@ Each model should be evaluated by:
 
 # 12. Pattern Validation Standard
 
+# RS-003 — Pattern Validation Standard
+
 Project Relatio distinguishes:
 
 ## Emergent Pattern
@@ -550,6 +552,10 @@ Knowledge should serve understanding and responsible action.
 
 # RS-004 — Application Ethics Standard
 
+Every major synthesis intended for application should record an application-ethics review covering potential consequences, limitations, unintended effects, and human impact.
+
+> **Normative overlay.** This review governs *responsible application* only. As a normative judgment it is standpoint-relative (KOS-0005 §6A) and **does not determine** the synthesis's descriptive or factual conclusions (CON-0001 §5.3 human benefit ≠ evidence; §8.9 Non-Advocacy).
+
 ---
 
 # 16. Synthesis Revision Protocol
@@ -579,11 +585,9 @@ A synthesis should preserve:
 
 ---
 
-# 17. Research Architect Function
+# 17. Knowledge Architect Function
 
-KOS-0010 establishes the foundation for:
-
-# Research Architect Role
+KOS-0010 establishes the synthesis-and-integration foundation for the **Knowledge Architect (ROLE-0001)**.
 
 Responsibilities:
 
@@ -593,9 +597,11 @@ Responsibilities:
 - manage uncertainty,
 - develop research directions.
 
-The Research Architect does not replace specialists.
+The Knowledge Architect does not replace specialists.
 
-The Research Architect connects specialists.
+The Knowledge Architect connects specialists.
+
+> **Role vocabulary.** This function was originally drafted under the legacy name "Research Architect." It was renamed to **Knowledge Architect (ROLE-0001)** — the adopted role that fulfils it — on 2026-07-11 (GB-2026-020), with cross-specialist coordination by the **Vision Steward (ROLE-0005)** per OPS-0003. See the Roles Index.
 
 ---
 
@@ -680,6 +686,8 @@ Project Relatio adopts:
 |0.1|2026-07-09|Draft|Initial reasoning framework|
 |0.2|2026-07-09|Revised Draft|Added assumption mapping, model comparison, pattern validation, ethics, revision protocols|
 |1.0|2026-07-09|Adopted|Finalized reasoning and synthesis framework|
+|1.1|2026-07-11|Adopted|Kernel audit (GB-2026-018): structural + coherence fixes. Filled the empty **RS-004 Application Ethics Standard** (with a KOS-0005 §6A normative-overlay caveat — the ethics review does not determine factual conclusions); closed the RS-numbering gap by labelling §12 Pattern Validation as **RS-003**; added a role-reconciliation note mapping the legacy "Research Architect" to the adopted **Knowledge Architect (ROLE-0001)** and flagging a possible rename (GB-2026-020).|
+|1.2|2026-07-11|Adopted|**GB-2026-020 resolved (owner-directed):** renamed §17 "Research Architect Function/Role" → **"Knowledge Architect Function"**, pointing to the adopted **ROLE-0001**. Removes the legacy name that referred to no adopted role. "Research Architect" now survives only as a noted historical alias.|
 
 ---
 

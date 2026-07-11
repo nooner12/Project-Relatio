@@ -1,11 +1,12 @@
 ---
 title: CON-0004 - Project Relatio Knowledge & Epistemic Integrity Charter
 document_type: Constitutional Instrument
-version: 1.0
+version: 1.1
 status: Adopted
 category:
   - Constitution
   - Epistemology
+  - Ontology
   - Knowledge Integrity
 created: 2026-07-09
 parent_documents:
@@ -55,17 +56,21 @@ Those belong to the Knowledge Operating System and supporting standards.
 
 ---
 
-# 2. Epistemic Philosophy
+# 2. Epistemic and Ontological Orientation
 
-Project Relatio adopts a **critical realist orientation**.
+Project Relatio adopts a stance of **ontological humility** paired with a **relational orientation (relationalism)**.
 
-This means:
+**Ontological humility.** The project does not commit to a final account of the ultimate nature of reality. Whether reality is best understood as material, mental, processual, non-dual, or otherwise is treated as a matter for open inquiry — not a constitutional given. This preserves the project's ability to understand and fairly compare worldviews (including non-realist and non-dual frameworks) without pre-judging them through a single metaphysics. Humility about *what reality ultimately is* replaces the earlier commitment to a critical-realist metaphysics.
 
-1. Reality exists independently of human perception.
-2. Human beings access reality through imperfect models.
-3. Understanding improves through continual refinement.
+**Relational orientation (relationalism).** Consistent with the project's name and its central principle, Project Relatio treats **relationships as fundamental to understanding**. Entities, ideas, systems, and experiences are understood primarily through their relationships — connections, dependencies, distinctions, tensions, transformations, emergence — rather than as isolated, self-contained substances. Reality is approached as a structured web of relationships, and knowledge as the disciplined mapping of that web. This is the project's working interpretive lens, held fallibly; it guides how information is understood and how the system's own parts interact. It is not a claim to have settled the metaphysics of relation.
 
-Project Relatio rejects both:
+**Minimal commitments retained.** Ontological humility is not relativism. The project still holds:
+
+1. There is something to understand that is not merely a product of individual preference (anti-solipsism, consistent with CON-0001 Axiom 1).
+2. Human beings access reality through imperfect, revisable models — models must be distinguished from reality.
+3. Agreement does not create truth; confidence must be distinguished from certainty.
+
+Project Relatio therefore rejects both:
 
 ## Absolute Relativism
 
@@ -73,9 +78,9 @@ The idea that all claims are equally valid regardless of evidence.
 
 ---
 
-## Absolute Human Certainty
+## Absolute Certainty
 
-The idea that human understanding perfectly represents reality.
+The idea that any model perfectly and finally represents reality.
 
 ---
 
@@ -527,6 +532,7 @@ Project Relatio commits to:
 |0.1|2026-07-09|Draft|Initial epistemic charter|
 |0.2|2026-07-09|Revised Draft|Added comparative evaluation, reasoning accessibility, methodological appropriateness|
 |1.0|2026-07-09|Adopted|Finalized epistemic integrity charter|
+|1.1|2026-07-11|Adopted|§2 revised (owner-directed, foundational audit): replaced the critical-realist orientation with **ontological humility** as the stance and **relationalism** as the working interpretive lens — relationships treated as fundamental to understanding and to how the system's parts interact. Load-bearing minimal commitments (models≠reality, agreement≠truth, understanding≠certainty, anti-solipsism, anti-relativism) retained. Propagation to KOS-0003/KOS-0004 and CON-0001's axioms tracked in the Governance Backlog.|
 
 ---
 

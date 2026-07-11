@@ -40,6 +40,8 @@ Read these, in this order — they are authoritative and override anything you a
 - Sources → `06 Knowledge Base/Sources/`
 - Entities → `06 Knowledge Base/Entities/`
 
-## When you finish
+## When you finish — produce a review-targeting brief
 
-State plainly: the refined question, the findings with confidence levels, what you bracketed, and what you are least sure of. Then hand off — your work is **not complete** until `critical-reviewer` has challenged it and `knowledge-architect` has validated it structurally.
+End with an explicit **review-targeting brief** for the Critical Reviewer (OPS-0003 §3.1): the refined question, the findings with confidence levels, what you bracketed, **your single weakest / most contestable claim**, and **every figure or citation you could not verify** (so the reviewer spends its verification effort where it matters, not re-deriving what is solid). Being direct about your weak points makes the review sharper and faster — it is a strength, not an admission.
+
+Then hand off — your work is **not complete** until `critical-reviewer` has challenged it and `knowledge-architect` has validated it structurally.

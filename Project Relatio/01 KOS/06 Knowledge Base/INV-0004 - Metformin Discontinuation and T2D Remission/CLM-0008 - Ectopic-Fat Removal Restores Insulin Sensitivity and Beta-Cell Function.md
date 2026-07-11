@@ -15,6 +15,7 @@ related_documents:
   - SRC-0007 Taylor Twin-Cycle Mechanism Literature
   - CLM-0007 Substantial Weight Loss Can Induce T2D Remission
   - CLM-0009 Remission Likelihood Declines with Duration and Beta-Cell Loss
+  - FND-0004 Evidence-Based Pathways to T2D Remission and Safe De-prescribing
 tags:
   - ProjectRelatio
   - KnowledgeBase

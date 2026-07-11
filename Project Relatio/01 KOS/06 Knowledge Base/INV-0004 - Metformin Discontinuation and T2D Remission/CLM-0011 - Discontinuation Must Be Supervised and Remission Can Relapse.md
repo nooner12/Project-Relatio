@@ -15,6 +15,8 @@ related_documents:
   - SRC-0010 ADA-EASD Consensus on Remission Definition
   - SRC-0006 DiRECT Trial Programme
   - CLM-0007 Substantial Weight Loss Can Induce T2D Remission
+  - CLM-0010 Carbohydrate Restriction Improves Control and Reduces Medication
+  - FND-0004 Evidence-Based Pathways to T2D Remission and Safe De-prescribing
 tags:
   - ProjectRelatio
   - KnowledgeBase

@@ -1,7 +1,7 @@
 ---
 title: OPS-0002 - Relationship Integrity & Graph Maintenance
 document_type: Operations Document
-version: 1.0
+version: 1.1
 status: Adopted
 created: 2026-07-09
 parent_documents:
@@ -81,9 +81,17 @@ Remaining known gaps (tracked, not yet reconciled): source↔claim reciprocity (
 
 ---
 
-# 6. Toward Automation
+# 6. Automation (built 2026-07-10)
 
-Manual reciprocity maintenance is the current practice but does not scale (F-12's core point). The intended RRI enhancement: a **Dataview-generated integrity report** that lists dangling and one-directional links across the KB, run as a periodic STD-0006 audit. Building it is a future Operations task, justified once the KB is large enough that manual checks become unreliable — not before (demonstrated-need discipline).
+Manual reciprocity maintenance does not scale (F-12's core point). The automation now exists:
+
+> **`tools/graph_integrity.py`** (RRI) inventories every object and reports (a) **dangling references** — any `parent_documents`/`related_documents` entry resolving to no existing object (exit code 1; reliability-critical), and (b) **one-directional KB links** — advisory, among Knowledge Base objects, where `A → B` has no reciprocal `B → A` (a parent-link counts as reciprocation). Output: `tools/output/graph_integrity_report.md`.
+
+This replaces the Knowledge Architect's manual graph check on the routine path — the Architect now **runs the tool and adjudicates its output** rather than tracing links by hand (see the `knowledge-architect` agent). The tool is the periodic STD-0006 graph audit.
+
+**What the tool does not decide:** it *detects*; humans decide what to fix. One-directional links are surfaced as advisories, not auto-repaired — OPS-0002 §5 treats them as low-severity, and mass-reciprocating them for symmetry alone is the over-completeness the scope guardrail warns against. Dangling references, by contrast, are failures to resolve.
+
+*(Note, 2026-07-10 baseline: the tool reports the known phantom ADR references in KOS-0003/KOS-0011 as dangling — these are the deferred M-3 / GB-2026-005 items, and are the sole cause of the current non-zero exit.)*
 
 ---
 
@@ -98,6 +106,7 @@ Manual reciprocity maintenance is the current practice but does not scale (F-12'
 |Version|Date|Status|Description|
 |---|---|---|---|
 |1.0|2026-07-09|Adopted|Initial relationship-integrity practice; resolves the practice-gap behind F-12. Included a first reciprocity pass and repair of the finding↔claim subgraph.|
+|1.1|2026-07-10|Adopted|§6 rewritten: the graph-integrity automation is built (`tools/graph_integrity.py`), replacing manual checking on the routine path. Resolves GB-2026-004.|
 
 ---
 

@@ -17,6 +17,10 @@ related_documents:
   - SRC-0010 ADA-EASD Consensus on Remission Definition
   - CLM-0008 Ectopic-Fat Removal Restores Insulin Sensitivity and Beta-Cell Function
   - CLM-0009 Remission Likelihood Declines with Duration and Beta-Cell Loss
+  - CLM-0010 Carbohydrate Restriction Improves Control and Reduces Medication
+  - CLM-0011 Discontinuation Must Be Supervised and Remission Can Relapse
+  - CLM-0012 Exercise and Mediterranean Diet Improve Control but Rarely Alone Remit
+  - FND-0004 Evidence-Based Pathways to T2D Remission and Safe De-prescribing
 tags:
   - ProjectRelatio
   - KnowledgeBase
