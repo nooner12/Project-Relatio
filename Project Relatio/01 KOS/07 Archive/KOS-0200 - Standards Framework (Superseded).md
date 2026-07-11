@@ -1,8 +1,8 @@
 ---
-title: KOS-0200 - Standards Framework
+title: KOS-0200 - Standards Framework (Superseded)
 document_type: Operational Framework
 version: 0.1
-status: Draft
+status: Archived
 category:
   - Standards
   - Research Methodology
@@ -18,7 +18,11 @@ tags:
 
 # Standards Framework
 
-## Version 0.1
+## Version 0.1 — SUPERSEDED / ARCHIVED
+
+---
+
+> **⚠️ SUPERSEDED (Archived 2026-07-11, GB-2026-007).** This early Draft (never adopted) proposed the standards layer before it was built. Its role is now fulfilled by the **adopted STD-0001…STD-0007 series** and the **Standards Index / Manifest / Dependency Map**. Note in particular that the six-category taxonomy in §4 (Research / Evidence / Source / Reasoning / Writing / QA Standards) was a *proposal that was not adopted* — the actual standards are STD-0001 (Naming), STD-0002 (Metadata), STD-0003 (Classification), STD-0004 (Relationships), STD-0005 (Lifecycle), STD-0006 (Review), STD-0007 (Terminology). Its universal principles (§3) are covered by CON-0004, KOS-0001 (FC-00x), and KOS-0003. Its `document_type: Operational Framework` was never an approved type. Retained for historical reference only; **not authoritative and not to be built upon.**
 
 ---
 

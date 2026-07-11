@@ -45,7 +45,7 @@ CON-0001, CON-0002, CON-0003, CON-0004. — **Next: CON-0005.**
 KOS-0001, KOS-0003, KOS-0004, KOS-0005, KOS-0006, KOS-0007, KOS-0008, KOS-0009, KOS-0010, KOS-0011, KOS-0012.
 - KOS-0002 — **Superseded** by KOS-0004 (archived).
 - KOS-0100 — **Retired**; migrated to ROLE-0001.
-- KOS-0200 — Draft ("Standards Framework"); candidate for supersession.
+- KOS-0200 — **Superseded / Archived** (2026-07-11, GB-2026-007). "Standards Framework" Draft, never adopted; its role is fulfilled by STD-0001…0007 + the Standards Index/Manifest. Moved to `07 Archive`.
 - KOS-0013 … KOS-0016 — **Reserved** (deferred candidates: Human Development, Communication, Ethical Reasoning, Reality Integration — see Kernel Status §8).
 - **Next free: KOS-0017.**
 

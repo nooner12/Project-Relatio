@@ -207,7 +207,7 @@ Each item below is a batch migration. Per CLAUDE.md ("No spontaneous restructuri
 | M-2 (KOS-0003 status) | **Upgrade to Adopted.** | Executed 2026-07-09: KOS-0003 brought to current schema, stale references fixed (KOS-0001 title; KOS-0002→KOS-0004), retyped, adopted as v1.0. C-8 resolved. |
 | M-3 (phantom ADR references) | **Leave for later.** | Not executed. ADR-KOS-0001…0008 references retained in KOS-0003 `related_documents`; ADR-KOS-0010 retained in KOS-0011. C-9 remains open, to be handled in a future Kernel review pass. |
 | M-4 (Roles layer) | **Adopt ROLE-NNNN** (per STD-0001 §5) as the identifier scheme — chosen for cleanest upstream layer development. | Executed 2026-07-09: KOS-0100→ROLE-0001, 0101→ROLE-0002, 0102→ROLE-0003; folder flattened; conformant Draft frontmatter + shared skeleton added; stale KOS-0100 reference in STD-0006 updated. C-10 resolved. Role *substance* authoring remains the step-4 build. |
-| M-5 (draft-era document_type) | Partially addressed via M-2 (KOS-0003 retyped). | KOS-0002 left as Superseded/historical; KOS-0200 fate still open. |
+| M-5 (draft-era document_type) | Partially addressed via M-2 (KOS-0003 retyped). | KOS-0002 left as Superseded/historical; **KOS-0200 superseded & archived 2026-07-11 (GB-2026-007)** — never adopted; superseded by STD-0001…0007. |
 
 ---
 

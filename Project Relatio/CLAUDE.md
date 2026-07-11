@@ -106,7 +106,7 @@ Open / next (all tracked in `05 Operations/Governance Backlog.md` — consult it
 - **First real agent run (top priority):** put a 4th research question through the full agent circuit (Specialist → Critical Reviewer → Knowledge Architect) — the first genuine test of the specialists as agents.
 - **Graph-integrity automation** (OPS-0002 §6 / GB-2026-004): build only when the KB outgrows manual checks.
 
-**The Governance Backlog is now the single source of open items** (replacing the scattered lists). Deferred-by-decision items (M-1 lifecycle migration, M-3/GB-005 phantom ADRs, GB-2026-007 KOS-0200 fate, GB-2026-002 quantitative evidence, GB-2026-008 ST-003) live there with their decision status — do not action without demonstrated need or the Vision Steward's approval.
+**The Governance Backlog is now the single source of open items** (replacing the scattered lists). Deferred-by-decision items (M-1 lifecycle migration, GB-2026-002 quantitative evidence, GB-2026-003 entity template, GB-2026-006 two-dimensional lifecycle field, GB-2026-008 ST-003) live there with their decision status — do not action without demonstrated need or the Vision Steward's approval. *(GB-005 phantom ADRs and GB-2026-007 KOS-0200 fate are now resolved — see the Backlog §3.)*
 
 ## Owner
 

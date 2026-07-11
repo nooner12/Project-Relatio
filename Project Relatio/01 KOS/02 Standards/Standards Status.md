@@ -193,7 +193,7 @@ Real Research Workflows  (the true test of the architecture)
 |---|---|
 | M-1 two-dimensional lifecycle field | Deferred until first supersession event |
 | M-3 phantom ADR references | Deferred to a future Kernel review pass |
-| KOS-0200 (Standards Framework, Draft) | Fate undecided — candidate for supersession by this layer's Index/Manifest |
+| KOS-0200 (Standards Framework) | **Superseded / Archived** 2026-07-11 (GB-2026-007) — never adopted; superseded by STD-0001…0007 + the Standards Index/Manifest; moved to `07 Archive` |
 
 ---
 

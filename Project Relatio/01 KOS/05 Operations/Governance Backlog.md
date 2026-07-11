@@ -1,7 +1,7 @@
 ---
 title: Governance Backlog
 document_type: Governance Record
-version: 1.6
+version: 1.8
 status: Active
 created: 2026-07-09
 parent_documents:
@@ -88,7 +88,7 @@ Before this document existed, open items were scattered across five places: the 
 - **Context:** Retrospective M-5 / C-11. Still carries an unapproved `document_type` ("Operational Framework").
 - **Impact:** Low. Confusing but inert.
 - **Solutions:** supersede and archive it, or adopt and retype it.
-- **Status:** Open. Candidate for supersession.
+- **Status:** **RESOLVED 2026-07-11 — owner-directed: superseded & archived.** KOS-0200 was never adopted and its role is fulfilled by the adopted STD-0001…0007 series + the Standards Index/Manifest/Dependency Map (its §4 six-category taxonomy was a *non-adopted* proposal). Moved to `07 Archive` as "KOS-0200 - Standards Framework (Superseded).md" with `status: Archived` and a supersession banner. Live references updated (Identifier Registry, Standards Status, Retrospective M-5, CLAUDE.md). Verified: validate.py clean, graph 0 dangling. Moved to §3.
 
 ## GB-2026-008 — ST-003 Domain Specialist unimplemented
 - **Issue:** KOS-0011 §10 defines ST-003 Domain Specialist; no ROLE implements it.
@@ -133,7 +133,7 @@ Before this document existed, open items were scattered across five places: the 
 - **Issue:** The older `tools/validate.py` checks for an `id:` frontmatter field and `[[wikilinks]]`, neither of which the adopted STD-0001/0002 convention uses (identifier is title-embedded; graph is in `related_documents`). Its `id` check is disabled for now (`requires_id: false`).
 - **Impact:** Low. It still does useful checks (empty files, YAML validity, duplicate filenames, broken wikilinks); graph_integrity.py covers the graph.
 - **Solutions:** update validate.py to validate the title-embedded identifier and filename/title parity instead of an `id` field.
-- **Status:** Open, low priority.
+- **Status:** **RESOLVED 2026-07-11.** `validate.py` rebuilt: `requires_id`/`id:` replaced with `requires_identifier`, which checks that the **filename carries a valid identifier, the `title:` carries the same one, and the identifier is unique** across the vault (handles both `TYPE-NNNN` and `ADR-CAT-NNNN`). Added `extract_identifier()` to `common.py`. Removed the stale broken-`[[wikilink]]` pass (not the adopted convention; it false-flagged prose). Verified: **114 files, 0 errors, 0 warnings.** README updated. Moved to §3.
 
 ## GB-2026-017 — Propagate ontological-humility + relationalism from CON-0004 §2
 - **Issue:** The foundational audit (2026-07-11) revised CON-0004 §2 from a critical-realist orientation to **ontological humility + relationalism** (owner-directed). Other documents may still carry the older critical-realist framing.
@@ -209,6 +209,8 @@ Before this document existed, open items were scattered across five places: the 
 | "Research Architect" legacy name (GB-2026-020) | Renamed to **Knowledge Architect (ROLE-0001)** in KOS-0010 §17 → v1.2 |
 | Two confidence scales in the Kernel (GB-2026-021) | Unified into one canonical **hybrid** "Level N (Label)" scale (KOS-0003 §8 v1.4, KOS-0008 §8 v1.1, TPL-0001/0004 v1.1) |
 | "Creation" presumed in KOS-0001 §2 (GB-2026-022) | Softened to "the question of origins (including creation claims)," framed as open under ontological humility → v1.2 |
+| validate.py used non-convention id/wikilink checks (GB-2026-016) | Rebuilt to validate the title-embedded identifier + filename/title parity + uniqueness (STD-0001/0002); wikilink pass removed; 114 files clean |
+| KOS-0200 duplicative Draft (GB-2026-007) | Superseded & archived to `07 Archive`; role fulfilled by STD-0001…0007 + Standards Index; references updated |
 
 ---
 
@@ -229,6 +231,8 @@ Any role may **add** an item. Only the Vision Steward may mark an item **Decided
 |1.4|2026-07-11|Active|**GB-2026-018 Kernel audit substantially complete.** Remaining Kernel docs audited and revised: KOS-0001 v1.1, KOS-0003 v1.3, KOS-0006 v1.1, KOS-0009 v1.1, KOS-0010 v1.1 (KOS-0007/0008 clean). Three judgment calls spun out as new items: **GB-2026-020** (Research Architect rename), **GB-2026-021** (confidence-scale reconciliation), **GB-2026-022** ("creation" wording).|
 |1.5|2026-07-11|Active|**GB-2026-019 co-primacy framing refined** (owner-directed): co-primary adopted as the project's **default working lens** rather than a metaphysical verdict — entity-first and strong/eliminative relationalism held as viable perspectives under ontological humility (OP-006/OP-008), not rejected, pending substantiated evidence. KOS-0004 → v1.3, KOS-0005 → v1.3.|
 |1.6|2026-07-11|Active|**Three audit judgment calls resolved (owner-directed).** GB-2026-020: "Research Architect" renamed to Knowledge Architect (ROLE-0001), KOS-0010 → v1.2. GB-2026-021: two confidence scales unified into one canonical **hybrid "Level N (Label)"** scale — KOS-0003 §8 → v1.4, KOS-0008 §8 → v1.1, TPL-0001/0004 → v1.1 (no KB migration needed). GB-2026-022: KOS-0001 §2 "creation" softened to an open "question of origins," KOS-0001 → v1.2. All three moved to §3.|
+|1.7|2026-07-11|Active|**GB-2026-016 resolved:** `validate.py` rebuilt to check the title-embedded identifier + filename/title parity + uniqueness (STD-0001/0002); stale `id`/`[[wikilink]]` checks removed; 114 files validate clean. Session work committed and pushed to GitHub (public repo). Repo hygiene: `.gitignore` added; build artifacts / local settings / Obsidian UI state untracked.|
+|1.8|2026-07-11|Active|**GB-2026-007 resolved (owner-directed): KOS-0200 superseded & archived.** Never-adopted "Standards Framework" Draft moved to `07 Archive` (status → Archived, supersession banner); role fulfilled by STD-0001…0007 + Standards Index. References updated (Identifier Registry, Standards Status, Retrospective M-5, CLAUDE.md). **Remaining open items (GB-001/009/012/015) intentionally left deferred** — no demonstrated need; actioning them would be over-architecture (per the CLAUDE.md scope guardrail). Backlog now at a healthy resting state.|
 
 ---
 

@@ -25,10 +25,20 @@ Reports, and writes `output/graph_integrity_report.md`:
 Matches the vault's actual convention: identifiers embedded in `title`/filename,
 graph in `related_documents:` / `parent_documents:`.
 
-## validate.py — structural conformance (partial)
+## validate.py — structural conformance
 
-Checks empty files, YAML validity, duplicate filenames, and broken `[[wikilinks]]`.
-Note: it predates the current standards and does **not** check the
-`related_documents` graph (that is graph_integrity.py's job). Its `id`-field check
-is disabled (see validator_rules.yaml); aligning it to title-embedded identifiers
-is Backlog GB-2026-016.
+```
+python validate.py
+```
+
+Checks, per STD-0001/STD-0002:
+- **Empty files** and **YAML validity** (frontmatter parses to a mapping).
+- **Title-embedded identifier** — for identified objects (CON/KOS/STD/ROLE/TPL/OPS/
+  ADR/ENT/SRC/INV/CLM/FND), the filename carries a valid identifier, the `title:`
+  field carries the **same** one, and the identifier is **unique** across the vault.
+  Identifier form: `TYPE-NNNN` (e.g. `KOS-0004`) or `ADR-CAT-NNNN` (e.g. `ADR-GOV-0001`).
+- **Duplicate filenames** (advisory warning).
+
+Exit code 1 if any errors. It does **not** check the `related_documents` graph — that
+is graph_integrity.py's job. (Rebuilt from the old `id`/`[[wikilink]]` checks per
+Backlog GB-2026-016; those predated the adopted standards.)
