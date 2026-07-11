@@ -1,0 +1,38 @@
+document_types:
+
+  identified_documents:
+    filename_prefix:
+      - CON-
+      - ADR-
+      - KOS-
+      - STD-
+      - ROLE-
+      - TPL-
+      - OPS-
+      - ENT-
+      - SRC-
+      - INV-
+      - CLM-
+      - FND-
+
+    requires_yaml: true
+    requires_id: true
+
+  infrastructure_documents:
+    filename_contains:
+      - Index
+      - Status
+      - Manifest
+      - Dependency Map
+      - Architecture Retrospective
+      - Governance Backlog
+      - Identifier Registry
+      - Standing Authorizations
+      - CLAUDE
+
+    requires_yaml: false
+    requires_id: false
+
+defaults:
+  requires_yaml: false
+  requires_id: false

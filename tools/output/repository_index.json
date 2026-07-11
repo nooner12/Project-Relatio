@@ -1,0 +1,656 @@
+{
+  "generated": "2026-07-11T00:40:04.151786Z",
+  "count": 91,
+  "files": [
+    {
+      "path": ".claude\\agents\\critical-reviewer.md",
+      "name": "critical-reviewer",
+      "id": null,
+      "title": null,
+      "links": []
+    },
+    {
+      "path": ".claude\\agents\\knowledge-architect.md",
+      "name": "knowledge-architect",
+      "id": null,
+      "title": null,
+      "links": []
+    },
+    {
+      "path": ".claude\\agents\\research-specialist.md",
+      "name": "research-specialist",
+      "id": null,
+      "title": null,
+      "links": []
+    },
+    {
+      "path": "00 Constitution\\CON-0001 Project Relatio Vision, Mission & Core Principles.md",
+      "name": "CON-0001 Project Relatio Vision, Mission & Core Principles",
+      "id": null,
+      "title": "CON-0001 - Project Relatio Vision, Mission & Core Principles",
+      "links": []
+    },
+    {
+      "path": "00 Constitution\\CON-0002 Project Relatio Architectural Principles.md",
+      "name": "CON-0002 Project Relatio Architectural Principles",
+      "id": null,
+      "title": "CON-0002 - Project Relatio Architectural Principles",
+      "links": []
+    },
+    {
+      "path": "00 Constitution\\CON-0003 - Project Relatio Governance & Stewardship Framework.md",
+      "name": "CON-0003 - Project Relatio Governance & Stewardship Framework",
+      "id": null,
+      "title": "CON-0003 - Project Relatio Governance & Stewardship Framework",
+      "links": []
+    },
+    {
+      "path": "00 Constitution\\CON-0004 Project Relatio Knowledge & Epistemic Integrity Charter.md",
+      "name": "CON-0004 Project Relatio Knowledge & Epistemic Integrity Charter",
+      "id": null,
+      "title": "CON-0004 - Project Relatio Knowledge & Epistemic Integrity Charter",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\01 Kernel\\00 Foundational Documents\\KOS-0001 - Research Operating System Foundation & Charter.md",
+      "name": "KOS-0001 - Research Operating System Foundation & Charter",
+      "id": null,
+      "title": "KOS-0001 - Research Operating System Foundation & Charter",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\01 Kernel\\01 Architectural Decisions\\ADR-GOV-0001 - Governance and Role Reconciliation.md",
+      "name": "ADR-GOV-0001 - Governance and Role Reconciliation",
+      "id": null,
+      "title": "ADR-GOV-0001 - Governance and Role Reconciliation",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\01 Kernel\\02 Epistemology\\KOS-0003 - Epistemic Framework & Knowledge Validation System.md",
+      "name": "KOS-0003 - Epistemic Framework & Knowledge Validation System",
+      "id": null,
+      "title": "KOS-0003 - Epistemic Framework & Knowledge Validation System",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\01 Kernel\\03 Ontology\\KOS-0004 Ontological Framework & Reality Modeling System.md",
+      "name": "KOS-0004 Ontological Framework & Reality Modeling System",
+      "id": null,
+      "title": "KOS-0004 - Ontological Framework & Reality Modeling System",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\01 Kernel\\04 Relationship Modeling\\KOS-0005 - Relationship Modeling Framework.md",
+      "name": "KOS-0005 - Relationship Modeling Framework",
+      "id": null,
+      "title": "KOS-0005 - Relationship Modeling Framework",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\01 Kernel\\05 Systems Modeling\\KOS-0006 - Systems Modeling & Complexity Framework.md",
+      "name": "KOS-0006 - Systems Modeling & Complexity Framework",
+      "id": null,
+      "title": "KOS-0006 - Systems Modeling & Complexity Framework",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\01 Kernel\\06 Comparative Analysis\\KOS-0007 - Comparative Analysis Framework.md",
+      "name": "KOS-0007 - Comparative Analysis Framework",
+      "id": null,
+      "title": "KOS-0007 - Comparative Analysis Framework",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\01 Kernel\\07 Research Methodology\\KOS-0008 - Research Methodology & Investigation Framework.md",
+      "name": "KOS-0008 - Research Methodology & Investigation Framework",
+      "id": null,
+      "title": "KOS-0008 - Research Methodology & Investigation Framework",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\01 Kernel\\08 Knowledge Representation\\KOS-0009 - Knowledge Representation & Information Architecture Framework.md",
+      "name": "KOS-0009 - Knowledge Representation & Information Architecture Framework",
+      "id": null,
+      "title": "KOS-0009 - Knowledge Representation & Information Architecture Framework",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\01 Kernel\\09 Reasoning & Synthesis\\KOS-0010 - Reasoning & Synthesis Framework.md",
+      "name": "KOS-0010 - Reasoning & Synthesis Framework",
+      "id": null,
+      "title": "KOS-0010 - Reasoning & Synthesis Framework",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\01 Kernel\\10 Governance & Evolution\\KOS-0011 - Governance, Stewardship & Evolution Framework.md",
+      "name": "KOS-0011 - Governance, Stewardship & Evolution Framework",
+      "id": null,
+      "title": "KOS-0011 - Governance, Stewardship & Evolution Framework",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\01 Kernel\\11 Knowledge Object Model\\KOS-0012 - Knowledge Object Model.md",
+      "name": "KOS-0012 - Knowledge Object Model",
+      "id": null,
+      "title": "KOS-0012 - Knowledge Object Model",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\01 Kernel\\99 Archive\\KOS-0002 - Ontological Framework (Superseded).md",
+      "name": "KOS-0002 - Ontological Framework (Superseded)",
+      "id": null,
+      "title": "KOS-0002 - Ontological Framework",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\01 Kernel\\KOS Architecture Manifest.md",
+      "name": "KOS Architecture Manifest",
+      "id": null,
+      "title": "KOS Architecture Manifest",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\01 Kernel\\KOS Dependency Map.md",
+      "name": "KOS Dependency Map",
+      "id": null,
+      "title": "KOS Dependency Map",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\01 Kernel\\Kernel Index.md",
+      "name": "Kernel Index",
+      "id": null,
+      "title": "Kernel Index",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\01 Kernel\\Kernel Status.md",
+      "name": "Kernel Status",
+      "id": null,
+      "title": "Kernel Status",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\02 Standards\\00 Standards Index\\Standards Index.md",
+      "name": "Standards Index",
+      "id": null,
+      "title": "Standards Index",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\02 Standards\\KOS-0200 - Standards Framework.md",
+      "name": "KOS-0200 - Standards Framework",
+      "id": null,
+      "title": "KOS-0200 - Standards Framework",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\02 Standards\\STD-0001 - Naming & Identification Standard.md",
+      "name": "STD-0001 - Naming & Identification Standard",
+      "id": null,
+      "title": "STD-0001 - Naming & Identification Standard",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\02 Standards\\STD-0002 - Metadata & YAML Standard.md",
+      "name": "STD-0002 - Metadata & YAML Standard",
+      "id": null,
+      "title": "STD-0002 - Metadata & YAML Standard",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\02 Standards\\STD-0003 - Classification & Discovery Standard.md",
+      "name": "STD-0003 - Classification & Discovery Standard",
+      "id": null,
+      "title": "STD-0003 - Classification & Discovery Standard",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\02 Standards\\STD-0004 - Relationship & Linking Standard.md",
+      "name": "STD-0004 - Relationship & Linking Standard",
+      "id": null,
+      "title": "STD-0004 - Relationship & Linking Standard",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\02 Standards\\STD-0005 - Lifecycle & Revision Standard.md",
+      "name": "STD-0005 - Lifecycle & Revision Standard",
+      "id": null,
+      "title": "STD-0005 - Lifecycle & Revision Standard",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\02 Standards\\STD-0006 - Review & Validation Standard.md",
+      "name": "STD-0006 - Review & Validation Standard",
+      "id": null,
+      "title": "STD-0006 - Review & Validation Standard",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\02 Standards\\STD-0007 - Terminology & Semantic Stewardship Standard.md",
+      "name": "STD-0007 - Terminology & Semantic Stewardship Standard",
+      "id": null,
+      "title": "STD-0007 - Terminology & Semantic Stewardship Standard",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\02 Standards\\Standards Architecture Retrospective.md",
+      "name": "Standards Architecture Retrospective",
+      "id": null,
+      "title": "Standards Architecture Retrospective",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\02 Standards\\Standards Dependency Map.md",
+      "name": "Standards Dependency Map",
+      "id": null,
+      "title": "Standards Dependency Map",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\02 Standards\\Standards Status.md",
+      "name": "Standards Status",
+      "id": null,
+      "title": "Standards Status",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\03 Roles\\ROLE-0001 - Knowledge Architect.md",
+      "name": "ROLE-0001 - Knowledge Architect",
+      "id": null,
+      "title": "ROLE-0001 - Knowledge Architect",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\03 Roles\\ROLE-0002 - Research Specialist.md",
+      "name": "ROLE-0002 - Research Specialist",
+      "id": null,
+      "title": "ROLE-0002 - Research Specialist",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\03 Roles\\ROLE-0004 - Critical Reviewer.md",
+      "name": "ROLE-0004 - Critical Reviewer",
+      "id": null,
+      "title": "ROLE-0004 - Critical Reviewer",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\03 Roles\\ROLE-0005 - Vision Steward.md",
+      "name": "ROLE-0005 - Vision Steward",
+      "id": null,
+      "title": "ROLE-0005 - Vision Steward",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\03 Roles\\Roles Index.md",
+      "name": "Roles Index",
+      "id": null,
+      "title": "Roles Index",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\04 Templates\\TPL-0001 - Claim Record Template.md",
+      "name": "TPL-0001 - Claim Record Template",
+      "id": null,
+      "title": "TPL-0001 - Claim Record Template",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\04 Templates\\TPL-0002 - Source Record Template.md",
+      "name": "TPL-0002 - Source Record Template",
+      "id": null,
+      "title": "TPL-0002 - Source Record Template",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\04 Templates\\TPL-0003 - Investigation Record Template.md",
+      "name": "TPL-0003 - Investigation Record Template",
+      "id": null,
+      "title": "TPL-0003 - Investigation Record Template",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\04 Templates\\TPL-0004 - Finding Record Template.md",
+      "name": "TPL-0004 - Finding Record Template",
+      "id": null,
+      "title": "TPL-0004 - Finding Record Template",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\04 Templates\\TPL-0005 - Architecture Decision Record Template.md",
+      "name": "TPL-0005 - Architecture Decision Record Template",
+      "id": null,
+      "title": "TPL-0005 - Architecture Decision Record Template",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\05 Operations\\Governance Backlog.md",
+      "name": "Governance Backlog",
+      "id": null,
+      "title": "Governance Backlog",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\05 Operations\\Identifier Registry.md",
+      "name": "Identifier Registry",
+      "id": null,
+      "title": "Identifier Registry",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\05 Operations\\OPS-0001 - Knowledge Base Organization.md",
+      "name": "OPS-0001 - Knowledge Base Organization",
+      "id": null,
+      "title": "OPS-0001 - Knowledge Base Organization",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\05 Operations\\OPS-0002 - Relationship Integrity and Graph Maintenance.md",
+      "name": "OPS-0002 - Relationship Integrity and Graph Maintenance",
+      "id": null,
+      "title": "OPS-0002 - Relationship Integrity & Graph Maintenance",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\05 Operations\\OPS-0003 - Research Workflow.md",
+      "name": "OPS-0003 - Research Workflow",
+      "id": null,
+      "title": "OPS-0003 - Research Workflow",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\05 Operations\\Standing Authorizations.md",
+      "name": "Standing Authorizations",
+      "id": null,
+      "title": "Standing Authorizations",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\Entities\\ENT-0001 - Wu Wei.md",
+      "name": "ENT-0001 - Wu Wei",
+      "id": null,
+      "title": "ENT-0001 - Wu Wei",
+      "links": [
+        "ENT-0002 - Ziran"
+      ]
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\Entities\\ENT-0002 - Ziran.md",
+      "name": "ENT-0002 - Ziran",
+      "id": null,
+      "title": "ENT-0002 - Ziran",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0001 - Jesus and Daoism Teachings\\CLM-0001 - Non-Striving Convergence.md",
+      "name": "CLM-0001 - Non-Striving Convergence",
+      "id": null,
+      "title": "CLM-0001 - Non-Striving Convergence",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0001 - Jesus and Daoism Teachings\\CLM-0002 - Ultimate-Reality Divergence.md",
+      "name": "CLM-0002 - Ultimate-Reality Divergence",
+      "id": null,
+      "title": "CLM-0002 - Ultimate-Reality Divergence",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0001 - Jesus and Daoism Teachings\\FND-0001 - Resonant Ethic Opposed Ultimates.md",
+      "name": "FND-0001 - Resonant Ethic Opposed Ultimates",
+      "id": null,
+      "title": "FND-0001 - Resonant Ethic, Opposed Ultimates",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0001 - Jesus and Daoism Teachings\\INV-0001 - Jesus and Daoism Teachings.md",
+      "name": "INV-0001 - Jesus and Daoism Teachings",
+      "id": null,
+      "title": "INV-0001 - Comparative Teachings of Jesus and Philosophical Daoism",
+      "links": [
+        "FND-0001 - Resonant Ethic Opposed Ultimates"
+      ]
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0001 - Jesus and Daoism Teachings\\Pressure Test Report - RQ-0001.md",
+      "name": "Pressure Test Report - RQ-0001",
+      "id": null,
+      "title": "Pressure Test Report - RQ-0001",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0002 - Phantom Traffic Jams\\CLM-0003 - Endogenous Instability Not Bottleneck.md",
+      "name": "CLM-0003 - Endogenous Instability Not Bottleneck",
+      "id": null,
+      "title": "CLM-0003 - Endogenous Instability, Not Bottleneck",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0002 - Phantom Traffic Jams\\CLM-0004 - Backward Stop-and-Go Waves.md",
+      "name": "CLM-0004 - Backward Stop-and-Go Waves",
+      "id": null,
+      "title": "CLM-0004 - Backward Stop-and-Go Waves",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0002 - Phantom Traffic Jams\\FND-0002 - Jams as Emergent Instability.md",
+      "name": "FND-0002 - Jams as Emergent Instability",
+      "id": null,
+      "title": "FND-0002 - Jams as Emergent Instability",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0002 - Phantom Traffic Jams\\INV-0002 - Phantom Traffic Jams.md",
+      "name": "INV-0002 - Phantom Traffic Jams",
+      "id": null,
+      "title": "INV-0002 - Phantom Traffic Jams",
+      "links": [
+        "FND-0002 - Jams as Emergent Instability",
+        "Second-Run Friction Assessment - RQ-0002"
+      ]
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0002 - Phantom Traffic Jams\\Second-Run Friction Assessment - RQ-0002.md",
+      "name": "Second-Run Friction Assessment - RQ-0002",
+      "id": null,
+      "title": "Second-Run Friction Assessment - RQ-0002",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0003 - Wu Wei\\CLM-0005 - Wu Wei as Effortless Action.md",
+      "name": "CLM-0005 - Wu Wei as Effortless Action",
+      "id": null,
+      "title": "CLM-0005 - Wu Wei as Effortless Action",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0003 - Wu Wei\\CLM-0006 - Three Interpretive Registers.md",
+      "name": "CLM-0006 - Three Interpretive Registers",
+      "id": null,
+      "title": "CLM-0006 - Three Interpretive Registers",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0003 - Wu Wei\\FND-0003 - Wu Wei as Non-Forcing Action.md",
+      "name": "FND-0003 - Wu Wei as Non-Forcing Action",
+      "id": null,
+      "title": "FND-0003 - Wu Wei as Non-Forcing Action",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0003 - Wu Wei\\INV-0003 - Wu Wei.md",
+      "name": "INV-0003 - Wu Wei",
+      "id": null,
+      "title": "INV-0003 - Wu Wei",
+      "links": [
+        "ENT-0001 - Wu Wei",
+        "FND-0003 - Wu Wei as Non-Forcing Action",
+        "Third-Run Assessment - RQ-0003"
+      ]
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0003 - Wu Wei\\Third-Run Assessment - RQ-0003.md",
+      "name": "Third-Run Assessment - RQ-0003",
+      "id": null,
+      "title": "Third-Run Assessment - RQ-0003",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0004 - Metformin Discontinuation and T2D Remission\\CLM-0007 - Substantial Weight Loss Can Induce T2D Remission.md",
+      "name": "CLM-0007 - Substantial Weight Loss Can Induce T2D Remission",
+      "id": null,
+      "title": "CLM-0007 - Substantial Weight Loss Can Induce T2D Remission",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0004 - Metformin Discontinuation and T2D Remission\\CLM-0008 - Ectopic-Fat Removal Restores Insulin Sensitivity and Beta-Cell Function.md",
+      "name": "CLM-0008 - Ectopic-Fat Removal Restores Insulin Sensitivity and Beta-Cell Function",
+      "id": null,
+      "title": "CLM-0008 - Ectopic-Fat Removal Restores Insulin Sensitivity and Beta-Cell Function",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0004 - Metformin Discontinuation and T2D Remission\\CLM-0009 - Remission Likelihood Declines with Duration and Beta-Cell Loss.md",
+      "name": "CLM-0009 - Remission Likelihood Declines with Duration and Beta-Cell Loss",
+      "id": null,
+      "title": "CLM-0009 - Remission Likelihood Declines with Duration and Beta-Cell Loss",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0004 - Metformin Discontinuation and T2D Remission\\CLM-0010 - Carbohydrate Restriction Improves Control and Reduces Medication.md",
+      "name": "CLM-0010 - Carbohydrate Restriction Improves Control and Reduces Medication",
+      "id": null,
+      "title": "CLM-0010 - Carbohydrate Restriction Improves Control and Reduces Medication",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0004 - Metformin Discontinuation and T2D Remission\\CLM-0011 - Discontinuation Must Be Supervised and Remission Can Relapse.md",
+      "name": "CLM-0011 - Discontinuation Must Be Supervised and Remission Can Relapse",
+      "id": null,
+      "title": "CLM-0011 - Discontinuation Must Be Supervised and Remission Can Relapse",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0004 - Metformin Discontinuation and T2D Remission\\CLM-0012 - Exercise and Mediterranean Diet Improve Control but Rarely Alone Remit.md",
+      "name": "CLM-0012 - Exercise and Mediterranean Diet Improve Control but Rarely Alone Remit",
+      "id": null,
+      "title": "CLM-0012 - Exercise and Mediterranean Diet Improve Control but Rarely Alone Remit",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0004 - Metformin Discontinuation and T2D Remission\\Critical Review - RQ-0004.md",
+      "name": "Critical Review - RQ-0004",
+      "id": null,
+      "title": "Critical Review - RQ-0004",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0004 - Metformin Discontinuation and T2D Remission\\FND-0004 - Evidence-Based Pathways to T2D Remission and Safe De-prescribing.md",
+      "name": "FND-0004 - Evidence-Based Pathways to T2D Remission and Safe De-prescribing",
+      "id": null,
+      "title": "FND-0004 - Evidence-Based Pathways to T2D Remission and Safe De-prescribing",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\INV-0004 - Metformin Discontinuation and T2D Remission\\INV-0004 - Metformin Discontinuation and T2D Remission.md",
+      "name": "INV-0004 - Metformin Discontinuation and T2D Remission",
+      "id": null,
+      "title": "INV-0004 - Metformin Discontinuation and T2D Remission",
+      "links": [
+        "FND-0004 - Evidence-Based Pathways to T2D Remission and Safe De-prescribing"
+      ]
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\Sources\\SRC-0001 - Canonical Gospels.md",
+      "name": "SRC-0001 - Canonical Gospels",
+      "id": null,
+      "title": "SRC-0001 - Canonical Gospels",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\Sources\\SRC-0002 - Philosophical Daoist Corpus.md",
+      "name": "SRC-0002 - Philosophical Daoist Corpus",
+      "id": null,
+      "title": "SRC-0002 - Philosophical Daoist Corpus",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\Sources\\SRC-0003 - Sugiyama 2008 Circular-Track Experiment.md",
+      "name": "SRC-0003 - Sugiyama 2008 Circular-Track Experiment",
+      "id": null,
+      "title": "SRC-0003 - Sugiyama 2008 Circular-Track Experiment",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\Sources\\SRC-0004 - Traffic-Flow Instability and Jamiton Modeling.md",
+      "name": "SRC-0004 - Traffic-Flow Instability and Jamiton Modeling",
+      "id": null,
+      "title": "SRC-0004 - Traffic-Flow Instability and Jamiton Modeling",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\Sources\\SRC-0005 - Slingerland Effortless Action.md",
+      "name": "SRC-0005 - Slingerland Effortless Action",
+      "id": null,
+      "title": "SRC-0005 - Slingerland, Effortless Action",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\Sources\\SRC-0006 - DiRECT Trial Programme.md",
+      "name": "SRC-0006 - DiRECT Trial Programme",
+      "id": null,
+      "title": "SRC-0006 - DiRECT Trial Programme",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\Sources\\SRC-0007 - Taylor Twin-Cycle Mechanism Literature.md",
+      "name": "SRC-0007 - Taylor Twin-Cycle Mechanism Literature",
+      "id": null,
+      "title": "SRC-0007 - Taylor Twin-Cycle Mechanism Literature",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\Sources\\SRC-0008 - Virta Health Continuous-Care Trial.md",
+      "name": "SRC-0008 - Virta Health Continuous-Care Trial",
+      "id": null,
+      "title": "SRC-0008 - Virta Health Continuous-Care Trial",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\Sources\\SRC-0009 - STAMPEDE Metabolic Surgery Trial.md",
+      "name": "SRC-0009 - STAMPEDE Metabolic Surgery Trial",
+      "id": null,
+      "title": "SRC-0009 - STAMPEDE Metabolic Surgery Trial",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\Sources\\SRC-0010 - ADA-EASD Consensus on Remission Definition.md",
+      "name": "SRC-0010 - ADA-EASD Consensus on Remission Definition",
+      "id": null,
+      "title": "SRC-0010 - ADA-EASD Consensus on Remission Definition",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\06 Knowledge Base\\Sources\\SRC-0011 - Diet and Exercise Glycemic-Control Literature.md",
+      "name": "SRC-0011 - Diet and Exercise Glycemic-Control Literature",
+      "id": null,
+      "title": "SRC-0011 - Diet and Exercise Glycemic-Control Literature",
+      "links": []
+    },
+    {
+      "path": "01 KOS\\07 Archive\\ROLE-0003 - Research Council Coordinator (Retired).md",
+      "name": "ROLE-0003 - Research Council Coordinator (Retired)",
+      "id": null,
+      "title": "ROLE-0003 - Research Council Coordinator (Retired)",
+      "links": []
+    },
+    {
+      "path": "CLAUDE.md",
+      "name": "CLAUDE",
+      "id": null,
+      "title": null,
+      "links": []
+    }
+  ]
+}
