@@ -1,7 +1,7 @@
 ---
 title: OPS-0003 - Research Workflow
 document_type: Operations Document
-version: 1.2
+version: 1.3
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -27,7 +27,7 @@ tags:
 
 # Research Workflow
 
-## Version 1.1
+## Version 1.3
 
 ## Adopted Operations Document
 
@@ -41,11 +41,11 @@ It is not theory. It is the distilled procedure of three completed investigation
 
 ---
 
-# 2. Scope Guardrail
+# 2. Scope Guardrail (reframed — ADR-GOV-0002)
 
-> Project Relatio's **current** purpose is to conduct thorough and disciplined research on the owner's questions. Being an exemplary knowledge architecture is a *consequence* of that, not the goal itself.
+> Project Relatio's purpose is to conduct thorough and disciplined research on the owner's questions, **and** to become an excellent knowledge architecture in the process — both are legitimate aims, the research primary.
 
-Every step below must earn its place by making research **better**, not by making the architecture more complete. A step that adds ceremony without catching a real failure should be removed.
+Every step below **earns its place on its merits** — by making research **better** or improving the system's ability to produce good answers — judged by *use*, not by symmetry or completeness, and **by merit regardless of which contributor proposes it**. A step that adds ceremony without catching a real failure is removed; but a step that genuinely improves the work is not suppressed to stay minimal. *(This replaces the earlier framing that treated architecture-building as a risk to defend against; see ADR-GOV-0002.)*
 
 ---
 
@@ -161,6 +161,7 @@ Roles: ROLE-0001…0004. Object model: KOS-0012. Epistemics: KOS-0003. Methodolo
 |1.0|2026-07-09|Adopted|Initial research workflow, distilled from three completed investigations; defines the role circuit and the RKA→RRI agent mapping|
 |1.1|2026-07-09|Adopted|Governance assessment: rerouted coordination from the retired ROLE-0003 to the Vision Steward (ROLE-0005) and the main session (ADR-GOV-0001)|
 |1.2|2026-07-10|Adopted|Efficiency refinements from the first agent-circuit run (RQ-0004): §2.1 proportionality/tiering by stakes; §3.1 review-targeting handoff, parallel Reviewer∥Architect, and automated structural check (`tools/graph_integrity.py`). Owner-authorized; ADR waived by owner. Full tiering build remains trigger-gated (GB-2026-013).|
+|1.3|2026-07-11|Adopted|§2 Scope Guardrail reframed per **ADR-GOV-0002**: architecture-building is a legitimate concurrent aim (not a risk to defend against); additions judged by merit/use regardless of source; warranted work is not suppressed to stay minimal. (Also fixed a stale `## Version` heading that read 1.1.)|
 
 ---
 

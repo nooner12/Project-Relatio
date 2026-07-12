@@ -1,7 +1,7 @@
 ---
 title: Architecture Baseline
 document_type: Governance Record
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 created: 2026-07-11
@@ -21,7 +21,7 @@ tags:
 
 # Architecture Baseline
 
-## Version 1.0
+## Version 1.1
 
 ## Active Governance Record
 
@@ -33,9 +33,9 @@ This record draws a **stability line** under Project Relatio's architecture.
 
 The concepts named in §3 are considered **stable as of 2026-07-11**. Changing any of them requires **implementation evidence** — a real research run, migration, or tool that strains the concept — **not further design discussion**.
 
-This is a deliberate commitment device against the project's single standing risk: **over-architecture** (building meta-structure faster than use can validate it — CON-0002; CLAUDE.md scope guardrail). It follows the "freeze the foundation" step of the Phase II execution brief (2026-07-11), which triaged most proposed reflexive meta-structure as premature and kept exactly this one, cheap commitment.
+This is a deliberate commitment device serving the project's **justify-by-use** discipline (CLAUDE.md scope guardrail; ADR-GOV-0002): settled concepts change on *implementation evidence*, not on redesign impulse. It follows the "freeze the foundation" step of the Phase II execution brief (2026-07-11). It guards against churning the foundation faster than use can validate changes — **without** treating architectural growth itself as a risk to be defended against (building toward an excellent architecture is a legitimate aim; ADR-GOV-0002).
 
-It is not a freeze on *work*. It is a freeze on *reopening settled concepts for redesign without evidence*. The Governance Backlog remains fully open (§4).
+It is not a freeze on *work*, and not a bias against building. It is a freeze on *reopening settled concepts for redesign without evidence*. New work — including new architecture that earns its place by use — remains open, as does the Governance Backlog (§4).
 
 ---
 
@@ -121,6 +121,7 @@ A new version of this Baseline is issued when a frozen concept is changed throug
 | Version | Date | Status | Description |
 |---|---|---|---|
 | 1.0 | 2026-07-11 | Active | Initial baseline. Freezes the concepts exercised across INV-0001…0005 and settled by the Standards Architecture Retrospective and the GB-2026-018 Kernel audit. Implements the Phase II brief's "freeze the foundation" step. |
+| 1.1 | 2026-07-11 | Active | §1 reframed per **ADR-GOV-0002**: the baseline serves the justify-by-use discipline rather than defending against "over-architecture" as a standing risk; architectural growth that earns its place by use is a legitimate aim. The freeze still bars redesign-without-evidence; it does not bias against building. |
 
 ---
 

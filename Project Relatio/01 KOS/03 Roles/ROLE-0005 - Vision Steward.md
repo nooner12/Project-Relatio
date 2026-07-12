@@ -1,7 +1,7 @@
 ---
 title: ROLE-0005 - Vision Steward
 document_type: Role Definition
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -27,7 +27,7 @@ tags:
 
 # Vision Steward
 
-## Version 1.0
+## Version 1.1
 
 ## Adopted Role Definition
 
@@ -65,7 +65,7 @@ To ensure Project Relatio remains **what it is for** — currently, a system tha
 3. **Approve governed change** — batch migrations, restructuring, Adopted-status changes, un-deferrals.
 4. **Resolve escalations** — contested `Blocked` verdicts (STD-0006 §7.4), unresolved CR-001/2/3 conflicts, and Specialist↔Reviewer disputes on the merits.
 5. **Grant and revoke Standing Authorizations** (see `Standing Authorizations`), keeping delegation explicit rather than implicit.
-6. **Guard the scope guardrail** — apply the test *does this make the research better?* and remove what does not.
+6. **Steward the merit principle** (reframed — ADR-GOV-0002) — apply the test *does this improve a real answer, or the system's ability to produce one?* Remove what does not earn its keep; do **not** suppress warranted work to stay minimal, and judge contributions by merit regardless of source. Architecture that earns its place by use is a legitimate aim, not a risk.
 7. **Coordination** — intake, sequencing, and completeness of investigations (absorbed from the retired ROLE-0003).
 
 ---
@@ -113,7 +113,7 @@ To ensure Project Relatio remains **what it is for** — currently, a system tha
 - No decision reserved to this role is taken by another role without a recorded Standing Authorization.
 - Every escalation outcome preserves the dissenting position.
 - Significant architectural decisions carry an ADR.
-- The scope guardrail is applied: additions that do not improve research are removed.
+- The merit principle is applied (ADR-GOV-0002): additions that do not improve the research or the system are removed, and warranted additions are not suppressed to stay minimal.
 - Delegation increases over time (GP-006) rather than concentrating.
 
 ---
@@ -132,6 +132,7 @@ To ensure Project Relatio remains **what it is for** — currently, a system tha
 |---|---|---|---|
 |0.1|2026-07-09|Draft|Created by the governance assessment (R12) to complete and make transferable the authority model. Implements CON-0003 §4.1. Authority and Boundaries PROPOSED, including explicit constitutional limits on the owner.|
 |1.0|2026-07-09|Adopted|Owner ratified. In doing so, accepted the §4.2 constitutional limits as binding on himself. No changes to the drafted authority were required.|
+|1.1|2026-07-11|Adopted|Duty §6 and the §-success-check reworded per **ADR-GOV-0002**: "guard the scope guardrail" → "steward the merit principle" (judge additions by merit/use regardless of source; don't suppress warranted work; architecture that earns its place is a legitimate aim). No change to authority or boundaries.|
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Identifier Registry
 document_type: Navigation Document
-version: 1.9
+version: 1.10
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -20,7 +20,7 @@ tags:
 
 # Identifier Registry
 
-## Version 1.9
+## Version 1.10
 
 ## Active Navigation Document
 
@@ -55,8 +55,9 @@ STD-0001, STD-0002, STD-0003, STD-0004, STD-0005, STD-0006, STD-0007. — **Next
 
 ## ADR — Architecture Decision Records
 - **ADR-GOV-0001** (Governance and Role Reconciliation) — Adopted. First ADR; inaugurates the practice.
+- **ADR-GOV-0002** (Guardrail and Scope Reframe) — Adopted 2026-07-11. Reframes the over-architecture guardrail (fear → merit principle) and clarifies the health/education scope.
 - ADR-KOS-0001 … ADR-KOS-0010 — the former phantom references (Retrospective C-9) were **removed 2026-07-10** (GB-2026-005 resolved); these identifiers are now unused/available.
-- Format: `ADR-[CATEGORY]-NNNN` (GOV, KOS, …). — **Next: ADR-GOV-0002.**
+- Format: `ADR-[CATEGORY]-NNNN` (GOV, KOS, …). — **Next: ADR-GOV-0003.**
 
 ## ROLE — Roles
 - ROLE-0001 (Knowledge Architect) — **Adopted v1.1**. Implements ST-001.
@@ -122,6 +123,7 @@ Per OPS-0002 and STD-0006: before assigning a new identifier, consult this regis
 |1.7|2026-07-11|Active|Sixth research workflow (INV-0006, RQ-0006, wellness-intervention adherence & maintenance): registered INV-0006; CLM-0019…CLM-0026; SRC-0024…SRC-0032; ENT-0004 (Intention-Behaviour Gap); FND-0006. First KB objects authored with the new two-lifecycle-field + typed-`relationships` metadata. Objects Draft, pending ROLE-0004 epistemic review and ROLE-0001 conformance.|
 |1.8|2026-07-11|Active|INV-0006 circuit completed: registered Critical Review – RQ-0006 (Conformant with Flags) and Sixth-Run Assessment – RQ-0006 in §3; back-filled the previously-unlisted Critical Review – RQ-0005. Reconciled the frontmatter version / `## Version` heading drift (→1.8) during ROLE-0001 validation.|
 |1.9|2026-07-11|Active|RQ-0006 remediation pass (ROLE-0002, owner-approved): registered **SRC-0033** (Ashford 2010 self-efficacy → CLM-0020) and **SRC-0034** (Baumel 2019 app attrition → CLM-0022), closing two evidentiary gaps flagged by ROLE-0004. **FND-0006 renamed** "…Is Built by…" → "What Best Supports Sustained Wellness Behaviour" (title softened to match the Level-3 body; filename shortened to clear the Windows MAX_PATH limit). Old-named FND-0006 file left as a redirect stub pending ROLE-0001 `git rm`. Next SRC → SRC-0035.|
+|1.10|2026-07-11|Active|Registered **ADR-GOV-0002** (Guardrail and Scope Reframe). Next ADR → ADR-GOV-0003.|
 
 ---
 

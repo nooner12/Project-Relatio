@@ -12,11 +12,17 @@ This vault is the **Relatio Reference Implementation (RRI)** — the Obsidian im
 
 Central principle: **Knowledge is a structured network of meaningful relationships, not a collection of stored information.**
 
-## Purpose and scope guardrail (owner, 2026-07-09)
+## Purpose and scope guardrail (owner, 2026-07-09; reframed by ADR-GOV-0002, 2026-07-11)
 
-**Project Relatio's current purpose is to be a system that conducts thorough and disciplined research on Brian's research questions.** Being an exemplary knowledge architecture may eventually be a goal in its own right — Brian has named "the world's best knowledge architecture" as a long-term horizon — but **it is not the current brief.**
+**Project Relatio's purpose is to conduct thorough and disciplined research on Brian's research questions — and to become an excellent knowledge architecture in the process.** Both are legitimate aims; the research is primary, and building toward the architecture Brian has named ("eventually the world's best") is a genuine concurrent goal, not a deferred one.
 
-Practical consequence, and the primary defence against over-architecture: **every addition must make the research better, not the architecture more complete.** A standard, object type, role, or workflow step that does not catch a real failure or improve a real answer should be removed, not preserved for symmetry. When in doubt, run a research question through the system and see what breaks.
+The operative discipline is a **merit principle, not a brake**: **every addition — from any contributor — earns its place on its merits, by improving a real answer or the system's ability to produce one.** Additions are justified by *use*, not by symmetry or completeness; a standard, object type, role, or workflow step that catches no real failure and improves no real answer is removed. When in doubt, run a research question through the system and see what breaks. Apply this test to contributions **by their merit, not their source** (including your own).
+
+> *This reframes an earlier, fear-based version. The original guardrail was a defence against a specific collaborator (ChatGPT) that over-generated architecture; it was never a description of the owner, who does not apply it to himself. With that framing removed, the point is discipline-by-use, not reflexive refusal — do not suppress genuinely warranted work to be "safe." See ADR-GOV-0002.*
+
+## Health / clinical-evidence scope (ADR-GOV-0002)
+
+The system may **investigate any question to full depth and rigour** — the scope is not a limit on inquiry. What it does **not** do is give **individualized** medical/clinical advice: it lacks the person's history, labs, and exam, so it reports *general evidence* and brackets the individual case. That is epistemic honesty, not a restriction. Health findings are framed for **expert application** and are **gated from third-party external reliance** (STD-0006 §7.5) pending genuine independent and clinician review. **The system informs expert judgment — including Brian's own clinical background — it does not replace a clinician.** The boundary is on outward-facing individualized claims, not on what may be researched.
 
 ## Authoritative sources — read before acting
 
@@ -72,11 +78,11 @@ The essentials (full detail in ROLE-0001):
 
 1. **Survey before writing**, and **verify before removing** — never delete a reference/object on a belief it doesn't exist; search and confirm first (ROLE-0001 §6, learned from a real error).
 2. **Propose, then execute.** Multi-file change → present plan + file list first. New/amended Standards, object types, batch migrations, renames, Adopted-status changes, and role authority are **owner-reserved** (ROLE-0001 §4.2 / ROLE-0005). The `.claude/settings.json` permission gate enforces this for Constitution/Kernel/Standards/Roles edits.
-3. **Formalize only on demonstrated need** (Risk 1: over-architecture). Propose and **log to the Governance Backlog**; don't create unprompted. Still deferred: AD-002 (Architecture Discovery Log), AD-003 (Patterns Catalog).
+3. **Formalize on demonstrated need — justify by use** (per the merit principle above; ADR-GOV-0002). Propose and **log to the Governance Backlog**; don't create unprompted, but don't suppress warranted work either. Still deferred (no demonstrated need yet): AD-002 (Architecture Discovery Log), AD-003 (Patterns Catalog).
 4. **No spontaneous restructuring.** Batch migrations; never rename incrementally.
 5. **Follow the architectural-document workflow**: Architecture Review → **one refinement maximum** → Canonical Specification → Critique → Integration Update.
 6. **New documents follow the standards** (STD-0001/0002/0005) and are recorded in the **Identifier Registry**.
-7. **Maintain RKA/RRI separation** (Risk 3). Obsidian/Claude-Code mechanics (plugins, Dataview, agent files, settings) are RRI; the architecture is platform-independent. The anti-fabrication rule lives in the Kernel (KOS-0003 §12.1), not the agent files.
+7. **Maintain RKA/RRI separation.** Obsidian/Claude-Code mechanics (plugins, Dataview, agent files, settings) are RRI; the architecture is platform-independent. The anti-fabrication rule lives in the Kernel (KOS-0003 §12.1), not the agent files.
 8. **Log architectural insights instead of acting on them** — record for the Vision Steward's review rather than folding in mid-task.
 
 **Delegated standing authority** (what a session may do without asking) is recorded in `05 Operations/Standing Authorizations.md`. In-session grants like "keep going" are **session-scoped only** and don't persist.
