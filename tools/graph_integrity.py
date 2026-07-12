@@ -32,7 +32,7 @@ import re
 import sys
 import yaml
 
-from common import find_vault_root, markdown_files, parse_frontmatter
+from common import find_vault_root, markdown_files, parse_frontmatter, read_text, write_text
 
 # ADR-GOV-0001 style OR TYPE-NNNN style (CON/KOS/STD/ROLE/TPL/OPS/INV/CLM/SRC/ENT/FND)
 ID_RE = re.compile(r"^(ADR-[A-Z]{2,5}-\d{4}|[A-Z]{2,5}-\d{4})")
@@ -58,7 +58,7 @@ objects = {}  # key -> {"file", "id", "name", "related": [...], "parents": [...]
 
 for f in files:
     stem = f.stem
-    text = f.read_text(encoding="utf-8")
+    text = read_text(f)
     fm, _ = parse_frontmatter(text)
     meta = {}
     if fm is not None:
@@ -192,6 +192,6 @@ print(report)
 
 out = ROOT / "output" / "graph_integrity_report.md"
 out.parent.mkdir(exist_ok=True)
-out.write_text(report + "\n", encoding="utf-8")
+write_text(out, report + "\n")
 
 sys.exit(1 if dangling else 0)

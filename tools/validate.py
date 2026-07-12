@@ -10,6 +10,7 @@ from common import (
     parse_frontmatter,
     note_name,
     extract_identifier,
+    read_text,
 )
 
 ROOT = Path(__file__).parent
@@ -54,7 +55,7 @@ for file in files:
 
     rule = classify(file.name)
 
-    text = file.read_text(encoding="utf-8")
+    text = read_text(file)
 
     if not text.strip():
         errors.append(f"Empty file: {file}")

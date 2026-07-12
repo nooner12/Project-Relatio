@@ -6,6 +6,11 @@ the standards, it does not define them.
 
 Requires: `pip install -r requirements.txt` (PyYAML).
 
+**Windows long paths:** both tools read files through `common.read_text` / `write_text`,
+which apply the `\\?\` extended-length prefix so deep vault folders plus long object
+titles (absolute path > 260 chars) don't raise `FileNotFoundError`. This surfaced on
+INV-0006, whose long finding title pushed the path past `MAX_PATH`.
+
 ## graph_integrity.py — relationship-graph integrity (OPS-0002 automation)
 
 Automates the OPS-0002 (Relationship Integrity & Graph Maintenance) check so the

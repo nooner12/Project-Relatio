@@ -1,5 +1,33 @@
 from pathlib import Path
+import os
+import sys
 import re
+
+
+def _extended(path) -> str:
+    """Return an OS path safe for Windows MAX_PATH (260) limits.
+
+    Deep vault folders plus long object titles can push a file's absolute path
+    past 260 chars, which makes the default Windows file APIs raise
+    FileNotFoundError. Prefixing an absolute path with `\\\\?\\` opts into the
+    extended-length path form. No-op on non-Windows.
+    """
+    p = os.path.abspath(str(path))
+    if sys.platform == "win32" and not p.startswith("\\\\?\\"):
+        p = "\\\\?\\" + p
+    return p
+
+
+def read_text(path, encoding="utf-8") -> str:
+    """Long-path-safe replacement for Path.read_text()."""
+    with open(_extended(path), "r", encoding=encoding) as f:
+        return f.read()
+
+
+def write_text(path, data, encoding="utf-8") -> None:
+    """Long-path-safe replacement for Path.write_text()."""
+    with open(_extended(path), "w", encoding=encoding) as f:
+        f.write(data)
 
 # Whole-string identifier (e.g. "KOS-0004"). Kept for backward compatibility.
 ID_PATTERN = re.compile(r"^[A-Z]{2,5}-\d{4}$")

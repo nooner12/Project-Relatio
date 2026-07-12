@@ -1,7 +1,7 @@
 ---
 title: Identifier Registry
 document_type: Navigation Document
-version: 1.6
+version: 1.8
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -20,7 +20,7 @@ tags:
 
 # Identifier Registry
 
-## Version 1.4
+## Version 1.8
 
 ## Active Navigation Document
 
@@ -74,19 +74,19 @@ OPS-0001 (KB Organization), OPS-0002 (Relationship Integrity), OPS-0003 (Researc
 Unnumbered Operations records: Identifier Registry, Governance Backlog, Standing Authorizations, Architecture Baseline.
 
 ## INV — Investigations
-INV-0001 (Jesus & Daoism), INV-0002 (Phantom Traffic Jams), INV-0003 (Wu Wei), INV-0004 (Metformin Discontinuation & T2D Remission), INV-0005 (Chronic Stress Interventions). — **Next: INV-0006.**
+INV-0001 (Jesus & Daoism), INV-0002 (Phantom Traffic Jams), INV-0003 (Wu Wei), INV-0004 (Metformin Discontinuation & T2D Remission), INV-0005 (Chronic Stress Interventions), INV-0006 (Wellness Intervention Adherence & Maintenance). — **Next: INV-0007.**
 
 ## CLM — Claims
-CLM-0001, CLM-0002 (INV-0001); CLM-0003, CLM-0004 (INV-0002); CLM-0005, CLM-0006 (INV-0003); CLM-0007 … CLM-0012 (INV-0004); CLM-0013 … CLM-0018 (INV-0005). — **Next: CLM-0019.**
+CLM-0001, CLM-0002 (INV-0001); CLM-0003, CLM-0004 (INV-0002); CLM-0005, CLM-0006 (INV-0003); CLM-0007 … CLM-0012 (INV-0004); CLM-0013 … CLM-0018 (INV-0005); CLM-0019 … CLM-0026 (INV-0006). — **Next: CLM-0027.**
 
 ## SRC — Sources
-SRC-0001 (Gospels), SRC-0002 (Daoist Corpus), SRC-0003 (Sugiyama 2008), SRC-0004 (Jamiton Modeling), SRC-0005 (Slingerland), SRC-0006 (DiRECT Trial Programme), SRC-0007 (Taylor Twin-Cycle Mechanism), SRC-0008 (Virta Health Trial), SRC-0009 (STAMPEDE Surgery Trial), SRC-0010 (ADA/EASD Remission Consensus), SRC-0011 (Diet & Exercise Literature), SRC-0012 (Khoury 2015 MBSR Meta-Analysis), SRC-0013 (de Vibe 2017 Campbell MBSR Review), SRC-0014 (Goyal 2014 JAMA Meditation Meta-Analysis), SRC-0015 (Goessl 2017 HRV Biofeedback Meta-Analysis), SRC-0016 (Cochrane Individual-Level Occupational Stress — Tamminga 2023), SRC-0017 (Cochrane Organizational-Level Occupational Stress), SRC-0018 (CBT-I Long-Term Meta-Analysis), SRC-0019 (Holt-Lunstad 2010 Social Relationships & Mortality), SRC-0020 (Physical Activity, Cortisol & Stress Literature), SRC-0021 (Nature Exposure & Stress Literature), SRC-0022 (Coping Theory & Problem-Focused Coping Literature), SRC-0023 (McEwen Allostatic Load Literature). — **Next: SRC-0024.**
+SRC-0001 (Gospels), SRC-0002 (Daoist Corpus), SRC-0003 (Sugiyama 2008), SRC-0004 (Jamiton Modeling), SRC-0005 (Slingerland), SRC-0006 (DiRECT Trial Programme), SRC-0007 (Taylor Twin-Cycle Mechanism), SRC-0008 (Virta Health Trial), SRC-0009 (STAMPEDE Surgery Trial), SRC-0010 (ADA/EASD Remission Consensus), SRC-0011 (Diet & Exercise Literature), SRC-0012 (Khoury 2015 MBSR Meta-Analysis), SRC-0013 (de Vibe 2017 Campbell MBSR Review), SRC-0014 (Goyal 2014 JAMA Meditation Meta-Analysis), SRC-0015 (Goessl 2017 HRV Biofeedback Meta-Analysis), SRC-0016 (Cochrane Individual-Level Occupational Stress — Tamminga 2023), SRC-0017 (Cochrane Organizational-Level Occupational Stress), SRC-0018 (CBT-I Long-Term Meta-Analysis), SRC-0019 (Holt-Lunstad 2010 Social Relationships & Mortality), SRC-0020 (Physical Activity, Cortisol & Stress Literature), SRC-0021 (Nature Exposure & Stress Literature), SRC-0022 (Coping Theory & Problem-Focused Coping Literature), SRC-0023 (McEwen Allostatic Load Literature), SRC-0024 (Kwasnicka 2016 Maintenance Theories), SRC-0025 (Rhodes & de Bruijn 2013 Intention-Behaviour Gap), SRC-0026 (Michie 2009 Effective Techniques Meta-Regression), SRC-0027 (Harkin 2016 Progress Monitoring), SRC-0028 (Gollwitzer & Sheeran 2006 Implementation Intentions), SRC-0029 (Lally 2010 Habit Formation), SRC-0030 (Teixeira 2012 Exercise & SDT), SRC-0031 (Mantzari 2015 Financial Incentives), SRC-0032 (Eysenbach 2005 Law of Attrition). — **Next: SRC-0033.**
 
 ## ENT — Entities
-ENT-0001 (Wu Wei), ENT-0002 (Ziran), ENT-0003 (Allostatic Load). — **Next: ENT-0004.**
+ENT-0001 (Wu Wei), ENT-0002 (Ziran), ENT-0003 (Allostatic Load), ENT-0004 (Intention-Behaviour Gap). — **Next: ENT-0005.**
 
 ## FND — Findings
-FND-0001 (Resonant Ethic, Opposed Ultimates), FND-0002 (Jams as Emergent Instability), FND-0003 (Wu Wei as Non-Forcing Action), FND-0004 (Evidence-Based Pathways to T2D Remission & Safe De-prescribing), FND-0005 (Durable Chronic-Stress Relief Requires Stressor Reduction Plus Response Regulation). — **Next: FND-0006.**
+FND-0001 (Resonant Ethic, Opposed Ultimates), FND-0002 (Jams as Emergent Instability), FND-0003 (Wu Wei as Non-Forcing Action), FND-0004 (Evidence-Based Pathways to T2D Remission & Safe De-prescribing), FND-0005 (Durable Chronic-Stress Relief Requires Stressor Reduction Plus Response Regulation), FND-0006 (Sustained Wellness Behaviour Built by Self-Regulation, Autonomous Motivation & Habit). — **Next: FND-0007.**
 
 ---
 
@@ -97,7 +97,7 @@ These are authoritative navigational/architectural documents that intentionally 
 - KOS Architecture Manifest; Kernel Index; KOS Dependency Map; Kernel Status.
 - Standards Index; Standards Dependency Map; Standards Status; Standards Architecture Retrospective.
 - Roles Index.
-- Per-run review/assessment reports: Pressure Test Report – RQ-0001; Second-Run Friction Assessment – RQ-0002; Third-Run Assessment – RQ-0003; Critical Review – RQ-0004 (ROLE-0004); Fourth-Run Assessment – RQ-0004 (coordinator).
+- Per-run review/assessment reports: Pressure Test Report – RQ-0001; Second-Run Friction Assessment – RQ-0002; Third-Run Assessment – RQ-0003; Critical Review – RQ-0004 (ROLE-0004); Fourth-Run Assessment – RQ-0004 (coordinator); Critical Review – RQ-0005; Critical Review – RQ-0006 (ROLE-0004); Sixth-Run Assessment – RQ-0006 (coordinator).
 - Identifier Registry (this document); Governance Backlog; Standing Authorizations; Architecture Baseline.
 
 ---
@@ -119,6 +119,8 @@ Per OPS-0002 and STD-0006: before assigning a new identifier, consult this regis
 |1.4|2026-07-10|Active|Fourth research workflow (INV-0004, RQ-0004, T2D remission / metformin): registered INV-0004; CLM-0007…CLM-0012; SRC-0006…SRC-0011; FND-0004. Objects Draft, pending ROLE-0004 review and ROLE-0001 conformance.|
 |1.5|2026-07-10|Active|Fifth research workflow (INV-0005, RQ-0005, chronic-stress interventions & durability): registered INV-0005; CLM-0013…CLM-0018; SRC-0012…SRC-0023; ENT-0003 (Allostatic Load); FND-0005. Objects Draft, pending ROLE-0004 review and ROLE-0001 conformance.|
 |1.6|2026-07-11|Active|Registered the **Architecture Baseline** (unnumbered Operations governance record, Phase II M1). Vault-wide lifecycle & relationship migrations (GB-2026-006 / GB-2026-001) added `operational_status` and typed `relationships` frontmatter — no new identifiers assigned.|
+|1.7|2026-07-11|Active|Sixth research workflow (INV-0006, RQ-0006, wellness-intervention adherence & maintenance): registered INV-0006; CLM-0019…CLM-0026; SRC-0024…SRC-0032; ENT-0004 (Intention-Behaviour Gap); FND-0006. First KB objects authored with the new two-lifecycle-field + typed-`relationships` metadata. Objects Draft, pending ROLE-0004 epistemic review and ROLE-0001 conformance.|
+|1.8|2026-07-11|Active|INV-0006 circuit completed: registered Critical Review – RQ-0006 (Conformant with Flags) and Sixth-Run Assessment – RQ-0006 in §3; back-filled the previously-unlisted Critical Review – RQ-0005. Reconciled the frontmatter version / `## Version` heading drift (→1.8) during ROLE-0001 validation.|
 
 ---
 

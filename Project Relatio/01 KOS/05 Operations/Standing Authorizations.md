@@ -1,7 +1,7 @@
 ---
 title: Standing Authorizations
 document_type: Governance Record
-version: 1.1
+version: 1.2
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -22,7 +22,7 @@ tags:
 
 # Standing Authorizations
 
-## Version 1.0
+## Version 1.2
 
 ## Active Governance Record
 
@@ -76,6 +76,15 @@ Two problems this solves:
 - **Constraint:** every verdict cites a specific criterion; Blocked verdicts are appealable (STD-0006 §7.4) with dissent preserved. Per ROLE-0004 §5, this is *procedural* independence (same model as the Specialist); high-stakes findings warrant a different model or human review.
 - **Status:** Active.
 
+## SA-004 — Session: auto-commit validated work (RRI / operational)
+
+- **Granted to:** the Claude Code main session (an **RRI** implementation grant, not an RKA role authority — git is Claude Code mechanics, not architecture; the RKA/RRI separation is preserved).
+- **Granted:** 2026-07-11 (by the owner, in session).
+- **Scope:** **commit** a completed, coherent unit of work to the **local** git repository **without per-instance approval** — with a descriptive message — once the change is at a clean resting state (for tooling/vault changes, `validate.py` and `graph_integrity.py` green). Rationale: committing is local and fully reversible, preserves granular history, and prevents loss; it aligns with the vault's own preservation ethos (STD-0005 §22, CON-0003 §9.4). Replaces the prior "leave everything in the working tree and ask each time" default.
+- **Explicitly excluded:** **`git push` to the public remote** (`nooner12/Project-Relatio`) — publishing is outward-facing and hard to reverse, and **remains owner-gated, requested per batch**. Also excluded: committing broken or mid-migration states, force-pushing, history rewriting, and `--no-verify`.
+- **Constraint:** each commit is a coherent completed unit; never commit with failing validators; never push without explicit owner approval (see memory [[github-remote]]).
+- **Status:** Active.
+
 ---
 
 # 4. Revoked / Expired Grants
@@ -98,6 +107,7 @@ Grants are reviewed whenever a role definition is amended, and at each STD-0006 
 |---|---|---|---|
 |1.0|2026-07-09|Active|Created by the governance assessment (R9). Records SA-001 (ratified) and SA-002/SA-003 (provisional, pending role-authority ratification).|
 |1.1|2026-07-09|Active|SA-002 and SA-003 made non-provisional on ratification of ROLE-0002 and ROLE-0004; added their ratification-refinement constraints (§4.2a scope, §5 procedural independence).|
+|1.2|2026-07-11|Active|Added **SA-004** (owner-granted, in session): the session may auto-commit completed, validated units of work locally without asking; `git push` to the public remote stays owner-gated per batch. An RRI/operational grant — RKA/RRI separation preserved.|
 
 ---
 
