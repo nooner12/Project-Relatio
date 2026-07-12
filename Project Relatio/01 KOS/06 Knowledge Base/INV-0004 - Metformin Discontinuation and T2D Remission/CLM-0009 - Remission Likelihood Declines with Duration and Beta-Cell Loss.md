@@ -3,6 +3,7 @@ title: CLM-0009 - Remission Likelihood Declines with Duration and Beta-Cell Loss
 document_type: Claim Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -24,6 +25,17 @@ tags:
   - Type2Diabetes
   - Remission
   - DiabetesDuration
+relationships:
+  - type: derived_from
+    target: SRC-0007
+  - type: derived_from
+    target: SRC-0006
+  - type: depends_on
+    target: CLM-0008
+  - type: supports
+    target: FND-0004
+  - type: part_of
+    target: INV-0004
 ---
 
 # CLM-0009

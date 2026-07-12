@@ -3,6 +3,7 @@ title: FND-0001 - Resonant Ethic, Opposed Ultimates
 document_type: Finding Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-09
 category:
   - Knowledge Base
@@ -19,6 +20,13 @@ tags:
   - KnowledgeBase
   - Finding
   - ComparativeReligion
+relationships:
+  - type: derived_from
+    target: CLM-0001
+  - type: derived_from
+    target: CLM-0002
+  - type: part_of
+    target: INV-0001
 ---
 
 # FND-0001

@@ -3,6 +3,7 @@ title: INV-0004 - Metformin Discontinuation and T2D Remission
 document_type: Investigation Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -33,6 +34,21 @@ tags:
   - Type2Diabetes
   - Remission
   - Investigation
+relationships:
+  - type: derived_from
+    target: SRC-0006
+  - type: derived_from
+    target: SRC-0007
+  - type: derived_from
+    target: SRC-0008
+  - type: derived_from
+    target: SRC-0009
+  - type: derived_from
+    target: SRC-0010
+  - type: derived_from
+    target: SRC-0011
+  - type: related_to
+    target: INV-0002
 ---
 
 # INV-0004

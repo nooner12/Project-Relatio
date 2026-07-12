@@ -3,6 +3,7 @@ title: ENT-0001 - Wu Wei
 document_type: Entity Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-09
 category:
   - Knowledge Base
@@ -23,6 +24,13 @@ tags:
   - Entity
   - WuWei
   - Daoism
+relationships:
+  - type: related_to
+    target: ENT-0002
+  - type: derived_from
+    target: SRC-0002
+  - type: derived_from
+    target: SRC-0005
 ---
 
 # ENT-0001

@@ -3,6 +3,7 @@ title: SRC-0004 - Traffic-Flow Instability and Jamiton Modeling
 document_type: Source Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-09
 category:
   - Knowledge Base
@@ -23,6 +24,15 @@ tags:
   - Source
   - TrafficFlow
   - Modeling
+relationships:
+  - type: supports
+    target: CLM-0003
+  - type: supports
+    target: CLM-0004
+  - type: related_to
+    target: SRC-0003
+  - type: derived_from
+    target: KOS-0006
 ---
 
 # SRC-0004

@@ -3,6 +3,7 @@ title: CLM-0006 - Three Interpretive Registers
 document_type: Claim Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-09
 category:
   - Knowledge Base
@@ -22,6 +23,17 @@ tags:
   - KnowledgeBase
   - Claim
   - WuWei
+relationships:
+  - type: explains
+    target: ENT-0001
+  - type: related_to
+    target: CLM-0005
+  - type: derived_from
+    target: SRC-0002
+  - type: derived_from
+    target: SRC-0005
+  - type: part_of
+    target: INV-0003
 ---
 
 # CLM-0006

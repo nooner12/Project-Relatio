@@ -10,18 +10,21 @@ embedded in the `title`/filename (e.g. "CLM-0007 - ..."), and the knowledge grap
 lives in the `related_documents:` and `parent_documents:` YAML lists — NOT in an
 `id` field or in [[wikilinks]] (which is what the older validate.py assumed).
 
-Two checks:
-  1. Dangling references — any `parent_documents` / `related_documents` entry that
-     does not resolve to an existing object. (Both fields; references must resolve.)
-  2. One-directional links — among Knowledge Base research objects
-     (INV/CLM/SRC/ENT/FND), an A -> B `related_documents` link with no B -> A back.
-     `parent_documents` is intentionally hierarchical (one-directional) and is NOT
-     checked for reciprocity; references up to Kernel/Standards/Role docs are
-     likewise not expected to reciprocate.
+Three checks:
+  1. Dangling references — any `parent_documents` / `related_documents` entry, OR
+     any typed `relationships:` target (STD-0002 §7 / STD-0004), that does not
+     resolve to an existing object.
+  2. Non-reciprocated symmetric typed links (type-aware, GB-2026-001) — among KB
+     research objects, a *symmetric*-type edge (`related_to`, `contrasts_with`) with
+     no reciprocal symmetric edge back. Directional types (`derived_from`, `supports`,
+     `part_of`, `depends_on`, `explains`, `defines`, …) are legitimately one-way and
+     are NOT flagged — the typed block lets us tell the difference, which the old
+     flat-list check could not.
+  3. Untyped one-directional `related_documents` (legacy advisory) — kept only for
+     KB objects that carry NO typed `relationships:` block, so nothing goes unchecked.
 
 Exit code 0 = no dangling references (the reliability-critical failure).
-One-directional links are reported as advisories, not failures (OPS-0002 §5 treats
-them as low-severity maintenance).
+Reciprocity findings are advisories, not failures (OPS-0002 §5 = low-severity).
 """
 
 from pathlib import Path
@@ -34,6 +37,8 @@ from common import find_vault_root, markdown_files, parse_frontmatter
 # ADR-GOV-0001 style OR TYPE-NNNN style (CON/KOS/STD/ROLE/TPL/OPS/INV/CLM/SRC/ENT/FND)
 ID_RE = re.compile(r"^(ADR-[A-Z]{2,5}-\d{4}|[A-Z]{2,5}-\d{4})")
 KB_TYPES = ("INV", "CLM", "SRC", "ENT", "FND")
+# STD-0004 symmetric relationship types — these are expected to reciprocate.
+SYMMETRIC_TYPES = ("related_to", "contrasts_with")
 
 ROOT = Path(__file__).parent
 vault = find_vault_root(ROOT)
@@ -68,11 +73,16 @@ for f in files:
     key = ident or stem
     related = [str(x) for x in (meta.get("related_documents") or [])]
     parents = [str(x) for x in (meta.get("parent_documents") or [])]
+    # typed relationships block (STD-0002 §7): list of {type, target}
+    typed = []
+    for r in (meta.get("relationships") or []):
+        if isinstance(r, dict) and r.get("type") and r.get("target"):
+            typed.append((str(r["type"]).strip(), str(r["target"]).strip()))
     is_kb = bool(ident) and ident.split("-")[0] in KB_TYPES
 
     objects[key] = {
         "file": f, "id": ident, "name": stem,
-        "related": related, "parents": parents, "kb": is_kb,
+        "related": related, "parents": parents, "typed": typed, "kb": is_kb,
     }
     if ident:
         by_id[ident] = key
@@ -94,7 +104,7 @@ def resolve(ref: str):
     return None
 
 
-# ---- Check 1: dangling references -----------------------------------------
+# ---- Check 1: dangling references (flat lists + typed targets) -------------
 dangling = []
 for key, o in objects.items():
     for field in ("parents", "related"):
@@ -102,11 +112,34 @@ for key, o in objects.items():
             if resolve(ref) is None:
                 fld = "parent_documents" if field == "parents" else "related_documents"
                 dangling.append((o["name"], fld, ref))
+    for rtype, target in o["typed"]:
+        if resolve(target) is None:
+            dangling.append((o["name"], f"relationships[{rtype}]", target))
 
-# ---- Check 2: one-directional related_documents among KB objects ----------
-one_way = []
+# ---- Check 2: non-reciprocated SYMMETRIC typed links (type-aware) ----------
+# Only related_to / contrasts_with are expected to reciprocate. A reciprocal is
+# any symmetric typed edge from B back to A. Directional types are never flagged.
+sym_one_way = []
 for key, o in objects.items():
     if not o["kb"]:
+        continue
+    for rtype, target in o["typed"]:
+        if rtype not in SYMMETRIC_TYPES:
+            continue
+        tgt = resolve(target)
+        if tgt is None or not objects[tgt]["kb"]:
+            continue
+        t = objects[tgt]
+        back = any(rt in SYMMETRIC_TYPES and resolve(tg) == key
+                   for rt, tg in t["typed"])
+        if not back:
+            sym_one_way.append((o["id"] or o["name"], rtype, t["id"] or t["name"]))
+
+# ---- Check 3: legacy untyped one-directional related_documents ------------
+# Only for KB objects with NO typed block (so nothing goes unchecked).
+one_way = []
+for key, o in objects.items():
+    if not o["kb"] or o["typed"]:
         continue
     for ref in o["related"]:
         tgt = resolve(ref)
@@ -114,10 +147,7 @@ for key, o in objects.items():
             continue
         t = objects[tgt]
         if not t["kb"]:
-            continue  # references up to Kernel/STD/ROLE are not expected to reciprocate
-        # Reciprocation counts if B points back to A via EITHER related_documents
-        # OR parent_documents (a child's parent-link is a valid reciprocal of the
-        # parent's related-link — the relationship is bidirectional across two fields).
+            continue
         back = any(resolve(r) == key for r in t["related"]) or \
                any(resolve(p) == key for p in t["parents"])
         if not back:
@@ -130,7 +160,8 @@ lines.append("# Graph Integrity Report - Project Relatio")
 lines.append("")
 lines.append(f"Objects scanned: {len(objects)}")
 lines.append(f"Dangling references: {len(dangling)}")
-lines.append(f"One-directional KB links: {len(one_way)}")
+lines.append(f"Non-reciprocated symmetric typed links: {len(set(sym_one_way))}")
+lines.append(f"Untyped one-directional KB links (legacy): {len(one_way)}")
 lines.append("")
 
 if dangling:
@@ -139,15 +170,22 @@ if dangling:
         lines.append(f"- `{name}` -> {fld}: `{ref}`")
     lines.append("")
 
+if sym_one_way:
+    lines.append("## Non-reciprocated symmetric typed links (advisory - GB-2026-001)")
+    lines.append("A has a symmetric edge (related_to/contrasts_with) to B, but B has none back:")
+    for a, rt, b in sorted(set(sym_one_way)):
+        lines.append(f"- {a} -[{rt}]-> {b}  (no symmetric edge {b} -> {a})")
+    lines.append("")
+
 if one_way:
-    lines.append("## One-directional KB links (advisory - OPS-0002 sec.5)")
-    lines.append("A lists B in related_documents, but B does not list A back:")
+    lines.append("## Untyped one-directional KB links (legacy advisory - OPS-0002 sec.5)")
+    lines.append("KB objects with no typed relationships block; A lists B but not vice-versa:")
     for a, b in sorted(set(one_way)):
         lines.append(f"- {a} -> {b}  (no {b} -> {a})")
     lines.append("")
 
-if not dangling and not one_way:
-    lines.append("No dangling references and no one-directional KB links. Graph is clean.")
+if not dangling and not sym_one_way and not one_way:
+    lines.append("No dangling references and full reciprocity. Graph is clean.")
 
 report = "\n".join(lines)
 print(report)

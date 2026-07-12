@@ -3,6 +3,7 @@ title: Critical Review - RQ-0004
 document_type: Review Report
 version: 1.0
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base

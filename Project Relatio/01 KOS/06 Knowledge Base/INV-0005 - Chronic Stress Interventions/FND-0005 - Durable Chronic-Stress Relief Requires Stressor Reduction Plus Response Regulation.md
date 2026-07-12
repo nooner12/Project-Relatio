@@ -3,6 +3,7 @@ title: FND-0005 - Durable Chronic-Stress Relief Requires Stressor Reduction Plus
 document_type: Finding Record
 version: 0.2
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -25,6 +26,25 @@ tags:
   - Finding
   - ChronicStress
   - Durability
+relationships:
+  - type: derived_from
+    target: CLM-0013
+  - type: derived_from
+    target: CLM-0014
+  - type: derived_from
+    target: CLM-0015
+  - type: derived_from
+    target: CLM-0016
+  - type: derived_from
+    target: CLM-0017
+  - type: derived_from
+    target: CLM-0018
+  - type: depends_on
+    target: ENT-0003
+  - type: part_of
+    target: INV-0005
+  - type: related_to
+    target: FND-0004
 ---
 
 # FND-0005

@@ -3,6 +3,7 @@ title: CLM-0010 - Carbohydrate Restriction Improves Control and Reduces Medicati
 document_type: Claim Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -24,6 +25,15 @@ tags:
   - Type2Diabetes
   - LowCarb
   - Medication
+relationships:
+  - type: derived_from
+    target: SRC-0008
+  - type: related_to
+    target: CLM-0007
+  - type: supports
+    target: FND-0004
+  - type: part_of
+    target: INV-0004
 ---
 
 # CLM-0010

@@ -3,6 +3,7 @@ title: KOS-0003 - Epistemic Framework & Knowledge Validation System
 document_type: Kernel Operating System Document
 version: 1.4
 status: Adopted
+operational_status: Active
 created: 2026-07-08
 category:
   - Knowledge Operating System

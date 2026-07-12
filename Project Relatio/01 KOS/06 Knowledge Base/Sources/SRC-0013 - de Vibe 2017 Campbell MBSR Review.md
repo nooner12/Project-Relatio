@@ -3,6 +3,7 @@ title: SRC-0013 - de Vibe 2017 Campbell MBSR Review
 document_type: Source Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -23,6 +24,13 @@ tags:
   - Source
   - Mindfulness
   - MBSR
+relationships:
+  - type: supports
+    target: CLM-0013
+  - type: related_to
+    target: SRC-0012
+  - type: related_to
+    target: SRC-0014
 ---
 
 # SRC-0013

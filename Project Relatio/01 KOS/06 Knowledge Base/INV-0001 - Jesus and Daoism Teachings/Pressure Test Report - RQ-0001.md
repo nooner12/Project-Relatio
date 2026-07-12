@@ -3,6 +3,7 @@ title: Pressure Test Report - RQ-0001
 document_type: Review Report
 version: 1.1
 status: Adopted
+operational_status: Active
 created: 2026-07-09
 category:
   - Knowledge Operating System

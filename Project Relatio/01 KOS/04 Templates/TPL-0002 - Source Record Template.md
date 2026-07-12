@@ -1,8 +1,9 @@
 ---
 title: TPL-0002 - Source Record Template
 document_type: Template
-version: 1.0
+version: 1.1
 status: Adopted
+operational_status: Active
 created: 2026-07-09
 template_type: Source Record
 parent_documents:
@@ -31,6 +32,7 @@ title: SRC-NNNN - <Source Title>
 document_type: Source Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: <YYYY-MM-DD>
 category:
   - Knowledge Base
@@ -48,6 +50,11 @@ tags:
   - KnowledgeBase
   - Source
   - <TopicTag>
+relationships:            # typed (STD-0002 §7 / STD-0004) — prefer the most specific type
+  - type: supports
+    target: <CLM-NNNN>
+  - type: related_to
+    target: <SRC-NNNN>
 ---
 
 # SRC-NNNN
@@ -91,6 +98,7 @@ tags:
 |Version|Date|Status|Description|
 |---|---|---|---|
 |1.0|2026-07-09|Adopted|Initial Source Record template; encodes STD-0002 + KOS-0012 §5.4 (KOS-0003 §6)|
+|1.1|2026-07-11|Adopted|Added `operational_status` (GB-2026-006) and the typed `relationships` example (GB-2026-001) to the object frontmatter block.|
 
 ---
 

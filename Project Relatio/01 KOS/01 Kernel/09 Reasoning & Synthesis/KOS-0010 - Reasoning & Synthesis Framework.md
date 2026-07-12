@@ -3,6 +3,7 @@ title: KOS-0010 - Reasoning & Synthesis Framework
 document_type: Kernel Operating System Document
 version: 1.2
 status: Adopted
+operational_status: Active
 category:
   - Knowledge Operating System
   - Reasoning Framework

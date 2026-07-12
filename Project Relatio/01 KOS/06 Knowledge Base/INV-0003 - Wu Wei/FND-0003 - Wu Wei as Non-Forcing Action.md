@@ -3,6 +3,7 @@ title: FND-0003 - Wu Wei as Non-Forcing Action
 document_type: Finding Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-09
 category:
   - Knowledge Base
@@ -20,6 +21,17 @@ tags:
   - KnowledgeBase
   - Finding
   - WuWei
+relationships:
+  - type: derived_from
+    target: CLM-0005
+  - type: derived_from
+    target: CLM-0006
+  - type: explains
+    target: ENT-0001
+  - type: related_to
+    target: ENT-0002
+  - type: part_of
+    target: INV-0003
 ---
 
 # FND-0003

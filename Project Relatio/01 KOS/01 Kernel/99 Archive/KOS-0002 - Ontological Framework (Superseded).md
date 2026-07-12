@@ -2,7 +2,8 @@
 title: KOS-0002 - Ontological Framework
 document_type: Foundational Framework
 version: 0.1
-status: Superseded
+status: Draft
+operational_status: Superseded
 superseded_by:
   - KOS-0004 Ontological Framework & Reality Modeling System
 category:

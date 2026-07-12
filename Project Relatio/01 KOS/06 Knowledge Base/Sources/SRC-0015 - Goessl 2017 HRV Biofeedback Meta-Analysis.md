@@ -3,6 +3,7 @@ title: SRC-0015 - Goessl 2017 HRV Biofeedback Meta-Analysis
 document_type: Source Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -22,6 +23,9 @@ tags:
   - Source
   - Breathing
   - HRVBiofeedback
+relationships:
+  - type: supports
+    target: CLM-0013
 ---
 
 # SRC-0015

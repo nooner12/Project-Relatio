@@ -55,14 +55,14 @@ Key documents:
 
 `defines · implements · extends · depends_on · derived_from · supports · contrasts_with · supersedes · part_of · instance_of · explains · related_to`
 
-Use `related_to` sparingly — it is the weakest relation. Prefer a specific relation when one applies.
+Use `related_to` sparingly — it is the weakest relation. Prefer a specific relation when one applies. These types are now carried in a typed **`relationships:`** frontmatter block (STD-0002 §7 v1.6 / STD-0004 §7.1), not only in object prose (GB-2026-001, implemented 2026-07-11); `graph_integrity.py` is type-aware.
 
 ## Lifecycle (STD-0005) — two independent dimensions
 
-- **Maturity:** Proposed → Draft → Reviewed → Adopted
-- **Operational:** Active → Superseded → Archived
+- **Maturity:** Proposed → Draft → Reviewed → Adopted — carried in `status:`
+- **Operational:** Active → Superseded → Archived — carried in `operational_status:`
 
-Every Knowledge Object carries both. Never collapse them into one field.
+Every Knowledge Object carries both, in the two separate fields (STD-0002 v1.5, implemented across the vault 2026-07-11 — GB-2026-006). Never collapse them into one field.
 
 ## Working rules for Claude Code sessions
 
@@ -101,12 +101,17 @@ Done (2026-07-09, continued):
 9. ~~Roles layer authored + implemented as agents~~: **ROLE-0001 Knowledge Architect (Adopted)**; ROLE-0002 Research Specialist, ROLE-0004 Critical Reviewer, ROLE-0005 Vision Steward (Draft, authority proposed). `.claude/agents/`: research-specialist, critical-reviewer, knowledge-architect. **OPS-0003 Research Workflow** defines the circuit (Specialist → Critical Reviewer → Knowledge Architect; Vision Steward coordinates).
 10. ~~Governance reflexive assessment~~ (CON-0003 GP-005; **ADR-GOV-0001**): reconciled the three role vocabularies (CON-0003 Functions → KOS-0011 ST-roles → ROLE-NNNN; canonical **Roles Index**); **retired ROLE-0003** (no warrant); created **ROLE-0005 Vision Steward** (owner authority, with constitutional limits); **elevated anti-fabrication into KOS-0003 §12.1** (out of the agent files); split STD-0006 §8 validation authority (structural=ROLE-0001, epistemic=ROLE-0004) + added appeal/dissent (§7.4); created the **Governance Backlog** (KOS-0011 §9), **Standing Authorizations**, **ADR practice** (TPL-0005), and a **settings.json permission gate**.
 
+Done (2026-07-11, Phase II re-scope — owner-directed):
+11. ~~Architecture Baseline v1.0~~ (`05 Operations/Architecture Baseline.md`): a one-page **freeze** of the stable concepts (Phase II brief M1) — changes to a frozen concept now require implementation evidence, not further design. The backlog stays open; the freeze guards concepts, not the backlog.
+12. ~~Two-dimensional lifecycle field~~ (GB-2026-006): `status` (maturity) + `operational_status` (operational) implemented across 109 objects; STD-0002 v1.5, STD-0005 §24 v1.1.
+13. ~~Typed relationships in frontmatter~~ (GB-2026-001): typed `relationships:` block (STD-0002 §7 v1.6, STD-0004 §7.1 v1.1); 52 KB objects back-encoded; `graph_integrity.py` made type-aware; templates updated.
+
 Open / next (all tracked in `05 Operations/Governance Backlog.md` — consult it first):
 - ~~Role authority ratification (GB-2026-011)~~ — **done 2026-07-09.** All active roles Adopted; two refinements applied (ROLE-0002 §4.2a scope boundary; ROLE-0004 §5 procedural-independence limit). The research circuit now runs on Adopted definitions.
 - **First real agent run (top priority):** put a 4th research question through the full agent circuit (Specialist → Critical Reviewer → Knowledge Architect) — the first genuine test of the specialists as agents.
 - **Graph-integrity automation** (OPS-0002 §6 / GB-2026-004): build only when the KB outgrows manual checks.
 
-**The Governance Backlog is now the single source of open items** (replacing the scattered lists). Deferred-by-decision items (M-1 lifecycle migration, GB-2026-002 quantitative evidence, GB-2026-003 entity template, GB-2026-006 two-dimensional lifecycle field, GB-2026-008 ST-003) live there with their decision status — do not action without demonstrated need or the Vision Steward's approval. *(GB-005 phantom ADRs and GB-2026-007 KOS-0200 fate are now resolved — see the Backlog §3.)*
+**The Governance Backlog is now the single source of open items** (replacing the scattered lists). Deferred-by-decision items (GB-2026-002 quantitative evidence, GB-2026-003 entity template, GB-2026-008 ST-003) live there with their decision status — do not action without demonstrated need or the Vision Steward's approval. *(GB-005 phantom ADRs, GB-2026-007 KOS-0200 fate, GB-2026-006 two-dimensional lifecycle field, and GB-2026-001 typed relationships are now resolved — see the Backlog §3.)*
 
 ## Owner
 

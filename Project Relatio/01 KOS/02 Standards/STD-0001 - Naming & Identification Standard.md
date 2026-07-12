@@ -3,6 +3,7 @@ title: STD-0001 - Naming & Identification Standard
 document_type: Standards Document
 version: 1.3
 status: Adopted
+operational_status: Active
 category:
   - Knowledge Operating System
   - Standards

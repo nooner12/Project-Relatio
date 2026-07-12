@@ -3,6 +3,7 @@ title: SRC-0012 - Khoury 2015 MBSR Meta-Analysis
 document_type: Source Record
 version: 0.2
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -24,6 +25,13 @@ tags:
   - Source
   - Mindfulness
   - MBSR
+relationships:
+  - type: supports
+    target: CLM-0013
+  - type: related_to
+    target: SRC-0013
+  - type: related_to
+    target: SRC-0014
 ---
 
 # SRC-0012

@@ -3,6 +3,7 @@ title: CLM-0015 - Cognitive-Behavioural Skills Are the Best-Evidenced Durable In
 document_type: Claim Record
 version: 0.2
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -23,6 +24,21 @@ tags:
   - CBT
   - CBTI
   - Durability
+relationships:
+  - type: derived_from
+    target: SRC-0018
+  - type: derived_from
+    target: SRC-0016
+  - type: derived_from
+    target: SRC-0022
+  - type: supports
+    target: FND-0005
+  - type: contrasts_with
+    target: CLM-0013
+  - type: depends_on
+    target: ENT-0003
+  - type: part_of
+    target: INV-0005
 ---
 
 # CLM-0015

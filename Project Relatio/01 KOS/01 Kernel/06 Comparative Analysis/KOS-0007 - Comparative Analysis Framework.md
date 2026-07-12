@@ -3,6 +3,7 @@ title: KOS-0007 - Comparative Analysis Framework
 document_type: Kernel Operating System Document
 version: 1.0
 status: Adopted
+operational_status: Active
 category:
   - Knowledge Operating System
   - Comparative Analysis

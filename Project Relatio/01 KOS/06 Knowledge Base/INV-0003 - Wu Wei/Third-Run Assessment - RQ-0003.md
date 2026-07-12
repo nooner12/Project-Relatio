@@ -3,6 +3,7 @@ title: Third-Run Assessment - RQ-0003
 document_type: Review Report
 version: 1.0
 status: Adopted
+operational_status: Active
 created: 2026-07-09
 category:
   - Knowledge Operating System

@@ -3,6 +3,7 @@ title: SRC-0020 - Physical Activity Cortisol and Stress Literature
 document_type: Source Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -24,6 +25,13 @@ tags:
   - Source
   - Exercise
   - Cortisol
+relationships:
+  - type: supports
+    target: CLM-0014
+  - type: related_to
+    target: SRC-0016
+  - type: related_to
+    target: ENT-0003
 ---
 
 # SRC-0020

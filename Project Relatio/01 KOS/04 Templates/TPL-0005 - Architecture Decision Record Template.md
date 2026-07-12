@@ -3,6 +3,7 @@ title: TPL-0005 - Architecture Decision Record Template
 document_type: Template
 version: 1.0
 status: Adopted
+operational_status: Active
 created: 2026-07-09
 template_type: Architecture Decision Record
 parent_documents:
@@ -38,6 +39,7 @@ title: ADR-CAT-NNNN - <Decision Title>
 document_type: Architecture Decision Record
 version: 1.0
 status: Adopted
+operational_status: Active
 created: <YYYY-MM-DD>
 decision_status: <Proposed | Accepted | Superseded>
 decision_date: <YYYY-MM-DD>

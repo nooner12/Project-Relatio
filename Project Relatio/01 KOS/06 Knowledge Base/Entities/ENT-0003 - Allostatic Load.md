@@ -3,6 +3,7 @@ title: ENT-0003 - Allostatic Load
 document_type: Entity Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -22,6 +23,19 @@ tags:
   - Entity
   - AllostaticLoad
   - StressPhysiology
+relationships:
+  - type: derived_from
+    target: SRC-0023
+  - type: explains
+    target: FND-0005
+  - type: related_to
+    target: CLM-0016
+  - type: related_to
+    target: CLM-0014
+  - type: related_to
+    target: CLM-0018
+  - type: part_of
+    target: INV-0005
 ---
 
 # ENT-0003

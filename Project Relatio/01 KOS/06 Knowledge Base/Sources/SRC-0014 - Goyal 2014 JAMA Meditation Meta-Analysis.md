@@ -3,6 +3,7 @@ title: SRC-0014 - Goyal 2014 JAMA Meditation Meta-Analysis
 document_type: Source Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -24,6 +25,13 @@ tags:
   - Source
   - Meditation
   - Mindfulness
+relationships:
+  - type: supports
+    target: CLM-0013
+  - type: contrasts_with
+    target: SRC-0012
+  - type: related_to
+    target: SRC-0013
 ---
 
 # SRC-0014

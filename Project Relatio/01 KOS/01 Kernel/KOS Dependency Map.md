@@ -3,6 +3,7 @@ title: KOS Dependency Map
 document_type: Architecture Document
 version: 1.2
 status: Adopted
+operational_status: Active
 category:
   - Knowledge Operating System
   - Architecture

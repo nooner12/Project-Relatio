@@ -3,6 +3,7 @@ title: OPS-0001 - Knowledge Base Organization
 document_type: Operations Document
 version: 1.0
 status: Adopted
+operational_status: Active
 created: 2026-07-09
 parent_documents:
   - KOS-0012 Knowledge Object Model

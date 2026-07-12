@@ -3,6 +3,7 @@ title: ADR-GOV-0001 - Governance and Role Reconciliation
 document_type: Architecture Decision Record
 version: 1.0
 status: Adopted
+operational_status: Active
 created: 2026-07-09
 decision_status: Accepted
 decision_date: 2026-07-09

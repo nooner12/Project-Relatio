@@ -3,6 +3,7 @@ title: SRC-0021 - Nature Exposure and Stress Literature
 document_type: Source Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -22,6 +23,9 @@ tags:
   - Source
   - Nature
   - Greenspace
+relationships:
+  - type: supports
+    target: CLM-0018
 ---
 
 # SRC-0021

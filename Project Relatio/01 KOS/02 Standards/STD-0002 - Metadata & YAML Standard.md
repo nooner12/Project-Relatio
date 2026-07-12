@@ -1,8 +1,9 @@
 ---
 title: STD-0002 - Metadata & YAML Standard
 document_type: Standards Document
-version: 1.4
+version: 1.6
 status: Adopted
+operational_status: Active
 category:
   - Knowledge Operating System
   - Standards
@@ -28,7 +29,7 @@ tags:
 
 # Project Relatio Metadata & YAML Standard
 
-## Version 1.4
+## Version 1.6
 
 ## Adopted Standards Document
 
@@ -104,6 +105,7 @@ title:
 document_type:
 version:
 status:
+operational_status:
 created:
 category:
 tags:
@@ -211,25 +213,48 @@ Major.Minor
 
 Purpose:
 
-Defines lifecycle position.
+Records a Knowledge Object's **maturity** — its development stage. Lifecycle is governed by STD-0005, which is authoritative.
 
-> **Reconciliation note (v1.2):** STD-0005 — Lifecycle & Revision Standard is authoritative on lifecycle and defines a two-dimensional model (Maturity: Proposed → Draft → Reviewed → Adopted; Operational: Active → Superseded → Archived). The single `status` field described here currently holds a document's **maturity** state. Whether a separate operational field (e.g. `operational_status`) is added across the vault is a pending migration decision recorded in the Standards Architecture Retrospective. Until that decision, use the values below, reading "Review" as "Reviewed" and preferring "Superseded" over "Deprecated" per STD-0005.
+> **Reconciliation note (v1.5):** STD-0005 defines a **two-dimensional** lifecycle: Maturity (Proposed → Draft → Reviewed → Adopted) and Operational (Active → Superseded → Archived), which are independent. As of v1.5 these are carried in **two fields**: `status` holds **maturity**; `operational_status` (below) holds the operational state. The migration adding `operational_status` across the vault (GB-2026-006) was executed 2026-07-11 — the deferral's trigger (a real supersession/archival event) having occurred. Earlier single-field usage where `status` held an operational value (`Active`/`Archived`/`Superseded`) was migrated: the operational value moved to `operational_status` and `status` was set to the object's maturity.
 
-Approved values:
+Approved values (maturity):
 
 ```
+Proposed
+
 Draft
 
-Review
+Reviewed
 
 Adopted
+```
 
+(Legacy `Review` reads as `Reviewed`.)
+
+---
+
+# operational_status
+
+Purpose:
+
+Records a Knowledge Object's **operational** state — its current role, independent of maturity (STD-0005 §10–13).
+
+Approved values (operational):
+
+```
 Active
 
-Deprecated
+Superseded
 
 Archived
 ```
+
+Rules:
+
+- Required on every formal Knowledge Object alongside `status` (v1.5).
+- `Active` — currently in force / in use (this includes Draft-maturity research objects that are in active use; operational state is not gated on adoption in practice, and the vault applies `Superseded`/`Archived` to non-adopted objects — e.g. KOS-0200 — so `operational_status` is carried by all governed objects).
+- `Superseded` — replaced by another object; pair with a `superseded_by` relationship (STD-0005 §12).
+- `Archived` — retained for reference, no longer operational.
 
 ---
 
@@ -349,6 +374,34 @@ Example:
 related_documents:
   - STD-0001 Naming & Identification Standard
 ```
+
+---
+
+## relationships (typed — v1.6)
+
+Purpose:
+
+Carries **typed** relationships in the frontmatter, so tooling can read a relationship's *meaning*, not merely its existence. This closes the standing gap recorded as Pressure Test **F-4** / **GB-2026-001**: STD-0004 defines a relationship vocabulary that the flat `parent_documents`/`related_documents` lists could not express.
+
+Optional block. Each entry pairs a **type** (drawn from the STD-0004 approved vocabulary) with a **target** (an identifier):
+
+```
+relationships:
+  - type: derived_from
+    target: SRC-0006
+  - type: supports
+    target: FND-0004
+  - type: contrasts_with
+    target: CLM-0002
+```
+
+Rules:
+
+- `type` must be an approved STD-0004 relationship type (`defines`, `implements`, `extends`, `depends_on`, `derived_from`, `supports`, `contrasts_with`, `supersedes`, `part_of`, `instance_of`, `explains`, `related_to`). Prefer the most specific type (STD-0004 §9).
+- `target` is the **identifier** of an existing object (e.g. `SRC-0006`). The Identifier Registry / object title resolves it to a name.
+- The block **enriches**, it does not replace, `parent_documents`/`related_documents` (which remain the flat, tooling-read lists and STD-0002-required structure). `graph_integrity.py` reads both: the flat lists for dangling-reference checks, `relationships` for **type-aware** reciprocity.
+- Directionality follows STD-0004 §8 — the entry reads *this object* `type` *target*.
+- Adopted for **Knowledge Base objects** (INV/CLM/SRC/ENT/FND), where research edges carry semantic weight; other layers may use it where a relationship's type matters.
 
 ---
 
@@ -502,6 +555,7 @@ title: Example Document
 document_type: Standards Document
 version: 1.0
 status: Adopted
+operational_status: Active
 created: 2026-07-09
 category:
   - Knowledge Operating System
@@ -565,6 +619,8 @@ Project Relatio adopts:
 |1.2|2026-07-09|Adopted|Added "Review Report" document_type for STD-0006 review/audit outputs; added a status-field reconciliation note deferring to STD-0005's two-dimensional lifecycle model|
 |1.3|2026-07-09|Adopted|Consolidated meta-document types: replaced layer-prefixed values (Standards/Kernel Navigation Document, Kernel Architecture Document/Manifest, Kernel Governance Document) with layer-agnostic Navigation Document, Architecture Document, and Governance Record; documented the content-type vs meta-type distinction|
 |1.4|2026-07-09|Adopted|Added Investigation Record and Finding Record document_types, defined by KOS-0012 and demonstrated needed by the RQ-0001 pressure test|
+|1.5|2026-07-11|Adopted|Implemented STD-0005's two-dimensional lifecycle in metadata (GB-2026-006): `status` narrowed to **maturity** (Proposed/Draft/Reviewed/Adopted); added the required **`operational_status`** field (Active/Superseded/Archived). Migrated the vault — operational values previously held in `status` moved to the new field. Trigger: the KOS-0200/ROLE-0003 supersession/archival events the deferral was waiting on.|
+|1.6|2026-07-11|Adopted|Added the optional **typed `relationships`** frontmatter block (`type` + `target`), closing Pressure Test F-4 / GB-2026-001 — STD-0004's vocabulary can now be expressed in metadata, not only prose. Additive: the flat `parent_documents`/`related_documents` lists are retained for tooling. Adopted for Knowledge Base objects; `graph_integrity.py` made type-aware.|
 
 ---
 

@@ -3,6 +3,7 @@ title: KOS-0005 - Relationship Modeling Framework
 document_type: Kernel Operating System Document
 version: 1.3
 status: Adopted
+operational_status: Active
 category:
   - Knowledge Operating System
   - Relationship Modeling

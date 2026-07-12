@@ -3,6 +3,7 @@ title: CLM-0004 - Backward Stop-and-Go Waves
 document_type: Claim Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-09
 category:
   - Knowledge Base
@@ -21,6 +22,17 @@ tags:
   - Claim
   - TrafficFlow
   - Waves
+relationships:
+  - type: derived_from
+    target: SRC-0003
+  - type: derived_from
+    target: SRC-0004
+  - type: related_to
+    target: CLM-0003
+  - type: supports
+    target: FND-0002
+  - type: part_of
+    target: INV-0002
 ---
 
 # CLM-0004

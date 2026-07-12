@@ -1,8 +1,9 @@
 ---
 title: OPS-0002 - Relationship Integrity & Graph Maintenance
 document_type: Operations Document
-version: 1.1
+version: 1.2
 status: Adopted
+operational_status: Active
 created: 2026-07-09
 parent_documents:
   - STD-0004 Relationship & Linking Standard
@@ -23,7 +24,7 @@ tags:
 
 # Relationship Integrity & Graph Maintenance
 
-## Version 1.0
+## Version 1.2
 
 ## Adopted Operations Document
 
@@ -85,13 +86,13 @@ Remaining known gaps (tracked, not yet reconciled): source↔claim reciprocity (
 
 Manual reciprocity maintenance does not scale (F-12's core point). The automation now exists:
 
-> **`tools/graph_integrity.py`** (RRI) inventories every object and reports (a) **dangling references** — any `parent_documents`/`related_documents` entry resolving to no existing object (exit code 1; reliability-critical), and (b) **one-directional KB links** — advisory, among Knowledge Base objects, where `A → B` has no reciprocal `B → A` (a parent-link counts as reciprocation). Output: `tools/output/graph_integrity_report.md`.
+> **`tools/graph_integrity.py`** (RRI) inventories every object and reports (a) **dangling references** — any `parent_documents`/`related_documents` entry **or typed `relationships:` target** resolving to no existing object (exit code 1; reliability-critical), and (b) **non-reciprocated symmetric typed links** — advisory, among Knowledge Base objects, where a *symmetric*-type edge (`related_to`/`contrasts_with`) has no reciprocal back. Since GB-2026-001 the check is **type-aware**: directional types (`derived_from`, `supports`, `part_of`, …) are one-way by design and are not flagged, so the tool no longer mistakes correct directional edges for gaps (a legacy untyped one-directional advisory remains only for KB objects lacking a typed block). Output: `tools/output/graph_integrity_report.md`.
 
 This replaces the Knowledge Architect's manual graph check on the routine path — the Architect now **runs the tool and adjudicates its output** rather than tracing links by hand (see the `knowledge-architect` agent). The tool is the periodic STD-0006 graph audit.
 
 **What the tool does not decide:** it *detects*; humans decide what to fix. One-directional links are surfaced as advisories, not auto-repaired — OPS-0002 §5 treats them as low-severity, and mass-reciprocating them for symmetry alone is the over-completeness the scope guardrail warns against. Dangling references, by contrast, are failures to resolve.
 
-*(Note, 2026-07-10 baseline: the tool reports the known phantom ADR references in KOS-0003/KOS-0011 as dangling — these are the deferred M-3 / GB-2026-005 items, and are the sole cause of the current non-zero exit.)*
+*(Status, 2026-07-11: the tool exits **0** — 0 dangling references across 115 files. The former phantom-ADR danglers (GB-2026-005) were resolved 2026-07-10. The type-aware reciprocity pass (GB-2026-001) reports 32 genuine symmetric-asymmetry advisories, all low-severity.)*
 
 ---
 
@@ -107,6 +108,7 @@ This replaces the Knowledge Architect's manual graph check on the routine path �
 |---|---|---|---|
 |1.0|2026-07-09|Adopted|Initial relationship-integrity practice; resolves the practice-gap behind F-12. Included a first reciprocity pass and repair of the finding↔claim subgraph.|
 |1.1|2026-07-10|Adopted|§6 rewritten: the graph-integrity automation is built (`tools/graph_integrity.py`), replacing manual checking on the routine path. Resolves GB-2026-004.|
+|1.2|2026-07-11|Adopted|§6 updated for the **type-aware** graph check (GB-2026-001): typed `relationships:` targets are dangling-checked; reciprocity now distinguishes symmetric from directional types. Stale phantom-ADR exit note corrected (tool exits 0).|
 
 ---
 

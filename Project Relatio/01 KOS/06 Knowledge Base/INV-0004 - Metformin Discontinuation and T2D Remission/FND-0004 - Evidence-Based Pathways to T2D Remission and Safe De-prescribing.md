@@ -3,6 +3,7 @@ title: FND-0004 - Evidence-Based Pathways to T2D Remission and Safe De-prescribi
 document_type: Finding Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -24,6 +25,23 @@ tags:
   - Finding
   - Type2Diabetes
   - Remission
+relationships:
+  - type: derived_from
+    target: CLM-0007
+  - type: derived_from
+    target: CLM-0008
+  - type: derived_from
+    target: CLM-0009
+  - type: derived_from
+    target: CLM-0010
+  - type: derived_from
+    target: CLM-0011
+  - type: derived_from
+    target: CLM-0012
+  - type: part_of
+    target: INV-0004
+  - type: related_to
+    target: FND-0002
 ---
 
 # FND-0004

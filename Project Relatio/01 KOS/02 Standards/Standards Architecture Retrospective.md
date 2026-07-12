@@ -3,6 +3,7 @@ title: Standards Architecture Retrospective
 document_type: Review Report
 version: 1.4
 status: Adopted
+operational_status: Active
 created: 2026-07-09
 category:
   - Knowledge Operating System

@@ -3,6 +3,7 @@ title: CLM-0013 - Attention-Regulation Techniques Reduce Stress Short-Term but D
 document_type: Claim Record
 version: 0.2
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -25,6 +26,23 @@ tags:
   - Mindfulness
   - Breathing
   - Durability
+relationships:
+  - type: derived_from
+    target: SRC-0012
+  - type: derived_from
+    target: SRC-0013
+  - type: derived_from
+    target: SRC-0014
+  - type: derived_from
+    target: SRC-0015
+  - type: derived_from
+    target: SRC-0016
+  - type: supports
+    target: FND-0005
+  - type: contrasts_with
+    target: CLM-0015
+  - type: part_of
+    target: INV-0005
 ---
 
 # CLM-0013

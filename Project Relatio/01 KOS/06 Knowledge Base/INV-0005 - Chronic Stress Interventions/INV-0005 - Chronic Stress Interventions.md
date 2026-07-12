@@ -3,6 +3,7 @@ title: INV-0005 - Chronic Stress Interventions
 document_type: Investigation Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -39,6 +40,33 @@ tags:
   - ChronicStress
   - StressManagement
   - Durability
+relationships:
+  - type: derived_from
+    target: SRC-0012
+  - type: derived_from
+    target: SRC-0013
+  - type: derived_from
+    target: SRC-0014
+  - type: derived_from
+    target: SRC-0015
+  - type: derived_from
+    target: SRC-0016
+  - type: derived_from
+    target: SRC-0017
+  - type: derived_from
+    target: SRC-0018
+  - type: derived_from
+    target: SRC-0019
+  - type: derived_from
+    target: SRC-0020
+  - type: derived_from
+    target: SRC-0021
+  - type: derived_from
+    target: SRC-0022
+  - type: derived_from
+    target: SRC-0023
+  - type: related_to
+    target: INV-0004
 ---
 
 # INV-0005

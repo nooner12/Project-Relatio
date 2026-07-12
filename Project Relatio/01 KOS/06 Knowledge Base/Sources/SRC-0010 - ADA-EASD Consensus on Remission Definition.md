@@ -3,6 +3,7 @@ title: SRC-0010 - ADA-EASD Consensus on Remission Definition
 document_type: Source Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -24,6 +25,13 @@ tags:
   - Type2Diabetes
   - Remission
   - Consensus
+relationships:
+  - type: supports
+    target: CLM-0010
+  - type: supports
+    target: CLM-0011
+  - type: related_to
+    target: INV-0004
 ---
 
 # SRC-0010

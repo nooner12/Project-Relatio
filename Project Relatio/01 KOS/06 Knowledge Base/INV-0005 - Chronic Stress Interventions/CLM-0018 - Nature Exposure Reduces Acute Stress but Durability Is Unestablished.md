@@ -3,6 +3,7 @@ title: CLM-0018 - Nature Exposure Reduces Acute Stress but Durability Is Unestab
 document_type: Claim Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -21,6 +22,19 @@ tags:
   - Claim
   - Nature
   - Durability
+relationships:
+  - type: derived_from
+    target: SRC-0021
+  - type: related_to
+    target: ENT-0003
+  - type: related_to
+    target: CLM-0013
+  - type: related_to
+    target: CLM-0014
+  - type: supports
+    target: FND-0005
+  - type: part_of
+    target: INV-0005
 ---
 
 # CLM-0018

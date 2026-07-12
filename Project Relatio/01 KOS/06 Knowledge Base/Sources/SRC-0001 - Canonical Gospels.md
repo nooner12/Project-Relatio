@@ -3,6 +3,7 @@ title: SRC-0001 - Canonical Gospels
 document_type: Source Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-09
 category:
   - Knowledge Base

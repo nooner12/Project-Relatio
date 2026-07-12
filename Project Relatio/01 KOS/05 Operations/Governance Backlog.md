@@ -1,8 +1,9 @@
 ---
 title: Governance Backlog
 document_type: Governance Record
-version: 1.8
-status: Active
+version: 1.9
+status: Adopted
+operational_status: Active
 created: 2026-07-09
 parent_documents:
   - KOS-0011 Governance, Stewardship & Evolution Framework
@@ -48,7 +49,7 @@ Before this document existed, open items were scattered across five places: the 
 - **Context:** Pressure Test F-4; recurred in every investigation.
 - **Impact:** Medium. Tooling (Dataview) can see links but not their meaning; graph queries are weaker than the architecture promises.
 - **Solutions:** (a) extend STD-0002 to carry typed relations; (b) formally rule that types live in the body only.
-- **Status:** Open. No demonstrated blocker yet.
+- **Status:** **RESOLVED 2026-07-11 — owner-directed (option a).** STD-0002 §7 (v1.6) adds an optional typed **`relationships`** block (`type` + `target`, STD-0004 vocabulary); STD-0004 §7.1 (v1.1) records the machine encoding — no vocabulary change. The flat `parent_documents`/`related_documents` lists are retained for tooling. **All 52 KB objects back-encoded** (222 typed edges, transcribed from their stated body §Relationships). `graph_integrity.py` made **type-aware**: symmetric types (`related_to`/`contrasts_with`) are checked for reciprocity, directional types are not (43 crude one-directional flags → 32 genuine symmetric-asymmetry advisories). Templates TPL-0001…0004 carry the block. Verified: validate.py 115/0, graph 0 dangling. Moved to §3.
 
 ## GB-2026-002 — Quantitative evidence fields
 - **Issue:** KOS-0003 §5 grades evidence 0–5 but has no field for sample size, effect size, replication count, or numeric results.
@@ -81,7 +82,7 @@ Before this document existed, open items were scattered across five places: the 
 - **Context:** Retrospective M-1.
 - **Impact:** Low today.
 - **Solutions:** add `operational_status` across ~24 documents.
-- **Status:** **Deferred by owner decision** until the first real supersession event. *(Note: ROLE-0003's retirement on 2026-07-09 may be that event — re-evaluate.)*
+- **Status:** **RESOLVED 2026-07-11 — owner-directed.** The deferral trigger (a real supersession/archival event) fired: KOS-0200 superseded/archived and ROLE-0003 retired. Implemented per STD-0005's two-dimensional model: STD-0002 v1.5 narrows `status` to **maturity** and adds the required **`operational_status`** (Active/Superseded/Archived); STD-0005 §24 → v1.1 names the two fields. **Migrated 109 governed objects** (the 8 that held an operational value in `status` had it moved to the new field: 6 Active governance/nav records → maturity Adopted; KOS-0002 → Draft/Superseded; KOS-0200, ROLE-0003 → Draft/Archived). Templates updated. Verified: validate.py 115/0. Moved to §3.
 
 ## GB-2026-007 — KOS-0200 fate
 - **Issue:** KOS-0200 "Standards Framework" (Draft, v0.1) appears to duplicate the purpose of the Standards Index and Manifest.
@@ -211,6 +212,8 @@ Before this document existed, open items were scattered across five places: the 
 | "Creation" presumed in KOS-0001 §2 (GB-2026-022) | Softened to "the question of origins (including creation claims)," framed as open under ontological humility → v1.2 |
 | validate.py used non-convention id/wikilink checks (GB-2026-016) | Rebuilt to validate the title-embedded identifier + filename/title parity + uniqueness (STD-0001/0002); wikilink pass removed; 114 files clean |
 | KOS-0200 duplicative Draft (GB-2026-007) | Superseded & archived to `07 Archive`; role fulfilled by STD-0001…0007 + Standards Index; references updated |
+| Single `status` conflated maturity + operational (GB-2026-006) | Two-dimensional lifecycle implemented: STD-0002 v1.5 (`status`=maturity, new `operational_status`), STD-0005 §24 v1.1; 109 objects migrated; templates updated |
+| Frontmatter could not carry typed relationships (GB-2026-001 / F-4) | STD-0002 §7 v1.6 typed `relationships` block + STD-0004 §7.1 v1.1; 52 KB objects back-encoded (222 edges); graph_integrity.py made type-aware |
 
 ---
 
@@ -233,6 +236,7 @@ Any role may **add** an item. Only the Vision Steward may mark an item **Decided
 |1.6|2026-07-11|Active|**Three audit judgment calls resolved (owner-directed).** GB-2026-020: "Research Architect" renamed to Knowledge Architect (ROLE-0001), KOS-0010 → v1.2. GB-2026-021: two confidence scales unified into one canonical **hybrid "Level N (Label)"** scale — KOS-0003 §8 → v1.4, KOS-0008 §8 → v1.1, TPL-0001/0004 → v1.1 (no KB migration needed). GB-2026-022: KOS-0001 §2 "creation" softened to an open "question of origins," KOS-0001 → v1.2. All three moved to §3.|
 |1.7|2026-07-11|Active|**GB-2026-016 resolved:** `validate.py` rebuilt to check the title-embedded identifier + filename/title parity + uniqueness (STD-0001/0002); stale `id`/`[[wikilink]]` checks removed; 114 files validate clean. Session work committed and pushed to GitHub (public repo). Repo hygiene: `.gitignore` added; build artifacts / local settings / Obsidian UI state untracked.|
 |1.8|2026-07-11|Active|**GB-2026-007 resolved (owner-directed): KOS-0200 superseded & archived.** Never-adopted "Standards Framework" Draft moved to `07 Archive` (status → Archived, supersession banner); role fulfilled by STD-0001…0007 + Standards Index. References updated (Identifier Registry, Standards Status, Retrospective M-5, CLAUDE.md). **Remaining open items (GB-001/009/012/015) intentionally left deferred** — no demonstrated need; actioning them would be over-architecture (per the CLAUDE.md scope guardrail). Backlog now at a healthy resting state.|
+|1.9|2026-07-11|Active|**Phase II re-scope (owner-directed "action now").** Created the **Architecture Baseline v1.0** freeze record (Phase II brief M1). **GB-2026-006 resolved** — two-dimensional lifecycle field implemented (STD-0002 v1.5, STD-0005 §24 v1.1; 109 objects migrated); its deferral trigger (KOS-0200/ROLE-0003 supersession) had fired. **GB-2026-001 resolved** — typed `relationships` frontmatter (STD-0002 §7 v1.6, STD-0004 §7.1 v1.1; 52 KB objects / 222 edges back-encoded; graph_integrity.py type-aware; templates updated). Both moved to §3. Verified: validate.py 115/0, graph 0 dangling.|
 
 ---
 

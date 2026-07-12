@@ -3,6 +3,7 @@ title: ENT-0002 - Ziran
 document_type: Entity Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-09
 category:
   - Knowledge Base
@@ -21,6 +22,11 @@ tags:
   - Entity
   - Ziran
   - Daoism
+relationships:
+  - type: related_to
+    target: ENT-0001
+  - type: derived_from
+    target: SRC-0002
 ---
 
 # ENT-0002

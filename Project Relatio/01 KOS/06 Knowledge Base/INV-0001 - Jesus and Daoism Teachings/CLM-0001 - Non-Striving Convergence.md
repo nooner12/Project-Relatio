@@ -3,6 +3,7 @@ title: CLM-0001 - Non-Striving Convergence
 document_type: Claim Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-09
 category:
   - Knowledge Base
@@ -23,6 +24,17 @@ tags:
   - Claim
   - NonStriving
   - WuWei
+relationships:
+  - type: derived_from
+    target: SRC-0001
+  - type: derived_from
+    target: SRC-0002
+  - type: contrasts_with
+    target: CLM-0002
+  - type: related_to
+    target: ENT-0001
+  - type: part_of
+    target: INV-0001
 ---
 
 # CLM-0001

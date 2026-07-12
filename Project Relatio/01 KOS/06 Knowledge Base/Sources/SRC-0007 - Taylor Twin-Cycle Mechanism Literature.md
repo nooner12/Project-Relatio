@@ -3,6 +3,7 @@ title: SRC-0007 - Taylor Twin-Cycle Mechanism Literature
 document_type: Source Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -23,6 +24,13 @@ tags:
   - Type2Diabetes
   - TwinCycle
   - BetaCell
+relationships:
+  - type: supports
+    target: CLM-0008
+  - type: supports
+    target: CLM-0009
+  - type: related_to
+    target: SRC-0006
 ---
 
 # SRC-0007

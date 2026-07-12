@@ -1,8 +1,9 @@
 ---
 title: Standards Status
 document_type: Governance Record
-version: 1.0
-status: Active
+version: 1.1
+status: Adopted
+operational_status: Active
 created: 2026-07-09
 parent_documents:
   - KOS Architecture Manifest
@@ -21,7 +22,7 @@ tags:
 
 # Project Relatio Standards Status
 
-## Version 1.0
+## Version 1.1
 
 ## Active Governance Record
 
@@ -82,12 +83,12 @@ Operational Expansion
 
 |ID|Title|Version|Status|
 |---|---|---|---|
-|STD-0001|Naming & Identification Standard|1.1|Adopted|
-|STD-0002|Metadata & YAML Standard|1.3|Adopted|
+|STD-0001|Naming & Identification Standard|1.3|Adopted|
+|STD-0002|Metadata & YAML Standard|1.6|Adopted|
 |STD-0003|Classification & Discovery Standard|1.0|Adopted|
-|STD-0004|Relationship & Linking Standard|1.0|Adopted|
-|STD-0005|Lifecycle & Revision Standard|1.0|Adopted|
-|STD-0006|Review & Validation Standard|1.0|Adopted|
+|STD-0004|Relationship & Linking Standard|1.1|Adopted|
+|STD-0005|Lifecycle & Revision Standard|1.1|Adopted|
+|STD-0006|Review & Validation Standard|1.2|Adopted|
 |STD-0007|Terminology & Semantic Stewardship Standard|1.0|Adopted|
 
 All seven Standards are Adopted. The Standards layer is complete.
@@ -213,6 +214,7 @@ Standards maintenance requires, per KOS-0011 and STD-0005:
 |Version|Date|Status|Description|
 |---|---|---|---|
 |1.0|2026-07-09|Active|Initial Standards Status; Standards-layer sibling to Kernel Status|
+|1.1|2026-07-11|Active|Version table corrected to actual current state (it had drifted): STD-0001 1.1→1.3, STD-0002 1.3→1.6, STD-0004 1.0→1.1, STD-0005 1.0→1.1, STD-0006 1.0→1.2. STD-0002/0004/0005 bumps are this session's lifecycle-field (GB-2026-006) and typed-relationships (GB-2026-001) work.|
 
 ---
 

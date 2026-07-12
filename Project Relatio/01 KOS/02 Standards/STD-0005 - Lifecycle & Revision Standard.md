@@ -1,8 +1,9 @@
 ---
 title: STD-0005 - Lifecycle & Revision Standard
 document_type: Standards Document
-version: 1.0
+version: 1.1
 status: Adopted
+operational_status: Active
 created: 2026-07-09
 category:
   - Knowledge Operating System
@@ -27,7 +28,7 @@ tags:
 
 # Project Relatio Lifecycle & Revision Standard
 
-## Version 1.0
+## Version 1.1
 
 ## Adopted Standards Document
 
@@ -376,9 +377,13 @@ Drafts must not be treated as standards or adopted architecture.
 
 # 24. Lifecycle Metadata
 
-Knowledge Objects may express lifecycle information through metadata including:
+The two lifecycle dimensions (§4) are carried in **two independent metadata fields**, per STD-0002 (v1.5):
 
-- status,
+- **`status`** — the **Maturity** dimension (Proposed → Draft → Reviewed → Adopted).
+- **`operational_status`** — the **Operational** dimension (Active → Superseded → Archived).
+
+They are never collapsed into a single field. Additional lifecycle information may be expressed through:
+
 - version,
 - created date,
 - modified date,
@@ -425,6 +430,7 @@ Lifecycle governance enables both adaptation and continuity.
 |Version|Date|Status|Description|
 |---|---|---|---|
 |1.0|2026-07-09|Adopted|Initial lifecycle and revision standard|
+|1.1|2026-07-11|Adopted|§24 updated: the two lifecycle dimensions are now carried in two independent metadata fields — `status` (Maturity) and `operational_status` (Operational) — implementing the model in STD-0002 v1.5 (GB-2026-006).|
 
 ---
 

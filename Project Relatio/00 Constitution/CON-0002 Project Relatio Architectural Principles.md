@@ -3,6 +3,7 @@ title: CON-0002 - Project Relatio Architectural Principles
 document_type: Constitutional Instrument
 version: 1.1
 status: Adopted
+operational_status: Active
 created: 2026-07-09
 category:
   - Constitution

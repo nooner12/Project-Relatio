@@ -3,6 +3,7 @@ title: INV-0002 - Phantom Traffic Jams
 document_type: Investigation Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-09
 category:
   - Knowledge Base
@@ -26,6 +27,13 @@ tags:
   - ComplexityScience
   - TrafficFlow
   - Investigation
+relationships:
+  - type: derived_from
+    target: SRC-0003
+  - type: derived_from
+    target: SRC-0004
+  - type: related_to
+    target: KOS-0006
 ---
 
 # INV-0002

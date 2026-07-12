@@ -3,6 +3,7 @@ title: SRC-0003 - Sugiyama 2008 Circular-Track Experiment
 document_type: Source Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-09
 category:
   - Knowledge Base
@@ -22,6 +23,13 @@ tags:
   - Source
   - TrafficFlow
   - Experiment
+relationships:
+  - type: supports
+    target: CLM-0003
+  - type: supports
+    target: CLM-0004
+  - type: related_to
+    target: SRC-0004
 ---
 
 # SRC-0003

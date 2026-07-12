@@ -3,6 +3,7 @@ title: SRC-0019 - Holt-Lunstad 2010 Social Relationships and Mortality
 document_type: Source Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -23,6 +24,11 @@ tags:
   - Source
   - SocialConnection
   - Mortality
+relationships:
+  - type: supports
+    target: CLM-0016
+  - type: related_to
+    target: ENT-0003
 ---
 
 # SRC-0019

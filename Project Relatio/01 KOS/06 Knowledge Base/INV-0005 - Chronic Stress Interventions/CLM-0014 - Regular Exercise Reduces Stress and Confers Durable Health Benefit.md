@@ -3,6 +3,7 @@ title: CLM-0014 - Regular Exercise Reduces Stress and Confers Durable Health Ben
 document_type: Claim Record
 version: 0.2
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -22,6 +23,19 @@ tags:
   - Claim
   - Exercise
   - Durability
+relationships:
+  - type: derived_from
+    target: SRC-0020
+  - type: derived_from
+    target: SRC-0016
+  - type: depends_on
+    target: ENT-0003
+  - type: supports
+    target: FND-0005
+  - type: related_to
+    target: CLM-0013
+  - type: part_of
+    target: INV-0005
 ---
 
 # CLM-0014

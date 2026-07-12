@@ -3,6 +3,7 @@ title: CLM-0012 - Exercise and Mediterranean Diet Improve Control but Rarely Alo
 document_type: Claim Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -22,6 +23,15 @@ tags:
   - Type2Diabetes
   - Exercise
   - MediterraneanDiet
+relationships:
+  - type: derived_from
+    target: SRC-0011
+  - type: related_to
+    target: CLM-0007
+  - type: supports
+    target: FND-0004
+  - type: part_of
+    target: INV-0004
 ---
 
 # CLM-0012

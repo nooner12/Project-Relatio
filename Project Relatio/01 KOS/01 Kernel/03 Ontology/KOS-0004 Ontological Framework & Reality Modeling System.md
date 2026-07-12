@@ -3,6 +3,7 @@ title: KOS-0004 - Ontological Framework & Reality Modeling System
 document_type: Kernel Operating System Document
 version: 1.3
 status: Adopted
+operational_status: Active
 category:
   - Knowledge Operating System
   - Ontology

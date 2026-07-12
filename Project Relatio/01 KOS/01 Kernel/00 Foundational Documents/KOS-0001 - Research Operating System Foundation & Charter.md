@@ -3,6 +3,7 @@ title: KOS-0001 - Research Operating System Foundation & Charter
 document_type: Kernel Operating System Document
 version: 1.2
 status: Adopted
+operational_status: Active
 category:
   - Knowledge Operating System
   - Foundational Document

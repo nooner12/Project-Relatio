@@ -3,6 +3,7 @@ title: KOS-0011 - Governance, Stewardship & Evolution Framework
 document_type: Kernel Operating System Document
 version: 1.2
 status: Adopted
+operational_status: Active
 category:
   - Knowledge Operating System
   - Governance

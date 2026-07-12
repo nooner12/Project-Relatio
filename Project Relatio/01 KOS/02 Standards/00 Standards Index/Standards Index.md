@@ -3,6 +3,7 @@ title: Standards Index
 document_type: Navigation Document
 version: 1.2
 status: Adopted
+operational_status: Active
 category:
   - Knowledge Operating System
   - Standards

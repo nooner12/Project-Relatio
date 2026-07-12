@@ -3,6 +3,7 @@ title: SRC-0011 - Diet and Exercise Glycemic-Control Literature
 document_type: Source Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -22,6 +23,11 @@ tags:
   - Type2Diabetes
   - Diet
   - Exercise
+relationships:
+  - type: supports
+    target: CLM-0012
+  - type: related_to
+    target: SRC-0006
 ---
 
 # SRC-0011

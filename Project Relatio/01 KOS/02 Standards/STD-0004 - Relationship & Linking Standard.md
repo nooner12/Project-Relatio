@@ -1,8 +1,9 @@
 ---
 title: STD-0004 - Relationship & Linking Standard
 document_type: Standards Document
-version: 1.0
+version: 1.1
 status: Adopted
+operational_status: Active
 created: 2026-07-09
 category:
   - Knowledge Operating System
@@ -27,7 +28,7 @@ tags:
 
 # Project Relatio Relationship & Linking Standard
 
-## Version 1.0
+## Version 1.1
 
 ## Adopted Standards Document
 
@@ -289,6 +290,12 @@ A general relationship used only when a more precise relationship cannot yet be 
 
 ---
 
+# 7.1 Machine-Readable Encoding (v1.1)
+
+The vocabulary above is expressed in metadata through the typed **`relationships`** block defined by STD-0002 §7 — each entry pairs a `type` from this vocabulary with a `target` identifier. This closes Pressure Test **F-4** / **GB-2026-001**, where these types could previously live only in an object's prose. The flat `parent_documents`/`related_documents` lists remain the tooling-read graph for dangling-reference checks; the typed block adds the *meaning* of each edge, which `graph_integrity.py` uses for type-aware reciprocity (§11 *False Reciprocity* — directional types such as `derived_from`, `supports`, `part_of` are not expected to reciprocate; symmetric types such as `related_to`, `contrasts_with` are).
+
+---
+
 # 8. Relationship Directionality
 
 Relationships may be directional.
@@ -443,6 +450,7 @@ Meaningful relationships transform stored information into structured knowledge.
 |Version|Date|Status|Description|
 |---|---|---|---|
 |1.0|2026-07-09|Adopted|Initial relationship and linking standard|
+|1.1|2026-07-11|Adopted|Added §7.1 Machine-Readable Encoding: the vocabulary is now carried in the typed `relationships` frontmatter block (STD-0002 §7 v1.6), closing F-4 / GB-2026-001. No vocabulary change — the twelve approved types are unchanged.|
 
 ---
 

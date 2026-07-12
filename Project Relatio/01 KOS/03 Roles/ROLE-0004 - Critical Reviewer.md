@@ -3,6 +3,7 @@ title: ROLE-0004 - Critical Reviewer
 document_type: Role Definition
 version: 1.0
 status: Adopted
+operational_status: Active
 created: 2026-07-09
 category:
   - Knowledge Operating System

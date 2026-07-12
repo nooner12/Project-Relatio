@@ -3,6 +3,7 @@ title: ROLE-0001 - Knowledge Architect
 document_type: Role Definition
 version: 1.1
 status: Adopted
+operational_status: Active
 created: 2026-07-09
 parent_documents:
   - KOS-0011 Governance, Stewardship & Evolution Framework

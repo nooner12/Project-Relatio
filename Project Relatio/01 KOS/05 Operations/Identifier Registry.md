@@ -1,8 +1,9 @@
 ---
 title: Identifier Registry
 document_type: Navigation Document
-version: 1.4
-status: Active
+version: 1.6
+status: Adopted
+operational_status: Active
 created: 2026-07-09
 parent_documents:
   - STD-0001 Naming & Identification Standard
@@ -70,7 +71,7 @@ TPL-0001 (Claim), TPL-0002 (Source), TPL-0003 (Investigation), TPL-0004 (Finding
 
 ## OPS — Operations
 OPS-0001 (KB Organization), OPS-0002 (Relationship Integrity), OPS-0003 (Research Workflow). — **Next: OPS-0004.**
-Unnumbered Operations records: Identifier Registry, Governance Backlog, Standing Authorizations.
+Unnumbered Operations records: Identifier Registry, Governance Backlog, Standing Authorizations, Architecture Baseline.
 
 ## INV — Investigations
 INV-0001 (Jesus & Daoism), INV-0002 (Phantom Traffic Jams), INV-0003 (Wu Wei), INV-0004 (Metformin Discontinuation & T2D Remission), INV-0005 (Chronic Stress Interventions). — **Next: INV-0006.**
@@ -97,7 +98,7 @@ These are authoritative navigational/architectural documents that intentionally 
 - Standards Index; Standards Dependency Map; Standards Status; Standards Architecture Retrospective.
 - Roles Index.
 - Per-run review/assessment reports: Pressure Test Report – RQ-0001; Second-Run Friction Assessment – RQ-0002; Third-Run Assessment – RQ-0003; Critical Review – RQ-0004 (ROLE-0004); Fourth-Run Assessment – RQ-0004 (coordinator).
-- Identifier Registry (this document); Governance Backlog; Standing Authorizations.
+- Identifier Registry (this document); Governance Backlog; Standing Authorizations; Architecture Baseline.
 
 ---
 
@@ -117,6 +118,7 @@ Per OPS-0002 and STD-0006: before assigning a new identifier, consult this regis
 |1.3|2026-07-09|Active|ROLE-0002/0004/0005 ratified to Adopted v1.0.|
 |1.4|2026-07-10|Active|Fourth research workflow (INV-0004, RQ-0004, T2D remission / metformin): registered INV-0004; CLM-0007…CLM-0012; SRC-0006…SRC-0011; FND-0004. Objects Draft, pending ROLE-0004 review and ROLE-0001 conformance.|
 |1.5|2026-07-10|Active|Fifth research workflow (INV-0005, RQ-0005, chronic-stress interventions & durability): registered INV-0005; CLM-0013…CLM-0018; SRC-0012…SRC-0023; ENT-0003 (Allostatic Load); FND-0005. Objects Draft, pending ROLE-0004 review and ROLE-0001 conformance.|
+|1.6|2026-07-11|Active|Registered the **Architecture Baseline** (unnumbered Operations governance record, Phase II M1). Vault-wide lifecycle & relationship migrations (GB-2026-006 / GB-2026-001) added `operational_status` and typed `relationships` frontmatter — no new identifiers assigned.|
 
 ---
 

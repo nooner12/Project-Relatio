@@ -1,8 +1,9 @@
 ---
 title: TPL-0001 - Claim Record Template
 document_type: Template
-version: 1.1
+version: 1.2
 status: Adopted
+operational_status: Active
 created: 2026-07-09
 template_type: Claim Record
 parent_documents:
@@ -33,6 +34,7 @@ title: CLM-NNNN - <Short Claim Title>
 document_type: Claim Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: <YYYY-MM-DD>
 category:
   - Knowledge Base
@@ -48,6 +50,13 @@ tags:
   - KnowledgeBase
   - Claim
   - <TopicTag>
+relationships:            # typed (STD-0002 §7 / STD-0004) — prefer the most specific type
+  - type: derived_from
+    target: <SRC-NNNN>
+  - type: supports
+    target: <FND-NNNN>
+  - type: part_of
+    target: <INV-NNNN>
 ---
 
 # CLM-NNNN
@@ -114,6 +123,7 @@ Level <0–5> (<Very High | High | Moderate | Low | Very Low | Unsupported>) —
 |---|---|---|---|
 |1.0|2026-07-09|Adopted|Initial Claim Record template; encodes STD-0002 + KOS-0003 §12 per KOS-0012|
 |1.1|2026-07-11|Adopted|Confidence line updated to the canonical hybrid **Level N (Label)** format (GB-2026-021).|
+|1.2|2026-07-11|Adopted|Added `operational_status` (GB-2026-006) and the typed `relationships` example (GB-2026-001) to the object frontmatter block.|
 
 ---
 

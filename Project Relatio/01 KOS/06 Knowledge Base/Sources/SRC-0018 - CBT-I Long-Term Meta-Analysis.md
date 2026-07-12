@@ -3,6 +3,7 @@ title: SRC-0018 - CBT-I Long-Term Meta-Analysis
 document_type: Source Record
 version: 0.2
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -22,6 +23,11 @@ tags:
   - Source
   - Sleep
   - CBTI
+relationships:
+  - type: supports
+    target: CLM-0015
+  - type: related_to
+    target: ENT-0003
 ---
 
 # SRC-0018

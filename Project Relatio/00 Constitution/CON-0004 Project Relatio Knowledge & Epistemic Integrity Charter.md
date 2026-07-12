@@ -3,6 +3,7 @@ title: CON-0004 - Project Relatio Knowledge & Epistemic Integrity Charter
 document_type: Constitutional Instrument
 version: 1.1
 status: Adopted
+operational_status: Active
 category:
   - Constitution
   - Epistemology

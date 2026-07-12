@@ -3,6 +3,7 @@ title: INV-0003 - Wu Wei
 document_type: Investigation Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-09
 category:
   - Knowledge Base
@@ -26,6 +27,15 @@ tags:
   - KnowledgeBase
   - WuWei
   - Investigation
+relationships:
+  - type: derived_from
+    target: SRC-0002
+  - type: derived_from
+    target: SRC-0005
+  - type: related_to
+    target: ENT-0001
+  - type: related_to
+    target: ENT-0002
 ---
 
 # INV-0003

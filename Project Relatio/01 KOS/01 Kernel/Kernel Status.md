@@ -2,7 +2,8 @@
 title: Kernel Status
 document_type: Governance Record
 version: 1.2
-status: Active
+status: Adopted
+operational_status: Active
 category:
   - Knowledge Operating System
   - Architecture Status

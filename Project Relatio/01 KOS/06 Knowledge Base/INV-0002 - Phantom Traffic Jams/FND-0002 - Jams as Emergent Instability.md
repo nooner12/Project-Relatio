@@ -3,6 +3,7 @@ title: FND-0002 - Jams as Emergent Instability
 document_type: Finding Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-09
 category:
   - Knowledge Base
@@ -21,6 +22,15 @@ tags:
   - Finding
   - TrafficFlow
   - Emergence
+relationships:
+  - type: derived_from
+    target: CLM-0003
+  - type: derived_from
+    target: CLM-0004
+  - type: related_to
+    target: KOS-0006
+  - type: part_of
+    target: INV-0002
 ---
 
 # FND-0002

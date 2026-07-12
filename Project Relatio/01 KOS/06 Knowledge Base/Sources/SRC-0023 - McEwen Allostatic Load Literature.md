@@ -3,6 +3,7 @@ title: SRC-0023 - McEwen Allostatic Load Literature
 document_type: Source Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -22,6 +23,13 @@ tags:
   - Source
   - AllostaticLoad
   - StressPhysiology
+relationships:
+  - type: defines
+    target: ENT-0003
+  - type: related_to
+    target: SRC-0019
+  - type: related_to
+    target: SRC-0020
 ---
 
 # SRC-0023

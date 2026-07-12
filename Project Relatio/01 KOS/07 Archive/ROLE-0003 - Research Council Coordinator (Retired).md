@@ -2,7 +2,8 @@
 title: ROLE-0003 - Research Council Coordinator (Retired)
 document_type: Role Definition
 version: 0.3
-status: Archived
+status: Draft
+operational_status: Archived
 retired: 2026-07-09
 superseded_by:
   - ROLE-0005 Vision Steward

@@ -3,6 +3,7 @@ title: KOS Architecture Manifest
 document_type: Architecture Document
 version: 1.1
 status: Adopted
+operational_status: Active
 category:
   - Knowledge Operating System
   - Architecture

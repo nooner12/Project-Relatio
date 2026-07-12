@@ -2,7 +2,8 @@
 title: Standing Authorizations
 document_type: Governance Record
 version: 1.1
-status: Active
+status: Adopted
+operational_status: Active
 created: 2026-07-09
 parent_documents:
   - CON-0003 Project Relatio Governance & Stewardship Framework

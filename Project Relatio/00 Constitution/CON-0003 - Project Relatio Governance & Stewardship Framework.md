@@ -3,6 +3,7 @@ title: CON-0003 - Project Relatio Governance & Stewardship Framework
 document_type: Constitutional Instrument
 version: 1.0
 status: Adopted
+operational_status: Active
 category:
   - Constitution
   - Governance

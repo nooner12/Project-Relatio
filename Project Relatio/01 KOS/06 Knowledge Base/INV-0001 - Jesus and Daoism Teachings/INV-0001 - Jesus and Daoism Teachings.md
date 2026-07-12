@@ -3,6 +3,7 @@ title: INV-0001 - Comparative Teachings of Jesus and Philosophical Daoism
 document_type: Investigation Record
 version: 0.2
 status: Draft
+operational_status: Active
 created: 2026-07-09
 category:
   - Knowledge Base
@@ -27,6 +28,11 @@ tags:
   - Jesus
   - Daoism
   - Investigation
+relationships:
+  - type: derived_from
+    target: SRC-0001
+  - type: derived_from
+    target: SRC-0002
 ---
 
 # INV-0001

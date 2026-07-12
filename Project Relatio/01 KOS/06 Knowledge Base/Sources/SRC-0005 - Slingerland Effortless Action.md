@@ -3,6 +3,7 @@ title: SRC-0005 - Slingerland, Effortless Action
 document_type: Source Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-09
 category:
   - Knowledge Base
@@ -23,6 +24,15 @@ tags:
   - Source
   - Scholarship
   - WuWei
+relationships:
+  - type: supports
+    target: CLM-0005
+  - type: supports
+    target: CLM-0006
+  - type: explains
+    target: ENT-0001
+  - type: related_to
+    target: SRC-0002
 ---
 
 # SRC-0005

@@ -3,6 +3,7 @@ title: CLM-0016 - Social Connection Buffers Stress but Evidence Is Largely Obser
 document_type: Claim Record
 version: 0.1
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -21,6 +22,15 @@ tags:
   - Claim
   - SocialConnection
   - Durability
+relationships:
+  - type: derived_from
+    target: SRC-0019
+  - type: depends_on
+    target: ENT-0003
+  - type: supports
+    target: FND-0005
+  - type: part_of
+    target: INV-0005
 ---
 
 # CLM-0016

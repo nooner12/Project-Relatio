@@ -3,6 +3,7 @@ title: OPS-0003 - Research Workflow
 document_type: Operations Document
 version: 1.2
 status: Adopted
+operational_status: Active
 created: 2026-07-09
 parent_documents:
   - KOS-0008 Research Methodology & Investigation Framework

@@ -3,6 +3,7 @@ title: CLM-0017 - Reducing the Stressor Is Central to Durable Relief but Interve
 document_type: Claim Record
 version: 0.2
 status: Draft
+operational_status: Active
 created: 2026-07-10
 category:
   - Knowledge Base
@@ -24,6 +25,21 @@ tags:
   - StressorReduction
   - ProblemFocusedCoping
   - Durability
+relationships:
+  - type: derived_from
+    target: SRC-0022
+  - type: derived_from
+    target: SRC-0017
+  - type: derived_from
+    target: SRC-0016
+  - type: depends_on
+    target: ENT-0003
+  - type: contrasts_with
+    target: CLM-0013
+  - type: supports
+    target: FND-0005
+  - type: part_of
+    target: INV-0005
 ---
 
 # CLM-0017

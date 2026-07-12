@@ -2,7 +2,8 @@
 title: KOS-0200 - Standards Framework (Superseded)
 document_type: Operational Framework
 version: 0.1
-status: Archived
+status: Draft
+operational_status: Archived
 category:
   - Standards
   - Research Methodology

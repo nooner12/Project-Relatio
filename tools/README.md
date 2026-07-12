@@ -16,14 +16,20 @@ python graph_integrity.py
 ```
 
 Reports, and writes `output/graph_integrity_report.md`:
-- **Dangling references** — any `parent_documents` / `related_documents` entry that
-  resolves to no existing object. Exit code 1 if any exist (reliability-critical).
-- **One-directional KB links** — advisory; among Knowledge Base objects
-  (INV/CLM/SRC/ENT/FND), an `A -> B` related link with no `B -> A` back
-  (a parent-link counts as reciprocation). OPS-0002 §5 treats these as low-severity.
+- **Dangling references** — any `parent_documents` / `related_documents` entry, or any
+  typed `relationships:` target, that resolves to no existing object. Exit code 1 if
+  any exist (reliability-critical).
+- **Non-reciprocated symmetric typed links** — advisory; type-aware (GB-2026-001).
+  Among KB objects, a *symmetric*-type edge (`related_to`, `contrasts_with`) with no
+  reciprocal back. Directional types (`derived_from`, `supports`, `part_of`, …) are
+  one-way by design and are NOT flagged — the typed block lets the tool tell them
+  apart, which the old flat-list check could not. OPS-0002 §5 = low-severity.
+- **Untyped one-directional KB links** — legacy advisory, only for KB objects that
+  carry no typed `relationships:` block (so nothing goes unchecked).
 
 Matches the vault's actual convention: identifiers embedded in `title`/filename,
-graph in `related_documents:` / `parent_documents:`.
+flat graph in `related_documents:` / `parent_documents:`, typed edges in
+`relationships:` (STD-0002 §7 / STD-0004).
 
 ## validate.py — structural conformance
 

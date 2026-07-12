@@ -3,6 +3,7 @@ title: KOS-0012 - Knowledge Object Model
 document_type: Kernel Operating System Document
 version: 1.0
 status: Adopted
+operational_status: Active
 created: 2026-07-09
 parent_documents:
   - KOS-0009 Knowledge Representation & Information Architecture Framework
