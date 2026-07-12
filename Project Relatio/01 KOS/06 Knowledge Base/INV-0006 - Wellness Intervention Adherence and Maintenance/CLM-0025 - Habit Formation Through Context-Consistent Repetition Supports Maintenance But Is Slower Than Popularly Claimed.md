@@ -15,7 +15,7 @@ parent_documents:
 related_documents:
   - SRC-0029 Lally 2010 Habit Formation in the Real World
   - SRC-0024 Kwasnicka 2016 Maintenance of Behaviour Change Theories Review
-  - FND-0006 Sustained Wellness Behaviour Is Built by Self-Regulation Autonomous Motivation and Habit Not Willpower or Incentives
+  - FND-0006 What Best Supports Sustained Wellness Behaviour
 tags:
   - ProjectRelatio
   - KnowledgeBase

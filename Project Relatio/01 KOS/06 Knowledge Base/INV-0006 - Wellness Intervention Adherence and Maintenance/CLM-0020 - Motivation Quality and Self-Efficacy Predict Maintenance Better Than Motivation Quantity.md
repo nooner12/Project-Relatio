@@ -14,7 +14,8 @@ parent_documents:
   - INV-0006 Wellness Intervention Adherence and Maintenance
 related_documents:
   - SRC-0030 Teixeira 2012 Exercise and Self-Determination Theory Systematic Review
-  - FND-0006 Sustained Wellness Behaviour Is Built by Self-Regulation Autonomous Motivation and Habit Not Willpower or Incentives
+  - SRC-0033 Ashford 2010 Self-Efficacy and Physical Activity Meta-Analysis
+  - FND-0006 What Best Supports Sustained Wellness Behaviour
 tags:
   - ProjectRelatio
   - KnowledgeBase
@@ -24,6 +25,8 @@ tags:
 relationships:
   - type: derived_from
     target: SRC-0030
+  - type: derived_from
+    target: SRC-0033
   - type: supports
     target: FND-0006
   - type: contrasts_with
@@ -41,7 +44,7 @@ relationships:
 ---
 
 # Claim
-> A common driver of non-maintenance is **low-quality motivation**: behaviour undertaken for **controlled/external** reasons (guilt, pressure, appearance, short-term reward) is sustained less well than behaviour driven by **autonomous** motivation (identified value and intrinsic enjoyment). Low **self-efficacy** is an additional predictor of dropout. Correspondingly, **autonomy-supportive** approaches that build autonomous motivation and self-efficacy are associated with better sustained wellness behaviour than approaches relying on external pressure or incentive.
+> A common driver of non-maintenance is **low-quality motivation**: in the exercise/physical-activity literature, behaviour undertaken for **autonomous** reasons (identified value and intrinsic enjoyment) is **consistently associated** with more sustained activity than behaviour driven by **controlled/external** reasons (guilt, pressure, appearance, short-term reward) — i.e. the *type* of motivation predicts persistence better than sheer motivational *intensity*. Low **self-efficacy** is a further, separately-evidenced predictor of dropout. Correspondingly, **autonomy-supportive** approaches that build autonomous motivation and self-efficacy are **associated with** better sustained wellness behaviour than approaches relying on external pressure or incentive. (These are robust *associations*, largely in the exercise domain; the causal/durability step is not cleanly proven — see Confidence.)
 
 ---
 
@@ -51,15 +54,16 @@ relationships:
 ---
 
 # Evidence (KOS-0003 §4)
-Type: **Empirical** (systematic review of experimental, prospective, and cross-sectional studies).
-- **SRC-0030 (Teixeira et al. 2012):** systematic review of 66 studies applying Self-Determination Theory to exercise. **Consistent positive relations between autonomous motivation (identified + intrinsic regulation) and exercise behaviour**; good evidence that autonomy-supportive contexts and need satisfaction foster physical activity.
+Type: **Empirical** (two systematic reviews with meta-analytic components, spanning experimental, prospective, and cross-sectional studies).
+- **SRC-0030 (Teixeira et al. 2012):** systematic review of 66 studies applying Self-Determination Theory to exercise. **Consistent positive relations between autonomous motivation (identified + intrinsic regulation) and exercise behaviour**; good evidence that autonomy-supportive contexts and need satisfaction foster physical activity. The evidence is a *consistent association* in the exercise domain, mostly cross-sectional/prospective, not a proven comparative effect size against "motivation quantity."
+- **SRC-0033 (Ashford, Edmunds & French 2010):** systematic review with meta-analysis showing **self-efficacy is a modifiable determinant of physical activity** (interventions that raise self-efficacy raise activity), with technique effects varying (vicarious experience most effective). This is the **catalogued** source for the self-efficacy leg; it is physical-activity-domain and largely initiation/short-to-medium-term, so it corroborates self-efficacy as a predictor without establishing long-term maintenance specifically.
 
 ---
 
 # Evidence Evaluation (KOS-0003 §5, 0–5)
 - **Reliability: 3** — a large, consistent evidence base, but much of it is **cross-sectional/prospective (correlational)**, not RCT; and it is a narrative systematic review, not a pooled effect size.
 - **Relevance: 4** — directly about *sustained* activity motivation, the core of the maintenance question.
-- **Independence: 3** — co-authored by SDT originators (theoretical investment); offset by a multi-lab base. Self-efficacy evidence (Bandura tradition) is invoked conceptually, not separately catalogued here.
+- **Independence: 3** — the SDT source is co-authored by SDT originators (theoretical investment), offset by a multi-lab base; the self-efficacy leg is now carried by a **separately-catalogued, independent** source (SRC-0033, Ashford 2010, not authored by the construct's originator), which strengthens independence for that leg. The two legs (motivation quality, self-efficacy) are related but distinct constructs, so the convergence is partial rather than a single-conclusion replication.
 - **Quality: 3** — good for a narrative systematic review; the correlational majority caps causal strength.
 - **Limitations:** Establishes a **consistent association** between autonomous motivation and sustained activity; it does **not** cleanly prove that *manipulating* motivation quality causes durable maintenance in RCTs, nor quantify a single effect size.
 
@@ -73,7 +77,7 @@ Type: **Empirical** (systematic review of experimental, prospective, and cross-s
 ---
 
 # Source Evaluation
-SRC-0030: high authority, transparent, with a noted theoretical-investment consideration (SDT co-founders) and a correlational-majority limitation. Autonomous-motivation pattern verified this session via PubMed/PMC abstract.
+SRC-0030 (motivation quality): high authority, transparent, with a noted theoretical-investment consideration (SDT co-founders) and a correlational-majority limitation. Autonomous-motivation pattern verified via PubMed/PMC abstract. SRC-0033 (self-efficacy): high authority, independent of the construct's originator, verified this remediation session via Wiley/BJHP (abstract-level); physical-activity-domain, initiation-focused. Both are exercise-domain, which caps generalisation.
 
 ---
 
@@ -108,7 +112,7 @@ SRC-0030: high authority, transparent, with a noted theoretical-investment consi
 ---
 
 # Relationships (STD-0004)
-- `derived_from` SRC-0030.
+- `derived_from` SRC-0030 (motivation quality) and SRC-0033 (self-efficacy — the catalogued source for that leg).
 - `supports` FND-0006.
 - `contrasts_with` CLM-0026 (external/controlled motivation via incentives fades; autonomous motivation is the durability contrast).
 - `part_of` INV-0006.
@@ -119,5 +123,6 @@ SRC-0030: high authority, transparent, with a noted theoretical-investment consi
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created for RQ-0006. Autonomous-motivation association verified via Teixeira 2012 abstract. Motivated-reasoning hazard named; graded Moderate for correlational majority.|
+|0.2|2026-07-11|Draft|Remediation pass (Critical Review remediation #3): catalogued **SRC-0033 (Ashford 2010)** as the previously un-catalogued self-efficacy source (self-efficacy leg no longer rests on an uncited "conceptual invocation"). Aligned the comparative/maintenance wording to what the sources actually support — consistent correlational *associations* in the exercise domain, "type predicts persistence better than intensity," not a proven comparative effect size or a demonstrated long-term-maintenance causal effect. **Level 3 retained** (both sources exercise-domain and largely correlational/initiation-focused). Refreshed the FND-0006 display title after its rename.|
 
 # End CLM-0020

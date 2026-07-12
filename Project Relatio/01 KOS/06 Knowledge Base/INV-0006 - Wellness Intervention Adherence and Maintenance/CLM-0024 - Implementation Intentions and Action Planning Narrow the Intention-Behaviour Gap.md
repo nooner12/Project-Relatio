@@ -15,7 +15,7 @@ parent_documents:
 related_documents:
   - SRC-0028 Gollwitzer Sheeran 2006 Implementation Intentions Meta-Analysis
   - ENT-0004 Intention-Behaviour Gap
-  - FND-0006 Sustained Wellness Behaviour Is Built by Self-Regulation Autonomous Motivation and Habit Not Willpower or Incentives
+  - FND-0006 What Best Supports Sustained Wellness Behaviour
 tags:
   - ProjectRelatio
   - KnowledgeBase

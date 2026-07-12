@@ -55,7 +55,7 @@ Systematic review of behaviour theories addressing **maintenance** (rather than 
 
 # 4. Key Content / Passages Used
 - Behaviour-change interventions frequently produce **temporary** change; **maintenance is rarely attained** — the review's motivating premise (verified this session via journal/repository abstracts).
-- Maintenance is theorised to rest on **five interrelated domains**: (1) **maintenance motives**, (2) **self-regulation**, (3) **habits**, (4) **psychological and physical resources**, and (5) **environmental and social influences**. (Verified this session against the Health Psychology Review abstract and the Stirling/Curtin repository records.)
+- Maintenance is theorised to rest on **five interrelated domains**: (1) **maintenance motives**, (2) **self-regulation**, (3) **habits**, (4) **psychological and physical resources**, and (5) **environmental and social influences**. (Verified at authoring against the Health Psychology Review abstract and the Stirling/Curtin repository records; **re-verified 2026-07-11** (remediation pass) via the Health Psychology Review full-text/abstract and Stirling repository — five themes confirmed: maintenance motives, self-regulation, resources, habits, and contextual/environmental influences, from a screen of 100 included theories.)
 
 # 5. Relationships (STD-0004)
 - `supports` CLM-0021 (maintenance determinants differ from initiation determinants).
@@ -65,5 +65,6 @@ Systematic review of behaviour theories addressing **maintenance** (rather than 
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created for RQ-0006. Five-domain maintenance framework and "maintenance rarely attained" premise verified against journal + repository abstracts this session. Full text not fetched; figures are qualitative (thematic), so no numeric verification gap.|
+|0.2|2026-07-11|Draft|Remediation pass (remediation #1): five maintenance-theory domains **re-verified** via Health Psychology Review and Stirling repository — maintenance motives, self-regulation, resources, habits, contextual/environmental influences; confirmed. No content change.|
 
 # End SRC-0024

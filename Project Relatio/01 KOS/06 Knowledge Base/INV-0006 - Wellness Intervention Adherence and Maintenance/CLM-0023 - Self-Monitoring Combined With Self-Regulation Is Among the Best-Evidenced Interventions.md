@@ -15,7 +15,7 @@ parent_documents:
 related_documents:
   - SRC-0026 Michie 2009 Effective Techniques Healthy Eating Physical Activity Meta-Regression
   - SRC-0027 Harkin 2016 Monitoring Goal Progress Meta-Analysis
-  - FND-0006 Sustained Wellness Behaviour Is Built by Self-Regulation Autonomous Motivation and Habit Not Willpower or Incentives
+  - FND-0006 What Best Supports Sustained Wellness Behaviour
 tags:
   - ProjectRelatio
   - KnowledgeBase

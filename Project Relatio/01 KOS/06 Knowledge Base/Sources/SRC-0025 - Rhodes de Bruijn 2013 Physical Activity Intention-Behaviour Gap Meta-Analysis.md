@@ -55,7 +55,7 @@ Meta-analysis quantifying the gap between physical-activity **intention** and **
 - The exact percentage split is restated inconsistently across the secondary literature (see §4) — the robust point is directional, not the precise number.
 
 # 4. Key Content / Passages Used
-- The intention-behaviour discordance is driven **almost entirely by intenders who fail to act**, not by non-intenders who act: **non-intenders were largely inactive (~97–98% correspondence)**, whereas roughly **half of intenders failed to translate intention into activity** (restated across sources as ~46–54% of intenders unsuccessful). *(Verified this session via the Wiley abstract record and multiple secondary restatements; the precise intender-failure percentage varies by restatement — treated as "approximately half," not asserted to a single decimal, per KOS-0003 §12.1.)*
+- The intention-behaviour discordance is driven **almost entirely by intenders who fail to act**, not by non-intenders who act: **the large majority of non-intenders remained inactive**, whereas roughly **half of intenders failed to translate intention into activity** (restated across sources as ~46–54% of intenders unsuccessful). *(Verified this session via the Wiley abstract record and multiple secondary restatements; the precise intender-failure percentage varies by restatement — treated as "approximately half," not asserted to a single decimal, per KOS-0003 §12.1. The non-intender figure is stated qualitatively: an earlier "~97–98% correspondence" wording could not be confirmed to the paywalled full text and the abstract's cell breakdown — only ~2% of the sample were active non-intenders — implies ~91%, so precision is withheld.)*
 - The overall intention–behaviour gap is commonly summarised as ≈46–48%.
 
 # 5. Relationships (STD-0004)
@@ -66,5 +66,6 @@ Meta-analysis quantifying the gap between physical-activity **intention** and **
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created for RQ-0006. Directional finding (gap driven by non-acting intenders) verified this session; exact intender-failure percentage flagged as variably restated (~46–54%) and reported as "approximately half," not a precise figure. Full text behind paywall (Wiley 403); abstract-level verification only.|
+|0.2|2026-07-11|Draft|Remediation pass (remediation #2): overall ≈46% gap and "only ~2% of the sample were active non-intenders" re-confirmed via the abstract; softened the non-intender "~97–98% correspondence" wording (unconfirmable to full text; reconstruction ⇒ ~91%) to "large majority remained inactive." Reconciled in CLM-0019 and ENT-0004.|
 
 # End SRC-0025

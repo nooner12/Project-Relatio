@@ -22,6 +22,8 @@ related_documents:
   - SRC-0030 Teixeira 2012 Exercise and Self-Determination Theory Systematic Review
   - SRC-0031 Mantzari 2015 Personal Financial Incentives Meta-Analysis
   - SRC-0032 Eysenbach 2005 The Law of Attrition
+  - SRC-0033 Ashford 2010 Self-Efficacy and Physical Activity Meta-Analysis
+  - SRC-0034 Baumel 2019 Objective Engagement With Mental Health Apps
   - CLM-0019 The Intention-Behaviour Gap Is the Central Point of Failure
   - CLM-0020 Motivation Quality and Self-Efficacy Predict Maintenance Better Than Motivation Quantity
   - CLM-0021 Maintenance Depends on Different Determinants Than Initiation
@@ -31,7 +33,7 @@ related_documents:
   - CLM-0025 Habit Formation Through Context-Consistent Repetition Supports Maintenance But Is Slower Than Popularly Claimed
   - CLM-0026 Financial Incentives Improve Behaviour While in Place But Effects Fade After Removal
   - ENT-0004 Intention-Behaviour Gap
-  - FND-0006 Sustained Wellness Behaviour Is Built by Self-Regulation Autonomous Motivation and Habit Not Willpower or Incentives
+  - FND-0006 What Best Supports Sustained Wellness Behaviour
 tags:
   - ProjectRelatio
   - KnowledgeBase
@@ -58,6 +60,10 @@ relationships:
     target: SRC-0031
   - type: derived_from
     target: SRC-0032
+  - type: derived_from
+    target: SRC-0033
+  - type: derived_from
+    target: SRC-0034
   - type: related_to
     target: INV-0004
   - type: related_to
@@ -70,7 +76,7 @@ relationships:
 
 ## Draft Investigation Record
 
-> Authored using **TPL-0003**; Sources via TPL-0002, Claims via TPL-0001, Entity from KOS-0012 §5.5, Finding via TPL-0004. Sixth research workflow (RQ-0006). **HIGH-STAKES** (health / behavioural medicine): full circuit applies and the STD-0006 §7.5 external-verification gate is in force. All nine sources were live-verified this session via WebSearch/WebFetch (verification status recorded on each SRC).
+> Authored using **TPL-0003**; Sources via TPL-0002, Claims via TPL-0001, Entity from KOS-0012 §5.5, Finding via TPL-0004. Sixth research workflow (RQ-0006). **HIGH-STAKES** (health / behavioural medicine): full circuit applies and the STD-0006 §7.5 external-verification gate is in force. All eleven sources were live-verified via WebSearch/WebFetch (verification status recorded on each SRC); nine at authoring plus SRC-0033 (Ashford 2010) and SRC-0034 (Baumel 2019), which were catalogued during the RQ-0006 remediation pass to close the CLM-0020 self-efficacy gap and the CLM-0022 modern-attrition gap.
 >
 > **This is an educational evidence review, NOT individualized medical, psychological, or behavioural advice.** See §2. Follows the safety-framing precedent of INV-0004 and INV-0005.
 
@@ -124,7 +130,8 @@ RQ-0006
 Sources: SRC-0024 (Kwasnicka maintenance theories), SRC-0025 (Rhodes gap),
          SRC-0026 (Michie techniques), SRC-0027 (Harkin monitoring),
          SRC-0028 (Gollwitzer & Sheeran planning), SRC-0029 (Lally habit),
-         SRC-0030 (Teixeira SDT), SRC-0031 (Mantzari incentives), SRC-0032 (Eysenbach attrition)
+         SRC-0030 (Teixeira SDT), SRC-0031 (Mantzari incentives), SRC-0032 (Eysenbach attrition),
+         SRC-0033 (Ashford self-efficacy), SRC-0034 (Baumel app attrition)
   ↓
 Entity:  ENT-0004 (Intention–Behaviour Gap)
   ↓
@@ -138,7 +145,7 @@ Finding: FND-0006
 
 # 4. Findings / Synthesis
 
-See **[[FND-0006 - Sustained Wellness Behaviour Is Built by Self-Regulation Autonomous Motivation and Habit Not Willpower or Incentives]]**. In brief:
+See **[[FND-0006 - What Best Supports Sustained Wellness Behaviour]]**. In brief:
 
 **(a) Why maintenance fails.** The core failure is the **intention–behaviour gap** — intention is a weak cause of action, and roughly half of intenders fail to act (CLM-0019). It is widened by **low-quality (controlled) motivation and low self-efficacy** (CLM-0020), by the fact that **maintenance is governed by different determinants than initiation** — habit, self-regulation, resources, environment (CLM-0021) — and, in self-directed/digital formats, by **pervasive early attrition** (CLM-0022).
 

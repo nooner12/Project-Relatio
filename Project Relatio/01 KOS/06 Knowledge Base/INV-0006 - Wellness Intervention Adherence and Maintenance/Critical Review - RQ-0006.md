@@ -15,7 +15,7 @@ parent_documents:
   - KOS-0003 Epistemic Framework & Knowledge Validation System
   - ROLE-0004 Critical Reviewer
 related_documents:
-  - FND-0006 Sustained Wellness Behaviour Is Built by Self-Regulation Autonomous Motivation and Habit Not Willpower or Incentives
+  - FND-0006 What Best Supports Sustained Wellness Behaviour
   - CLM-0019 The Intention-Behaviour Gap Is the Central Point of Failure
   - CLM-0020 Motivation Quality and Self-Efficacy Predict Maintenance Better Than Motivation Quantity
   - CLM-0021 Maintenance Depends on Different Determinants Than Initiation

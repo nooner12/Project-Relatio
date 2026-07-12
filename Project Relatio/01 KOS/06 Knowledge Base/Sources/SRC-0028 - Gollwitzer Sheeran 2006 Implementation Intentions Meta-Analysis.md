@@ -51,7 +51,7 @@ Meta-analysis of **implementation intentions** — "if situation X arises, I wil
 - It addresses **translating an existing intention into action**, not creating motivation where none exists.
 
 # 4. Key Content / Passages Used
-- Across **94 independent tests**, implementation intentions had a **positive effect of medium-to-large magnitude (d ≈ 0.65)** on goal attainment. *(Verified this session via multiple index records: KOPS/Konstanz, SciRP reference, NCI-hosted PDF.)*
+- Across **94 independent tests**, implementation intentions had a **positive effect of medium-to-large magnitude (d ≈ 0.65)** on goal attainment. *(Verified at authoring via KOPS/Konstanz, SciRP, NCI-hosted PDF; **re-verified 2026-07-11** (remediation pass) via KOPS/Konstanz, SciRP and Semantic Scholar — "94 independent tests … d = .65" confirmed verbatim.)*
 
 # 5. Relationships (STD-0004)
 - `supports` CLM-0024 (implementation intentions/action planning narrow the intention-behaviour gap).
@@ -60,5 +60,6 @@ Meta-analysis of **implementation intentions** — "if situation X arises, I wil
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created for RQ-0006. 94-tests / d≈0.65 figure verified this session via Konstanz repository, SciRP, and NCI-hosted PDF.|
+|0.2|2026-07-11|Draft|Remediation pass (Critical Review remediation #1): d≈0.65 across 94 independent tests **re-verified** via KOPS/Konstanz, SciRP and Semantic Scholar — exact match. No content change.|
 
 # End SRC-0028

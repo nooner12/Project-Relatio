@@ -15,7 +15,7 @@ parent_documents:
 related_documents:
   - SRC-0025 Rhodes de Bruijn 2013 Physical Activity Intention-Behaviour Gap Meta-Analysis
   - ENT-0004 Intention-Behaviour Gap
-  - FND-0006 Sustained Wellness Behaviour Is Built by Self-Regulation Autonomous Motivation and Habit Not Willpower or Incentives
+  - FND-0006 What Best Supports Sustained Wellness Behaviour
 tags:
   - ProjectRelatio
   - KnowledgeBase
@@ -52,7 +52,7 @@ relationships:
 
 # Evidence (KOS-0003 §4)
 Type: **Empirical** (meta-analysis).
-- **SRC-0025 (Rhodes & de Bruijn 2013):** meta-analysis (k=10, N≈3,899) of physical-activity intention vs behaviour. Non-intenders were **largely inactive (~97–98% correspondence)**; roughly **half of intenders failed to become active** (restated across sources as ~46–54% of intenders unsuccessful). The gap is driven almost entirely by **non-acting intenders**.
+- **SRC-0025 (Rhodes & de Bruijn 2013):** meta-analysis (k=10, N≈3,899) of physical-activity intention vs behaviour. **The large majority of non-intenders remained inactive** (in the abstract's cell breakdown only ~2% of the sample were non-intenders who became active), whereas roughly **half of intenders failed to become active** (restated across sources as ~46–54% of intenders unsuccessful). The gap is driven almost entirely by **non-acting intenders**. *(An earlier draft asserted a "~97–98% correspondence" figure for non-intenders; that precise figure could not be confirmed to the paywalled full text this session and an abstract-level reconstruction implies ~91%, so it is softened here to avoid false precision — KOS-0003 §12.1.)*
 
 ---
 
@@ -73,7 +73,7 @@ Type: **Empirical** (meta-analysis).
 ---
 
 # Source Evaluation
-SRC-0025: high authority, academic, transparent about its small primary-study pool. The exact intender-failure percentage is variably restated in the secondary literature; reported here as "approximately half," not a single decimal (KOS-0003 §12.1). Full text was paywalled this session (Wiley 403); verification is abstract/secondary-restatement level.
+SRC-0025: high authority, academic, transparent about its small primary-study pool. The exact intender-failure percentage is variably restated in the secondary literature; reported here as "approximately half," not a single decimal (KOS-0003 §12.1). The non-intender correspondence figure is stated qualitatively ("large majority inactive") because the specific "~97–98%" figure could not be confirmed to the paywalled full text and an abstract reconstruction implies ~91%. Full text was paywalled this session (Wiley 403); verification is abstract/secondary-restatement level.
 
 ---
 
@@ -117,5 +117,6 @@ SRC-0025: high authority, academic, transparent about its small primary-study po
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created for RQ-0006. Directional gap finding verified this session; exact intender-failure % flagged as variably restated and reported as "approximately half."|
+|0.2|2026-07-11|Draft|Remediation pass (Critical Review remediation #2): softened the non-intender "~97–98% correspondence" figure to "the large majority remained inactive." The precise figure could not be confirmed to the paywalled full text; abstract reconstruction (≈2% active non-intenders) implies ~91%, so precision removed per KOS-0003 §12.1. Reconciled identically in ENT-0004 and SRC-0025.|
 
 # End CLM-0019

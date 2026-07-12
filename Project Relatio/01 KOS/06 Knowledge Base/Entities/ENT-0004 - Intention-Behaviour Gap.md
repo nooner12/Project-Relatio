@@ -17,7 +17,7 @@ related_documents:
   - SRC-0025 Rhodes de Bruijn 2013 Physical Activity Intention-Behaviour Gap Meta-Analysis
   - SRC-0024 Kwasnicka 2016 Maintenance of Behaviour Change Theories Review
   - CLM-0019 The Intention-Behaviour Gap Is the Central Point of Failure
-  - FND-0006 Sustained Wellness Behaviour Is Built by Self-Regulation Autonomous Motivation and Habit Not Willpower or Incentives
+  - FND-0006 What Best Supports Sustained Wellness Behaviour
 tags:
   - ProjectRelatio
   - KnowledgeBase
@@ -49,7 +49,7 @@ relationships:
 The **intention–behaviour gap** — the well-replicated discrepancy between what people *intend* to do (form a goal to do) and what they *actually do*. In health/wellness behaviour it is the gap between deciding to exercise, eat differently, meditate, or improve sleep and reliably enacting and sustaining that behaviour.
 
 # 2. Definition
-A construct from social/health psychology (action-control and dual-process traditions) denoting that **intention is a necessary but weak and insufficient cause of behaviour**. Empirically, the gap is asymmetric: people who lack intention almost never perform the behaviour, whereas a large share of people *with* positive intention still fail to act (Rhodes & de Bruijn 2013 for physical activity: non-intenders ~97–98% inactive; roughly **half of intenders** fail to translate intention into activity). The gap widens further over time — the move from *initiation* to *maintenance* is a second, distinct failure zone (Kwasnicka et al. 2016).
+A construct from social/health psychology (action-control and dual-process traditions) denoting that **intention is a necessary but weak and insufficient cause of behaviour**. Empirically, the gap is asymmetric: people who lack intention almost never perform the behaviour, whereas a large share of people *with* positive intention still fail to act (Rhodes & de Bruijn 2013 for physical activity: the **large majority of non-intenders remained inactive**; roughly **half of intenders** fail to translate intention into activity). The gap widens further over time — the move from *initiation* to *maintenance* is a second, distinct failure zone (Kwasnicka et al. 2016).
 
 # 3. Classification (per KOS-0004)
 - **Category:** Abstract / theoretical construct (a measured psychological regularity), not a concrete object. It is an explanatory pattern operationalised as the statistical discordance between measured intention and measured behaviour.
@@ -71,5 +71,6 @@ The intention–behaviour gap is the **conceptual hinge of the whole investigati
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created for RQ-0006. Classified as an empirical-regularity construct with magnitude-variability caveat. Grounds the investigation's factor/intervention structure and cross-links the health-behaviour investigations.|
+|0.2|2026-07-11|Draft|Remediation pass (Critical Review remediation #2): softened the non-intender "~97–98% inactive" figure to "the large majority of non-intenders remained inactive" — precise figure unconfirmed to the paywalled full text (abstract reconstruction ⇒ ~91%); reconciled identically in CLM-0019 and SRC-0025. Also refreshed the FND-0006 display title after its rename.|
 
 # End ENT-0004

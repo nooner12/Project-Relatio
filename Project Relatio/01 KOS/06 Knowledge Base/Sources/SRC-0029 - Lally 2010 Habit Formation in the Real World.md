@@ -51,7 +51,7 @@ Prospective real-world study of habit (automaticity) formation: 96 participants 
 - Automaticity ≠ guaranteed long-term maintenance; it is one supporting mechanism.
 
 # 4. Key Content / Passages Used
-- Median time to reach ~95% of asymptotic automaticity was **≈66 days**, with a wide range (**≈18–254 days**) — substantial individual and behaviour-type variation. *(Verified this session via PMC-3505409, Wiley, and University of Surrey records.)*
+- Median time to reach ~95% of asymptotic automaticity was **≈66 days**, with a wide range (**≈18–254 days**) — substantial individual and behaviour-type variation. *(Verified at authoring via PMC, Wiley, and University of Surrey records; **re-verified 2026-07-11** (remediation pass) via Wiley/EJSP and independent summaries — "median 66 days … range 18 to 254 days" confirmed.)*
 - Missing a single opportunity did **not** materially impair habit formation — occasional lapses are tolerable.
 
 # 5. Relationships (STD-0004)
@@ -61,5 +61,6 @@ Prospective real-world study of habit (automaticity) formation: 96 participants 
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created for RQ-0006. 66-day median (range 18–254) and the missed-opportunity finding verified this session via PMC/Wiley/Surrey. Small-sample and self-report limitations recorded.|
+|0.2|2026-07-11|Draft|Remediation pass (remediation #1): 66-day median / 18–254 range **re-verified** via Wiley/EJSP and independent summaries — confirmed. No content change.|
 
 # End SRC-0029

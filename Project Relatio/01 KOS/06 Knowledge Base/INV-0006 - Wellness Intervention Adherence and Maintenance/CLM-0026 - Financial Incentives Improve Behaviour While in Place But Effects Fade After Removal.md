@@ -14,7 +14,7 @@ parent_documents:
   - INV-0006 Wellness Intervention Adherence and Maintenance
 related_documents:
   - SRC-0031 Mantzari 2015 Personal Financial Incentives Meta-Analysis
-  - FND-0006 Sustained Wellness Behaviour Is Built by Self-Regulation Autonomous Motivation and Habit Not Willpower or Incentives
+  - FND-0006 What Best Supports Sustained Wellness Behaviour
 tags:
   - ProjectRelatio
   - KnowledgeBase
