@@ -10,3 +10,11 @@ tools/output/
 
 # Obsidian per-machine UI state
 .obsidian/workspace.json
+
+# Obsidian community-plugin binaries + per-machine plugin state (RRI, not architecture).
+# Reinstallable from .obsidian/community-plugins.json; keeps ~11 MB of third-party
+# code and a plugin secret (local-rest-api key) out of the shared public repo.
+.obsidian/plugins/
+
+# Stray local scratch
+/tree.txt
