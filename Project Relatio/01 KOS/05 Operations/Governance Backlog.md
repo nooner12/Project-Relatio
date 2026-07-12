@@ -1,7 +1,7 @@
 ---
 title: Governance Backlog
 document_type: Governance Record
-version: 1.9
+version: 1.10
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -22,7 +22,7 @@ tags:
 
 # Governance Backlog
 
-## Version 1.0
+## Version 1.10
 
 ## Active Governance Record
 
@@ -186,6 +186,19 @@ Before this document existed, open items were scattered across five places: the 
 - **Solutions:** note in the agent-implementation docs; no architectural change.
 - **Status:** Open, low priority.
 
+## GB-2026-023 — Independent-review pathway for reflexive findings
+- **Issue:** RQ-0007 (the first **reflexive** question — research whose conclusion bears on Project Relatio's own design) demonstrated that procedural independence (ROLE-0004 §5, same underlying model) is **structurally insufficient** for reflexive findings: the Specialist's synthesis imported the vault's own merit-principle vocabulary and claimed the literature "independently supports" it; the Reviewer caught the leak but correctly ruled a same-model reviewer cannot certify it caught *all* of a bias it plausibly shares (Critical Review - RQ-0007 §3.6, §6, §10).
+- **Context:** Seventh-Run Assessment F-22, 2026-07-12. The STD-0006 §7.5 gate machinery absorbed the case — the reliance gate was applied to the *reflexive use* (FND-0007 may not be cited as vindication of the vault's governance), extending §7.5's logic from verification *strength* to independence *kind*. No new structure was needed to contain it; what is needed is a **decision**.
+- **Impact:** Medium. Any future finding that touches the system's own design carries the same hazard; FND-0007 is gated until resolved.
+- **Solutions:** (a) owner engages a genuinely independent reviewer (different model, or a human organizational-theory/KM specialist) for FND-0007 and adopts that as the standing rule for reflexive findings — candidate one-line addition to STD-0006 §7.5; (b) accept the standing gate and simply never rely on reflexive findings for self-assessment; (c) defer.
+- **Status:** Open. Vision-Steward decision required.
+
+## GB-2026-024 — validate.py descriptive filename/title parity
+- **Issue:** `validate.py` (as rebuilt under GB-2026-016) checks that filename and `title:` carry the same **identifier**, not the same **descriptive text** — six INV-0007 claims shipped with long titles over short filenames and passed the validator; ROLE-0001 caught the STD-0001 §10 divergence manually (Seventh-Run Assessment F-21; recurrence context F-18/F-23).
+- **Impact:** Low. Manual review catches it; two runs' data.
+- **Solutions:** extend the parity check to the full descriptive text (exact match after the identifier), with the fix direction being title-shortening per the FND-0006 precedent. Pairs with the F-18/F-23 candidate STD-0001 guidance (title = filename; bound length).
+- **Status:** Open, low priority — do with the next tooling touch.
+
 ---
 
 # 3. Resolved (retained for institutional memory)
@@ -237,6 +250,7 @@ Any role may **add** an item. Only the Vision Steward may mark an item **Decided
 |1.7|2026-07-11|Active|**GB-2026-016 resolved:** `validate.py` rebuilt to check the title-embedded identifier + filename/title parity + uniqueness (STD-0001/0002); stale `id`/`[[wikilink]]` checks removed; 114 files validate clean. Session work committed and pushed to GitHub (public repo). Repo hygiene: `.gitignore` added; build artifacts / local settings / Obsidian UI state untracked.|
 |1.8|2026-07-11|Active|**GB-2026-007 resolved (owner-directed): KOS-0200 superseded & archived.** Never-adopted "Standards Framework" Draft moved to `07 Archive` (status → Archived, supersession banner); role fulfilled by STD-0001…0007 + Standards Index. References updated (Identifier Registry, Standards Status, Retrospective M-5, CLAUDE.md). **Remaining open items (GB-001/009/012/015) intentionally left deferred** — no demonstrated need; actioning them would be over-architecture (per the CLAUDE.md scope guardrail). Backlog now at a healthy resting state.|
 |1.9|2026-07-11|Active|**Phase II re-scope (owner-directed "action now").** Created the **Architecture Baseline v1.0** freeze record (Phase II brief M1). **GB-2026-006 resolved** — two-dimensional lifecycle field implemented (STD-0002 v1.5, STD-0005 §24 v1.1; 109 objects migrated); its deferral trigger (KOS-0200/ROLE-0003 supersession) had fired. **GB-2026-001 resolved** — typed `relationships` frontmatter (STD-0002 §7 v1.6, STD-0004 §7.1 v1.1; 52 KB objects / 222 edges back-encoded; graph_integrity.py type-aware; templates updated). Both moved to §3. Verified: validate.py 115/0, graph 0 dangling.|
+|1.10|2026-07-12|Active|Seventh run (RQ-0007, formal constraints — first reflexive question). Added **GB-2026-023** (independent-review pathway for reflexive findings — same-model independence structurally insufficient; F-22) and **GB-2026-024** (validate.py descriptive filename/title parity blind spot; F-21). Also fixed the stale `## Version` heading (read 1.0; drift noted at ROLE-0001-style reconciliation).|
 
 ---
 

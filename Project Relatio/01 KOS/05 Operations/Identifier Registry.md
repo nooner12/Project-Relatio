@@ -1,7 +1,7 @@
 ---
 title: Identifier Registry
 document_type: Navigation Document
-version: 1.10
+version: 1.12
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -20,7 +20,7 @@ tags:
 
 # Identifier Registry
 
-## Version 1.10
+## Version 1.12
 
 ## Active Navigation Document
 
@@ -75,19 +75,19 @@ OPS-0001 (KB Organization), OPS-0002 (Relationship Integrity), OPS-0003 (Researc
 Unnumbered Operations records: Identifier Registry, Governance Backlog, Standing Authorizations, Architecture Baseline.
 
 ## INV — Investigations
-INV-0001 (Jesus & Daoism), INV-0002 (Phantom Traffic Jams), INV-0003 (Wu Wei), INV-0004 (Metformin Discontinuation & T2D Remission), INV-0005 (Chronic Stress Interventions), INV-0006 (Wellness Intervention Adherence & Maintenance). — **Next: INV-0007.**
+INV-0001 (Jesus & Daoism), INV-0002 (Phantom Traffic Jams), INV-0003 (Wu Wei), INV-0004 (Metformin Discontinuation & T2D Remission), INV-0005 (Chronic Stress Interventions), INV-0006 (Wellness Intervention Adherence & Maintenance), INV-0007 (Formal Constraints in Knowledge Systems). — **Next: INV-0008.**
 
 ## CLM — Claims
-CLM-0001, CLM-0002 (INV-0001); CLM-0003, CLM-0004 (INV-0002); CLM-0005, CLM-0006 (INV-0003); CLM-0007 … CLM-0012 (INV-0004); CLM-0013 … CLM-0018 (INV-0005); CLM-0019 … CLM-0026 (INV-0006). — **Next: CLM-0027.**
+CLM-0001, CLM-0002 (INV-0001); CLM-0003, CLM-0004 (INV-0002); CLM-0005, CLM-0006 (INV-0003); CLM-0007 … CLM-0012 (INV-0004); CLM-0013 … CLM-0018 (INV-0005); CLM-0019 … CLM-0026 (INV-0006); CLM-0027 … CLM-0033 (INV-0007). — **Next: CLM-0034.**
 
 ## SRC — Sources
-SRC-0001 (Gospels), SRC-0002 (Daoist Corpus), SRC-0003 (Sugiyama 2008), SRC-0004 (Jamiton Modeling), SRC-0005 (Slingerland), SRC-0006 (DiRECT Trial Programme), SRC-0007 (Taylor Twin-Cycle Mechanism), SRC-0008 (Virta Health Trial), SRC-0009 (STAMPEDE Surgery Trial), SRC-0010 (ADA/EASD Remission Consensus), SRC-0011 (Diet & Exercise Literature), SRC-0012 (Khoury 2015 MBSR Meta-Analysis), SRC-0013 (de Vibe 2017 Campbell MBSR Review), SRC-0014 (Goyal 2014 JAMA Meditation Meta-Analysis), SRC-0015 (Goessl 2017 HRV Biofeedback Meta-Analysis), SRC-0016 (Cochrane Individual-Level Occupational Stress — Tamminga 2023), SRC-0017 (Cochrane Organizational-Level Occupational Stress), SRC-0018 (CBT-I Long-Term Meta-Analysis), SRC-0019 (Holt-Lunstad 2010 Social Relationships & Mortality), SRC-0020 (Physical Activity, Cortisol & Stress Literature), SRC-0021 (Nature Exposure & Stress Literature), SRC-0022 (Coping Theory & Problem-Focused Coping Literature), SRC-0023 (McEwen Allostatic Load Literature), SRC-0024 (Kwasnicka 2016 Maintenance Theories), SRC-0025 (Rhodes & de Bruijn 2013 Intention-Behaviour Gap), SRC-0026 (Michie 2009 Effective Techniques Meta-Regression), SRC-0027 (Harkin 2016 Progress Monitoring), SRC-0028 (Gollwitzer & Sheeran 2006 Implementation Intentions), SRC-0029 (Lally 2010 Habit Formation), SRC-0030 (Teixeira 2012 Exercise & SDT), SRC-0031 (Mantzari 2015 Financial Incentives), SRC-0032 (Eysenbach 2005 Law of Attrition), SRC-0033 (Ashford 2010 Self-Efficacy & Physical Activity), SRC-0034 (Baumel 2019 Objective Engagement with Mental Health Apps). — **Next: SRC-0035.**
+SRC-0001 (Gospels), SRC-0002 (Daoist Corpus), SRC-0003 (Sugiyama 2008), SRC-0004 (Jamiton Modeling), SRC-0005 (Slingerland), SRC-0006 (DiRECT Trial Programme), SRC-0007 (Taylor Twin-Cycle Mechanism), SRC-0008 (Virta Health Trial), SRC-0009 (STAMPEDE Surgery Trial), SRC-0010 (ADA/EASD Remission Consensus), SRC-0011 (Diet & Exercise Literature), SRC-0012 (Khoury 2015 MBSR Meta-Analysis), SRC-0013 (de Vibe 2017 Campbell MBSR Review), SRC-0014 (Goyal 2014 JAMA Meditation Meta-Analysis), SRC-0015 (Goessl 2017 HRV Biofeedback Meta-Analysis), SRC-0016 (Cochrane Individual-Level Occupational Stress — Tamminga 2023), SRC-0017 (Cochrane Organizational-Level Occupational Stress), SRC-0018 (CBT-I Long-Term Meta-Analysis), SRC-0019 (Holt-Lunstad 2010 Social Relationships & Mortality), SRC-0020 (Physical Activity, Cortisol & Stress Literature), SRC-0021 (Nature Exposure & Stress Literature), SRC-0022 (Coping Theory & Problem-Focused Coping Literature), SRC-0023 (McEwen Allostatic Load Literature), SRC-0024 (Kwasnicka 2016 Maintenance Theories), SRC-0025 (Rhodes & de Bruijn 2013 Intention-Behaviour Gap), SRC-0026 (Michie 2009 Effective Techniques Meta-Regression), SRC-0027 (Harkin 2016 Progress Monitoring), SRC-0028 (Gollwitzer & Sheeran 2006 Implementation Intentions), SRC-0029 (Lally 2010 Habit Formation), SRC-0030 (Teixeira 2012 Exercise & SDT), SRC-0031 (Mantzari 2015 Financial Incentives), SRC-0032 (Eysenbach 2005 Law of Attrition), SRC-0033 (Ashford 2010 Self-Efficacy & Physical Activity), SRC-0034 (Baumel 2019 Objective Engagement with Mental Health Apps), SRC-0035 (Adler & Borys 1996 Enabling vs Coercive Bureaucracy), SRC-0036 (Hansen, Nohria & Tierney 1999 Codification vs Personalization), SRC-0037 (Simmons, Nelson & Simonsohn 2011 False-Positive Psychology), SRC-0038 (Szollosi et al. 2020 Is Preregistration Worthwhile), SRC-0039 (Meyer & Rowan 1977 Myth & Ceremony / Decoupling), SRC-0040 (Campbell 1979 Campbell's Law), SRC-0041 (March 1991 Exploration & Exploitation), SRC-0042 (Ostrom 1990 Governing the Commons), SRC-0043 (Merton 1940 Bureaucratic Structure & Personality / Goal Displacement), SRC-0044 (Polanyi 1966 The Tacit Dimension), SRC-0045 (Timmermans & Epstein 2010 A World of Standards). — **Next: SRC-0046.**
 
 ## ENT — Entities
-ENT-0001 (Wu Wei), ENT-0002 (Ziran), ENT-0003 (Allostatic Load), ENT-0004 (Intention-Behaviour Gap). — **Next: ENT-0005.**
+ENT-0001 (Wu Wei), ENT-0002 (Ziran), ENT-0003 (Allostatic Load), ENT-0004 (Intention-Behaviour Gap), ENT-0005 (Enabling vs Coercive Formalization). — **Next: ENT-0006.**
 
 ## FND — Findings
-FND-0001 (Resonant Ethic, Opposed Ultimates), FND-0002 (Jams as Emergent Instability), FND-0003 (Wu Wei as Non-Forcing Action), FND-0004 (Evidence-Based Pathways to T2D Remission & Safe De-prescribing), FND-0005 (Durable Chronic-Stress Relief Requires Stressor Reduction Plus Response Regulation), FND-0006 (What Best Supports Sustained Wellness Behaviour — best-evidenced levers of maintenance; renamed from the longer "…Built by…" title 2026-07-11). — **Next: FND-0007.**
+FND-0001 (Resonant Ethic, Opposed Ultimates), FND-0002 (Jams as Emergent Instability), FND-0003 (Wu Wei as Non-Forcing Action), FND-0004 (Evidence-Based Pathways to T2D Remission & Safe De-prescribing), FND-0005 (Durable Chronic-Stress Relief Requires Stressor Reduction Plus Response Regulation), FND-0006 (What Best Supports Sustained Wellness Behaviour — best-evidenced levers of maintenance; renamed from the longer "…Built by…" title 2026-07-11), FND-0007 (Value and Failure of Formal Constraints). — **Next: FND-0008.**
 
 ---
 
@@ -98,7 +98,7 @@ These are authoritative navigational/architectural documents that intentionally 
 - KOS Architecture Manifest; Kernel Index; KOS Dependency Map; Kernel Status.
 - Standards Index; Standards Dependency Map; Standards Status; Standards Architecture Retrospective.
 - Roles Index.
-- Per-run review/assessment reports: Pressure Test Report – RQ-0001; Second-Run Friction Assessment – RQ-0002; Third-Run Assessment – RQ-0003; Critical Review – RQ-0004 (ROLE-0004); Fourth-Run Assessment – RQ-0004 (coordinator); Critical Review – RQ-0005; Critical Review – RQ-0006 (ROLE-0004); Sixth-Run Assessment – RQ-0006 (coordinator).
+- Per-run review/assessment reports: Pressure Test Report – RQ-0001; Second-Run Friction Assessment – RQ-0002; Third-Run Assessment – RQ-0003; Critical Review – RQ-0004 (ROLE-0004); Fourth-Run Assessment – RQ-0004 (coordinator); Critical Review – RQ-0005; Critical Review – RQ-0006 (ROLE-0004); Sixth-Run Assessment – RQ-0006 (coordinator); Critical Review – RQ-0007 (ROLE-0004); Seventh-Run Assessment – RQ-0007 (coordinator, pre-registered — filing imminent).
 - Identifier Registry (this document); Governance Backlog; Standing Authorizations; Architecture Baseline.
 
 ---
@@ -124,6 +124,8 @@ Per OPS-0002 and STD-0006: before assigning a new identifier, consult this regis
 |1.8|2026-07-11|Active|INV-0006 circuit completed: registered Critical Review – RQ-0006 (Conformant with Flags) and Sixth-Run Assessment – RQ-0006 in §3; back-filled the previously-unlisted Critical Review – RQ-0005. Reconciled the frontmatter version / `## Version` heading drift (→1.8) during ROLE-0001 validation.|
 |1.9|2026-07-11|Active|RQ-0006 remediation pass (ROLE-0002, owner-approved): registered **SRC-0033** (Ashford 2010 self-efficacy → CLM-0020) and **SRC-0034** (Baumel 2019 app attrition → CLM-0022), closing two evidentiary gaps flagged by ROLE-0004. **FND-0006 renamed** "…Is Built by…" → "What Best Supports Sustained Wellness Behaviour" (title softened to match the Level-3 body; filename shortened to clear the Windows MAX_PATH limit). Old-named FND-0006 file left as a redirect stub pending ROLE-0001 `git rm`. Next SRC → SRC-0035.|
 |1.10|2026-07-11|Active|Registered **ADR-GOV-0002** (Guardrail and Scope Reframe). Next ADR → ADR-GOV-0003.|
+|1.11|2026-07-12|Active|Seventh research workflow (INV-0007, RQ-0007, formal constraints in knowledge systems): registered INV-0007; CLM-0027…CLM-0033 (three value, three failure-mode, one synthesis); SRC-0035…SRC-0042; ENT-0005 (Enabling vs Coercive Formalization); FND-0007 (Value and Failure of Formal Constraints). Next values advanced (INV-0008, CLM-0034, SRC-0043, ENT-0006, FND-0008). Objects Draft, in the ROLE-0004 / ROLE-0001 review circuit. Registered during ROLE-0001 structural validation (SA-001).|
+|1.12|2026-07-12|Active|INV-0007 post-review remediation (Critical Review – RQ-0007 + ROLE-0001 structural flags): registered **SRC-0043** (Merton 1940 → CLM-0031 goal-displacement anchor), **SRC-0044** (Polanyi 1966 → CLM-0029 tacit-loss anchor), **SRC-0045** (Timmermans & Epstein 2010 → CLM-0033 steelman, `contrasts_with`) — converting previously-invoked companions into catalogued sources; Next SRC → SRC-0046. Registered Critical Review – RQ-0007 in §3 and pre-registered Seventh-Run Assessment – RQ-0007. Re-validated during ROLE-0001 SA-001 pass (validate.py + graph_integrity.py clean; no new advisories involve INV-0007).|
 
 ---
 
