@@ -87,3 +87,9 @@ python graph_integrity.py   # graph integrity — dangling references + typed re
 ## Status & nature
 
 Project Relatio is an **evolving, single-owner research system** — a working reference implementation, not a finished product. Its standing risk is *over-architecture* (building meta-structure faster than real use can validate it), and it is deliberately steered against that: every addition must make the *research* better, not the architecture more complete. Knowledge Objects are versioned and carry a two-dimensional lifecycle (maturity × operational state); superseded and archived material is preserved, never erased.
+
+## Rights
+
+© 2026 Brian Noon. All rights reserved. This repository is public
+for reference; see [LICENSE.md](./LICENSE.md). An open licensing model may be
+considered in the future — it has not been adopted.
