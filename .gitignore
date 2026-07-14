@@ -16,5 +16,10 @@ tools/output/
 # code and a plugin secret (local-rest-api key) out of the shared public repo.
 .obsidian/plugins/
 
+# Keys and certificates — never commit (leaked-key remediation 2026-07-14).
+# History was purged of Project Relatio/_c.pem and _k.pem; the private key must be rotated out-of-band.
+*.pem
+_k.pem
+
 # Stray local scratch
 /tree.txt
