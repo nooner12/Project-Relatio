@@ -1,7 +1,7 @@
 ---
 title: Governance Backlog
 document_type: Governance Record
-version: 1.10
+version: 1.11
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -22,7 +22,7 @@ tags:
 
 # Governance Backlog
 
-## Version 1.10
+## Version 1.11
 
 ## Active Governance Record
 
@@ -193,6 +193,15 @@ Before this document existed, open items were scattered across five places: the 
 - **Solutions:** (a) owner engages a genuinely independent reviewer (different model, or a human organizational-theory/KM specialist) for FND-0007 and adopts that as the standing rule for reflexive findings — candidate one-line addition to STD-0006 §7.5; (b) accept the standing gate and simply never rely on reflexive findings for self-assessment; (c) defer.
 - **Status:** Open. Vision-Steward decision required.
 
+## GB-2026-025 — Confidence-scale crosswalk (Relatio native → external house tiers) does not exist
+- **Issue:** Cross-stream citation of Relatio findings assumes a recorded **crosswalk** from the canonical native confidence scale ("Level N (Label)", KOS-0003 §8 v1.4) to the owner's external house evidence tier (a four-tier ★-scale used outside this project). **No such crosswalk exists anywhere in the vault** — the term appears in no document, and no ★-glyph mapping is recorded. Two consecutive investigation handoff briefs (RQ-0008, RQ-0009) instructed sessions to "translate via the recorded crosswalk," which could not be done; both investigations shipped native-only with the translation deferred.
+- **Context:** Surfaced 2026-07-14 during INV-0008 (children's developmental evidence base) and reconfirmed during INV-0009 (LOPI). The two-session recurrence is the demonstrated need — this is now the standing blocker for citing Relatio findings into the owner's other work streams. Discipline requirements already settled by practice: translation must be **conservative** (between tiers → take the lower; a finding never gains a tier), must carry the **INV-####**, must preserve any **dual grade** (underlying vs. application), and gates (e.g., STD-0006 §7.5) travel with the finding.
+- **Impact:** Medium–High. Until recorded, every cross-stream citation is ad hoc: sessions must either halt (per brief instructions) or improvise an unrecorded equivalence — exactly the failure mode STD-0007 (terminology stewardship) and KOS-0003 §12.1 (no false precision) exist to prevent. Blocks the ★-translation step for FND-0008 and FND-0009, both already circuit-closed and waiting.
+- **Boundary note (separation discipline):** the house ★-scale is **external to Relatio** (an LLC/claude.ai-side vocabulary). The crosswalk is therefore a **boundary artifact**: it should define the mapping *from* the native scale without importing house/business framing into Relatio documents. Native ratings remain the only ratings carried on Knowledge Objects; the crosswalk is applied on the way *out*.
+- **Governance tier:** **Standards-level change — owner-reserved** (new standard or amendment to an Adopted one; ROLE-0001 §4.2). Not Baseline-touching: the native scale itself (Baseline-frozen via KOS-0003 §8) is unchanged; the crosswalk only adds an outbound mapping. Drafting was deliberately **not** done unilaterally in-session.
+- **Solutions:** (a) **author a short standalone mapping section as an appendix to STD-0006** (Review & Validation) — it already owns reliance/gating, and the crosswalk is a reliance rule (recommended); (b) a new STD-0008 "Cross-Stream Citation & Confidence Crosswalk" if the owner prefers it separable; (c) record the mapping outside the repo (claude.ai skill/Standing Context only) and keep the repo silent — rejected-by-default: the repo is the source of truth the briefs point at. **Candidate mapping to ratify or amend** (conservative, floor-taking): Level 5 (Very High) → ★★★; Level 4 (High) → ★★☆; Level 3 (Moderate) → ★☆☆; Level 2 (Low) → ◇◇◇; Level 1 (Very Low) → ◇◇◇; Level 0 (Unsupported) → **not citable**. Plus the standing rules: no tier gained in translation; dual grades translate separately; INV-#### and gates travel with every citation.
+- **Status:** **Open. Vision-Steward (owner) decision required** — this item records the need and a candidate mapping; it does not enact one.
+
 ## GB-2026-024 — validate.py descriptive filename/title parity
 - **Issue:** `validate.py` (as rebuilt under GB-2026-016) checks that filename and `title:` carry the same **identifier**, not the same **descriptive text** — six INV-0007 claims shipped with long titles over short filenames and passed the validator; ROLE-0001 caught the STD-0001 §10 divergence manually (Seventh-Run Assessment F-21; recurrence context F-18/F-23).
 - **Impact:** Low. Manual review catches it; two runs' data.
@@ -251,6 +260,7 @@ Any role may **add** an item. Only the Vision Steward may mark an item **Decided
 |1.8|2026-07-11|Active|**GB-2026-007 resolved (owner-directed): KOS-0200 superseded & archived.** Never-adopted "Standards Framework" Draft moved to `07 Archive` (status → Archived, supersession banner); role fulfilled by STD-0001…0007 + Standards Index. References updated (Identifier Registry, Standards Status, Retrospective M-5, CLAUDE.md). **Remaining open items (GB-001/009/012/015) intentionally left deferred** — no demonstrated need; actioning them would be over-architecture (per the CLAUDE.md scope guardrail). Backlog now at a healthy resting state.|
 |1.9|2026-07-11|Active|**Phase II re-scope (owner-directed "action now").** Created the **Architecture Baseline v1.0** freeze record (Phase II brief M1). **GB-2026-006 resolved** — two-dimensional lifecycle field implemented (STD-0002 v1.5, STD-0005 §24 v1.1; 109 objects migrated); its deferral trigger (KOS-0200/ROLE-0003 supersession) had fired. **GB-2026-001 resolved** — typed `relationships` frontmatter (STD-0002 §7 v1.6, STD-0004 §7.1 v1.1; 52 KB objects / 222 edges back-encoded; graph_integrity.py type-aware; templates updated). Both moved to §3. Verified: validate.py 115/0, graph 0 dangling.|
 |1.10|2026-07-12|Active|Seventh run (RQ-0007, formal constraints — first reflexive question). Added **GB-2026-023** (independent-review pathway for reflexive findings — same-model independence structurally insufficient; F-22) and **GB-2026-024** (validate.py descriptive filename/title parity blind spot; F-21). Also fixed the stale `## Version` heading (read 1.0; drift noted at ROLE-0001-style reconciliation).|
+|1.11|2026-07-14|Active|Added **GB-2026-025** (confidence-scale crosswalk to external house tiers does not exist — surfaced by INV-0008, reconfirmed by INV-0009; standards-level, owner-reserved; candidate conservative mapping recorded for ratification, not enacted). FND-0008/FND-0009 ★-translation blocked pending its decision.|
 
 ---
 
