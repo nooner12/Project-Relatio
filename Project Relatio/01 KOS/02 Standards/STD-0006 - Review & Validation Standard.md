@@ -1,7 +1,7 @@
 ---
 title: STD-0006 - Review & Validation Standard
 document_type: Standards Document
-version: 1.2
+version: 1.3
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -32,7 +32,7 @@ tags:
 
 # Project Relatio Review & Validation Standard
 
-## Version 1.1
+## Version 1.3
 
 ## Adopted Standards Document
 
@@ -304,6 +304,39 @@ Review and validation are how Project Relatio finds out whether that trust is ea
 
 ---
 
+# Appendix A — Cross-Stream Confidence Crosswalk (GB-2026-025; owner-ratified 2026-07-14)
+
+## A.1 Purpose and boundary
+
+Findings produced inside Project Relatio are sometimes cited into the owner's **external work streams**, which use a four-tier house evidence scale (★★★ / ★★☆ / ★☆☆ / ◇◇◇). This appendix records the **only authorized mapping** from the canonical native confidence scale ("Level N (Label)," KOS-0003 §8) to that house scale.
+
+**Boundary rule.** The house scale is **external vocabulary**. Knowledge Objects in this vault carry **native ratings only**; the crosswalk is applied **on the way out**, at the citation boundary. No ★-tier is ever written onto a CLM/FND/INV record, and no house/business framing is imported into vault documents. (The glyphs appear in this appendix solely to define the mapping.)
+
+## A.2 The mapping (conservative; floor-taking)
+
+| Native (KOS-0003 §8) | House tier |
+|---|---|
+| Level 5 (Very High) | ★★★ |
+| Level 4 (High) | ★★☆ |
+| Level 3 (Moderate) | ★☆☆ |
+| Level 2 (Low) | ◇◇◇ |
+| Level 1 (Very Low) | ◇◇◇ |
+| Level 0 (Unsupported) | **not citable** |
+
+## A.3 Translation rules (all mandatory)
+
+1. **No tier gained in translation.** When a native rating sits between tiers, or is expressed as a reach (e.g., "Level 2 → 3"), take the **lower** tier.
+2. **Dual grades translate separately.** Where a claim carries both an underlying-evidence grade and an application/transfer grade, each is translated on its own; the application tier is never lifted by the underlying tier.
+3. **Traceability travels.** Every cross-stream citation carries its **INV-####** (and CLM/FND identifier where applicable).
+4. **Gates travel.** Any reliance gate on the finding (§7.5 — including health/high-stakes gating and independence-kind gating per GB-2026-023) travels with the citation and binds the receiving stream. Translation never clears a gate.
+5. **Receiving-stream review is additional.** A crosswalked citation still passes the receiving stream's own evidence-grading and safety review where required; the crosswalk satisfies neither.
+
+## A.4 Change control
+
+This mapping is part of an Adopted Standard: amendments are **owner-reserved** and follow §10 Governance. Sessions apply the mapping as recorded; they do not improvise equivalences (KOS-0003 §12.1 — no false precision).
+
+---
+
 # 12. Revision History
 
 |Version|Date|Status|Description|
@@ -311,6 +344,7 @@ Review and validation are how Project Relatio finds out whether that trust is ea
 |1.0|2026-07-09|Adopted|Initial review and validation standard, grounded in findings from the pre-adoption Architecture Status Note audit|
 |1.1|2026-07-09|Adopted|Governance assessment (R2/R6/R7): added §5.7 Evidence Integrity check; expanded §7.3 Blocked to cover fabrication; added §7.4 Appeal & Preservation of Disagreement (CON-0003 GP-004, KOS-0011 §11 conflict taxonomy); replaced role-agnostic §8 with the structural/epistemic validation-authority split (ROLE-0001 / ROLE-0004)|
 |1.2|2026-07-10|Adopted|Added §7.5 Verification Integrity: a review must disclose its own verification strength; a verification-light review may not clear an object for external reliance. Owner-adopted from the RQ-0004 first-agent-circuit run (Backlog GB-2026-014).|
+|1.3|2026-07-14|Adopted|**Appendix A — Cross-Stream Confidence Crosswalk** (GB-2026-025, owner-ratified): recorded the only authorized native-→-house-tier mapping (L5→★★★, L4→★★☆, L3→★☆☆, L2/L1→◇◇◇, L0 not citable) with five mandatory translation rules (no tier gained; dual grades separate; INV-#### and gates travel; receiving-stream review additional). Boundary rule: native ratings only on Knowledge Objects; crosswalk applied on the way out. Also reconciled the stale `## Version` heading (read 1.1 while frontmatter was 1.2).|
 
 ---
 

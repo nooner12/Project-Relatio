@@ -1,7 +1,7 @@
 ---
 title: Governance Backlog
 document_type: Governance Record
-version: 1.11
+version: 1.12
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -22,7 +22,7 @@ tags:
 
 # Governance Backlog
 
-## Version 1.11
+## Version 1.12
 
 ## Active Governance Record
 
@@ -200,7 +200,7 @@ Before this document existed, open items were scattered across five places: the 
 - **Boundary note (separation discipline):** the house ★-scale is **external to Relatio** (an LLC/claude.ai-side vocabulary). The crosswalk is therefore a **boundary artifact**: it should define the mapping *from* the native scale without importing house/business framing into Relatio documents. Native ratings remain the only ratings carried on Knowledge Objects; the crosswalk is applied on the way *out*.
 - **Governance tier:** **Standards-level change — owner-reserved** (new standard or amendment to an Adopted one; ROLE-0001 §4.2). Not Baseline-touching: the native scale itself (Baseline-frozen via KOS-0003 §8) is unchanged; the crosswalk only adds an outbound mapping. Drafting was deliberately **not** done unilaterally in-session.
 - **Solutions:** (a) **author a short standalone mapping section as an appendix to STD-0006** (Review & Validation) — it already owns reliance/gating, and the crosswalk is a reliance rule (recommended); (b) a new STD-0008 "Cross-Stream Citation & Confidence Crosswalk" if the owner prefers it separable; (c) record the mapping outside the repo (claude.ai skill/Standing Context only) and keep the repo silent — rejected-by-default: the repo is the source of truth the briefs point at. **Candidate mapping to ratify or amend** (conservative, floor-taking): Level 5 (Very High) → ★★★; Level 4 (High) → ★★☆; Level 3 (Moderate) → ★☆☆; Level 2 (Low) → ◇◇◇; Level 1 (Very Low) → ◇◇◇; Level 0 (Unsupported) → **not citable**. Plus the standing rules: no tier gained in translation; dual grades translate separately; INV-#### and gates travel with every citation.
-- **Status:** **Open. Vision-Steward (owner) decision required** — this item records the need and a candidate mapping; it does not enact one.
+- **Status:** **RESOLVED 2026-07-14 — owner-ratified: option (a) with the candidate mapping as proposed.** Enacted as **STD-0006 Appendix A** (STD-0006 → v1.3): the mapping table (L5→★★★, L4→★★☆, L3→★☆☆, L2/L1→◇◇◇, L0 not citable) plus five mandatory translation rules (no tier gained; between-tiers/reach → lower; dual grades translate separately; INV-#### and gates travel; receiving-stream review additional) and the boundary rule (native ratings only on Knowledge Objects; crosswalk applied on the way out). FND-0008 and FND-0009 ★-translation unblocked. Moved to §3.
 
 ## GB-2026-024 — validate.py descriptive filename/title parity
 - **Issue:** `validate.py` (as rebuilt under GB-2026-016) checks that filename and `title:` carry the same **identifier**, not the same **descriptive text** — six INV-0007 claims shipped with long titles over short filenames and passed the validator; ROLE-0001 caught the STD-0001 §10 divergence manually (Seventh-Run Assessment F-21; recurrence context F-18/F-23).
@@ -236,6 +236,7 @@ Before this document existed, open items were scattered across five places: the 
 | KOS-0200 duplicative Draft (GB-2026-007) | Superseded & archived to `07 Archive`; role fulfilled by STD-0001…0007 + Standards Index; references updated |
 | Single `status` conflated maturity + operational (GB-2026-006) | Two-dimensional lifecycle implemented: STD-0002 v1.5 (`status`=maturity, new `operational_status`), STD-0005 §24 v1.1; 109 objects migrated; templates updated |
 | Frontmatter could not carry typed relationships (GB-2026-001 / F-4) | STD-0002 §7 v1.6 typed `relationships` block + STD-0004 §7.1 v1.1; 52 KB objects back-encoded (222 edges); graph_integrity.py made type-aware |
+| Confidence-scale crosswalk did not exist (GB-2026-025) | Owner-ratified 2026-07-14: **STD-0006 Appendix A** (→ v1.3) records the only authorized native→house-★ mapping + five translation rules + the boundary rule (native-only on Knowledge Objects; applied on the way out) |
 
 ---
 
@@ -261,6 +262,7 @@ Any role may **add** an item. Only the Vision Steward may mark an item **Decided
 |1.9|2026-07-11|Active|**Phase II re-scope (owner-directed "action now").** Created the **Architecture Baseline v1.0** freeze record (Phase II brief M1). **GB-2026-006 resolved** — two-dimensional lifecycle field implemented (STD-0002 v1.5, STD-0005 §24 v1.1; 109 objects migrated); its deferral trigger (KOS-0200/ROLE-0003 supersession) had fired. **GB-2026-001 resolved** — typed `relationships` frontmatter (STD-0002 §7 v1.6, STD-0004 §7.1 v1.1; 52 KB objects / 222 edges back-encoded; graph_integrity.py type-aware; templates updated). Both moved to §3. Verified: validate.py 115/0, graph 0 dangling.|
 |1.10|2026-07-12|Active|Seventh run (RQ-0007, formal constraints — first reflexive question). Added **GB-2026-023** (independent-review pathway for reflexive findings — same-model independence structurally insufficient; F-22) and **GB-2026-024** (validate.py descriptive filename/title parity blind spot; F-21). Also fixed the stale `## Version` heading (read 1.0; drift noted at ROLE-0001-style reconciliation).|
 |1.11|2026-07-14|Active|Added **GB-2026-025** (confidence-scale crosswalk to external house tiers does not exist — surfaced by INV-0008, reconfirmed by INV-0009; standards-level, owner-reserved; candidate conservative mapping recorded for ratification, not enacted). FND-0008/FND-0009 ★-translation blocked pending its decision.|
+|1.12|2026-07-14|Active|**GB-2026-025 RESOLVED — owner-ratified option (a), same session.** Crosswalk enacted as **STD-0006 Appendix A** (STD-0006 → v1.3) with the candidate mapping and five mandatory translation rules; boundary rule keeps Knowledge Objects native-only. FND-0008/FND-0009 ★-translation unblocked. Moved to §3.|
 
 ---
 
