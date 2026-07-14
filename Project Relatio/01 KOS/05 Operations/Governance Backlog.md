@@ -1,7 +1,7 @@
 ---
 title: Governance Backlog
 document_type: Governance Record
-version: 1.12
+version: 1.13
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -22,7 +22,7 @@ tags:
 
 # Governance Backlog
 
-## Version 1.12
+## Version 1.13
 
 ## Active Governance Record
 
@@ -191,7 +191,7 @@ Before this document existed, open items were scattered across five places: the 
 - **Context:** Seventh-Run Assessment F-22, 2026-07-12. The STD-0006 §7.5 gate machinery absorbed the case — the reliance gate was applied to the *reflexive use* (FND-0007 may not be cited as vindication of the vault's governance), extending §7.5's logic from verification *strength* to independence *kind*. No new structure was needed to contain it; what is needed is a **decision**.
 - **Impact:** Medium. Any future finding that touches the system's own design carries the same hazard; FND-0007 is gated until resolved.
 - **Solutions:** (a) owner engages a genuinely independent reviewer (different model, or a human organizational-theory/KM specialist) for FND-0007 and adopts that as the standing rule for reflexive findings — candidate one-line addition to STD-0006 §7.5; (b) accept the standing gate and simply never rely on reflexive findings for self-assessment; (c) defer.
-- **Status:** Open. Vision-Steward decision required.
+- **Status:** **RESOLVED 2026-07-14 — owner-ratified: option (a), enacted above the candidate grade.** Enacted as **STD-0006 §7.6** (STD-0006 → v1.4) rather than a one-line §7.5 addition: the candidate line would have restated §7.5 clause 2 (which already permits different-model/human review) and closed the item without behavioral change. §7.6 instead makes **blinding** the operative control — a different-model reviewer given the vault's framing does not lift a reflexive gate — and separates independence *kind* from verification *strength*. FND-0007 remains gated **for reflexive use only**; engaging a blinded independent reviewer is an unscheduled owner action, not a deadline. Moved to §3.
 
 ## GB-2026-025 — Confidence-scale crosswalk (Relatio native → external house tiers) does not exist
 - **Issue:** Cross-stream citation of Relatio findings assumes a recorded **crosswalk** from the canonical native confidence scale ("Level N (Label)", KOS-0003 §8 v1.4) to the owner's external house evidence tier (a four-tier ★-scale used outside this project). **No such crosswalk exists anywhere in the vault** — the term appears in no document, and no ★-glyph mapping is recorded. Two consecutive investigation handoff briefs (RQ-0008, RQ-0009) instructed sessions to "translate via the recorded crosswalk," which could not be done; both investigations shipped native-only with the translation deferred.
@@ -237,6 +237,7 @@ Before this document existed, open items were scattered across five places: the 
 | Single `status` conflated maturity + operational (GB-2026-006) | Two-dimensional lifecycle implemented: STD-0002 v1.5 (`status`=maturity, new `operational_status`), STD-0005 §24 v1.1; 109 objects migrated; templates updated |
 | Frontmatter could not carry typed relationships (GB-2026-001 / F-4) | STD-0002 §7 v1.6 typed `relationships` block + STD-0004 §7.1 v1.1; 52 KB objects back-encoded (222 edges); graph_integrity.py made type-aware |
 | Confidence-scale crosswalk did not exist (GB-2026-025) | Owner-ratified 2026-07-14: **STD-0006 Appendix A** (→ v1.3) records the only authorized native→house-★ mapping + five translation rules + the boundary rule (native-only on Knowledge Objects; applied on the way out) |
+| Independent-review pathway for reflexive findings (GB-2026-023) | Owner-ratified 2026-07-14, option (a) above the candidate grade: **STD-0006 §7.6** (→ v1.4) — reflexive findings gated for reflexive use on creation; gate lifts only on **blinded** independent review (framing withheld); same-model reviewer may flag but not certify absence of a shared bias. FND-0007 stays gated for reflexive use |
 
 ---
 
@@ -263,6 +264,7 @@ Any role may **add** an item. Only the Vision Steward may mark an item **Decided
 |1.10|2026-07-12|Active|Seventh run (RQ-0007, formal constraints — first reflexive question). Added **GB-2026-023** (independent-review pathway for reflexive findings — same-model independence structurally insufficient; F-22) and **GB-2026-024** (validate.py descriptive filename/title parity blind spot; F-21). Also fixed the stale `## Version` heading (read 1.0; drift noted at ROLE-0001-style reconciliation).|
 |1.11|2026-07-14|Active|Added **GB-2026-025** (confidence-scale crosswalk to external house tiers does not exist — surfaced by INV-0008, reconfirmed by INV-0009; standards-level, owner-reserved; candidate conservative mapping recorded for ratification, not enacted). FND-0008/FND-0009 ★-translation blocked pending its decision.|
 |1.12|2026-07-14|Active|**GB-2026-025 RESOLVED — owner-ratified option (a), same session.** Crosswalk enacted as **STD-0006 Appendix A** (STD-0006 → v1.3) with the candidate mapping and five mandatory translation rules; boundary rule keeps Knowledge Objects native-only. FND-0008/FND-0009 ★-translation unblocked. Moved to §3.|
+|1.13|2026-07-14|Active|**GB-2026-023 resolved** (owner-ratified option (a)): enacted as STD-0006 §7.6 Reflexive Findings — independence of kind (STD-0006 → v1.4). Moved to §3. §2 now holds no items awaiting a decision — remaining entries are deferred-by-decision, trigger-gated, or open low-priority.|
 
 ---
 

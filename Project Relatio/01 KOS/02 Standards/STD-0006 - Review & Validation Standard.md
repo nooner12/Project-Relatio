@@ -1,7 +1,7 @@
 ---
 title: STD-0006 - Review & Validation Standard
 document_type: Standards Document
-version: 1.3
+version: 1.4
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -32,7 +32,7 @@ tags:
 
 # Project Relatio Review & Validation Standard
 
-## Version 1.3
+## Version 1.4
 
 ## Adopted Standards Document
 
@@ -243,10 +243,25 @@ The evidence-integrity check (§5.7) is only as strong as the verification the r
 Therefore:
 
 1. **A review must state the strength of its own verification.** If live re-location could not be performed, the review is marked **verification-light** and says so explicitly.
-2. **A verification-light review may issue Conformant/Flagged verdicts but may NOT clear an object for external reliance.** Reliance on such an object is **gated** pending either (a) live re-verification of the flagged figures, or (b) genuine independent review (a *different* model and/or a qualified human — CON-0003 §4.5), as the stakes require.
+2. **A verification-light review may issue Conformant/Flagged verdicts but may NOT clear an object for external reliance.** Reliance on such an object is **gated** pending either (a) live re-verification of the flagged figures, or (b) genuine independent review (a *different* model and/or a qualified human — CON-0003 §4.5), as the stakes require. For **reflexive** findings see §7.6 — a different-model reviewer given the vault's framing does not satisfy independence of kind.
 3. **Silence is non-conformance.** A review that does not disclose its verification strength is itself Flagged: an undisclosed weak check is worse than a disclosed one, because it invites unwarranted confidence.
 
 This rule generalizes what the first agent-circuit run (RQ-0004) did voluntarily and correctly: the reviewer, unable to reach external tools, marked itself verification-light and gated reliance rather than presenting a weak check as a clean one. It is especially load-bearing for health, safety, financial, or otherwise externally-consequential findings.
+
+---
+
+## 7.6 Reflexive Findings — independence of kind
+
+A **reflexive finding** is one whose conclusion bears on Project Relatio's own design, governance, or method. RQ-0007 / FND-0007 is the originating case.
+
+Reflexive findings carry a hazard §7.5 does not reach. §7.5 governs the *strength* of a check — whether the reviewer could verify. This section governs its *kind* — whether the reviewer could be independent of what is being checked. A reviewer working from the vault's own documents inherits the vault's framing and vocabulary regardless of which model or person performs the review. Procedural independence (ROLE-0004 §5) does not cure this; neither does a different model reading the same framing.
+
+Therefore:
+
+1. **A reflexive finding is gated for reflexive use on creation.** It may not be cited as support for, or vindication of, Project Relatio's own design, governance, or method. Non-reflexive uses of the same finding are governed by §7.5 and the ordinary gates, not by this section.
+2. **The gate lifts only on blinded independent review.** The reviewer — a qualified human specialist in the relevant field, or at minimum a different model — receives the question and the evidence *without* the vault's framing, vocabulary, or conclusion, and reaches a finding independently. A different-model reviewer given the vault's framing is **not** sufficient to lift this gate.
+3. **A same-model reviewer may flag a reflexive leak but may not certify its absence.** Per Critical Review — RQ-0007 §3.6, a reviewer cannot certify it caught all of a bias it plausibly shares. Such a review is recorded; the gate stands.
+4. **Silence is non-conformance**, as in §7.5: a finding that is reflexive and not marked as such is Flagged.
 
 ---
 
@@ -345,6 +360,7 @@ This mapping is part of an Adopted Standard: amendments are **owner-reserved** a
 |1.1|2026-07-09|Adopted|Governance assessment (R2/R6/R7): added §5.7 Evidence Integrity check; expanded §7.3 Blocked to cover fabrication; added §7.4 Appeal & Preservation of Disagreement (CON-0003 GP-004, KOS-0011 §11 conflict taxonomy); replaced role-agnostic §8 with the structural/epistemic validation-authority split (ROLE-0001 / ROLE-0004)|
 |1.2|2026-07-10|Adopted|Added §7.5 Verification Integrity: a review must disclose its own verification strength; a verification-light review may not clear an object for external reliance. Owner-adopted from the RQ-0004 first-agent-circuit run (Backlog GB-2026-014).|
 |1.3|2026-07-14|Adopted|**Appendix A — Cross-Stream Confidence Crosswalk** (GB-2026-025, owner-ratified): recorded the only authorized native-→-house-tier mapping (L5→★★★, L4→★★☆, L3→★☆☆, L2/L1→◇◇◇, L0 not citable) with five mandatory translation rules (no tier gained; dual grades separate; INV-#### and gates travel; receiving-stream review additional). Boundary rule: native ratings only on Knowledge Objects; crosswalk applied on the way out. Also reconciled the stale `## Version` heading (read 1.1 while frontmatter was 1.2).|
+|1.4|2026-07-14|Adopted|**§7.6 Reflexive Findings — independence of kind** (GB-2026-023, owner-ratified): defined reflexive findings; gated them for reflexive use on creation; set blinded independent review (qualified human specialist, or at minimum a different model, working without the vault's framing) as the sole gate-lift; recorded that a same-model reviewer may flag but not certify absence of a shared bias (RQ-0007 §3.6). Enacted at a higher grade than the candidate one-line §7.5 addition, which would have restated §7.5 clause 2 without changing behavior. §7.5 clause 2 cross-referenced to §7.6.|
 
 ---
 
