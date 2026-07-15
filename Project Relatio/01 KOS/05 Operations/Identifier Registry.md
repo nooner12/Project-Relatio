@@ -1,7 +1,7 @@
 ---
 title: Identifier Registry
 document_type: Navigation Document
-version: 1.14
+version: 1.15
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -20,7 +20,7 @@ tags:
 
 # Identifier Registry
 
-## Version 1.14
+## Version 1.15
 
 ## Active Navigation Document
 
@@ -75,7 +75,7 @@ OPS-0001 (KB Organization), OPS-0002 (Relationship Integrity), OPS-0003 (Researc
 Unnumbered Operations records: Identifier Registry, Governance Backlog, Standing Authorizations, Architecture Baseline.
 
 ## INV — Investigations
-INV-0001 (Jesus & Daoism), INV-0002 (Phantom Traffic Jams), INV-0003 (Wu Wei), INV-0004 (Metformin Discontinuation & T2D Remission), INV-0005 (Chronic Stress Interventions), INV-0006 (Wellness Intervention Adherence & Maintenance), INV-0007 (Formal Constraints in Knowledge Systems), INV-0008 (Skills-Based Child Development Programming — **health/high-stakes class; gated STD-0006 §7.5**), INV-0009 (Learning by Observing and Pitching In / LOPI — **gated Wellness Model research input**). — **Next: INV-0010.**
+INV-0001 (Jesus & Daoism), INV-0002 (Phantom Traffic Jams), INV-0003 (Wu Wei), INV-0004 (Metformin Discontinuation & T2D Remission), INV-0005 (Chronic Stress Interventions), INV-0006 (Wellness Intervention Adherence & Maintenance), INV-0007 (Formal Constraints in Knowledge Systems), INV-0008 (Skills-Based Child Development Programming — **health/high-stakes class; gated STD-0006 §7.5**), INV-0009 (Learning by Observing and Pitching In / LOPI — **gated Wellness Model research input**), INV-0010 (Psychosocial Stressor Onset Divergence, ages 5–17 — **opened as scaffold only, unexecuted; health/high-stakes + child-facing class; gated STD-0006 §7.5 at opening**). — **Next: INV-0011.**
 
 ## CLM — Claims
 CLM-0001, CLM-0002 (INV-0001); CLM-0003, CLM-0004 (INV-0002); CLM-0005, CLM-0006 (INV-0003); CLM-0007 … CLM-0012 (INV-0004); CLM-0013 … CLM-0018 (INV-0005); CLM-0019 … CLM-0026 (INV-0006); CLM-0027 … CLM-0033 (INV-0007); CLM-0034 … CLM-0040 (INV-0008); CLM-0041 … CLM-0043 (INV-0009). — **Next: CLM-0044.**
@@ -128,6 +128,7 @@ Per OPS-0002 and STD-0006: before assigning a new identifier, consult this regis
 |1.12|2026-07-12|Active|INV-0007 post-review remediation (Critical Review – RQ-0007 + ROLE-0001 structural flags): registered **SRC-0043** (Merton 1940 → CLM-0031 goal-displacement anchor), **SRC-0044** (Polanyi 1966 → CLM-0029 tacit-loss anchor), **SRC-0045** (Timmermans & Epstein 2010 → CLM-0033 steelman, `contrasts_with`) — converting previously-invoked companions into catalogued sources; Next SRC → SRC-0046. Registered Critical Review – RQ-0007 in §3 and pre-registered Seventh-Run Assessment – RQ-0007. Re-validated during ROLE-0001 SA-001 pass (validate.py + graph_integrity.py clean; no new advisories involve INV-0007).|
 |1.14|2026-07-14|Active|Ninth research workflow (INV-0009, RQ-0009, Learning by Observing and Pitching In / LOPI — **gated Wellness Model research input**): registered INV-0009; CLM-0041 (primary, Level 3), CLM-0042 (mechanism, Level 3), CLM-0043 (single-child-home transfer, Level 1→2); SRC-0054…SRC-0058 (Rogoff-program framework + review + ethnography + two attention experiments, all live-verified); ENT-0007 (LOPI); FND-0009. Circuit complete: **Critical Review – RQ-0009 Conformant with Flags** (no fabrication; all five citations/designs independently verified; brief's steelman + four counter-cases run) — one sharpening flag on CLM-0043 remediated. Next values advanced (INV-0010, CLM-0044, SRC-0059, ENT-0008, FND-0010). Registered/validated during ROLE-0001 pass (validate.py PASS 194 files 0/0; graph_integrity.py 0 dangling; INV-0009 subgraph fully reciprocal). Native `Level N` only; ★-translation deferred off-repo (crosswalk gap persists — logged as governance item). Findings Draft and externally gated.|
 |1.13|2026-07-14|Active|Eighth research workflow (INV-0008, RQ-0008, skills-based child-development programming — **health/high-stakes class, gated STD-0006 §7.5**): registered INV-0008; CLM-0034…CLM-0040 (six evidence domains + one integrative evidence-gap claim); SRC-0046…SRC-0052 (seven live-verified sources); ENT-0006 (Co-Regulation); FND-0008. Circuit completed: **Critical Review – RQ-0008 Conformant with Flags** (no fabrication; DuBois d ≈ 0.21, Multon, Bandura independently re-verified) — remediation catalogued **SRC-0053** (Bandura 1997) to anchor CLM-0036's "strongest source" half. Next values advanced (INV-0009, CLM-0041, SRC-0054, ENT-0007, FND-0009). Registered/validated during ROLE-0001 pass (validate.py PASS 182 files 0/0; graph_integrity.py exit 0 — no dangling refs; only pre-existing vault-wide symmetric-link advisories). Findings remain Draft and **externally gated pending independent re-verification.**|
+|1.15|2026-07-15|Active|Tenth research workflow **opened as scaffold only** (INV-0010, RQ-0010, psychosocial stressor onset divergence by sex or gender, ages 5–17): registered INV-0010 — **unexecuted; zero claims, sources, entities, or findings assigned**. Health/high-stakes + child-facing class; **gated STD-0006 §7.5 at opening**, before any evidence (nominated re-verifier class: developmental psychologist / child-program evaluator; INV-0008 non-inference recorded in the record). Opened after verifying STD-0006 v1.4 §7.6 (GB-2026-023 enactment) present at HEAD 3b5e892. Next INV → INV-0011; CLM/SRC/ENT/FND next-values unchanged (nothing assigned).|
 
 ---
 

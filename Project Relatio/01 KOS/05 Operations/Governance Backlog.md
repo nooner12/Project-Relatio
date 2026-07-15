@@ -1,7 +1,7 @@
 ---
 title: Governance Backlog
 document_type: Governance Record
-version: 1.13
+version: 1.14
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -22,7 +22,7 @@ tags:
 
 # Governance Backlog
 
-## Version 1.13
+## Version 1.14
 
 ## Active Governance Record
 
@@ -265,6 +265,7 @@ Any role may **add** an item. Only the Vision Steward may mark an item **Decided
 |1.11|2026-07-14|Active|Added **GB-2026-025** (confidence-scale crosswalk to external house tiers does not exist — surfaced by INV-0008, reconfirmed by INV-0009; standards-level, owner-reserved; candidate conservative mapping recorded for ratification, not enacted). FND-0008/FND-0009 ★-translation blocked pending its decision.|
 |1.12|2026-07-14|Active|**GB-2026-025 RESOLVED — owner-ratified option (a), same session.** Crosswalk enacted as **STD-0006 Appendix A** (STD-0006 → v1.3) with the candidate mapping and five mandatory translation rules; boundary rule keeps Knowledge Objects native-only. FND-0008/FND-0009 ★-translation unblocked. Moved to §3.|
 |1.13|2026-07-14|Active|**GB-2026-023 resolved** (owner-ratified option (a)): enacted as STD-0006 §7.6 Reflexive Findings — independence of kind (STD-0006 → v1.4). Moved to §3. §2 now holds no items awaiting a decision — remaining entries are deferred-by-decision, trigger-gated, or open low-priority.|
+|1.14|2026-07-15|Active|**INV-0010 opened as scaffold only** (RQ-0010, psychosocial stressor onset divergence by sex or gender, ages 5–17) — unexecuted; gated STD-0006 §7.5 at opening (health/high-stakes + child-facing; INV-0008 non-inference recorded). Opening preceded by verification that the GB-2026-023 enactment (STD-0006 v1.4 §7.6) is present in the repo. Its construct-provenance source-coding scheme is **investigation protocol only** (content addition); a standing "no construct gained" crosswalk rule would be a standards change — to be raised as a new GB item after the investigation, only if the scheme proves out. No new §2 item created.|
 
 ---
 
