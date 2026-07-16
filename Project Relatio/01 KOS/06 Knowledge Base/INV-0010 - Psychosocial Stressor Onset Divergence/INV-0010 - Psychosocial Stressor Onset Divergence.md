@@ -1,7 +1,7 @@
 ---
 title: INV-0010 - Psychosocial Stressor Onset Divergence
 document_type: Investigation Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-15
@@ -107,13 +107,26 @@ The scheme is therefore **not** added to STD-0006, the crosswalk, or Appendix A 
 
 # 4. Findings / Synthesis
 
-**Not populated at opening — intentionally.** No evidence has been gathered; no finding exists. This section is filled only by the executing Research Specialist (ROLE-0002) and survives only what the Critical Reviewer (ROLE-0004) and Knowledge Architect (ROLE-0001) pass. Anything appearing here before circuit completion is a draft, not a finding.
+**Populated at execution (v0.2, 2026-07-15) by the executing Research Specialist (ROLE-0002); pending ROLE-0004 review and ROLE-0001 validation.**
+
+Primary synthesis: **[[FND-0010 - Psychosocial Stressor Onset Divergence Map]]**. It maps five onset-timing divergence loci across ages 5–17 — anxiety (early/pre-pubertal), conduct/antisocial (childhood-onset), ADHD (ascertainment/identification), depression (pubertal, ~12–13), eating-disorder symptoms (mid-adolescent) — and answers the construct question for each.
+
+Supporting claims (native `Level N`, KOS-0003 §8):
+- **[[CLM-0044 - Depression Onset-Timing Divergence]]** — depression divergence emerges ~12–13 (timing only). `CONFLATED`. Level 4 (High).
+- **[[CLM-0045 - Depression Emergence Tracks Pubertal Status]]** — timing tracks physically assessed pubertal status over age. `SEX-MEASURED` (the only sex-attributed claim; bounded). Level 3 (Moderate).
+- **[[CLM-0046 - Anxiety Early Divergence]]** — anxiety female-preponderance appears earlier/pre-pubertally. `CONFLATED`. Level 2 → 3 (direction).
+- **[[CLM-0047 - ADHD Identification Divergence Is Ascertainment-Patterned]]** — apparent ADHD sex divergence is substantially ascertainment/referral. `CONFLATED`. Level 3 (Moderate).
+- **[[CLM-0048 - Eating-Disorder Symptom Divergence Consolidates in Adolescence]]** — female symptom rise consolidates ~14–17. `UNRESOLVED`. Level 3 (Moderate).
+- **[[CLM-0049 - Conduct Childhood-Onset Divergence]]** — male preponderance concentrated in childhood-onset (~10:1). `UNRESOLVED`. Level 3 (Moderate).
+- **[[CLM-0050 - Modal Expression Diverges by Form]]** — modal expression diverges by form (secondary question). `CONFLATED`. Level 2 → 3 (peer-victimization case).
+
+**Construct-provenance census (updated per Critical Review – RQ-0010 F-1):** `CONFLATED` 5 · `UNRESOLVED` 2 · `SEX-MEASURED` 1 · `GENDER-MEASURED` 0 (across 8 sources SRC-0059…SRC-0066). The **§3.2 prediction is HELD** — 7 of 8 sources fail to cleanly measure a construct — but the promoted, robust result is the **corollary: neither construct (sex *or* gender) is typically measured at all** (0 GENDER-MEASURED alongside the 2 UNRESOLVED and 5 CONFLATED). `CONFLATED` and `UNRESOLVED` are constrained identically by the operative rule (§3.1), so the recode changed no claim confidence.
 
 ---
 
 # 5. Confidence Summary (KOS-0003 §8)
 
-**None assigned.** Confidence levels are produced at execution, per claim, in the native `Level N (Label)` scale, and reviewed through the circuit. This scaffold assigns nothing.
+**Assigned at execution (v0.2), native `Level N` only; reviewed through the circuit.** Range: **Level 2 (Low) to Level 4 (High)**. Strongest single element: depression timing pattern (CLM-0044, Level 4). The one biology-linked attribution (CLM-0045, Level 3) is bounded — mechanism unresolved, and (per F-2) pubertal-stage measurement does not establish between-sex biological causation. Weakest: anxiety exact age and modal expression (Level 2, reaching 3 for their defensible sub-components). **No element reaches Level 5** (reserved; cross-domain interpretive mapping does not warrant it). The construct census (5 CONFLATED / 2 UNRESOLVED / 1 SEX-MEASURED / 0 GENDER-MEASURED) is high-confidence *as a census of the eight verified sources*; its generalization beyond that set is bounded (coverage sample, not systematic review). The Critical Review (F-1) recode of two sources CONFLATED → UNRESOLVED **changed no confidence level** (operative rule constrains the two codes identically). No ★ tiers; no magnitude ranking anywhere.
 
 ---
 
@@ -144,8 +157,13 @@ INV-0010 may close only when all of the following hold:
 
 # 8. Relationships (STD-0004)
 
-- `part_of` the Knowledge Base.
-- Source (`derived_from`), claim, and finding relationships are added at execution, when the objects exist. No typed frontmatter edges are declared at opening because there are as yet no targets.
+- `part_of` the Knowledge Base — a **classification** statement, not a typed graph edge. "Knowledge Base" is not a resolvable object, so no `part_of` target is declared in frontmatter (matching INV-0009; a typed `part_of: Knowledge Base` was removed at structural validation as a dangling reference).
+- **Connectivity (structural validation, ROLE-0001):** INV-0010 is the **hub** of its subgraph; every child object declares its edge *upward*, so the investigation is fully connected with **no outgoing typed edges of its own** (the redundant v0.2 `related_to` down-edges to the claims/finding were removed as over-complete duplicates of the children's `part_of`/`supports` edges). Full graph:
+  - Sources → INV: SRC-0059 (Salk 2017), SRC-0060 (Angold 1998), SRC-0061 (Lewinsohn 1998), SRC-0062 (Gaub & Carlson 1997), SRC-0063 (Ramtekkar 2010), SRC-0064 (Allen 2013), SRC-0065 (Moffitt & Caspi 2001), SRC-0066 (Ettekal & Ladd 2017) — each `part_of` INV-0010 and `supports` its claim.
+  - Claims → INV / FND: CLM-0044…CLM-0050 each `part_of` INV-0010 and `supports` FND-0010.
+  - Finding → INV: FND-0010 `part_of` INV-0010 and `derived_from` CLM-0044…CLM-0050.
+  - Peer edges among claims (symmetric, reciprocal): CLM-0044 ↔ CLM-0045 `related_to`; CLM-0044 ↔ CLM-0046 `contrasts_with` (the CLM-0044 side added at structural validation to reciprocate the edge CLM-0046 already declared).
+- No Entity created: the construct-provenance concept is load-bearing *within* INV-0010 but has only one use; per the merit principle (justify by use) and §3.3 (do not enact the scheme beyond this investigation), promoting it to a reusable ENT is deferred as a candidate, not built.
 
 ---
 
@@ -154,6 +172,9 @@ INV-0010 may close only when all of the following hold:
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-15|Draft|Opened as scaffold per Claude Code handoff brief v0.1 (RQ-0010), after verification that STD-0006 v1.4 §7.6 (GB-2026-023 enactment) is present in the repo. Contains question (primary verbatim), protocol, construct-provenance source-coding scheme (investigation protocol only), acceptance criteria, and the §7.5 gate declared at opening (health/high-stakes, child-facing; INV-0008 non-inference recorded). Zero findings, zero confidence levels, zero sources. Awaiting execution through the full OPS-0003 circuit.|
+|0.2|2026-07-15|Draft|**Executed by Research Specialist (ROLE-0002).** Populated §4 (findings/synthesis pointer), §5 (confidence summary), §8 (relationships), and frontmatter edges — §1–3, §6, §7 protocol sections untouched. Created 8 live-verified sources (SRC-0059…SRC-0066), 7 claims (CLM-0044…CLM-0050), 1 finding (FND-0010). Construct census: 7 CONFLATED / 1 SEX-MEASURED / 0 GENDER-MEASURED / 0 UNRESOLVED — §3.2 prediction **HELD strongly**. Only CLM-0045 (puberty–depression, SEX-MEASURED) carries a bounded sex-attributed claim; all others gender-patterned/unattributed per the operative rule. Native Level N (2–4), no Level 5, no ranking/superlative. Gate + INV-0008 non-inference intact. Pending ROLE-0004 critical review and ROLE-0001 structural validation (validate.py + graph_integrity.py).|
+|0.2a|2026-07-15|Draft|**Critical Review – RQ-0010 returned CONFORMANT WITH FLAGS; three flags remediated by ROLE-0002.** F-1: SRC-0064/CLM-0048 (eating) and SRC-0065/CLM-0049 (conduct) recoded `CONFLATED` → `UNRESOLVED`; census updated everywhere (§4, §5, FND-0010 title/§1b/§1c/§2/§3) to **5 CONFLATED / 2 UNRESOLVED / 1 SEX-MEASURED / 0 GENDER-MEASURED**; prediction verdict rewritten and the "neither construct is typically measured" corollary promoted to the finding's headline. F-2: CLM-0045/SRC-0060/FND-0010 §4 now state puberty occurs in both sexes, so pubertal-stage measurement does not establish between-sex biological causation. F-3: CLM-0046's Level-3 direction warrant re-based on the catalogued SRC-0061-vs-SRC-0059 contrast; uncatalogued-review appeal deleted. **No confidence level changed anywhere** (operative rule constrains CONFLATED and UNRESOLVED identically). SEX-MEASURED coding of SRC-0060 stands (census 7-of-8-not-cleanly-measured). Pending ROLE-0001 structural validation.|
+|0.2b|2026-07-15|Draft|**Structural validation (ROLE-0001) — circuit closed; validate.py PASS, graph_integrity.py 0 dangling / 0 new advisories.** Graph reconciliation only (no content, confidence, census, or construct-code change): (1) removed the dangling typed edge `part_of: Knowledge Base` (not a resolvable object) — the classification statement stays in §8 prose, matching INV-0009; (2) removed the redundant v0.2 `related_to` down-edges from INV-0010 to CLM-0044…0050/FND-0010 (over-complete duplicates of the children's upward `part_of`/`supports` edges — INV-0010 is a hub every child points up to); (3) reciprocated the genuine peer edge CLM-0044 ↔ CLM-0046 `contrasts_with` (added the CLM-0044 side; CLM-0046 already declared it). Direction conventions confirmed (SRC→CLM `supports`, CLM→FND `supports`, FND→CLM `derived_from`, SRC/CLM/FND `part_of` INV-0010); all typed targets resolve. Registered in the Identifier Registry (v1.16). §7 acceptance criteria all satisfied.|
 
 ---
 

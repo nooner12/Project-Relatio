@@ -1,7 +1,7 @@
 ---
 title: Governance Backlog
 document_type: Governance Record
-version: 1.14
+version: 1.15
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -22,7 +22,7 @@ tags:
 
 # Governance Backlog
 
-## Version 1.14
+## Version 1.15
 
 ## Active Governance Record
 
@@ -208,6 +208,14 @@ Before this document existed, open items were scattered across five places: the 
 - **Solutions:** extend the parity check to the full descriptive text (exact match after the identifier), with the fix direction being title-shortening per the FND-0006 precedent. Pairs with the F-18/F-23 candidate STD-0001 guidance (title = filename; bound length).
 - **Status:** Open, low priority — do with the next tooling touch.
 
+## GB-2026-026 — Construct-provenance source-coding scheme as a standing crosswalk rule ("no construct gained")
+- **Issue:** INV-0010 introduced a **construct-provenance source-coding scheme** — every source tagged `SEX-MEASURED` / `GENDER-MEASURED` / `CONFLATED` / `UNRESOLVED`, governed by an **operative rule**: a `CONFLATED` or `UNRESOLVED` source cannot support a sex-attributed claim at any confidence level (it may support a gender-patterned/unattributed claim only). Functionally this is a **"no construct gained" discipline** — a claim never acquires a stronger construct attribution than its weakest supporting source measured — structurally a **sibling to STD-0006 Appendix A's "no tier gained"** confidence-crosswalk rule. The question is whether it should become a **standing** rule (reusable across investigations that touch sex/gender or any measured-vs-labelled construct), not just INV-0010 protocol.
+- **Context:** Logged 2026-07-15 at INV-0010's structural-validation close (ROLE-0001), per the investigation's own pre-classification in **INV-0010 §3.3**, which settled the governance tier in advance: *within* INV-0010 the scheme is a **content addition** (normal investigation protocol); as a **standing crosswalk rule it is a standards change** requiring an explicit recorded decision. The scheme **proved out in use across INV-0010** — it drove the F-1 recode of two sources (`CONFLATED` → `UNRESOLVED`), bounded the single `SEX-MEASURED` claim (CLM-0045), and produced the finding's promoted headline (7 of 8 sources measure neither construct cleanly). This is the demonstrated-use signal §3.3 named as the trigger for raising a proposal.
+- **Impact:** Medium. A recurring hazard wherever a literature applies a category label (sex, race, diagnosis) to data that measured no underlying construct; absent a standing rule each investigation must re-derive the discipline. Not urgent — one investigation's use is the *candidate* threshold, not yet a multi-investigation demonstrated need.
+- **Governance tier:** **Standards-level change — owner-reserved** (new standard or amendment to an Adopted one; ROLE-0001 §4.2). **Not enacted by INV-0010 or by this log entry.** The scheme is **not** added to STD-0006, the confidence crosswalk, Appendix A, or the Architecture Baseline. This entry records a *candidate for the owner's later decision* only.
+- **Solutions:** (a) after a **second** investigation independently needs the discipline, author it as a short standing rule — most naturally a **sibling clause/appendix to STD-0006** (which already owns the "no tier gained" crosswalk), generalized from sex/gender to "measured construct vs applied label"; (b) keep it as reusable-but-uncodified investigation protocol, cited from INV-0010 when a similar question recurs; (c) defer indefinitely if no second use appears.
+- **Status:** **Open — logged candidate; owner decision pending. Do not enact without a recorded owner decision and (per the merit principle) a second demonstrated use.**
+
 ---
 
 # 3. Resolved (retained for institutional memory)
@@ -266,6 +274,7 @@ Any role may **add** an item. Only the Vision Steward may mark an item **Decided
 |1.12|2026-07-14|Active|**GB-2026-025 RESOLVED — owner-ratified option (a), same session.** Crosswalk enacted as **STD-0006 Appendix A** (STD-0006 → v1.3) with the candidate mapping and five mandatory translation rules; boundary rule keeps Knowledge Objects native-only. FND-0008/FND-0009 ★-translation unblocked. Moved to §3.|
 |1.13|2026-07-14|Active|**GB-2026-023 resolved** (owner-ratified option (a)): enacted as STD-0006 §7.6 Reflexive Findings — independence of kind (STD-0006 → v1.4). Moved to §3. §2 now holds no items awaiting a decision — remaining entries are deferred-by-decision, trigger-gated, or open low-priority.|
 |1.14|2026-07-15|Active|**INV-0010 opened as scaffold only** (RQ-0010, psychosocial stressor onset divergence by sex or gender, ages 5–17) — unexecuted; gated STD-0006 §7.5 at opening (health/high-stakes + child-facing; INV-0008 non-inference recorded). Opening preceded by verification that the GB-2026-023 enactment (STD-0006 v1.4 §7.6) is present in the repo. Its construct-provenance source-coding scheme is **investigation protocol only** (content addition); a standing "no construct gained" crosswalk rule would be a standards change — to be raised as a new GB item after the investigation, only if the scheme proves out. No new §2 item created.|
+|1.15|2026-07-15|Active|**INV-0010 executed and circuit closed** (ROLE-0001 structural validation). Added **GB-2026-026** — the construct-provenance source-coding scheme (`SEX-MEASURED`/`GENDER-MEASURED`/`CONFLATED`/`UNRESOLVED` + the "no construct gained" operative rule) **proved out in use** across INV-0010 (drove the F-1 recode and the finding's headline) and is logged as a **candidate** standing crosswalk rule (sibling to STD-0006 Appendix A's "no tier gained"), per INV-0010 §3.3. **Logged for owner decision only — not enacted; STD-0006 / crosswalk / Appendix A / Architecture Baseline unchanged.** No standards, object types, or roles created.|
 
 ---
 
