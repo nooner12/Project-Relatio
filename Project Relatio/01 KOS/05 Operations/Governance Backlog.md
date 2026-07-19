@@ -1,7 +1,7 @@
 ---
 title: Governance Backlog
 document_type: Governance Record
-version: 1.17
+version: 1.18
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -22,7 +22,7 @@ tags:
 
 # Governance Backlog
 
-## Version 1.17
+## Version 1.18
 
 ## Active Governance Record
 
@@ -222,7 +222,7 @@ Before this document existed, open items were scattered across five places: the 
 - **Impact:** Medium. Blocks honest ★-export of any historical-domain finding; INV-0001's claims are the only current KB exposure (native-only, so no live harm), but any future historical investigation inherits the mismatch at the citation boundary.
 - **Governance tier:** **Standards-level change — owner-reserved** (Baseline §3.6; ROLE-0001 §4.2; Appendix A.4 change control). **Argued not Baseline-touching:** Baseline §3.3 freezes the single canonical *confidence* scale; a historical-evidence *typology* classifies kinds of evidence, not degrees of belief (demonstrated empirically by the orthogonality result), and would leave KOS-0003 §8 as the sole confidence vocabulary — the same coexistence logic by which Appendix A's ★-typology already sits beside the canonical scale. The freeze *would* be implicated if the typology were positioned as a second confidence scale or as bands overriding Levels on Knowledge Objects; any adoption should expressly forbid that.
 - **Solutions:** (a) adopt the typology as a new **STD-0008** (natural seat: the empty `02 Standards/02 Evidence Standards/` folder) defining bands, coding rules, and the typology→confidence relation, **plus** a domain-qualifier rule for Appendix A exports (e.g., "★★☆ — historical-evidence basis, see H-band" or a separate authorized H-band mini-crosswalk); (b) lighter: amend STD-0006 Appendix A only, adding domain-qualified export semantics without a standalone standard; (c) defer until a real historical investigation (full circuit) demonstrates need in use — evidence-before-formalization; the 15-claim test is a designed probe, not an investigation.
-- **Status:** **Open — logged 2026-07-19 (owner-authorized logging).** Awaiting Vision Steward decision on route (a)/(b)/(c). Logging is not enactment: no standard, crosswalk, or Baseline text changed; the candidate scale remains a draft in `00 Inbox`. Per the Baseline's validation discipline, adoption should follow at least one full-circuit historical investigation exercising the scale.
+- **Status:** **Open — logged 2026-07-19; owner decision recorded same day: route (c) → (a).** The Vision Steward has directed that the typology **not** be authored now; **the trigger is a real full-circuit historical investigation (OPS-0003) that exercises the candidate scale in use**. When that trigger fires, escalate to solution (a): author **STD-0008** (seat: `02 Standards/02 Evidence Standards/`) plus the Appendix A domain-qualifier rule — both owner-reserved enactments at that point, informed by how the scale actually behaved under the circuit rather than by the designed 15-claim probe alone. Rationale (owner-endorsed, mirroring GB-2026-026): evidence-before-formalization — a designed probe is the *candidate* threshold, not demonstrated need; circuit use grounds the coding rules and prevents codifying the wrong shape; meanwhile the draft scale in `00 Inbox` remains citable as the candidate spec, so nothing is lost by waiting. INV-0001 (native-only) presents no live exposure. **Nothing enacted; STD-0006 / Appendix A / Baseline unchanged.**
 
 ---
 
@@ -285,6 +285,7 @@ Any role may **add** an item. Only the Vision Steward may mark an item **Decided
 |1.15|2026-07-15|Active|**INV-0010 executed and circuit closed** (ROLE-0001 structural validation). Added **GB-2026-026** — the construct-provenance source-coding scheme (`SEX-MEASURED`/`GENDER-MEASURED`/`CONFLATED`/`UNRESOLVED` + the "no construct gained" operative rule) **proved out in use** across INV-0010 (drove the F-1 recode and the finding's headline) and is logged as a **candidate** standing crosswalk rule (sibling to STD-0006 Appendix A's "no tier gained"), per INV-0010 §3.3. **Logged for owner decision only — not enacted; STD-0006 / crosswalk / Appendix A / Architecture Baseline unchanged.** No standards, object types, or roles created.|
 |1.16|2026-07-15|Active|**GB-2026-026 owner decision recorded: defer to second use (solution b → a on second use).** Item stays **Open** as a logged candidate; the second independent demonstrated use is the trigger to author it as a standing STD-0006 sibling rule. Merit-principle rationale (n=1 is candidate, not demonstrated-need; a second case grounds the generalization and prevents locking the wrong shape). **Not enacted; no standard changed.** Also recorded INV-0010's **formal closure** (owner-authorized, same session): §7 acceptance criteria all met and ticked; record status banner updated scaffold→closed; `status: Draft` and the STD-0006 §7.5 reliance gate **retained unchanged** (external reliance still pending independent developmental-psychology re-verification; INV-0008 non-inference intact).|
 |1.17|2026-07-19|Active|Added **GB-2026-027** (historical-evidence typology as a second grading scale — owner-authorized logging after the owner-directed 15-claim Iranian-family discrimination test; house ★-scale collapsed 15/15 → ◇◇◇, candidate historical scale discriminated 2/2/5/2/4, native KOS-0003 §8 scale discriminated 1/7/5/2 → defect located at the **export boundary** (Appendix A semantics), not in the vault). Standards-level, owner-reserved; argued not Baseline-touching (typology ≠ confidence scale). **Logged only — nothing enacted**; draft test artifacts in `00 Inbox`.|
+|1.18|2026-07-19|Active|**GB-2026-027 owner decision recorded: route (c) → (a).** Item stays **Open**; the trigger to author STD-0008 + the Appendix A domain-qualifier rule is a real full-circuit historical investigation exercising the candidate scale in use (evidence-before-formalization; mirrors the GB-2026-026 defer-to-use pattern). Candidate spec remains the `00 Inbox` draft. **Not enacted; no standard changed.**|
 
 ---
 

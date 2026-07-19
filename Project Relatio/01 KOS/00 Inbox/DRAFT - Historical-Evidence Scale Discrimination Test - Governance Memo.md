@@ -51,6 +51,8 @@ Sample-size caveat: 15 claims, one family, one coder, no adversarial review. Suf
 
 ## 4. Governance route to adoption (if pursued)
 
+> **Owner decision recorded 2026-07-19 (Backlog v1.18): route (c) → (a).** The typology is **not** authored now. The trigger for enactment is a real full-circuit historical investigation exercising the candidate scale in use; at that point STD-0008 + the Appendix A domain qualifier are authored as owner-reserved changes. The steps below are retained as the route that decision selected.
+
 1. **Log a Governance Backlog item** — done: **GB-2026-027** logged 2026-07-19 with owner authorization (Backlog v1.17), superseding the candidate text in §6 below (retained for the record).
 2. **Owner (Vision Steward, ROLE-0005) decides** whether the demonstrated need justifies formalization, per the merit principle (ADR-GOV-0002).
 3. **If adopted, the natural home is a new Standards document — STD-0008** (next per the Identifier Registry), plausibly seated in the existing empty `02 Standards/02 Evidence Standards/` folder — defining the historical-evidence typology, its coding rules, and its relation to KOS-0003 §8. Alternatively (lighter): an amendment extending **STD-0006 Appendix A** with domain-qualified export semantics. Either path is a governed standards change requiring documentation, review, and version update (STD-0006 §10), recorded as an ADR if it touches settled interpretation.
