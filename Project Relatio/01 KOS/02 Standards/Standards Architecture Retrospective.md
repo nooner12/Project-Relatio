@@ -1,7 +1,7 @@
 ---
 title: Standards Architecture Retrospective
 document_type: Review Report
-version: 1.4
+version: 1.5
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -30,7 +30,7 @@ tags:
 
 # Standards Architecture Retrospective
 
-## Version 1.4
+## Version 1.5
 
 ## Adopted Review Report
 
@@ -118,7 +118,7 @@ Observations:
 |---|---|
 | C-7 | The two-dimensional lifecycle model is declared but **not implemented**: no document carries both a maturity and an operational field. Every document has a single `status`. |
 | C-8 | KOS-0003 (Epistemic Framework) is a v0.1 **Draft** dated 2026-07-08, carries pre-standard fields (`owner`, `architect`), yet is cited as a `parent_document`/`related_document` by KOS-0001 and most of the Kernel as though Adopted. It also cites a superseded KOS-0002 and mis-titles KOS-0001. |
-| C-9 | **Phantom references:** ADR-KOS-0001 through ADR-KOS-0010 are cited (KOS-0003 dependencies; KOS-0011 related_documents) but the `01 Architectural Decisions` folder is empty — no ADR exists. |
+| C-9 | ~~**Phantom references:** ADR-KOS-0001 through ADR-KOS-0010 are cited (KOS-0003 dependencies; KOS-0011 related_documents) but the `01 Architectural Decisions` folder is empty — no ADR exists.~~ **RESOLVED 2026-07-10 (M-3 / GB-2026-005):** the phantom pointers were replaced with genuine relationships (KOS-0003 → STD-0006; KOS-0011 → ADR-GOV-0001); `graph_integrity.py` exits clean. Real ADRs now exist (ADR-GOV-0001, ADR-GOV-0002). |
 | C-10 | ~~**Roles layer non-conformance:** no `ROLE-NNNN` identifiers exist (STD-0001 §5 defines the class). KOS-0100 uses a KOS prefix and has no frontmatter; 0101/0102 are empty files.~~ **RESOLVED (M-4):** ROLE-NNNN adopted; files migrated to ROLE-0001/0002/0003 with conformant Draft frontmatter and a shared skeleton. Substance authoring remains the step-4 build. |
 | C-11 | Draft-era `document_type` values ("Foundational Framework", "Operational Framework") remain on KOS-0002/0003/0200 and are still not on STD-0002's approved list. |
 | C-12 | **Audit-coverage gap (this report).** Four Adopted Kernel meta-documents — `KOS Architecture Manifest`, `Kernel Index`, `KOS Dependency Map`, `Kernel Status` — sit directly in `01 Kernel/` and were missed by the initial survey's file discovery. They use `document_type` values not on STD-0002's approved list (`Kernel Architecture Manifest`, `Kernel Navigation Document`, `Kernel Architecture Document`, `Kernel Governance Document`). Consequence: the priority step-3 integration documents (KOS Index, KOS Dependency Map, Architecture Status Note) **substantially already exist at Kernel scope** and should be extended/reconciled, not built from scratch. |
@@ -131,7 +131,7 @@ Observations:
 - **CLAUDE.md** updated: KOS-0004 correction applied; STD-0006 marked Adopted; priority order updated with the open items above.
 - **Standards Index** updated to v1.1 and now reflects reality.
 - **STD cross-references** among the seven Standards all resolve to existing files (verified). No dangling references remain *within* the Standards layer.
-- Dangling references remain **outside** the Standards layer (C-8, C-9) and are registered below.
+- ~~Dangling references remain **outside** the Standards layer (C-8, C-9) and are registered below.~~ **Superseded by execution:** C-8 was resolved by M-2 (2026-07-09, KOS-0003 adopted) and C-9 by M-3 (**2026-07-10, GB-2026-005**). **No dangling references remain anywhere in the vault** — `graph_integrity.py` reports 0 dangling on every run.
 
 ---
 
@@ -204,9 +204,9 @@ Each item below is a batch migration. Per CLAUDE.md ("No spontaneous restructuri
 
 | Item | Decision | Execution |
 |---|---|---|
-| M-1 (two-dimensional lifecycle) | **Defer until first needed.** | No changes made. Revisit at first supersession event. |
+| M-1 (two-dimensional lifecycle) | **Defer until first needed.** | Deferred 2026-07-09; no changes made at the time. **RESOLVED 2026-07-11 (GB-2026-006)** — the deferral trigger (a real supersession event) fired with KOS-0200's supersession and ROLE-0003's retirement. Implemented per STD-0005's two-dimensional model: STD-0002 v1.5 narrowed `status` to maturity and added `operational_status`; STD-0005 §24 → v1.1; 109 governed objects migrated. C-7 resolved. |
 | M-2 (KOS-0003 status) | **Upgrade to Adopted.** | Executed 2026-07-09: KOS-0003 brought to current schema, stale references fixed (KOS-0001 title; KOS-0002→KOS-0004), retyped, adopted as v1.0. C-8 resolved. |
-| M-3 (phantom ADR references) | **Leave for later.** | Not executed. ADR-KOS-0001…0008 references retained in KOS-0003 `related_documents`; ADR-KOS-0010 retained in KOS-0011. C-9 remains open, to be handled in a future Kernel review pass. |
+| M-3 (phantom ADR references) | **Leave for later.** | Deferred 2026-07-09; not executed at the time. **RESOLVED 2026-07-10 (GB-2026-005)** — `graph_integrity.py` surfaced the 9 phantom references as dangling failures on every run, making the deferral's cost concrete. The dead pointers were replaced with genuine relationships (verify-then-remove; each verified non-existent first): KOS-0003's ADR-KOS-0001…0008 → STD-0006 (which operationalizes §12.1); KOS-0011's ADR-KOS-0010 → the real ADR-GOV-0001. KOS-0003 → v1.2, KOS-0011 → v1.2; tool exits clean (0 dangling). **C-9 resolved.** |
 | M-4 (Roles layer) | **Adopt ROLE-NNNN** (per STD-0001 §5) as the identifier scheme — chosen for cleanest upstream layer development. | Executed 2026-07-09: KOS-0100→ROLE-0001, 0101→ROLE-0002, 0102→ROLE-0003; folder flattened; conformant Draft frontmatter + shared skeleton added; stale KOS-0100 reference in STD-0006 updated. C-10 resolved. Role *substance* authoring remains the step-4 build. |
 | M-5 (draft-era document_type) | Partially addressed via M-2 (KOS-0003 retyped). | KOS-0002 left as Superseded/historical; **KOS-0200 superseded & archived 2026-07-11 (GB-2026-007)** — never adopted; superseded by STD-0001…0007. |
 
@@ -241,6 +241,7 @@ The single most important discipline going forward, per CLAUDE.md: **bias toward
 |1.2|2026-07-09|Adopted|Recorded audit-coverage gap: three Kernel meta-documents (Kernel Index, KOS Dependency Map, Kernel Status) were missed in the initial survey (C-12); added second phantom-reference finding for KOS Architecture Manifest (C-13); corrected step-3 next-actions to reflect that integration documents largely already exist|
 |1.3|2026-07-09|Adopted|Correction: KOS Architecture Manifest was found to exist (a fourth missed meta-document, not a phantom); C-13 voided; C-12 updated to four documents; the erroneous removal of the Manifest reference from the Standards Index was reverted|
 |1.4|2026-07-09|Adopted|Recorded Brian's decisions and their execution: document_type consolidation (STD-0002 v1.3); Standards-layer siblings created (Standards Dependency Map, Standards Status); M-4 ROLE-NNNN scheme adopted and Roles files migrated (C-10 resolved)|
+|1.5|2026-07-19|Adopted|**Stale-state back-update (tier-1 status correction; no governance route required — records decisions already taken elsewhere).** This document still asserted two deferrals that recorded decisions had since resolved, and was internally contradicting the vault's actual state. Corrected in four places, all the same two assertions: **§7.6 M-1** deferral → **RESOLVED 2026-07-11 (GB-2026-006)** (two-dimensional lifecycle implemented; STD-0002 v1.5 / STD-0005 §24 v1.1; 109 objects migrated; C-7 resolved); **§7.6 M-3** "C-9 remains open" → **RESOLVED 2026-07-10 (GB-2026-005)** (phantom ADR pointers replaced with genuine relationships; KOS-0003/KOS-0011 → v1.2; 0 dangling); **§5 C-9** finding struck through and marked resolved, matching the C-10 convention already used in that table; **§6 Integration State** "dangling references remain (C-8, C-9)" superseded — C-8 resolved by M-2, C-9 by M-3, 0 dangling vault-wide. **Historical findings text left intact** (the §5 table records what the audit found at the time; only resolution markers were added). No finding voided, no migration re-run, no other content altered.|
 
 ---
 

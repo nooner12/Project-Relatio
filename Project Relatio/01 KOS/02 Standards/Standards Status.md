@@ -1,7 +1,7 @@
 ---
 title: Standards Status
 document_type: Governance Record
-version: 1.1
+version: 1.2
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -22,7 +22,7 @@ tags:
 
 # Project Relatio Standards Status
 
-## Version 1.1
+## Version 1.2
 
 ## Active Governance Record
 
@@ -126,9 +126,9 @@ The versioning conflict (STD-0001 vs STD-0005) and the lifecycle-vocabulary conf
 
 ## Reference Integrity
 
-Status: ⚠ Monitoring
+Status: ✅ Stable (after resolution)
 
-Within the Standards layer, all references resolve. Outstanding items live in the Kernel: phantom ADR references (Retrospective C-9) remain, deferred by decision (M-3).
+Within the Standards layer, all references resolve. The previously outstanding Kernel item — phantom ADR references (Retrospective C-9), deferred by decision (M-3) — was **RESOLVED 2026-07-10 (GB-2026-005)**: the dead ADR-KOS pointers were replaced with genuine relationships (KOS-0003 → STD-0006; KOS-0011 → ADR-GOV-0001), each verified non-existent before removal. `graph_integrity.py` now reports **0 dangling references** vault-wide on every run.
 
 ---
 
@@ -192,8 +192,8 @@ Real Research Workflows  (the true test of the architecture)
 
 | Item | Status |
 |---|---|
-| M-1 two-dimensional lifecycle field | Deferred until first supersession event |
-| M-3 phantom ADR references | Deferred to a future Kernel review pass |
+| M-1 two-dimensional lifecycle field | **RESOLVED** 2026-07-11 (GB-2026-006) — the deferral trigger (a real supersession event) fired with KOS-0200's supersession and ROLE-0003's retirement; `status` narrowed to maturity and `operational_status` added (STD-0002 v1.5, STD-0005 §24 v1.1); 109 governed objects migrated |
+| M-3 phantom ADR references | **RESOLVED** 2026-07-10 (GB-2026-005) — phantom ADR-KOS pointers replaced with genuine relationships (KOS-0003 → STD-0006; KOS-0011 → ADR-GOV-0001); KOS-0003/KOS-0011 → v1.2; 0 dangling references |
 | KOS-0200 (Standards Framework) | **Superseded / Archived** 2026-07-11 (GB-2026-007) — never adopted; superseded by STD-0001…0007 + the Standards Index/Manifest; moved to `07 Archive` |
 
 ---
@@ -215,6 +215,7 @@ Standards maintenance requires, per KOS-0011 and STD-0005:
 |---|---|---|---|
 |1.0|2026-07-09|Active|Initial Standards Status; Standards-layer sibling to Kernel Status|
 |1.1|2026-07-11|Active|Version table corrected to actual current state (it had drifted): STD-0001 1.1→1.3, STD-0002 1.3→1.6, STD-0004 1.0→1.1, STD-0005 1.0→1.1, STD-0006 1.0→1.2. STD-0002/0004/0005 bumps are this session's lifecycle-field (GB-2026-006) and typed-relationships (GB-2026-001) work.|
+|1.2|2026-07-19|Active|**Stale-state back-update (tier-1 status correction; records decisions already taken elsewhere, so no governance route required).** §9 still carried **M-1** and **M-3** as deferred after both had been resolved: M-1 → **RESOLVED 2026-07-11 (GB-2026-006)** (two-dimensional lifecycle implemented; STD-0002 v1.5 / STD-0005 §24 v1.1; 109 objects migrated); M-3 → **RESOLVED 2026-07-10 (GB-2026-005)** (phantom ADR pointers replaced with genuine relationships; KOS-0003/KOS-0011 → v1.2). Both rows now match the KOS-0200 row's existing resolved-entry convention. **§5 Reference Integrity** correspondingly moved ⚠ Monitoring → ✅ Stable (after resolution), since its sole outstanding item was M-3/C-9 and `graph_integrity.py` reports 0 dangling vault-wide. **Deliberately NOT touched** (different staleness, outside this correction's scope): §5 Operational Readiness and §7 Current Limitations still assert the Roles/Templates/Operations layers are "not yet built," which is also out of date — reported to the owner, left for a separate decision.|
 
 ---
 
