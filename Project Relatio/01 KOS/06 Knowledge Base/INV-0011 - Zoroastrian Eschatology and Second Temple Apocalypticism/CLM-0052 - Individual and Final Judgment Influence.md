@@ -1,0 +1,136 @@
+---
+title: CLM-0052 - Individual and Final Judgment Influence
+document_type: Claim Record
+version: 0.1
+status: Draft
+operational_status: Active
+created: 2026-07-19
+category:
+  - Knowledge Base
+  - Claim
+  - History of Religions
+parent_documents:
+  - KOS-0003 Epistemic Framework & Knowledge Validation System
+  - INV-0011 Zoroastrian Eschatology and Second Temple Apocalypticism
+related_documents:
+  - SRC-0076 Zoroastrian Primary Corpus Avestan and Pahlavi
+  - SRC-0068 Boyce History of Zoroastrianism
+  - SRC-0070 Shaked 1984 Iranian Influence on Judaism
+  - SRC-0067 Barr 1985 Question of Religious Influence
+  - FND-0011 Zoroastrian Influence on Second Temple Apocalypticism
+tags:
+  - ProjectRelatio
+  - KnowledgeBase
+  - Claim
+  - Judgment
+  - Eschatology
+relationships:
+  - type: derived_from
+    target: SRC-0076
+  - type: derived_from
+    target: SRC-0068
+  - type: derived_from
+    target: SRC-0070
+  - type: derived_from
+    target: SRC-0067
+  - type: supports
+    target: FND-0011
+  - type: part_of
+    target: INV-0011
+---
+
+# CLM-0052
+
+# Zoroastrian Influence on the Second Temple Doctrine of Individual Post-Mortem and Final Judgment Is Plausible and Has the Best *Dating* Position of the Doctrine Cases (Judgment Is Attested in the Old Avestan / Gathic Layer), but It Remains Bounded by a Strong Internal Israelite Alternative (the Prophetic "Day of YHWH")
+
+## Draft Claim Record
+
+---
+
+# Claim
+> The Second Temple development of **individual post-mortem judgment and a universal final judgment** (each person judged by deeds; the righteous and wicked separated to distinct fates) may have been shaped by Zoroastrian eschatology. Of the five doctrine cases this one has the **strongest dating position on the Zoroastrian side**, because judgment is attested already in the **Old Avestan / Gathic layer** (the Činvat crossing; reward/punishment; the ordeal of molten metal) — the earliest, not the latest, stratum. **But the influence is not established**, because Israelite prophetic religion supplies an unusually strong internal source (the "Day of YHWH," divine recompense), and the Gathic layer's *absolute* early date is itself reconstruction (H-e).
+
+---
+
+# Claim Type (KOS-0003 §3)
+**Interpretive / causal (directional-influence)**.
+
+---
+
+# Evidence (KOS-0003 §4)
+Type: **Historical** (textual attestation + comparative philology).
+- **SRC-0076 (Zoroastrian primary corpus):** judgment is **Gathic** — the Činvat crossing (the soul weighed by its deeds), reward in the "House of Song" vs the worst existence, and a final ordeal by molten metal (Yasna 30–31, 43, 51). Because it is in the oldest layer, its *relative* priority within Zoroastrianism is secure; its *absolute* pre-Jewish date rests on the reconstruction that dates the Gathas to ~1000 BCE.
+- **SRC-0068 (Boyce):** treats judgment as an archaic, central Gathic teaching.
+- **SRC-0070 (Shaked):** Iranian influence on the eschatological/judgment imagination is real but operates by selective adaptation.
+- **SRC-0067 (Barr):** the internal Israelite antecedents are underrated by the influence literature.
+- **Jewish side:** individual and final judgment develops in the Book of the Watchers (1 Enoch, 3rd c. BCE) and Daniel (~165 BCE) (H-a — datable primary texts); the Hebrew Bible has strong collective/national judgment (the Day of YHWH: Amos 5, Zephaniah, Joel) but individual post-mortem judgment is a Second Temple development.
+
+**Dual-coding (prose only):**
+- **Zoroastrian-side H-band for early dating: H-a → H-e** — the doctrine is *present in the earliest attested layer* (textual presence H-a, the best of the doctrine cases), but its *absolute* early date is reconstruction (H-e). No later-tradition (H-d) crutch is needed for the core concept, which is why this case dates better than resurrection.
+- **Jewish-side H-band: H-a** (1 Enoch, Daniel).
+
+---
+
+# Evidence Evaluation (KOS-0003 §5, 0–5)
+- Reliability: 4 — judgment is securely in the Gathic layer (best-attested-early of the cases); the Jewish attestation is firm.
+- Relevance: 5 — directly on the judgment question.
+- Independence: 3 — poles represented.
+- Quality: 3 — strong parallel and strong Zoroastrian dating position, but the internal Israelite alternative is unusually strong here, capping the directional inference.
+- Limitations: establishes a strong parallel with a good dating position; does **not** exclude the "Day of YHWH" internal trajectory as sufficient.
+
+---
+
+# Consensus (KOS-0003 §9)
+- Evidence strength: **Moderate–High** that judgment is Gathic (early); **Moderate** for directional influence on Judaism.
+- Consensus strength: **Divided** — the influence reading is respectable; the internal-development reading (prophetic recompense → individualized eschatological judgment under Hellenistic pressure) is at least as strong.
+
+---
+
+# Source Evaluation
+Judgment is the doctrine case with the **least reliance on the late Pahlavi corpus** — its core is Gathic — so SRC-0076 supports it more securely than it supports resurrection or the Saoshyant. But SRC-0070/SRC-0067 keep the directional conclusion bounded by the internal Israelite source.
+
+---
+
+# Assumptions (KOS-0003 §10)
+- **Methodological:** Gathic dating to ~1000 BCE is sound (reconstruction, widely held).
+- **Cultural/linguistic:** the Gathic Činvat judgment and Second Temple eschatological judgment are comparable enough to speak of one "doctrine" — reasonable but interpretive.
+
+---
+
+# Reasoning (KOS-0003 §7)
+**Abductive.** **Risks checked:** *over-attribution* (named — a strong Zoroastrian dating position tempts an over-confident directional claim; resisted by the strong internal Israelite alternative); *convenient-borrowing bias* (named); *translation-boundary risk* (named — "judgment" spans different cosmologies).
+
+---
+
+# Confidence (KOS-0003 §8)
+- **Level 3 (Moderate)** — that Zoroastrian influence plausibly contributed to the Second Temple individualization and cosmologizing of judgment. Held at Moderate: although this case has the **best Zoroastrian dating position** (Gathic, H-a textual presence), the internal Israelite "Day of YHWH → eschatological judgment" trajectory is a strong sufficient alternative, and the Gathic *absolute* date is reconstruction. Not higher for those reasons; not lower because the early-layer attestation genuinely removes the "late-attestation" defect that weakens resurrection and the Saoshyant.
+
+---
+
+# Limitations
+- Licenses "plausible influence with a strong dating position," **not** "established," and **not** any claim that Jewish judgment is *derived from* Persia.
+- No magnitude ranking against the other doctrines.
+
+---
+
+# Alternative Interpretations
+1. **Internal Israelite development.** Steelmanned and strong: the prophetic Day of YHWH and covenantal recompense, individualized and eschatologized under Hellenistic-era conditions (cf. Ezekiel 18's individual responsibility), can produce Second Temple judgment without Persia. **Not rejected** — it is the main cap on confidence.
+2. **Convergent moralization of the afterlife.** Multiple ancient cultures develop post-mortem moral accounting; the parallel may be convergent, not transmitted. Held open.
+3. **Selective adaptation (Shaked).** Influence real but reshaped — compatible with Moderate.
+
+---
+
+# Relationships (STD-0004)
+- `derived_from` SRC-0076, SRC-0068, SRC-0070, SRC-0067.
+- `contrasts_with` the "Day of YHWH" internal reading (steelmanned).
+- `supports` FND-0011.
+- `part_of` INV-0011.
+
+---
+
+# Revision History
+|Version|Date|Status|Description|
+|---|---|---|---|
+|0.1|2026-07-19|Draft|Created for RQ-0011. Level 3 (Moderate): judgment influence plausible with the best Zoro-side dating position (Gathic, H-a textual presence, H-e absolute date), bounded by a strong internal "Day of YHWH" alternative. Dual-coding: Zoro H-a→H-e, Jewish H-a. Pending review/validation.|
+
+# End CLM-0052
