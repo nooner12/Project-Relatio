@@ -1,7 +1,7 @@
 ---
 title: Identifier Registry
 document_type: Navigation Document
-version: 1.19
+version: 1.20
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -20,7 +20,7 @@ tags:
 
 # Identifier Registry
 
-## Version 1.19
+## Version 1.20
 
 ## Active Navigation Document
 
