@@ -1,7 +1,7 @@
 ---
 title: STD-0002 - Metadata & YAML Standard
 document_type: Standards Document
-version: 1.6
+version: 1.7
 status: Adopted
 operational_status: Active
 category:
@@ -29,7 +29,7 @@ tags:
 
 # Project Relatio Metadata & YAML Standard
 
-## Version 1.6
+## Version 1.7
 
 ## Adopted Standards Document
 
@@ -524,6 +524,14 @@ Metadata must:
 
 Incorrect metadata creates structural errors.
 
+## 12.1 Frontmatter References Are Graph Claims (ADR-GOV-0004 §2 D4)
+
+Entries in **`related_documents`**, **`parent_documents`**, and any typed reference field (the `relationships` block, §7) **must resolve to existing files.** A frontmatter reference is not a note or an intention — it is a **claim that an edge exists in the knowledge graph**, and it is read as such by tooling.
+
+**Named candidates and non-existent objects are referenced in prose only.** A reserved-but-unopened identifier, a planned object, or a candidate follow-on may be discussed freely in an object's body; it may **not** appear in a reference field until the object exists.
+
+*Rationale.* Enforcement already exists — `graph_integrity.py` fails on a dangling reference — but the tool catches the violation only after it is committed. This rule states the constraint at **authoring time**, and states *why* the field is load-bearing: a reference that resolves to nothing silently corrupts the graph the architecture is built on. The occasioning case is recorded in ADR-GOV-0004 §1.4 (a named-but-unopened candidate listed in `related_documents` produced the vault's first dangling reference since GB-2026-005).
+
 ---
 
 # 13. Metadata Change Rules
@@ -621,6 +629,7 @@ Project Relatio adopts:
 |1.4|2026-07-09|Adopted|Added Investigation Record and Finding Record document_types, defined by KOS-0012 and demonstrated needed by the RQ-0001 pressure test|
 |1.5|2026-07-11|Adopted|Implemented STD-0005's two-dimensional lifecycle in metadata (GB-2026-006): `status` narrowed to **maturity** (Proposed/Draft/Reviewed/Adopted); added the required **`operational_status`** field (Active/Superseded/Archived). Migrated the vault — operational values previously held in `status` moved to the new field. Trigger: the KOS-0200/ROLE-0003 supersession/archival events the deferral was waiting on.|
 |1.6|2026-07-11|Adopted|Added the optional **typed `relationships`** frontmatter block (`type` + `target`), closing Pressure Test F-4 / GB-2026-001 — STD-0004's vocabulary can now be expressed in metadata, not only prose. Additive: the flat `parent_documents`/`related_documents` lists are retained for tooling. Adopted for Knowledge Base objects; `graph_integrity.py` made type-aware.|
+|1.7|2026-07-20|Adopted|Added **§12.1 Frontmatter References Are Graph Claims**, enacting **ADR-GOV-0004 §2 D4**. Entries in `related_documents`, `parent_documents`, and the typed `relationships` block must resolve to existing files; named candidates and non-existent objects are referenced in **prose only**. Placed here rather than in STD-0004 because D4 governs what the frontmatter *fields* must contain (STD-0002's domain), whereas STD-0004 governs which relationship *types* exist and what they mean. Additive rule statement only — no field added, removed, or redefined, and no existing requirement changed; `graph_integrity.py` already enforced the constraint after commit, and this states it at authoring time with its rationale.|
 
 ---
 
