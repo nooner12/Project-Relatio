@@ -1,7 +1,7 @@
 ---
 title: INV-0010 - Psychosocial Stressor Onset Divergence
 document_type: Investigation Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-15
@@ -27,7 +27,7 @@ tags:
 
 ## Draft Investigation Record
 
-> Authored using **TPL-0003**. Tenth research workflow (RQ-0010). **This record is an opening scaffold only** — the investigation has not been executed. It contains the question, protocol, source-coding scheme, acceptance criteria, and gate declaration; it contains **zero findings, zero claims, zero sources, and zero confidence levels**. Execution and closing happen through the full adversarial circuit (OPS-0003: Research Specialist → Critical Reviewer → Knowledge Architect). The opening/closing split is structural, per the independence principle STD-0006 §7.6 enacts (GB-2026-023): the session that authors the scaffold does not also generate and certify the findings that fill it.
+> Authored using **TPL-0003**. Tenth research workflow (RQ-0010). **CLOSED 2026-07-15 (owner-authorized).** This record was opened as a scaffold and then **executed and closed through the full adversarial circuit** (OPS-0003: Research Specialist → Critical Reviewer → Knowledge Architect); all §7 acceptance criteria are met and ticked. The opening/closing split was structural, per the independence principle STD-0006 §7.6 enacts (GB-2026-023): the session that authored the scaffold did not also generate and certify the findings that fill it. **Maturity `status` remains `Draft` and the STD-0006 §7.5 reliance gate remains in force** — "closed" means the circuit is complete and the acceptance criteria are satisfied, **not** that the finding is cleared for external reliance. External reliance still requires independent developmental-psychology re-verification outside Project Relatio's circuit (see the gate declaration below); that is what a future maturity promotion would await.
 
 > **Gate declaration (STD-0006 §7.5) — declared at opening, before any evidence is gathered.** INV-0010 is **HEALTH / HIGH-STAKES and CHILD-FACING**. It opens **GATED**:
 > - **Not citable in client-facing, prospect-facing, or public material in any stream, at any confidence level**, pending independent re-verification outside Project Relatio's circuit.
@@ -142,16 +142,16 @@ Supporting claims (native `Level N`, KOS-0003 §8):
 
 # 7. Acceptance Criteria for Closing
 
-INV-0010 may close only when all of the following hold:
+INV-0010 may close only when all of the following hold. **All criteria satisfied; closed 2026-07-15 (owner-authorized).**
 
-- [ ] Every source in the investigation carries exactly one construct-provenance code (§3.1).
-- [ ] No sex-attributed claim rests on a `CONFLATED` or `UNRESOLVED` source, at any confidence level.
-- [ ] No ranking, superlative, or magnitude claim appears without a stated metric and a source that measured that metric (expected outcome: none appear at all).
-- [ ] "Critical period" appears nowhere unearned; default vocabulary is "age band."
-- [ ] The `CONFLATED`-majority prediction (§3.2) is explicitly evaluated and recorded as held or failed.
-- [ ] The §7.5 gate declaration stands intact in the closing record, including the INV-0008 non-inference.
-- [ ] The full OPS-0003 circuit has run: Specialist synthesis → Critical Review verdict → Knowledge Architect structural validation (validate.py + graph_integrity.py clean).
-- [ ] STD-0006, the crosswalk, and Appendix A are unmodified by this investigation (§3.3).
+- [x] Every source in the investigation carries exactly one construct-provenance code (§3.1). *(8 sources: 5 CONFLATED / 2 UNRESOLVED / 1 SEX-MEASURED / 0 GENDER-MEASURED.)*
+- [x] No sex-attributed claim rests on a `CONFLATED` or `UNRESOLVED` source, at any confidence level. *(Only CLM-0045 is sex-attributed, via the sole `SEX-MEASURED` source SRC-0060.)*
+- [x] No ranking, superlative, or magnitude claim appears without a stated metric and a source that measured that metric (expected outcome: none appear at all). *(None appear — confirmed by Critical Review Test E.)*
+- [x] "Critical period" appears nowhere unearned; default vocabulary is "age band." *(Confirmed by Critical Review Test E.)*
+- [x] The `CONFLATED`-majority prediction (§3.2) is explicitly evaluated and recorded as held or failed. *(HELD, 7 of 8; recorded in §4 and FND-0010, with the "neither construct measured" corollary promoted.)*
+- [x] The §7.5 gate declaration stands intact in the closing record, including the INV-0008 non-inference. *(Intact and unmodified; carried in FND-0010 and the Critical Review §10.)*
+- [x] The full OPS-0003 circuit has run: Specialist synthesis → Critical Review verdict → Knowledge Architect structural validation (validate.py + graph_integrity.py clean). *(Critical Review – RQ-0010: CONFORMANT WITH FLAGS, all flags remediated; validate.py PASS 212/0/0; graph_integrity.py exit 0, 0 dangling, no INV-0010 advisories.)*
+- [x] STD-0006, the crosswalk, and Appendix A are unmodified by this investigation (§3.3). *(Unmodified; the construct-provenance scheme logged as candidate GB-2026-026, not enacted.)*
 
 ---
 
@@ -175,6 +175,7 @@ INV-0010 may close only when all of the following hold:
 |0.2|2026-07-15|Draft|**Executed by Research Specialist (ROLE-0002).** Populated §4 (findings/synthesis pointer), §5 (confidence summary), §8 (relationships), and frontmatter edges — §1–3, §6, §7 protocol sections untouched. Created 8 live-verified sources (SRC-0059…SRC-0066), 7 claims (CLM-0044…CLM-0050), 1 finding (FND-0010). Construct census: 7 CONFLATED / 1 SEX-MEASURED / 0 GENDER-MEASURED / 0 UNRESOLVED — §3.2 prediction **HELD strongly**. Only CLM-0045 (puberty–depression, SEX-MEASURED) carries a bounded sex-attributed claim; all others gender-patterned/unattributed per the operative rule. Native Level N (2–4), no Level 5, no ranking/superlative. Gate + INV-0008 non-inference intact. Pending ROLE-0004 critical review and ROLE-0001 structural validation (validate.py + graph_integrity.py).|
 |0.2a|2026-07-15|Draft|**Critical Review – RQ-0010 returned CONFORMANT WITH FLAGS; three flags remediated by ROLE-0002.** F-1: SRC-0064/CLM-0048 (eating) and SRC-0065/CLM-0049 (conduct) recoded `CONFLATED` → `UNRESOLVED`; census updated everywhere (§4, §5, FND-0010 title/§1b/§1c/§2/§3) to **5 CONFLATED / 2 UNRESOLVED / 1 SEX-MEASURED / 0 GENDER-MEASURED**; prediction verdict rewritten and the "neither construct is typically measured" corollary promoted to the finding's headline. F-2: CLM-0045/SRC-0060/FND-0010 §4 now state puberty occurs in both sexes, so pubertal-stage measurement does not establish between-sex biological causation. F-3: CLM-0046's Level-3 direction warrant re-based on the catalogued SRC-0061-vs-SRC-0059 contrast; uncatalogued-review appeal deleted. **No confidence level changed anywhere** (operative rule constrains CONFLATED and UNRESOLVED identically). SEX-MEASURED coding of SRC-0060 stands (census 7-of-8-not-cleanly-measured). Pending ROLE-0001 structural validation.|
 |0.2b|2026-07-15|Draft|**Structural validation (ROLE-0001) — circuit closed; validate.py PASS, graph_integrity.py 0 dangling / 0 new advisories.** Graph reconciliation only (no content, confidence, census, or construct-code change): (1) removed the dangling typed edge `part_of: Knowledge Base` (not a resolvable object) — the classification statement stays in §8 prose, matching INV-0009; (2) removed the redundant v0.2 `related_to` down-edges from INV-0010 to CLM-0044…0050/FND-0010 (over-complete duplicates of the children's upward `part_of`/`supports` edges — INV-0010 is a hub every child points up to); (3) reciprocated the genuine peer edge CLM-0044 ↔ CLM-0046 `contrasts_with` (added the CLM-0044 side; CLM-0046 already declared it). Direction conventions confirmed (SRC→CLM `supports`, CLM→FND `supports`, FND→CLM `derived_from`, SRC/CLM/FND `part_of` INV-0010); all typed targets resolve. Registered in the Identifier Registry (v1.16). §7 acceptance criteria all satisfied.|
+|0.3|2026-07-15|Draft|**Formally closed (owner-authorized).** All eight §7 acceptance criteria confirmed met and ticked (`[x]`); the header status banner updated from "opening scaffold only / not executed" to CLOSED. **Maturity `status` deliberately held at `Draft`** — consistent with every other investigation in the vault (INV-0001…0009 all remain Draft; there is no Draft→Adopted closure step), and honest to the fact that the STD-0006 §7.5 reliance gate is **still in force**: the finding is not cleared for external reliance without independent developmental-psychology re-verification outside the circuit. "Closed" = circuit complete + acceptance criteria satisfied + owner sign-off; it is **not** a maturity promotion and does **not** touch the gate, the confidence levels, the census, or any construct code. INV-0008 non-inference remains intact. Concurrent governance action: GB-2026-026 (the construct-provenance scheme as a standing rule) owner-decided **defer-to-second-use** — Open candidate, not enacted.|
 
 ---
 

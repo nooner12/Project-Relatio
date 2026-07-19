@@ -1,7 +1,7 @@
 ---
 title: Governance Backlog
 document_type: Governance Record
-version: 1.15
+version: 1.16
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -22,7 +22,7 @@ tags:
 
 # Governance Backlog
 
-## Version 1.15
+## Version 1.16
 
 ## Active Governance Record
 
@@ -214,7 +214,7 @@ Before this document existed, open items were scattered across five places: the 
 - **Impact:** Medium. A recurring hazard wherever a literature applies a category label (sex, race, diagnosis) to data that measured no underlying construct; absent a standing rule each investigation must re-derive the discipline. Not urgent — one investigation's use is the *candidate* threshold, not yet a multi-investigation demonstrated need.
 - **Governance tier:** **Standards-level change — owner-reserved** (new standard or amendment to an Adopted one; ROLE-0001 §4.2). **Not enacted by INV-0010 or by this log entry.** The scheme is **not** added to STD-0006, the confidence crosswalk, Appendix A, or the Architecture Baseline. This entry records a *candidate for the owner's later decision* only.
 - **Solutions:** (a) after a **second** investigation independently needs the discipline, author it as a short standing rule — most naturally a **sibling clause/appendix to STD-0006** (which already owns the "no tier gained" crosswalk), generalized from sex/gender to "measured construct vs applied label"; (b) keep it as reusable-but-uncodified investigation protocol, cited from INV-0010 when a similar question recurs; (c) defer indefinitely if no second use appears.
-- **Status:** **Open — logged candidate; owner decision pending. Do not enact without a recorded owner decision and (per the merit principle) a second demonstrated use.**
+- **Status:** **Open — logged candidate; owner decision recorded 2026-07-15: defer to second use.** The owner has directed that GB-2026-026 remain an Open logged candidate and that **the second independent demonstrated use is the trigger** to author it as a standing rule — i.e. **solution (b) now, escalating to (a) on second use**. Rationale (owner-endorsed): one investigation is the candidate threshold, not the demonstrated-need threshold (merit principle, ADR-GOV-0002); a second real case grounds the generalization from sex/gender to "measured construct vs. applied label" and prevents codifying the wrong shape from n=1; the scheme meanwhile remains reusable, documented in INV-0010 §3.1–3.3 and citable as precedent, so nothing is lost by waiting. **Not enacted; STD-0006 / crosswalk / Appendix A / Architecture Baseline unchanged.** Revisit when a second investigation independently reaches for the discipline (sex/gender again, or race, or a diagnosis label on unmeasured data).
 
 ---
 
@@ -275,6 +275,7 @@ Any role may **add** an item. Only the Vision Steward may mark an item **Decided
 |1.13|2026-07-14|Active|**GB-2026-023 resolved** (owner-ratified option (a)): enacted as STD-0006 §7.6 Reflexive Findings — independence of kind (STD-0006 → v1.4). Moved to §3. §2 now holds no items awaiting a decision — remaining entries are deferred-by-decision, trigger-gated, or open low-priority.|
 |1.14|2026-07-15|Active|**INV-0010 opened as scaffold only** (RQ-0010, psychosocial stressor onset divergence by sex or gender, ages 5–17) — unexecuted; gated STD-0006 §7.5 at opening (health/high-stakes + child-facing; INV-0008 non-inference recorded). Opening preceded by verification that the GB-2026-023 enactment (STD-0006 v1.4 §7.6) is present in the repo. Its construct-provenance source-coding scheme is **investigation protocol only** (content addition); a standing "no construct gained" crosswalk rule would be a standards change — to be raised as a new GB item after the investigation, only if the scheme proves out. No new §2 item created.|
 |1.15|2026-07-15|Active|**INV-0010 executed and circuit closed** (ROLE-0001 structural validation). Added **GB-2026-026** — the construct-provenance source-coding scheme (`SEX-MEASURED`/`GENDER-MEASURED`/`CONFLATED`/`UNRESOLVED` + the "no construct gained" operative rule) **proved out in use** across INV-0010 (drove the F-1 recode and the finding's headline) and is logged as a **candidate** standing crosswalk rule (sibling to STD-0006 Appendix A's "no tier gained"), per INV-0010 §3.3. **Logged for owner decision only — not enacted; STD-0006 / crosswalk / Appendix A / Architecture Baseline unchanged.** No standards, object types, or roles created.|
+|1.16|2026-07-15|Active|**GB-2026-026 owner decision recorded: defer to second use (solution b → a on second use).** Item stays **Open** as a logged candidate; the second independent demonstrated use is the trigger to author it as a standing STD-0006 sibling rule. Merit-principle rationale (n=1 is candidate, not demonstrated-need; a second case grounds the generalization and prevents locking the wrong shape). **Not enacted; no standard changed.** Also recorded INV-0010's **formal closure** (owner-authorized, same session): §7 acceptance criteria all met and ticked; record status banner updated scaffold→closed; `status: Draft` and the STD-0006 §7.5 reliance gate **retained unchanged** (external reliance still pending independent developmental-psychology re-verification; INV-0008 non-inference intact).|
 
 ---
 
