@@ -1,7 +1,7 @@
 ---
 title: CLM-0033 - Constraints Capture Value When Enabling Fitted Revisable
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-12

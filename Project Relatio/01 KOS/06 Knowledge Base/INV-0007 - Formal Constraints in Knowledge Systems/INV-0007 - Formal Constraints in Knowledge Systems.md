@@ -1,7 +1,7 @@
 ---
 title: INV-0007 - Formal Constraints in Knowledge Systems
 document_type: Investigation Record
-version: 0.1
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-12
@@ -74,6 +74,8 @@ relationships:
 > Authored using **TPL-0003**; Sources via TPL-0002, Claims via TPL-0001, Entity from KOS-0012 §5.5, Finding via TPL-0004. Seventh research workflow (RQ-0007). **Literature-synthesis question — general evidence, not health/clinical; no individualized-advice concerns.** All **eleven** sources were live-verified this session via WebSearch/WebFetch (eight at authoring; three — **SRC-0043 Merton 1940, SRC-0044 Polanyi 1966, SRC-0045 Timmermans & Epstein 2010** — catalogued during post-review remediation to convert previously-invoked companions/steelman into verified SRCs). Verification status is recorded on each SRC; two full-text PDFs (Adler & Borys; Simmons) were located but not machine-readable, so a few specifics rest on converging secondary summaries and are flagged as such.
 >
 > **Reflexive-relevance note (per coordinator instruction).** The question bears obviously on Project Relatio itself, which is a governed, formally constrained knowledge system. This investigation answers the *general literature question on its merits* and does **not** conduct a self-review of Project Relatio; applicability is noted briefly in FND-0007 §implications only, and the self-flattering direction of the synthesis is named and guarded (§6).
+
+> **CLOSED 2026-07-20 — formal closure under ADR-GOV-0004 §2 D1 (back-application).** This investigation answered its research question at authoring time (**§4 Findings / Synthesis**); what it lacked were the *formal* closure elements, because the D1 closure convention postdates it. **Acceptance criteria: none apply** — the acceptance-criteria practice began with INV-0010, this record predates it, and no criteria were ever declared for it, so there are none to tick (D1(b)'s stated-reason path). **No research content, claim, confidence level, or finding was altered by this closure; the elements added are additive only.** Maturity `status` remains `Draft` and `operational_status` remains `Active`, matching the model instance **INV-0010** — under this vault's convention "closed" means the inquiry is complete, **not** a maturity promotion and **not** a clearance for external reliance.
 
 ---
 
@@ -186,6 +188,7 @@ No claim reaches Level 5. Confidence 5 remains reserved (interpretive/cross-doma
 |---|---|---|---|
 |0.1|2026-07-12|Draft|Seventh research workflow (RQ-0007); literature-synthesis question (general evidence). Eight sources (all live-verified; two full texts not machine-readable), seven claims (three value, three failure-mode, one synthesis), one entity (ENT-0005), one finding (FND-0007). Motivated-reasoning guard (self-flattering-to-governed-systems direction) named and guarded; reflexive relevance to Project Relatio noted but self-review bracketed. Awaiting Critical Reviewer (ROLE-0004) and Knowledge Architect (ROLE-0001).|
 |0.2|2026-07-12|Draft|Post-review remediation (Critical Review - RQ-0007). Catalogued three verified sources (SRC-0043 Merton, SRC-0044 Polanyi, SRC-0045 Timmermans & Epstein) — added to references/relationships and the source count. Removed the vault merit-principle vocabulary from the §4 bottom line and attributed it as the vault's frame. Short-title cross-references (STD-0001 §10). No confidence change. (Claim-level remediations recorded on each CLM.)|
+|0.3|2026-07-20|Draft|**Formally CLOSED under ADR-GOV-0004 §2 D1 (closure-convention back-application).** D1 bar assessed: **(a)** explicit RQ answer — satisfied at authoring in §4 Findings / Synthesis; **(b)** acceptance criteria — **none apply**, stated-reason path (the criteria practice began at INV-0010; this record predates it and none were ever declared); **(c)** closure banner — added, dated 2026-07-20; **(d)** frontmatter — matches the model instance INV-0010, which holds `status: Draft` / `operational_status: Active` at closure (no Draft→Adopted closure step exists in this vault, and STD-0005's vocabulary has no distinct closed-state value). **No research content altered** — no claim, confidence level, assumption, or finding touched; closure elements are purely additive. Also corrected this record's version-drift instance under **GB-2026-028** (frontmatter read 0.1 against a 0.2 revision-history row; both now coherent at 0.3).|
 
 ---
 

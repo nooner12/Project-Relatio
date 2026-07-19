@@ -1,7 +1,7 @@
 ---
 title: INV-0012 - Mycelial Networks and Fungal Cognition
 document_type: Investigation Record
-version: 0.1
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-19

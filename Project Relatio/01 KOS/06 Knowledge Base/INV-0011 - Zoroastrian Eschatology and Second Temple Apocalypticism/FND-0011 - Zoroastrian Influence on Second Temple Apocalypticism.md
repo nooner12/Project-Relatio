@@ -1,7 +1,7 @@
 ---
 title: FND-0011 - Zoroastrian Influence on Second Temple Apocalypticism
 document_type: Finding Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19

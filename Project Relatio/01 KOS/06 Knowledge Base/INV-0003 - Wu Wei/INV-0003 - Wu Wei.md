@@ -1,7 +1,7 @@
 ---
 title: INV-0003 - Wu Wei
 document_type: Investigation Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-09
@@ -45,6 +45,8 @@ relationships:
 ## Draft Investigation Record
 
 > Third research workflow. Focal point: the concept *wu wei* as a first-class **Entity** ([[ENT-0001 - Wu Wei]]). Purpose beyond the answer: exercise the **Entity type** and test whether the Knowledge Base functions as a **graph** — *wu wei* is shared across INV-0001 and INV-0003, and a source (SRC-0002) is reused rather than duplicated. See [[Third-Run Assessment - RQ-0003]].
+
+> **CLOSED 2026-07-20 — formal closure under ADR-GOV-0004 §2 D1 (back-application).** This investigation answered its research question at authoring time (**§4 Findings / Synthesis**); what it lacked were the *formal* closure elements, because the D1 closure convention postdates it. **Acceptance criteria: none apply** — the acceptance-criteria practice began with INV-0010, this record predates it, and no criteria were ever declared for it, so there are none to tick (D1(b)'s stated-reason path). **No research content, claim, confidence level, or finding was altered by this closure; the elements added are additive only.** Maturity `status` remains `Draft` and `operational_status` remains `Active`, matching the model instance **INV-0010** — under this vault's convention "closed" means the inquiry is complete, **not** a maturity promotion and **not** a clearance for external reliance.
 
 ---
 
@@ -118,6 +120,7 @@ Recorded as [[FND-0003 - Wu Wei as Non-Forcing Action]].
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-09|Draft|Third research workflow (RQ-0003); first Entity records; first cross-investigation graph link|
+|0.2|2026-07-20|Draft|**Formally CLOSED under ADR-GOV-0004 §2 D1 (closure-convention back-application).** D1 bar assessed: **(a)** explicit RQ answer — satisfied at authoring in §4 Findings / Synthesis; **(b)** acceptance criteria — **none apply**, stated-reason path (the criteria practice began at INV-0010; this record predates it and none were ever declared); **(c)** closure banner — added, dated 2026-07-20; **(d)** frontmatter — matches the model instance INV-0010, which holds `status: Draft` / `operational_status: Active` at closure (no Draft→Adopted closure step exists in this vault, and STD-0005's vocabulary has no distinct closed-state value). **No research content altered** — no claim, confidence level, assumption, or finding touched; closure elements are purely additive.|
 
 ---
 

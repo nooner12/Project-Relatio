@@ -1,7 +1,7 @@
 ---
 title: Third-Run Assessment - RQ-0003
 document_type: Review Report
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -27,8 +27,7 @@ tags:
 
 # Third-Run Assessment — RQ-0003
 
-## Version 1.0
-
+## Version 1.1
 ## Adopted Review Report
 
 ---

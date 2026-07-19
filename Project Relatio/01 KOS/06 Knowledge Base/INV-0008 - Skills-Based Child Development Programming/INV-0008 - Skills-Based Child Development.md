@@ -1,7 +1,7 @@
 ---
 title: INV-0008 - Skills-Based Child Development Programming
 document_type: Investigation Record
-version: 0.1
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -66,6 +66,8 @@ relationships:
 > Authored using **TPL-0003**; Sources via TPL-0002, Claims via TPL-0001, Entity from KOS-0012 §5.5, Finding via TPL-0004. Eighth research workflow (RQ-0008). **Health / high-stakes-class question** — child-facing programming. All seven catalogued sources were live-verified this session via WebSearch/WebFetch (citation, design, and load-bearing figures checked against journal/agency records and multiple secondary summaries). Verification status and what could **not** be verified to the decimal are recorded on each SRC and in §9 below.
 
 > **Health/high-stakes gate (STD-0006 §7.5):** Child-facing programming is health/high-stakes class. All findings in this investigation are gated from any client-facing or external reliance until independently re-verified outside Project Relatio's internal circuit (different model and/or qualified human review). Until then they inform internal design work only.
+
+> **CLOSED 2026-07-20 — formal closure under ADR-GOV-0004 §2 D1 (back-application).** This investigation answered its research question at authoring time (**§4 Findings / Synthesis**); what it lacked were the *formal* closure elements, because the D1 closure convention postdates it. **Acceptance criteria: none apply** — the acceptance-criteria practice began with INV-0010, this record predates it, and no criteria were ever declared for it, so there are none to tick (D1(b)'s stated-reason path). **No research content, claim, confidence level, or finding was altered by this closure; the elements added are additive only.** Maturity `status` remains `Draft` and `operational_status` remains `Active`, matching the model instance **INV-0010** — under this vault's convention "closed" means the inquiry is complete, **not** a maturity promotion and **not** a clearance for external reliance.
 
 ---
 
@@ -180,6 +182,7 @@ No claim reaches Level 5 (reserved; interpretive/cross-domain transfer does not 
 |---|---|---|---|
 |0.1|2026-07-14|Draft|Eighth research workflow (RQ-0008); **health/high-stakes class**. Seven live-verified sources, seven claims (six domains + one integrative evidence-gap claim), one entity (ENT-0006 Co-Regulation), one finding (FND-0008). Dual grading (underlying + application) on every claim. Motivated-reasoning guard (wholesome-program direction) named; compound-program gate stated. Awaiting Critical Reviewer (ROLE-0004) and Knowledge Architect (ROLE-0001).|
 |0.2|2026-07-14|Draft|Circuit completed. **Critical Review – RQ-0008: Conformant with Flags** (no Blocked objects, no fabrication; DuBois d ≈ 0.21, Multon, Bandura independently re-verified). Remediations applied: catalogued **SRC-0053 (Bandura 1997)** to anchor CLM-0036's "strongest source" half (now eight sources); narrowed CLM-0034 to the attentional benefit SRC-0047 supports; harmonised CLM-0037 application grade to "Level 2 → 3"; added CLM-0037↔CLM-0040 reciprocal. No confidence levels changed. Reliance gate (STD-0006 §7.5) remains **absolute** pending outside re-verification.|
+|0.3|2026-07-20|Draft|**Formally CLOSED under ADR-GOV-0004 §2 D1 (closure-convention back-application).** D1 bar assessed: **(a)** explicit RQ answer — satisfied at authoring in §4 Findings / Synthesis; **(b)** acceptance criteria — **none apply**, stated-reason path (the criteria practice began at INV-0010; this record predates it and none were ever declared); **(c)** closure banner — added, dated 2026-07-20; **(d)** frontmatter — matches the model instance INV-0010, which holds `status: Draft` / `operational_status: Active` at closure (no Draft→Adopted closure step exists in this vault, and STD-0005's vocabulary has no distinct closed-state value). **No research content altered** — no claim, confidence level, assumption, or finding touched; closure elements are purely additive. Also corrected this record's version-drift instance under **GB-2026-028** (frontmatter read 0.1 against a 0.2 revision-history row; both now coherent at 0.3).|
 
 ---
 

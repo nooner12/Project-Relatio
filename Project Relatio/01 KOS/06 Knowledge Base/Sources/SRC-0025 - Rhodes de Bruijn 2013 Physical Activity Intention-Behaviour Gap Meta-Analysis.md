@@ -1,7 +1,7 @@
 ---
 title: SRC-0025 - Rhodes de Bruijn 2013 Physical Activity Intention-Behaviour Gap Meta-Analysis
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-11

@@ -1,7 +1,7 @@
 ---
 title: SRC-0037 - Simmons Nelson Simonsohn 2011 False-Positive Psychology
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-12

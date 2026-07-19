@@ -1,7 +1,7 @@
 ---
 title: SRC-0029 - Lally 2010 Habit Formation in the Real World
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-11

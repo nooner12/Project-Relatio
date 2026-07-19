@@ -1,7 +1,7 @@
 ---
 title: FND-0012 - Mycelial Network Signaling and the Bounds of Fungal Cognition
 document_type: Finding Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19

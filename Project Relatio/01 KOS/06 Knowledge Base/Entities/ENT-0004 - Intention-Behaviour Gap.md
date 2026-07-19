@@ -1,7 +1,7 @@
 ---
 title: ENT-0004 - Intention-Behaviour Gap
 document_type: Entity Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-11

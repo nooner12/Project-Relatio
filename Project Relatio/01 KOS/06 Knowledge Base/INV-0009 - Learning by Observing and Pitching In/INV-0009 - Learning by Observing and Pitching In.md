@@ -1,7 +1,7 @@
 ---
 title: INV-0009 - Learning by Observing and Pitching In
 document_type: Investigation Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -54,6 +54,8 @@ relationships:
 > **Gate (STD-0006 §7.5; confirmed against the handoff brief's gate section).** This finding is a **Wellness Model research input only** (individual↔family scale). It is **not guidance to any family, not a curriculum, and not client-facing**; it does not reach a Noon Services participant, prospect, or the public, and it is not handed to anyone as instruction, **without independent re-verification outside Project Relatio's circuit** and — for any LLC use — clinical-research-precision and safety-gate routing. *(Live "Standing Context" is a support-surface doc not present in the repo; gate status is set from the brief + STD-0006 §7.5. Confirm against the newest Standing Context on the claude.ai side.)*
 
 > **Scale note.** All ratings are in Relatio's **native `Level N (Label)`** scale (KOS-0003 §8). Translation to any external/house tier (★) is a **boundary step performed off-repo**; the Relatio→house **crosswalk does not exist in the repo** (flagged as a governance gap), so no ★ translation is performed here.
+
+> **CLOSED 2026-07-20 — formal closure under ADR-GOV-0004 §2 D1 (back-application).** This investigation answered its research question at authoring time (**§4 Findings / Synthesis**); what it lacked were the *formal* closure elements, because the D1 closure convention postdates it. **Acceptance criteria: none apply** — the acceptance-criteria practice began with INV-0010, this record predates it, and no criteria were ever declared for it, so there are none to tick (D1(b)'s stated-reason path). **No research content, claim, confidence level, or finding was altered by this closure; the elements added are additive only.** Maturity `status` remains `Draft` and `operational_status` remains `Active`, matching the model instance **INV-0010** — under this vault's convention "closed" means the inquiry is complete, **not** a maturity promotion and **not** a clearance for external reliance.
 
 ---
 
@@ -138,6 +140,7 @@ No claim reaches Level 5. The design expectation in the brief (descriptive/mecha
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-14|Draft|Ninth research workflow (RQ-0009), LOPI. Five live-verified sources (ethnographic + review + two experiments), one entity (ENT-0007), three separately-rated claims (primary L3, mechanism L3, transfer L1→2), one finding (FND-0009). Native `Level N` only; ★-translation deferred off-repo (crosswalk gap). Gate: Wellness Model research input only, externally gated. Motivated-reasoning guards (anti-instruction romanticism; transfer-flattery) named; the "best-evidenced mechanism travels worst" asymmetry is the central result. Awaiting Critical Reviewer (ROLE-0004) and Knowledge Architect (ROLE-0001).|
+|0.2|2026-07-20|Draft|**Formally CLOSED under ADR-GOV-0004 §2 D1 (closure-convention back-application).** D1 bar assessed: **(a)** explicit RQ answer — satisfied at authoring in §4 Findings / Synthesis; **(b)** acceptance criteria — **none apply**, stated-reason path (the criteria practice began at INV-0010; this record predates it and none were ever declared); **(c)** closure banner — added, dated 2026-07-20; **(d)** frontmatter — matches the model instance INV-0010, which holds `status: Draft` / `operational_status: Active` at closure (no Draft→Adopted closure step exists in this vault, and STD-0005's vocabulary has no distinct closed-state value). **No research content altered** — no claim, confidence level, assumption, or finding touched; closure elements are purely additive.|
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: SRC-0040 - Campbell 1979 Assessing the Impact of Planned Social Change
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-12

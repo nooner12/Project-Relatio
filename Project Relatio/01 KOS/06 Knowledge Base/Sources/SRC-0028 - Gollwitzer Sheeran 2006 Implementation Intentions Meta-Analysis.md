@@ -1,7 +1,7 @@
 ---
 title: SRC-0028 - Gollwitzer Sheeran 2006 Implementation Intentions Meta-Analysis
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-11

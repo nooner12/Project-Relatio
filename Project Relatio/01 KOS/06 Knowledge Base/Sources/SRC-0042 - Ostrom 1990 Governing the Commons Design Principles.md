@@ -1,7 +1,7 @@
 ---
 title: SRC-0042 - Ostrom 1990 Governing the Commons Design Principles
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-12
