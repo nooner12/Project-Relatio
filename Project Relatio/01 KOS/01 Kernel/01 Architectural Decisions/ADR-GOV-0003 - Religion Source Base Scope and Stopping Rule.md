@@ -16,7 +16,6 @@ related_documents:
   - Governance Backlog
   - OPS-0001
   - KOS-0007
-  - INV-0014 (named candidate)
 tags:
   - ProjectRelatio
   - ADR
