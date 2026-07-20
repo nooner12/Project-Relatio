@@ -148,6 +148,7 @@ Owner
 |---|---|---|---|
 |0.1|2026-07-09|Draft|Conformant skeleton created (ROLE-NNNN migration).|
 |0.2|2026-07-09|Draft|Substance authored. Flagged as the least-demonstrated role; includes an explicit retirement condition and a non-override rule. Authority/Boundaries PROPOSED.|
+|0.3|2026-07-09|Archived|**RETIRED** under ADR-GOV-0001 — the role had no architectural warrant; its coordinating function was absorbed by **ROLE-0005 Vision Steward**. Moved to `07 Archive`; retirement banner added; `retired` and `superseded_by` fields set. Preserved as historical record per STD-0005 §22. *(Row reconstructed 2026-07-20 by the GB-2026-035 version-coherence check, which found the retirement had bumped the version to 0.3 in the frontmatter and body heading without ever writing this row. The retirement itself is unchanged and independently attested by the frontmatter fields above and by ADR-GOV-0001; only the missing row is supplied.)*|
 
 ---
 
