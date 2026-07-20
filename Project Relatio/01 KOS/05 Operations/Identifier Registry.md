@@ -20,7 +20,7 @@ tags:
 
 # Identifier Registry
 
-## Version 1.23
+## Version 1.24
 
 ## Active Navigation Document
 
