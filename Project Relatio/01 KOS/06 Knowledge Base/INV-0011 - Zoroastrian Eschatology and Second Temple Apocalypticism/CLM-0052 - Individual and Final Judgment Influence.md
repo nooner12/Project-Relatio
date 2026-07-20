@@ -1,7 +1,7 @@
 ---
 title: CLM-0052 - Individual and Final Judgment Influence
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -102,6 +102,24 @@ Judgment is the doctrine case with the **least reliance on the late Pahlavi corp
 
 ---
 
+# Sub-Question Answers (INV-0011 §1)
+
+> Explicit, separable answers to the three sub-questions INV-0011 §1 mandates for every doctrine claim (acceptance criterion #2). Authored at v0.2 from the existing source base (SRC-0067…SRC-0076) only; these answers **restructure and make discrete** the analysis already carried in this record — they change no evidence and no confidence level.
+
+## (i) Dating — is the Zoroastrian doctrine datable *before* the Jewish attestation?
+
+**Qualified yes on relative attestation — the best dating position of the five doctrine cases — but the absolute priority still rests on reconstruction.** Judgment is present in the **oldest attested Zoroastrian layer**: the Gathic Činvat crossing, deeds-based reward and punishment, and the molten-metal ordeal (Yasna 30–31, 43, 51; SRC-0076) — textual presence H-a, with no reliance on the late Pahlavi corpus (no H-d crutch). Its priority *within* Zoroastrianism is therefore secure. But the **absolute** pre-Jewish date depends on the reconstruction dating the Gathas to ~1000 BCE (H-e; SRC-0073's philology, accepted as mainstream but still reconstruction), whereas the Jewish-side individualized/final judgment is firmly datable (Book of the Watchers, 3rd c. BCE; Daniel ~165 BCE — H-a). **Answer: relative Zoroastrian priority well-supported; attested (manuscript) priority over the Jewish texts — no; the asymmetry of CLM-0056 still applies, only in its mildest form here.**
+
+## (ii) Contact pathway — is there an evidenced doctrine-specific transmission channel?
+
+**No. This claim inherits CLM-0057's general verdict (attested opportunity, unattested channel); no doctrine-specific channel evidence exists for judgment.** No source in the base documents a judgment-specific transmission — no attested teaching contact, text, or transmitter carrying the Činvat/judgment complex to Judaean or diaspora circles (SRC-0070's "selective adaptation" names a mode, not a documented channel). The explicit negative stands as the finding: the Persian-period window supplies opportunity only.
+
+## (iii) Independent development — does the influence thesis survive the strongest rival explanation?
+
+**The strongest rival is independent development along the internal Israelite "Day of YHWH" trajectory, and the influence thesis survives it only as a plausible, non-necessary contribution.** Steelmanned: prophetic collective judgment (Amos 5; Zephaniah; Joel) plus the individualization of responsibility already inner-biblical (Ezekiel 18), eschatologized under Second Temple and Hellenistic-era pressures, can produce individual post-mortem and final judgment without any Persian input — an unusually strong internal source, at least as strong as the influence reading (SRC-0067 Barr; Consensus §above, Divided). The influence thesis survives as *plausible contributor* — the Gathic dating position (item (i)) keeps it live where resurrection's case fails — but not as a demonstrated source. **Independent development is the main cap holding this claim at Level 3 (Moderate) rather than higher.**
+
+---
+
 # Confidence (KOS-0003 §8)
 - **Level 3 (Moderate)** — that Zoroastrian influence plausibly contributed to the Second Temple individualization and cosmologizing of judgment. Held at Moderate: although this case has the **best Zoroastrian dating position** (Gathic, H-a textual presence), the internal Israelite "Day of YHWH → eschatological judgment" trajectory is a strong sufficient alternative, and the Gathic *absolute* date is reconstruction. Not higher for those reasons; not lower because the early-layer attestation genuinely removes the "late-attestation" defect that weakens resurrection and the Saoshyant.
 
@@ -132,5 +150,6 @@ Judgment is the doctrine case with the **least reliance on the late Pahlavi corp
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0011. Level 3 (Moderate): judgment influence plausible with the best Zoro-side dating position (Gathic, H-a textual presence, H-e absolute date), bounded by a strong internal "Day of YHWH" alternative. Dual-coding: Zoro H-a→H-e, Jewish H-a. Pending review/validation.|
+|0.2|2026-07-21|Draft|**Sub-Question Answers section added (INV-0011 §1 / acceptance criterion #2), Specialist pass (ROLE-0002).** The three sub-questions now answered explicitly and separably: (i) dating — qualified yes on relative (Gathic-layer) attestation, the best position of the five cases, but absolute priority reconstruction-only (H-e); (ii) contact pathway — No doctrine-specific channel, inherits CLM-0057 (explicit negative); (iii) independent development — Day-of-YHWH trajectory (with Ezekiel 18 individualization) named and steelmanned as at-least-equal rival; influence survives as plausible non-necessary contributor and the rival is the main cap at Moderate. Restructures existing analysis from the existing source base (SRC-0067…SRC-0076) only; no evidence added, no confidence level changed (Level 3 unchanged). Verification: inherited from the v0.2-cycle source disclosures and Critical Review re-verification; no new verification claims made. Pending ROLE-0004 review.|
 
 # End CLM-0052

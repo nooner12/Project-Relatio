@@ -1,7 +1,7 @@
 ---
 title: CLM-0055 - Saoshyant Savior Figure Influence
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -101,6 +101,24 @@ This is the case where even the pro-influence sources are cautious and the measu
 
 ---
 
+# Sub-Question Answers (INV-0011 §1)
+
+> Explicit, separable answers to the three sub-questions INV-0011 §1 mandates for every doctrine claim (acceptance criterion #2). Authored at v0.2 from the existing source base (SRC-0067…SRC-0076) only; these answers **restructure and make discrete** the analysis already carried in this record — they change no evidence and no confidence level.
+
+## (i) Dating — is the Zoroastrian doctrine datable *before* the Jewish attestation?
+
+**No — the name is early-by-reconstruction only, and everything distinctive is late.** The Saoshyant is *named* in the Younger Avesta (Yasht 13.129; described Yasht 19.88–96; SRC-0076), with that layer's pre-Jewish date resting on linguistic reconstruction (H-e). The **distinctive** Saoshyant profile — miraculous conception from Zoroaster's preserved seed, the three successive world-saviors, the savior as agent of the universal resurrection — is systematically attested only in the 9th-c.-CE Pahlavi Bundahišn (H-d), centuries *after* the datable Jewish messianic texts (Psalms of Solomon 17, Qumran messianic texts — H-a), and the Jewish stream's own taproot (2 Samuel 7) is far earlier. **For the features that would make the parallel meaningful, documented attestation runs Jewish-side-first; no Zoroastrian priority is established.**
+
+## (ii) Contact pathway — is there an evidenced doctrine-specific transmission channel?
+
+**No. This claim inherits CLM-0057's general verdict (attested opportunity, unattested channel); no doctrine-specific channel evidence exists for the savior figure.** No source in the base evidences transmission of the Saoshyant expectation to Jewish circles — and here even the pro-influence pole declines to assert one (SRC-0072 Hultgård frames Iranian influence as diffuse stimulus, not a savior-doctrine handover). The explicit negative stands.
+
+## (iii) Independent development — does the influence thesis survive the strongest rival explanation?
+
+**The strongest rival is independent development from the Davidic-royal tradition, and the influence thesis does not survive it.** Steelmanned: Jewish messianism derives transparently from the Davidic covenant (2 Samuel 7), the royal psalms, and prophetic restoration hope, individualized into the "anointed one" of Second Temple expectation (SRC-0071 Collins — datable, internal, sufficient); the resulting figure (an anointed Davidic king restoring Israel) shares with the Saoshyant only the generic feature "future deliverer," while the Saoshyant's distinctive features are late-attested (item (i)) and non-mapping (a resurrection-effecting cosmic benefactor, not a royal restorer). The rival explains everything the Jewish evidence contains without remainder; influence adds nothing the internal account needs (SRC-0067 Barr's generic-resemblance diagnosis). **What survives is only an unexcludable shared "future deliverer" horizon — which is why the claim sits at Level 2 (Low) as a verdict *against* meaningful influence rather than lower, and why the popular Persia→messiah→Christ pipeline is explicitly resisted.**
+
+---
+
 # Confidence (KOS-0003 §8)
 - **Level 2 (Low)** — and the Low is a verdict *against* meaningful influence: the evidence does not support a Saoshyant→Jewish-messiah influence, though a generic eschatological-deliverer resemblance exists. Held at Low rather than Level 1/0 because a diffuse shared "future savior" horizon is not nothing and cannot be positively excluded; but the distinctive features and dating both fail, so no higher level is warranted, and the honest reading leans negative.
 
@@ -131,5 +149,6 @@ This is the case where even the pro-influence sources are cautious and the measu
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0011. Level 2 (Low), leaning negative: Saoshyant→messiah is the weakest case — generic parallel, distinctive features late-attested (Pahlavi H-d) and non-mapping, strong internal Davidic source. Dual-coding: Zoro H-e→H-d, Jewish H-a. Explicitly resists the Persia→messiah→Christ pipeline. Pending review/validation.|
+|0.2|2026-07-21|Draft|**Sub-Question Answers section added (INV-0011 §1 / acceptance criterion #2), Specialist pass (ROLE-0002).** (i) dating — No: name early-by-reconstruction only (H-e), all distinctive features Pahlavi (H-d) and post-Jewish; (ii) contact pathway — No doctrine-specific channel, inherits CLM-0057 (explicit negative; even the pro-influence pole declines to assert one); (iii) independent development — Davidic-royal 2 Samuel 7 trajectory named and steelmanned as sufficient-without-remainder; the influence thesis does not survive it, leaving only the unexcludable generic "future deliverer" horizon. Restructures existing analysis from the existing source base (SRC-0067…SRC-0076) only; no evidence added, no confidence level changed (Level 2, leaning negative, unchanged). Verification: inherited from the v0.2-cycle source disclosures and Critical Review re-verification; no new verification claims made. Pending ROLE-0004 review.|
 
 # End CLM-0055

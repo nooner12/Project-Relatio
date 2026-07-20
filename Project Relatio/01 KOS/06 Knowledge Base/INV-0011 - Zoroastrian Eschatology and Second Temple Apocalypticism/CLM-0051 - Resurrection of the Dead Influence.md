@@ -1,7 +1,7 @@
 ---
 title: CLM-0051 - Resurrection of the Dead Influence
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -102,6 +102,24 @@ Pro-influence (SRC-0068, SRC-0069) is authoritative but its early-dating case is
 
 ---
 
+# Sub-Question Answers (INV-0011 §1)
+
+> Explicit, separable answers to the three sub-questions INV-0011 §1 mandates for every doctrine claim (acceptance criterion #2). Authored at v0.2 from the existing source base (SRC-0067…SRC-0076) only; these answers **restructure and make discrete** the analysis already carried in this record — they change no evidence and no confidence level.
+
+## (i) Dating — is the Zoroastrian doctrine datable *before* the Jewish attestation?
+
+**No — not by attestation; only by reconstruction.** The one Avestan text that undeniably attests resurrection is Yasht 19.89–92 (Younger Avestan), and its pre-Jewish date rests on linguistic reconstruction (H-e), itself only "presumably" Achaemenid (SRC-0076); the *systematic* resurrection doctrine (the full Frashokereti sequence) is attested only in the 9th-c.-CE Pahlavi Bundahišn (H-d) — centuries *after* Daniel 12:2 (~165 BCE, H-a), the firmly-datable first unambiguous Jewish bodily-resurrection text. The pro-influence early-dating case (SRC-0068 Boyce, with SRC-0069 Cohn derivative of it) is an argument from faithful oral transmission, not from attestation (SRC-0067 Barr; cf. CLM-0056). **Documented priority therefore runs Jewish-side-first; Zoroastrian priority is reconstructed, not attested** — the weakest dating position of the five doctrine cases.
+
+## (ii) Contact pathway — is there an evidenced doctrine-specific transmission channel?
+
+**No. This claim inherits CLM-0057's general verdict (attested opportunity, unattested channel); no doctrine-specific channel evidence exists for resurrection.** Nothing in the source base evidences a resurrection-specific transmission event — no Magi–priest instruction, no translated text, no named transmitter carrying this doctrine (SRC-0075's loci are reconstructed, not documented). This explicit negative is the finding, not a formality: the Persian-period contact window (539–332 BCE) supplies *opportunity* for the doctrine to cross, and nothing more.
+
+## (iii) Independent development — does the influence thesis survive the strongest rival explanation?
+
+**The strongest rival is independent development by inner-Jewish (post-exilic, Maccabean-era) growth, and the influence thesis survives it only in weakened, non-necessary form.** Steelmanned: Daniel 12:2 arises directly from the Maccabean martyrdom crisis (~167–164 BCE) — the theological necessity of vindicating those who died faithful — with inner-biblical roots in Isaiah 26:19 and Ezekiel 37 and in the logic of divine justice; this pathway is **conceded sufficient** to produce the doctrine without any Persian input (SRC-0067; cf. SRC-0071's crisis framing). The influence thesis survives only as a *plausible additional or catalytic factor* (SRC-0072 Hultgård's stimulus model), not as a demonstrated necessity — and because the rival is sufficient while Zoroastrian priority is reconstruction-only (item (i)), independent development is a principal reason this claim's confidence is held at **Level 2 (Low)**.
+
+---
+
 # Confidence (KOS-0003 §8)
 - **Level 2 (Low)** — that Zoroastrian influence is a plausible contributing factor in the emergence of Jewish bodily resurrection. **Lowered from Level 3 to Level 2 per Critical Review – RQ-0011 F-1 (path a).** KOS-0003 §8 Level 2 ("Limited support; **major unresolved issues or significant disagreement**") fits this claim at least as well as Level 3, because resurrection is the **only** doctrine case weak on *both* load-bearing axes simultaneously: (i) the Zoroastrian early-dating priority is reconstruction-only (H-e), itself only "presumably" Achaemenid, and the systematic form post-dates Daniel (H-d); *and* (ii) the consensus is genuinely **Divided**, with a conceded-sufficient internal Maccabean pathway and a pro-influence case that reduces largely to one contested line (Boyce; Cohn derivative). Per INV-0011 §3.1, distinctive-parallel strength **cannot** rescue reconstruction-only priority — using it to hold parity with the better-dated CLM-0052 (Gathic judgment) and the more-specific-and-less-contested CLM-0053 (dualism) is exactly the move §3.1 cautions against. **Not Level 1:** the parallel is genuinely distinctive and the contact real, so influence is a live candidate, not speculative. **Not Level 3:** it does not clear "reasonable support / interpretation may vary" once the double weakness and the non-independence are counted.
 
@@ -133,5 +151,6 @@ Pro-influence (SRC-0068, SRC-0069) is authoritative but its early-dating case is
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0011. Level 3 (Moderate): resurrection influence plausible and comparatively strong (distinctive parallel + Persian-period contact), not established (Zoro-side early dating H-e/H-d; systematic form post-dates Daniel; Maccabean internal pathway steelmanned). Dual-coding: Zoro H-e→H-d, Jewish H-a. Pending ROLE-0004 review and ROLE-0001 validation.|
 |0.1a|2026-07-19|Draft|**Lowered Level 3 (Moderate) → Level 2 (Low) per Critical Review – RQ-0011 F-1 (path a).** Resurrection is the only doctrine case weak on *both* load-bearing axes at once (reconstruction-only, post-Daniel Zoroastrian priority H-e→H-d *and* Divided consensus) with a conceded-sufficient internal Maccabean pathway; distinctive-parallel strength cannot rescue reconstruction-only priority (INV-0011 §3.1). Independence score lowered 3 → 2 (Cohn non-independent of Boyce, so the pro-influence priority case reduces to one contested line). Title, Claim, Confidence, Limitations, and Alternative Interpretation #1 recast to Low. Dual-coding unchanged (Zoro H-e→H-d, Jewish H-a).|
+|0.2|2026-07-21|Draft|**Sub-Question Answers section added (INV-0011 §1 / acceptance criterion #2), Specialist pass (ROLE-0002).** The three sub-questions now answered explicitly and separably: (i) dating — No, priority reconstruction-only (Yasht 19 H-e; systematic form Pahlavi H-d, post-Daniel); (ii) contact pathway — No doctrine-specific channel, inherits CLM-0057 (explicit negative); (iii) independent development — Maccabean-crisis inner-Jewish growth named and steelmanned as conceded-sufficient; influence survives only as non-necessary catalytic factor. Restructures existing analysis from the existing source base (SRC-0067…SRC-0076) only; no evidence added, no confidence level changed (Level 2 unchanged). Verification: inherited from the v0.2-cycle source disclosures and Critical Review re-verification; no new verification claims made. Pending ROLE-0004 review.|
 
 # End CLM-0051
