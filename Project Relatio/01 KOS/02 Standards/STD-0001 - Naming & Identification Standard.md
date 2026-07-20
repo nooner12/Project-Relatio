@@ -1,7 +1,7 @@
 ---
 title: STD-0001 - Naming & Identification Standard
 document_type: Standards Document
-version: 1.4
+version: 1.5
 status: Adopted
 operational_status: Active
 category:
@@ -30,7 +30,7 @@ tags:
 
 # Project Relatio Naming & Identification Standard
 
-## Version 1.4
+## Version 1.5
 
 ## Adopted Standards Document
 
@@ -356,7 +356,11 @@ The margin between 180 and the remaining headroom is deliberate buffer against d
 
 Because a long path is produced jointly by folder nesting and descriptive file names, the practical lever is §10's title discipline: keep descriptive wording bounded (the FND-0006 precedent — shorten the title, preserve the identifier).
 
-**Existing violators are grandfathered.** Renames rewrite graph references (STD-0004) and are therefore an **owner decision**, never an incidental correction. A conforming scan reports violations; it does not fix them.
+**Renames are an owner decision.** Bringing an over-budget file into conformance rewrites graph references (STD-0004) and is therefore **never an incidental correction**. A conforming scan reports violations; it does not fix them.
+
+**The grandfather set is empty (2026-07-21).** When this rule was placed on 2026-07-20 it grandfathered the four files then over budget — CLM-0020, CLM-0023, CLM-0025 and CLM-0026, all in `INV-0006`, at 186/185/209/182 relative characters. The owner approved a rename map on **2026-07-21** and all four were shortened to **175/176/171/179**, within budget. Identifiers, claim statements, evidence, grading and relationships were unchanged; only descriptive titles were shortened, per the §10 lever above. **No file in the vault now exceeds either the 180-character budget or the 260-character `MAX_PATH` ceiling.**
+
+This clears the backlog; it does not retire the rule. The **hazard** and the **preventive rule** above remain in force for every file created hereafter, and the mandatory extended-length path handling is unconditional — a scan is non-conforming without it whether or not any file is currently over the ceiling.
 
 ---
 
@@ -709,6 +713,7 @@ Project Relatio adopts:
 |1.2|2026-07-09|Adopted|Added INV (Investigation) and FND (Finding) identifier classes to §5, defined by KOS-0012 and demonstrated needed by the RQ-0001 pressure test|
 |1.3|2026-07-09|Adopted|§18 updated: the Identifier Registry now exists (05 Operations), fulfilling the standard's registry requirement|
 |1.4|2026-07-20|Adopted|**Path Length Constraint added as a subsection of §8, per ADR-GOV-0005 §5(c)** (which directed the operative text be amended into the document owning file-naming/path conventions; STD-0001 §7/§8/§10 is that owner). Records **§5(a) the hazard** — paths over the 260-character Windows `MAX_PATH` are invisible to naive scanners (four such files as of 2026-07-20, one carrying drift a clean-reporting validator had passed), making extended-length path handling **mandatory for all vault tooling** and any scan without it non-conforming and invalid; and **§5(b) the preventive rule** — relative path from vault root **≤180 characters**, with existing violators **grandfathered** because renames rewrite graph references and are owner-reserved. Cross-referenced to §10 title discipline as the practical lever. Placed as a `##` subsection to avoid renumbering §9–§22; no existing rule altered.|
+|1.5|2026-07-21|Adopted|**§8 Path Length Constraint — grandfather set closed.** The four files grandfathered when the rule was placed (CLM-0020, CLM-0023, CLM-0025, CLM-0026, all in INV-0006, at 186/185/209/182 relative characters) were **renamed under owner approval 2026-07-21** to 175/176/171/179, all within the 180-character budget; graph references were updated in the same commit. **No vault file now exceeds the 180 budget or the 260 `MAX_PATH` ceiling.** The grandfather clause is rewritten to record this and to state that clearing the backlog does **not** retire the rule: the hazard record, the ≤180 preventive rule, and the unconditional extended-length-path-handling requirement all remain in force for files created hereafter. No identifier, claim, evidence, grading, or relationship changed.|
 
 ---
 
