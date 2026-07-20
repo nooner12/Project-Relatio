@@ -114,8 +114,8 @@ Done (2026-07-11, Phase II re-scope — owner-directed):
 
 Open / next (all tracked in `05 Operations/Governance Backlog.md` — consult it first):
 - ~~Role authority ratification (GB-2026-011)~~ — **done 2026-07-09.** All active roles Adopted; two refinements applied (ROLE-0002 §4.2a scope boundary; ROLE-0004 §5 procedural-independence limit). The research circuit now runs on Adopted definitions.
-- **First real agent run (top priority):** put a 4th research question through the full agent circuit (Specialist → Critical Reviewer → Knowledge Architect) — the first genuine test of the specialists as agents.
-- **Graph-integrity automation** (OPS-0002 §6 / GB-2026-004): build only when the KB outgrows manual checks.
+- **Agent circuit:** operational. The Specialist → Critical Reviewer → Knowledge Architect circuit has run live; sessions execute via transfer briefs. Current priorities live in the Backlog, not here.
+- **Graph-integrity automation:** built (`tools/graph_integrity.py`, per OPS-0002 §6 — dangling-reference and one-directional-link checks over `related_documents`/`parent_documents`). Run it every session; do not trace by hand.
 
 **The Governance Backlog is now the single source of open items** (replacing the scattered lists). Deferred-by-decision items (GB-2026-002 quantitative evidence, GB-2026-003 entity template, GB-2026-008 ST-003) live there with their decision status — do not action without demonstrated need or the Vision Steward's approval. *(GB-005 phantom ADRs, GB-2026-007 KOS-0200 fate, GB-2026-006 two-dimensional lifecycle field, and GB-2026-001 typed relationships are now resolved — see the Backlog §3.)*
 
