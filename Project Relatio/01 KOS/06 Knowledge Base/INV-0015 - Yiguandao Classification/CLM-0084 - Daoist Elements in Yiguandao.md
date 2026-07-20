@@ -1,7 +1,7 @@
 ---
 title: CLM-0084 - Daoist Elements in Yiguandao
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -53,6 +53,7 @@ relationships:
 - **Strongest available sourcing:** SRC-0134 (live-read) states the Quanzhen-derived datum directly: Wang Jueyi "added a strong neo-Confucian interpretation on top of existing teachings derived from Quanzhen Daoism" — i.e., the profile's own account both *affirms* a Daoist-derived stratum and *frames* it as material subsequently reinterpreted within the sectarian line. SRC-0133 (review-verified) documents the milieu mechanism: Taiwan's spirit-writing sectarian family absorbs and recombines materials across traditions as its normal mode.
 - **Language & accessibility:** English; SRC-0134 open (content-verified); SRC-0133 paywalled (review-verified). The specialist literature that would inventory Daoist elements item-by-item (largely Chinese-language, or in paywalled monographs) is **not in the accessible base — recorded as a gap**: this claim grades the presence and the field's treatment, not an inventory.
 - **What is and is not establishable:** presence of Daoist-derived elements — establishable (directly attested, live-read); their *treatment as strands* — establishable across the surveyed base (it is how every surveyed source frames them); an *itemized inventory or proportion* — **not establishable from the accessible base** and not asserted.
+- **Single-source specificity disclosure (Critical Review – RQ-0015 F-2, adopted):** the *general* presence of Daoist elements and vocabulary is uncontested across the surveyed base; the *specific* genetic attribution "derived from **Quanzhen** Daoism" is a **single-reference-work attribution** (one sentence of SRC-0134), uncorroborated elsewhere in the accessible base, and the precise Daoist ancestry of the Xiantiandao line is contested in the wider literature. The claim's Level 3 covers the presence-plus-treatment content; the Quanzhen-specificity is carried at the lower evidential weight this disclosure states, not at the claim's headline grade.
 
 # Element (b) — Classification Bearing
 - **What this claim establishes:** the distinction the revised RQ turns on when it asks about Yiguandao "in relation to Daoism": the relation the surveyed field describes is **genetic incorporation** (Daoist-derived materials inside a sectarian synthesis), not **taxonomic membership** (being a school *of* Daoism). Reading C touches the Daoist-strand question here exactly and goes no further.
@@ -105,6 +106,7 @@ SRC-0134 moderate-to-high authority, open, fully read; SRC-0133 high authority, 
 # Revision History
 |Version|Date|Status|Description|
 |---|---|---|---|
+|0.2|2026-07-20|Draft|**Critical Review – RQ-0015 F-2 adopted (recommendation):** element (a) gains an explicit single-source specificity disclosure — the "derived from Quanzhen Daoism" genetic attribution is a single-reference-work datum carried below the claim's headline grade, distinct from the uncontested general presence of Daoist elements. No level change (reviewer-confirmed L3 for the claim-as-worded).|
 |0.1|2026-07-20|Draft|Created for RQ-0015. Level 3 (Moderate): Daoist elements real (Quanzhen-derived stratum live-read) and treated by the surveyed field as incorporated strands, not lineage membership; lineage-membership reading steelmanned to its descent-observation core; strand-counting slide guarded per §3.1. Elements (a)/(b)/(c) discrete. Pending review/validation.|
 
 # End CLM-0084

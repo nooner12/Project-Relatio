@@ -1,7 +1,7 @@
 ---
 title: CLM-0085 - Yiguandao Self-Understanding and Daoism
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -55,7 +55,7 @@ relationships:
 - **What is and is not establishable:** the self-understanding of the World Headquarters umbrella, as published in English — establishable, live-read; the self-understanding of *all* divisions of a divisionally plural movement, or of the Chinese-language internal corpus — **not establishable from this base** (the claim's central bound).
 
 # Element (b) — Classification Bearing
-- **What this claim establishes:** the fact the revised RQ's final clause asks for — how the classification *relates to* self-understanding. The relation found is **not head-on contradiction**: the read self-account does not assert the proposition ("Yiguandao is a school of Daoism") whose academic denial would collide with it; it asserts primordial trans-religion transmission — a claim in a different register and, notably, one *structurally consonant* with the field's observation that the movement is not an institutional-Daoist school (both agree it is not simply that; they diverge on what it *is*, in registers that do not meet).
+- **What this claim establishes:** the fact the revised RQ's final clause asks for — how the classification *relates to* self-understanding. The relation found is **not head-on contradiction**: the read self-account does not assert the proposition ("Yiguandao is a school of Daoism") whose academic denial would collide with it; it asserts primordial trans-religion transmission — a claim in a different register. **This observation is descriptive of the two registers' relation and carries no evidential weight for the classification in either direction (§2.1)**: that the two accounts do not collide is a fact about their *shape*, not corroboration of the scholarly placement by the self-account (which is not evidence in the scholarly register) nor of the self-account by the placement. They diverge on what the movement *is*, in registers that do not meet — and this record grades neither register by the other (Critical Review – RQ-0015 F-1 disclaimer foregrounded here).
 - **What it does not reach (dual-track rule, both directions):** the self-understanding **settles nothing** about the academic classification — primordiality claims are not evidence in the scholarly register; and the classification **dismisses nothing** about the self-understanding — the lineage theology is recorded at its own full strength as the movement's operative self-account.
 
 # Element (c) — Rival / Counter-Reading (Steelmanned)
@@ -107,6 +107,7 @@ SRC-0135: authoritative *for its own register* (it is the movement speaking), co
 # Revision History
 |Version|Date|Status|Description|
 |---|---|---|---|
+|0.2|2026-07-20|Draft|**Critical Review – RQ-0015 F-1 adopted (recommendation):** element (b)'s "structurally consonant" phrasing replaced with an explicit no-evidential-weight disclaimer at the exact sentence — the registers' non-collision is a fact about their shape, corroborating neither track by the other. No grade or content change.|
 |0.1|2026-07-20|Draft|Created for RQ-0015. Level 3 (Moderate), scope-bounded to the live-read World Headquarters voice: self-understanding = primordial trans-religion Dao transmission (Fuxi-anchored lineage), no school-of-Daoism self-claim on the read page, Confucian public lean; dual-track discipline held in both directions; reductionist counter-reading steelmanned into a recorded gap. Elements (a)/(b)/(c) discrete. Pending review/validation.|
 
 # End CLM-0085

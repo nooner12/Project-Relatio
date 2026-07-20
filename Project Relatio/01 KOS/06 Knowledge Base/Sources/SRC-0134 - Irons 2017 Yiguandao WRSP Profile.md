@@ -1,7 +1,7 @@
 ---
 title: SRC-0134 - Irons 2017 Yiguandao WRSP Profile
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -59,7 +59,7 @@ Edward Irons, "Yiguandao," World Religions and Spirituality Project (WRSP), publ
 
 # 4. Key Content / Passages Used
 - The dated lineage spine (all read live): c. 1875 formation under Wang Jueyi out of **Xiantiandao**; 1905 naming by Liu Qingxu; 1919 Lu Zhongyi; 1930 Zhang Tianran/Sun Suzhen; 1934 refashioning; 1987 legalization; 2005 scale figures (CLM-0081).
-- Doctrinal composition (read live): Ancient/Eternal Mother cosmology with the **three ages ("Green Yang, Red Yang, and White Yang")**; incorporation of "the three Buddhas (Lamplighter, Sakyamuni, Maitreya), as well as all deities and the various founders of all religions, such as Jesus and Mohammed"; the "obtain first, then cultivate" soteriology (CLM-0082).
+- Doctrinal composition (read live): Ancient/Eternal Mother cosmology with the **three ages ("Green Yang, Red Yang, and White Yang")**; incorporation of "the three Buddhas (Lamplighter, Sakyamuni, Maitreya), as well as all deities and the various founders of all religions, such as Jesus and Mohammed"; the "obtain first, then cultivate" soteriology; and **Yiguandao-specific practice data — *fuji* spirit-writing revelation and *fotang* Buddha-hall congregational organization** (itemized at Critical Review – RQ-0015 F-3; re-confirmed live by the reviewer) (CLM-0082).
 - The Daoist-lineage datum (read live): Wang Jueyi "added a strong neo-Confucian interpretation on top of existing teachings **derived from Quanzhen Daoism**" — the profile's statement of a real Daoist-derived strand in the Xiantiandao inheritance (CLM-0084).
 - Classification usage (read live): "Chinese syncretic religion" / new religious movement with millenarian-salvationist dimensions; a modernization of earlier sectarian traditions — not classed as a school of Daoism (CLM-0083 census).
 
@@ -73,6 +73,7 @@ Edward Irons, "Yiguandao," World Religions and Spirituality Project (WRSP), publ
 # 7. Revision History
 |Version|Date|Status|Description|
 |---|---|---|---|
+|0.2|2026-07-20|Draft|**Critical Review – RQ-0015 F-3 adopted (recommendation):** §4 now itemizes the Yiguandao-specific *fuji* spirit-writing and *fotang* Buddha-hall data (present in the live-read page; reviewer re-confirmed) so CLM-0082's spirit-writing citation routes here rather than through the scope-restricted SRC-0133.|
 |0.1|2026-07-20|Draft|Created for RQ-0015. The base's strongest-verified source (full content read live): dated lineage spine, doctrinal composition, Quanzhen-derived strand datum, classification usage. English; open access.|
 
 # End SRC-0134

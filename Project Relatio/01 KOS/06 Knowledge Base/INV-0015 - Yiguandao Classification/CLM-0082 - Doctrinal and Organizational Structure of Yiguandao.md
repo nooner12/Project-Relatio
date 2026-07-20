@@ -1,7 +1,7 @@
 ---
 title: CLM-0082 - Doctrinal and Organizational Structure of Yiguandao
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -56,7 +56,7 @@ relationships:
 ---
 
 # Element (a) — Source & Base
-- **Strongest available sourcing:** SRC-0134 (live-read) carries the doctrinal specifics quoted above (Mother cosmology; three ages named; the multi-tradition pantheon including Jesus and Mohammed; obtain-then-cultivate soteriology). SRC-0131 (Billioud, current OUP monograph) carries the Confucian-dominance datum at publisher-description level (Confucianism as the movement's public face and authorities-facing strategy). SRC-0133 (Jordan & Overmyer) documents the spirit-writing sectarian practice family at review-verified level; SRC-0132 adds the congregational/organizational analysis at review-verified level.
+- **Strongest available sourcing:** SRC-0134 (live-read) carries the doctrinal specifics quoted above (Mother cosmology; three ages named; the multi-tradition pantheon including Jesus and Mohammed; obtain-then-cultivate soteriology) **and the Yiguandao-specific practice data — *fuji* spirit-writing revelation and *fotang* Buddha-hall organization (citation routed here per Critical Review – RQ-0015 F-3; the datum is live-read, not inherited from the milieu source)**. SRC-0131 (Billioud, current OUP monograph) carries the Confucian-dominance datum at publisher-description level (Confucianism as the movement's public face and authorities-facing strategy). SRC-0133 (Jordan & Overmyer) documents the **milieu only** — the Taiwanese spirit-writing sectarian practice family as a formation — at review-verified level with its scope restriction intact; SRC-0132 adds the congregational/organizational analysis at review-verified level.
 - **Language & accessibility:** all English; SRC-0134 open (content-verified); SRC-0131/0132/0133 paywalled (bibliographic verification; interiors unread — disclosed).
 - **What is and is not establishable:** the composition's main elements and the Confucian public dominance are establishable at the stated verification levels; **precise strand *proportions* (how much of the ritual corpus is Daoist-derived vs. Confucian vs. Buddhist) are NOT establishable from the accessible base** — no source read this session quantifies them — and are recorded as a gap, not estimated.
 
@@ -113,6 +113,7 @@ See SRC-0134 (moderate-to-high, open), SRC-0131 (high, paywalled), SRC-0132 (hig
 # Revision History
 |Version|Date|Status|Description|
 |---|---|---|---|
+|0.2|2026-07-20|Draft|**Critical Review – RQ-0015 F-3 adopted (recommendation):** Yiguandao-specific spirit-writing (*fuji*) and Buddha-hall (*fotang*) citation re-routed from the scope-restricted milieu source SRC-0133 to the live-read SRC-0134 where the datum actually lives; SRC-0133 retained for milieu only. No level or content change.|
 |0.1|2026-07-20|Draft|Created for RQ-0015. Level 3 (Moderate): Eternal-Mother/three-age architecture with multi-tradition incorporation and Confucian public dominance; strand proportions recorded as a gap, not estimated; Daoist-core counter-reading steelmanned, its content routed to CLM-0084. Elements (a)/(b)/(c) discrete. Pending review/validation.|
 
 # End CLM-0082
