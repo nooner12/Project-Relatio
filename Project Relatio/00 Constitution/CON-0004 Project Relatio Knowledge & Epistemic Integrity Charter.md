@@ -27,7 +27,7 @@ tags:
 
 # Project Relatio Knowledge & Epistemic Integrity Charter
 
-## Version 1.0
+## Version 1.1
 
 ## Adopted Constitutional Instrument
 
