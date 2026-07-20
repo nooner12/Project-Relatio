@@ -1,7 +1,7 @@
 ---
 title: STD-0001 - Naming & Identification Standard
 document_type: Standards Document
-version: 1.3
+version: 1.4
 status: Adopted
 operational_status: Active
 category:
@@ -30,7 +30,7 @@ tags:
 
 # Project Relatio Naming & Identification Standard
 
-## Version 1.3
+## Version 1.4
 
 ## Adopted Standards Document
 
@@ -337,6 +337,26 @@ Examples:
 
 05 Operations
 ```
+
+---
+
+## Path Length Constraint
+
+*Added per **ADR-GOV-0005 §5**. Governs §7 file names and §8 folder nesting jointly, since a path length is the sum of both.*
+
+**Hazard.** Vault files whose absolute Windows path exceeds the `MAX_PATH` limit of **260 characters** are **invisible to naive scanners**. Four such files existed as of 2026-07-20; one carried undetected version drift that a clean-reporting validator had passed. Accordingly:
+
+> **Any tool that enumerates the vault MUST use extended-length path handling** (the `\\?\` prefix or equivalent). A scan performed without it is **non-conforming, and its results are invalid regardless of what it reports** — including a clean report.
+
+**Preventive rule.** The vault root occupies ~78 absolute characters, leaving ~182 of headroom beneath the 260 ceiling. Therefore:
+
+> **A file's path relative to the vault root shall not exceed 180 characters.**
+
+The margin between 180 and the remaining headroom is deliberate buffer against drive-prefix variation and sync-client overhead.
+
+Because a long path is produced jointly by folder nesting and descriptive file names, the practical lever is §10's title discipline: keep descriptive wording bounded (the FND-0006 precedent — shorten the title, preserve the identifier).
+
+**Existing violators are grandfathered.** Renames rewrite graph references (STD-0004) and are therefore an **owner decision**, never an incidental correction. A conforming scan reports violations; it does not fix them.
 
 ---
 
@@ -688,6 +708,7 @@ Project Relatio adopts:
 |1.1|2026-07-09|Adopted|Added reconciliation notes deferring to STD-0005 as authoritative on versioning (§11) and lifecycle states (§12), resolving conflicts found in the pre-STD-0006 audit; non-destructive (original text retained)|
 |1.2|2026-07-09|Adopted|Added INV (Investigation) and FND (Finding) identifier classes to §5, defined by KOS-0012 and demonstrated needed by the RQ-0001 pressure test|
 |1.3|2026-07-09|Adopted|§18 updated: the Identifier Registry now exists (05 Operations), fulfilling the standard's registry requirement|
+|1.4|2026-07-20|Adopted|**Path Length Constraint added as a subsection of §8, per ADR-GOV-0005 §5(c)** (which directed the operative text be amended into the document owning file-naming/path conventions; STD-0001 §7/§8/§10 is that owner). Records **§5(a) the hazard** — paths over the 260-character Windows `MAX_PATH` are invisible to naive scanners (four such files as of 2026-07-20, one carrying drift a clean-reporting validator had passed), making extended-length path handling **mandatory for all vault tooling** and any scan without it non-conforming and invalid; and **§5(b) the preventive rule** — relative path from vault root **≤180 characters**, with existing violators **grandfathered** because renames rewrite graph references and are owner-reserved. Cross-referenced to §10 title discipline as the practical lever. Placed as a `##` subsection to avoid renumbering §9–§22; no existing rule altered.|
 
 ---
 
