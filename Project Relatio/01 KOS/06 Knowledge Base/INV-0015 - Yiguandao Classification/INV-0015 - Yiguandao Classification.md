@@ -1,7 +1,7 @@
 ---
 title: INV-0015 - Yiguandao Classification
 document_type: Investigation Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -23,7 +23,7 @@ tags:
 
 # INV-0015
 
-# The Academic Classification of Yiguandao — On What Basis, and at What Evidential Grade, Is It Classed as a Chinese Salvationist Religion Rather Than a School of Daoism
+# The Academic Classification of Yiguandao — How Religious Studies Classifies Yiguandao in Relation to Daoism and to Chinese Salvationist Religions, on What Basis, at What Grade, and with What Consensus or Dissent
 
 ## Draft Investigation Record
 
@@ -41,9 +41,9 @@ tags:
 
 # 1. Research Question
 
-**Primary (authoritative wording, owner-ratified):**
+**Primary (authoritative wording, owner-ratified; revised by owner ruling at v0.2 to the symmetric, non-prejudging form):**
 
-> On what basis, and at what evidential grade, does academic religious studies classify Yiguandao (I-Kuan Tao) as a Chinese salvationist religion rather than as a school of Daoism — and how does that classification withstand Yiguandao's own self-understanding and any scholarly dissent?
+> How does academic religious studies classify Yiguandao (I-Kuan Tao) in relation to Daoism and to the category of Chinese salvationist religions, on what evidential basis, at what grade, and with what degree of scholarly consensus or dissent — and how does that classification relate to Yiguandao's own self-understanding?
 
 **Decomposition mandate (owner-ratified): six discrete, separately gradable claims** (identifiers assigned at execution, not here):
 
@@ -72,31 +72,35 @@ Unlike INV-0011 and INV-0014, whose poles were both scholarly, one "pole" here i
 - It is **NOT** evidence about whether the academic classification is correct; that is the scholarly question, answered on scholarly grounds.
 - **Both slides are guarded:** do not let self-understanding covertly settle the classification (**confessional drift**), and do not dismiss self-understanding as mere error (**debunking drift**). Both tracks are recorded at their honest weight.
 
-## 2.2 Thin-base authorization
+## 2.2 The consensus-asymmetry rule (operative rule; added by owner ruling at v0.2)
+
+> Symmetric framing does not require symmetric findings. If the scholarly basis for one classification is stronger than for another, the investigation reports that asymmetry at its actual weight. Representing a lopsided consensus as balanced would be as much a distortion as prejudging the question — neither the RQ's neutrality nor the dual-track rule licenses false balance.
+
+## 2.3 Thin-base authorization
 
 **UNSOURCED / insufficient base to grade is a recordable outcome.** Where the accessible base cannot support a grade, the record says so; no claim is thin-sourced into a grade it has not earned (see the opening banner; owner-ratified).
 
-## 2.3 Register
+## 2.4 Register
 
 Neutral **religious-studies** register throughout. No confessional framing in any direction — neither for the movement's self-account nor against it.
 
-## 2.4 The thesis is hypothesis-under-test
+## 2.5 The thesis is hypothesis-under-test
 
 The owner's external comparative thesis is **not evidence, not citable, not a premise**. No claim, source evaluation, or finding may cite it, paraphrase it as support, or treat its conclusions as established. It may suggest where sources live; it grounds nothing. The investigation evaluates its headline finding independently, on the evidence the circuit itself assembles.
 
-## 2.5 Boundary with prior religion work
+## 2.6 Boundary with prior religion work
 
 **INV-0011** (Zoroastrian eschatology) and the **Iranian-family standing source base (SRC-0104…SRC-0123)** are separate lines of work: **no overlap, no draw**. No INV-0015 object cites, extends, or edges into that base. Prior investigations (including INV-0001 and INV-0014) are likewise not drawn on — this investigation stands on its own source base, assembled at execution.
 
-## 2.6 Language boundary
+## 2.7 Language boundary
 
 Chinese-language primary material is **in scope for the self-understanding track where reachable in scholarly translation**. Untranslated material that cannot be verified is **recorded as a gap, not paraphrased from model knowledge** (anti-fabrication, KOS-0003 §12.1).
 
-## 2.7 Reliance posture
+## 2.8 Reliance posture
 
 **Verification-light expected, known at the outset.** The classification-criteria literature (claim 3's base) is largely paywalled and unreachable by the live-retrieval channel; the investigation is structurally destined to close verification-light, with findings **gated from external reliance from the opening onward** (see the banner and §7). This is recorded plainly as posture, not treated as a defect.
 
-## 2.8 Terminology
+## 2.9 Terminology
 
 "Yiguandao" (一貫道; also romanized I-Kuan Tao) is used throughout; "Chinese salvationist religion" refers to the religious-studies category (and its cognates in the scholarly literature) whose criteria claim 3 examines; "school of Daoism" refers to lineage membership in the Daoist tradition as the scholarly literature bounds it. **What each category requires is itself part of what the circuit establishes — the definitions are not pre-settled here.**
 
@@ -134,8 +138,9 @@ Each of the six claims answers elements **(a) source & base**, **(b) classificat
 
 - **Dual-track bracket (§2.1).** Yiguandao's self-understanding is graded as a fact about the movement, never as evidence for or against the classification; the classification is graded on scholarly-criteria grounds, never by dismissing the self-understanding as mere error.
 - **No directional premise.** The classification is **tested, not assumed — in either direction**: neither "the salvationist classification is correct" nor "Yiguandao is a school of Daoism" is a premise; each claim earns its grade from evidence.
-- **The owner's thesis grounds nothing** (§2.4) — held outside the evidence base entirely.
-- **Untranslated Chinese-language material is a recorded gap**, never paraphrased from model knowledge (§2.6).
+- **The owner's thesis grounds nothing** (§2.5) — held outside the evidence base entirely.
+- **Consensus asymmetry reported at its actual weight** (§2.2) — neither prejudged nor falsely balanced.
+- **Untranslated Chinese-language material is a recorded gap**, never paraphrased from model knowledge (§2.7).
 
 ---
 
@@ -159,13 +164,13 @@ INV-0015 may close only when all of the following hold:
 # 8. Relationships (STD-0004)
 
 - `part_of` the Knowledge Base — a **classification** statement, not a typed graph edge (matching INV-0009…INV-0014; "Knowledge Base" is not a resolvable object, so no `part_of` target is declared in frontmatter).
-- **Frontmatter edges at opening: none.** Per **ADR-GOV-0004 D4**, frontmatter references are graph claims and may name only existing objects — and no accurate typed edge to an existing object exists at scaffolding: INV-0015 draws on no prior investigation or source base (§2.5), so declaring one (e.g. `related_to` a prior INV) would assert a relationship the record deliberately does not have. Future children are declared in prose below and edged at execution.
+- **Frontmatter edges at opening: none.** Per **ADR-GOV-0004 D4**, frontmatter references are graph claims and may name only existing objects — and no accurate typed edge to an existing object exists at scaffolding: INV-0015 draws on no prior investigation or source base (§2.6), so declaring one (e.g. `related_to` a prior INV) would assert a relationship the record deliberately does not have. Future children are declared in prose below and edged at execution.
 - **Planned subgraph (declared now, built at execution):** INV-0015 is the **hub**; every child object declares its edge upward using existing STD-0004 types only:
   - **Claims (6):** each `part_of` INV-0015, `derived_from` its source record(s), and `supports` the finding.
   - **Sources:** each `part_of` INV-0015 and `supports` its dependent claim(s). Where a source anchors the steelmanned counter-reading against a majority-position source (claim 6, and claim 5's self-understanding track against the scholarly classification track), the accurate existing type is **`contrasts_with`** (reciprocated within the INV-0015 subgraph where both ends are open records).
   - **Finding (1):** `derived_from` its claims, `part_of` INV-0015.
   - **Type-choice note:** the dual-track structure (self-understanding as fact vs. scholarly classification) is carried by **prose plus the nearest accurate existing types** (`contrasts_with` for opposed readings; `supports`/`derived_from` for evidential edges). **No new relationship type is invented**; if execution finds no existing type fits an edge, the rule is prose + nearest accurate type + an owner flag (STD-0004 discipline).
-  - **No edge into the Iranian source base, INV-0011, INV-0001, or INV-0014** (§2.5) — their absence from this subgraph is deliberate and load-bearing.
+  - **No edge into the Iranian source base, INV-0011, INV-0001, or INV-0014** (§2.6) — their absence from this subgraph is deliberate and load-bearing.
 - **Entity:** none planned at opening (default holds; created at execution only on demonstrated recurrence, per the merit principle).
 
 ---
@@ -174,6 +179,7 @@ INV-0015 may close only when all of the following hold:
 
 |Version|Date|Status|Description|
 |---|---|---|---|
+|0.2|2026-07-20|Draft|**Two owner rulings applied (circuit brief 2 of 2), before Specialist execution.** (A) §1 primary RQ re-worded to the owner's revised symmetric, non-prejudging form — how the field classifies Yiguandao *in relation to* Daoism and to the Chinese-salvationist-religions category, with the consensus/dissent distribution now explicit in the question; body H1 updated to match; the six-claim decomposition deliberately unchanged (the revised RQ maps onto the same six claims; claim 3 remains load-bearing). (B) §2.2 consensus-asymmetry rule added verbatim as a new operative sub-section (symmetric framing does not require symmetric findings; a lopsided consensus is reported at its actual weight — no false balance, no prejudging); former §2.2–2.8 renumbered §2.3–2.9 with internal cross-references updated (§6, §8); §6 gains the consensus-asymmetry bracket. No claims, sources, or findings yet — Specialist execution follows in this circuit.|
 |0.1|2026-07-20|Draft|Opened as scaffold per owner-ratified brief. Reading C (classification question). Zero claims/sources/findings — awaiting full OPS-0003 circuit under a separate brief. Thin-base and verification-light outcomes pre-authorized.|
 
 ---
