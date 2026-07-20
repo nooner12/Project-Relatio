@@ -1,8 +1,26 @@
 ---
-status: Adopted 
-decision_date: 2026-07-19 
-extends: ADR-GOV-0004 
-supersedes: none
+title: ADR-GOV-0005 - Clarifications and Extensions to ADR-GOV-0004
+document_type: Architecture Decision Record
+version: 1.0
+status: Adopted
+operational_status: Active
+created: 2026-07-20
+decision_status: Accepted
+decision_date: 2026-07-20
+category:
+  - Knowledge Operating System
+  - Architecture Decision
+parent_documents:
+  - CON-0003 Project Relatio Governance & Stewardship Framework
+related_documents:
+  - Governance Backlog
+  - ADR-GOV-0004 - Governance Hygiene Closure Decision Tiering and Reference Integrity
+tags:
+  - ProjectRelatio
+  - ADR
+  - Governance
+  - Clarification
+  - PathIntegrity
 ---
 
 ## §1 — D1(d) clarified: closure state lives in banner + history, not frontmatter
