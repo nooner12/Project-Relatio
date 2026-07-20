@@ -1,7 +1,7 @@
 ---
 title: INV-0015 - Yiguandao Classification
 document_type: Investigation Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -13,6 +13,8 @@ category:
 parent_documents:
   - KOS-0008 Research Methodology & Investigation Framework
   - KOS-0003 Epistemic Framework & Knowledge Validation System
+related_documents:
+  - FND-0015 How Religious Studies Classifies Yiguandao
 tags:
   - ProjectRelatio
   - KnowledgeBase
@@ -122,13 +124,30 @@ Each of the six claims answers elements **(a) source & base**, **(b) classificat
 
 # 4. Findings / Synthesis
 
-*Reserved — populated at circuit execution by the Research Specialist (ROLE-0002) under a separate brief. Zero findings exist at scaffolding.*
+**Populated at execution by the Research Specialist (ROLE-0002), 2026-07-20; pending ROLE-0004 review and ROLE-0001 validation.**
+
+Primary synthesis: **[[FND-0015 - How Religious Studies Classifies Yiguandao]]** — a **layered verdict at verification-light strength**: the surveyed anglophone field places Yiguandao in the **salvationist / redemptive-society / syncretic-sectarian family** (Xiantiandao-descended, Republican-wave) with **effective unanimity under plural but family-consistent labels**, and no surveyed source classifies it as a school of Daoism (Moderate); the field's **criteria-mechanics** are paywalled beyond independent reach and graded **Low** rather than reconstructed from memory; **Daoist elements are real** (a live-read Quanzhen-derived stratum) and treated by the field as **incorporated strands, not lineage membership** (Moderate); the movement's **read self-understanding** claims the primordial trans-religion Dao — *not* school-of-Daoism membership — so classification and self-understanding **diverge on register more than they collide on propositions** (Moderate, scope-bounded); located **dissent is category-level**, the placement-dissent cell empty in the surveyed base (Low, bounded negative). Consensus asymmetry reported at actual weight per §2.2.
+
+Supporting claims (native `Level N`, KOS-0003 §8), each with elements (a)/(b)/(c) in discrete sections:
+- **CLM-0081** — Origin and formation — **Level 3 (Moderate)** · dated Xiantiandao-descent spine (SRC-0134 live-read; SRC-0132/0130 at one remove); lineage-antiquity counter-reading routed per the dual-track rule.
+- **CLM-0082** — Doctrinal/organizational structure — **Level 3 (Moderate)** · Eternal-Mother/three-age architecture, multi-tradition incorporation, Confucian public dominance; strand proportions a recorded gap.
+- **CLM-0083** — Classification criteria (load-bearing) — **split: placement + consensus Level 3 (Moderate)**, unanimous across the surveyed base; **criteria-mechanics Level 2 (Low)** — Palmer 2011 interior paywalled; anti-fabrication honored over grade-manufacture.
+- **CLM-0084** — Daoist elements — **Level 3 (Moderate)** · real strands (Quanzhen-derived stratum live-read), treated as incorporation not membership; strand-counting expressly non-decisive (§3.1).
+- **CLM-0085** — Self-understanding — **Level 3 (Moderate, scope-bounded to the read World Headquarters voice)** · primordial-Dao lineage theology, no school-of-Daoism self-claim on the read page; dual-track held both directions; Chinese corpus a recorded gap.
+- **CLM-0086** — Scholarly dissent — **Level 2 (Low)** · located dissent is category-construction critique (ter Haar; Palmer's reflexive question); no located Daoist-school classification — a bounded negative.
 
 ---
 
 # 5. Confidence Summary (KOS-0003 §8)
 
-*Reserved — populated at circuit execution. Native `Level N (Label)` only; every grade bounded by the §3.1 classification-evidence rule and by the accessibility and strength of the claim's actual sources.*
+**Assigned at execution (2026-07-20), native `Level N` only; pending circuit review.** Every grade bounded by the §3.1 classification-evidence rule and by the accessibility and strength of its actual sources.
+
+- **Moderate (Level 3):** the placement-census and its near-unanimity (CLM-0083-i); formation history (CLM-0081); doctrinal composition (CLM-0082); Daoist elements as strands (CLM-0084); the read self-understanding (CLM-0085, scope-bounded).
+- **Low (Level 2) — the designed thin points, recorded not papered over (§2.3):** criteria-mechanics (CLM-0083-ii — paywalled base); the placement-dissent negative (CLM-0086 — search-bounded).
+- **No Level 4 anywhere:** the verification posture forbids it — only SRC-0134 and SRC-0135 were fully live-read this session (plus SRC-0131's publisher description); five works are bibliographically live-verified with interiors unread; every claim states its ceiling.
+- **No Level 5 anywhere.** Splits split, never averaged.
+- **Dual-track discipline:** CLM-0085 grades self-understanding as fact-about-the-movement only; nothing in any grading field treats it as evidence for or against the classification.
+- **Verification (§7.5-analog): verification-light overall, as predicted at opening (§2.8)** — disclosed per record; no page-level citation asserted anywhere. **Not cleared for external reliance** (see FND-0015 §4).
 
 ---
 
@@ -165,13 +184,13 @@ INV-0015 may close only when all of the following hold:
 
 - `part_of` the Knowledge Base — a **classification** statement, not a typed graph edge (matching INV-0009…INV-0014; "Knowledge Base" is not a resolvable object, so no `part_of` target is declared in frontmatter).
 - **Frontmatter edges at opening: none.** Per **ADR-GOV-0004 D4**, frontmatter references are graph claims and may name only existing objects — and no accurate typed edge to an existing object exists at scaffolding: INV-0015 draws on no prior investigation or source base (§2.6), so declaring one (e.g. `related_to` a prior INV) would assert a relationship the record deliberately does not have. Future children are declared in prose below and edged at execution.
-- **Planned subgraph (declared now, built at execution):** INV-0015 is the **hub**; every child object declares its edge upward using existing STD-0004 types only:
-  - **Claims (6):** each `part_of` INV-0015, `derived_from` its source record(s), and `supports` the finding.
-  - **Sources:** each `part_of` INV-0015 and `supports` its dependent claim(s). Where a source anchors the steelmanned counter-reading against a majority-position source (claim 6, and claim 5's self-understanding track against the scholarly classification track), the accurate existing type is **`contrasts_with`** (reciprocated within the INV-0015 subgraph where both ends are open records).
-  - **Finding (1):** `derived_from` its claims, `part_of` INV-0015.
-  - **Type-choice note:** the dual-track structure (self-understanding as fact vs. scholarly classification) is carried by **prose plus the nearest accurate existing types** (`contrasts_with` for opposed readings; `supports`/`derived_from` for evidential edges). **No new relationship type is invented**; if execution finds no existing type fits an edge, the rule is prose + nearest accurate type + an owner flag (STD-0004 discipline).
+- **Built subgraph (populated at execution 2026-07-20; to be confirmed at structural validation, ROLE-0001):** INV-0015 is the **hub**; every child object declares its edge upward using existing STD-0004 types only:
+  - **Sources (8, SRC-0129…SRC-0136):** SRC-0129 (Palmer 2011, the category source — paywalled interior disclosed), SRC-0130 (Goossaert & Palmer survey), SRC-0131 (Billioud 2020), SRC-0132 (Lu 2008), SRC-0133 (Jordan & Overmyer 1986 — scope-restricted), SRC-0134 (Irons WRSP profile — fully live-read), SRC-0135 (World I-Kuan Tao Headquarters self-presentation — fully live-read; primary, self-understanding register only), SRC-0136 (ter Haar 1992 — category-critique). Each `supports` its dependent claim(s) and is `part_of` INV-0015; **SRC-0129 ⇄ SRC-0136 `contrasts_with` (reciprocated)** — category-construction vs. category-critique, the one genuine opposed-readings pair in the base.
+  - **Claims (6, CLM-0081…CLM-0086):** each `derived_from` its source record(s), `supports` FND-0015, `part_of` INV-0015.
+  - **Finding (1):** FND-0015 — `derived_from` CLM-0081…CLM-0086, `part_of` INV-0015.
+  - **Type-choice notes (execution actuals):** the planned `contrasts_with` between the self-understanding track and the scholarly track was **deliberately NOT built** — execution found the two tracks are not opposed readings of one proposition (the read self-account claims the primordial Dao, not school-of-Daoism membership, so the tracks diverge on register rather than colliding; CLM-0085 element (b)); typing them `contrasts_with` would have asserted a head-on contest the dual-track rule exists to prevent. The one genuine contest in the base (SRC-0129 ⇄ SRC-0136, construction vs. critique of the category) carries the reciprocated edge. **No new relationship type was needed or invented.**
   - **No edge into the Iranian source base, INV-0011, INV-0001, or INV-0014** (§2.6) — their absence from this subgraph is deliberate and load-bearing.
-- **Entity:** none planned at opening (default holds; created at execution only on demonstrated recurrence, per the merit principle).
+- **Entity:** none created at execution (default held; no concept recurred beyond single use — the "salvationist religion" category itself is a candidate if it recurs in future investigations; noted for the Architect's awareness, not created).
 
 ---
 
@@ -179,6 +198,7 @@ INV-0015 may close only when all of the following hold:
 
 |Version|Date|Status|Description|
 |---|---|---|---|
+|0.3|2026-07-20|Draft|**Executed by the Research Specialist (ROLE-0002).** Created 8 sources (SRC-0129…SRC-0136 — Palmer 2011 category article, **interior paywalled/403 and disclosed as the criteria-mechanics ceiling**; Goossaert & Palmer survey; Billioud 2020 OUP monograph with its "one of the major redemptive societies of Republican China" description sentence live-read; Lu 2008 first dedicated anglophone monograph; Jordan & Overmyer 1986 with an explicit scope restriction; Irons WRSP profile **fully live-read**; World I-Kuan Tao Headquarters English self-presentation **fully live-read** — primary, self-understanding register only; ter Haar 1992 category-critique; SRC-0129⇄SRC-0136 `contrasts_with` reciprocated; every record disclosing verification strength, language, and open/paywalled accessibility). Authored the six mandated claims CLM-0081…CLM-0086, each with elements **(a) source & base / (b) classification bearing / (c) rival counter-reading in discrete, separately answerable sections**: origin/formation L3; doctrinal structure L3 (strand proportions a recorded gap); **classification criteria split L3-placement-and-consensus / L2-criteria-mechanics** (the load-bearing claim — unanimity across the surveyed base reported under the §2.2 asymmetry rule; Palmer's criteria NOT reconstructed from model memory, graded down instead per §2.3); Daoist elements L3 (strands-not-membership; §3.1 slide guarded); self-understanding L3 scope-bounded (primordial-Dao lineage theology, no school-of-Daoism self-claim on the read page; dual-track held both directions; Chinese corpus a recorded gap); dissent L2 (category-level; bounded negative). FND-0015 layered verdict (Moderate spine, Low thin points; **no Level 4 anywhere — verification-light posture as predicted at opening; no Level 5**). Populated §4, §5, §8 connectivity actuals — including the deliberate **non**-building of the planned self-understanding-vs-scholarship `contrasts_with` edge (the tracks diverge on register, not head-on; §8 rationale recorded). No entity created. Native `Level N` only — no H-band/★ in any frontmatter or grading field. Verification: **light overall** (two sources fully live-read + one publisher description; five bibliographically verified with interiors unread; no page-level citation asserted); not cleared for external reliance (§7.5-analog). §1–§3, §6, §7 protocol text untouched. Pending ROLE-0004 review and ROLE-0001 structural validation.|
 |0.2|2026-07-20|Draft|**Two owner rulings applied (circuit brief 2 of 2), before Specialist execution.** (A) §1 primary RQ re-worded to the owner's revised symmetric, non-prejudging form — how the field classifies Yiguandao *in relation to* Daoism and to the Chinese-salvationist-religions category, with the consensus/dissent distribution now explicit in the question; body H1 updated to match; the six-claim decomposition deliberately unchanged (the revised RQ maps onto the same six claims; claim 3 remains load-bearing). (B) §2.2 consensus-asymmetry rule added verbatim as a new operative sub-section (symmetric framing does not require symmetric findings; a lopsided consensus is reported at its actual weight — no false balance, no prejudging); former §2.2–2.8 renumbered §2.3–2.9 with internal cross-references updated (§6, §8); §6 gains the consensus-asymmetry bracket. No claims, sources, or findings yet — Specialist execution follows in this circuit.|
 |0.1|2026-07-20|Draft|Opened as scaffold per owner-ratified brief. Reading C (classification question). Zero claims/sources/findings — awaiting full OPS-0003 circuit under a separate brief. Thin-base and verification-light outcomes pre-authorized.|
 
