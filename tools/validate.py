@@ -165,8 +165,14 @@ for file in files:
 # infrastructure_documents fragments, and GB-2026-028 records that the drift
 # class had already reached two review reports.
 #
-# Severity: **warning, not error**, per the GB-2026-035 build notes -- the
-# content of these records is not wrong, only the summary field is stale.
+# Severity: **error** (owner ruling, 2026-07-21). Built at warning level per the
+# GB-2026-035 build notes -- the reasoning being that the content of a drifted
+# record is not wrong, only its summary field is stale. The owner promoted it on
+# three grounds: a stale version field is a record lying about itself, which is
+# the defect ADR-GOV-0004 §4's trust-without-re-derivation principle exists to
+# prevent; the class produced 40 known instances, one of which manual sweeping
+# structurally could not see; and a zero-warning baseline erodes, whereas an
+# error cannot be deferred without a deliberate act.
 #
 # Run as its own pass rather than inside the first loop because that loop
 # short-circuits on empty/invalid-YAML files, and because the infrastructure
@@ -212,7 +218,7 @@ for file in files:
         else:
             fix = "no history table; reconcile against the intended version"
 
-        warnings.append(
+        errors.append(
             f"Version incoherence: {file.name}\n"
             f"  {detail}\n"
             f"  {fix}"

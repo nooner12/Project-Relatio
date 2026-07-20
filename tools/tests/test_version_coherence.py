@@ -9,6 +9,11 @@ proves the positive case, and guards the two traps named in the build notes:
   * newest history row by **parse-and-max, not by position** (GB-2026-029)
   * versions compared as **tuples, not floats** (1.23 > 1.9)
 
+It also guards the **severity ruling**: the check reports at ERROR level (owner
+decision 2026-07-21, promoted from the warning level it was built at). That is a
+governance decision rather than a detection property, so it is asserted against
+validate.py's source -- enough to catch a silent regression to warning.
+
 Run: python tools/tests/test_version_coherence.py
 """
 
@@ -95,6 +100,22 @@ if control["frontmatter"] != "2.10":
         "frontmatter version must be read literally, not via yaml: "
         f"expected '2.10', got {control['frontmatter']!r}"
     )
+
+# Severity guard (owner ruling 2026-07-21): version incoherence is an ERROR.
+# Asserted against source because severity is a policy choice, not a detection
+# property -- this exists to catch a silent regression back to warning level.
+validate_src = read_text(Path(__file__).resolve().parent.parent / "validate.py")
+marker = 'f"Version incoherence: {file.name}\\n"'
+before = validate_src.split(marker)[0]
+appended_to = before.rstrip().rsplit("\n", 1)[-1].strip()
+
+if not appended_to.startswith("errors.append"):
+    failures.append(
+        "version incoherence must report at ERROR level (owner ruling "
+        f"2026-07-21); validate.py appends it to: {appended_to!r}"
+    )
+else:
+    print("  severity: reports via errors.append -> ERROR level (owner ruling)")
 
 print()
 

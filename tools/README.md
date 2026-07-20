@@ -49,10 +49,18 @@ Checks, per STD-0001/STD-0002:
   field carries the **same** one, and the identifier is **unique** across the vault.
   Identifier form: `TYPE-NNNN` (e.g. `KOS-0004`) or `ADR-CAT-NNNN` (e.g. `ADR-GOV-0001`).
 - **Duplicate filenames** (advisory warning).
-- **Version coherence** (advisory warning; GB-2026-035) — a document's `version:`
-  frontmatter, its `## Version` body heading, and the newest row of its own
-  `# Revision History` table must agree. Reports as a **warning, not an error**: the
-  content of a drifted record is not wrong, only its summary field is stale.
+- **Version coherence** (**error**; GB-2026-035) — a document's `version:` frontmatter,
+  its `## Version` body heading, and the newest row of its own `# Revision History`
+  table must agree.
+
+  Built at warning level, on the reasoning that a drifted record's content is not
+  wrong, only its summary field stale. **Promoted to error by owner ruling
+  2026-07-21** on three grounds: a stale version field is a record lying about itself,
+  which is the defect ADR-GOV-0004 §4's trust-without-re-derivation principle exists to
+  prevent; the class produced 40 known instances, one of which manual sweeping
+  structurally could not see; and a zero-warning baseline erodes, whereas an error
+  cannot be deferred without a deliberate act. **A version bump that forgets its
+  history row now fails validation.**
 
   Automates the countermeasure GB-2026-028 asked for. That entry's 2026-07-20 sweep
   found **39 drift instances** — spread across Claims, Findings, Sources, Entities,
