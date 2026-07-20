@@ -14,13 +14,13 @@ parent_documents:
   - KOS-0010 Reasoning & Synthesis Framework
 related_documents:
   - CLM-0019 The Intention-Behaviour Gap Is the Central Point of Failure
-  - CLM-0020 Motivation Quality and Self-Efficacy Predict Maintenance Better Than Motivation Quantity
+  - CLM-0020 Motivation Quality and Self-Efficacy Predict Maintenance Better Than Quantity
   - CLM-0021 Maintenance Depends on Different Determinants Than Initiation
   - CLM-0022 In Self-Directed and Digital Wellness Interventions Early Attrition Is the Norm
-  - CLM-0023 Self-Monitoring Combined With Self-Regulation Is Among the Best-Evidenced Interventions
+  - CLM-0023 Self-Monitoring With Self-Regulation Is Among the Best-Evidenced Interventions
   - CLM-0024 Implementation Intentions and Action Planning Narrow the Intention-Behaviour Gap
-  - CLM-0025 Habit Formation Through Context-Consistent Repetition Supports Maintenance But Is Slower Than Popularly Claimed
-  - CLM-0026 Financial Incentives Improve Behaviour While in Place But Effects Fade After Removal
+  - CLM-0025 Habit Formation Supports Maintenance But Is Slower Than Popularly Claimed
+  - CLM-0026 Financial Incentives Improve Behaviour While in Place But Effects Fade on Removal
   - ENT-0004 Intention-Behaviour Gap
 tags:
   - ProjectRelatio

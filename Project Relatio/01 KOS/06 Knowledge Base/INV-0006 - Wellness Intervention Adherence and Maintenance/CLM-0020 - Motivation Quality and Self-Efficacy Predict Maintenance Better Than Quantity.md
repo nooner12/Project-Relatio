@@ -1,7 +1,7 @@
 ---
-title: CLM-0020 - Motivation Quality and Self-Efficacy Predict Maintenance Better Than Motivation Quantity
+title: CLM-0020 - Motivation Quality and Self-Efficacy Predict Maintenance Better Than Quantity
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-11
@@ -37,7 +37,7 @@ relationships:
 
 # CLM-0020
 
-# Motivation Quality and Self-Efficacy Predict Maintenance Better Than Motivation Quantity
+# Motivation Quality and Self-Efficacy Predict Maintenance Better Than Quantity
 
 ## Draft Claim Record
 
@@ -124,5 +124,6 @@ SRC-0030 (motivation quality): high authority, transparent, with a noted theoret
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created for RQ-0006. Autonomous-motivation association verified via Teixeira 2012 abstract. Motivated-reasoning hazard named; graded Moderate for correlational majority.|
 |0.2|2026-07-11|Draft|Remediation pass (Critical Review remediation #3): catalogued **SRC-0033 (Ashford 2010)** as the previously un-catalogued self-efficacy source (self-efficacy leg no longer rests on an uncited "conceptual invocation"). Aligned the comparative/maintenance wording to what the sources actually support — consistent correlational *associations* in the exercise domain, "type predicts persistence better than intensity," not a proven comparative effect size or a demonstrated long-term-maintenance causal effect. **Level 3 retained** (both sources exercise-domain and largely correlational/initiation-focused). Refreshed the FND-0006 display title after its rename.|
+|0.3|2026-07-21|Draft|**Renamed** per STD-0001 §8 (Path Length Constraint), owner approval 2026-07-21. This record was one of four whose absolute path exceeded the Windows `MAX_PATH` limit of 260 characters, making it invisible to naive scanners; the descriptive title was shortened to bring the relative path within the §8 budget of 180 characters. **Filename and `title:` shortened, body H1 heading matched; no claim statement, evidence, evidence evaluation, consensus, confidence grading, or relationship changed.** Graph references updated in the same commit so no reference is left dangling.|
 
 # End CLM-0020

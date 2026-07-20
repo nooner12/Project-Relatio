@@ -16,7 +16,7 @@ parent_documents:
   - KOS-0003 Epistemic Framework & Knowledge Validation System
 related_documents:
   - INV-0006 Wellness Intervention Adherence and Maintenance
-  - CLM-0020 Motivation Quality and Self-Efficacy Predict Maintenance Better Than Motivation Quantity
+  - CLM-0020 Motivation Quality and Self-Efficacy Predict Maintenance Better Than Quantity
 tags:
   - ProjectRelatio
   - KnowledgeBase

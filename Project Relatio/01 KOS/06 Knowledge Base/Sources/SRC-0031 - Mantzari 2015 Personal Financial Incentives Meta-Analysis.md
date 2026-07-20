@@ -16,7 +16,7 @@ parent_documents:
   - KOS-0003 Epistemic Framework & Knowledge Validation System
 related_documents:
   - INV-0006 Wellness Intervention Adherence and Maintenance
-  - CLM-0026 Financial Incentives Improve Behaviour While in Place But Effects Fade After Removal
+  - CLM-0026 Financial Incentives Improve Behaviour While in Place But Effects Fade on Removal
 tags:
   - ProjectRelatio
   - KnowledgeBase

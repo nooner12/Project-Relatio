@@ -1,7 +1,7 @@
 ---
-title: CLM-0023 - Self-Monitoring Combined With Self-Regulation Is Among the Best-Evidenced Interventions
+title: CLM-0023 - Self-Monitoring With Self-Regulation Is Among the Best-Evidenced Interventions
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-11
@@ -35,7 +35,7 @@ relationships:
 
 # CLM-0023
 
-# Self-Monitoring Combined With Self-Regulation Techniques Is Among the Best-Evidenced Interventions
+# Self-Monitoring With Self-Regulation Techniques Is Among the Best-Evidenced Interventions
 
 ## Draft Claim Record
 
@@ -119,5 +119,6 @@ SRC-0026 and SRC-0027: both high authority, transparent, non-commercial; all cit
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created for RQ-0006. Michie 2009 and Harkin 2016 figures verified this session. Graded High for the ingredient; effect size and durability caveats recorded.|
+|0.2|2026-07-21|Draft|**Renamed** per STD-0001 §8 (Path Length Constraint), owner approval 2026-07-21. This record was one of four whose absolute path exceeded the Windows `MAX_PATH` limit of 260 characters, making it invisible to naive scanners; the descriptive title was shortened to bring the relative path within the §8 budget of 180 characters. **Filename and `title:` shortened, body H1 heading matched; no claim statement, evidence, evidence evaluation, consensus, confidence grading, or relationship changed.** Graph references updated in the same commit so no reference is left dangling.|
 
 # End CLM-0023

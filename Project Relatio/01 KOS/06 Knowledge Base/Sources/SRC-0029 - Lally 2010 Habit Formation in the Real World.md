@@ -16,7 +16,7 @@ parent_documents:
   - KOS-0003 Epistemic Framework & Knowledge Validation System
 related_documents:
   - INV-0006 Wellness Intervention Adherence and Maintenance
-  - CLM-0025 Habit Formation Through Context-Consistent Repetition Supports Maintenance But Is Slower Than Popularly Claimed
+  - CLM-0025 Habit Formation Supports Maintenance But Is Slower Than Popularly Claimed
 tags:
   - ProjectRelatio
   - KnowledgeBase

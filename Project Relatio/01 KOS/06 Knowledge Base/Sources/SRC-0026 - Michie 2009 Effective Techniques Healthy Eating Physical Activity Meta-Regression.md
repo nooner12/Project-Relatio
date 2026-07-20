@@ -16,7 +16,7 @@ parent_documents:
   - KOS-0003 Epistemic Framework & Knowledge Validation System
 related_documents:
   - INV-0006 Wellness Intervention Adherence and Maintenance
-  - CLM-0023 Self-Monitoring Combined With Self-Regulation Is Among the Best-Evidenced Interventions
+  - CLM-0023 Self-Monitoring With Self-Regulation Is Among the Best-Evidenced Interventions
 tags:
   - ProjectRelatio
   - KnowledgeBase
