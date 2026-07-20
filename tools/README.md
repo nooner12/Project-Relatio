@@ -49,7 +49,46 @@ Checks, per STD-0001/STD-0002:
   field carries the **same** one, and the identifier is **unique** across the vault.
   Identifier form: `TYPE-NNNN` (e.g. `KOS-0004`) or `ADR-CAT-NNNN` (e.g. `ADR-GOV-0001`).
 - **Duplicate filenames** (advisory warning).
+- **Version coherence** (advisory warning; GB-2026-035) — a document's `version:`
+  frontmatter, its `## Version` body heading, and the newest row of its own
+  `# Revision History` table must agree. Reports as a **warning, not an error**: the
+  content of a drifted record is not wrong, only its summary field is stale.
+
+  Automates the countermeasure GB-2026-028 asked for. That entry's 2026-07-20 sweep
+  found **39 drift instances** — spread across Claims, Findings, Sources, Entities,
+  Investigations and two review reports — every one of which the validator had passed
+  clean, because nothing compared the three elements. The sweep was remediation; this
+  is the prevention.
+
+  Two traps this check is built to avoid, both load-bearing:
+  - **Newest history row by parse-and-max, never by position** (GB-2026-029). The
+    Identifier Registry's rows are genuinely out of numeric order — its last row reads
+    1.18 while the newest is 1.23.
+  - **Versions compared as tuples, never as floats.** As floats 1.9 > 1.23; as
+    versions the reverse. Relatedly, the frontmatter version is read as **literal text,
+    not through `yaml.safe_load`** — unquoted `version: 1.10` is valid YAML for the
+    float 1.1, which would silently drop the trailing zero and manufacture drift.
+
+  Scope is **self-scoping and deliberately not gated by `validator_rules.yaml`**: the
+  check runs wherever at least two of the three elements are present, and is silent
+  where fewer are (a `version:` field alone has nothing to disagree with). Gating by
+  document class would have blinded it — 17 versioned files, including the Architecture
+  Baseline and every Critical Review report, match neither rule class, and the drift
+  class had already reached two review reports.
 
 Exit code 1 if any errors. It does **not** check the `related_documents` graph — that
 is graph_integrity.py's job. (Rebuilt from the old `id`/`[[wikilink]]` checks per
 Backlog GB-2026-016; those predated the adopted standards.)
+
+## tests/ — detection tests
+
+```
+python tests/test_version_coherence.py
+```
+
+Proves the version-coherence check actually detects drift. An expected-zero run against
+the vault cannot distinguish a working checker from a blind one — the `MAX_PATH` scanner
+failure in GB-2026-028 is the standing lesson, having reported clean while silently
+skipping four files. `tests/fixtures/` holds three deliberately-shaped documents (two
+drifted, one coherent control) kept **outside the vault** so they are never scanned as
+content. The control fixture is versioned `2.10` specifically to catch float comparison.

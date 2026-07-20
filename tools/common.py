@@ -39,6 +39,90 @@ IDENTIFIER_RE = re.compile(r"^(ADR-[A-Z]{2,5}-\d{4}|[A-Z]{2,5}-\d{4})")
 
 WIKILINK_PATTERN = re.compile(r"\[\[([^\]|#]+)")
 
+# ----------------------------------------------------------------------------
+# Version coherence (GB-2026-035)
+#
+# A document can carry its version in up to three places: the `version:`
+# frontmatter field, a `## Version N.N` body heading, and the newest row of its
+# own `# Revision History` table. When two of these disagree the record is
+# internally inconsistent -- the drift class that produced 39 instances in the
+# 2026-07-20 sweep, invisible to the validator because nothing compared them.
+# ----------------------------------------------------------------------------
+
+VERSION_HEADING_RE = re.compile(r"^##\s*Version\s+([0-9]+(?:\.[0-9]+)*)\s*$", re.M)
+
+# Tolerates both "# Revision History" and numbered "# 22. Revision History".
+REVISION_HISTORY_RE = re.compile(r"^#+\s*(?:\d+\.\s*)?Revision History\s*$", re.M | re.I)
+
+# A history row's leading cell, e.g. "|1.27|2026-07-20|Active|...". Tolerates a
+# leading "v" and any dotted depth.
+VERSION_ROW_RE = re.compile(r"^\|\s*v?([0-9]+(?:\.[0-9]+)+)\s*\|", re.M)
+
+# The `version:` frontmatter line, read from the RAW frontmatter text.
+#
+# This must not go through yaml.safe_load: an unquoted `version: 1.10` is valid
+# YAML for the *float* 1.1, which silently drops the trailing zero and makes a
+# coherent 1.10 document look like 1.1 against its own 1.10 history row. Reading
+# the literal characters avoids inventing that drift. (Caught by the fixture
+# tests, which is why they exist.)
+FRONTMATTER_VERSION_RE = re.compile(r"^version:\s*(.+?)\s*$", re.M)
+
+
+def parse_version(text):
+    """Return a version string as a comparable tuple of ints, or None.
+
+    Tuple comparison is required, not float: as floats 1.9 > 1.27, but as
+    versions 1.27 > 1.9. The Identifier Registry is the live proof -- it has
+    reached 1.23, and a float-max over its rows returns 1.9.
+    """
+    if text is None:
+        return None
+    s = str(text).strip().lstrip("vV")
+    if not s:
+        return None
+    parts = s.split(".")
+    if not all(p.isdigit() for p in parts):
+        return None
+    return tuple(int(p) for p in parts)
+
+
+def version_elements(text, frontmatter=None):
+    """Extract the (frontmatter, heading, newest history row) version strings.
+
+    `text` is the document body; `frontmatter` is the raw frontmatter block as
+    text (not a parsed dict -- see FRONTMATTER_VERSION_RE for why).
+
+    Returns a dict with keys 'frontmatter', 'heading', 'history' mapping to the
+    raw version strings found (or None), plus 'rows' listing every history row
+    version in document order.
+
+    The newest history row is chosen by **parse-and-max, never by position**
+    (GB-2026-029): the Identifier Registry's rows are not in numeric order, so
+    the last line of the table is not the latest version.
+    """
+    found = {"frontmatter": None, "heading": None, "history": None, "rows": []}
+
+    if frontmatter:
+        line = FRONTMATTER_VERSION_RE.search(frontmatter)
+        if line:
+            value = line.group(1).strip().strip("'\"")
+            if value:
+                found["frontmatter"] = value
+
+    heading = VERSION_HEADING_RE.search(text)
+    if heading:
+        found["heading"] = heading.group(1)
+
+    history = REVISION_HISTORY_RE.search(text)
+    if history:
+        rows = VERSION_ROW_RE.findall(text[history.end():])
+        found["rows"] = rows
+        parsed = [r for r in rows if parse_version(r) is not None]
+        if parsed:
+            found["history"] = max(parsed, key=parse_version)
+
+    return found
+
 
 def extract_identifier(text):
     """Return the leading TYPE-NNNN / ADR-CAT-NNNN identifier of a string, or None."""

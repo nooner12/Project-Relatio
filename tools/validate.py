@@ -11,6 +11,8 @@ from common import (
     note_name,
     extract_identifier,
     read_text,
+    version_elements,
+    parse_version,
 )
 
 ROOT = Path(__file__).parent
@@ -144,6 +146,77 @@ for file in files:
     else:
 
         names[stem] = file
+
+# ----------------------------
+# Version coherence pass (GB-2026-035)
+#
+# Checks that a document's `version:` frontmatter, its `## Version` body heading,
+# and the newest row of its own `# Revision History` table agree. This is the
+# durable countermeasure for the drift class GB-2026-028 recorded: the
+# 2026-07-20 sweep found 39 instances, and the validator passed clean through
+# every one of them because nothing compared the three.
+#
+# Scope: **self-scoping, deliberately NOT gated by validator_rules.yaml.** The
+# check runs wherever at least two of the three elements exist, and is silent
+# where fewer do (a document with only a `version:` field has nothing to
+# disagree with). Gating by document_types would have been wrong: 17 versioned
+# files -- including the Architecture Baseline and every Critical Review report
+# -- match neither the identified_documents prefixes nor the
+# infrastructure_documents fragments, and GB-2026-028 records that the drift
+# class had already reached two review reports.
+#
+# Severity: **warning, not error**, per the GB-2026-035 build notes -- the
+# content of these records is not wrong, only the summary field is stale.
+#
+# Run as its own pass rather than inside the first loop because that loop
+# short-circuits on empty/invalid-YAML files, and because the infrastructure
+# documents that drifted most (Identifier Registry, Governance Backlog) are
+# `requires_yaml: false` and so never have their frontmatter parsed above.
+# ----------------------------
+
+for file in files:
+
+    text = read_text(file)
+
+    if not text.strip():
+        continue
+
+    frontmatter, body = parse_frontmatter(text)
+
+    found = version_elements(
+        body if frontmatter is not None else text,
+        frontmatter,
+    )
+
+    present = {
+        label: found[label]
+        for label in ("frontmatter", "heading", "history")
+        if found[label] is not None
+    }
+
+    if len(present) < 2:
+        continue
+
+    distinct = {parse_version(v) for v in present.values()}
+
+    if len(distinct) > 1:
+
+        detail = ", ".join(
+            f"{label}={value}" for label, value in sorted(present.items())
+        )
+
+        # The history table is authoritative when present (2026-07-20 sweep
+        # convention): its rows are the accurate record; the summary fields lag.
+        if found["history"] is not None:
+            fix = f"authoritative = newest history row {found['history']}"
+        else:
+            fix = "no history table; reconcile against the intended version"
+
+        warnings.append(
+            f"Version incoherence: {file.name}\n"
+            f"  {detail}\n"
+            f"  {fix}"
+        )
 
 # ----------------------------
 # NOTE: The adopted STD-0001/STD-0002 convention does not use [[wikilinks]] for the
