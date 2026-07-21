@@ -1,7 +1,7 @@
 ---
 title: STD-0002 - Metadata & YAML Standard
 document_type: Standards Document
-version: 1.7
+version: 1.8
 status: Adopted
 operational_status: Active
 category:
@@ -16,6 +16,7 @@ related_documents:
   - STD-0001 Naming & Identification Standard
   - STD-0003 Tagging Standard
   - STD-0004 Linking & Relationship Standard
+  - STD-0008 Epistemic State Standard
   - TPL-0001 Formal Document Template
 tags:
   - ProjectRelatio
@@ -29,7 +30,7 @@ tags:
 
 # Project Relatio Metadata & YAML Standard
 
-## Version 1.7
+## Version 1.8
 
 ## Adopted Standards Document
 
@@ -513,6 +514,41 @@ template_type:
 
 ---
 
+## Claim Records and Finding Records
+
+Require the epistemic-axis fields (values and rules per the Epistemic State Standard, STD-0008):
+
+```
+confidence:
+  - component: overall
+    level: 3
+    label: Moderate
+reliance_tier: R0
+```
+
+Split-grade example (a claim whose components differ — never averaged):
+
+```
+confidence:
+  - component: placement
+    level: 3
+    label: Moderate
+  - component: criteria_mechanics
+    level: 2
+    label: Low
+reliance_tier: R0
+```
+
+**Field rules (format; semantics in STD-0008):**
+
+- `confidence` is **always a list**, minimum one component. A single-grade claim uses one item with `component: overall`. Never a scalar.
+- Each component requires `component` (short lowercase_with_underscores name), `level` (integer 1–5), and `label` (the matching Level-N label per STD-0008 §5.1).
+- `reliance_tier` is a single value: `R0`, `R1`, or `R2`.
+- Both fields are **required on Claim Records and Finding Records**; other object classes do not carry them.
+- These are content fields (like Source Records' `source_author`), not lifecycle fields — they sit alongside, and are independent of, `status` and `operational_status`.
+
+---
+
 # 12. Metadata Integrity Rules
 
 Metadata must:
@@ -630,6 +666,7 @@ Project Relatio adopts:
 |1.5|2026-07-11|Adopted|Implemented STD-0005's two-dimensional lifecycle in metadata (GB-2026-006): `status` narrowed to **maturity** (Proposed/Draft/Reviewed/Adopted); added the required **`operational_status`** field (Active/Superseded/Archived). Migrated the vault — operational values previously held in `status` moved to the new field. Trigger: the KOS-0200/ROLE-0003 supersession/archival events the deferral was waiting on.|
 |1.6|2026-07-11|Adopted|Added the optional **typed `relationships`** frontmatter block (`type` + `target`), closing Pressure Test F-4 / GB-2026-001 — STD-0004's vocabulary can now be expressed in metadata, not only prose. Additive: the flat `parent_documents`/`related_documents` lists are retained for tooling. Adopted for Knowledge Base objects; `graph_integrity.py` made type-aware.|
 |1.7|2026-07-20|Adopted|Added **§12.1 Frontmatter References Are Graph Claims**, enacting **ADR-GOV-0004 §2 D4**. Entries in `related_documents`, `parent_documents`, and the typed `relationships` block must resolve to existing files; named candidates and non-existent objects are referenced in **prose only**. Placed here rather than in STD-0004 because D4 governs what the frontmatter *fields* must contain (STD-0002's domain), whereas STD-0004 governs which relationship *types* exist and what they mean. Additive rule statement only — no field added, removed, or redefined, and no existing requirement changed; `graph_integrity.py` already enforced the constraint after commit, and this states it at authoring time with its rationale.|
+|1.8|2026-07-20|Adopted|Added §11 subsection **Claim Records and Finding Records**, requiring the epistemic-axis fields `confidence` (always-a-list, per-component level/label) and `reliance_tier` (R0/R1/R2). Additive document-class fields per the existing §11 pattern; values and rules governed by the Epistemic State Standard (STD-0008), whose R-tier vocabulary is constitutionally sourced from ADR-GOV-0006. Labels follow the canonical KOS-0003 §8 scale (Very High / High / Moderate / Low / Very Low). No existing field removed, renamed, or redefined. Migration of existing Claim/Finding records gated separately (GB-2026-038); until it completes, the validator's epistemic-field check is warning-gated.|
 
 ---
 
