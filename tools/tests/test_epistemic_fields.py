@@ -12,11 +12,11 @@ from a blind one (the GB-2026-035 lesson). This proves the positive cases:
   * an invalid reliance tier is rejected;
   * a half-authored record (one field present, one missing) is caught.
 
-It also guards the MIGRATION GATE (GB-2026-038): while migration of the
-pre-existing CLM/FND records is pending, validate.py's pass must run with
-EPISTEMIC_FIELDS_ENFORCED = False (warning-level; vault exits PASS). The
-migration brief flips the flag to True and updates this guard in the same
-change.
+It also guards the MIGRATION GATE (GB-2026-038): the migration of the
+pre-existing CLM/FND records is COMPLETE (Stage 3 backfill, 2026-07-21), so
+validate.py's pass now runs with EPISTEMIC_FIELDS_ENFORCED = True (error-level;
+a missing/malformed field on a CLM/FND record fails the build). This test
+asserts the flag stays enforced.
 
 Run: python tools/tests/test_epistemic_fields.py
 """
@@ -104,18 +104,19 @@ sneaky = epistemic_field_problems({
 if not any(".level must be an integer" in p for p in sneaky):
     failures.append(f"boolean level must be rejected: {sneaky}")
 
-# MIGRATION GATE guard (GB-2026-038): while the pre-existing CLM/FND records
-# are unmigrated, the pass must be warning-gated. The migration brief flips
-# the flag and updates this assertion in the same change.
+# MIGRATION GATE guard (GB-2026-038): the epistemic-field migration is COMPLETE
+# (Stage 3 backfill, 2026-07-21) -- every pre-existing CLM/FND record now carries
+# the fields, so the pass runs at error level. This guard now asserts the flag
+# stays enforced (the inverse of its pre-migration form).
 validate_src = read_text(Path(__file__).resolve().parent.parent / "validate.py")
-if "EPISTEMIC_FIELDS_ENFORCED = False" not in validate_src:
+if "EPISTEMIC_FIELDS_ENFORCED = True" not in validate_src:
     failures.append(
-        "validate.py must hold EPISTEMIC_FIELDS_ENFORCED = False until the "
-        "migration brief completes (GB-2026-038); if migration is done, "
-        "update this guard together with the flag"
+        "validate.py must hold EPISTEMIC_FIELDS_ENFORCED = True now that the "
+        "epistemic-field migration is complete (GB-2026-038): a missing or "
+        "malformed epistemic field on a CLM/FND record is an error, not a warning"
     )
 else:
-    print("  gate: EPISTEMIC_FIELDS_ENFORCED = False -> warning-gated (GB-2026-038)")
+    print("  gate: EPISTEMIC_FIELDS_ENFORCED = True -> enforced at error level (GB-2026-038 migration complete)")
 
 print()
 

@@ -256,7 +256,7 @@ for file in files:
 # common.read_text (the \\?\ prefix), the same as every other pass.
 # ----------------------------
 
-EPISTEMIC_FIELDS_ENFORCED = False
+EPISTEMIC_FIELDS_ENFORCED = True
 
 epistemic_unmigrated = []
 
