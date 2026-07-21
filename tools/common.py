@@ -316,6 +316,136 @@ def review_field_problems(meta):
     return problems
 
 
+# ----------------------------------------------------------------------------
+# Tradition-entity fields + branches_from lineage edge (ADR-GOV-0009 / STD-0002
+# v1.10 §11 / STD-0004 v1.2 §7.2).
+#
+# Two controlled vocabularies, defined once here so validate.py (field shape)
+# and graph_integrity.py (edge integrity) read the same source of truth:
+#   * TRADITION_TYPES — values for a tradition-class entity's `tradition_type`.
+#   * BRANCH_QUALIFIERS — values for a `branches_from` edge's REQUIRED qualifier.
+# ----------------------------------------------------------------------------
+
+TRADITION_TYPES = ("founded", "emergent", "reform", "syncretic")
+
+BRANCH_QUALIFIERS = (
+    "schism", "reform", "syncretic-descent", "heterodox-offshoot", "disputed",
+)
+
+# The three co-required tradition-class fields (STD-0002 §11 v1.10).
+TRADITION_FIELDS = ("tradition_type", "dating_claims", "display_range")
+
+
+def tradition_entity_problems(meta):
+    """Shape-check the tradition-class entity fields of a parsed frontmatter dict.
+
+    Returns (problems, dating_claims): `problems` is a list of problem strings
+    (empty means well-formed OR not a tradition entity); `dating_claims` is the
+    list of raw dating_claims entries for the caller's dangling resolution.
+
+    The three fields (`tradition_type`, `dating_claims`, `display_range`) are
+    **co-required**: presence of ANY one requires ALL three (STD-0002 §11 v1.10 /
+    ADR-GOV-0009 D3). A concept entity carries none of them and yields no
+    problems. Shape only -- whether a date is *correct* is research, not
+    validation; resolution of `dating_claims` targets is graph_integrity's job
+    (they are graph claims, §12.1), so this returns them rather than resolving.
+    """
+    problems = []
+    present = {f: meta.get(f) for f in TRADITION_FIELDS if meta.get(f) is not None}
+
+    if not present:
+        return problems, []  # concept entity (or non-entity): nothing to check
+
+    # Co-presence: any one requires all three.
+    missing = [f for f in TRADITION_FIELDS if meta.get(f) is None]
+    if missing:
+        problems.append(
+            "tradition-class entity fields are co-required (STD-0002 §11 v1.10): "
+            f"present {sorted(present)}, missing {missing}"
+        )
+
+    ttype = meta.get("tradition_type")
+    if ttype is not None and ttype not in TRADITION_TYPES:
+        problems.append(
+            f"`tradition_type` must be one of {list(TRADITION_TYPES)} (got {ttype!r})"
+        )
+
+    dating = meta.get("dating_claims")
+    dating_list = []
+    if dating is not None:
+        if not isinstance(dating, list) or not dating:
+            problems.append("`dating_claims` must be a non-empty list of claim identifiers")
+        else:
+            for i, entry in enumerate(dating):
+                ident = extract_identifier(str(entry).strip())
+                if ident is None:
+                    problems.append(
+                        f"dating_claims[{i}] must be a claim identifier (got {entry!r})"
+                    )
+                else:
+                    dating_list.append(str(entry).strip())
+
+    disp = meta.get("display_range")
+    if disp is not None and (not isinstance(disp, str) or not disp.strip()):
+        problems.append("`display_range` must be a non-empty string (render-only)")
+
+    return problems, dating_list
+
+
+def branches_from_problems(source_id, edges, type_of):
+    """Integrity-check a source object's branches_from edges (STD-0004 v1.2 §7.2).
+
+    `source_id` is the edge source's identifier (or None if unidentified);
+    `edges` is a list of (target, qualifier) pairs; `type_of` is a callable
+    mapping a target identifier to its object type ("ENT", "CLM", …) or None if
+    the target does not resolve. Returns a list of (target, reason) problems.
+
+    Enforced (each an error): source is an ENT; target resolves to an ENT; the
+    qualifier is present and drawn from BRANCH_QUALIFIERS. A dangling target is
+    NOT reported here (Check 1's dangling pass owns that) -- an unresolved target
+    yields type None and is skipped for the ENT-target check. The WARRANT rule
+    (every edge backed by a graded claim) is deliberately NOT here: it is
+    review-checked, not tool-checked (a warrant is a claim about lineage, not a
+    structured pointer). Shared so graph_integrity.py and its test agree.
+    """
+    problems = []
+    src_type = source_id.split("-")[0] if source_id else None
+    for target, qual in edges:
+        if src_type != "ENT":
+            problems.append(
+                (target, f"source is not an ENT (got {src_type or 'unidentified'})")
+            )
+        tgt_type = type_of(target)
+        if tgt_type is not None and tgt_type != "ENT":
+            problems.append((target, f"target is not an ENT (got {tgt_type})"))
+        if qual is None:
+            problems.append((target, "missing REQUIRED qualifier"))
+        elif qual not in BRANCH_QUALIFIERS:
+            problems.append(
+                (target, f"invalid qualifier {qual!r} (one of {list(BRANCH_QUALIFIERS)})")
+            )
+    return problems
+
+
+def relationship_entries(meta):
+    """Every typed relationship as a dict with type/target/qualifier.
+
+    Shared by graph_integrity.py (edge integrity) and build_view.py (chip
+    rendering) so the qualifier is read the same way. Returns a list of
+    {"type", "target", "qualifier"} (qualifier is None when absent).
+    """
+    out = []
+    for r in (meta.get("relationships") or []):
+        if isinstance(r, dict) and r.get("type") and r.get("target"):
+            q = r.get("qualifier")
+            out.append({
+                "type": str(r["type"]).strip(),
+                "target": str(r["target"]).strip(),
+                "qualifier": (str(q).strip() if q is not None else None),
+            })
+    return out
+
+
 def extract_identifier(text):
     """Return the leading TYPE-NNNN / ADR-CAT-NNNN identifier of a string, or None."""
     if not isinstance(text, str):

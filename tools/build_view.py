@@ -54,7 +54,7 @@ import yaml
 from common import (
     find_vault_root, markdown_files, parse_frontmatter, read_text, write_text,
     extract_identifier, FRONTMATTER_VERSION_RE, _parse_date,
-    EPISTEMIC_LEVEL_LABELS,
+    EPISTEMIC_LEVEL_LABELS, relationship_entries,
 )
 
 KB_TYPES = ("INV", "CLM", "SRC", "ENT", "FND")
@@ -128,6 +128,21 @@ def _typed_relationships(meta):
             target = extract_identifier(str(r["target"]).strip()) \
                 or str(r["target"]).strip()
             out.append((rtype, target))
+    return out
+
+
+def _rel_qualifiers(meta):
+    """Map (type, target_identifier) -> qualifier for entries that carry one.
+
+    Only branches_from entries carry a qualifier (STD-0004 §7.2). Keyed the same
+    way _typed_relationships resolves targets so the view can look a qualifier up
+    when rendering the cross-edge chip.
+    """
+    out = {}
+    for e in relationship_entries(meta):
+        if e["qualifier"] is not None:
+            target = extract_identifier(e["target"]) or e["target"]
+            out[(e["type"], target)] = e["qualifier"]
     return out
 
 
@@ -217,6 +232,7 @@ def object_from_text(text):
         "status": meta.get("status"),
         "operational_status": meta.get("operational_status"),
         "relationships": _typed_relationships(meta),
+        "rel_qualifiers": _rel_qualifiers(meta),
         "parents": _id_list(meta, "parent_documents"),
         "related": _id_list(meta, "related_documents"),
         "confidence": _confidence(meta) if prefix in LEAF_TYPES else [],
@@ -437,8 +453,16 @@ def _cross_edge_badges(node, by_id):
     edges = cross_edges(node)
     if not edges:
         return ""
-    chips = "".join(_chip(t, by_id, rt) for rt, t in edges)
-    return f'<div class="cross-edges"><span class="cross-label">links:</span>{chips}</div>'
+    quals = node.get("rel_qualifiers", {})
+    chips = []
+    for rt, t in edges:
+        # branches_from renders with its qualifier (STD-0004 §7.2) so the KIND of
+        # branching is visible on the chip, e.g. "branches_from (schism) →".
+        q = quals.get((rt, t))
+        kind = f"{rt} ({q})" if (rt == "branches_from" and q) else rt
+        chips.append(_chip(t, by_id, kind))
+    return (f'<div class="cross-edges"><span class="cross-label">links:</span>'
+            f'{"".join(chips)}</div>')
 
 
 def _derived_chips(node, by_id):

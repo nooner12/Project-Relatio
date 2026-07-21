@@ -35,7 +35,7 @@ import yaml
 
 from common import (
     find_vault_root, markdown_files, parse_frontmatter, read_text, write_text,
-    confidence_bounded_by,
+    confidence_bounded_by, relationship_entries, branches_from_problems,
 )
 
 # ADR-GOV-0001 style OR TYPE-NNNN style (CON/KOS/STD/ROLE/TPL/OPS/INV/CLM/SRC/ENT/FND)
@@ -43,6 +43,9 @@ ID_RE = re.compile(r"^(ADR-[A-Z]{2,5}-\d{4}|[A-Z]{2,5}-\d{4})")
 KB_TYPES = ("INV", "CLM", "SRC", "ENT", "FND")
 # STD-0004 symmetric relationship types — these are expected to reciprocate.
 SYMMETRIC_TYPES = ("related_to", "contrasts_with")
+# STD-0004 v1.2 §7.2: the provisional lineage edge — directional (never a
+# symmetric-advisory candidate), ENT → ENT only, qualifier REQUIRED.
+BRANCHES_FROM = "branches_from"
 
 ROOT = Path(__file__).parent
 vault = find_vault_root(ROOT)
@@ -77,20 +80,26 @@ for f in files:
     key = ident or stem
     related = [str(x) for x in (meta.get("related_documents") or [])]
     parents = [str(x) for x in (meta.get("parent_documents") or [])]
-    # typed relationships block (STD-0002 §7): list of {type, target}
-    typed = []
-    for r in (meta.get("relationships") or []):
-        if isinstance(r, dict) and r.get("type") and r.get("target"):
-            typed.append((str(r["type"]).strip(), str(r["target"]).strip()))
+    # typed relationships block (STD-0002 §7): list of {type, target, qualifier}.
+    # `typed` stays 2-tuples (type, target) for the reciprocity checks; branch
+    # edges keep their qualifier separately for the branches_from integrity check.
+    entries = relationship_entries(meta)
+    typed = [(e["type"], e["target"]) for e in entries]
+    branches = [(e["target"], e["qualifier"])
+                for e in entries if e["type"] == BRANCHES_FROM]
     # bounded_by entries inside confidence components (STD-0002 §11 v1.9 /
     # STD-0009 §9): each is a graph claim, so it participates in dangling
     # detection exactly like a relationships target. Optional; usually absent.
     bounded = confidence_bounded_by(meta)
+    # dating_claims on tradition-class entities (STD-0002 §11 v1.10): graph-claim
+    # pointers, so they participate in dangling detection like any reference.
+    dating = [str(x).strip() for x in (meta.get("dating_claims") or [])]
     is_kb = bool(ident) and ident.split("-")[0] in KB_TYPES
 
     objects[key] = {
         "file": f, "id": ident, "name": stem,
         "related": related, "parents": parents, "typed": typed,
+        "branches": branches, "dating": dating,
         "bounded": bounded, "kb": is_kb,
     }
     if ident:
@@ -127,8 +136,35 @@ for key, o in objects.items():
     for cname, target in o["bounded"]:
         if resolve(target) is None:
             dangling.append((o["name"], f"confidence[{cname}].bounded_by", target))
+    for target in o["dating"]:
+        if resolve(target) is None:
+            dangling.append((o["name"], "dating_claims", target))
+
+# ---- Check 1b: branches_from lineage-edge integrity (STD-0004 v1.2 §7.2) ----
+# Errors (fail the build), not advisories: the provisional edge is ENT → ENT
+# only and its qualifier is REQUIRED and drawn from a controlled list. The
+# warrant rule (every edge backed by a graded claim) is NOT enforced here --
+# see the report note and tools/README.md for why it is review-checked.
+def _type_of(target):
+    """The object type ('ENT', 'CLM', …) of a reference target, or None if it
+    does not resolve. Used by branches_from's ENT-target check (shared helper)."""
+    tgt = resolve(target)
+    if tgt is None:
+        return None
+    tid = objects[tgt]["id"]
+    return tid.split("-")[0] if tid else None
+
+
+branch_errors = []
+for key, o in objects.items():
+    if not o["branches"]:
+        continue
+    for target, why in branches_from_problems(o["id"], o["branches"], _type_of):
+        branch_errors.append((o["name"], target, why))
 
 # ---- Check 2: non-reciprocated SYMMETRIC typed links (type-aware) ----------
+# branches_from is directional by construction and is NOT in SYMMETRIC_TYPES, so
+# it is never a reciprocity candidate here (STD-0004 v1.2 §7.2).
 # Only related_to / contrasts_with are expected to reciprocate. A reciprocal is
 # any symmetric typed edge from B back to A. Directional types are never flagged.
 sym_one_way = []
@@ -172,6 +208,7 @@ lines.append("# Graph Integrity Report - Project Relatio")
 lines.append("")
 lines.append(f"Objects scanned: {len(objects)}")
 lines.append(f"Dangling references: {len(dangling)}")
+lines.append(f"branches_from edge errors: {len(branch_errors)}")
 lines.append(f"Non-reciprocated symmetric typed links: {len(set(sym_one_way))}")
 lines.append(f"Untyped one-directional KB links (legacy): {len(one_way)}")
 lines.append("")
@@ -181,6 +218,22 @@ if dangling:
     for name, fld, ref in sorted(dangling):
         lines.append(f"- `{name}` -> {fld}: `{ref}`")
     lines.append("")
+
+if branch_errors:
+    lines.append("## branches_from edge errors (FAIL - STD-0004 v1.2 §7.2)")
+    lines.append("The provisional lineage edge is ENT -> ENT only, qualifier REQUIRED and controlled:")
+    for name, target, why in sorted(branch_errors):
+        lines.append(f"- `{name}` -[branches_from]-> `{target}`: {why}")
+    lines.append("")
+
+# The warrant rule (every branches_from edge backed by a graded claim) is
+# review-checked, not tool-checked: a warrant is a claim ABOUT lineage, not a
+# structured pointer on the edge, so confirming it needs prose reading. Per the
+# ADR-GOV-0009 Task 4 fallback, qualifier + ENT->ENT are enforced here now; the
+# warrant rule is recorded as review-checked (tools/README.md).
+lines.append("> Note: the branches_from **warrant rule** (every edge backed by a "
+             "graded claim) is review-checked, not tool-checked (STD-0004 §7.2).")
+lines.append("")
 
 if sym_one_way:
     lines.append("## Non-reciprocated symmetric typed links (advisory - GB-2026-001)")
@@ -196,7 +249,7 @@ if one_way:
         lines.append(f"- {a} -> {b}  (no {b} -> {a})")
     lines.append("")
 
-if not dangling and not sym_one_way and not one_way:
+if not dangling and not branch_errors and not sym_one_way and not one_way:
     lines.append("No dangling references and full reciprocity. Graph is clean.")
 
 report = "\n".join(lines)
@@ -206,4 +259,4 @@ out = ROOT / "output" / "graph_integrity_report.md"
 out.parent.mkdir(exist_ok=True)
 write_text(out, report + "\n")
 
-sys.exit(1 if dangling else 0)
+sys.exit(1 if (dangling or branch_errors) else 0)

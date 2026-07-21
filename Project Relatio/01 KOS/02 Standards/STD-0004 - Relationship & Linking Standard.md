@@ -1,7 +1,7 @@
 ---
 title: STD-0004 - Relationship & Linking Standard
 document_type: Standards Document
-version: 1.1
+version: 1.2
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -28,7 +28,7 @@ tags:
 
 # Project Relatio Relationship & Linking Standard
 
-## Version 1.1
+## Version 1.2
 
 ## Adopted Standards Document
 
@@ -290,9 +290,46 @@ A general relationship used only when a more precise relationship cannot yet be 
 
 ---
 
+# branches_from (PROVISIONAL — ADR-GOV-0009 D4)
+
+Meaning:
+
+Tradition B `branches_from` tradition A — the historical descent of one religious tradition from another. **Entity-to-entity ONLY (ENT → ENT).** Asymmetric; never reciprocated; not a symmetric-advisory candidate (it is directional by construction, like `derived_from`, and `graph_integrity.py` treats it as such).
+
+**Required qualifier.** Every `branches_from` edge carries a `qualifier` naming the *kind* of branching, one of:
+
+- `schism`
+- `reform`
+- `syncretic-descent`
+- `heterodox-offshoot`
+- `disputed`
+
+An edge without a qualifier is **malformed** (a graph-integrity error, not an advisory). Different kinds of branching render differently.
+
+**Warrant rule.** Every `branches_from` edge must be supported by a **graded claim** — the edge is the render; the claim is the warrant. An unwarranted edge is a graph-integrity error. (Because a warrant is a claim about lineage rather than a structured pointer on the edge, this rule is **review-checked, not tool-checked** — see §7.2 and `tools/README.md`.)
+
+**Provisional status (ADR-GOV-0007 §2 anchor discipline).** This type and its qualifier list are *scaffolding*, expected to be revised by the first two family investigations of the world-religions timeline program (ADR-GOV-0009); their findings on edge semantics route to the review queue as recommendations (ADR-GOV-0007 §3). It is a vocabulary entry, not load-bearing architecture — maximally revisable. **Named revision trigger: ADR-GOV-0009 §7(a).**
+
+---
+
 # 7.1 Machine-Readable Encoding (v1.1)
 
 The vocabulary above is expressed in metadata through the typed **`relationships`** block defined by STD-0002 §7 — each entry pairs a `type` from this vocabulary with a `target` identifier. This closes Pressure Test **F-4** / **GB-2026-001**, where these types could previously live only in an object's prose. The flat `parent_documents`/`related_documents` lists remain the tooling-read graph for dangling-reference checks; the typed block adds the *meaning* of each edge, which `graph_integrity.py` uses for type-aware reciprocity (§11 *False Reciprocity* — directional types such as `derived_from`, `supports`, `part_of` are not expected to reciprocate; symmetric types such as `related_to`, `contrasts_with` are).
+
+---
+
+# 7.2 The `qualifier` key (v1.2 — branches_from)
+
+The typed `relationships` block gains an optional **`qualifier`** key, valid **only** on `branches_from` entries (an unqualified `branches_from` edge is malformed; a `qualifier` on any other type is meaningless and ignored):
+
+```
+relationships:
+  - type: branches_from
+    target: ENT-00XX
+    qualifier: schism
+```
+
+`qualifier` takes one value from the controlled list in the `branches_from` entry above (`schism` / `reform` / `syncretic-descent` / `heterodox-offshoot` / `disputed`). `graph_integrity.py` enforces the qualifier-required rule, the vocabulary, and the ENT → ENT restriction as errors.
 
 ---
 
@@ -451,6 +488,7 @@ Meaningful relationships transform stored information into structured knowledge.
 |---|---|---|---|
 |1.0|2026-07-09|Adopted|Initial relationship and linking standard|
 |1.1|2026-07-11|Adopted|Added §7.1 Machine-Readable Encoding: the vocabulary is now carried in the typed `relationships` frontmatter block (STD-0002 §7 v1.6), closing F-4 / GB-2026-001. No vocabulary change — the twelve approved types are unchanged.|
+|1.2|2026-07-21|Adopted|Added the **provisional `branches_from`** relationship type (ENT → ENT, asymmetric, REQUIRED qualifier from schism/reform/syncretic-descent/heterodox-offshoot/disputed, warrant-by-graded-claim) enacting ADR-GOV-0009 D4; added §7.2 defining the optional `qualifier` frontmatter key (valid only on branches_from). PROVISIONAL under ADR-GOV-0007 §2 anchor discipline; revision trigger ADR-GOV-0009 §7(a). Additive — the existing twelve types are unchanged.|
 
 ---
 

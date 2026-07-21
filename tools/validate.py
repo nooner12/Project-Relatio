@@ -15,6 +15,7 @@ from common import (
     parse_version,
     epistemic_field_problems,
     review_field_problems,
+    tradition_entity_problems,
 )
 
 ROOT = Path(__file__).parent
@@ -309,6 +310,52 @@ for file in files:
     if review_problems:
         detail = "\n".join(f"  {p}" for p in review_problems)
         errors.append(f"Review fields malformed: {file.name}\n{detail}")
+
+# ----------------------------
+# Tradition-entity field shape pass (STD-0002 s.11 v1.10 / ADR-GOV-0009 D3)
+#
+# An Entity Record representing a religious tradition carries three co-required
+# fields: `tradition_type` (founded/emergent/reform/syncretic), `dating_claims`
+# (graph-claim pointers), and `display_range` (render-only string). Presence of
+# ANY one requires ALL three; a concept entity carries none of them and is
+# untouched. Shape only -- the tradition_type vocabulary and the co-presence
+# rule; whether a date is correct is research, and dangling `dating_claims`
+# targets are resolved by graph_integrity.py (they are graph claims, s.12.1).
+#
+# Enforced at ERROR immediately (the check guards *births*): zero tradition
+# entities exist yet, so nothing can fail -- but the first one authored wrong
+# fails the build. The seven concept entities (ENT-0001..0007) carry none of the
+# three fields and so are never flagged. Inherits extended-length path handling
+# from common.read_text, like every other pass.
+# ----------------------------
+
+for file in files:
+
+    ident = extract_identifier(file.stem)
+
+    if ident is None or ident.split("-")[0] != "ENT":
+        continue
+
+    text = read_text(file)
+
+    frontmatter, _ = parse_frontmatter(text)
+
+    if frontmatter is None:
+        continue  # already an error in the first pass
+
+    try:
+        meta = yaml.safe_load(frontmatter)
+    except Exception:
+        continue  # already an error in the first pass
+
+    if not isinstance(meta, dict):
+        continue
+
+    tradition_problems, _dating = tradition_entity_problems(meta)
+
+    if tradition_problems:
+        detail = "\n".join(f"  {p}" for p in tradition_problems)
+        errors.append(f"Tradition-entity fields malformed: {file.name}\n{detail}")
 
 if epistemic_unmigrated:
     warnings.append(

@@ -1,7 +1,7 @@
 ---
 title: STD-0002 - Metadata & YAML Standard
 document_type: Standards Document
-version: 1.9
+version: 1.10
 status: Adopted
 operational_status: Active
 category:
@@ -30,7 +30,7 @@ tags:
 
 # Project Relatio Metadata & YAML Standard
 
-## Version 1.9
+## Version 1.10
 
 ## Adopted Standards Document
 
@@ -574,6 +574,27 @@ confidence:
 
 ---
 
+## Entity Records (tradition class)
+
+Entity Records representing **religious traditions** carry three additional fields (per ADR-GOV-0009 D3):
+
+```
+tradition_type: founded        # founded | emergent | reform | syncretic
+dating_claims:                 # pointers to the graded claim(s) dating the tradition
+  - CLM-00XX
+display_range: "3rd c. CE"     # render-only string; the claims are the truth
+```
+
+**Field rules:**
+
+- These fields are **REQUIRED on tradition-class entities** and **ABSENT on concept entities** (the existing seven concept entities — ENT-0001…ENT-0007 — are untouched). Presence of any one of the three requires all three (the validator enforces this at error level).
+- `tradition_type` takes one value from the controlled vocabulary `founded` / `emergent` / `reform` / `syncretic`, so the schema never demands a founding date from a tradition that has none (the "Hinduism-class" category error is excluded structurally).
+- `dating_claims` entries are **graph claims** (§12.1 — must resolve to existing objects; dangling entries fail integrity).
+- `display_range` is **presentation only** and carries **no evidential weight** — a tradition's contestedness lives in the confidence of its dating claims, not in this string.
+- **No `origin_date` (or any other temporal) field exists on entities, by decision** (ADR-GOV-0009, Alternatives §2): dates are claims, not entity fields. `display_range` is the sole render string.
+
+---
+
 # 12. Metadata Integrity Rules
 
 Metadata must:
@@ -693,6 +714,7 @@ Project Relatio adopts:
 |1.7|2026-07-20|Adopted|Added **§12.1 Frontmatter References Are Graph Claims**, enacting **ADR-GOV-0004 §2 D4**. Entries in `related_documents`, `parent_documents`, and the typed `relationships` block must resolve to existing files; named candidates and non-existent objects are referenced in **prose only**. Placed here rather than in STD-0004 because D4 governs what the frontmatter *fields* must contain (STD-0002's domain), whereas STD-0004 governs which relationship *types* exist and what they mean. Additive rule statement only — no field added, removed, or redefined, and no existing requirement changed; `graph_integrity.py` already enforced the constraint after commit, and this states it at authoring time with its rationale.|
 |1.8|2026-07-20|Adopted|Added §11 subsection **Claim Records and Finding Records**, requiring the epistemic-axis fields `confidence` (always-a-list, per-component level/label) and `reliance_tier` (R0/R1/R2). Additive document-class fields per the existing §11 pattern; values and rules governed by the Epistemic State Standard (STD-0008), whose R-tier vocabulary is constitutionally sourced from ADR-GOV-0006. Labels follow the canonical KOS-0003 §8 scale (Very High / High / Moderate / Low / Very Low). No existing field removed, renamed, or redefined. Migration of existing Claim/Finding records gated separately (GB-2026-038); until it completes, the validator's epistemic-field check is warning-gated.|
 |1.9|2026-07-21|Adopted|Activated review fields (review_cycle/review_date/last_reviewed) as required Claim/Finding fields per ADR-GOV-0008 and the Review & Revision Standard (STD-0009); promoted them out of §8 reserved status; added optional bounded_by to confidence components (graph-claim rule §12.1 applies). Additive.|
+|1.10|2026-07-21|Adopted|Added §11 subsection **Entity Records (tradition class)**, requiring `tradition_type` (founded/emergent/reform/syncretic), `dating_claims` (graph-claim pointers, §12.1), and `display_range` (render-only string) on tradition-class entities and forbidding them on concept entities (ENT-0001…0007 untouched), enacting ADR-GOV-0009 D3. No `origin_date` field exists by decision (dates are claims). Additive document-class fields per the existing §11 pattern; validator shape-checks co-presence and the tradition_type vocabulary at error level.|
 
 ---
 

@@ -22,11 +22,24 @@ python graph_integrity.py
 
 Reports, and writes `output/graph_integrity_report.md`:
 - **Dangling references** — any `parent_documents` / `related_documents` entry, any
-  typed `relationships:` target, or any `bounded_by` entry inside a `confidence`
-  component (STD-0002 §11 v1.9 / STD-0009 §9), that resolves to no existing object.
+  typed `relationships:` target, any `bounded_by` entry inside a `confidence`
+  component (STD-0002 §11 v1.9 / STD-0009 §9), or any `dating_claims` entry on a
+  tradition-class entity (STD-0002 §11 v1.10), that resolves to no existing object.
   Exit code 1 if any exist (reliability-critical). `bounded_by` entries are graph
   claims like any other reference; zero exist at introduction (ADR-GOV-0008 D5, no
   retroactive backfill), and detection is proven by `tests/test_bounded_by.py`.
+- **branches_from edge integrity** (error; STD-0004 v1.2 §7.2 / ADR-GOV-0009 D4) —
+  the provisional lineage edge is **ENT → ENT only** and its **qualifier is REQUIRED**
+  and drawn from a controlled list (`schism` / `reform` / `syncretic-descent` /
+  `heterodox-offshoot` / `disputed`). A non-ENT source or target, a missing qualifier,
+  or an out-of-vocabulary qualifier **fails the build** (exit 1). It is directional by
+  construction and so is never a symmetric-reciprocity candidate. The **warrant rule**
+  (every edge backed by a graded claim) is **review-checked, not tool-checked**: a
+  warrant is a claim *about* lineage, not a structured pointer on the edge, so
+  confirming it would require prose reading — per the ADR-GOV-0009 Task 4 fallback,
+  qualifier + ENT→ENT are enforced mechanically now and the warrant rule is recorded
+  as review-checked. Zero branches_from edges exist at introduction (INV-0016 populates
+  them); detection is proven by `tests/test_branches_from.py`.
 - **Non-reciprocated symmetric typed links** — advisory; type-aware (GB-2026-001).
   Among KB objects, a *symmetric*-type edge (`related_to`, `contrasts_with`) with no
   reciprocal back. Directional types (`derived_from`, `supports`, `part_of`, …) are
@@ -52,6 +65,16 @@ Checks, per STD-0001/STD-0002:
   field carries the **same** one, and the identifier is **unique** across the vault.
   Identifier form: `TYPE-NNNN` (e.g. `KOS-0004`) or `ADR-CAT-NNNN` (e.g. `ADR-GOV-0001`).
 - **Duplicate filenames** (advisory warning).
+- **Tradition-entity field shape** (**error**; STD-0002 §11 v1.10 / ADR-GOV-0009 D3) —
+  an Entity Record representing a religious tradition carries three **co-required**
+  fields: `tradition_type` (founded/emergent/reform/syncretic), `dating_claims`
+  (graph-claim pointers), and `display_range` (render-only string). Presence of **any**
+  one requires **all three**, and `tradition_type` must be in the controlled vocabulary.
+  A concept entity carries **none** of them and is never flagged (the seven existing
+  ENT-0001…0007 are untouched). Shape only — dangling `dating_claims` targets are
+  graph_integrity's job (they are graph claims, §12.1). Enforced at error to guard
+  *births*: zero tradition entities exist yet, so nothing can fail, but the first one
+  authored wrong fails the build. Detection is proven by `tests/test_tradition_entity.py`.
 - **Version coherence** (**error**; GB-2026-035) — a document's `version:` frontmatter,
   its `## Version` body heading, and the newest row of its own `# Revision History`
   table must agree.
@@ -171,8 +194,12 @@ self-check in `main()` fails the run if the reliance-badge count ≠ the CLM/FND
 Structure — the tree spine is INV → its `part_of` claims/findings/sources → each
 claim/finding's `derived_from` targets (rendered as reference chips). Every object is a
 canonical node **exactly once** (node count == KB object count); derivation and the
-cross-edges (`contrasts_with` / `depends_on` / `supports` / `related_to`, beyond the
-spine) are chips/badges pointing at those canonical nodes, never duplicate full nodes.
+cross-edges (`contrasts_with` / `depends_on` / `supports` / `related_to` / the
+provisional `branches_from`, beyond the spine) are chips/badges pointing at those
+canonical nodes, never duplicate full nodes. A `branches_from` chip renders **with its
+qualifier** — e.g. `branches_from (schism) →` (STD-0004 §7.2) — so the *kind* of
+lineage is visible. (The timeline VIEW mode itself is future work — it waits for graded
+data; this is only the tree-view chip.)
 Sources attach to an INV by `part_of`, or by the sole INV in their relationships/
 `related_documents` when exactly one is referenced (no cross-investigation ambiguity
 exists in the vault); sources with no INV signal, and the KB-shared **entities**, render
