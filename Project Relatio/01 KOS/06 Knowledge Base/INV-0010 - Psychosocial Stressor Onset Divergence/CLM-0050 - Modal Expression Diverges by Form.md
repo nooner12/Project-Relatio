@@ -1,7 +1,7 @@
 ---
 title: CLM-0050 - Modal Expression Diverges by Form
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-15
@@ -28,6 +28,15 @@ relationships:
     target: FND-0010
   - type: part_of
     target: INV-0010
+confidence:
+  - component: general_tendency
+    level: 2
+    label: Low
+  - component: physical_vs_relational_aggression
+    level: 3
+    label: Moderate
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0050
@@ -117,5 +126,6 @@ SRC-0066 is a credible developmental study; its limits for this claim are modest
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-15|Draft|Created for RQ-0010 (secondary/modal-expression question). Level 2 (Low), reaching Level 3 for the physical-vs-relational peer aggression/victimization case (SRC-0066). Construct-provenance `CONFLATED` — gender-patterned/unattributed only despite dominant socialization theory. Modest-magnitude and over-generalization risks named.|
+|0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0050

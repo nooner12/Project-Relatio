@@ -1,7 +1,7 @@
 ---
 title: CLM-0040 - Compound Program Evidence Gap
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -29,6 +29,12 @@ relationships:
     target: CLM-0037
   - type: part_of
     target: INV-0008
+confidence:
+  - component: compound_evidence_gap
+    level: 4
+    label: High
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0040
@@ -118,5 +124,6 @@ Rests on the absence observed across SRC-0046…SRC-0052 and the general child-d
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-14|Draft|Created for RQ-0008 (integrative). Underlying Level 4 that the compound program is untested and ingredient evidence does not license a compound claim; sets the Level 1–2 application ceiling. Absence-of-evidence, search-incompleteness, and composition fallacies named.|
+|0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0040
