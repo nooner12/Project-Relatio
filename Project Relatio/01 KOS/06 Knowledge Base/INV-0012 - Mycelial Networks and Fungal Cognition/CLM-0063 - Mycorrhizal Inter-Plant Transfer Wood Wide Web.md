@@ -42,8 +42,8 @@ confidence:
     level: 2
     label: Low
   - component: kin_provisioning
-    level: 1
-    label: Very Low
+    level: 2
+    label: Low
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
