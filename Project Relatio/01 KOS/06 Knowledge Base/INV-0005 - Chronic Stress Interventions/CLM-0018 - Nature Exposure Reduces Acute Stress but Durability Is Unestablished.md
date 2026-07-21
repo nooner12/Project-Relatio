@@ -1,7 +1,7 @@
 ---
 title: CLM-0018 - Nature Exposure Reduces Acute Stress but Durability Is Unestablished
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -35,6 +35,15 @@ relationships:
     target: FND-0005
   - type: part_of
     target: INV-0005
+confidence:
+  - component: acute_stress_reduction
+    level: 3
+    label: Moderate
+  - component: durable_stress_reduction
+    level: 2
+    label: Low
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0018
@@ -124,5 +133,6 @@ SRC-0021 is a cluster of moderate-authority reviews read at summary level, with 
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-10|Draft|Created for RQ-0005. Acute (moderate) vs durable (speculative-low) split; the acute-masquerading-as-durable risk guarded explicitly.|
+|0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0018
