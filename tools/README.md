@@ -21,9 +21,12 @@ python graph_integrity.py
 ```
 
 Reports, and writes `output/graph_integrity_report.md`:
-- **Dangling references** — any `parent_documents` / `related_documents` entry, or any
-  typed `relationships:` target, that resolves to no existing object. Exit code 1 if
-  any exist (reliability-critical).
+- **Dangling references** — any `parent_documents` / `related_documents` entry, any
+  typed `relationships:` target, or any `bounded_by` entry inside a `confidence`
+  component (STD-0002 §11 v1.9 / STD-0009 §9), that resolves to no existing object.
+  Exit code 1 if any exist (reliability-critical). `bounded_by` entries are graph
+  claims like any other reference; zero exist at introduction (ADR-GOV-0008 D5, no
+  retroactive backfill), and detection is proven by `tests/test_bounded_by.py`.
 - **Non-reciprocated symmetric typed links** — advisory; type-aware (GB-2026-001).
   Among KB objects, a *symmetric*-type edge (`related_to`, `contrasts_with`) with no
   reciprocal back. Directional types (`derived_from`, `supports`, `part_of`, …) are
@@ -87,6 +90,57 @@ Checks, per STD-0001/STD-0002:
 Exit code 1 if any errors. It does **not** check the `related_documents` graph — that
 is graph_integrity.py's job. (Rebuilt from the old `id`/`[[wikilink]]` checks per
 Backlog GB-2026-016; those predated the adopted standards.)
+
+The validator also shape-checks two Claim/Finding field families at **error** level:
+the **epistemic fields** (`confidence` list + `reliance_tier`; STD-0008 / STD-0002 §11,
+GB-2026-038 migration complete) and the **review fields** (`review_cycle`, `review_date`,
+`last_reviewed`; STD-0009 §8 / STD-0002 §11 v1.9). The review check enforces the
+arithmetic `review_date == last_reviewed + review_cycle months`; a divergence means one
+of the three is stale (the review-field analogue of version incoherence). Both check
+*shape*, never whether a grade or cadence is *correct* — that is review-act judgment.
+
+## review_queue.py — the Review & Revision queue (STD-0009 §10)
+
+```
+python review_queue.py
+```
+
+**Read-only.** Runs the STD-0009 §4 trigger detections against the vault and emits the
+current review queue (also written to `output/review_queue.md`): one row per surfaced
+item — **object · trigger · resolved scope · prescribed act**, exactly per the
+STD-0009 §4/§5 tables. The queue **PROPOSES**; it never writes to any record
+(ADR-GOV-0008 D6). Every act runs through a governed session, never the tool. **Do not
+hand-audit records for staleness — run the queue.**
+
+v1 detections: `time_decay` (review_date ≤ today → Light re-affirmation),
+`source_superseded` (a Superseded object in a record's `derived_from` or a component's
+`bounded_by` → Targeted re-grade), `upstream_grade_change` (a bounded object with a
+confidence change in its history **dated after** the dependent's `last_reviewed` →
+Targeted re-grade), and two recorded-flag triggers, `contradiction` (→ Full OPS-0003
+circuit) and `field_prose_divergence` (→ Reconciliation).
+
+**MARKER CONVENTION (recorded flags).** A contradiction or a field/prose divergence is
+a *judgment*, not something the graph shows, so it enters the queue via an explicit flag
+line in the **Governance Backlog**:
+
+```
+REVIEW-FLAG | trigger=<contradiction|field_prose_divergence> | object=<ID> | scope=<free text>
+```
+
+Leading Markdown list/quote punctuation and surrounding whitespace are ignored; one flag
+per line. The marker is deliberately explicit so ordinary Backlog prose that merely
+*mentions* a contradiction does **not** enter the queue — in particular the
+CLM-0043/0046/0050 borderline-split Backlog item is **not** a flag and must not be written
+as one. Reflexive structural recommendations (ADR-GOV-0007) will enter the same queue via
+the same marker once the reflexive process graduates (STD-0009 §10); v1 ships only the two
+flag triggers above, so no act type beyond the STD-0009 §5 table is invented.
+
+Expected live output at introduction: **empty** — all `review_date`s were just
+initialized months out, no source is Superseded, no upstream grade change postdates any
+`last_reviewed`, and no flags are recorded. `tests/test_review_queue.py` drives synthetic
+inputs through the pure `detect()` core to prove every trigger fires with its correct act
+(and that the near-miss cases — a future review_date, an upstream change *predating*
+last_reviewed — do not).
 
 ## tests/ — detection tests
 
