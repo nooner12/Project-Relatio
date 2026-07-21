@@ -1,7 +1,7 @@
 ---
 title: CLM-0077 - Baptism by John the Baptist
 document_type: Claim Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -40,6 +40,9 @@ confidence:
     label: Moderate
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 9
+review_date: 2027-04-20
+last_reviewed: 2026-07-20
 ---
 
 # CLM-0077
@@ -154,5 +157,6 @@ Type: **Historical.**
 |0.2|2026-07-20|Draft|**Critical Review – RQ-0014 optional recommendation adopted.** Confidence block: added the explicit reconciliation of the independence-2 dimension score with the Level 3 grade (dimension scores profile the evidence; the grade is set by the element-(a) layer bound plus the redactional-trajectory datum; one low dimension does not mechanically force Level 2). **Level 3 (Moderate) unchanged** (reviewer confirmed). No other section touched.|
 |0.1|2026-07-20|Draft|Created for RQ-0014. Level 3 (Moderate) — the showcase divergence case: embarrassment criterion at its strongest, attestation layer modest (one primary strand; Synoptic parallels Mark-dependent per CLM-0070), consensus far above the class (§9 case, CLM-0069 pattern). Elements (a)/(b)/(c) discrete; invention rival steelmanned; theophany bracketed. Pending review/validation.|
 |0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
+|0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 # End CLM-0077

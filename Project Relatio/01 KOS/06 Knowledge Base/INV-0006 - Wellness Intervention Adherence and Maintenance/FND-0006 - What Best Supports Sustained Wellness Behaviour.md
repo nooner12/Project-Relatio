@@ -1,7 +1,7 @@
 ---
 title: FND-0006 - What Best Supports Sustained Wellness Behaviour
 document_type: Finding Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-11
@@ -57,6 +57,9 @@ confidence:
     label: Moderate
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 9
+review_date: 2027-04-20
+last_reviewed: 2026-07-20
 ---
 
 # FND-0006
@@ -119,5 +122,6 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 |0.1|2026-07-11|Draft|Created for RQ-0006. Capped at Moderate (weakest necessary links = CLM-0020/0021/0025). Two-part answer; motivated-reasoning disclosure integrated; long-term-durability honesty caveat integrated and cross-linked to FND-0004/0005. Pending ROLE-0004 epistemic review and ROLE-0001 structural validation.|
 |0.2|2026-07-11|Draft|Remediation pass (Critical Review remediation #4): softened the declarative title from "Is Built by" to "**Is Best Supported by**" (the Level-3 body denies a reliable formula); the contrastive "not willpower or incentives" half retained as well-supported. File **renamed** to the concise `FND-0006 - What Best Supports Sustained Wellness Behaviour` (also relieving the Windows MAX_PATH pressure that broke the validators/git). Body §3 "is built by" shorthand aligned to "is best supported by"; §4 domain-anchor list updated to include Ashford (SRC-0033). No confidence change — remains Level 3.|
 |0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
+|0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 # End FND-0006

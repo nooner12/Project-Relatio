@@ -1,7 +1,7 @@
 ---
 title: CLM-0025 - Habit Formation Supports Maintenance But Is Slower Than Popularly Claimed
 document_type: Claim Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-11
@@ -37,6 +37,9 @@ confidence:
     label: Moderate
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 9
+review_date: 2027-04-20
+last_reviewed: 2026-07-20
 ---
 
 # CLM-0025
@@ -128,5 +131,6 @@ SRC-0029: high authority, transparent about wide individual variation; 66-day me
 |0.1|2026-07-11|Draft|Created for RQ-0006. 66-day median (range 18–254) verified via Lally 2010 records; reported as an estimate with range. Graded Moderate; small-sample and simple-vs-complex caveats recorded.|
 |0.2|2026-07-21|Draft|**Renamed** per STD-0001 §8 (Path Length Constraint), owner approval 2026-07-21. This record was one of four whose absolute path exceeded the Windows `MAX_PATH` limit of 260 characters, making it invisible to naive scanners; the descriptive title was shortened to bring the relative path within the §8 budget of 180 characters. **Filename and `title:` shortened, body H1 heading matched; no claim statement, evidence, evidence evaluation, consensus, confidence grading, or relationship changed.** Graph references updated in the same commit so no reference is left dangling.|
 |0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
+|0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 # End CLM-0025

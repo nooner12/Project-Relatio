@@ -1,7 +1,7 @@
 ---
 title: FND-0004 - Evidence-Based Pathways to T2D Remission and Safe De-prescribing
 document_type: Finding Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -51,6 +51,9 @@ confidence:
     label: Moderate
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 9
+review_date: 2027-04-21
+last_reviewed: 2026-07-21
 ---
 
 # FND-0004
@@ -113,6 +116,7 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 |---|---|---|---|
 |0.1|2026-07-10|Draft|Created for RQ-0004. Awaiting Critical Reviewer (ROLE-0004) challenge and Knowledge Architect (ROLE-0001) conformance check.|
 |0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
+|0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 ---
 

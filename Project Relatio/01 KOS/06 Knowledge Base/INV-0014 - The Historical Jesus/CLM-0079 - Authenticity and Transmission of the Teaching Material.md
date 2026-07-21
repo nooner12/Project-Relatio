@@ -1,7 +1,7 @@
 ---
 title: CLM-0079 - Authenticity and Transmission of the Teaching Material
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -47,6 +47,9 @@ confidence:
     label: Low
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 6
+review_date: 2027-01-21
+last_reviewed: 2026-07-21
 ---
 
 # CLM-0079
@@ -159,5 +162,6 @@ Type: **Historical.**
 |---|---|---|---|
 |0.1|2026-07-20|Draft|Created for RQ-0014. SPLIT grade: characteristic themes/forms Level 3 (Moderate); specific-saying wording Level 2 (Low). The community-invention rival steelmanned at full strength per the brief (wins component ii, loses on the asymmetries and silences for component i); criteria critique (SRC-0124) applied at instrument level; Dunn–Allison memory poles both carried. Elements (a)/(b)/(c) discrete. Pending review/validation.|
 |0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
+|0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 # End CLM-0079

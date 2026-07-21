@@ -1,7 +1,7 @@
 ---
 title: CLM-0039 - Family Routines and Rituals
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -37,6 +37,9 @@ confidence:
     label: Very Low
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 3
+review_date: 2026-10-21
+last_reviewed: 2026-07-21
 ---
 
 # CLM-0039
@@ -128,5 +131,6 @@ SRC-0052: high-authority scholar and journal, but a cautious narrative review of
 |---|---|---|---|
 |0.1|2026-07-14|Draft|Created for RQ-0008 (domain 6). Underlying Level 2 (confounded correlational family-ritual evidence; Fiese 2002 narrative review); application Level 1. Confounding and family-to-program transfer named as the dominant limits; motivated appeal of "heritage is good" named and guarded.|
 |0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
+|0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 # End CLM-0039

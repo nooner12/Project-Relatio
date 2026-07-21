@@ -1,7 +1,7 @@
 ---
 title: FND-0012 - Mycelial Network Signaling and the Bounds of Fungal Cognition
 document_type: Finding Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -65,6 +65,9 @@ confidence:
     label: Low
 reliance_tier: R0
 reliance_note: "verification-light review; not cleared for external reliance."
+review_cycle: 3
+review_date: 2026-10-21
+last_reviewed: 2026-07-21
 ---
 
 # FND-0012
@@ -146,5 +149,6 @@ reliance_note: "verification-light review; not cleared for external reliance."
 |0.1|2026-07-19|Draft|Created for RQ-0012. Asymmetric verdict: network biology High (rungs a–b); cognition Low (rung c operational only, rung d basal-cognition a contested framing), sentience (e) bracketed. Language (Very Low), strong wood-wide-web (Low; kin-provisioning no peer-reviewed support), fungal brain (Low) NOT supported. Datum≠interpretation and Physarum-is-not-a-fungus firewalls honored throughout. Native Level 1–4; no Level 5; no magnitude ranking. Verification strong (citations)/moderate (two figure sets); not cleared for external reliance (§7.5). Pending ROLE-0004 review and ROLE-0001 validation.|
 |0.2|2026-07-19|Draft|**Remediated per Critical Review – RQ-0012 (CONFORMANT WITH FLAGS).** F-1 knock-on: rung (c) carry-over datum updated **Moderate → Level 2 (Low), single-group** in §1 and §2 (tracking CLM-0064's F-1 lowering). Soft note: pinned the "Facts, not fantasy" rebuttal to first author **Tamir Klein** (Klein et al. 2023, *Open Research Europe*, doi:10.12688/openreseurope.16594.1) in §5 — first author live-verified this session. No confidence level raised; asymmetric verdict shape unchanged (headline for cognition already Level 2). Scale discipline intact. Still pending ROLE-0001 structural validation.|
 |0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
+|0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 # End FND-0012

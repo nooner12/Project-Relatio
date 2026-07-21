@@ -1,7 +1,7 @@
 ---
 title: CLM-0047 - ADHD Identification Divergence Is Ascertainment-Patterned
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-15
@@ -38,6 +38,9 @@ confidence:
     label: Moderate
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 9
+review_date: 2027-04-20
+last_reviewed: 2026-07-20
 ---
 
 # CLM-0047
@@ -129,5 +132,6 @@ SRC-0062 and SRC-0063 are high-authority and mutually independent; their converg
 |---|---|---|---|
 |0.1|2026-07-15|Draft|Created for RQ-0010. Level 3 (Moderate) that childhood ADHD identification divergence is substantially ascertainment/gender-patterned (clinic ~10:1 vs community ~2–3:1; girls under-identified) (SRC-0062, SRC-0063). Construct-provenance `CONFLATED` — flagship conflation case; gender/ascertainment-patterned only. Over-correction and criteria-drift risks named; residual community gap left open.|
 |0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
+|0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 # End CLM-0047

@@ -1,7 +1,7 @@
 ---
 title: CLM-0046 - Anxiety Early Divergence
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-15
@@ -40,6 +40,9 @@ confidence:
     label: Moderate
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 6
+review_date: 2027-01-21
+last_reviewed: 2026-07-21
 ---
 
 # CLM-0046
@@ -132,5 +135,6 @@ SRC-0061 is a credible cohort but leans on retrospective recall for the onset ag
 |0.1|2026-07-15|Draft|Created for RQ-0010. Level 2 (Low) for the ≈age-6 figure, reaching Level 3 for the direction (anxiety divergence earlier/pre-pubertal than depression's) (SRC-0061). Construct-provenance `CONFLATED` — gender-patterned/unattributed only. Retrospective-recall and single-source risks named; the direction, not the exact age, is load-bearing.|
 |0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 |0.1a|2026-07-15|Draft|F-3 per Critical Review – RQ-0010: rewrote the Level-3 direction warrant to rest on the **catalogued** SRC-0061 (anxiety skew ~age 6) vs SRC-0059/CLM-0044 (depression skew ~12–13) contrast; deleted the appeal to uncatalogued developmental-epidemiology reviews. **Confidence unchanged** (Level 2 exact age / Level 3 direction).|
+|0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 # End CLM-0046

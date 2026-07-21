@@ -1,7 +1,7 @@
 ---
 title: CLM-0028 - Enabling vs Coercive Design Governs Effect
 document_type: Claim Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-12
@@ -37,6 +37,9 @@ confidence:
     label: Moderate
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 9
+review_date: 2027-04-20
+last_reviewed: 2026-07-20
 ---
 
 # CLM-0028
@@ -128,5 +131,6 @@ SRC-0035: very high authority and transparency, academic, inform-intent. The fou
 |0.1|2026-07-12|Draft|Created for RQ-0007. Adler & Borys typology and four design features verified via scholarly summaries (full text not machine-readable). Level 3 — a strong conceptual lens with follow-on (uncatalogued) empirical support; transfer to knowledge systems flagged analogical.|
 |0.2|2026-07-12|Draft|Post-review remediation (Critical Review - RQ-0007): reviewer verdict Conformant (Independence 2 / Quality 3 candour commended). Title shortened to match filename (STD-0001 §10). No epistemic change.|
 |0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
+|0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 # End CLM-0028

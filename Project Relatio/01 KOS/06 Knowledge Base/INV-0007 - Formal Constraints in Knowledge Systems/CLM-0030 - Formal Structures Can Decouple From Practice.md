@@ -1,7 +1,7 @@
 ---
 title: CLM-0030 - Formal Structures Can Decouple From Practice
 document_type: Claim Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-12
@@ -34,6 +34,9 @@ confidence:
     label: Moderate
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 9
+review_date: 2027-04-20
+last_reviewed: 2026-07-20
 ---
 
 # CLM-0030
@@ -125,5 +128,6 @@ SRC-0039: very high authority and transparency, academic, inform-intent. Citatio
 |0.1|2026-07-12|Draft|Created for RQ-0007. Meyer & Rowan 1977 decoupling thesis verified this session. Level 3 — theory anchor with large uncatalogued empirical corroboration; magnitude unquantified; transfer flagged analogical. Retained as the inconvenient failure-mode half.|
 |0.2|2026-07-12|Draft|Post-review remediation (Critical Review - RQ-0007): reviewer verdict Conformant (commended as the strongest demonstration of the bias guard). #9: de-asserted the prose-only `related_to CLM-0031` (now prose adjacency). No epistemic change — remains Level 3.|
 |0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
+|0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 # End CLM-0030

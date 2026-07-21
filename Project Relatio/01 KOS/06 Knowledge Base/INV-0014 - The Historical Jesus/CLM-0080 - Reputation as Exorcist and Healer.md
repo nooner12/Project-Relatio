@@ -1,7 +1,7 @@
 ---
 title: CLM-0080 - Reputation as Exorcist and Healer
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -43,6 +43,9 @@ confidence:
     label: Moderate
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 9
+review_date: 2027-04-20
+last_reviewed: 2026-07-20
 ---
 
 # CLM-0080
@@ -163,5 +166,6 @@ Type: **Historical.**
 |---|---|---|---|
 |0.1|2026-07-20|Draft|Created for RQ-0014. Level 3 (Moderate) for the REPUTE (earliest-stratum pervasive, hostile Beelzebul concession, Testimonium-core echo at its CLM-0073 grade); the EVENTS bracketed in both directions and graded at no level — bracket discipline load-bearing per the brief. Elements (a)/(b)/(c) discrete; accretion rival steelmanned. Pending review/validation.|
 |0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
+|0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 # End CLM-0080

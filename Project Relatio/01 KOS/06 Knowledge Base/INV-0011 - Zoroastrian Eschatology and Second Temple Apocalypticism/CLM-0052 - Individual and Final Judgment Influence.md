@@ -1,7 +1,7 @@
 ---
 title: CLM-0052 - Individual and Final Judgment Influence
 document_type: Claim Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -43,6 +43,9 @@ confidence:
     label: Moderate
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 9
+review_date: 2027-04-20
+last_reviewed: 2026-07-20
 ---
 
 # CLM-0052
@@ -159,5 +162,6 @@ Judgment is the doctrine case with the **least reliance on the late Pahlavi corp
 |0.2|2026-07-21|Draft|**Sub-Question Answers section added (INV-0011 §1 / acceptance criterion #2), Specialist pass (ROLE-0002).** The three sub-questions now answered explicitly and separably: (i) dating — qualified yes on relative (Gathic-layer) attestation, the best position of the five cases, but absolute priority reconstruction-only (H-e); (ii) contact pathway — No doctrine-specific channel, inherits CLM-0057 (explicit negative); (iii) independent development — Day-of-YHWH trajectory (with Ezekiel 18 individualization) named and steelmanned as at-least-equal rival; influence survives as plausible non-necessary contributor and the rival is the main cap at Moderate. Restructures existing analysis from the existing source base (SRC-0067…SRC-0076) only; no evidence added, no confidence level changed (Level 3 unchanged). Verification: inherited from the v0.2-cycle source disclosures and Critical Review re-verification; no new verification claims made. Pending ROLE-0004 review.|
 |0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.2a|2026-07-21|Draft|**Remediated per ROLE-0004 sub-question review, flag F-B (determinate).** Item (iii) now closes with an explicit defense of Level 3 against the at-least-equal-strength rival: the KOS-0003 §8 Level-2 pattern (applied in CLM-0051's F-1 lowering) requires weakness on both load-bearing axes, and judgment is weak on one only — its Gathic-layer H-a attestation is the best dating position of the five cases. Also rerouted item (i)'s transmission-philology citation through CLM-0056's evidence base (which carries SRC-0073), resolving the reviewer's graph-reciprocity escalation without a graph change. Level 3 confirmed unchanged; downward pressure recorded, not enacted.|
+|0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 # End CLM-0052

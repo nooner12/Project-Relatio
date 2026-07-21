@@ -1,7 +1,7 @@
 ---
 title: CLM-0084 - Daoist Elements in Yiguandao
 document_type: Claim Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -37,6 +37,9 @@ confidence:
     label: Moderate
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 9
+review_date: 2027-04-20
+last_reviewed: 2026-07-20
 ---
 
 # CLM-0084
@@ -115,5 +118,6 @@ SRC-0134 moderate-to-high authority, open, fully read; SRC-0133 high authority, 
 |0.2|2026-07-20|Draft|**Critical Review – RQ-0015 F-2 adopted (recommendation):** element (a) gains an explicit single-source specificity disclosure — the "derived from Quanzhen Daoism" genetic attribution is a single-reference-work datum carried below the claim's headline grade, distinct from the uncontested general presence of Daoist elements. No level change (reviewer-confirmed L3 for the claim-as-worded).|
 |0.1|2026-07-20|Draft|Created for RQ-0015. Level 3 (Moderate): Daoist elements real (Quanzhen-derived stratum live-read) and treated by the surveyed field as incorporated strands, not lineage membership; lineage-membership reading steelmanned to its descent-observation core; strand-counting slide guarded per §3.1. Elements (a)/(b)/(c) discrete. Pending review/validation.|
 |0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
+|0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 # End CLM-0084

@@ -1,7 +1,7 @@
 ---
 title: CLM-0043 - Single-Child Home Transfer
 document_type: Claim Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -47,6 +47,9 @@ confidence:
     label: Very Low
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 3
+review_date: 2026-10-21
+last_reviewed: 2026-07-21
 ---
 
 # CLM-0043
@@ -140,5 +143,6 @@ Rests on the *requirements* of SRC-0057/0058 and the *structure* of SRC-0054, pl
 |0.1|2026-07-14|Draft|Created for RQ-0009 (Sub-claim B, transfer — the weakest and most consequential). Level 1 (Very Low) for positive single-child-home transfer (no direct evidence; the best-evidenced mechanism — learning from interactions directed to *others* — lacks substrate), reaching Level 2 only for observation-of/contribution-to a parent's real activity. Explicitly not inflated by CLM-0041/0042. Absence-of-evidence, portability, and motivated-transfer risks named.|
 |0.2|2026-07-14|Draft|RQ-0009 remediation (Critical Review – RQ-0009 §7, F-1): sharpened the Level-2 reach to privilege the **observation** facet (most transferable) over the **contribution-to-a-shared-endeavor** facet (thinner substrate — consequential shared work is scarce in a modern single-child home). Confidence level unchanged (Level 1 → 2); sub-structure of the reach clarified.|
 |0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
+|0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 # End CLM-0043

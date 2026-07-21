@@ -1,7 +1,7 @@
 ---
 title: CLM-0012 - Exercise and Mediterranean Diet Improve Control but Rarely Alone Remit
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -38,6 +38,9 @@ confidence:
     label: Moderate
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 9
+review_date: 2027-04-20
+last_reviewed: 2026-07-20
 ---
 
 # CLM-0012
@@ -126,6 +129,7 @@ SRC-0011 is a **deliberately-graded composite**: high aggregate authority, but s
 |---|---|---|---|
 |0.1|2026-07-10|Draft|Created for RQ-0004. Specific effect sizes deliberately flagged as directional/under-verified.|
 |0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
+|0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 ---
 

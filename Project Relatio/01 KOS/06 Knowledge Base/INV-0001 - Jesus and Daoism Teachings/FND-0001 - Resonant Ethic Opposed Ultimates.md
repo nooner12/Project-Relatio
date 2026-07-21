@@ -1,7 +1,7 @@
 ---
 title: FND-0001 - Resonant Ethic, Opposed Ultimates
 document_type: Finding Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-09
@@ -33,6 +33,9 @@ confidence:
     label: Moderate
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 9
+review_date: 2027-04-20
+last_reviewed: 2026-07-20
 ---
 
 # FND-0001
@@ -87,6 +90,7 @@ The finding is the *integration* of the two: CLM-0002 qualifies CLM-0001.
 |---|---|---|---|
 |0.1|2026-07-09|Draft|First Finding record; extracted from INV-0001 synthesis once the FND type was defined (KOS-0012)|
 |0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
+|0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 ---
 

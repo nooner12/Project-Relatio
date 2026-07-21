@@ -1,7 +1,7 @@
 ---
 title: CLM-0063 - Mycorrhizal Inter-Plant Transfer Wood Wide Web
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -46,6 +46,9 @@ confidence:
     label: Low
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 6
+review_date: 2027-01-21
+last_reviewed: 2026-07-21
 ---
 
 # CLM-0063
@@ -141,5 +144,6 @@ The two directions are **the same rule**, not two rules: each headlines at whate
 |0.1|2026-07-19|Draft|Created for RQ-0012. Bounded split: inter-plant C/nutrient movement Level 3 (Moderate, Simard 1997); strong "wood-wide web"/mother-tree-provisioning claims Level 2 (Low; kin-provisioning has no peer-reviewed field support, Karst/Jones/Hoeksema 2023 — an insider correction). Klein et al. rebuttal steelmanned. Both poles named; motivated-reasoning vectors flagged. Pending review/validation.|
 |0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 |0.1a|2026-07-19|Draft|**Remediated per Critical Review – RQ-0012 F-2 (documentation/consistency; no level change).** Added an explicit headline-selection rule for two-level split claims to the Confidence section and reconciled it with CLM-0061: both headline at the sub-level carrying the claim's principal assertive burden (CLM-0063 = deny-the-strong-narrative → Low; CLM-0061 = hold-the-datum → Moderate) — one rule, not two. Soft note: pinned the "Facts, not fantasy" rebuttal first author (**Tamir Klein**, *Open Research Europe*) in §Evidence — live-verified this session. **No confidence level changed (not raised).** Scale discipline intact.|
+|0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 # End CLM-0063

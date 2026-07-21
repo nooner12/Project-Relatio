@@ -1,7 +1,7 @@
 ---
 title: FND-0005 - Durable Chronic-Stress Relief Requires Stressor Reduction Plus Response Regulation
 document_type: Finding Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -51,6 +51,9 @@ confidence:
     label: Moderate
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 9
+review_date: 2027-04-20
+last_reviewed: 2026-07-20
 ---
 
 # FND-0005
@@ -109,5 +112,6 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 |0.1|2026-07-10|Draft|Created for RQ-0005. Capped at Moderate (weakest necessary link = CLM-0017). Durability-honesty and motivated-reasoning disclosures integrated. Pending ROLE-0004 review and ROLE-0001 validation.|
 |0.2|2026-07-11|Draft|Applied Critical Review – RQ-0005: §1 "decisively" softened to "on mechanistic grounds" (§9 rev #2); §2 CLM-0014 restated as durable-stress Level 2 + separate Level-4 collateral-health durability (§6.1, rev #3). Moderate cap unchanged.|
 |0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
+|0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 # End FND-0005

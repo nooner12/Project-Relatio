@@ -1,7 +1,7 @@
 ---
 title: CLM-0015 - Cognitive-Behavioural Skills Are the Best-Evidenced Durable Intervention
 document_type: Claim Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -51,6 +51,9 @@ confidence:
     label: Low
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 6
+review_date: 2027-01-21
+last_reviewed: 2026-07-21
 ---
 
 # CLM-0015
@@ -146,5 +149,6 @@ SRC-0018 is high-authority and its attribution/effect sizes are now **live-verif
 |0.1|2026-07-10|Draft|Created for RQ-0005. Split CBT-I (durable) vs generic work-stress CBT (weak); insomnia-vs-stress inferential step flagged.|
 |0.2|2026-07-11|Draft|Cleared SRC-0018 unconfirmed-attribution caveat per Critical Review – RQ-0005 §3/§9 rev #4 (van der Zweerde et al. 2019 live-verified). Grades unchanged.|
 |0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
+|0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 # End CLM-0015

@@ -1,7 +1,7 @@
 ---
 title: CLM-0051 - Resurrection of the Dead Influence
 document_type: Claim Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -44,6 +44,9 @@ confidence:
     label: Low
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 6
+review_date: 2027-01-20
+last_reviewed: 2026-07-20
 ---
 
 # CLM-0051
@@ -160,5 +163,6 @@ Pro-influence (SRC-0068, SRC-0069) is authoritative but its early-dating case is
 |0.2|2026-07-21|Draft|**Sub-Question Answers section added (INV-0011 §1 / acceptance criterion #2), Specialist pass (ROLE-0002).** The three sub-questions now answered explicitly and separably: (i) dating — No, priority reconstruction-only (Yasht 19 H-e; systematic form Pahlavi H-d, post-Daniel); (ii) contact pathway — No doctrine-specific channel, inherits CLM-0057 (explicit negative); (iii) independent development — Maccabean-crisis inner-Jewish growth named and steelmanned as conceded-sufficient; influence survives only as non-necessary catalytic factor. Restructures existing analysis from the existing source base (SRC-0067…SRC-0076) only; no evidence added, no confidence level changed (Level 2 unchanged). Verification: inherited from the v0.2-cycle source disclosures and Critical Review re-verification; no new verification claims made. Pending ROLE-0004 review.|
 |0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.2a|2026-07-21|Draft|**Minor edit following ROLE-0004 sub-question review (graph-reciprocity escalation).** Item (ii)'s contact-loci point rerouted through CLM-0057's evidence base (which carries SRC-0075), removing a prose citation to a source not declared in this claim's relationships. No graph change, no evidence change, no confidence change (Level 2 unchanged).|
+|0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 # End CLM-0051

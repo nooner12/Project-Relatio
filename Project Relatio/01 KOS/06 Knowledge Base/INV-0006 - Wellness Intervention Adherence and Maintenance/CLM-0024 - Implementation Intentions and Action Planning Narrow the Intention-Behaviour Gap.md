@@ -1,7 +1,7 @@
 ---
 title: CLM-0024 - Implementation Intentions and Action Planning Narrow the Intention-Behaviour Gap
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-11
@@ -37,6 +37,9 @@ confidence:
     label: High
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 12
+review_date: 2027-07-21
+last_reviewed: 2026-07-21
 ---
 
 # CLM-0024
@@ -126,5 +129,6 @@ SRC-0028: high authority; the 94-tests/d≈0.65 figure verified this session via
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created for RQ-0006. 94-tests/d≈0.65 verified this session. Framed explicitly as a translation (not motivation/maintenance) tool.|
 |0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
+|0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 # End CLM-0024

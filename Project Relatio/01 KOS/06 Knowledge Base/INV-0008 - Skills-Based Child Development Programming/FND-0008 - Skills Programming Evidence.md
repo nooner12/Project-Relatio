@@ -1,7 +1,7 @@
 ---
 title: FND-0008 - Skills Programming Evidence
 document_type: Finding Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -61,6 +61,9 @@ confidence:
     label: Low
 reliance_tier: R0
 reliance_note: "verification-light review; not cleared for external reliance."
+review_cycle: 6
+review_date: 2027-01-21
+last_reviewed: 2026-07-21
 ---
 
 # FND-0008
@@ -135,5 +138,6 @@ At the literature level, the evidence supports a **build-and-evaluate** posture:
 |0.1|2026-07-14|Draft|Created for RQ-0008. Three-part answer (ingredients supported unevenly / compound untested / build-and-evaluate). Per-domain dual-grade table; application capped at Level 2 (weakest link + compound gap); underlying evidence Level 2–4 by domain, not collapsed. Health/high-stakes gate stated; "what is NOT supported" enumerated; motivated-reasoning guard integrated. Pending ROLE-0004 epistemic review and ROLE-0001 structural validation.|
 |0.2|2026-07-14|Draft|Circuit completed — Critical Review – RQ-0008 **Conformant with Flags** (no vocabulary leak; §5 build-and-evaluate framing confirmed descriptive-not-prescriptive and must be quoted verbatim if cited). Mentoring application harmonised to "Level 2 → 3." Underlying grades and the compound Level-2 cap unchanged. Reliance gate remains absolute (STD-0006 §7.5).|
 |0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
+|0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 # End FND-0008

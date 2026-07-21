@@ -1,7 +1,7 @@
 ---
 title: CLM-0048 - Eating-Disorder Symptom Divergence Consolidates in Adolescence
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-15
@@ -34,6 +34,9 @@ confidence:
     label: Moderate
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 9
+review_date: 2027-04-20
+last_reviewed: 2026-07-20
 ---
 
 # CLM-0048
@@ -124,5 +127,6 @@ SRC-0064 is a credible cohort; its binding limit for this claim is that it recor
 |0.1|2026-07-15|Draft|Created for RQ-0010. Level 3 (Moderate) that the female-preponderant eating-disorder symptom divergence consolidates in early-to-mid adolescence (SRC-0064). Construct-provenance `CONFLATED` — gender-patterned/unattributed only; dominant sociocultural driver unmeasured. Emergence-below-14 inference and male-under-detection alternative named.|
 |0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.1a|2026-07-15|Draft|Construct-provenance code updated `CONFLATED` → `UNRESOLVED` per Critical Review – RQ-0010 F-1 (SRC-0064 recoded; mechanism undetermined). Constraint identical; **confidence unchanged (Level 3)**; no other claim text changed.|
+|0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 # End CLM-0048

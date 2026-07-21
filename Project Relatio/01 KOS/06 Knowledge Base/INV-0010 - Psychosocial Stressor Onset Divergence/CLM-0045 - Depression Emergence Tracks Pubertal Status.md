@@ -1,7 +1,7 @@
 ---
 title: CLM-0045 - Depression Emergence Tracks Pubertal Status
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-15
@@ -38,6 +38,9 @@ confidence:
     label: Moderate
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 9
+review_date: 2027-04-20
+last_reviewed: 2026-07-20
 ---
 
 # CLM-0045
@@ -130,5 +133,6 @@ SRC-0060 is the investigation's strongest construct-provenance source precisely 
 |0.1|2026-07-15|Draft|Created for RQ-0010. Level 3 (Moderate) that the depression divergence timing tracks physically assessed pubertal status (Tanner III+) over age (SRC-0060). Construct-provenance `SEX-MEASURED` — the only sex-attributed claim INV-0010 permits — but capped: downstream mechanism (hormonal vs socially-mediated) unresolved; peer-stress mediation named to resist convenient-biology bias.|
 |0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.1a|2026-07-15|Draft|Added F-2 bound per Critical Review – RQ-0010: puberty occurs in both sexes, so pubertal-stage measurement does not establish biological-sex causation of the *between-sex* divergence (sex × puberty interaction unmeasured); the claim licenses only "timing co-varies with a measured maturational variable." **Confidence unchanged (Level 3).**|
+|0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 # End CLM-0045

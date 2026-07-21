@@ -1,7 +1,7 @@
 ---
 title: CLM-0017 - Reducing the Stressor Is Central to Durable Relief but Intervention Evidence Is Limited
 document_type: Claim Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -49,6 +49,9 @@ confidence:
     label: Low
 reliance_tier: R0
 reliance_note: "unassessed floor; predates verification-pass procedure."
+review_cycle: 6
+review_date: 2027-01-21
+last_reviewed: 2026-07-21
 ---
 
 # CLM-0017
@@ -145,5 +148,6 @@ SRC-0022 is authoritative for theory, weaker for outcome proof. SRC-0017 is high
 |0.1|2026-07-10|Draft|Created for RQ-0005. The claim that cuts against the owner's framing; graded honestly in BOTH directions. Flagged as the investigation's most contestable claim.|
 |0.2|2026-07-11|Draft|Propagated SRC-0017 citation correction (Ruotsalainen et al. 2015) per Critical Review – RQ-0005 §3/§9. Grades unchanged (reviewer §5 upheld the Level-3 principle / Level-2 interventional split).|
 |0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
+|0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
 
 # End CLM-0017
