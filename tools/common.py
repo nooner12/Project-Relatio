@@ -1,4 +1,5 @@
 from pathlib import Path
+import datetime
 import os
 import sys
 import re
@@ -198,6 +199,119 @@ def epistemic_field_problems(meta):
         problems.append(
             f"`reliance_tier` must be one of R0/R1/R2 (got {tier!r})"
         )
+
+    return problems
+
+
+# ----------------------------------------------------------------------------
+# Review-field shape check (STD-0009 s.8 / STD-0002 s.11 v1.9)
+#
+# Claim Records and Finding Records carry the review-cycle fields: `review_cycle`
+# (positive integer months), `last_reviewed` (YYYY-MM-DD, the most recent review
+# act or initialization), and `review_date` (YYYY-MM-DD, = last_reviewed +
+# review_cycle months). This helper checks *shape* only -- whether a cadence is
+# the *right* one for the record's epistemic state is a review-act question
+# (STD-0009 s.7), not validation. Enforced at error level from initialization
+# onward (ADR-GOV-0008 Task 5 makes every record conformant same-session).
+# ----------------------------------------------------------------------------
+
+_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
+
+def _parse_date(value):
+    """Return (y, m, d) for a YYYY-MM-DD date, or None if malformed.
+
+    Accepts both a `datetime.date` (PyYAML parses an unquoted `2027-04-20`
+    into one, exactly as it does the `created:` field) and a YYYY-MM-DD string
+    (a quoted value, or a malformed one PyYAML left as text).
+    """
+    if isinstance(value, datetime.datetime):
+        value = value.date()
+    if isinstance(value, datetime.date):
+        return (value.year, value.month, value.day)
+    if not isinstance(value, str) or not _DATE_RE.match(value):
+        return None
+    y, m, d = (int(p) for p in value.split("-"))
+    if not (1 <= m <= 12 and 1 <= d <= 31):
+        return None
+    return (y, m, d)
+
+
+def add_months(date_tuple, months):
+    """Add whole calendar months to a (y, m, d) tuple, clamping the day."""
+    y, m, d = date_tuple
+    m += months
+    y += (m - 1) // 12
+    m = (m - 1) % 12 + 1
+    leap = y % 4 == 0 and (y % 100 != 0 or y % 400 == 0)
+    days_in = [31, 29 if leap else 28, 31, 30, 31, 30,
+               31, 31, 30, 31, 30, 31][m - 1]
+    return (y, m, min(d, days_in))
+
+
+def confidence_bounded_by(meta):
+    """Extract (component_name, target) pairs from confidence `bounded_by` lists.
+
+    `bounded_by` is an optional list on a confidence component (STD-0002 §11
+    v1.9 / STD-0009 §9) naming the objects that bound that component's grade.
+    Each entry is a graph claim, so graph_integrity.py resolves it for dangling
+    detection exactly like a relationships target. Shared here so the check and
+    its test exercise the same extraction. Usually returns [] (optional field).
+    """
+    pairs = []
+    for comp in (meta.get("confidence") or []):
+        if isinstance(comp, dict):
+            cname = str(comp.get("component", "?"))
+            for b in (comp.get("bounded_by") or []):
+                pairs.append((cname, str(b).strip()))
+    return pairs
+
+
+def review_field_problems(meta):
+    """Shape-check the STD-0009 review fields of a parsed frontmatter dict.
+
+    Returns a list of problem strings; empty means well-formed. Checks: all
+    three fields present; dates are YYYY-MM-DD (STD-0002 s.10); `review_cycle`
+    a positive integer; and review_date == last_reviewed + review_cycle months
+    (the arithmetic STD-0009 s.8 defines -- a divergence means one of the three
+    is stale, the review-field analogue of version incoherence).
+    """
+    problems = []
+    cycle = meta.get("review_cycle")
+    review_date = meta.get("review_date")
+    last_reviewed = meta.get("last_reviewed")
+
+    if cycle is None:
+        problems.append("missing `review_cycle` (STD-0002 s.11: required, positive integer months)")
+    elif isinstance(cycle, bool) or not isinstance(cycle, int) or cycle <= 0:
+        problems.append(f"`review_cycle` must be a positive integer (months) (got {cycle!r})")
+
+    ld = None
+    if last_reviewed is None:
+        problems.append("missing `last_reviewed` (STD-0002 s.11: required, YYYY-MM-DD)")
+    else:
+        ld = _parse_date(last_reviewed)
+        if ld is None:
+            problems.append(f"`last_reviewed` must be YYYY-MM-DD (got {last_reviewed!r})")
+
+    rd = None
+    if review_date is None:
+        problems.append("missing `review_date` (STD-0002 s.11: required, YYYY-MM-DD)")
+    else:
+        rd = _parse_date(review_date)
+        if rd is None:
+            problems.append(f"`review_date` must be YYYY-MM-DD (got {review_date!r})")
+
+    # Arithmetic coherence -- only when all three are individually well-formed.
+    if ld is not None and rd is not None and isinstance(cycle, int) \
+            and not isinstance(cycle, bool) and cycle > 0:
+        expected = add_months(ld, cycle)
+        if tuple(rd) != tuple(expected):
+            exp_s = f"{expected[0]:04d}-{expected[1]:02d}-{expected[2]:02d}"
+            problems.append(
+                f"`review_date` must equal last_reviewed + review_cycle months "
+                f"({last_reviewed} + {cycle}m = {exp_s}; got {review_date})"
+            )
 
     return problems
 

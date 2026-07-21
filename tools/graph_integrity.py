@@ -12,8 +12,9 @@ lives in the `related_documents:` and `parent_documents:` YAML lists — NOT in 
 
 Three checks:
   1. Dangling references — any `parent_documents` / `related_documents` entry, OR
-     any typed `relationships:` target (STD-0002 §7 / STD-0004), that does not
-     resolve to an existing object.
+     any typed `relationships:` target (STD-0002 §7 / STD-0004), OR any
+     `bounded_by` entry inside a `confidence` component (STD-0002 §11 v1.9 /
+     STD-0009 §9), that does not resolve to an existing object.
   2. Non-reciprocated symmetric typed links (type-aware, GB-2026-001) — among KB
      research objects, a *symmetric*-type edge (`related_to`, `contrasts_with`) with
      no reciprocal symmetric edge back. Directional types (`derived_from`, `supports`,
@@ -32,7 +33,10 @@ import re
 import sys
 import yaml
 
-from common import find_vault_root, markdown_files, parse_frontmatter, read_text, write_text
+from common import (
+    find_vault_root, markdown_files, parse_frontmatter, read_text, write_text,
+    confidence_bounded_by,
+)
 
 # ADR-GOV-0001 style OR TYPE-NNNN style (CON/KOS/STD/ROLE/TPL/OPS/INV/CLM/SRC/ENT/FND)
 ID_RE = re.compile(r"^(ADR-[A-Z]{2,5}-\d{4}|[A-Z]{2,5}-\d{4})")
@@ -78,11 +82,16 @@ for f in files:
     for r in (meta.get("relationships") or []):
         if isinstance(r, dict) and r.get("type") and r.get("target"):
             typed.append((str(r["type"]).strip(), str(r["target"]).strip()))
+    # bounded_by entries inside confidence components (STD-0002 §11 v1.9 /
+    # STD-0009 §9): each is a graph claim, so it participates in dangling
+    # detection exactly like a relationships target. Optional; usually absent.
+    bounded = confidence_bounded_by(meta)
     is_kb = bool(ident) and ident.split("-")[0] in KB_TYPES
 
     objects[key] = {
         "file": f, "id": ident, "name": stem,
-        "related": related, "parents": parents, "typed": typed, "kb": is_kb,
+        "related": related, "parents": parents, "typed": typed,
+        "bounded": bounded, "kb": is_kb,
     }
     if ident:
         by_id[ident] = key
@@ -115,6 +124,9 @@ for key, o in objects.items():
     for rtype, target in o["typed"]:
         if resolve(target) is None:
             dangling.append((o["name"], f"relationships[{rtype}]", target))
+    for cname, target in o["bounded"]:
+        if resolve(target) is None:
+            dangling.append((o["name"], f"confidence[{cname}].bounded_by", target))
 
 # ---- Check 2: non-reciprocated SYMMETRIC typed links (type-aware) ----------
 # Only related_to / contrasts_with are expected to reciprocate. A reciprocal is

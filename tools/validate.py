@@ -14,6 +14,7 @@ from common import (
     version_elements,
     parse_version,
     epistemic_field_problems,
+    review_field_problems,
 )
 
 ROOT = Path(__file__).parent
@@ -296,6 +297,18 @@ for file in files:
         target = errors if EPISTEMIC_FIELDS_ENFORCED else warnings
         detail = "\n".join(f"  {p}" for p in problems)
         target.append(f"Epistemic fields malformed: {file.name}\n{detail}")
+
+    # Review-field shape pass (STD-0009 s.8 / STD-0002 s.11 v1.9).
+    # Enforced at ERROR immediately: the ADR-GOV-0008 initialization batch
+    # makes every CLM/FND record carry well-formed review fields this session,
+    # so there is no migration gap to warning-gate (unlike the epistemic fields,
+    # which predated their records). The check runs in this same CLM/FND loop
+    # and inherits its extended-length path handling (common.read_text).
+    review_problems = review_field_problems(meta)
+
+    if review_problems:
+        detail = "\n".join(f"  {p}" for p in review_problems)
+        errors.append(f"Review fields malformed: {file.name}\n{detail}")
 
 if epistemic_unmigrated:
     warnings.append(
