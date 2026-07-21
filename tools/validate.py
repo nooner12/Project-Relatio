@@ -13,6 +13,7 @@ from common import (
     read_text,
     version_elements,
     parse_version,
+    epistemic_field_problems,
 )
 
 ROOT = Path(__file__).parent
@@ -223,6 +224,87 @@ for file in files:
             f"  {detail}\n"
             f"  {fix}"
         )
+
+# ----------------------------
+# Epistemic-field shape pass (STD-0008 / STD-0002 s.11 v1.8)
+#
+# Claim Records and Finding Records require `confidence` (always a list; each
+# component has component/level/label, the label matching the level per
+# STD-0008 s.5.1) and `reliance_tier` (R0/R1/R2, the ADR-GOV-0006 vocabulary).
+# Shape only -- whether a grade is *correct* is epistemic review (ROLE-0004).
+# The shape rules live in common.epistemic_field_problems.
+#
+# MIGRATION GATE -- deliberately NOT error-level yet (GB-2026-038).
+# The fields were adopted 2026-07-20 (STD-0002 v1.8); the ~101 pre-existing
+# CLM/FND records predate them and are a *known migration gap*, not defects
+# (STD-0002 s.18 v1.8 row; the migration runs as its own later brief).
+# Mechanism: the EPISTEMIC_FIELDS_ENFORCED flag below.
+#   * False (current state):
+#       - a record missing BOTH fields is counted into ONE aggregate
+#         migration-pending WARNING, so a hundred known gaps do not drown
+#         the report or turn the vault red;
+#       - a record carrying the fields malformed, or carrying only one of
+#         the two, gets an individual WARNING (that is new authoring done
+#         wrong, not migration debt -- but it must not fail the build before
+#         the standard's fields have ever been used in anger).
+#     The vault still exits PASS either way.
+#   * True (set by the migration brief once backfill completes):
+#       every record above becomes an individual ERROR -- the promotion is
+#       this one flag flip plus updating tests/test_epistemic_fields.py's
+#       gate guard; the check logic itself does not change.
+# Extended-length path handling per STD-0001 s.8 is inherited from
+# common.read_text (the \\?\ prefix), the same as every other pass.
+# ----------------------------
+
+EPISTEMIC_FIELDS_ENFORCED = False
+
+epistemic_unmigrated = []
+
+for file in files:
+
+    ident = extract_identifier(file.stem)
+
+    if ident is None or ident.split("-")[0] not in ("CLM", "FND"):
+        continue
+
+    text = read_text(file)
+
+    frontmatter, _ = parse_frontmatter(text)
+
+    if frontmatter is None:
+        continue  # already an error in the first pass
+
+    try:
+        meta = yaml.safe_load(frontmatter)
+    except Exception:
+        continue  # already an error in the first pass
+
+    if not isinstance(meta, dict):
+        continue
+
+    both_missing = (
+        meta.get("confidence") is None and meta.get("reliance_tier") is None
+    )
+
+    if both_missing and not EPISTEMIC_FIELDS_ENFORCED:
+        epistemic_unmigrated.append(file.name)
+        continue
+
+    problems = epistemic_field_problems(meta)
+
+    if problems:
+        target = errors if EPISTEMIC_FIELDS_ENFORCED else warnings
+        detail = "\n".join(f"  {p}" for p in problems)
+        target.append(f"Epistemic fields malformed: {file.name}\n{detail}")
+
+if epistemic_unmigrated:
+    warnings.append(
+        f"Epistemic-field migration pending (GB-2026-038): "
+        f"{len(epistemic_unmigrated)} Claim/Finding records do not yet carry "
+        f"`confidence`/`reliance_tier` (STD-0002 s.11 v1.8 / STD-0008). "
+        f"Known migration gap, not defects; the check promotes to error-level "
+        f"when the migration brief completes."
+    )
 
 # ----------------------------
 # NOTE: The adopted STD-0001/STD-0002 convention does not use [[wikilinks]] for the
