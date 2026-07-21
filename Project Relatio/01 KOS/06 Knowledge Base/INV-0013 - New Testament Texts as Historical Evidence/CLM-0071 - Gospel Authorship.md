@@ -1,7 +1,7 @@
 ---
 title: CLM-0071 - Gospel Authorship
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -37,6 +37,15 @@ relationships:
     target: FND-0013
   - type: part_of
     target: INV-0013
+confidence:
+  - component: gospel_anonymity
+    level: 4
+    label: High
+  - component: traditional_apostolic_authorship
+    level: 2
+    label: Low
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0071
@@ -131,5 +140,6 @@ The native rating carried in the confidence summary is **Level 4 (High) that the
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0013. SPLIT: anonymity Level 4 (High, H-a internal); traditional apostolic authorship Level 2 (Low, H-d later tradition — Papias/Eusebius, Irenaeus). Axis note (as drafted): DIVERGE (the mirror showcase). Maximalist defense steelmanned; authorship left largely undetermined. Pending review/validation.|
 |0.2|2026-07-19|Draft|**Axis characterization corrected per Critical Review – RQ-0013 F-1 (no grade change).** The "DIVERGE (mirror)" label recharacterized to **COLLINEAR — band tracks confidence (H-a→High, H-d→Low)**; the band's real value here is **diagnostic** (explains *why* attribution confidence is low), not value-divergence. Both native Levels (anonymity 4 / attribution 2) unchanged. Consistency edit propagating the INV-0013 §4.2 correction.|
+|0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0071

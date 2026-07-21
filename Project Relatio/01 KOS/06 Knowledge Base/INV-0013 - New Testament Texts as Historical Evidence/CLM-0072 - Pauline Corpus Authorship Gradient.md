@@ -1,7 +1,7 @@
 ---
 title: CLM-0072 - Pauline Corpus Authorship Gradient
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -37,6 +37,18 @@ relationships:
     target: FND-0013
   - type: part_of
     target: INV-0013
+confidence:
+  - component: seven_authentic_pauline
+    level: 4
+    label: High
+  - component: three_disputed_verdict
+    level: 2
+    label: Low
+  - component: pastorals_pseudonymous
+    level: 3
+    label: Moderate
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0072
@@ -136,5 +148,6 @@ The native rating carried in the confidence summary is the gradient: **Level 4 (
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0013. GRADIENT: seven undisputed Level 4 (High, H-a self-attestation); disputed three Level 2 (Low, divided); Pastorals Level 3 (Moderate, majority-pseudonymous, H-e stylometric). Axis note (as drafted): DIVERGE — a confidence gradient within one corpus. Maximalist single-author defense steelmanned; disputed three kept open. Pending review/validation.|
 |0.2|2026-07-19|Draft|**Axis characterization corrected per Critical Review – RQ-0013 F-1 (no grade change).** The "DIVERGE" label recharacterized to **COLLINEAR — band tracks confidence across the gradient (H-a→High, H-e→Low/Moderate)**; the band's value is **diagnostic**, not value-divergence. All three sub-Levels unchanged. Consistency edit propagating the INV-0013 §4.2 correction.|
+|0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0072

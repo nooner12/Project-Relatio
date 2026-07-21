@@ -1,7 +1,7 @@
 ---
 title: CLM-0076 - Crucifixion under Pontius Pilate
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -34,6 +34,15 @@ relationships:
     target: FND-0014
   - type: part_of
     target: INV-0014
+confidence:
+  - component: crucifixion
+    level: 4
+    label: High
+  - component: under_pilate
+    level: 3
+    label: Moderate
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0076
@@ -149,5 +158,6 @@ Type: **Historical.**
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-20|Draft|Created for RQ-0014. SPLIT grade: crucifixion Level 4 (High, Pauline/creedal layer); under-Pilate specification Level 3 (Moderate, Gospel-narrative + external-notice layers) with the §9 consensus-exceeds-evidence note. Elements (a)/(b)/(c) discrete; conventionalization rival steelmanned for the Pilate frame. Pending review/validation.|
+|0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0076

@@ -1,7 +1,7 @@
 ---
 title: CLM-0083 - The Classification Criteria and Their Application
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -37,6 +37,15 @@ relationships:
     target: FND-0015
   - type: part_of
     target: INV-0015
+confidence:
+  - component: placement_and_consensus
+    level: 3
+    label: Moderate
+  - component: criteria_mechanics
+    level: 2
+    label: Low
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0083
@@ -118,5 +127,6 @@ SRC-0129 high authority, paywalled (the disclosed gap); SRC-0130 high; SRC-0131 
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-20|Draft|Created for RQ-0015 — the load-bearing claim. Split grade: placement + consensus Level 3 (Moderate, unanimous across surveyed base, asymmetry reported per §2.2); criteria-mechanics Level 2 (Low — Palmer 2011 interior paywalled; mechanics not reconstructed from model memory per the anti-fabrication rule). Category-artifact counter-reading steelmanned via SRC-0136. Elements (a)/(b)/(c) discrete. Pending review/validation.|
+|0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0083
