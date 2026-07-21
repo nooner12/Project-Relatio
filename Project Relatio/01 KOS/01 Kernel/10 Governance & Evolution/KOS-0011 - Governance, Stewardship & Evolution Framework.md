@@ -1,7 +1,7 @@
 ---
 title: KOS-0011 - Governance, Stewardship & Evolution Framework
 document_type: Kernel Operating System Document
-version: 1.2
+version: 1.3
 status: Adopted
 operational_status: Active
 category:
@@ -30,7 +30,7 @@ tags:
 
 # Project Relatio Governance, Stewardship & Evolution Framework
 
-## Version 1.2
+## Version 1.3
 
 ## Adopted Kernel Document
 
@@ -511,6 +511,17 @@ Evaluate:
 
 ---
 
+## Operationalization (v1.3)
+
+The review cycles above are operationalized by the **Review & Revision Standard (STD-0009)**, which owns the trigger vocabulary, the trigger→scope→act resolution, the review acts and their bounds, the cadence schedule, and the review-queue mechanism — enacting **ADR-GOV-0008**. This mirrors the framework's established split: KOS-0011 declares the review requirement; the standard carries its operational body (as §5's lifecycle model is carried by STD-0005).
+
+Two disciplines bind all review activity:
+
+- **Mechanism proposes; recorded governance disposes.** The queue surfaces candidates; every act executes through a session under governance.
+- **Grade authority stays with the circuit.** Light re-affirmation may never change a grade (ADR-GOV-0008 D3); grade changes require at least a targeted mini-circuit.
+
+---
+
 # 13. Deprecation Protocol
 
 Old structures should not simply disappear.
@@ -676,6 +687,7 @@ Project Relatio adopts:
 |1.0|2026-07-09|Adopted|Finalized governance framework|
 |1.1|2026-07-09|Adopted|Added §10 reconciliation note mapping CON-0003 Stewardship Functions → KOS-0011 ST-roles → ROLE-NNNN implementations, closing the terminology drift found in the governance assessment (R1/R4). ST-003 Domain Specialist recorded as unimplemented.|
 |1.2|2026-07-10|Adopted|Resolved a phantom ADR reference (M-3/GB-2026-005): replaced the non-existent `ADR-KOS-0010 Governance Architecture Decisions` `related_documents` entry — surfaced as dangling by `graph_integrity.py` — with the genuine, existing **ADR-GOV-0001** (Governance and Role Reconciliation).|
+|1.3|2026-07-21|Adopted|§12 operationalized: review cycles pointed at the Review & Revision Standard (STD-0009), enacting ADR-GOV-0008. Declares-vs-operationalizes split per the §5/STD-0005 precedent. Additive.|
 
 ---
 

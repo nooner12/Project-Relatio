@@ -1,7 +1,7 @@
 ---
 title: STD-0002 - Metadata & YAML Standard
 document_type: Standards Document
-version: 1.8
+version: 1.9
 status: Adopted
 operational_status: Active
 category:
@@ -30,7 +30,7 @@ tags:
 
 # Project Relatio Metadata & YAML Standard
 
-## Version 1.8
+## Version 1.9
 
 ## Adopted Standards Document
 
@@ -413,12 +413,10 @@ Future-compatible fields:
 ```
 owner:
 
-review_date:
-
-review_cycle:
-
 revision_history:
 ```
+
+*(v1.9 note: `review_date` and `review_cycle` were reserved here from v1.0; they are now **active, document-class-specific fields** on Claim Records and Finding Records — see §11 — per ADR-GOV-0008 and the Review & Revision Standard (STD-0009).)*
 
 ---
 
@@ -547,6 +545,33 @@ reliance_tier: R0
 - Both fields are **required on Claim Records and Finding Records**; other object classes do not carry them.
 - These are content fields (like Source Records' `source_author`), not lifecycle fields — they sit alongside, and are independent of, `status` and `operational_status`.
 
+**Review fields (v1.9; semantics owned by the Review & Revision Standard, STD-0009 §8):**
+
+```
+review_cycle: 9        # months, per the Review & Revision Standard §7 cadence
+review_date: 2027-04-20    # next review due
+last_reviewed: 2026-07-20  # most recent review act (or initialization)
+```
+
+- All three are **required on Claim Records and Finding Records**.
+- Dates use YYYY-MM-DD (§10); `review_cycle` is a positive integer (months).
+- Semantics — what sets the cycle, what a review act may do, when the dates advance — are owned by STD-0009 §8; this standard owns only format and placement.
+- Initialization of existing records is **mechanical** (scripted from each record's weakest confidence component per the STD-0009 §7 cadence schedule; `last_reviewed` = the record's epistemic-backfill date).
+
+**Optional `bounded_by` inside confidence components (v1.9; semantics in STD-0009 §9):**
+
+```
+confidence:
+  - component: criteria_mechanics
+    level: 2
+    label: Low
+    bounded_by: [SRC-0129]
+```
+
+- `bounded_by` is **OPTIONAL** per component; entries are identifiers of **existing** objects and are **graph claims** (§12.1 applies — dangling `bounded_by` entries fail integrity).
+- Required only where a component's dependencies differ from the record's `derived_from` edges.
+- **No retroactive backfill** (ADR-GOV-0008 D5); graph tooling reads `bounded_by` for trigger resolution.
+
 ---
 
 # 12. Metadata Integrity Rules
@@ -667,6 +692,7 @@ Project Relatio adopts:
 |1.6|2026-07-11|Adopted|Added the optional **typed `relationships`** frontmatter block (`type` + `target`), closing Pressure Test F-4 / GB-2026-001 — STD-0004's vocabulary can now be expressed in metadata, not only prose. Additive: the flat `parent_documents`/`related_documents` lists are retained for tooling. Adopted for Knowledge Base objects; `graph_integrity.py` made type-aware.|
 |1.7|2026-07-20|Adopted|Added **§12.1 Frontmatter References Are Graph Claims**, enacting **ADR-GOV-0004 §2 D4**. Entries in `related_documents`, `parent_documents`, and the typed `relationships` block must resolve to existing files; named candidates and non-existent objects are referenced in **prose only**. Placed here rather than in STD-0004 because D4 governs what the frontmatter *fields* must contain (STD-0002's domain), whereas STD-0004 governs which relationship *types* exist and what they mean. Additive rule statement only — no field added, removed, or redefined, and no existing requirement changed; `graph_integrity.py` already enforced the constraint after commit, and this states it at authoring time with its rationale.|
 |1.8|2026-07-20|Adopted|Added §11 subsection **Claim Records and Finding Records**, requiring the epistemic-axis fields `confidence` (always-a-list, per-component level/label) and `reliance_tier` (R0/R1/R2). Additive document-class fields per the existing §11 pattern; values and rules governed by the Epistemic State Standard (STD-0008), whose R-tier vocabulary is constitutionally sourced from ADR-GOV-0006. Labels follow the canonical KOS-0003 §8 scale (Very High / High / Moderate / Low / Very Low). No existing field removed, renamed, or redefined. Migration of existing Claim/Finding records gated separately (GB-2026-038); until it completes, the validator's epistemic-field check is warning-gated.|
+|1.9|2026-07-21|Adopted|Activated review fields (review_cycle/review_date/last_reviewed) as required Claim/Finding fields per ADR-GOV-0008 and the Review & Revision Standard (STD-0009); promoted them out of §8 reserved status; added optional bounded_by to confidence components (graph-claim rule §12.1 applies). Additive.|
 
 ---
 
