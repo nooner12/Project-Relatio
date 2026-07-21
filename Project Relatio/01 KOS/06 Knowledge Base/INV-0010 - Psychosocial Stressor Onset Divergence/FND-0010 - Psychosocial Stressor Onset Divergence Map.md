@@ -1,7 +1,7 @@
 ---
 title: FND-0010 - Psychosocial Stressor Onset Divergence Map
 document_type: Finding Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-15
@@ -43,6 +43,21 @@ relationships:
     target: CLM-0050
   - type: part_of
     target: INV-0010
+confidence:
+  - component: depression_timing
+    level: 4
+    label: High
+  - component: biology_linked_attribution
+    level: 3
+    label: Moderate
+  - component: weakest_anxiety_age_modal_expression
+    level: 2
+    label: Low
+  - component: construct_census_verdict
+    level: 4
+    label: High
+reliance_tier: R0
+reliance_note: "verification-light review; not cleared for external reliance."
 ---
 
 # FND-0010
@@ -125,5 +140,6 @@ At the literature level, the map says two things a program designer would want t
 |---|---|---|---|
 |0.1|2026-07-15|Draft|Created for RQ-0010. Maps five onset-timing divergence loci (anxiety pre-pubertal; conduct childhood-onset; ADHD ascertainment; depression pubertal ~12–13; eating-disorder mid-adolescent) plus the secondary form-divergence. Construct census: 7 CONFLATED / 1 SEX-MEASURED / 0 GENDER-MEASURED / 0 UNRESOLVED — CONFLATED-majority prediction **HELD strongly**, with the corollary that neither construct is usually measured. Only the puberty–depression timing (CLM-0045, SEX-MEASURED) carries a bounded biology-linked claim. Native Level N (2–4); no Level 5. Gate + INV-0008 non-inference intact. No ranking/superlative. Pending ROLE-0004 review and ROLE-0001 validation.|
 |0.2|2026-07-15|Draft|**Remediated per Critical Review – RQ-0010 (CONFORMANT WITH FLAGS).** F-1: eating-disorder (SRC-0064/CLM-0048) and conduct (SRC-0065/CLM-0049) recoded `CONFLATED` → `UNRESOLVED`; census updated to **5 CONFLATED / 2 UNRESOLVED / 1 SEX-MEASURED / 0 GENDER-MEASURED**; prediction verdict rewritten (HELD as "majority fail to cleanly measure a construct") and the corollary — *neither construct is typically measured* — **promoted to the headline** (title + §1b/§1c). F-2: §4 first bullet and §1b now state that puberty occurs in both sexes, so pubertal-stage measurement does not establish biological-sex causation of the between-sex divergence (sex × puberty interaction unmeasured). **No confidence level changed** (operative rule constrains CONFLATED and UNRESOLVED identically). Still pending ROLE-0001 structural validation.|
+|0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 # End FND-0010

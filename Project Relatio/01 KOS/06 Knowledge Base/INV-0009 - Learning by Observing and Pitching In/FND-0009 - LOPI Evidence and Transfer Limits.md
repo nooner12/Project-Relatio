@@ -1,7 +1,7 @@
 ---
 title: FND-0009 - LOPI Evidence and Transfer Limits
 document_type: Finding Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -34,6 +34,18 @@ relationships:
     target: ENT-0007
   - type: part_of
     target: INV-0009
+confidence:
+  - component: base_phenomenon
+    level: 3
+    label: Moderate
+  - component: transfer_general
+    level: 1
+    label: Very Low
+  - component: transfer_observation_facet
+    level: 2
+    label: Low
+reliance_tier: R0
+reliance_note: "verification-light review; not cleared for external reliance."
 ---
 
 # FND-0009
@@ -103,5 +115,6 @@ At the literature level, the evidence supports a **narrow, honest** transfer: a 
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-14|Draft|Created for RQ-0009. Three-part answer (base phenomenon real & Level-3 in its communities / two honest limits: comparative-confound + narrow outcome / transfer to single-child home partial & undemonstrated, Level 1→2). Central result: the best-evidenced mechanism (learning from interactions directed to others) travels worst to a solitary learner. Native `Level N`; ★-translation deferred (crosswalk gap). Gate stated. Pending ROLE-0004 review and ROLE-0001 validation.|
+|0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 # End FND-0009
