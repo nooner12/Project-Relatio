@@ -1,7 +1,7 @@
 ---
 title: CLM-0037 - Youth Mentoring Effects
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -34,6 +34,15 @@ relationships:
     target: CLM-0040
   - type: part_of
     target: INV-0008
+confidence:
+  - component: structured_mentoring
+    level: 4
+    label: High
+  - component: program_application
+    level: 3
+    label: Moderate
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0037
@@ -126,5 +135,6 @@ SRC-0048/SRC-0049: high authority and transparency; DuBois d ≈ 0.21 corroborat
 |---|---|---|---|
 |0.1|2026-07-14|Draft|Created for RQ-0008 (domain 4). Underlying Level 4 (small-but-real, moderator-dependent; DuBois 2011 meta-analysis d ≈ 0.21 + Tierney 1995 BBBS RCT); application Level 2–3 — the closest domain to the application, held below High on model-mismatch, small magnitude, and implementation dependence.|
 |0.2|2026-07-14|Draft|RQ-0008 remediation (Critical Review – RQ-0008 §8 items 3–4): application grade expressed consistently as **Level 2 (reaching toward 3)** for register discipline; added reciprocal `related_to` CLM-0040. d ≈ 0.21 independently re-verified by the reviewer. Levels unchanged.|
+|0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0037

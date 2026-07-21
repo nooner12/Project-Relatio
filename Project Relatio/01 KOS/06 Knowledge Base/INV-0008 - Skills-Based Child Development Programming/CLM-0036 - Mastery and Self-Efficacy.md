@@ -1,7 +1,7 @@
 ---
 title: CLM-0036 - Mastery and Self-Efficacy
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -31,6 +31,15 @@ relationships:
     target: FND-0008
   - type: part_of
     target: INV-0008
+confidence:
+  - component: mastery_self_efficacy
+    level: 4
+    label: High
+  - component: program_application
+    level: 2
+    label: Low
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0036
@@ -123,5 +132,6 @@ SRC-0053 (Bandura): very-high-authority foundational theory; anchors "mastery = 
 |---|---|---|---|
 |0.1|2026-07-14|Draft|Created for RQ-0008 (domain 3). Underlying Level 4 (mastery as strongest efficacy source; self-efficacy–achievement association, Multon 1991 + Bandura); application Level 2 (causal-from-correlational and domain-transfer gaps). ~14%/r ≈ .38 flagged approximate.|
 |0.2|2026-07-14|Draft|RQ-0008 remediation (Critical Review – RQ-0008 §8 item 1): catalogued **SRC-0053 (Bandura 1997)** and re-anchored the "strongest source" half on it (previously invoked-not-catalogued; Multon/SRC-0050 does not establish it). Division of evidentiary labour made explicit. Confidence levels unchanged.|
+|0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0036

@@ -1,7 +1,7 @@
 ---
 title: CLM-0034 - Nature and Attention
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -28,6 +28,15 @@ relationships:
     target: FND-0008
   - type: part_of
     target: INV-0008
+confidence:
+  - component: underlying_evidence
+    level: 3
+    label: Moderate
+  - component: application_to_program
+    level: 2
+    label: Low
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0034
@@ -121,5 +130,6 @@ SRC-0047: high-authority umbrella review, transparent about its own quality limi
 |---|---|---|---|
 |0.1|2026-07-14|Draft|Created for RQ-0008 (domain 1). Underlying Level 3 (short-term attention/inattention association; Kaleta 2025 umbrella review); application Level 2. Durability and compound-program transfer bracketed.|
 |0.2|2026-07-14|Draft|RQ-0008 remediation (Critical Review – RQ-0008 §8 item 2): **narrowed** the graded claim to the short-term **attentional** benefit SRC-0047 supports; the "reduced hyperactivity" greenspace–ADHD corroboration explicitly demoted to uncatalogued/noted-not-graded. Confidence levels (U3/A2) unchanged.|
+|0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0034

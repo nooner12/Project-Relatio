@@ -1,7 +1,7 @@
 ---
 title: CLM-0038 - Co-Regulation and Routine
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -31,6 +31,15 @@ relationships:
     target: FND-0008
   - type: part_of
     target: INV-0008
+confidence:
+  - component: co_regulation_self_regulation
+    level: 3
+    label: Moderate
+  - component: program_application
+    level: 2
+    label: Low
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0038
@@ -123,5 +132,6 @@ SRC-0051: moderate–high authority (OPRE/FPG), transparent, program-neutral. It
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-14|Draft|Created for RQ-0008 (domain 5). Underlying Level 3 (co-regulation as developmental support; Rosanbalm & Murray 2017 synthesis brief); application Level 2. Universal-design framing adopted; clinical provenance and caregiver-to-program transfer flagged as limits.|
+|0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0038
