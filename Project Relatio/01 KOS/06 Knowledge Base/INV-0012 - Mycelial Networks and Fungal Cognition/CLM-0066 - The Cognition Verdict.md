@@ -1,7 +1,7 @@
 ---
 title: CLM-0066 - The Cognition Verdict
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -36,6 +36,21 @@ relationships:
     target: FND-0012
   - type: part_of
     target: INV-0012
+confidence:
+  - component: rung_a
+    level: 4
+    label: High
+  - component: rung_b
+    level: 4
+    label: High
+  - component: rung_c_operational_carryover
+    level: 2
+    label: Low
+  - component: rung_d_basal_cognition_framing
+    level: 2
+    label: Low
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0066
@@ -135,5 +150,6 @@ The verdict deliberately rests its *confidence* on the descriptive claims (which
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0012. Ladder verdict: (a)–(b) High, (c) Low, (d) basal cognition Low as a contested framing (Lyon), (e) sentience BRACKETED (Baluška/Reber CBC steelmanned, not adopted). Bounded metaphysical sub-claim: "thought" is definition-relative; fungi borderline on biogenic definitions, not shown on representation-requiring ones. Headline Level 2 (Low); no Level 5. Motivated-reasoning poles named and quarantined. Pending review/validation.|
+|0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0066

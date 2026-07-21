@@ -1,7 +1,7 @@
 ---
 title: CLM-0070 - Markan Priority and the Synoptic Problem
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -34,6 +34,15 @@ relationships:
     target: FND-0013
   - type: part_of
     target: INV-0013
+confidence:
+  - component: markan_priority
+    level: 4
+    label: High
+  - component: q_hypothesis
+    level: 2
+    label: Low
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0070
@@ -129,5 +138,6 @@ The single native rating carried for this claim in the confidence summary is **L
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0013. SPLIT: Markan priority Level 4 (High); Q hypothesis Level 2 (Low). Both H-e (reconstruction). Axis note: DIVERGE — the cleanest showcase that the SAME H-band carries two Levels two apart; the band does not fix the Level. Farrer (Goodacre) steelmanned as viable → Q held Low. Pending review/validation.|
+|0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0070

@@ -1,7 +1,7 @@
 ---
 title: CLM-0065 - The Neural-Network Analogy
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -35,6 +35,15 @@ relationships:
     target: FND-0012
   - type: part_of
     target: INV-0012
+confidence:
+  - component: structural_analogy
+    level: 3
+    label: Moderate
+  - component: strong_analogy_fungal_brain
+    level: 2
+    label: Low
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0065
@@ -120,5 +129,6 @@ Fricker et al. is ideal for adjudicating this, since the same group did the *Phy
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0012. Structural analogy Level 3 (Moderate); strong dynamical/functional "fungal brain" analogy Level 2 (Low, leaning negative) — no neurons/synapses/action-potentials/central integrator, ms-vs-hours timescale. §7 analogical test applied; equivocation on "neural network" (ML vs biological) named. Pending review/validation.|
+|0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0065

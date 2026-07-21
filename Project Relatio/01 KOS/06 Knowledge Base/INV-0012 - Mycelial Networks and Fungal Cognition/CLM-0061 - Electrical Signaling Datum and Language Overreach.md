@@ -1,7 +1,7 @@
 ---
 title: CLM-0061 - Electrical Signaling Datum and Language Overreach
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -37,6 +37,15 @@ relationships:
     target: FND-0012
   - type: part_of
     target: INV-0012
+confidence:
+  - component: electrical_signaling_datum
+    level: 3
+    label: Moderate
+  - component: language_information_encoding
+    level: 1
+    label: Very Low
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0061
@@ -125,6 +134,7 @@ The four sources bracket the question well: a pre-hype 1995 datum (Olsson), the 
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0012. Two-level claim: datum (stimulus-sensitive electrical spiking) Level 3 (Moderate), independently attested since Olsson & Hansson 1995; "language"/information-encoding interpretation (Adamatzky) Level 1 (Very Low), contested (Blatt et al.) and cautioned (Buffi et al. review). Datum≠interpretation enforced per §3.1. Pending review/validation.|
+|0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 |0.1a|2026-07-19|Draft|**Remediated per Critical Review – RQ-0012 F-2 (documentation only; no level change).** Added a cross-note to the Confidence section pointing to the shared two-level headline-selection rule (stated in full in CLM-0063): this is a hold-the-datum claim, so it headlines at the higher sub-level (Moderate) — the same rule that lands CLM-0063 at its lower sub-level. No confidence changed.|
 
 # End CLM-0061
