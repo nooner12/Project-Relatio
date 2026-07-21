@@ -1,7 +1,7 @@
 ---
 title: CLM-0014 - Regular Exercise Reduces Stress and Confers Durable Health Benefit
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -36,6 +36,18 @@ relationships:
     target: CLM-0013
   - type: part_of
     target: INV-0005
+confidence:
+  - component: short_term_stress
+    level: 3
+    label: Moderate
+  - component: long_term_stress_specific
+    level: 2
+    label: Low
+  - component: long_term_collateral_health
+    level: 4
+    label: High
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0014
@@ -130,5 +142,6 @@ SRC-0020 is a cluster read at summary level (no single load-bearing trial); weig
 |---|---|---|---|
 |0.1|2026-07-10|Draft|Created for RQ-0005. Durable-foundation argument flagged as partly inferential; no precise pooled stress ES verified.|
 |0.2|2026-07-11|Draft|Per Critical Review – RQ-0005 §6.1: **stress-specific durable outcome lowered from Level 3 to Level 2 (Low)** (category-transfer correction); collateral-health durability restated as a separate, better-grounded Level-4 proposition. Confidence + Limitations updated.|
+|0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0014

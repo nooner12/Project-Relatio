@@ -1,7 +1,7 @@
 ---
 title: CLM-0016 - Social Connection Buffers Stress but Evidence Is Largely Observational
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -31,6 +31,15 @@ relationships:
     target: FND-0005
   - type: part_of
     target: INV-0005
+confidence:
+  - component: health_longevity
+    level: 4
+    label: High
+  - component: interventional_stress_relief
+    level: 2
+    label: Low
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0016
@@ -120,5 +129,6 @@ SRC-0019 is a landmark, high-authority, independent meta-analysis — but observ
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-10|Draft|Created for RQ-0005. Association (high) vs interventional durability (low) split explicitly.|
+|0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0016

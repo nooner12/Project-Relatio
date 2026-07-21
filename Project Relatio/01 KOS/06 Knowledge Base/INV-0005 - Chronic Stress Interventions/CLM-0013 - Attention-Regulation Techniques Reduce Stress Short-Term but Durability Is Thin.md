@@ -1,7 +1,7 @@
 ---
 title: CLM-0013 - Attention-Regulation Techniques Reduce Stress Short-Term but Durability Is Thin
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -43,6 +43,15 @@ relationships:
     target: CLM-0015
   - type: part_of
     target: INV-0005
+confidence:
+  - component: short_term
+    level: 4
+    label: High
+  - component: long_term
+    level: 2
+    label: Low
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0013
@@ -139,5 +148,6 @@ Goyal (SRC-0014) is the highest-authority, most independent, anti-allegiance syn
 |---|---|---|---|
 |0.1|2026-07-10|Draft|Created for RQ-0005. Short-term vs long-term confidence separated; motivated-reasoning guard applied.|
 |0.2|2026-07-11|Draft|Reconciled SRC-0012 pre-post ES figure (0.55→0.66) per Critical Review – RQ-0005 §6.4. Non-load-bearing; grades unchanged.|
+|0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0013

@@ -1,7 +1,7 @@
 ---
 title: CLM-0004 - Backward Stop-and-Go Waves
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-09
@@ -33,6 +33,18 @@ relationships:
     target: FND-0002
   - type: part_of
     target: INV-0002
+confidence:
+  - component: direction
+    level: 4
+    label: High
+  - component: near_constancy
+    level: 4
+    label: High
+  - component: numeric_speed
+    level: 3
+    label: Moderate
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0004
@@ -125,6 +137,7 @@ Type: **Empirical** (experiment + field observation) + **modeling**.
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-09|Draft|Created for RQ-0002|
+|0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 ---
 
