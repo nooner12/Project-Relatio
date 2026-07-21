@@ -1,7 +1,7 @@
 ---
 title: FND-0002 - Jams as Emergent Instability
 document_type: Finding Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-09
@@ -31,6 +31,12 @@ relationships:
     target: KOS-0006
   - type: part_of
     target: INV-0002
+confidence:
+  - component: overall
+    level: 4
+    label: High
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # FND-0002
@@ -80,6 +86,7 @@ relationships:
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-09|Draft|Created for RQ-0002|
+|0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 ---
 

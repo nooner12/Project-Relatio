@@ -1,7 +1,7 @@
 ---
 title: CLM-0085 - Yiguandao Self-Understanding and Daoism
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -31,6 +31,12 @@ relationships:
     target: FND-0015
   - type: part_of
     target: INV-0015
+confidence:
+  - component: overall
+    level: 3
+    label: Moderate
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0085
@@ -109,5 +115,6 @@ SRC-0135: authoritative *for its own register* (it is the movement speaking), co
 |---|---|---|---|
 |0.2|2026-07-20|Draft|**Critical Review – RQ-0015 F-1 adopted (recommendation):** element (b)'s "structurally consonant" phrasing replaced with an explicit no-evidential-weight disclaimer at the exact sentence — the registers' non-collision is a fact about their shape, corroborating neither track by the other. No grade or content change.|
 |0.1|2026-07-20|Draft|Created for RQ-0015. Level 3 (Moderate), scope-bounded to the live-read World Headquarters voice: self-understanding = primordial trans-religion Dao transmission (Fuxi-anchored lineage), no school-of-Daoism self-claim on the read page, Confucian public lean; dual-track discipline held in both directions; reductionist counter-reading steelmanned into a recorded gap. Elements (a)/(b)/(c) discrete. Pending review/validation.|
+|0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0085

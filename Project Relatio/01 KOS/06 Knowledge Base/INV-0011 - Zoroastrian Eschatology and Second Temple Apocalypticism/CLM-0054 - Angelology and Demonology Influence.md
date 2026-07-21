@@ -1,7 +1,7 @@
 ---
 title: CLM-0054 - Angelology and Demonology Influence
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -37,6 +37,12 @@ relationships:
     target: FND-0011
   - type: part_of
     target: INV-0011
+confidence:
+  - component: overall
+    level: 2
+    label: Low
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0054
@@ -151,5 +157,6 @@ Unlike dualism, no source here supplies a *structurally specific* parallel; even
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0011. Level 2 (Low): angelology/demonology influence weak — diffuse functional parallel, no clean derivation, strong internal divine-council alternative (plus Babylonian inputs). Dating is not the weak link here; specificity is. Dual-coding: Zoro H-a→H-e, Jewish H-a (incl. early internal antecedent). Pending review/validation.|
 |0.2|2026-07-21|Draft|**Sub-Question Answers section added (INV-0011 §1 / acceptance criterion #2), Specialist pass (ROLE-0002).** (i) dating — qualified yes on relative early attestation (H-a presence, H-e absolute), explicitly noted as *not* the failing axis (specificity is); (ii) contact pathway — No doctrine-specific channel, inherits CLM-0057 (explicit negative); (iii) independent development — divine-council inner-Israelite trajectory (with Babylonian inputs secondary) named and steelmanned; influence largely does not survive as directional derivation, only Shaked's diffuse-coloring minimum. Restructures existing analysis from the existing source base (SRC-0067…SRC-0076) only; no evidence added, no confidence level changed (Level 2 unchanged). Verification: inherited from the v0.2-cycle source disclosures and Critical Review re-verification; no new verification claims made. Pending ROLE-0004 review.|
+|0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0054

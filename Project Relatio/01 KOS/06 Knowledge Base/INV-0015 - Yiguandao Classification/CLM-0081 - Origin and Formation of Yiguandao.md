@@ -1,7 +1,7 @@
 ---
 title: CLM-0081 - Origin and Formation of Yiguandao
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -33,6 +33,12 @@ relationships:
     target: FND-0015
   - type: part_of
     target: INV-0015
+confidence:
+  - component: overall
+    level: 3
+    label: Moderate
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0081
@@ -109,5 +115,6 @@ SRC-0134 authority moderate-to-high (specialist reference profile; open); SRC-01
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-20|Draft|Created for RQ-0015. Level 3 (Moderate): dated formation outline (Xiantiandao descent; 1905 naming; 1930s Zhang Tianran mass movement; 1987 Taiwan legalization) with verification ceiling stated; elements (a)/(b)/(c) discrete; lineage-antiquity counter-reading steelmanned and routed per the dual-track rule. Pending review/validation.|
+|0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0081

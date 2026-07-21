@@ -1,7 +1,7 @@
 ---
 title: CLM-0027 - Analytic Flexibility Inflates Error
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-12
@@ -31,6 +31,12 @@ relationships:
     target: FND-0007
   - type: part_of
     target: INV-0007
+confidence:
+  - component: overall
+    level: 4
+    label: High
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0027
@@ -122,5 +128,6 @@ SRC-0037: high authority, high transparency, academic, self-critical intent. The
 |---|---|---|---|
 |0.1|2026-07-12|Draft|Created for RQ-0007. Simmons 2011 combined 61% figure verified this session; per-degree decimals flagged approximate. Level 4 for the value-of-constraint case, bounded to error control.|
 |0.2|2026-07-12|Draft|Post-review remediation (Critical Review - RQ-0007). #7: added the per-degree band ~8–13% (optional stopping ≈7.7%, gender covariate ≈11.7%) as approximate. #9: encoded the load-bearing `contrasts_with CLM-0032` edge in frontmatter relationships + related_documents. Short title (STD-0001 §10). No confidence change — remains Level 4.|
+|0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0027

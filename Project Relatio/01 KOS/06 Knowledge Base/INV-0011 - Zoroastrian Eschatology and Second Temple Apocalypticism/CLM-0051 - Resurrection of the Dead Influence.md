@@ -1,7 +1,7 @@
 ---
 title: CLM-0051 - Resurrection of the Dead Influence
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -38,6 +38,12 @@ relationships:
     target: FND-0011
   - type: part_of
     target: INV-0011
+confidence:
+  - component: overall
+    level: 2
+    label: Low
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0051
@@ -152,6 +158,7 @@ Pro-influence (SRC-0068, SRC-0069) is authoritative but its early-dating case is
 |0.1|2026-07-19|Draft|Created for RQ-0011. Level 3 (Moderate): resurrection influence plausible and comparatively strong (distinctive parallel + Persian-period contact), not established (Zoro-side early dating H-e/H-d; systematic form post-dates Daniel; Maccabean internal pathway steelmanned). Dual-coding: Zoro H-e→H-d, Jewish H-a. Pending ROLE-0004 review and ROLE-0001 validation.|
 |0.1a|2026-07-19|Draft|**Lowered Level 3 (Moderate) → Level 2 (Low) per Critical Review – RQ-0011 F-1 (path a).** Resurrection is the only doctrine case weak on *both* load-bearing axes at once (reconstruction-only, post-Daniel Zoroastrian priority H-e→H-d *and* Divided consensus) with a conceded-sufficient internal Maccabean pathway; distinctive-parallel strength cannot rescue reconstruction-only priority (INV-0011 §3.1). Independence score lowered 3 → 2 (Cohn non-independent of Boyce, so the pro-influence priority case reduces to one contested line). Title, Claim, Confidence, Limitations, and Alternative Interpretation #1 recast to Low. Dual-coding unchanged (Zoro H-e→H-d, Jewish H-a).|
 |0.2|2026-07-21|Draft|**Sub-Question Answers section added (INV-0011 §1 / acceptance criterion #2), Specialist pass (ROLE-0002).** The three sub-questions now answered explicitly and separably: (i) dating — No, priority reconstruction-only (Yasht 19 H-e; systematic form Pahlavi H-d, post-Daniel); (ii) contact pathway — No doctrine-specific channel, inherits CLM-0057 (explicit negative); (iii) independent development — Maccabean-crisis inner-Jewish growth named and steelmanned as conceded-sufficient; influence survives only as non-necessary catalytic factor. Restructures existing analysis from the existing source base (SRC-0067…SRC-0076) only; no evidence added, no confidence level changed (Level 2 unchanged). Verification: inherited from the v0.2-cycle source disclosures and Critical Review re-verification; no new verification claims made. Pending ROLE-0004 review.|
+|0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.2a|2026-07-21|Draft|**Minor edit following ROLE-0004 sub-question review (graph-reciprocity escalation).** Item (ii)'s contact-loci point rerouted through CLM-0057's evidence base (which carries SRC-0075), removing a prose citation to a source not declared in this claim's relationships. No graph change, no evidence change, no confidence change (Level 2 unchanged).|
 
 # End CLM-0051

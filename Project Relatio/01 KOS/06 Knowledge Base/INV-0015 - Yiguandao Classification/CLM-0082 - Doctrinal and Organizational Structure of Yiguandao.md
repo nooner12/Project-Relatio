@@ -1,7 +1,7 @@
 ---
 title: CLM-0082 - Doctrinal and Organizational Structure of Yiguandao
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -37,6 +37,12 @@ relationships:
     target: FND-0015
   - type: part_of
     target: INV-0015
+confidence:
+  - component: overall
+    level: 3
+    label: Moderate
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0082
@@ -115,5 +121,6 @@ See SRC-0134 (moderate-to-high, open), SRC-0131 (high, paywalled), SRC-0132 (hig
 |---|---|---|---|
 |0.2|2026-07-20|Draft|**Critical Review – RQ-0015 F-3 adopted (recommendation):** Yiguandao-specific spirit-writing (*fuji*) and Buddha-hall (*fotang*) citation re-routed from the scope-restricted milieu source SRC-0133 to the live-read SRC-0134 where the datum actually lives; SRC-0133 retained for milieu only. No level or content change.|
 |0.1|2026-07-20|Draft|Created for RQ-0015. Level 3 (Moderate): Eternal-Mother/three-age architecture with multi-tradition incorporation and Confucian public dominance; strand proportions recorded as a gap, not estimated; Daoist-core counter-reading steelmanned, its content routed to CLM-0084. Elements (a)/(b)/(c) discrete. Pending review/validation.|
+|0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0082

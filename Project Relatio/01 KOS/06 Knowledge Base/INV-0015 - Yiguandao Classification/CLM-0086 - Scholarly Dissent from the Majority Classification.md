@@ -1,7 +1,7 @@
 ---
 title: CLM-0086 - Scholarly Dissent from the Majority Classification
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -31,6 +31,12 @@ relationships:
     target: FND-0015
   - type: part_of
     target: INV-0015
+confidence:
+  - component: overall
+    level: 2
+    label: Low
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0086
@@ -108,5 +114,6 @@ SRC-0136 high authority, paywalled, thesis review-verified — and its Yiguandao
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-20|Draft|Created for RQ-0015. Level 2 (Low): located dissent is category-level (ter Haar; Palmer's reflexive question); no Daoist-school classification located; the negative bounded to the surveyed base and graded per the thin-base authorization; hidden-dissent counter-reading steelmanned as the constitutive ceiling. Elements (a)/(b)/(c) discrete. Pending review/validation.|
+|0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0086

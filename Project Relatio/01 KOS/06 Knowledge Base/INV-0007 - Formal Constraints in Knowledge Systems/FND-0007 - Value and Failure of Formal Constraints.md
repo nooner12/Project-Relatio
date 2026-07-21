@@ -1,7 +1,7 @@
 ---
 title: FND-0007 - Value and Failure of Formal Constraints
 document_type: Finding Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-12
@@ -46,6 +46,12 @@ relationships:
     target: ENT-0005
   - type: part_of
     target: INV-0007
+confidence:
+  - component: overall
+    level: 3
+    label: Moderate
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # FND-0007
@@ -115,5 +121,6 @@ Stated once, at the literature level and without auditing this vault: the synthe
 |---|---|---|---|
 |0.1|2026-07-12|Draft|Created for RQ-0007. Three-part answer (value / failure modes / design-governance resolution), capped at Level 3 (weakest necessary links = the six Moderate claims; cross-domain interpretive synthesis, Level 5 reserved). Motivated-reasoning guard (self-flattering-to-governed-systems direction) integrated; analogical-transfer and few-effect-sizes caveats integrated; applicability offered as implication, self-review bracketed. Pending ROLE-0004 epistemic review and ROLE-0001 structural validation.|
 |0.2|2026-07-12|Draft|Post-review remediation (Critical Review - RQ-0007). #1 motivated-reasoning leak: removed the vault merit-principle vocabulary ("earn its place… symmetry, completeness, appearance of rigour") from §1(c) and §5, attributed it explicitly as the vault's frame not the literature's, and rewrote §5 to deny "independent support" and to state the reflexive reading cannot be certified by the same-model circuit (awaits genuine independent review). #2 headline "Not on Their Amount" → "Not Primarily on Their Amount." Added the Timmermans & Epstein (SRC-0045) rigidity-counterweight to the bottom line. Short-title cross-references (STD-0001 §10). No confidence change — remains Level 3.|
+|0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 # End FND-0007

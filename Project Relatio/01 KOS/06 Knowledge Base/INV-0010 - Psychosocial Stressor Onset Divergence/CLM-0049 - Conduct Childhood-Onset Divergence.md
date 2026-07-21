@@ -1,7 +1,7 @@
 ---
 title: CLM-0049 - Conduct Childhood-Onset Divergence
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-15
@@ -28,6 +28,12 @@ relationships:
     target: FND-0010
   - type: part_of
     target: INV-0010
+confidence:
+  - component: overall
+    level: 3
+    label: Moderate
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0049
@@ -116,6 +122,7 @@ SRC-0065 is high-authority and prospective; its binding limits are single-cohort
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-15|Draft|Created for RQ-0010. Level 3 (Moderate) that the male preponderance in conduct/antisocial problems is concentrated in childhood-onset (~10:1) and narrows for adolescence-onset (~1.5:1) (SRC-0065). Construct-provenance `CONFLATED` — gender-patterned/unattributed only. Under-detection-of-girls and taxonomy-fit risks named; exact ratios cohort-specific.|
+|0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.1a|2026-07-15|Draft|Construct-provenance code updated `CONFLATED` → `UNRESOLVED` per Critical Review – RQ-0010 F-1 (SRC-0065 recoded; mechanism undetermined). Constraint identical; **confidence unchanged (Level 3)**; no other claim text changed.|
 
 # End CLM-0049

@@ -1,7 +1,7 @@
 ---
 title: CLM-0064 - Learning and Memory-Like Behavior
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -34,6 +34,12 @@ relationships:
     target: FND-0012
   - type: part_of
     target: INV-0012
+confidence:
+  - component: overall
+    level: 2
+    label: Low
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0064
@@ -121,6 +127,7 @@ Fukasawa/Boddy is the right kind of source: a *fungal* experiment whose authors 
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0012. Memory-like carry-over (Fukasawa/Boddy 2020) Level 3 (Moderate, single-group); cognitive learning in fungi Level 2 (Low, largely unestablished); headline Level 2 (Low). Physarum (SRC-0090) firewalled as non-fungal comparandum (typed related_to, zero evidential weight). Money steelman quarantined. Pending review/validation.|
+|0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.1a|2026-07-19|Draft|**Remediated per Critical Review – RQ-0012 F-1, path (a) (lower).** Carry-over sub-grade **lowered Level 3 (Moderate) → Level 2 (Low)**: its entire datum-weight is one unreplicated Boddy-group study (SRC-0086; Independence 2, Reliability 3), fitting KOS-0003 §8 Level 2 ("limited support") at least as well as Moderate. Updated Evidence Evaluation, Confidence, and Alternative-Interpretation #2 prose to state the single-group/no-replication basis. **Headline Level 2 (Low) unchanged; no confidence level raised.** Physarum firewall and scale discipline intact.|
 
 # End CLM-0064

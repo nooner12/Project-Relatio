@@ -1,7 +1,7 @@
 ---
 title: CLM-0062 - Chemical Signaling and Whole-Colony Integration
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -34,6 +34,12 @@ relationships:
     target: FND-0012
   - type: part_of
     target: INV-0012
+confidence:
+  - component: overall
+    level: 3
+    label: Moderate
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0062
@@ -116,5 +122,6 @@ Kiers is especially valuable because it demonstrates coordinated, discriminating
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0012. Level 3 (Moderate): whole-colony physiological integration via chemical/cytoplasmic/likely-ionic signaling + mass flow; integration well-evidenced (Fricker, Kiers), specific molecular mechanisms (Ca²⁺) less pinned and partly parametric (flagged). Coordination framed non-cognitively. Pending review/validation.|
+|0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0062

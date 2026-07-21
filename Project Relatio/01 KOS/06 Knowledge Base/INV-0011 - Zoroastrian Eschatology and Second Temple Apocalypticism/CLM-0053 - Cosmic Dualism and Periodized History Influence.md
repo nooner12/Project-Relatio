@@ -1,7 +1,7 @@
 ---
 title: CLM-0053 - Cosmic Dualism and Periodized History Influence
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -37,6 +37,12 @@ relationships:
     target: FND-0011
   - type: part_of
     target: INV-0011
+confidence:
+  - component: overall
+    level: 3
+    label: Moderate
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0053
@@ -151,6 +157,7 @@ This is the case where the pro-influence pole (Cohn) and the measured pole (Shak
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0011. Level 3 (Moderate): dualism is the strongest doctrine case (1QS Two Spirits ↔ Gathic two spirits; even Shaked grants it), still Moderate (inferred direction; monotheist adaptation; periodized-ages component late/H-d). Dual-coding: two-spirits core Zoro H-a→H-e, periodized-ages H-d; Jewish H-a. Pending review/validation.|
 |0.2|2026-07-21|Draft|**Sub-Question Answers section added (INV-0011 §1 / acceptance criterion #2), Specialist pass (ROLE-0002).** (i) dating — split answer, components kept apart: yes-by-reconstruction for the Gathic two-spirits core (H-a presence, H-e absolute), no for the periodized-ages component (Pahlavi H-d, post-Daniel); (ii) contact pathway — No doctrine-specific channel, inherits CLM-0057 (explicit negative, especially load-bearing for the strongest parallel); (iii) independent development — **newly authored steelman** (thinnest prior coverage): internal monotheist development built at full strength (Deut 30:15–19 two-ways; Isaiah 45:7's monotheist absorption of the light/darkness polarity; sectarian polarization; 1QS dualism's created/subordinated shape), with its residual failure on 1QS III–IV's specific apportioning architecture stated — influence survives as selective adaptation at Moderate. Items (i)–(ii) restructure existing analysis; (iii) authored from the existing source base (SRC-0067…SRC-0076) plus inner-biblical primary texts already used as Jewish-side common ground. No evidence class added, no confidence level changed (Level 3 unchanged). Verification: inherited from the v0.2-cycle source disclosures and Critical Review re-verification; the two inner-biblical citations (Deut 30:15–19; Isa 45:7) are standard primary-text common ground, not new source claims. Pending ROLE-0004 review.|
+|0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.2a|2026-07-21|Draft|**Remediated per ROLE-0004 sub-question review, flag F-A (determinate).** Isaiah 45:7 in item (iii) now carries an explicit disclosure: newly introduced at v0.2 as illustrative primary-text material (outside the ten source records and the v0.1 claims), with the "generate and control this polarity internally" reading labeled as this record's own inference, anchored to the SRC-0067/SRC-0070 monotheist-reshaping point. The v0.2 row's "standard primary-text common ground" assertion above is corrected by this disclosure for the Isaiah citation (the row itself unaltered, per CON-0003 §9.4); it remains accurate for Deuteronomy 30:15–19 (already cited in v0.1). No evidence class added, no confidence change (Level 3 unchanged).|
 
 # End CLM-0053

@@ -1,7 +1,7 @@
 ---
 title: CLM-0057 - The Contact Pathway
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -34,6 +34,12 @@ relationships:
     target: FND-0011
   - type: part_of
     target: INV-0011
+confidence:
+  - component: overall
+    level: 3
+    label: Moderate
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0057
@@ -127,5 +133,6 @@ The contact context is the strongest-evidenced element on the Persian side of th
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0011. Level 3 (Moderate): Persian-period contact firmly attested (H-a/H-b administrative/material record) = plausible opportunity; no documented doctrinal-transmission channel = not proof. Opportunity (would be L4) vs documented channel (would be L1) resolved to an honest Moderate resultant. Pending review/validation.|
+|0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0057

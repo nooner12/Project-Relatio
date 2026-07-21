@@ -1,7 +1,7 @@
 ---
 title: CLM-0078 - The Kingdom of God Proclamation
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -37,6 +37,12 @@ relationships:
     target: FND-0014
   - type: part_of
     target: INV-0014
+confidence:
+  - component: overall
+    level: 3
+    label: Moderate
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0078
@@ -147,5 +153,6 @@ Type: **Historical.**
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-20|Draft|Created for RQ-0014. Level 3 (Moderate) — kingdom-of-God centrality + Galilean itinerant frame; theme-level multiple attestation at its broadest, dissimilarity asymmetry (church confessed Christ, wrote kingdom), bounded by the Gospel-strata layer (CLM-0069) with the CLM-0070 Q-uncertainty carried; §9 consensus surplus recorded. Elements (a)/(b)/(c) discrete; retrojection rival steelmanned. Pending review/validation.|
+|0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0078

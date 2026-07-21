@@ -1,7 +1,7 @@
 ---
 title: CLM-0059 - Growth and Adaptive Foraging
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -31,6 +31,12 @@ relationships:
     target: FND-0012
   - type: part_of
     target: INV-0012
+confidence:
+  - component: overall
+    level: 4
+    label: High
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0059
@@ -111,6 +117,7 @@ Both anchors are deflationary/mechanistic in register (no cognition hype), which
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0012. Level 4 (High): hyphal-tip growth + adaptive foraging (reallocation, cord reinforcement/regression), well-replicated and uncontested; "adaptive" capped at behavioral, no cognition asserted. Pending review/validation.|
+|0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.1a|2026-07-19|Draft|**Remediated per Critical Review – RQ-0012 F-3.** Independence sub-score **lowered 4 → 3**: both anchor sources (SRC-0077, SRC-0078) share Boddy as a (co-)author, so they are not fully independent programs for this claim's cited sources. **Level 4 (High) confidence unchanged** — the phenomenon is replicated well beyond these two records. No confidence level raised.|
 
 # End CLM-0059

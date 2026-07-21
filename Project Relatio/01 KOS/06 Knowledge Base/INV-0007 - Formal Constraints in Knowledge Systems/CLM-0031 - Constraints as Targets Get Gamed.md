@@ -1,7 +1,7 @@
 ---
 title: CLM-0031 - Constraints as Targets Get Gamed
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-12
@@ -31,6 +31,12 @@ relationships:
     target: FND-0007
   - type: part_of
     target: INV-0007
+confidence:
+  - component: overall
+    level: 3
+    label: Moderate
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0031
@@ -122,5 +128,6 @@ SRC-0040: high authority, high transparency, academic. Campbell's Law formulatio
 |---|---|---|---|
 |0.1|2026-07-12|Draft|Created for RQ-0007. Campbell's Law formulation verified this session; Merton goal-displacement companion invoked not catalogued. Level 3 — robust directional tendency, illustrative anchor, stakes-dependent boundary condition.|
 |0.2|2026-07-12|Draft|Post-review remediation (Critical Review - RQ-0007, #6): catalogued Merton 1940 (SRC-0043) as the goal-displacement anchor (previously an uncatalogued invocation); noted Campbell and Merton are complementary halves, not independent confirmation, so Independence 3 holds. #9: de-asserted the prose-only `related_to CLM-0030`. Title shortened (STD-0001 §10). No confidence change — remains Level 3.|
+|0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0031

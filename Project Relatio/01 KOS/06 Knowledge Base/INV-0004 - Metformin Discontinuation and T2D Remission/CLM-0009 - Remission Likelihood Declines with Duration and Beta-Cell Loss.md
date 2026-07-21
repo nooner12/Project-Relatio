@@ -1,7 +1,7 @@
 ---
 title: CLM-0009 - Remission Likelihood Declines with Duration and Beta-Cell Loss
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -36,6 +36,12 @@ relationships:
     target: FND-0004
   - type: part_of
     target: INV-0004
+confidence:
+  - component: overall
+    level: 3
+    label: Moderate
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0009
@@ -127,6 +133,7 @@ SRC-0007 (mechanism, high authority, single-programme dependence); SRC-0006 (hig
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-10|Draft|Created for RQ-0004. Deliberately graded Level 3; DiRECT within-trial null preserved as countervailing evidence.|
+|0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 ---
 

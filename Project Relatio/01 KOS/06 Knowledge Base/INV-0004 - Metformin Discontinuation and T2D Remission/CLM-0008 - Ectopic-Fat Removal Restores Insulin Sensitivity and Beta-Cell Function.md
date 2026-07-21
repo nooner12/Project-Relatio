@@ -1,7 +1,7 @@
 ---
 title: CLM-0008 - Ectopic-Fat Removal Restores Insulin Sensitivity and Beta-Cell Function
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -33,6 +33,12 @@ relationships:
     target: FND-0004
   - type: part_of
     target: INV-0004
+confidence:
+  - component: overall
+    level: 4
+    label: High
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0008
@@ -121,6 +127,7 @@ SRC-0007: high authority peer-reviewed physiology; main weakness is dependence o
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-10|Draft|Created for RQ-0004.|
+|0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 ---
 

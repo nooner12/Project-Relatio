@@ -1,7 +1,7 @@
 ---
 title: CLM-0044 - Depression Onset-Timing Divergence
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-15
@@ -34,6 +34,12 @@ relationships:
     target: FND-0010
   - type: part_of
     target: INV-0010
+confidence:
+  - component: overall
+    level: 4
+    label: High
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0044
@@ -125,6 +131,7 @@ SRC-0059 is a flagship, high-authority, high-independence meta-analysis. Its one
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-15|Draft|Created for RQ-0010. Level 4 (High) that the depression category ratio diverges to female-preponderant ~ages 12–13 (SRC-0059). Construct-provenance `CONFLATED`: timing claim only, biological-sex attribution explicitly withheld per operative rule. Magnitude/superlative and reporting-artifact risks named.|
+|0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.1a|2026-07-15|Draft|Structural validation (ROLE-0001): added the reciprocal `contrasts_with` CLM-0046 edge (frontmatter + related_documents + §Relationships). CLM-0046 already declared `contrasts_with` CLM-0044; graph_integrity flagged the missing side. No claim content, confidence level, or construct-provenance code changed.|
 
 # End CLM-0044

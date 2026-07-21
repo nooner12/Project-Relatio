@@ -1,7 +1,7 @@
 ---
 title: CLM-0058 - Nazarene Inheritance from Second Temple Apocalypticism
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -28,6 +28,12 @@ relationships:
     target: FND-0011
   - type: part_of
     target: INV-0011
+confidence:
+  - component: overall
+    level: 4
+    label: High
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0058
@@ -118,5 +124,6 @@ This claim rests on the best-attested, least-contested evidence in the investiga
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0011. Level 4 (High): the Nazarenes inherited a thoroughly apocalyptic frame from Second Temple Judaism (H-a on both ends of this link). Firewalled from the contested upstream Persia→Judaism verdicts; no Persia→Christianity and no theological claim. Pending review/validation.|
+|0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0058

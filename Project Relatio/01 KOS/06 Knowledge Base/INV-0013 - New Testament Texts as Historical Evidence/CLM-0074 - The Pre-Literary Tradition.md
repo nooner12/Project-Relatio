@@ -1,7 +1,7 @@
 ---
 title: CLM-0074 - The Pre-Literary Tradition
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -35,6 +35,12 @@ relationships:
     target: FND-0013
   - type: part_of
     target: INV-0013
+confidence:
+  - component: overall
+    level: 4
+    label: High
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0074
@@ -125,5 +131,6 @@ The decisive move is the cross-confessional convergence: a non-Christian scholar
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0013. Level 4 (High) for the DESCRIPTIVE claim (embedded tradition; resurrection proclaimed early, c. 30s, via the 1 Cor 15:3-7 creed); H-band H-a (embedded in H-a Paul). Resurrection AS EVENT strictly bracketed (KOS-0003 §3.6) — not graded. Cross-confessional convergence (Lüdemann non-Christian dates proclamation early). Axis note: COLLINEAR (H-a → High) for the descriptive claim. Apologetic and mythicist poles both steelmanned. Pending review/validation.|
+|0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0074

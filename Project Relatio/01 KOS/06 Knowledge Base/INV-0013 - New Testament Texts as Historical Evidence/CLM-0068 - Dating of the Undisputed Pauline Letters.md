@@ -1,7 +1,7 @@
 ---
 title: CLM-0068 - Dating of the Undisputed Pauline Letters
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -34,6 +34,12 @@ relationships:
     target: FND-0013
   - type: part_of
     target: INV-0013
+confidence:
+  - component: overall
+    level: 4
+    label: High
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0068
@@ -123,5 +129,6 @@ The primary texts (SRC-0103) supply the internal evidence; Sanders (SRC-0097) an
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0013. Level 4 (High); H-band H-a (contemporaneous primary text) — the strongest band in the investigation. Gallio synchronism anchors the 50s. Axis note: COLLINEAR (best evidence-kind H-a → High confidence) — the model collinear datapoint. Pending review/validation.|
+|0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0068

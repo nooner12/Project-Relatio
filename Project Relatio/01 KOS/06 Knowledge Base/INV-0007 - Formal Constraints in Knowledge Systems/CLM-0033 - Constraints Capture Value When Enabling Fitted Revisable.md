@@ -1,7 +1,7 @@
 ---
 title: CLM-0033 - Constraints Capture Value When Enabling Fitted Revisable
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-12
@@ -40,6 +40,12 @@ relationships:
     target: FND-0007
   - type: part_of
     target: INV-0007
+confidence:
+  - component: overall
+    level: 3
+    label: Moderate
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0033
@@ -134,5 +140,6 @@ SRC-0035, SRC-0042, SRC-0038 all high authority, transparent, academic. Ostrom's
 |---|---|---|---|
 |0.1|2026-07-12|Draft|Created for RQ-0007. Cross-literature synthesis of Adler & Borys, Ostrom, and Szollosi. Level 3 — interpretive cross-domain synthesis (Level 5 reserved); analogical transfer to knowledge systems flagged as the key limitation; motivated-reasoning convenience named and guarded.|
 |0.2|2026-07-12|Draft|Post-review remediation (Critical Review - RQ-0007). #3: catalogued a verified adversarial anchor (SRC-0045 Timmermans & Epstein 2010) for the "rigidity sometimes wins" steelman (previously uncatalogued), added to Evidence/Alternatives/relationships; **Independence lowered 4 → 3** (convergence is abstraction-level, not phenomena-level). #1: aligned Alternative 2 with FND-0007 §5 — the reflexive self-flattering reading cannot be certified by the same-model circuit. Title shortened (STD-0001 §10). Confidence unchanged — remains Level 3 (the level never rested on Independence 4).|
+|0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0033

@@ -1,7 +1,7 @@
 ---
 title: CLM-0019 - The Intention-Behaviour Gap Is the Central Point of Failure
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-11
@@ -30,6 +30,12 @@ relationships:
     target: FND-0006
   - type: part_of
     target: INV-0006
+confidence:
+  - component: overall
+    level: 4
+    label: High
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0019
@@ -118,5 +124,6 @@ SRC-0025: high authority, academic, transparent about its small primary-study po
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created for RQ-0006. Directional gap finding verified this session; exact intender-failure % flagged as variably restated and reported as "approximately half."|
 |0.2|2026-07-11|Draft|Remediation pass (Critical Review remediation #2): softened the non-intender "~97–98% correspondence" figure to "the large majority remained inactive." The precise figure could not be confirmed to the paywalled full text; abstract reconstruction (≈2% active non-intenders) implies ~91%, so precision removed per KOS-0003 §12.1. Reconciled identically in ENT-0004 and SRC-0025.|
+|0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0019

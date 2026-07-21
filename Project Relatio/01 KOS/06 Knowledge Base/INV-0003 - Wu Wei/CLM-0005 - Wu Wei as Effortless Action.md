@@ -1,7 +1,7 @@
 ---
 title: CLM-0005 - Wu Wei as Effortless Action
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-09
@@ -34,6 +34,12 @@ relationships:
     target: CLM-0006
   - type: part_of
     target: INV-0003
+confidence:
+  - component: overall
+    level: 4
+    label: High
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0005
@@ -129,6 +135,7 @@ Type: **Historical/textual** + **philosophical** (scholarship).
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-09|Draft|Created for RQ-0003|
+|0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 ---
 

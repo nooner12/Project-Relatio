@@ -1,7 +1,7 @@
 ---
 title: CLM-0075 - Existence of Jesus as a Historical Figure
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -37,6 +37,12 @@ relationships:
     target: FND-0014
   - type: part_of
     target: INV-0014
+confidence:
+  - component: overall
+    level: 4
+    label: High
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0075
@@ -148,5 +154,6 @@ Type: **Historical.**
 |---|---|---|---|
 |0.2|2026-07-20|Draft|**Remediated per Critical Review – RQ-0014 F-2.** Element (c)(iii) re-targeted to Carrier's actual, strongest form of the *Ant.* 20.200 argument — he grants textual security; the real argument is the accidental "called Christ" gloss + Jesus-ben-Damneus referent — and rebuts that form (back-reference presupposition; compounded auxiliary hypotheses; majority Josephan-specialist position). The previously rebutted "Christian interpolation" form was weaker than the rival's best. **Level 4 (High) unchanged** (the reviewer confirmed the grade; the stronger rival form was already survivable). No other section touched.|
 |0.1|2026-07-20|Draft|Created for RQ-0014. Level 4 (High) — existence only; load-bearing layer the undisputed Pauline letters + pre-literary creed (CLM-0068/CLM-0074, both L4, inherited); external notices corroborative (CLM-0073, L3). Elements (a)/(b)/(c) in discrete sections; mythicist rival steelmanned via SRC-0101. Pending review/validation.|
+|0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0075

@@ -1,7 +1,7 @@
 ---
 title: CLM-0056 - The Dating Problem Is Load-Bearing
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -35,6 +35,12 @@ relationships:
     target: FND-0011
   - type: part_of
     target: INV-0011
+confidence:
+  - component: overall
+    level: 4
+    label: High
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0056
@@ -125,5 +131,6 @@ The dating/transmission sources (SRC-0073, SRC-0074) are technical and independe
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0011. Level 4 (High): the H-e/H-d (Zoroastrian early dating) vs H-a (Jewish attestation) asymmetry is the load-bearing constraint capping every influence claim. Faithful-transmission maximalism steelmanned (keeps antiquity live) but does not dissolve the asymmetry. Pending review/validation.|
+|0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0056

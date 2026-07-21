@@ -1,7 +1,7 @@
 ---
 title: CLM-0011 - Discontinuation Must Be Supervised and Remission Can Relapse
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -34,6 +34,12 @@ relationships:
     target: FND-0004
   - type: part_of
     target: INV-0004
+confidence:
+  - component: overall
+    level: 4
+    label: High
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0011
@@ -123,6 +129,7 @@ SRC-0010: highest-authority definitional consensus. SRC-0006: high-authority RCT
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-10|Draft|Created for RQ-0004. Safety-anchoring claim.|
+|0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 ---
 

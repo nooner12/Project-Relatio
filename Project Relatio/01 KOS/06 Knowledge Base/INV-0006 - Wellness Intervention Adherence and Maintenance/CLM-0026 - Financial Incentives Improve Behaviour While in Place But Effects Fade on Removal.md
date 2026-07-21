@@ -1,7 +1,7 @@
 ---
 title: CLM-0026 - Financial Incentives Improve Behaviour While in Place But Effects Fade on Removal
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-11
@@ -30,6 +30,12 @@ relationships:
     target: CLM-0020
   - type: part_of
     target: INV-0006
+confidence:
+  - component: overall
+    level: 4
+    label: High
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0026
@@ -119,5 +125,6 @@ SRC-0031: high authority, transparent, public-health oriented; all cited ORs (1.
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created for RQ-0006. ORs and "not sustained / no new habits" conclusion verified via PMC-4728181 full text. Framed as an instructive non-durability contrast to autonomous motivation.|
 |0.2|2026-07-21|Draft|**Renamed** per STD-0001 §8 (Path Length Constraint), owner approval 2026-07-21. This record was one of four whose absolute path exceeded the Windows `MAX_PATH` limit of 260 characters, making it invisible to naive scanners; the descriptive title was shortened to bring the relative path within the §8 budget of 180 characters. **Filename and `title:` shortened, body H1 heading matched; no claim statement, evidence, evidence evaluation, consensus, confidence grading, or relationship changed.** Graph references updated in the same commit so no reference is left dangling.|
+|0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0026

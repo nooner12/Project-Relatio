@@ -1,7 +1,7 @@
 ---
 title: CLM-0067 - Textual Transmission and Manuscript Attestation
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -34,6 +34,12 @@ relationships:
     target: FND-0013
   - type: part_of
     target: INV-0013
+confidence:
+  - component: overall
+    level: 4
+    label: High
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0067
@@ -123,5 +129,6 @@ SRC-0091 (Metzger & Ehrman) spans the establishment and skeptical poles, checkin
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0013. Level 4 (High); H-band H-b (material) on H-a documents, autograph-reconstruction H-e. Recoverability not inerrancy; calibrated middle; P52 date widened (SRC-0092). Axis note: largely COLLINEAR (rich H-b evidence → High), with the bounded-uncertainty nuance keeping it off Level 5. Pending review/validation.|
+|0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0067

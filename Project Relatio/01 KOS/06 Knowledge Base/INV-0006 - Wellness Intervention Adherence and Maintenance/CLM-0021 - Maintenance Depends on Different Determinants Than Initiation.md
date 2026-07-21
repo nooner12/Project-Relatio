@@ -1,7 +1,7 @@
 ---
 title: CLM-0021 - Maintenance Depends on Different Determinants Than Initiation
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-11
@@ -31,6 +31,12 @@ relationships:
     target: FND-0006
   - type: part_of
     target: INV-0006
+confidence:
+  - component: overall
+    level: 3
+    label: Moderate
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0021
@@ -118,5 +124,6 @@ SRC-0024: high authority, transparent systematic review, non-commercial. Its fiv
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created for RQ-0006. Five-domain maintenance framework verified via Kwasnicka 2016 abstract. Graded Moderate: theory synthesis, not quantified outcomes.|
+|0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0021

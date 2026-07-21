@@ -1,7 +1,7 @@
 ---
 title: CLM-0060 - Resource Transport
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -34,6 +34,12 @@ relationships:
     target: FND-0012
   - type: part_of
     target: INV-0012
+confidence:
+  - component: overall
+    level: 4
+    label: High
+reliance_tier: R0
+reliance_note: "unassessed floor; predates verification-pass procedure."
 ---
 
 # CLM-0060
@@ -114,5 +120,6 @@ The transport datum is agreed across poles — even Karst et al. (SRC-0084), the
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0012. Level 4 (High): bidirectional, source–sink-regulated translocation through reinforced cords; datum agreed across poles. Firewalled from the contested inter-plant transfer (CLM-0063). Pending review/validation.|
+|0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 
 # End CLM-0060
