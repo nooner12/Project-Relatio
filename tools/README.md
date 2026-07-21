@@ -142,6 +142,59 @@ inputs through the pure `detect()` core to prove every trigger fires with its co
 (and that the near-miss cases — a future review_date, an upstream change *predating*
 last_reviewed — do not).
 
+## build_view.py — the vault visualizer (regenerating snapshot)
+
+```
+python build_view.py        # regenerate ../views/relatio-view.html
+```
+
+**Read-only. Frontmatter-only.** Reads the YAML frontmatter of every Knowledge Base
+object (INV/CLM/SRC/ENT/FND) and emits ONE self-contained interactive HTML file,
+`views/relatio-view.html` (a new top-level directory beside `tools/`). It NEVER parses
+body prose for a datum, NEVER writes to any record, and adds NO new fields. Where a
+datum is absent from frontmatter the node says so ("not fielded") — it is never inferred.
+
+The file is **self-contained** (all CSS/JS inline, no external/CDN dependencies — it
+renders from a double-click, offline) and **committed**, so it is viewable/shareable
+directly from the public repo. It carries a **generated-from header** (git short hash +
+generation date) so a stale copy identifies itself. Output is **deterministic** (every
+list id-sorted); only the header hash/date vary, so regeneration diffs are meaningful.
+
+**The reliance gate is load-bearing and MUST NOT be removed from the generator.** A
+standing banner ("Findings not cleared for external reliance — reliance tiers shown per
+node") sits atop the artifact; an R0/R1/R2 badge is on **every** CLM/FND node; each
+badge's detail carries the `reliance_note` and what promotion would require (R1:
+retrieval verification per ADR-GOV-0006; R2: an independent channel); reference chips to
+a CLM/FND carry a reliance mini-badge. No view, filter, or search path strips it. The
+self-check in `main()` fails the run if the reliance-badge count ≠ the CLM/FND count.
+
+Structure — the tree spine is INV → its `part_of` claims/findings/sources → each
+claim/finding's `derived_from` targets (rendered as reference chips). Every object is a
+canonical node **exactly once** (node count == KB object count); derivation and the
+cross-edges (`contrasts_with` / `depends_on` / `supports` / `related_to`, beyond the
+spine) are chips/badges pointing at those canonical nodes, never duplicate full nodes.
+Sources attach to an INV by `part_of`, or by the sole INV in their relationships/
+`related_documents` when exactly one is referenced (no cross-investigation ambiguity
+exists in the vault); sources with no INV signal, and the KB-shared **entities**, render
+in a "Shared & Cross-Investigation" group. A split-`confidence` record renders every
+component separately (never merged or averaged); a past-due `review_date` gets a visual
+marker, making the view a second review-queue surface. A search box filters by identifier
+or title and expands matches.
+
+**Closure state is NOT prose-parsed (a deliberate limitation).** An investigation's
+closed/open state lives in its banner + history row (prose), not in frontmatter — and
+closed INVs keep `status: Draft` by design. So INV nodes are labelled by their honest
+frontmatter `status` / `operational_status` only; the view does not claim to show which
+investigations are "closed."
+
+`views/` sits **outside the KOS numbering and lifecycle** — it is a generated artifact,
+same category as CLAUDE.md, not a Knowledge Object. **Never hand-edit the output;
+regenerate it.** The validators ignore it (it lives outside the vault dir and holds no
+markdown). `tests/test_build_view.py` drives fixtures through the real parse+render path
+to prove split/single confidence, cross-edges, the past-due marker, the reliance badge on
+every leaf, the banner, version-as-literal-text, determinism, and — against the live
+vault — that the deepest-path record is read and rendered (the STD-0001 §8 check).
+
 ## tests/ — detection tests
 
 ```
