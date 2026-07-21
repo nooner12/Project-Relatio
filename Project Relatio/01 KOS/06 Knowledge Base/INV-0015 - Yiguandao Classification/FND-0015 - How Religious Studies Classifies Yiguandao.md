@@ -1,7 +1,7 @@
 ---
 title: FND-0015 - How Religious Studies Classifies Yiguandao
 document_type: Finding Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -40,6 +40,27 @@ relationships:
     target: CLM-0086
   - type: part_of
     target: INV-0015
+confidence:
+  - component: placement_census
+    level: 3
+    label: Moderate
+  - component: formation_composition_premises
+    level: 3
+    label: Moderate
+  - component: strands_not_membership
+    level: 3
+    label: Moderate
+  - component: read_self_understanding
+    level: 3
+    label: Moderate
+  - component: criteria_mechanics
+    level: 2
+    label: Low
+  - component: placement_dissent_negative
+    level: 2
+    label: Low
+reliance_tier: R0
+reliance_note: "verification-light review; not cleared for external reliance."
 ---
 
 # FND-0015
@@ -84,5 +105,6 @@ relationships:
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-20|Draft|Created for RQ-0015. Layered verdict: placement + consensus Moderate (near-unanimous, family-consistent labels, no located Daoist-school classification); criteria-mechanics and placement-dissent negative Low (paywalled / search-bounded — thin-base authorization honored); Daoist elements as strands Moderate; read self-understanding Moderate, register-divergent rather than proposition-colliding with the classification; no Level 4 anywhere (verification-light); not cleared for external reliance. Pending review/validation.|
+|0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 # End FND-0015

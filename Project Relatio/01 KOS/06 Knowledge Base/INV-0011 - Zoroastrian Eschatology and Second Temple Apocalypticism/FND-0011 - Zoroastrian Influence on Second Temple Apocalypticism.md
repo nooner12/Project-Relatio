@@ -1,7 +1,7 @@
 ---
 title: FND-0011 - Zoroastrian Influence on Second Temple Apocalypticism
 document_type: Finding Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -47,6 +47,18 @@ relationships:
     target: CLM-0058
   - type: part_of
     target: INV-0011
+confidence:
+  - component: influence_dualism_judgment
+    level: 3
+    label: Moderate
+  - component: influence_resurrection_angelology_savior
+    level: 2
+    label: Low
+  - component: scaffolding_dating_nazarene_inheritance
+    level: 4
+    label: High
+reliance_tier: R0
+reliance_note: "verification-light review; not cleared for external reliance."
 ---
 
 # FND-0011
@@ -128,5 +140,6 @@ relationships:
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0011. Split verdict at honest confidence: dualism/judgment/resurrection Moderate (best-supported cluster), angelology/savior Low; no doctrine "established," all capped by the CLM-0056 evidence-class asymmetry (H-e/H-d Zoroastrian dating vs H-a Jewish attestation). Contact = opportunity not proof (CLM-0057). Nazarene inheritance (CLM-0058) firm and firewalled from the upstream links; no Persia→Christianity, no theological claim. Native Level 2–4; no Level 5; no magnitude ranking. Verification moderate-to-strong; not cleared for external reliance (§7.5). Pending ROLE-0004 review and ROLE-0001 validation.|
 |0.2|2026-07-19|Draft|**Remediated per Critical Review – RQ-0011 (CONFORMANT WITH FLAGS).** F-1: **resurrection (CLM-0051) lowered Level 3 → Level 2 (Low)** — it is the only doctrine weak on both load-bearing axes at once (reconstruction-only/post-Daniel priority *and* Divided consensus; pro-influence case reduces largely to Boyce). Recast out of the "best-supported cluster": Moderate cluster is now **dualism + judgment only**; **resurrection joins angelology + savior at Low**. Updated title, §1 statement, §2 supporting-claims line, and §3 confidence accordingly. No confidence level raised anywhere. Firewall and scale discipline intact. Still pending ROLE-0001 structural validation.|
+|0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 # End FND-0011

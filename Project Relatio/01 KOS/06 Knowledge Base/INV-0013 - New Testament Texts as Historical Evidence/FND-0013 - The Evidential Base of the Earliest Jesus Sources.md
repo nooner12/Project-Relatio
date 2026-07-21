@@ -1,7 +1,7 @@
 ---
 title: FND-0013 - The Evidential Base of the Earliest Jesus Sources
 document_type: Finding Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -46,6 +46,18 @@ relationships:
     target: CLM-0074
   - type: part_of
     target: INV-0013
+confidence:
+  - component: anchors
+    level: 4
+    label: High
+  - component: reconstructed_layers
+    level: 3
+    label: Moderate
+  - component: weakly_evidenced_layers
+    level: 2
+    label: Low
+reliance_tier: R0
+reliance_note: "verification-light review; not cleared for external reliance."
 ---
 
 # FND-0013
@@ -129,5 +141,6 @@ relationships:
 |---|---|---|---|
 |0.2|2026-07-19|Draft|**Consistency edit propagating Critical Review – RQ-0013 F-1 (FND ruled Conformant; no grade change).** §1 CLM-0071 line: "the mirror showcase" (a divergence framing) softened to the corrected read — the band does *diagnostic* work under a *collinear* pattern (band tracks confidence), not a band-vs-confidence divergence; pointer added to INV-0013 §4.2 as corrected. No confidence Level changed; layered verdict and all eight supporting Levels intact.|
 |0.1|2026-07-19|Draft|Created for RQ-0013. Layered verdict: anchors High (wording recoverability; undisputed Pauline dating; early creedal proclamation; Markan priority; Gospel anonymity; the seven undisputed Paulines), reconstructed layers Moderate (precise Gospel dating; external attestation; Pastorals), weakly-evidenced layers Low (traditional Gospel authorship; Q; disputed Paulines). No single undifferentiated verdict; confidence by attestation layer. Metaphysics bracketed (resurrection as event not graded); mythicist and maximalist poles both steelmanned. Native Level 2–4; no Level 5; no ★; no magnitude ranking. Verification moderate-to-strong; not cleared for external reliance (§7.5). Pending ROLE-0004 review and ROLE-0001 validation.|
+|0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 # End FND-0013

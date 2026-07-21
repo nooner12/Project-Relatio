@@ -1,7 +1,7 @@
 ---
 title: FND-0014 - What the Historical Record Supports About Jesus of Nazareth
 document_type: Finding Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -39,6 +39,18 @@ relationships:
     target: CLM-0080
   - type: part_of
     target: INV-0014
+confidence:
+  - component: core_existence_crucifixion
+    level: 4
+    label: High
+  - component: reconstructed_gospel_strata
+    level: 3
+    label: Moderate
+  - component: item_level_teaching_authenticity
+    level: 2
+    label: Low
+reliance_tier: R0
+reliance_note: "verification-light review; not cleared for external reliance."
 ---
 
 # FND-0014
@@ -118,5 +130,6 @@ relationships:
 |---|---|---|---|
 |0.2|2026-07-20|Draft|**Remediated per Critical Review – RQ-0014 F-1 (path (a)).** §1 "both poles" paragraph now genuinely steelmans the maximalist pole in both its strongest contemporary forms — Gerhardsson (transmission; already engaged at CLM-0079) and the Bauckham eyewitness-testimony thesis (source-quality; newly engaged in prose as a named rival position, disclosed as not catalogued) — and shows the latter fails *structurally* against the §3.1 layer-consumption discipline (it is an argument about the INV-0013 layer grades, which this investigation consumes as settled; the revision route is a re-opened source-criticism investigation, not an uplift here). CLM-0075's F-2 pointer updated in the same paragraph. **No grade changed.**|
 |0.1|2026-07-20|Draft|Created for RQ-0014. Layered verdict: core (existence, crucifixion-fact) Level 4 on the contemporary Pauline layer; ministry profile (Pilate frame, baptism, kingdom-proclamation, exorcist-healer repute) Level 3 on the reconstructed Gospel/external layers with three §9 consensus-surpluses recorded; teaching split — characteristic voice Level 3, specific wording Level 2 (invention rival wins item level, recorded). No Level 5; both poles steelmanned and refused; metaphysics bracketed both directions throughout. Verification moderate; not cleared for external reliance (§7.5). Pending ROLE-0004 review and ROLE-0001 validation.|
+|0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 
 # End FND-0014
