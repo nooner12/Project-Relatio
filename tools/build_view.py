@@ -3,11 +3,28 @@
 build_view.py — the Relatio vault visualizer (regenerating snapshot).
 
 READ-ONLY. FRONTMATTER-ONLY. Reads the YAML frontmatter of every Knowledge Base
-object (INV/CLM/SRC/ENT/FND) and emits ONE self-contained interactive HTML file
-(`views/relatio-view.html`) — no external network dependencies, no build step,
-renders from a double-click. It NEVER parses body prose for data, NEVER writes to
-any record, and adds NO new fields. Where a datum is absent from frontmatter the
-node says so honestly ("not fielded"); it is never inferred from prose.
+object (INV/CLM/SRC/ENT/FND) and emits TWO self-contained interactive HTML files
+— no external network dependencies, no build step, both render from a
+double-click. It NEVER parses body prose for data, NEVER writes to any record,
+and adds NO new fields. Where a datum is absent from frontmatter the node says
+so honestly ("not fielded"); it is never inferred from prose.
+
+The two outputs share ONE parse (collect_objects / object_from_text) and have
+separate emitters:
+
+  * `views/relatio-view.html` — the whole-vault tree view (build_html).
+  * `views/relatio-timeline.html` — the world-religions timeline view
+    (build_timeline_html; ADR-GOV-0009). PATH A layout — honesty over false
+    precision: `display_range` strings render AS-AUTHORED (verbatim), never
+    parsed into numeric years; ordering is a best-effort coarse era reading
+    used for SEQUENCE ONLY (root-first lineage layout, no pixel-proportional
+    time axis — a proportional axis is a named future refinement requiring
+    structured date fields and must not be approximated). Each tradition shows
+    its `tradition_type`, its dating claims' confidence (components separate,
+    visually weighted by level), and its reliance badge; `branches_from` edges
+    render distinctly by qualifier (`disputed` explicitly marked uncertain);
+    the Zurvanism overturned-hypothesis note renders as presence (curated,
+    flagged as such — the outcome lives in prose, not frontmatter).
 
 What is READ (frontmatter only):
   title, document_type, version (literal text, not yaml -- the 1.10-as-float
@@ -243,6 +260,13 @@ def object_from_text(text):
         "last_reviewed": _date_str(meta.get("last_reviewed")) if prefix in LEAF_TYPES else None,
         "source_author": meta.get("source_author") if prefix == "SRC" else None,
         "publication_date": meta.get("publication_date") if prefix == "SRC" else None,
+        # Tradition-class entity fields (ADR-GOV-0009 / STD-0002 §11 v1.10).
+        # Read here so BOTH emitters share one parse; the tree emitter does not
+        # render them (its output is unchanged by their presence — regression-
+        # asserted in tests). display_range is verbatim text, render-only.
+        "tradition_type": meta.get("tradition_type") if prefix == "ENT" else None,
+        "dating_claims": _id_list(meta, "dating_claims") if prefix == "ENT" else [],
+        "display_range": meta.get("display_range") if prefix == "ENT" else None,
     }
 
 
@@ -762,6 +786,484 @@ def build_html(objects, git_hash, gen_date):
     )
 
 
+# ---------------------------------------------------------------------------
+# Timeline emitter (ADR-GOV-0009 — Path A: honesty over false precision)
+#
+# SECOND OUTPUT of the same parse. Renders tradition-class entities (ENT with
+# `tradition_type`) in a root-first lineage layout. display_range is VERBATIM —
+# never parsed into numeric years for display or positioning. The only reading
+# of the range text is a deliberately coarse era key used for SEQUENCE ONLY
+# (which card comes before which); a proportional numeric axis is a NAMED
+# FUTURE REFINEMENT requiring structured date fields, explicitly out of scope.
+# ---------------------------------------------------------------------------
+
+import re as _re
+
+# Qualifier -> (colour, border-style, glyph). Distinct by colour AND border
+# style AND printed label, so the distinction is never colour-only. Palette
+# deliberately away from both the confidence colours (greens/ambers/reds) and
+# the reliance blue-greys. `disputed` additionally carries the uncertainty
+# marking (dashed border + "?" glyph + an explicit uncertainty line).
+QUALIFIER_STYLE = {
+    "schism":             ("#7a3b5e", "solid",  "∥"),   # ∥ split
+    "reform":             ("#3b6e7a", "double", "↻"),   # ↻ renewal
+    "syncretic-descent":  ("#5e3b7a", "dotted", "⊕"),   # ⊕ fusion
+    "heterodox-offshoot": ("#7a5e3b", "dashed", "≠"),   # ≠ divergence
+    "disputed":           ("#6b6b66", "dashed", "?"),
+}
+
+QUALIFIER_MEANING = {
+    "schism": "a split within one tradition",
+    "reform": "a reform movement become its own tradition",
+    "syncretic-descent": "descent absorbing the parent among other sources",
+    "heterodox-offshoot": "a heterodox movement diverging from the parent",
+    "disputed": "descent itself contested — the uncertainty IS the finding",
+}
+
+# Curated notes (Path A honesty: an overturned hypothesis renders as PRESENCE,
+# not silence). The dissolution outcome lives in INV-0016's prose, not in any
+# frontmatter field, so this note is CURATED and flagged as such in the render;
+# only the confidence/reliance appended from the cited claim is field-derived.
+CURATED_NOTES = [
+    {
+        "heading": "Zurvanism — investigated, found NOT to warrant tradition status",
+        "body": (
+            "A hypothesized branch (Zurvanism) was investigated in INV-0016 and "
+            "found not to clear the §2.3 distinctness threshold: no attested "
+            "separate community, priesthood, or lineage. It is modelled as a "
+            "heterodox CURRENT within Zoroastrianism (ENT-0008) — no tradition "
+            "entity, no branches_from edge. The overturned hypothesis is a "
+            "feature of the record, not an omission."
+        ),
+        "cites": ["INV-0016", "CLM-0088"],
+        "field_claim": "CLM-0088",
+    },
+]
+
+_MILLENNIUM_RE = _re.compile(r"(\d+)(?:st|nd|rd|th)?[^0-9]*millenni", _re.I)
+_CENTURY_RE = _re.compile(r"(\d+)(?:st|nd|rd|th)?\s*c\b", _re.I)
+_NUMBER_RE = _re.compile(r"(\d+)")
+
+
+def _sequence_key(display_range):
+    """A coarse comparable era value for SEQUENCE ORDERING ONLY, or None.
+
+    Best-effort reading of an as-authored range string: era (BCE/CE) plus the
+    first millennium/century/number mention, collapsed to an approximate year
+    count. This value NEVER positions anything and NEVER renders — it only
+    decides which card precedes which. Unreadable ranges return None and fall
+    back to branch-structure grouping with a visible ambiguity note.
+    """
+    if not isinstance(display_range, str) or not display_range.strip():
+        return None
+    text = display_range
+    bce = _re.search(r"\bBCE\b", text) is not None
+    m = _MILLENNIUM_RE.search(text)
+    if m:
+        magnitude = int(m.group(1)) * 1000
+    else:
+        c = _CENTURY_RE.search(text)
+        if c:
+            magnitude = int(c.group(1)) * 100
+        else:
+            n = _NUMBER_RE.search(text)
+            if n:
+                magnitude = int(n.group(1))
+            else:
+                return None
+    return -magnitude if bce else magnitude
+
+
+def timeline_entries(objects):
+    """Tradition entities joined to their dating claims; plus graph errors.
+
+    Returns (entries, errors). Each entry: the ENT node, its branches_from
+    (target, qualifier) pairs, its resolved dating-claim nodes (confidence is
+    FOLLOWED to the claim, never re-derived), and its sequence key. A
+    dating_claims pointer that does not resolve to a Claim Record is a graph
+    error — reported, and rendered honestly as unresolved.
+    """
+    by_id = {o["id"]: o for o in objects}
+    errors = []
+    entries = []
+    for o in objects:
+        if o["type"] != "ENT" or not o.get("tradition_type"):
+            continue
+        claims = []
+        for cid in o.get("dating_claims", []):
+            c = by_id.get(cid)
+            if c is None or c["type"] != "CLM":
+                errors.append(
+                    f"{o['id']}: dating_claims pointer {cid} does not resolve "
+                    f"to a Claim Record (graph error)")
+                claims.append({"id": cid, "node": None})
+            else:
+                claims.append({"id": cid, "node": c})
+        branches = []
+        for rt, tgt in o["relationships"]:
+            if rt == "branches_from":
+                q = o.get("rel_qualifiers", {}).get((rt, tgt))
+                branches.append((tgt, q))
+        entries.append({
+            "node": o,
+            "claims": claims,
+            "branches": sorted(branches),
+            "seq": _sequence_key(o.get("display_range")),
+        })
+    entries.sort(key=lambda e: e["node"]["id"])
+    return entries, errors
+
+
+def _lineage_order(entries):
+    """Root-first lineage ordering; returns (ordered_entries, ambiguous_ids).
+
+    Roots (no branches_from) come first, then non-roots, each ordered by
+    sequence key (SEQUENCE ONLY) with the identifier as the deterministic
+    tie-break. An entry whose key is None, or which ties another entry's key,
+    is ordered by branch structure + identifier and flagged ambiguous (the
+    view notes it rather than implying a settled sequence).
+    """
+    roots = [e for e in entries if not e["branches"]]
+    branched = [e for e in entries if e["branches"]]
+
+    def sort_key(e):
+        seq = e["seq"]
+        return (0 if seq is not None else 1,
+                seq if seq is not None else 0,
+                e["node"]["id"])
+
+    roots.sort(key=sort_key)
+    branched.sort(key=sort_key)
+
+    ambiguous = set()
+    for group in (roots, branched):
+        seqs = {}
+        for e in group:
+            if e["seq"] is None:
+                ambiguous.add(e["node"]["id"])
+            else:
+                seqs.setdefault(e["seq"], []).append(e["node"]["id"])
+        for ids in seqs.values():
+            if len(ids) > 1:
+                ambiguous.update(ids)
+    return roots + branched, ambiguous
+
+
+def _tl_confidence(claim_entry):
+    """One dating claim's confidence, followed to the claim node.
+
+    Components render SEPARATELY (never merged/averaged); each level keeps its
+    colour badge, and weak grades (level <= 2) additionally get a non-colour
+    weight marking (`conf-weak`) so Low reads distinct from Moderate even in
+    grayscale — the visual-weight rule the brief makes load-bearing.
+    """
+    cid = claim_entry["id"]
+    c = claim_entry["node"]
+    if c is None:
+        return (f'<div class="tl-claim tl-claim-unresolved">dating claim '
+                f'{esc(cid)} — <span class="notfielded">pointer does not '
+                f'resolve (graph error)</span></div>')
+    rows = []
+    for comp in c["confidence"]:
+        level, label = comp["level"], comp["label"]
+        if level is None:
+            badge = '<span class="level-badge level-na" title="level not fielded">?</span>'
+            lbl = '<span class="notfielded">level not fielded</span>'
+            weak = ""
+        else:
+            color = LEVEL_COLOR.get(level, "#888")
+            badge = (f'<span class="level-badge" style="background:{color}" '
+                     f'title="confidence level {level}">{level}</span>')
+            lbl = esc(label if label else EPISTEMIC_LEVEL_LABELS.get(level, "?"))
+            weak = " conf-weak" if level <= 2 else ""
+        rows.append(
+            f'<div class="conf-row{weak}">{badge}'
+            f'<span class="conf-name">{esc(comp["component"])}</span>'
+            f'<span class="conf-label">{lbl}</span></div>')
+    conf = ("".join(rows) if rows
+            else '<div class="notfielded">confidence not fielded</div>')
+    return (f'<div class="tl-claim"><span class="tl-claim-id">dating: '
+            f'{esc(cid)}</span> <span class="tl-claim-title">{esc(c["title"])}'
+            f'</span><div class="conf-block">{conf}</div></div>')
+
+
+def _tl_reliance_badge(entry):
+    """The tradition node's load-bearing reliance badge (never omitted).
+
+    The tier is the FLOOR (weakest) across the entity's resolved dating
+    claims — the per-locus floor roll-up of STD-0008, followed to the claims,
+    never re-derived. Unresolvable -> an honest "R?" badge, still rendered and
+    still counted (the self-check counts `trad-reliance`, one per tradition).
+    """
+    tiers = [ce["node"]["reliance_tier"] for ce in entry["claims"]
+             if ce["node"] is not None and ce["node"]["reliance_tier"] in RELIANCE_COLOR]
+    if tiers:
+        tier = max(tiers, key=lambda t: -RELIANCE_TIER_RANK[t])
+        color = RELIANCE_COLOR[tier]
+        title = RELIANCE_MEANING.get(tier, "")
+        text = tier
+    else:
+        tier, color, title, text = None, "#888", "reliance tier not resolvable from dating claims", "R?"
+    return (f'<span class="reliance-badge trad-reliance" style="background:{color}" '
+            f'title="{esc(title)}">{esc(text)}</span>')
+
+
+# Rank for the floor roll-up: R0 weakest.
+RELIANCE_TIER_RANK = {"R0": 0, "R1": 1, "R2": 2}
+
+
+def _tl_edge(entry, by_id):
+    """The inbound branches_from edge(s), rendered distinctly by qualifier."""
+    if not entry["branches"]:
+        return ('<div class="tl-edge tl-root-marker">family root — no '
+                'branches_from edge</div>')
+    parts = []
+    for tgt, qual in entry["branches"]:
+        parent = by_id.get(tgt)
+        pname = parent["title"] if parent else tgt
+        color, border, glyph = QUALIFIER_STYLE.get(
+            qual, ("#888", "solid", "→"))
+        qual_txt = qual if qual else "qualifier missing"
+        qcls = f" qual-{qual}" if qual in QUALIFIER_STYLE else " qual-unknown"
+        uncertainty = ""
+        if qual == "disputed":
+            uncertainty = ('<div class="tl-disputed-note">descent disputed — '
+                           'the uncertainty is the finding, not a rendering '
+                           'artifact</div>')
+        parts.append(
+            f'<div class="tl-edge{qcls}" style="border-left:3px {border} {color}">'
+            f'<span class="tl-edge-glyph" style="color:{color}">{glyph}</span> '
+            f'branches_from <a class="tl-edge-target" href="#tl-{esc(tgt)}">'
+            f'{esc(tgt)}</a> {esc(pname)} '
+            f'<span class="tl-qual" style="background:{color}">{esc(qual_txt)}</span>'
+            f'{uncertainty}</div>')
+    return "".join(parts)
+
+
+def _tl_card(entry, by_id, ambiguous):
+    node = entry["node"]
+    amb = ""
+    if node["id"] in ambiguous:
+        amb = ('<span class="tl-ambiguous" title="sequence not derivable from '
+               'display_range — grouped by branch structure">sequence '
+               'ambiguous</span>')
+    claims_html = "".join(_tl_confidence(ce) for ce in entry["claims"]) or \
+        '<div class="notfielded">no dating_claims fielded</div>'
+    return (
+        f'<div class="tl-card" id="tl-{esc(node["id"])}">'
+        f'<div class="tl-head">'
+        f'<span class="id-badge">{esc(node["id"])}</span>'
+        f'<span class="tl-name">{esc(node["title"])}</span>'
+        f'<span class="tl-type">{esc(node["tradition_type"])}</span>'
+        f'{_tl_reliance_badge(entry)}'
+        f'{amb}'
+        f'</div>'
+        f'<div class="tl-range" title="display_range — rendered as authored, '
+        f'render-only, no evidential weight">{esc(node["display_range"])} '
+        f'<span class="tl-range-tag">as authored</span></div>'
+        f'{_tl_edge(entry, by_id)}'
+        f'{claims_html}'
+        f'</div>')
+
+
+def _tl_curated_notes(by_id):
+    """The curated-note cards (Zurvanism). Flagged curated, not field-derived;
+    the cited claim's confidence/reliance, where it resolves, is appended and
+    labelled as the field-derived part."""
+    cards = []
+    for note in CURATED_NOTES:
+        cites = " · ".join(esc(c) for c in note["cites"])
+        field_html = ""
+        c = by_id.get(note["field_claim"])
+        if c is not None and c["type"] == "CLM":
+            field_html = (
+                '<div class="tl-note-field"><span class="tl-note-field-tag">'
+                'field-derived from ' + esc(note["field_claim"]) + ':</span>'
+                + _tl_confidence({"id": note["field_claim"], "node": c})
+                + '</div>')
+        else:
+            field_html = ('<div class="notfielded">cited claim '
+                          + esc(note["field_claim"])
+                          + ' not present in this build</div>')
+        cards.append(
+            f'<div class="tl-note">'
+            f'<div class="tl-note-head">{esc(note["heading"])} '
+            f'<span class="tl-note-tag">curated note — not field-derived</span></div>'
+            f'<div class="tl-note-body">{esc(note["body"])}</div>'
+            f'<div class="tl-note-cites">per {cites}</div>'
+            f'{field_html}'
+            f'</div>')
+    return "".join(cards)
+
+
+TL_CSS = """
+:root{
+  --bg:#f7f7f5; --fg:#1e1e1c; --muted:#6b6b66; --line:#e0e0da; --card:#ffffff;
+  --banner:#7a1f2b; --banner-fg:#fff; --accent:#2b3a67;
+}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--bg);color:var(--fg)}
+.reliance-banner{position:sticky;top:0;z-index:50;background:var(--banner);color:var(--banner-fg);
+  padding:10px 18px;font-weight:600;font-size:14px;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.reliance-banner small{display:block;font-weight:400;opacity:.92;margin-top:2px}
+.wrap{max-width:900px;margin:0 auto;padding:18px}
+header.gen{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:baseline;
+  border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:14px}
+header.gen h1{font-size:20px;margin:0}
+.genmeta{color:var(--muted);font-size:12.5px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.pathnote{background:#fdf6e3;border:1px solid #e8dcb5;border-radius:8px;padding:10px 14px;
+  margin-bottom:14px;font-size:13px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;background:var(--card);border:1px solid var(--line);
+  border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:12.5px}
+.legend .grp{display:flex;gap:6px;align-items:center}
+.legend .swatch{width:16px;height:16px;border-radius:4px;display:inline-block}
+.legend .edge-sample{display:inline-block;width:26px;border-bottom-width:3px;height:0}
+.tl-lane{position:relative;padding-left:26px}
+.tl-lane:before{content:"";position:absolute;left:9px;top:0;bottom:0;width:2px;background:var(--line)}
+.tl-card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:8px;
+  padding:12px 14px;margin-bottom:14px}
+.tl-card:before{content:"";position:absolute;left:-22px;top:18px;width:12px;height:12px;
+  border-radius:50%;background:var(--accent);border:2px solid var(--bg)}
+.tl-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tl-name{font-weight:700;font-size:16px}
+.tl-type{font-size:11.5px;color:var(--muted);background:#f3eefb;border:1px solid var(--line);
+  border-radius:10px;padding:1px 8px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.tl-range{margin:8px 0 6px;font-size:15px;font-weight:600}
+.tl-range-tag{font-size:11px;font-weight:400;color:var(--muted);font-style:italic;margin-left:6px}
+.tl-ambiguous{font-size:11px;color:#8a6d1a;background:#fdf3d0;border:1px dashed #d8c27a;
+  border-radius:10px;padding:1px 8px}
+.tl-edge{margin:7px 0;padding:5px 0 5px 10px;font-size:13px}
+.tl-root-marker{border-left:3px solid var(--accent);color:var(--muted);font-style:italic}
+.tl-edge-glyph{font-weight:700}
+.tl-edge-target{color:var(--accent);text-decoration:none;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.tl-qual{display:inline-block;color:#fff;font-size:11px;font-weight:700;border-radius:10px;
+  padding:1px 8px;margin-left:6px}
+.qual-disputed .tl-qual{font-style:italic}
+.tl-disputed-note{font-size:12px;color:#6b6b66;font-style:italic;margin-top:3px}
+.tl-claim{margin-top:8px;border-top:1px dashed var(--line);padding-top:7px;font-size:13px}
+.tl-claim-id{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;font-size:12px}
+.tl-claim-title{color:var(--muted);font-size:12.5px}
+.tl-claim-unresolved{color:#a4243b}
+.conf-block{display:flex;flex-direction:column;gap:3px;margin-top:5px}
+.conf-row{display:flex;gap:8px;align-items:center}
+.conf-row.conf-weak{border:1px dashed #c65a11;border-radius:6px;padding:2px 6px;background:#fdf4ec}
+.conf-row.conf-weak .conf-label{font-weight:700}
+.conf-name{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px}
+.conf-label{color:var(--muted);font-size:12.5px}
+.level-badge{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;
+  border-radius:5px;color:#fff;font-weight:700;font-size:12px;flex:none}
+.level-na{background:#999}
+.id-badge{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;font-size:12.5px}
+.reliance-badge{display:inline-block;color:#fff;font-weight:700;font-size:12px;padding:2px 9px;border-radius:5px}
+.trad-reliance{margin-left:auto}
+.notfielded{color:#a08a2a;font-size:12.5px;font-style:italic}
+.tl-note{background:#f6f4ef;border:1px solid #ddd6c4;border-radius:8px;padding:12px 14px;margin:16px 0}
+.tl-note-head{font-weight:700}
+.tl-note-tag{font-size:11px;font-weight:400;color:#8a6d1a;background:#fdf3d0;border:1px dashed #d8c27a;
+  border-radius:10px;padding:1px 8px;margin-left:8px}
+.tl-note-body{font-size:13.5px;margin-top:6px}
+.tl-note-cites{font-size:12px;color:var(--muted);margin-top:5px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.tl-note-field{margin-top:8px}
+.tl-note-field-tag{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+footer{color:var(--muted);font-size:12px;margin:20px 0 40px;text-align:center}
+"""
+
+
+def build_timeline_html(objects, git_hash, gen_date):
+    """Render the timeline view as one self-contained HTML string (Path A).
+
+    Deterministic for fixed (objects, git_hash, gen_date). Verbatim ranges;
+    sequence-only ordering; no proportional axis (named future refinement).
+    """
+    by_id = {o["id"]: o for o in objects}
+    entries, errors = timeline_entries(objects)
+    ordered, ambiguous = _lineage_order(entries)
+
+    cards = "".join(_tl_card(e, by_id, ambiguous) for e in ordered)
+    edge_count = sum(len(e["branches"]) for e in entries)
+
+    legend = (
+        '<div class="legend">'
+        '<div class="grp"><strong>tradition_type:</strong> '
+        'founded · emergent · reform · syncretic</div>'
+        '<div class="grp"><strong>Qualifiers:</strong></div>'
+        + "".join(
+            f'<div class="grp"><span class="edge-sample" '
+            f'style="border-bottom:3px {QUALIFIER_STYLE[q][1]} {QUALIFIER_STYLE[q][0]}"></span>'
+            f'{QUALIFIER_STYLE[q][2]} {esc(q)} — {esc(QUALIFIER_MEANING[q])}</div>'
+            for q in ("schism", "reform", "syncretic-descent",
+                      "heterodox-offshoot", "disputed"))
+        + '<div class="grp"><strong>Confidence:</strong></div>'
+        + "".join(
+            f'<div class="grp"><span class="swatch" style="background:{LEVEL_COLOR[l]}"></span>'
+            f'{l} {esc(EPISTEMIC_LEVEL_LABELS[l])}</div>' for l in (5, 4, 3, 2, 1))
+        + '<div class="grp">Low / Very Low components additionally render with '
+        'a dashed weak-grade box (not colour-only)</div>'
+        '<div class="grp"><strong>Reliance:</strong></div>'
+        + "".join(
+            f'<div class="grp"><span class="swatch" style="background:{RELIANCE_COLOR[t]}"></span>'
+            f'{t}</div>' for t in ("R0", "R1", "R2"))
+        + '<div class="grp"><span class="tl-ambiguous">sequence ambiguous</span> '
+        '= order not derivable from display_range; grouped by branch structure</div>'
+        '</div>'
+    )
+
+    banner = (
+        '<div class="reliance-banner">'
+        'Findings not cleared for external reliance — reliance tiers shown per node.'
+        '<small>The reliance tier travels with the data. R0 = parametric only; '
+        'R1 = retrieval-verified (ADR-GOV-0006); R2 = independently verified. '
+        'Promoting a tier is a contribution surface, not a disclaimer — see each node.</small>'
+        '</div>'
+    )
+
+    pathnote = (
+        '<div class="pathnote"><strong>Path A — honesty over false precision.</strong> '
+        'Every range below renders exactly as authored in its entity\'s '
+        '<code>display_range</code> (render-only, no evidential weight; dates are '
+        'claims — see each node\'s dating claim). Cards are ordered root-first, '
+        'then by a coarse era reading used for <em>sequence only</em> — spacing '
+        'and position are NOT proportional to time. A proportional numeric axis '
+        'is a named future refinement requiring structured date fields; it is '
+        'deliberately not approximated here.</div>'
+    )
+
+    errors_html = ""
+    if errors:
+        errors_html = ('<div class="pathnote" style="border-color:#a4243b">'
+                       '<strong>Graph errors:</strong><br>'
+                       + "<br>".join(esc(e) for e in errors) + '</div>')
+
+    return (
+        "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n"
+        "<meta charset=\"utf-8\">\n"
+        "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n"
+        "<title>Relatio Timeline View</title>\n"
+        f"<style>{TL_CSS}</style>\n</head>\n<body>\n"
+        + banner
+        + '<div class="wrap">\n'
+        + '<header class="gen">'
+        + '<h1>Relatio — World-Religions Timeline (ADR-GOV-0009)</h1>'
+        + f'<span class="genmeta">generated {esc(gen_date.isoformat())} · '
+          f'HEAD {esc(git_hash)} · read-only · frontmatter-only · Path A</span>'
+        + f'<span class="genmeta">{len(entries)} traditions · {edge_count} '
+          f'branches_from edges</span>'
+        + '</header>\n'
+        + pathnote
+        + legend
+        + errors_html
+        + f'<div class="tl-lane">{cards}</div>\n'
+        + _tl_curated_notes(by_id)
+        + '<footer>Generated by tools/build_view.py — regenerate after vault '
+          'changes; never hand-edit. The reliance banner, per-tradition reliance '
+          'badges, and confidence markings are load-bearing and must not be '
+          'removed. Ranges are verbatim; ordering is sequence-only (Path A).</footer>\n'
+        + '</div>\n'
+        + "</body>\n</html>\n"
+    )
+
+
 def _git_short_hash(vault):
     try:
         out = subprocess.run(
@@ -797,10 +1299,36 @@ def main():
     print(f"  objects: {len(objects)}  "
           + "  ".join(f"{t}={counts[t]}" for t in KB_TYPES))
     print(f"  reliance-graded (CLM/FND): {len(leaf)}  head-reliance badges: {badge_count}")
+    failed = False
     if badge_count != len(leaf):
         print("  WARNING: reliance-badge count != CLM/FND count", file=sys.stderr)
-        return 1
-    return 0
+        failed = True
+
+    # Second output: the timeline view (ADR-GOV-0009, Path A). Same parse.
+    tl_out = build_timeline_html(objects, git_hash, gen_date)
+    tl_path = views / "relatio-timeline.html"
+    write_text(tl_path, tl_out)
+
+    entries, errors = timeline_entries(objects)
+    edge_count = sum(len(e["branches"]) for e in entries)
+    tl_badges = tl_out.count('trad-reliance"')
+    print(f"Wrote {tl_path}")
+    print(f"  traditions: {len(entries)}  branches_from edges: {edge_count}  "
+          f"trad-reliance badges: {tl_badges}")
+    for err in errors:
+        print(f"  GRAPH ERROR: {err}", file=sys.stderr)
+        failed = True
+    # Load-bearing self-check (mirror of the tree view's): exactly one reliance
+    # badge per tradition node — no view path may strip it.
+    if tl_badges != len(entries):
+        print("  WARNING: trad-reliance badge count != tradition count",
+              file=sys.stderr)
+        failed = True
+    if "curated note — not field-derived" not in tl_out and CURATED_NOTES:
+        print("  WARNING: curated overturned-hypothesis note missing",
+              file=sys.stderr)
+        failed = True
+    return 1 if failed else 0
 
 
 if __name__ == "__main__":

@@ -1,0 +1,260 @@
+========================================================================
+ABOUT PROJECT RELATIO
+A plain-language introduction
+========================================================================
+
+Status of this document: living overview — may be updated as the project
+grows. Written for a reader with no coding background and no prior exposure
+to the project.
+Reflects the project as of: 2026-07-21.
+
+------------------------------------------------------------------------
+WHAT IT IS, IN ONE BREATH
+------------------------------------------------------------------------
+
+Project Relatio is a knowledge system. It stores individual claims —
+statements like "this religious tradition began around the 3rd century" —
+and it refuses to treat any claim as simply true or false. Instead, every
+claim is rated, conservatively and honestly, on how strong its evidence is
+and how well it has been checked. Its whole purpose is to be a body of
+knowledge you can trust without having to re-verify it yourself, because it
+shows its work, shows its uncertainty, and never dresses up a hunch as a
+fact.
+
+The name points at the core idea: knowledge as a structured network of
+meaningful *relationships*, not a flat pile of facts.
+
+------------------------------------------------------------------------
+HOW IT RATES WHAT IT "KNOWS"
+------------------------------------------------------------------------
+
+Every claim gets rated on two separate scales, because "how strong is the
+evidence" and "how well have we checked it" are genuinely different
+questions.
+
+SCALE 1 — CONFIDENCE (how strong is the evidence?)
+Five levels, from Very High down to Very Low. A claim backed by solid,
+agreed-upon sources scores high; a claim resting on thin or hostile
+evidence scores low. The system never rounds up — if the evidence is weak,
+it says so plainly.
+
+A key honesty feature: a single claim can get SPLIT ratings. One claim
+might say "*where* scholars place this: Moderate confidence, but the exact
+reasoning behind it: Low confidence, because that part sits behind a
+paywall we couldn't read." Rather than averaging those into one fuzzy
+number, it keeps them separate and honest.
+
+SCALE 2 — RELIANCE (has it been independently verified?)
+This tracks whether a claim has actually been double-checked against
+original sources, versus believed on good faith. Right now almost
+everything sits at the lowest tier — reasoned but not yet independently
+confirmed — so nothing is marked "safe to quote in serious work" until it
+is genuinely verified. That gate is always visible, so no one mistakes a
+promising idea for a proven fact.
+
+THE CORE PHILOSOPHY
+The system's value is that you can trust its ratings without re-checking
+them yourself. So it grades conservatively, shows its uncertainty, keeps
+strength-of-evidence separate from has-it-been-verified, and treats "we
+don't know this well enough yet" as a legitimate, useful answer rather than
+a failure.
+
+------------------------------------------------------------------------
+HOW THE GRADING ACTUALLY PUTS NUMBERS ON THINGS
+------------------------------------------------------------------------
+
+The system uses numbers as organized judgment, not as a formula that spits
+out a score. There is no equation where you plug in facts and get
+"7.3 / 10." A few separate things each get rated, and a human (with the
+system's help) decides the final grade.
+
+1. THE HEADLINE CONFIDENCE — a 1-to-5 scale.
+   Very Low (1), Low (2), Moderate (3), High (4), Very High (5).
+   Deliberately coarse — five honest buckets beat a fake-exact decimal.
+
+2. THE EVIDENCE IS TIERED BY TYPE, NOT COUNTED BY VOLUME.
+   The system ranks *kinds* of evidence by how trustworthy that kind is:
+     - Top: a review combining many rigorous studies.
+     - Next: a single well-designed controlled study.
+     - Lower: a small study, an observation, or expert consensus.
+     - Lowest: a reasonable theory that hasn't really been tested.
+   This ranks strength, not headcount. Ten weak studies don't climb the
+   tiers; one strong one does.
+
+3. A HANDFUL OF 0-TO-5 SUB-SCORES.
+   When rating a claim, specific dimensions each get a 0–5: how reliable
+   the sources are, how relevant they are to this exact claim, how
+   independent they are (or whether they all just echo one original
+   source), and overall quality. These aren't mechanically averaged into
+   the grade — they're a checklist that disciplines the judgment, so the
+   final confidence isn't just a gut feeling.
+
+4. A SEPARATE VERIFICATION NUMBER.
+   Independent of all the above: "has this been double-checked against
+   original sources?" Kept separate on purpose.
+
+The point of the numbers is to force honesty and consistency and to make
+the reasoning visible and checkable — not to replace the reasoning with a
+calculator. And a split claim is never collapsed into one averaged number,
+because averaging a "5" and a "1" into "3" would hide that one half is
+rock-solid and the other is weak.
+
+------------------------------------------------------------------------
+A REAL EXAMPLE: THE YIGUANDAO CLAIM
+------------------------------------------------------------------------
+
+One actual claim asks: how does scholarship classify Yiguandao (a Chinese
+religious movement) — is it a "salvationist religion" or a school of
+Taoism? Here is how that one was graded.
+
+It is a split claim, and it got two grades:
+  - "Where scholars place it" -> Moderate confidence (3 of 5). Every source
+    found classifies it the same way (salvationist religion, not Taoism).
+    Capped at Moderate, not higher, because the source pool was small and
+    English-only.
+  - "The exact reasoning behind that classification" -> Low confidence
+    (2 of 5). The definitive article spelling out the "why" sits behind a
+    paywall the system could not open and read — so it graded that piece
+    Low and said so, rather than pretending.
+
+The sub-scores that disciplined those grades: reliability solid; relevance
+maxed (the sources speak directly to the question); independence marked
+DOWN because one scholar appeared in two sources, so they weren't as
+independent as the raw count suggested; quality fine for the "where," weak
+for the "why."
+
+The honesty guardrails that kicked in: the claim rates only how the field
+classifies Yiguandao — it deliberately does NOT claim to settle what
+Yiguandao "really is." It flagged its own biggest weakness out loud (the
+whole picture rests on English-language sources; a body of Chinese-language
+scholarship was never accessed). And its verification tier is the lowest —
+reasoned, but not independently confirmed to a quotable standard.
+
+The takeaway: even where every source agreed, the system still refused to
+call it High confidence, still split off the part it couldn't verify, still
+docked itself for a repeated source, and still posted a note about what it
+didn't get to.
+
+------------------------------------------------------------------------
+DOES IT CARE HOW RECENT A CLAIM IS?
+------------------------------------------------------------------------
+
+Not directly — on purpose. Age isn't treated as a measure of truth, because
+sometimes the old finding is the right one and the new one doesn't hold up.
+But recency comes in through a side door:
+
+1. OLD CLAIMS GET AUTOMATICALLY FLAGGED FOR RE-CHECKING. Every claim has a
+   "check me again by this date." Weaker claims are scheduled sooner. The
+   system doesn't rank by age, but it does resurface aging claims: "the
+   world may have moved — someone should look again." Old means worth
+   revisiting, not wrong.
+
+2. WHEN A NEW CLAIM CHALLENGES AN OLD ONE, THEY FIGHT BY EVIDENCE, NOT
+   SENIORITY. Suppose an older, well-supported claim is challenged by a
+   newer claim with fewer studies behind it. The system bows to neither
+   automatically. "More studies" is not "stronger" — a single rigorous new
+   study can outweigh a pile of weaker older ones (like one credible
+   eyewitness outweighing ten people repeating a rumor). So:
+     - The new claim must be reviewed and graded on the same conservative
+       scale; it doesn't win just for being new.
+     - If its evidence is genuinely stronger, the old claim's confidence is
+       LOWERED — but the old claim is never deleted; the record of what was
+       held before, and why it changed, is kept.
+     - If the new claim is weaker on inspection, it may be logged as a
+       challenger worth watching, without overturning anything.
+     - The two are never quietly averaged into a muddle; the tension is
+       resolved deliberately and the reasoning recorded.
+
+The guardrail: a routine "still looks fine" re-check can never change a
+grade on its own. Any actual change goes through a real re-evaluation with
+the evidence laid out — so ratings never drift on a whim.
+
+Bottom line: recency is a reason to RE-EXAMINE, never a reason to BELIEVE.
+
+------------------------------------------------------------------------
+HOW THE SYSTEM GETS STRONGER OVER TIME
+------------------------------------------------------------------------
+
+It doesn't just hold knowledge; it's built to improve its own judgments as
+more comes in.
+
+1. CLAIMS ARE RE-EXAMINED ON A SCHEDULE, AND GRADES CAN MOVE. Nothing
+   freezes at the moment it was entered; better evidence upgrades a claim,
+   contradiction drops it.
+
+2. NEW FINDINGS RIPPLE OUTWARD. Claims are linked. When a foundational
+   claim is re-graded, everything resting on it is flagged to re-check too.
+   One improvement propagates to everything it touches.
+
+3. IT CAN RAISE ITS VERIFICATION LEVEL AS IT DOES MORE LEGWORK. As original
+   sources are tracked down and checked, claims climb from "we believe
+   this" toward "we confirmed this against the original." The ceiling on
+   how trustworthy the whole system can be rises as that work gets done.
+
+4. GAPS ARE RECORDED AS A TO-DO LIST, NOT SWEPT AWAY. Every paywalled
+   article or unreadable-language source becomes a visible worklist item.
+   Filling those gaps strengthens the affected grades.
+
+5. IT GETS STRUCTURALLY SMARTER, NOT JUST FULLER. As it studies more, it
+   learns whether its own methods are working. (In one recent study of a
+   family of religions, a starting assumption turned out to be wrong — and
+   the system caught and corrected it.) Findings can suggest improvements
+   to how the system itself is organized, so it refines its own rulebook,
+   not just its contents.
+
+The guardrail on all this growth: improvements never happen carelessly. Any
+real change goes through genuine re-evaluation, and the old version is
+always kept on record. The system gets stronger AND stays honest — you can
+always see what changed, when, and why.
+
+Early on it's cautious and full of "we don't know this well enough yet."
+That's not a flaw — it's the starting state of something designed to EARN
+its confidence over time.
+
+------------------------------------------------------------------------
+THE VISUAL SIDE
+------------------------------------------------------------------------
+
+The grading lives in a large collection of linked text records — powerful,
+but hard to see. So the project builds visual tools that turn that
+structure into something you can look at and navigate.
+
+ALREADY BUILT: a browsable map of everything the system knows.
+A single interactive page you open in a web browser. An expandable tree:
+each investigation opens to show its claims, each claim shows its sources.
+You start zoomed out and open only what you care about, or search and jump.
+Each item shows, at a glance:
+  - its grade, color-coded — strong and weak claims visible without reading;
+  - split grades shown as two separate marks — a claim solid in one part and
+    shaky in another LOOKS that way;
+  - a verification badge on every claim — a constant reminder of what's been
+    confirmed versus not, so no one mistakes an unchecked idea for a fact;
+  - connection markers — showing when claims relate to, depend on, or
+    contradict one another.
+
+COMING NEXT: a timeline of how religions branched from one another.
+Traditions laid out across time, with lines showing which grew out of
+which, and what KIND of relationship each split was (a schism, a reform, a
+blend of influences, or a disputed/uncertain link — each shown
+differently). Only the first family is mapped so far, so it's sparse by
+design — every new group studied automatically extends the same timeline.
+And because every branch line must be backed by a graded claim, the
+timeline can never show a connection the evidence doesn't support. You see
+history and the system's confidence in each piece of it at once.
+
+WHY THE VISUALS MATTER:
+  - Relationships become obvious — seeing five claims lean on one shaky
+    source, or two findings contradict, is instant in a picture.
+  - Meaning comes from the shape — how knowledge clusters and connects shows
+    where the system is solid, where it's thin, and where the tensions are.
+  - The honesty stays in view — grades and "not yet verified" flags travel
+    WITH the picture, so you're never shown a clean, confident-looking
+    diagram that hides how much is still uncertain.
+
+The visuals aren't decoration on top of the real work — they're a way to
+SEE the reasoning, including its uncertainty: not just what the system
+concludes, but how strongly, based on what, and how it all connects.
+
+========================================================================
+END — ABOUT PROJECT RELATIO
+========================================================================
