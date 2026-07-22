@@ -31,6 +31,7 @@ from common import (  # noqa: E402
     parse_frontmatter,
     read_text,
     tradition_entity_problems,
+    tradition_range_problems,
 )
 
 FIXTURES = Path(__file__).resolve().parent / "fixtures"
@@ -85,6 +86,56 @@ if "tradition_entity_problems" not in src:
 if "Tradition-entity fields malformed" not in src or "errors.append" not in src:
     failures.append("validate.py must append tradition-entity problems to `errors`")
 print("  wiring -> validate.py enforces tradition-entity shape at error level")
+
+# ---------------------------------------------------------------------------
+# Positioning-bounds shape check (STD-0002 s.11 v1.11) — the render-only fields
+# range_start_year / range_end_year / range_uncertainty.
+# ---------------------------------------------------------------------------
+print()
+print("positioning-bounds shape-detection (STD-0002 s.11 v1.11)")
+
+
+def range_problems_for(name):
+    text = read_text(FIXTURES / name)
+    fm, _ = parse_frontmatter(text)
+    return tradition_range_problems(yaml.safe_load(fm))
+
+
+# 6. Well-formed bounds (the backfilled-style fixture: int/present + vocab) -> none.
+rp = range_problems_for("tradition_entity_wellformed.md")
+# The well-formed tradition fixture carries no range fields -> silent (optional).
+if rp:
+    failures.append(f"tradition without range fields must be silent, got {rp}")
+print(f"  no range fields -> {len(rp)} problems (optional, must be 0)")
+
+# 7. Malformed bounds -> both the bad end token and the bad uncertainty caught.
+rp = range_problems_for("tradition_range_malformed.md")
+if not any("range_end_year" in p for p in rp):
+    failures.append(f"malformed range_end_year not caught: {rp}")
+if not any("range_uncertainty" in p for p in rp):
+    failures.append(f"malformed range_uncertainty not caught: {rp}")
+print(f"  malformed bounds -> {len(rp)} problems (end token + uncertainty vocab)")
+
+# 8. Co-presence: start present but uncertainty missing -> caught.
+rp = tradition_range_problems({"range_start_year": 300})
+if not any("range_uncertainty" in p and "co-required" in p for p in rp):
+    failures.append(f"start-without-uncertainty co-presence not caught: {rp}")
+# end present but start missing -> caught.
+rp2 = tradition_range_problems({"range_end_year": "present", "range_uncertainty": "low"})
+if not any("range_start_year" in p and "co-required" in p for p in rp2):
+    failures.append(f"end-without-start co-presence not caught: {rp2}")
+# a valid open-terminus (start + uncertainty, no end) -> silent.
+rp3 = tradition_range_problems({"range_start_year": 240, "range_uncertainty": "moderate"})
+if rp3:
+    failures.append(f"valid open-terminus (start+uncertainty, no end) flagged: {rp3}")
+print("  co-presence + open-terminus -> enforced start+uncertainty; end optional")
+
+# 9. Wiring: validate.py enforces the positioning check at error level.
+if "tradition_range_problems" not in src:
+    failures.append("validate.py must import/use tradition_range_problems")
+if "Positioning fields malformed" not in src:
+    failures.append("validate.py must append positioning problems to `errors`")
+print("  wiring -> validate.py enforces positioning-bounds shape at error level")
 
 print()
 

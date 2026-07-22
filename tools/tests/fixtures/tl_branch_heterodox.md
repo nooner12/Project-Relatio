@@ -13,6 +13,9 @@ tradition_type: founded
 dating_claims:
   - CLM-9102
 display_range: "9th c. CE"
+range_start_year: 900
+range_end_year: 950
+range_uncertainty: high
 relationships:
   - type: branches_from
     target: ENT-9100

@@ -218,40 +218,60 @@ closed INVs keep `status: Draft` by design. So INV nodes are labelled by their h
 frontmatter `status` / `operational_status` only; the view does not claim to show which
 investigations are "closed."
 
-### The timeline view (`views/relatio-timeline.html` — ADR-GOV-0009, Path A)
+### The timeline view (`views/relatio-timeline.html` — ADR-GOV-0009)
 
 The second emitter renders the world-religions timeline program's tradition-class
-entities (ENT records carrying `tradition_type`) in a **root-first lineage layout**.
-**Path A — honesty over false precision**:
+entities (ENT records carrying `tradition_type`) as a **proportional SVG
+tree-on-a-time-axis**: a horizontal, compressed time axis; each tradition a horizontal
+**bar** from `range_start_year` to `range_end_year`; `branches_from` drawn as
+**connectors** between bars. (This replaced the earlier Path-A block layout — the
+owner-ratified upgrade — once the entities carried structured numeric bounds.)
 
-* **`display_range` renders VERBATIM, as authored.** It is never parsed into numeric
-  years for display or positioning; every card marks its range "as authored"
-  (render-only, no evidential weight — dates are claims, per ADR-GOV-0009 D3).
-* **Ordering is SEQUENCE-ONLY.** A deliberately coarse era reading of the range text
-  (BCE/CE + first millennium/century mention) decides only *which card precedes which*;
-  spacing and position are NOT proportional to time. Where the reading is ambiguous or
-  ties, cards group by branch structure and carry a visible "sequence ambiguous" note.
-* **Named future refinement (out of scope until then):** a proportional numeric time
-  axis requires **structured date fields** on the entities. It is deliberately NOT
-  approximated from `display_range` — that would manufacture false precision.
+**Where the geometry comes from — and its honesty keystone.** Position and length come
+**only** from the OPTIONAL render-only positioning bounds `range_start_year` /
+`range_end_year` / `range_uncertainty` (STD-0002 §11 v1.11) — **never** from parsing
+`display_range` prose. Those bounds are **approximate, non-evidential** hints derived
+from and bounded by each tradition's dating claim, **inheriting its confidence**; a bar
+**never** renders more certain than the claim behind it. `display_range` stays the
+**authoritative** label and is shown **verbatim on every bar**. `range_uncertainty`
+renders **into the geometry**: `low` = solid/strong bar; `moderate` = solid/faded, fuzzy
+(approximate) start edge; `high` = **dashed and most-faded** (Mazdakism must look
+visibly weakest). `range_end_year: present` extends the bar to the axis end with a
+living-tradition cap; an **omitted** end renders a dashed, fading **terminus-undated
+stub** — never extended to present, never given a fabricated end (Manichaeism: CLM-0089
+dates only the founding).
+
+**Axis compression (documented, non-linear).** Deep prehistory (2nd millennium BCE) to
+present cannot be linear and readable. The axis is **piecewise** — fixed era anchors
+(`-1500, -1000, -500, 1 CE, 500, 1000, 1500, present`), each adjacent pair drawn **equal
+width regardless of real duration**. Positions are therefore approximate and
+sequence-honest, not pixel-proportional across the whole span. **A strictly linear axis
+is the named future refinement** (it would need finer structured dates and a chosen
+distortion budget); it is deliberately not approximated.
+
+**Fallback — undated / sequence-only lane.** A tradition-class entity that carries **no**
+numeric bounds is **not dropped and not given invented coordinates**: it renders in a
+clearly-marked "undated / sequence-only" lane below the axis, showing its verbatim
+`display_range` and its reliance badge.
 
 **Honesty invariants (load-bearing — no code path may strip them):**
 
 * the **standing reliance banner** sits atop the timeline exactly as on the tree view,
-  and **every tradition node carries a reliance badge** (the floor across its resolved
-  dating claims' tiers, followed to the claims, never re-derived); the `main()`
-  self-check fails the run if the badge count ≠ the tradition count;
+  and **every tradition carries a reliance badge** (the floor across its resolved dating
+  claims' tiers, followed to the claims, never re-derived) — on-axis bars and undated-lane
+  rows alike; the `main()` self-check fails the run if the badge count ≠ the tradition
+  count;
 * each tradition shows its dating claims' **confidence components separately** (never
   merged/averaged), colour-coded by level, with Low/Very Low components additionally
-  boxed by a **non-colour weak-grade marking** so (e.g.) Mazdakism's Low reads distinct
-  from a Moderate dating even in grayscale;
-* `branches_from` edges render **distinctly by qualifier** (colour + border-style +
+  outlined by a **non-colour weak-grade marking** so a Low dating reads distinct from a
+  Moderate one even in grayscale;
+* `branches_from` connectors render **distinctly by qualifier** (colour + dash pattern +
   glyph + printed label — never colour-only); the `disputed` qualifier is explicitly
   marked **uncertain** ("the uncertainty is the finding");
 * **the Zurvanism overturned hypothesis renders as presence, not silence**: a curated
   note (flagged "curated — not field-derived", since the dissolution outcome lives in
   INV-0016's prose, not frontmatter) records that Zurvanism was investigated and found
-  not to warrant tradition status, with CLM-0088's confidence/reliance appended as the
+  not to warrant tradition status, with CLM-0088's confidence appended as the
   field-derived part;
 * a `dating_claims` pointer that does not resolve to a Claim Record is a **graph
   error**: reported on stderr, rendered honestly as unresolved, and the run fails.
@@ -264,12 +284,17 @@ through the real parse+render path
 to prove split/single confidence, cross-edges, the past-due marker, the reliance badge on
 every leaf, the banner, version-as-literal-text, determinism, and — against the live
 vault — that the deepest-path record is read and rendered (the STD-0001 §8 check).
-`tests/test_timeline_view.py` does the same for the timeline emitter: verbatim ranges,
-the root marker, all five qualifier markings, Low-vs-Moderate distinctness, the
-badge-per-tradition count, the banner, the curated Zurvanism note, the graph-error
-report, determinism, and — the regression assert — that the tree emitter's output is
-byte-identical with or without the tradition fields present (the tree view must never
-change because the timeline exists).
+`tests/test_timeline_view.py` does the same for the SVG timeline emitter: a bar at its
+numeric bounds, a `present` end reaching the axis end, an omitted end rendering the
+terminus-undated stub, high-uncertainty visibly weaker than low, all five qualifier
+connectors distinct (and `disputed` marked uncertain), the undated fallback lane
+rendering a bounds-less tradition without inventing coordinates, the badge-per-tradition
+count, the banner, verbatim ranges, the compression note, the curated Zurvanism note, the
+graph-error report, determinism, and — the regression assert — that the tree emitter's
+output is byte-identical with or without the tradition **and** range fields (the tree view
+must never change because the timeline exists). `tests/test_tradition_entity.py` covers
+the STD-0002 §11 v1.11 positioning-bounds shape check (integer years or `present`; the
+uncertainty vocabulary; start+uncertainty co-presence; end optional).
 
 ## tests/ — detection tests
 

@@ -13,6 +13,9 @@ tradition_type: emergent
 dating_claims:
   - CLM-9101
 display_range: "3rd c. CE"
+range_start_year: 300
+range_end_year: 800
+range_uncertainty: low
 relationships:
   - type: branches_from
     target: ENT-9100

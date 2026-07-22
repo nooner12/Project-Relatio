@@ -13,6 +13,9 @@ tradition_type: founded
 dating_claims:
   - CLM-9101
 display_range: "2nd millennium BCE (fixture-contested)"
+range_start_year: -2000
+range_end_year: present
+range_uncertainty: moderate
 relationships:
   - type: derived_from
     target: SRC-9001

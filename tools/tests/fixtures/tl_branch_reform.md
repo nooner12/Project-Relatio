@@ -13,6 +13,9 @@ tradition_type: reform
 dating_claims:
   - CLM-9101
 display_range: "5th c. CE"
+range_start_year: 500
+range_end_year: present
+range_uncertainty: moderate
 relationships:
   - type: branches_from
     target: ENT-9100

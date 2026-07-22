@@ -1,25 +1,31 @@
 #!/usr/bin/env python3
-"""Detection tests for the timeline emitter of build_view.py (ADR-GOV-0009).
+"""Detection tests for the SVG timeline emitter of build_view.py (ADR-GOV-0009).
 
-House convention: prove the positive. Deliberately-shaped fixtures are driven
-through the real parse+render path (object_from_text -> build_timeline_html)
-and the assertions target the emitted HTML:
+The timeline was upgraded from the Path-A block layout to a proportional SVG
+tree-on-a-time-axis (STD-0002 §11 v1.11 render-only positioning bounds). House
+convention: prove the positive. Deliberately-shaped fixtures are driven through
+the real parse+render path (object_from_text -> build_timeline_html) and the
+assertions target the emitted SVG/HTML:
 
-  * a tradition renders its display_range VERBATIM (as authored — Path A);
-  * a root (no branches_from) renders the root marker and NO inbound edge;
-  * each of the five qualifier kinds renders its own distinct marking, and
-    `disputed` carries the explicit uncertainty note;
-  * a Low-confidence dating renders distinctly from a Moderate one (the
-    weak-grade box — a non-colour-only marking);
-  * the reliance badge appears on EVERY tradition node (count == tradition
-    count) and the standing reliance banner is present — the load-bearing gate;
-  * the Zurvanism / overturned-hypothesis curated note is present and flagged
-    as curated, not field-derived;
+  * a bar renders at its NUMERIC bounds (x + width derived from year_to_x, not
+    from parsing display_range prose);
+  * a `present` end extends to the axis end (living-tradition cap), an integer
+    end stops at that year, and an OMITTED end renders a terminus-undated stub
+    (never extended to present, never a fabricated coordinate);
+  * high uncertainty renders visibly weaker than low (dashed + most-faded);
+  * each of the five qualifier connectors renders distinctly (colour + dash +
+    glyph), and `disputed` is marked uncertain;
+  * a bounds-less tradition renders in the undated/sequence-only fallback lane
+    with its verbatim display_range, and is NOT placed on the axis;
+  * the reliance badge appears on EVERY tradition (count == tradition count,
+    on-axis + undated) and the standing banner is present — the load-bearing gate;
+  * display_range renders verbatim on every bar (authoritative string visible);
+  * the axis-compression note is present (honest about non-linearity);
+  * the Zurvanism / overturned-hypothesis curated note is present and flagged;
   * an unresolvable dating_claims pointer is reported as a graph error;
-  * output is deterministic across two runs (fixed hash/date);
-  * TREE-VIEW REGRESSION: build_html output is byte-identical whether or not
-    the tradition fields are present on the nodes (the tree emitter must not
-    read them), and contains no timeline markup.
+  * output is deterministic across two runs;
+  * TREE-VIEW REGRESSION: build_html is byte-identical with/without the tradition
+    and range fields, and contains no timeline/SVG markup.
 
 Run: python tools/tests/test_timeline_view.py
 """
@@ -33,6 +39,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from common import read_text  # noqa: E402
 from build_view import (  # noqa: E402
     object_from_text, build_html, build_timeline_html, timeline_entries,
+    QUALIFIER_STYLE, _make_year_to_x, _num,
 )
 
 FIXTURES = Path(__file__).resolve().parent / "fixtures"
@@ -50,119 +57,131 @@ def load(name):
 
 
 # --- Parse the fixture mini-family ----------------------------------------
-nodes = [
-    load("tl_root.md"),
-    load("tl_branch_schism.md"),
-    load("tl_branch_reform.md"),
-    load("tl_branch_syncretic.md"),
-    load("tl_branch_heterodox.md"),
-    load("tl_branch_disputed.md"),
-    load("tl_claim_moderate.md"),
-    load("tl_claim_low.md"),
+FIX = [
+    "tl_root.md",            # ENT-9100 root, -2000..present, moderate
+    "tl_branch_schism.md",   # ENT-9101 schism, 300..800, low
+    "tl_branch_reform.md",   # ENT-9102 reform, 500..present, moderate
+    "tl_branch_syncretic.md",  # ENT-9103 syncretic-descent, 700.., low (OPEN)
+    "tl_branch_heterodox.md",  # ENT-9104 heterodox-offshoot, 900..950, high
+    "tl_branch_disputed.md",   # ENT-9105 disputed, 1100..present, moderate
+    "tl_undated.md",         # ENT-9106 undated (no bounds) -> fallback lane
+    "tl_claim_moderate.md",  # CLM-9101 (Moderate)
+    "tl_claim_low.md",       # CLM-9102 (Low)
 ]
+nodes = [load(n) for n in FIX]
 if any(n is None for n in nodes):
-    failures.append(f"a fixture failed to parse to a KB node: "
-                    f"{[i for i, n in enumerate(nodes) if n is None]}")
+    failures.append(f"a fixture failed to parse: "
+                    f"{[FIX[i] for i, n in enumerate(nodes) if n is None]}")
 
 GEN = date(2026, 7, 22)
+PRESENT = GEN.year
 html = build_timeline_html(nodes, "abc1234", GEN)
-TRADITIONS = ["ENT-9100", "ENT-9101", "ENT-9102", "ENT-9103",
-              "ENT-9104", "ENT-9105"]
+
+anchors, y2x, plot_w = _make_year_to_x(PRESENT)
+PLOT_RIGHT = 214 + plot_w   # _GUTTER + plot_w
 
 
-def card_segment(html_text, ident):
-    """The HTML slice for one timeline card (up to the next card or end)."""
-    i = html_text.find(f'id="tl-{ident}"')
-    if i == -1:
+def svg_of(text):
+    """The MAIN plot SVG (inside .svg-scroll) — not the tiny legend samples,
+    which each also open an <svg>."""
+    m = text.find('class="svg-scroll"')
+    if m == -1:
         return ""
-    nxt = html_text.find('class="tl-card"', i + 1)
-    end = nxt if nxt != -1 else len(html_text)
-    return html_text[i:end]
+    i = text.find("<svg", m)
+    j = text.find("</svg>", i)
+    return text[i:j] if i != -1 and j != -1 else ""
 
 
-# --- Verbatim display_range (Path A) ---------------------------------------
-root = card_segment(html, "ENT-9100")
-want("2nd millennium BCE (fixture-contested)" in root,
-     "root display_range must render VERBATIM, as authored")
-want("12th c. CE crystallisation (fixture)" in card_segment(html, "ENT-9105"),
-     "branch display_range must render VERBATIM, as authored")
+svg = svg_of(html)
 
-# --- Root: marker present, no inbound edge ---------------------------------
-want("family root" in root and "tl-root-marker" in root,
-     "root must carry the family-root marker")
-want("branches_from" not in root.replace("no \nbranches_from edge", "")
-     .replace("no branches_from edge", ""),
-     "root must render NO inbound branches_from edge")
 
-# --- Each qualifier kind renders its distinct marking ----------------------
-for ident, qual in (("ENT-9101", "schism"), ("ENT-9102", "reform"),
-                    ("ENT-9103", "syncretic-descent"),
-                    ("ENT-9104", "heterodox-offshoot"),
-                    ("ENT-9105", "disputed")):
-    seg = card_segment(html, ident)
-    want(f"qual-{qual}" in seg,
-         f"{ident} must carry the qualifier-specific class qual-{qual}")
-    want(f">{qual}</span>" in seg,
-         f"{ident} must print its qualifier label {qual!r}")
-# The five qualifier classes must be mutually distinct in style: each class
-# appears in exactly one card, and the style tuples differ (colour+border).
-for qual in ("qual-schism", "qual-reform", "qual-syncretic-descent",
-             "qual-heterodox-offshoot", "qual-disputed"):
-    count = html.count(f'class="tl-edge {qual}"')
-    want(count == 1, f"{qual} must appear on exactly one edge, got {count}")
-from build_view import QUALIFIER_STYLE  # noqa: E402
-styles = list(QUALIFIER_STYLE.values())
-want(len({(c, b) for c, b, _ in styles}) == len(styles),
-     "qualifier (colour, border-style) pairs must be pairwise distinct")
+# --- A bar renders at its numeric bounds -----------------------------------
+# ENT-9101 schism: 300..800, low (no fuzz) -> a single bar rect at those coords.
+x1 = _num(y2x(300))
+w = _num(max(y2x(800) - y2x(300), 3))
+want(f'x="{x1}"' in svg, f"schism bar not positioned at year_to_x(300)={x1}")
+want(f'width="{w}"' in svg, f"schism bar width not year_to_x(800)-year_to_x(300)={w}")
 
-# --- disputed is marked uncertain ------------------------------------------
-disputed = card_segment(html, "ENT-9105")
-want("uncertainty is the finding" in disputed,
-     "disputed edge must carry the explicit uncertainty note")
+# --- present extends to axis end; integer ends stop; omitted = undated stub -
+# Three present-ended traditions (root, reform, disputed) -> three living caps.
+want(html.count("▶") == 3,
+     f"expected 3 living-tradition caps (present ends), got {html.count('▶')}")
+# The open-terminus (ENT-9103 syncretic, no end) renders a terminus-undated stub.
+want(html.count("terminus undated") == 1,
+     f"expected exactly one terminus-undated stub, got {html.count('terminus undated')}")
+# and it is NOT extended to present: its stub is short, so no living cap for it.
 
-# --- Low renders distinctly from Moderate ----------------------------------
-low = card_segment(html, "ENT-9104")       # dated by CLM-9102 (Low, level 2)
-moderate = card_segment(html, "ENT-9101")  # dated by CLM-9101 (Moderate, 3)
-want("conf-weak" in low,
-     "Low-confidence dating must carry the weak-grade (non-colour) marking")
-want("conf-weak" not in moderate,
-     "Moderate-confidence dating must NOT carry the weak-grade marking")
-want('title="confidence level 2"' in low and 'title="confidence level 3"' in moderate,
-     "level badges must carry their distinct levels (2 vs 3)")
+# --- high uncertainty renders visibly weaker than low ----------------------
+want('fill-opacity="0.3"' in svg,
+     "high-uncertainty bar must render most-faded (fill-opacity 0.3)")
+want('fill-opacity="0.82"' in svg,
+     "low-uncertainty bar must render strong (fill-opacity 0.82)")
+want('stroke-dasharray="5 3"' in svg,
+     "high-uncertainty bar must render dashed (the visibly-weakest encoding)")
 
-# --- Reliance badge on every tradition node + standing banner --------------
+# --- each qualifier connector renders distinctly ---------------------------
+for q, (color, dash, glyph) in QUALIFIER_STYLE.items():
+    want(f'stroke="{color}"' in svg,
+         f"qualifier {q} colour {color} missing from a connector")
+    want(glyph in svg, f"qualifier {q} glyph {glyph!r} missing")
+# (colour, dash) pairs must be pairwise distinct (never colour-only).
+pairs = {(c, d) for c, d, _ in QUALIFIER_STYLE.values()}
+want(len(pairs) == len(QUALIFIER_STYLE),
+     "qualifier (colour, dash) pairs must be pairwise distinct")
+# disputed is marked uncertain.
+want("descent disputed — uncertainty is the finding" in svg,
+     "disputed connector must carry the explicit uncertainty note")
+
+# --- undated fallback lane: verbatim, not on the axis ----------------------
+want("undated-lane" in html, "undated/sequence-only fallback lane missing")
+want("ENT-9106" in html, "undated tradition ENT-9106 missing from the fallback lane")
+want("date genuinely unknown (fixture)" in html,
+     "undated tradition's verbatim display_range missing")
+want("ENT-9106" not in svg,
+     "undated tradition must NOT be placed on the axis (no invented coordinates)")
+
+# --- reliance badge on every tradition (on-axis + undated) + banner --------
+# Count the badge marker token, which matches BOTH the on-axis SVG <g
+# class="trad-reliance"> and the undated lane's class="reliance-badge
+# trad-reliance" (the same token main()'s self-check counts).
 badge_count = html.count('trad-reliance"')
-want(badge_count == len(TRADITIONS),
-     f"reliance badge count {badge_count} != tradition count {len(TRADITIONS)}")
-for ident in TRADITIONS:
-    want("trad-reliance" in card_segment(html, ident),
-         f"{ident} is missing its reliance badge")
+n_traditions = sum(1 for n in nodes if n and n["type"] == "ENT"
+                   and n.get("tradition_type"))
+want(badge_count == n_traditions,
+     f"reliance badge count {badge_count} != tradition count {n_traditions}")
 want("Findings not cleared for external reliance" in html,
      "standing reliance banner missing from the timeline view")
 
-# --- Zurvanism / overturned-hypothesis note --------------------------------
+# --- display_range verbatim on every bar -----------------------------------
+for dr in ("2nd millennium BCE (fixture-contested)", "3rd c. CE", "5th c. CE",
+           "7th c. CE", "9th c. CE", "12th c. CE crystallisation (fixture)"):
+    want(dr in svg, f"verbatim display_range {dr!r} missing from the SVG")
+
+# --- axis compression is documented ----------------------------------------
+want("compress" in html.lower(),
+     "the axis-compression note (honest non-linearity) must be present")
+
+# --- Zurvanism / overturned-hypothesis curated note ------------------------
 want("Zurvanism" in html and "curated note — not field-derived" in html,
      "the Zurvanism overturned-hypothesis note must be present and flagged curated")
-want("INV-0016" in html,
-     "the curated note must cite INV-0016")
+want("INV-0016" in html, "the curated note must cite INV-0016")
 
-# --- Unresolvable dating_claims pointer is a reported graph error ----------
+# --- unresolvable dating_claims pointer is a reported graph error -----------
 bad = dict(nodes[0])
 bad["id"] = "ENT-9199"
-bad["title"] = "Fixture Unresolvable Dating"
+bad["title"] = "Unresolvable"
 bad["dating_claims"] = ["CLM-9999"]
 _, errors = timeline_entries(nodes + [bad])
 want(any("CLM-9999" in e and "ENT-9199" in e for e in errors),
      "an unresolvable dating_claims pointer must be reported as a graph error")
-_, clean_errors = timeline_entries(nodes)
-want(clean_errors == [],
-     f"clean fixture set must produce no graph errors, got {clean_errors}")
+_, clean = timeline_entries(nodes)
+want(clean == [], f"clean fixture set must produce no graph errors, got {clean}")
 
 # --- Determinism -----------------------------------------------------------
 want(html == build_timeline_html(nodes, "abc1234", GEN),
      "build_timeline_html is not deterministic across two runs")
 
-# --- TREE-VIEW REGRESSION: tree emitter ignores the tradition fields -------
+# --- TREE-VIEW REGRESSION: tree emitter ignores tradition + range fields ----
 tree_with = build_html(nodes, "abc1234", GEN)
 stripped = []
 for n in nodes:
@@ -171,13 +190,16 @@ for n in nodes:
         m["tradition_type"] = None
         m["dating_claims"] = []
         m["display_range"] = None
+        m["range_start_year"] = None
+        m["range_end_year"] = None
+        m["range_uncertainty"] = None
     stripped.append(m)
 tree_without = build_html(stripped, "abc1234", GEN)
 want(tree_with == tree_without,
-     "tree view output must be byte-identical with/without tradition fields "
-     "(the tree emitter must not read them)")
-want("tl-card" not in tree_with and "tl-lane" not in tree_with,
-     "tree view must contain no timeline markup")
+     "tree view output must be byte-identical with/without tradition+range fields")
+want("<svg" not in tree_with and "tl-lane" not in tree_with
+     and "svg-scroll" not in tree_with,
+     "tree view must contain no timeline/SVG markup")
 
 
 print()
@@ -188,6 +210,7 @@ if failures:
     print("\nSTATUS : FAIL")
     sys.exit(1)
 
-print("STATUS : PASS (verbatim-range/root/qualifiers/disputed/low-vs-moderate/"
-      "reliance/banner/zurvanism/graph-error/determinism/tree-regression all proven)")
+print("STATUS : PASS (numeric-bounds/present-extends/open-terminus/high-vs-low/"
+      "qualifiers/disputed/undated-fallback/reliance/banner/verbatim/compression/"
+      "zurvanism/graph-error/determinism/tree-regression all proven)")
 sys.exit(0)

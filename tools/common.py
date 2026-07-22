@@ -392,6 +392,71 @@ def tradition_entity_problems(meta):
     return problems, dating_list
 
 
+RANGE_UNCERTAINTIES = ("low", "moderate", "high")
+
+# The render-only positioning fields (STD-0002 §11 v1.11). OPTIONAL; when any is
+# present, range_start_year + range_uncertainty are co-required, range_end_year
+# optional (an integer year or the literal token `present`).
+RANGE_FIELDS = ("range_start_year", "range_end_year", "range_uncertainty")
+
+
+def tradition_range_problems(meta):
+    """Shape-check the OPTIONAL render-only positioning fields (STD-0002 §11 v1.11).
+
+    Returns a list of problem strings; empty means well-formed OR none present.
+    These are NON-EVIDENTIAL rendering hints — this checks shape only (integer
+    years or the `present` token; the uncertainty vocabulary; start+uncertainty
+    co-presence). Whether a bound is *correctly derived* from the dating claim is
+    a review question, not a shape question. `range_end_year` accepts the literal
+    string `present` (a living tradition) or an integer; a bare integer year may
+    be negative (BCE). PyYAML parses an unquoted `present` to the string, and a
+    signed integer to int, so both arrive typed.
+    """
+    problems = []
+    present = {f: meta.get(f) for f in RANGE_FIELDS if meta.get(f) is not None}
+    if not present:
+        return problems  # no positioning fields: nothing to check
+
+    start = meta.get("range_start_year")
+    if start is not None and (isinstance(start, bool) or not isinstance(start, int)):
+        problems.append(
+            f"`range_start_year` must be an integer year (BCE negative) (got {start!r})"
+        )
+
+    end = meta.get("range_end_year")
+    if end is not None:
+        if isinstance(end, str):
+            if end.strip() != "present":
+                problems.append(
+                    f"`range_end_year` string must be the literal `present` (got {end!r})"
+                )
+        elif isinstance(end, bool) or not isinstance(end, int):
+            problems.append(
+                f"`range_end_year` must be an integer year or the token `present` (got {end!r})"
+            )
+
+    unc = meta.get("range_uncertainty")
+    if unc is not None and unc not in RANGE_UNCERTAINTIES:
+        problems.append(
+            f"`range_uncertainty` must be one of {list(RANGE_UNCERTAINTIES)} (got {unc!r})"
+        )
+
+    # Co-presence: any positioning field present requires start + uncertainty
+    # (range_end_year stays optional — absent = terminus not claim-dated).
+    if meta.get("range_start_year") is None:
+        problems.append(
+            "positioning fields present but `range_start_year` missing "
+            "(STD-0002 §11 v1.11: start + uncertainty are co-required)"
+        )
+    if meta.get("range_uncertainty") is None:
+        problems.append(
+            "positioning fields present but `range_uncertainty` missing "
+            "(STD-0002 §11 v1.11: start + uncertainty are co-required)"
+        )
+
+    return problems
+
+
 def branches_from_problems(source_id, edges, type_of):
     """Integrity-check a source object's branches_from edges (STD-0004 v1.2 §7.2).
 

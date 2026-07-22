@@ -267,6 +267,12 @@ def object_from_text(text):
         "tradition_type": meta.get("tradition_type") if prefix == "ENT" else None,
         "dating_claims": _id_list(meta, "dating_claims") if prefix == "ENT" else [],
         "display_range": meta.get("display_range") if prefix == "ENT" else None,
+        # Render-only positioning bounds (STD-0002 §11 v1.11). Read here so the
+        # shared parse feeds the timeline emitter; the tree emitter ignores them
+        # (tree output byte-identical with/without — regression-asserted).
+        "range_start_year": meta.get("range_start_year") if prefix == "ENT" else None,
+        "range_end_year": meta.get("range_end_year") if prefix == "ENT" else None,
+        "range_uncertainty": meta.get("range_uncertainty") if prefix == "ENT" else None,
     }
 
 
@@ -787,29 +793,47 @@ def build_html(objects, git_hash, gen_date):
 
 
 # ---------------------------------------------------------------------------
-# Timeline emitter (ADR-GOV-0009 — Path A: honesty over false precision)
+# Timeline emitter (ADR-GOV-0009 — proportional SVG tree-on-a-time-axis)
 #
 # SECOND OUTPUT of the same parse. Renders tradition-class entities (ENT with
-# `tradition_type`) in a root-first lineage layout. display_range is VERBATIM —
-# never parsed into numeric years for display or positioning. The only reading
-# of the range text is a deliberately coarse era key used for SEQUENCE ONLY
-# (which card comes before which); a proportional numeric axis is a NAMED
-# FUTURE REFINEMENT requiring structured date fields, explicitly out of scope.
+# `tradition_type`) as horizontal bars on a horizontal, COMPRESSED time axis,
+# with branches_from drawn as connectors. The proportional geometry comes ONLY
+# from the OPTIONAL render-only positioning bounds (`range_start_year` /
+# `range_end_year` / `range_uncertainty`, STD-0002 §11 v1.11) — never from
+# parsing `display_range` prose. `display_range` remains the AUTHORITATIVE label
+# and is shown verbatim on every bar.
+#
+# HONESTY KEYSTONE (governs the geometry): the numeric bounds are RENDER-ONLY,
+# APPROXIMATE, NON-EVIDENTIAL — derived from and bounded by the tradition's
+# dating claim, inheriting its confidence. `range_uncertainty` renders INTO the
+# geometry: high uncertainty → a dashed, faded bar (Mazdakism must look visibly
+# weaker than a moderate dating). A bar NEVER renders more certain than the
+# claim behind it. A tradition lacking numeric bounds is NOT dropped and NOT
+# given invented coordinates — it renders in an "undated / sequence-only" lane
+# with its verbatim display_range. The overturned Zurvanism hypothesis renders
+# as a curated, flagged note (its dissolution lives in INV-0016 prose).
+#
+# AXIS COMPRESSION (documented, non-linear): deep prehistory (2nd millennium
+# BCE) to present cannot be linear and stay readable. The axis is PIECEWISE —
+# fixed era anchors, each adjacent pair given EQUAL horizontal width regardless
+# of its real duration. Positions are therefore approximate and sequence-honest,
+# not pixel-proportional across the whole span. A strictly linear axis remains a
+# future refinement.
 # ---------------------------------------------------------------------------
 
 import re as _re
 
-# Qualifier -> (colour, border-style, glyph). Distinct by colour AND border
-# style AND printed label, so the distinction is never colour-only. Palette
-# deliberately away from both the confidence colours (greens/ambers/reds) and
-# the reliance blue-greys. `disputed` additionally carries the uncertainty
-# marking (dashed border + "?" glyph + an explicit uncertainty line).
+# Qualifier -> (colour, SVG stroke-dasharray, glyph). Distinct by colour AND
+# dash pattern AND printed glyph/label, so the distinction is never colour-only.
+# Palette deliberately away from both the confidence colours (greens/ambers/reds)
+# and the reliance blue-greys. `disputed` additionally carries the uncertainty
+# marking (dashed connector + "?" glyph + an explicit uncertain label).
 QUALIFIER_STYLE = {
-    "schism":             ("#7a3b5e", "solid",  "∥"),   # ∥ split
-    "reform":             ("#3b6e7a", "double", "↻"),   # ↻ renewal
-    "syncretic-descent":  ("#5e3b7a", "dotted", "⊕"),   # ⊕ fusion
-    "heterodox-offshoot": ("#7a5e3b", "dashed", "≠"),   # ≠ divergence
-    "disputed":           ("#6b6b66", "dashed", "?"),
+    "schism":             ("#7a3b5e", "",       "∥"),   # ∥ split (solid)
+    "reform":             ("#3b6e7a", "9 4",    "↻"),   # ↻ renewal (long dash)
+    "syncretic-descent":  ("#5e3b7a", "2 3",    "⊕"),   # ⊕ fusion (dotted)
+    "heterodox-offshoot": ("#7a5e3b", "6 4",    "≠"),   # ≠ divergence (dashed)
+    "disputed":           ("#6b6b66", "3 3",    "?"),   # ? contested (fine dash)
 }
 
 QUALIFIER_MEANING = {
@@ -914,172 +938,435 @@ def timeline_entries(objects):
     return entries, errors
 
 
-def _lineage_order(entries):
-    """Root-first lineage ordering; returns (ordered_entries, ambiguous_ids).
+# Rank for the reliance floor roll-up: R0 weakest.
+RELIANCE_TIER_RANK = {"R0": 0, "R1": 1, "R2": 2}
 
-    Roots (no branches_from) come first, then non-roots, each ordered by
-    sequence key (SEQUENCE ONLY) with the identifier as the deterministic
-    tie-break. An entry whose key is None, or which ties another entry's key,
-    is ordered by branch structure + identifier and flagged ambiguous (the
-    view notes it rather than implying a settled sequence).
+# Single slate bar colour; uncertainty (not hue) is the salient visual variable
+# on a bar, so the confidence/reliance palettes are never confused with it.
+BAR_COLOR = "#40566e"
+BAR_STROKE = "#2c3e54"
+
+# range_uncertainty -> bar geometry. high renders visibly weakest (dashed +
+# most faded); the honesty keystone made literal. A living tradition or firm
+# dating (low) is solid and strong. `fuzz` softens the START edge (an
+# approximate emergence bound). None (unfielded) gets its own honest style.
+UNC_STYLE = {
+    "low":      {"opacity": 0.82, "dash": "",    "fuzz": False},
+    "moderate": {"opacity": 0.52, "dash": "",    "fuzz": True},
+    "high":     {"opacity": 0.30, "dash": "5 3", "fuzz": True},
+}
+
+# Axis anchors (ascending). Fixed era boundaries; the last is replaced with the
+# generation year at build time so `present` extends to "now". Each adjacent
+# pair is drawn EQUAL width (piecewise compression) — see the module header.
+_AXIS_ANCHORS = [-1500, -1000, -500, 1, 500, 1000, 1500]
+
+# SVG layout constants.
+_SEG_W = 150            # px per era segment (equal width — the compression)
+_GUTTER = 214           # left column: names, chips, reliance, confidence
+_PAD_R = 26
+_AXIS_LABEL_Y = 16
+_AXIS_Y = 40            # the horizontal axis line
+_LANE_TOP = 58          # first lane top
+_LANE_H = 76
+_BAR_DY = 30            # bar top, relative to lane top
+_BAR_H = 18
+_OPEN_STUB = 66         # px width of an undated-terminus stub (never to present)
+
+
+def _num(v):
+    """Compact, deterministic number formatting for SVG coordinates."""
+    r = round(float(v), 1)
+    return str(int(r)) if r == int(r) else str(r)
+
+
+def _era_label(year):
+    """A human era label for an axis anchor year (no year 0 in history)."""
+    if year < 0:
+        return f"{-year} BCE"
+    if year == 1:
+        return "1 CE"
+    return f"{year} CE"
+
+
+def _make_year_to_x(present_year):
+    """Return (anchors, year_to_x, plot_width) for a piecewise-compressed axis.
+
+    anchors ends at present_year; each adjacent anchor pair maps to _SEG_W px.
+    year_to_x is monotonic and clamps outside the anchor span. Pure/deterministic
+    for a fixed present_year.
     """
-    roots = [e for e in entries if not e["branches"]]
-    branched = [e for e in entries if e["branches"]]
+    anchors = _AXIS_ANCHORS + [present_year]
+    n_seg = len(anchors) - 1
+    plot_w = _SEG_W * n_seg
 
-    def sort_key(e):
-        seq = e["seq"]
-        return (0 if seq is not None else 1,
-                seq if seq is not None else 0,
-                e["node"]["id"])
+    def year_to_x(y):
+        if y <= anchors[0]:
+            return _GUTTER
+        if y >= anchors[-1]:
+            return _GUTTER + plot_w
+        for i in range(n_seg):
+            a, b = anchors[i], anchors[i + 1]
+            if a <= y <= b:
+                frac = (y - a) / (b - a) if b != a else 0
+                return _GUTTER + (i + frac) * _SEG_W
+        return _GUTTER + plot_w
 
-    roots.sort(key=sort_key)
-    branched.sort(key=sort_key)
+    return anchors, year_to_x, plot_w
 
-    ambiguous = set()
-    for group in (roots, branched):
-        seqs = {}
-        for e in group:
-            if e["seq"] is None:
-                ambiguous.add(e["node"]["id"])
+
+def _reliance_floor(entry):
+    """(tier, colour, meaning) — the reliance FLOOR across resolved dating claims.
+
+    The per-locus floor roll-up of STD-0008, followed to the claims, never
+    re-derived. Unresolvable -> an honest R? (still rendered, still counted).
+    """
+    tiers = [ce["node"]["reliance_tier"] for ce in entry["claims"]
+             if ce["node"] is not None
+             and ce["node"]["reliance_tier"] in RELIANCE_COLOR]
+    if tiers:
+        tier = min(tiers, key=lambda t: RELIANCE_TIER_RANK[t])
+        return tier, RELIANCE_COLOR[tier], RELIANCE_MEANING.get(tier, "")
+    return None, "#888", "reliance tier not resolvable from dating claims"
+
+
+def _svg_reliance_badge(entry, x, y):
+    """The load-bearing reliance badge as an SVG group (class `trad-reliance`).
+
+    Never omitted for a tradition; the main() self-check counts one per node.
+    """
+    tier, color, meaning = _reliance_floor(entry)
+    text = tier or "R?"
+    w = 30
+    return (
+        f'<g class="trad-reliance"><title>reliance {esc(text)} — {esc(meaning)}'
+        f'</title>'
+        f'<rect x="{_num(x)}" y="{_num(y)}" width="{w}" height="16" rx="4" '
+        f'fill="{color}"/>'
+        f'<text x="{_num(x + w / 2)}" y="{_num(y + 12)}" text-anchor="middle" '
+        f'font-size="11" font-weight="700" fill="#fff">{esc(text)}</text></g>'
+    )
+
+
+def _svg_confidence(entry, x, y):
+    """Per-component confidence marks for a tradition's dating claim(s).
+
+    Components render SEPARATELY (never merged/averaged). Each is a small level
+    square; a weak grade (level <= 2) additionally gets a dashed outline so Low
+    reads distinct from Moderate beyond colour. An unresolved claim -> a red '?'.
+    """
+    marks = []
+    cx = x
+    for ce in entry["claims"]:
+        c = ce["node"]
+        if c is None:
+            marks.append(
+                f'<g><title>dating claim {esc(ce["id"])} does not resolve '
+                f'(graph error)</title>'
+                f'<rect x="{_num(cx)}" y="{_num(y)}" width="16" height="16" rx="3" '
+                f'fill="none" stroke="#a4243b" stroke-dasharray="2 2"/>'
+                f'<text x="{_num(cx + 8)}" y="{_num(y + 12)}" text-anchor="middle" '
+                f'font-size="11" font-weight="700" fill="#a4243b">?</text></g>')
+            cx += 20
+            continue
+        for comp in c["confidence"]:
+            level = comp["level"]
+            label = comp["label"] or (EPISTEMIC_LEVEL_LABELS.get(level, "?")
+                                      if level else "not fielded")
+            if level is None:
+                fill, outline, txt = "#999", "", "?"
             else:
-                seqs.setdefault(e["seq"], []).append(e["node"]["id"])
-        for ids in seqs.values():
-            if len(ids) > 1:
-                ambiguous.update(ids)
-    return roots + branched, ambiguous
+                fill = LEVEL_COLOR.get(level, "#888")
+                outline = (' stroke="#7a1f0b" stroke-width="1.5" '
+                           'stroke-dasharray="2 2"') if level <= 2 else ""
+                txt = str(level)
+            marks.append(
+                f'<g><title>{esc(comp["component"])}: {esc(label)} '
+                f'(confidence level {esc(level)}; dating {esc(ce["id"])})</title>'
+                f'<rect x="{_num(cx)}" y="{_num(y)}" width="16" height="16" rx="3" '
+                f'fill="{fill}"{outline}/>'
+                f'<text x="{_num(cx + 8)}" y="{_num(y + 12)}" text-anchor="middle" '
+                f'font-size="11" font-weight="700" fill="#fff">{esc(txt)}</text></g>')
+            cx += 20
+    return "".join(marks)
 
 
-def _tl_confidence(claim_entry):
-    """One dating claim's confidence, followed to the claim node.
+def _svg_bar(entry, lane_top, year_to_x, plot_right, present_year):
+    """One tradition's bar (or undated-terminus stub) + start node + labels.
 
-    Components render SEPARATELY (never merged/averaged); each level keeps its
-    colour badge, and weak grades (level <= 2) additionally get a non-colour
-    weight marking (`conf-weak`) so Low reads distinct from Moderate even in
-    grayscale — the visual-weight rule the brief makes load-bearing.
+    Encodes range_uncertainty into the geometry (opacity + dash + left fuzz).
+    `range_end_year` == 'present' extends to the axis end; an integer ends at
+    that year; ABSENT renders a dashed, fading open stub (terminus not dated by
+    the claim) — never extended to present, never a fabricated end.
     """
+    node = entry["node"]
+    start = node["range_start_year"]
+    end = node["range_end_year"]
+    unc = node["range_uncertainty"]
+    style = UNC_STYLE.get(unc, {"opacity": 0.4, "dash": "3 3", "fuzz": True})
+
+    x1 = year_to_x(start)
+    bar_top = lane_top + _BAR_DY
+    mid = bar_top + _BAR_H / 2
+    dash = f' stroke-dasharray="{style["dash"]}"' if style["dash"] else ""
+
+    open_terminus = end is None
+    if open_terminus:
+        x2 = min(x1 + _OPEN_STUB, plot_right)
+    elif isinstance(end, str):   # 'present'
+        x2 = year_to_x(present_year)
+    else:
+        x2 = year_to_x(end)
+    w = max(x2 - x1, 3)
+
+    parts = []
+    # Bar body.
+    parts.append(
+        f'<rect x="{_num(x1)}" y="{_num(bar_top)}" width="{_num(w)}" '
+        f'height="{_BAR_H}" rx="3" fill="{BAR_COLOR}" '
+        f'fill-opacity="{style["opacity"]}" stroke="{BAR_STROKE}"{dash}/>')
+    # Fuzzy (approximate) start edge for moderate/high uncertainty.
+    if style["fuzz"]:
+        fw = min(18, w)
+        parts.append(
+            f'<rect x="{_num(x1)}" y="{_num(bar_top)}" width="{_num(fw)}" '
+            f'height="{_BAR_H}" fill="url(#fadeL)"/>')
+    # Open terminus: fade the stub out to the right + a marker; NOT to present.
+    if open_terminus:
+        parts.append(
+            f'<rect x="{_num(x1)}" y="{_num(bar_top)}" width="{_num(w)}" '
+            f'height="{_BAR_H}" fill="url(#fadeR)"/>')
+        parts.append(
+            f'<text x="{_num(x2 + 4)}" y="{_num(mid + 4)}" font-size="10.5" '
+            f'font-style="italic" fill="#8a3b1a">terminus undated</text>')
+    elif isinstance(end, str):
+        # A living tradition: arrow-cap suggesting continuation to "now".
+        parts.append(
+            f'<text x="{_num(x2 - 2)}" y="{_num(mid + 4)}" text-anchor="end" '
+            f'font-size="10.5" fill="#fff">▶</text>')
+    # Start node.
+    parts.append(
+        f'<circle cx="{_num(x1)}" cy="{_num(mid)}" r="4" fill="{BAR_STROKE}"/>')
+    # display_range verbatim, on the bar (authoritative string always visible).
+    # Anchor inward when the bar starts in the right half.
+    plot_mid = _GUTTER + (plot_right - _GUTTER) / 2
+    if x1 > plot_mid:
+        dr = (f'<text x="{_num(x1 - 6)}" y="{_num(bar_top - 5)}" text-anchor="end" '
+              f'font-size="11" font-style="italic" fill="#3a3a36">'
+              f'{esc(node["display_range"])}</text>')
+    else:
+        dr = (f'<text x="{_num(x1)}" y="{_num(bar_top - 5)}" '
+              f'font-size="11" font-style="italic" fill="#3a3a36">'
+              f'{esc(node["display_range"])}</text>')
+    parts.append(dr)
+    return "".join(parts), (x1, x2, mid)
+
+
+def _svg_gutter(entry, lane_top):
+    """Left-column labels for a lane: id+name, type chip, reliance badge, confidence."""
+    node = entry["node"]
+    y_name = lane_top + 16
+    y_chip = lane_top + 26
+    y_conf = lane_top + 52
+    name = (
+        f'<text x="6" y="{_num(y_name)}" font-size="13" font-weight="700" '
+        f'fill="{node_color(node)}">{esc(node["id"])}  {esc(node["title"])}</text>')
+    ttype = node["tradition_type"] or "?"
+    chip = (
+        f'<rect x="6" y="{_num(y_chip)}" width="{6 + 7 * len(ttype)}" height="16" '
+        f'rx="8" fill="#f0ecf7" stroke="#d9d2e8"/>'
+        f'<text x="{_num(6 + (6 + 7 * len(ttype)) / 2)}" y="{_num(y_chip + 12)}" '
+        f'text-anchor="middle" font-size="10.5" fill="#5a4a72" '
+        f'font-family="ui-monospace,Menlo,monospace">{esc(ttype)}</text>')
+    badge = _svg_reliance_badge(
+        entry, 6 + (6 + 7 * len(ttype)) + 8, y_chip)
+    conf = _svg_confidence(entry, 6, y_conf)
+    return name + chip + badge + conf
+
+
+def node_color(node):
+    """A muted per-tradition-type text colour for the name label (subtle cue)."""
+    return {
+        "founded": "#2b4a5e", "emergent": "#2b5e46",
+        "reform": "#5e4a2b", "syncretic": "#4a2b5e",
+    }.get(node.get("tradition_type"), "#1e1e1c")
+
+
+def _svg_connector(child_geom, parent_geom, qual, parent_lane_mid):
+    """A branches_from connector from the parent bar down to the child start node.
+
+    Styled distinctly by qualifier (colour + dash + glyph). `disputed` is dashed
+    and marked uncertain (the disputedness is the finding). An elbow: from the
+    parent bar at the child's start x (clamped into the parent's span) to the
+    child start node.
+    """
+    cx1, _cx2, cmid = child_geom
+    px1, px2, _pmid = parent_geom
+    color, ldash, glyph = QUALIFIER_STYLE.get(qual, ("#888", "", "→"))
+    dash = f' stroke-dasharray="{ldash}"' if ldash else ""
+    origin_x = min(max(cx1, px1), px2)
+    # Elbow: down from the parent bar at origin_x, across to the child node.
+    path = (f'M {_num(origin_x)} {_num(parent_lane_mid)} '
+            f'L {_num(origin_x)} {_num(cmid)} L {_num(cx1)} {_num(cmid)}')
+    uncertain = ""
+    if qual == "disputed":
+        uncertain = (f'<text x="{_num((origin_x + cx1) / 2)}" '
+                     f'y="{_num(cmid - 5)}" font-size="10" font-style="italic" '
+                     f'fill="{color}">descent disputed — uncertainty is the finding</text>')
+    return (
+        f'<g><title>branches_from ({esc(qual or "?")})</title>'
+        f'<path d="{path}" fill="none" stroke="{color}" stroke-width="2"{dash}/>'
+        f'<circle cx="{_num(origin_x)}" cy="{_num(parent_lane_mid)}" r="3" '
+        f'fill="{color}"/>'
+        f'<text x="{_num(origin_x + 4)}" y="{_num((parent_lane_mid + cmid) / 2)}" '
+        f'font-size="12" font-weight="700" fill="{color}">{glyph}</text>'
+        f'{uncertain}</g>')
+
+
+def _svg_axis(anchors, year_to_x, plot_w, height):
+    """The horizontal compressed time axis: gridlines + era tick labels."""
+    parts = [
+        f'<line x1="{_GUTTER}" y1="{_AXIS_Y}" x2="{_num(_GUTTER + plot_w)}" '
+        f'y2="{_AXIS_Y}" stroke="#9a9a92" stroke-width="1.5"/>']
+    for a in anchors:
+        x = year_to_x(a)
+        parts.append(
+            f'<line x1="{_num(x)}" y1="{_AXIS_Y}" x2="{_num(x)}" '
+            f'y2="{_num(height)}" stroke="#ececE6" stroke-width="1"/>')
+        parts.append(
+            f'<line x1="{_num(x)}" y1="{_AXIS_Y - 4}" x2="{_num(x)}" '
+            f'y2="{_AXIS_Y + 4}" stroke="#9a9a92"/>')
+        lbl = "present" if a == anchors[-1] else _era_label(a)
+        parts.append(
+            f'<text x="{_num(x)}" y="{_AXIS_LABEL_Y}" text-anchor="middle" '
+            f'font-size="11" fill="#54544e">{esc(lbl)}</text>')
+    return "".join(parts)
+
+
+def _timeline_svg(on_axis, id_to_lane, by_id, present_year):
+    """Assemble the whole SVG string for the on-axis traditions."""
+    anchors, year_to_x, plot_w = _make_year_to_x(present_year)
+    plot_right = _GUTTER + plot_w
+    svg_w = plot_right + _PAD_R
+    height = _LANE_TOP + len(on_axis) * _LANE_H + 10
+
+    geoms = {}
+    lane_mid = {}
+    body = []
+    for i, e in enumerate(on_axis):
+        lane_top = _LANE_TOP + i * _LANE_H
+        bar_svg, geom = _svg_bar(e, lane_top, year_to_x, plot_right, present_year)
+        geoms[e["node"]["id"]] = geom
+        lane_mid[e["node"]["id"]] = lane_top + _BAR_DY + _BAR_H / 2
+        body.append(_svg_gutter(e, lane_top))
+        body.append(bar_svg)
+        # A faint lane separator.
+        body.append(
+            f'<line x1="6" y1="{_num(lane_top + _LANE_H - 2)}" '
+            f'x2="{_num(svg_w - 6)}" y2="{_num(lane_top + _LANE_H - 2)}" '
+            f'stroke="#f0f0ea"/>')
+
+    # Connectors (drawn after bars so they sit on top). Only when the parent is
+    # itself on-axis; a parent without geometry gets a noted skip.
+    conns = []
+    for e in on_axis:
+        for tgt, qual in e["branches"]:
+            if tgt in geoms:
+                conns.append(_svg_connector(
+                    geoms[e["node"]["id"]], geoms[tgt], qual, lane_mid[tgt]))
+
+    defs = (
+        '<defs>'
+        '<linearGradient id="fadeL" x1="0" y1="0" x2="1" y2="0">'
+        '<stop offset="0" stop-color="#f7f7f5" stop-opacity="0.92"/>'
+        '<stop offset="1" stop-color="#f7f7f5" stop-opacity="0"/></linearGradient>'
+        '<linearGradient id="fadeR" x1="0" y1="0" x2="1" y2="0">'
+        '<stop offset="0" stop-color="#f7f7f5" stop-opacity="0"/>'
+        '<stop offset="1" stop-color="#f7f7f5" stop-opacity="0.95"/></linearGradient>'
+        '</defs>')
+
+    axis = _svg_axis(anchors, year_to_x, plot_w, height)
+
+    return (
+        f'<div class="svg-scroll"><svg width="{_num(svg_w)}" '
+        f'height="{_num(height)}" viewBox="0 0 {_num(svg_w)} {_num(height)}" '
+        f'xmlns="http://www.w3.org/2000/svg" '
+        f'font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" '
+        f'role="img" aria-label="World-religions timeline (proportional, '
+        f'compressed axis)">'
+        f'{defs}{axis}{"".join(body)}{"".join(conns)}'
+        f'</svg></div>')
+
+
+def _svg_undated_lane(undated):
+    """Fallback HTML for tradition entities lacking numeric bounds.
+
+    NOT dropped and NOT given invented coordinates — rendered with their
+    verbatim display_range and a reliance badge, in a clearly-marked lane.
+    """
+    if not undated:
+        return ""
+    rows = []
+    for e in undated:
+        node = e["node"]
+        tier, color, meaning = _reliance_floor(e)
+        rows.append(
+            f'<div class="undated-row" id="tl-{esc(node["id"])}">'
+            f'<span class="id-badge">{esc(node["id"])}</span> '
+            f'<span class="undated-name">{esc(node["title"])}</span> '
+            f'<span class="tl-type">{esc(node["tradition_type"])}</span> '
+            f'<span class="reliance-badge trad-reliance" style="background:{color}" '
+            f'title="{esc(meaning)}">{esc(tier or "R?")}</span>'
+            f'<div class="undated-range">{esc(node["display_range"])} '
+            f'<span class="tl-range-tag">as authored — no numeric bounds; '
+            f'sequence-only</span></div></div>')
+    return (
+        '<details class="undated-lane" open>'
+        f'<summary>Undated / sequence-only ({len(undated)}) '
+        '<span class="count">— tradition entities without render bounds; '
+        'shown verbatim, never given invented coordinates</span></summary>'
+        f'{"".join(rows)}</details>')
+
+
+def _tl_confidence_html(claim_entry):
+    """One dating claim's confidence as HTML (for the curated note only)."""
     cid = claim_entry["id"]
     c = claim_entry["node"]
     if c is None:
-        return (f'<div class="tl-claim tl-claim-unresolved">dating claim '
-                f'{esc(cid)} — <span class="notfielded">pointer does not '
-                f'resolve (graph error)</span></div>')
+        return (f'<div class="tl-claim-unresolved">dating claim {esc(cid)} — '
+                f'<span class="notfielded">pointer does not resolve</span></div>')
     rows = []
     for comp in c["confidence"]:
         level, label = comp["level"], comp["label"]
         if level is None:
-            badge = '<span class="level-badge level-na" title="level not fielded">?</span>'
+            badge = '<span class="level-badge level-na">?</span>'
             lbl = '<span class="notfielded">level not fielded</span>'
             weak = ""
         else:
             color = LEVEL_COLOR.get(level, "#888")
-            badge = (f'<span class="level-badge" style="background:{color}" '
-                     f'title="confidence level {level}">{level}</span>')
+            badge = (f'<span class="level-badge" style="background:{color}">'
+                     f'{level}</span>')
             lbl = esc(label if label else EPISTEMIC_LEVEL_LABELS.get(level, "?"))
             weak = " conf-weak" if level <= 2 else ""
         rows.append(
             f'<div class="conf-row{weak}">{badge}'
             f'<span class="conf-name">{esc(comp["component"])}</span>'
             f'<span class="conf-label">{lbl}</span></div>')
-    conf = ("".join(rows) if rows
-            else '<div class="notfielded">confidence not fielded</div>')
-    return (f'<div class="tl-claim"><span class="tl-claim-id">dating: '
-            f'{esc(cid)}</span> <span class="tl-claim-title">{esc(c["title"])}'
-            f'</span><div class="conf-block">{conf}</div></div>')
-
-
-def _tl_reliance_badge(entry):
-    """The tradition node's load-bearing reliance badge (never omitted).
-
-    The tier is the FLOOR (weakest) across the entity's resolved dating
-    claims — the per-locus floor roll-up of STD-0008, followed to the claims,
-    never re-derived. Unresolvable -> an honest "R?" badge, still rendered and
-    still counted (the self-check counts `trad-reliance`, one per tradition).
-    """
-    tiers = [ce["node"]["reliance_tier"] for ce in entry["claims"]
-             if ce["node"] is not None and ce["node"]["reliance_tier"] in RELIANCE_COLOR]
-    if tiers:
-        tier = max(tiers, key=lambda t: -RELIANCE_TIER_RANK[t])
-        color = RELIANCE_COLOR[tier]
-        title = RELIANCE_MEANING.get(tier, "")
-        text = tier
-    else:
-        tier, color, title, text = None, "#888", "reliance tier not resolvable from dating claims", "R?"
-    return (f'<span class="reliance-badge trad-reliance" style="background:{color}" '
-            f'title="{esc(title)}">{esc(text)}</span>')
-
-
-# Rank for the floor roll-up: R0 weakest.
-RELIANCE_TIER_RANK = {"R0": 0, "R1": 1, "R2": 2}
-
-
-def _tl_edge(entry, by_id):
-    """The inbound branches_from edge(s), rendered distinctly by qualifier."""
-    if not entry["branches"]:
-        return ('<div class="tl-edge tl-root-marker">family root — no '
-                'branches_from edge</div>')
-    parts = []
-    for tgt, qual in entry["branches"]:
-        parent = by_id.get(tgt)
-        pname = parent["title"] if parent else tgt
-        color, border, glyph = QUALIFIER_STYLE.get(
-            qual, ("#888", "solid", "→"))
-        qual_txt = qual if qual else "qualifier missing"
-        qcls = f" qual-{qual}" if qual in QUALIFIER_STYLE else " qual-unknown"
-        uncertainty = ""
-        if qual == "disputed":
-            uncertainty = ('<div class="tl-disputed-note">descent disputed — '
-                           'the uncertainty is the finding, not a rendering '
-                           'artifact</div>')
-        parts.append(
-            f'<div class="tl-edge{qcls}" style="border-left:3px {border} {color}">'
-            f'<span class="tl-edge-glyph" style="color:{color}">{glyph}</span> '
-            f'branches_from <a class="tl-edge-target" href="#tl-{esc(tgt)}">'
-            f'{esc(tgt)}</a> {esc(pname)} '
-            f'<span class="tl-qual" style="background:{color}">{esc(qual_txt)}</span>'
-            f'{uncertainty}</div>')
-    return "".join(parts)
-
-
-def _tl_card(entry, by_id, ambiguous):
-    node = entry["node"]
-    amb = ""
-    if node["id"] in ambiguous:
-        amb = ('<span class="tl-ambiguous" title="sequence not derivable from '
-               'display_range — grouped by branch structure">sequence '
-               'ambiguous</span>')
-    claims_html = "".join(_tl_confidence(ce) for ce in entry["claims"]) or \
-        '<div class="notfielded">no dating_claims fielded</div>'
-    return (
-        f'<div class="tl-card" id="tl-{esc(node["id"])}">'
-        f'<div class="tl-head">'
-        f'<span class="id-badge">{esc(node["id"])}</span>'
-        f'<span class="tl-name">{esc(node["title"])}</span>'
-        f'<span class="tl-type">{esc(node["tradition_type"])}</span>'
-        f'{_tl_reliance_badge(entry)}'
-        f'{amb}'
-        f'</div>'
-        f'<div class="tl-range" title="display_range — rendered as authored, '
-        f'render-only, no evidential weight">{esc(node["display_range"])} '
-        f'<span class="tl-range-tag">as authored</span></div>'
-        f'{_tl_edge(entry, by_id)}'
-        f'{claims_html}'
-        f'</div>')
+    return '<div class="conf-block">' + "".join(rows) + '</div>'
 
 
 def _tl_curated_notes(by_id):
     """The curated-note cards (Zurvanism). Flagged curated, not field-derived;
-    the cited claim's confidence/reliance, where it resolves, is appended and
-    labelled as the field-derived part."""
+    the cited claim's confidence, where it resolves, is appended and labelled."""
     cards = []
     for note in CURATED_NOTES:
         cites = " · ".join(esc(c) for c in note["cites"])
-        field_html = ""
         c = by_id.get(note["field_claim"])
         if c is not None and c["type"] == "CLM":
             field_html = (
                 '<div class="tl-note-field"><span class="tl-note-field-tag">'
                 'field-derived from ' + esc(note["field_claim"]) + ':</span>'
-                + _tl_confidence({"id": note["field_claim"], "node": c})
+                + _tl_confidence_html({"id": note["field_claim"], "node": c})
                 + '</div>')
         else:
             field_html = ('<div class="notfielded">cited claim '
@@ -1091,9 +1378,22 @@ def _tl_curated_notes(by_id):
             f'<span class="tl-note-tag">curated note — not field-derived</span></div>'
             f'<div class="tl-note-body">{esc(note["body"])}</div>'
             f'<div class="tl-note-cites">per {cites}</div>'
-            f'{field_html}'
-            f'</div>')
+            f'{field_html}</div>')
     return "".join(cards)
+
+
+def _order_on_axis(on_axis):
+    """Root-first, then by numeric range_start_year, then identifier.
+
+    Deterministic; positions come from the numeric bounds, so there is no
+    display_range-derived sequence ambiguity here (that only affects the undated
+    fallback lane).
+    """
+    def key(e):
+        return (0 if not e["branches"] else 1,
+                e["node"]["range_start_year"],
+                e["node"]["id"])
+    return sorted(on_axis, key=key)
 
 
 TL_CSS = """
@@ -1107,44 +1407,36 @@ body{margin:0;font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,H
 .reliance-banner{position:sticky;top:0;z-index:50;background:var(--banner);color:var(--banner-fg);
   padding:10px 18px;font-weight:600;font-size:14px;box-shadow:0 1px 4px rgba(0,0,0,.2)}
 .reliance-banner small{display:block;font-weight:400;opacity:.92;margin-top:2px}
-.wrap{max-width:900px;margin:0 auto;padding:18px}
+.wrap{max-width:1360px;margin:0 auto;padding:18px}
 header.gen{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:baseline;
   border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:14px}
 header.gen h1{font-size:20px;margin:0}
 .genmeta{color:var(--muted);font-size:12.5px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
 .pathnote{background:#fdf6e3;border:1px solid #e8dcb5;border-radius:8px;padding:10px 14px;
   margin-bottom:14px;font-size:13px}
+.pathnote code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px}
 .legend{display:flex;flex-wrap:wrap;gap:14px;background:var(--card);border:1px solid var(--line);
   border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:12.5px}
 .legend .grp{display:flex;gap:6px;align-items:center}
 .legend .swatch{width:16px;height:16px;border-radius:4px;display:inline-block}
-.legend .edge-sample{display:inline-block;width:26px;border-bottom-width:3px;height:0}
-.tl-lane{position:relative;padding-left:26px}
-.tl-lane:before{content:"";position:absolute;left:9px;top:0;bottom:0;width:2px;background:var(--line)}
-.tl-card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:8px;
-  padding:12px 14px;margin-bottom:14px}
-.tl-card:before{content:"";position:absolute;left:-22px;top:18px;width:12px;height:12px;
-  border-radius:50%;background:var(--accent);border:2px solid var(--bg)}
-.tl-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.tl-name{font-weight:700;font-size:16px}
-.tl-type{font-size:11.5px;color:var(--muted);background:#f3eefb;border:1px solid var(--line);
+.legend svg{vertical-align:middle}
+.svg-scroll{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:8px;
+  padding:6px 4px;margin-bottom:14px}
+.svg-scroll svg{display:block}
+.tl-type{font-size:11.5px;color:#5a4a72;background:#f3eefb;border:1px solid var(--line);
   border-radius:10px;padding:1px 8px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
-.tl-range{margin:8px 0 6px;font-size:15px;font-weight:600}
 .tl-range-tag{font-size:11px;font-weight:400;color:var(--muted);font-style:italic;margin-left:6px}
-.tl-ambiguous{font-size:11px;color:#8a6d1a;background:#fdf3d0;border:1px dashed #d8c27a;
-  border-radius:10px;padding:1px 8px}
-.tl-edge{margin:7px 0;padding:5px 0 5px 10px;font-size:13px}
-.tl-root-marker{border-left:3px solid var(--accent);color:var(--muted);font-style:italic}
-.tl-edge-glyph{font-weight:700}
-.tl-edge-target{color:var(--accent);text-decoration:none;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
-.tl-qual{display:inline-block;color:#fff;font-size:11px;font-weight:700;border-radius:10px;
-  padding:1px 8px;margin-left:6px}
-.qual-disputed .tl-qual{font-style:italic}
-.tl-disputed-note{font-size:12px;color:#6b6b66;font-style:italic;margin-top:3px}
-.tl-claim{margin-top:8px;border-top:1px dashed var(--line);padding-top:7px;font-size:13px}
-.tl-claim-id{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;font-size:12px}
-.tl-claim-title{color:var(--muted);font-size:12.5px}
-.tl-claim-unresolved{color:#a4243b}
+.reliance-badge{display:inline-block;color:#fff;font-weight:700;font-size:12px;padding:2px 9px;border-radius:5px}
+.id-badge{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;font-size:12.5px}
+.notfielded{color:#a08a2a;font-size:12.5px;font-style:italic}
+.undated-lane{background:var(--card);border:1px solid var(--line);border-radius:8px;
+  margin-bottom:14px;overflow:hidden}
+.undated-lane>summary{cursor:pointer;padding:12px 14px;font-weight:600;list-style:none}
+.undated-lane>summary::-webkit-details-marker{display:none}
+.undated-lane .count{color:var(--muted);font-weight:400;font-size:12px}
+.undated-row{padding:8px 14px;border-top:1px solid var(--line)}
+.undated-name{font-weight:700}
+.undated-range{font-size:13px;margin-top:3px}
 .conf-block{display:flex;flex-direction:column;gap:3px;margin-top:5px}
 .conf-row{display:flex;gap:8px;align-items:center}
 .conf-row.conf-weak{border:1px dashed #c65a11;border-radius:6px;padding:2px 6px;background:#fdf4ec}
@@ -1154,10 +1446,6 @@ header.gen h1{font-size:20px;margin:0}
 .level-badge{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;
   border-radius:5px;color:#fff;font-weight:700;font-size:12px;flex:none}
 .level-na{background:#999}
-.id-badge{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;font-size:12.5px}
-.reliance-badge{display:inline-block;color:#fff;font-weight:700;font-size:12px;padding:2px 9px;border-radius:5px}
-.trad-reliance{margin-left:auto}
-.notfielded{color:#a08a2a;font-size:12.5px;font-style:italic}
 .tl-note{background:#f6f4ef;border:1px solid #ddd6c4;border-radius:8px;padding:12px 14px;margin:16px 0}
 .tl-note-head{font-weight:700}
 .tl-note-tag{font-size:11px;font-weight:400;color:#8a6d1a;background:#fdf3d0;border:1px dashed #d8c27a;
@@ -1166,48 +1454,74 @@ header.gen h1{font-size:20px;margin:0}
 .tl-note-cites{font-size:12px;color:var(--muted);margin-top:5px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
 .tl-note-field{margin-top:8px}
 .tl-note-field-tag{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.tl-claim-unresolved{color:#a4243b;font-size:13px}
 footer{color:var(--muted);font-size:12px;margin:20px 0 40px;text-align:center}
 """
 
 
-def build_timeline_html(objects, git_hash, gen_date):
-    """Render the timeline view as one self-contained HTML string (Path A).
+def _tl_legend():
+    """The legend: qualifier connectors, confidence, uncertainty encoding,
+    reliance tiers, and the axis-compression note. Uses tiny inline SVG samples
+    so the qualifier dash patterns match exactly what the connectors draw."""
+    quals = "".join(
+        f'<div class="grp"><svg width="30" height="12">'
+        f'<line x1="1" y1="6" x2="29" y2="6" stroke="{QUALIFIER_STYLE[q][0]}" '
+        f'stroke-width="2"'
+        + (f' stroke-dasharray="{QUALIFIER_STYLE[q][1]}"' if QUALIFIER_STYLE[q][1] else "")
+        + f'/></svg> {QUALIFIER_STYLE[q][2]} {esc(q)} — {esc(QUALIFIER_MEANING[q])}</div>'
+        for q in ("schism", "reform", "syncretic-descent",
+                  "heterodox-offshoot", "disputed"))
+    conf = "".join(
+        f'<div class="grp"><span class="swatch" style="background:{LEVEL_COLOR[l]}"></span>'
+        f'{l} {esc(EPISTEMIC_LEVEL_LABELS[l])}</div>' for l in (5, 4, 3, 2, 1))
+    reliance = "".join(
+        f'<div class="grp"><span class="swatch" style="background:{RELIANCE_COLOR[t]}"></span>'
+        f'{t}</div>' for t in ("R0", "R1", "R2"))
+    return (
+        '<div class="legend">'
+        '<div class="grp"><strong>tradition_type:</strong> founded · emergent · '
+        'reform · syncretic</div>'
+        '<div class="grp"><strong>branches_from:</strong></div>' + quals
+        + '<div class="grp"><strong>Confidence (dating):</strong></div>' + conf
+        + '<div class="grp">Low / Very Low get a dashed weak-grade outline '
+        '(not colour-only)</div>'
+        + '<div class="grp"><strong>Uncertainty → bar:</strong> low = solid/strong · '
+        'moderate = solid/faded, fuzzy start · high = dashed/most faded (visibly '
+        'weakest)</div>'
+        + '<div class="grp"><strong>Reliance:</strong></div>' + reliance
+        + '<div class="grp"><strong>Axis:</strong> piecewise-COMPRESSED — each era '
+        'segment is equal width regardless of its real duration; positions are '
+        'approximate, not pixel-proportional across the whole span</div>'
+        '</div>')
 
-    Deterministic for fixed (objects, git_hash, gen_date). Verbatim ranges;
-    sequence-only ordering; no proportional axis (named future refinement).
+
+def build_timeline_html(objects, git_hash, gen_date):
+    """Render the timeline view as one self-contained HTML string (SVG grammar).
+
+    Proportional SVG tree-on-a-time-axis (ADR-GOV-0009 upgrade). Deterministic
+    for fixed (objects, git_hash, gen_date): all ordering is by numeric bound +
+    identifier, the axis end is gen_date.year, and no randomness is used. Bounds
+    come ONLY from the render-only positioning fields (STD-0002 §11 v1.11); a
+    tradition without them renders in the undated fallback lane, never on
+    invented coordinates. display_range stays authoritative and is shown verbatim.
     """
     by_id = {o["id"]: o for o in objects}
     entries, errors = timeline_entries(objects)
-    ordered, ambiguous = _lineage_order(entries)
 
-    cards = "".join(_tl_card(e, by_id, ambiguous) for e in ordered)
+    on_axis = _order_on_axis(
+        [e for e in entries if e["node"].get("range_start_year") is not None])
+    undated = sorted(
+        [e for e in entries if e["node"].get("range_start_year") is None],
+        key=lambda e: e["node"]["id"])
+    id_to_lane = {e["node"]["id"]: i for i, e in enumerate(on_axis)}
+
+    present_year = gen_date.year
     edge_count = sum(len(e["branches"]) for e in entries)
 
-    legend = (
-        '<div class="legend">'
-        '<div class="grp"><strong>tradition_type:</strong> '
-        'founded · emergent · reform · syncretic</div>'
-        '<div class="grp"><strong>Qualifiers:</strong></div>'
-        + "".join(
-            f'<div class="grp"><span class="edge-sample" '
-            f'style="border-bottom:3px {QUALIFIER_STYLE[q][1]} {QUALIFIER_STYLE[q][0]}"></span>'
-            f'{QUALIFIER_STYLE[q][2]} {esc(q)} — {esc(QUALIFIER_MEANING[q])}</div>'
-            for q in ("schism", "reform", "syncretic-descent",
-                      "heterodox-offshoot", "disputed"))
-        + '<div class="grp"><strong>Confidence:</strong></div>'
-        + "".join(
-            f'<div class="grp"><span class="swatch" style="background:{LEVEL_COLOR[l]}"></span>'
-            f'{l} {esc(EPISTEMIC_LEVEL_LABELS[l])}</div>' for l in (5, 4, 3, 2, 1))
-        + '<div class="grp">Low / Very Low components additionally render with '
-        'a dashed weak-grade box (not colour-only)</div>'
-        '<div class="grp"><strong>Reliance:</strong></div>'
-        + "".join(
-            f'<div class="grp"><span class="swatch" style="background:{RELIANCE_COLOR[t]}"></span>'
-            f'{t}</div>' for t in ("R0", "R1", "R2"))
-        + '<div class="grp"><span class="tl-ambiguous">sequence ambiguous</span> '
-        '= order not derivable from display_range; grouped by branch structure</div>'
-        '</div>'
-    )
+    svg = (_timeline_svg(on_axis, id_to_lane, by_id, present_year)
+           if on_axis else
+           '<div class="pathnote">No tradition carries render bounds yet — '
+           'nothing to plot on the axis.</div>')
 
     banner = (
         '<div class="reliance-banner">'
@@ -1219,14 +1533,18 @@ def build_timeline_html(objects, git_hash, gen_date):
     )
 
     pathnote = (
-        '<div class="pathnote"><strong>Path A — honesty over false precision.</strong> '
-        'Every range below renders exactly as authored in its entity\'s '
-        '<code>display_range</code> (render-only, no evidential weight; dates are '
-        'claims — see each node\'s dating claim). Cards are ordered root-first, '
-        'then by a coarse era reading used for <em>sequence only</em> — spacing '
-        'and position are NOT proportional to time. A proportional numeric axis '
-        'is a named future refinement requiring structured date fields; it is '
-        'deliberately not approximated here.</div>'
+        '<div class="pathnote"><strong>Proportional axis — honesty over false '
+        'precision.</strong> Bar position and length come from the OPTIONAL '
+        'render-only bounds (<code>range_start_year</code> / '
+        '<code>range_end_year</code> / <code>range_uncertainty</code>, STD-0002 '
+        '§11 v1.11): <em>approximate, non-evidential</em> hints derived from and '
+        'bounded by each tradition\'s dating claim, inheriting its confidence — a '
+        'bar never renders more certain than the claim behind it. The authoritative '
+        'label is each bar\'s verbatim <code>display_range</code>; dates are claims. '
+        'The time axis is <strong>piecewise-compressed</strong> (each era segment '
+        'equal width regardless of real duration) so deep prehistory and the present '
+        'both stay readable — positions are approximate, not linearly proportional. '
+        'A strictly linear axis is a named future refinement.</div>'
     )
 
     errors_html = ""
@@ -1246,19 +1564,22 @@ def build_timeline_html(objects, git_hash, gen_date):
         + '<header class="gen">'
         + '<h1>Relatio — World-Religions Timeline (ADR-GOV-0009)</h1>'
         + f'<span class="genmeta">generated {esc(gen_date.isoformat())} · '
-          f'HEAD {esc(git_hash)} · read-only · frontmatter-only · Path A</span>'
+          f'HEAD {esc(git_hash)} · read-only · frontmatter-only · proportional/compressed</span>'
         + f'<span class="genmeta">{len(entries)} traditions · {edge_count} '
-          f'branches_from edges</span>'
+          f'branches_from edges · {len(undated)} undated</span>'
         + '</header>\n'
         + pathnote
-        + legend
+        + _tl_legend()
         + errors_html
-        + f'<div class="tl-lane">{cards}</div>\n'
+        + svg
+        + _svg_undated_lane(undated)
         + _tl_curated_notes(by_id)
         + '<footer>Generated by tools/build_view.py — regenerate after vault '
           'changes; never hand-edit. The reliance banner, per-tradition reliance '
-          'badges, and confidence markings are load-bearing and must not be '
-          'removed. Ranges are verbatim; ordering is sequence-only (Path A).</footer>\n'
+          'badges, and confidence/uncertainty encoding are load-bearing and must '
+          'not be removed. Numeric bounds are render-only and non-evidential; '
+          'display_range is authoritative; the axis is compressed (positions '
+          'approximate).</footer>\n'
         + '</div>\n'
         + "</body>\n</html>\n"
     )

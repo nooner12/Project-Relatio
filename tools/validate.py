@@ -16,6 +16,7 @@ from common import (
     epistemic_field_problems,
     review_field_problems,
     tradition_entity_problems,
+    tradition_range_problems,
 )
 
 ROOT = Path(__file__).parent
@@ -356,6 +357,16 @@ for file in files:
     if tradition_problems:
         detail = "\n".join(f"  {p}" for p in tradition_problems)
         errors.append(f"Tradition-entity fields malformed: {file.name}\n{detail}")
+
+    # Render-only positioning fields (STD-0002 §11 v1.11) — OPTIONAL, shape only.
+    # Enforced at error level; the four backfilled tradition entities were made
+    # conformant in the prior commit (backfill-before-enforcement), so the vault
+    # stays green. An entity carrying none of the three is silently skipped.
+    range_problems = tradition_range_problems(meta)
+
+    if range_problems:
+        detail = "\n".join(f"  {p}" for p in range_problems)
+        errors.append(f"Positioning fields malformed: {file.name}\n{detail}")
 
 if epistemic_unmigrated:
     warnings.append(

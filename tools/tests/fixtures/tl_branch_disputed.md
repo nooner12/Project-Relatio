@@ -13,6 +13,9 @@ tradition_type: syncretic
 dating_claims:
   - CLM-9101
 display_range: "12th c. CE crystallisation (fixture)"
+range_start_year: 1100
+range_end_year: present
+range_uncertainty: moderate
 relationships:
   - type: branches_from
     target: ENT-9100
