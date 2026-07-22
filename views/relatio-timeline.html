@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relatio Timeline View</title>
+<style>
+:root{
+  --bg:#f7f7f5; --fg:#1e1e1c; --muted:#6b6b66; --line:#e0e0da; --card:#ffffff;
+  --banner:#7a1f2b; --banner-fg:#fff; --accent:#2b3a67;
+}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  background:var(--bg);color:var(--fg)}
+.reliance-banner{position:sticky;top:0;z-index:50;background:var(--banner);color:var(--banner-fg);
+  padding:10px 18px;font-weight:600;font-size:14px;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.reliance-banner small{display:block;font-weight:400;opacity:.92;margin-top:2px}
+.wrap{max-width:900px;margin:0 auto;padding:18px}
+header.gen{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:baseline;
+  border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:14px}
+header.gen h1{font-size:20px;margin:0}
+.genmeta{color:var(--muted);font-size:12.5px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.pathnote{background:#fdf6e3;border:1px solid #e8dcb5;border-radius:8px;padding:10px 14px;
+  margin-bottom:14px;font-size:13px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;background:var(--card);border:1px solid var(--line);
+  border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:12.5px}
+.legend .grp{display:flex;gap:6px;align-items:center}
+.legend .swatch{width:16px;height:16px;border-radius:4px;display:inline-block}
+.legend .edge-sample{display:inline-block;width:26px;border-bottom-width:3px;height:0}
+.tl-lane{position:relative;padding-left:26px}
+.tl-lane:before{content:"";position:absolute;left:9px;top:0;bottom:0;width:2px;background:var(--line)}
+.tl-card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:8px;
+  padding:12px 14px;margin-bottom:14px}
+.tl-card:before{content:"";position:absolute;left:-22px;top:18px;width:12px;height:12px;
+  border-radius:50%;background:var(--accent);border:2px solid var(--bg)}
+.tl-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tl-name{font-weight:700;font-size:16px}
+.tl-type{font-size:11.5px;color:var(--muted);background:#f3eefb;border:1px solid var(--line);
+  border-radius:10px;padding:1px 8px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.tl-range{margin:8px 0 6px;font-size:15px;font-weight:600}
+.tl-range-tag{font-size:11px;font-weight:400;color:var(--muted);font-style:italic;margin-left:6px}
+.tl-ambiguous{font-size:11px;color:#8a6d1a;background:#fdf3d0;border:1px dashed #d8c27a;
+  border-radius:10px;padding:1px 8px}
+.tl-edge{margin:7px 0;padding:5px 0 5px 10px;font-size:13px}
+.tl-root-marker{border-left:3px solid var(--accent);color:var(--muted);font-style:italic}
+.tl-edge-glyph{font-weight:700}
+.tl-edge-target{color:var(--accent);text-decoration:none;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.tl-qual{display:inline-block;color:#fff;font-size:11px;font-weight:700;border-radius:10px;
+  padding:1px 8px;margin-left:6px}
+.qual-disputed .tl-qual{font-style:italic}
+.tl-disputed-note{font-size:12px;color:#6b6b66;font-style:italic;margin-top:3px}
+.tl-claim{margin-top:8px;border-top:1px dashed var(--line);padding-top:7px;font-size:13px}
+.tl-claim-id{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;font-size:12px}
+.tl-claim-title{color:var(--muted);font-size:12.5px}
+.tl-claim-unresolved{color:#a4243b}
+.conf-block{display:flex;flex-direction:column;gap:3px;margin-top:5px}
+.conf-row{display:flex;gap:8px;align-items:center}
+.conf-row.conf-weak{border:1px dashed #c65a11;border-radius:6px;padding:2px 6px;background:#fdf4ec}
+.conf-row.conf-weak .conf-label{font-weight:700}
+.conf-name{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px}
+.conf-label{color:var(--muted);font-size:12.5px}
+.level-badge{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;
+  border-radius:5px;color:#fff;font-weight:700;font-size:12px;flex:none}
+.level-na{background:#999}
+.id-badge{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;font-size:12.5px}
+.reliance-badge{display:inline-block;color:#fff;font-weight:700;font-size:12px;padding:2px 9px;border-radius:5px}
+.trad-reliance{margin-left:auto}
+.notfielded{color:#a08a2a;font-size:12.5px;font-style:italic}
+.tl-note{background:#f6f4ef;border:1px solid #ddd6c4;border-radius:8px;padding:12px 14px;margin:16px 0}
+.tl-note-head{font-weight:700}
+.tl-note-tag{font-size:11px;font-weight:400;color:#8a6d1a;background:#fdf3d0;border:1px dashed #d8c27a;
+  border-radius:10px;padding:1px 8px;margin-left:8px}
+.tl-note-body{font-size:13.5px;margin-top:6px}
+.tl-note-cites{font-size:12px;color:var(--muted);margin-top:5px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.tl-note-field{margin-top:8px}
+.tl-note-field-tag{font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+footer{color:var(--muted);font-size:12px;margin:20px 0 40px;text-align:center}
+</style>
+</head>
+<body>
+<div class="reliance-banner">Findings not cleared for external reliance — reliance tiers shown per node.<small>The reliance tier travels with the data. R0 = parametric only; R1 = retrieval-verified (ADR-GOV-0006); R2 = independently verified. Promoting a tier is a contribution surface, not a disclaimer — see each node.</small></div><div class="wrap">
+<header class="gen"><h1>Relatio — World-Religions Timeline (ADR-GOV-0009)</h1><span class="genmeta">generated 2026-07-22 · HEAD 1094bec · read-only · frontmatter-only · Path A</span><span class="genmeta">4 traditions · 3 branches_from edges</span></header>
+<div class="pathnote"><strong>Path A — honesty over false precision.</strong> Every range below renders exactly as authored in its entity's <code>display_range</code> (render-only, no evidential weight; dates are claims — see each node's dating claim). Cards are ordered root-first, then by a coarse era reading used for <em>sequence only</em> — spacing and position are NOT proportional to time. A proportional numeric axis is a named future refinement requiring structured date fields; it is deliberately not approximated here.</div><div class="legend"><div class="grp"><strong>tradition_type:</strong> founded · emergent · reform · syncretic</div><div class="grp"><strong>Qualifiers:</strong></div><div class="grp"><span class="edge-sample" style="border-bottom:3px solid #7a3b5e"></span>∥ schism — a split within one tradition</div><div class="grp"><span class="edge-sample" style="border-bottom:3px double #3b6e7a"></span>↻ reform — a reform movement become its own tradition</div><div class="grp"><span class="edge-sample" style="border-bottom:3px dotted #5e3b7a"></span>⊕ syncretic-descent — descent absorbing the parent among other sources</div><div class="grp"><span class="edge-sample" style="border-bottom:3px dashed #7a5e3b"></span>≠ heterodox-offshoot — a heterodox movement diverging from the parent</div><div class="grp"><span class="edge-sample" style="border-bottom:3px dashed #6b6b66"></span>? disputed — descent itself contested — the uncertainty IS the finding</div><div class="grp"><strong>Confidence:</strong></div><div class="grp"><span class="swatch" style="background:#0b6e4f"></span>5 Very High</div><div class="grp"><span class="swatch" style="background:#3d8f4e"></span>4 High</div><div class="grp"><span class="swatch" style="background:#b8860b"></span>3 Moderate</div><div class="grp"><span class="swatch" style="background:#c65a11"></span>2 Low</div><div class="grp"><span class="swatch" style="background:#a4243b"></span>1 Very Low</div><div class="grp">Low / Very Low components additionally render with a dashed weak-grade box (not colour-only)</div><div class="grp"><strong>Reliance:</strong></div><div class="grp"><span class="swatch" style="background:#5a6b8c"></span>R0</div><div class="grp"><span class="swatch" style="background:#3a5a99"></span>R1</div><div class="grp"><span class="swatch" style="background:#1f3a6e"></span>R2</div><div class="grp"><span class="tl-ambiguous">sequence ambiguous</span> = order not derivable from display_range; grouped by branch structure</div></div><div class="tl-lane"><div class="tl-card" id="tl-ENT-0008"><div class="tl-head"><span class="id-badge">ENT-0008</span><span class="tl-name">Zoroastrianism</span><span class="tl-type">founded</span><span class="reliance-badge trad-reliance" style="background:#5a6b8c" title="Parametric only — not externally verified.">R0</span></div><div class="tl-range" title="display_range — rendered as authored, render-only, no evidential weight">2nd–early 1st millennium BCE (contested) <span class="tl-range-tag">as authored</span></div><div class="tl-edge tl-root-marker">family root — no branches_from edge</div><div class="tl-claim"><span class="tl-claim-id">dating: CLM-0087</span> <span class="tl-claim-title">Zoroastrian Origins and Root Status</span><div class="conf-block"><div class="conf-row"><span class="level-badge" style="background:#b8860b" title="confidence level 3">3</span><span class="conf-name">emergence_dating</span><span class="conf-label">Moderate</span></div><div class="conf-row"><span class="level-badge" style="background:#b8860b" title="confidence level 3">3</span><span class="conf-name">family_root_status</span><span class="conf-label">Moderate</span></div></div></div></div><div class="tl-card" id="tl-ENT-0009"><div class="tl-head"><span class="id-badge">ENT-0009</span><span class="tl-name">Manichaeism</span><span class="tl-type">founded</span><span class="reliance-badge trad-reliance" style="background:#5a6b8c" title="Parametric only — not externally verified.">R0</span></div><div class="tl-range" title="display_range — rendered as authored, render-only, no evidential weight">3rd c. CE <span class="tl-range-tag">as authored</span></div><div class="tl-edge qual-syncretic-descent" style="border-left:3px dotted #5e3b7a"><span class="tl-edge-glyph" style="color:#5e3b7a">⊕</span> branches_from <a class="tl-edge-target" href="#tl-ENT-0008">ENT-0008</a> Zoroastrianism <span class="tl-qual" style="background:#5e3b7a">syncretic-descent</span></div><div class="tl-claim"><span class="tl-claim-id">dating: CLM-0089</span> <span class="tl-claim-title">Manichaean Origins and Descent</span><div class="conf-block"><div class="conf-row"><span class="level-badge" style="background:#b8860b" title="confidence level 3">3</span><span class="conf-name">emergence_dating</span><span class="conf-label">Moderate</span></div><div class="conf-row"><span class="level-badge" style="background:#b8860b" title="confidence level 3">3</span><span class="conf-name">syncretic_character</span><span class="conf-label">Moderate</span></div><div class="conf-row conf-weak"><span class="level-badge" style="background:#c65a11" title="confidence level 2">2</span><span class="conf-name">zoroastrian_as_infamily_parent</span><span class="conf-label">Low</span></div></div></div></div><div class="tl-card" id="tl-ENT-0010"><div class="tl-head"><span class="id-badge">ENT-0010</span><span class="tl-name">Mazdakism</span><span class="tl-type">reform</span><span class="reliance-badge trad-reliance" style="background:#5a6b8c" title="Parametric only — not externally verified.">R0</span></div><div class="tl-range" title="display_range — rendered as authored, render-only, no evidential weight">late 5th–early 6th c. CE (fl. under Kavad I) <span class="tl-range-tag">as authored</span></div><div class="tl-edge qual-heterodox-offshoot" style="border-left:3px dashed #7a5e3b"><span class="tl-edge-glyph" style="color:#7a5e3b">≠</span> branches_from <a class="tl-edge-target" href="#tl-ENT-0008">ENT-0008</a> Zoroastrianism <span class="tl-qual" style="background:#7a5e3b">heterodox-offshoot</span></div><div class="tl-claim"><span class="tl-claim-id">dating: CLM-0090</span> <span class="tl-claim-title">Mazdakite Origins and Descent</span><div class="conf-block"><div class="conf-row conf-weak"><span class="level-badge" style="background:#c65a11" title="confidence level 2">2</span><span class="conf-name">emergence_dating</span><span class="conf-label">Low</span></div><div class="conf-row conf-weak"><span class="level-badge" style="background:#c65a11" title="confidence level 2">2</span><span class="conf-name">heterodox_descent</span><span class="conf-label">Low</span></div></div></div></div><div class="tl-card" id="tl-ENT-0011"><div class="tl-head"><span class="id-badge">ENT-0011</span><span class="tl-name">Yazidism</span><span class="tl-type">syncretic</span><span class="reliance-badge trad-reliance" style="background:#5a6b8c" title="Parametric only — not externally verified.">R0</span></div><div class="tl-range" title="display_range — rendered as authored, render-only, no evidential weight">12th c. CE crystallisation (earlier substrate disputed) <span class="tl-range-tag">as authored</span></div><div class="tl-edge qual-disputed" style="border-left:3px dashed #6b6b66"><span class="tl-edge-glyph" style="color:#6b6b66">?</span> branches_from <a class="tl-edge-target" href="#tl-ENT-0008">ENT-0008</a> Zoroastrianism <span class="tl-qual" style="background:#6b6b66">disputed</span><div class="tl-disputed-note">descent disputed — the uncertainty is the finding, not a rendering artifact</div></div><div class="tl-claim"><span class="tl-claim-id">dating: CLM-0091</span> <span class="tl-claim-title">Yazidi Origins and Descent</span><div class="conf-block"><div class="conf-row"><span class="level-badge" style="background:#b8860b" title="confidence level 3">3</span><span class="conf-name">crystallization_dating</span><span class="conf-label">Moderate</span></div><div class="conf-row"><span class="level-badge" style="background:#b8860b" title="confidence level 3">3</span><span class="conf-name">descent_disputed</span><span class="conf-label">Moderate</span></div></div></div></div></div>
+<div class="tl-note"><div class="tl-note-head">Zurvanism — investigated, found NOT to warrant tradition status <span class="tl-note-tag">curated note — not field-derived</span></div><div class="tl-note-body">A hypothesized branch (Zurvanism) was investigated in INV-0016 and found not to clear the §2.3 distinctness threshold: no attested separate community, priesthood, or lineage. It is modelled as a heterodox CURRENT within Zoroastrianism (ENT-0008) — no tradition entity, no branches_from edge. The overturned hypothesis is a feature of the record, not an omission.</div><div class="tl-note-cites">per INV-0016 · CLM-0088</div><div class="tl-note-field"><span class="tl-note-field-tag">field-derived from CLM-0088:</span><div class="tl-claim"><span class="tl-claim-id">dating: CLM-0088</span> <span class="tl-claim-title">Zurvanism Origins and Descent</span><div class="conf-block"><div class="conf-row"><span class="level-badge" style="background:#b8860b" title="confidence level 3">3</span><span class="conf-name">zurvanite_ideas_attested</span><span class="conf-label">Moderate</span></div><div class="conf-row conf-weak"><span class="level-badge" style="background:#c65a11" title="confidence level 2">2</span><span class="conf-name">distinct_tradition_status</span><span class="conf-label">Low</span></div></div></div></div></div><footer>Generated by tools/build_view.py — regenerate after vault changes; never hand-edit. The reliance banner, per-tradition reliance badges, and confidence markings are load-bearing and must not be removed. Ranges are verbatim; ordering is sequence-only (Path A).</footer>
+</div>
+</body>
+</html>
