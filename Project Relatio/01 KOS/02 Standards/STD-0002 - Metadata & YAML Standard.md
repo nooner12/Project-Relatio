@@ -1,7 +1,7 @@
 ---
 title: STD-0002 - Metadata & YAML Standard
 document_type: Standards Document
-version: 1.10
+version: 1.11
 status: Adopted
 operational_status: Active
 category:
@@ -30,7 +30,7 @@ tags:
 
 # Project Relatio Metadata & YAML Standard
 
-## Version 1.10
+## Version 1.11
 
 ## Adopted Standards Document
 
@@ -593,6 +593,32 @@ display_range: "3rd c. CE"     # render-only string; the claims are the truth
 - `display_range` is **presentation only** and carries **no evidential weight** — a tradition's contestedness lives in the confidence of its dating claims, not in this string.
 - **No `origin_date` (or any other temporal) field exists on entities, by decision** (ADR-GOV-0009, Alternatives §2): dates are claims, not entity fields. `display_range` is the sole render string.
 
+### Render-only positioning bounds (v1.11 — OPTIONAL)
+
+A tradition-class entity **may** additionally carry three optional fields whose sole purpose is to let a renderer position the tradition on a proportional time axis (the SVG timeline view). They are **not** part of the evidential record:
+
+```
+range_start_year: -1500        # integer; negative = BCE, positive = CE; the earliest DEFENSIBLE bound
+range_end_year: -1000          # integer (same convention), OR the literal token: present
+range_uncertainty: high        # low | moderate | high
+```
+
+**Field rules:**
+
+- **RENDER-ONLY, APPROXIMATE, NON-EVIDENTIAL.** These are positioning hints for a proportional axis, nothing more. They carry **no evidential weight** and must **never** be read as a claim, cited, or treated as authoritative. **`display_range` remains the authoritative human label**; where the two ever appear to disagree, `display_range` and the dating claim behind it win.
+- **DERIVED FROM AND BOUNDED BY the entity's `dating_claim`(s).** They are the earliest / latest **defensible** bounds the dating claim supports, **never a false point**, and they **inherit that claim's confidence** — a bar drawn from them must never render as *more certain* than the dating claim warrants. `range_start_year` is the earliest defensible emergence bound; `range_end_year` is the latest defensible bound, or `present` for a living tradition.
+- **OPTIONAL.** A tradition that omits them is not malformed — it renders by a documented fallback (an "undated / sequence-only" lane showing its verbatim `display_range`, never invented coordinates). When **any** of the three is present, **`range_start_year` and `range_uncertainty` are co-required**; `range_end_year` is optional (absent = terminus not dated by the claim; `present` = living tradition).
+- **`range_uncertainty` is reproducible, not ad hoc.** It maps from the confidence of the dating claim's **emergence/crystallisation-dating component** — the component that grades *when* the tradition emerged (where more than one dating-bearing component exists, the weakest of them). Non-temporal components (descent, classification, qualifier) grade the lineage, not the position in time, and do **not** govern this field. The mapping:
+
+  | dating-component confidence (KOS-0003 §8) | `range_uncertainty` |
+  |---|---|
+  | High / Very High | `low` |
+  | Moderate | `moderate` |
+  | Low / Very Low | `high` |
+
+  A renderer encodes `range_uncertainty` **into the geometry** — `high` renders as a visibly dashed / faded bar so that low confidence *looks* weak. This preserves, in the picture, the contestedness the architecture refuses to erase.
+- The validator shape-checks these at **error** level: `range_start_year` an integer; `range_end_year` an integer or the literal `present`; `range_uncertainty` one of `low`/`moderate`/`high`; and the start+uncertainty co-presence rule. Whether a bound is *correctly derived* from the claim is a review question, not a shape question.
+
 ---
 
 # 12. Metadata Integrity Rules
@@ -715,6 +741,7 @@ Project Relatio adopts:
 |1.8|2026-07-20|Adopted|Added §11 subsection **Claim Records and Finding Records**, requiring the epistemic-axis fields `confidence` (always-a-list, per-component level/label) and `reliance_tier` (R0/R1/R2). Additive document-class fields per the existing §11 pattern; values and rules governed by the Epistemic State Standard (STD-0008), whose R-tier vocabulary is constitutionally sourced from ADR-GOV-0006. Labels follow the canonical KOS-0003 §8 scale (Very High / High / Moderate / Low / Very Low). No existing field removed, renamed, or redefined. Migration of existing Claim/Finding records gated separately (GB-2026-038); until it completes, the validator's epistemic-field check is warning-gated.|
 |1.9|2026-07-21|Adopted|Activated review fields (review_cycle/review_date/last_reviewed) as required Claim/Finding fields per ADR-GOV-0008 and the Review & Revision Standard (STD-0009); promoted them out of §8 reserved status; added optional bounded_by to confidence components (graph-claim rule §12.1 applies). Additive.|
 |1.10|2026-07-21|Adopted|Added §11 subsection **Entity Records (tradition class)**, requiring `tradition_type` (founded/emergent/reform/syncretic), `dating_claims` (graph-claim pointers, §12.1), and `display_range` (render-only string) on tradition-class entities and forbidding them on concept entities (ENT-0001…0007 untouched), enacting ADR-GOV-0009 D3. No `origin_date` field exists by decision (dates are claims). Additive document-class fields per the existing §11 pattern; validator shape-checks co-presence and the tradition_type vocabulary at error level.|
+|1.11|2026-07-22|Adopted|Added to the §11 **Entity Records (tradition class)** subsection three **OPTIONAL, render-only positioning fields** — `range_start_year` (integer, BCE negative), `range_end_year` (integer or the literal `present`), and `range_uncertainty` (`low`/`moderate`/`high`) — enabling the proportional SVG timeline view (owner-ratified upgrade from Path A). **Non-evidential:** derived from and bounded by the entity's dating claim(s), inheriting that claim's confidence; a bar drawn from them must never render more certain than the claim warrants; `display_range` remains the authoritative label. `range_uncertainty` maps reproducibly from the confidence of the claim's **emergence/crystallisation-dating component** (High/VeryHigh→low, Moderate→moderate, Low/VeryLow→high; non-temporal descent/classification components do not govern it — refines the ADR-GOV-0009-brief phrasing "weakest component," which read literally would let a Low *descent* grade mis-mark a well-dated tradition). OPTIONAL: a tradition without them renders by a documented undated/sequence-only fallback (never invented coordinates); when any is present, `range_start_year` and `range_uncertainty` are co-required, `range_end_year` optional (absent = terminus not claim-dated; `present` = living). Additive only — no existing field removed, renamed, or redefined. Validator shape-check (integer years or `present`; uncertainty vocabulary; start+uncertainty co-presence) at error level, enabled only after the four existing tradition entities were backfilled this session (vault green at every boundary).|
 
 ---
 

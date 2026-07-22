@@ -1,7 +1,7 @@
 ---
 title: ENT-0011 - Yazidism
 document_type: Entity Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-21
@@ -26,6 +26,9 @@ tradition_type: syncretic
 dating_claims:
   - CLM-0091
 display_range: "12th c. CE crystallisation (earlier substrate disputed)"
+range_start_year: 1100
+range_end_year: present
+range_uncertainty: moderate
 relationships:
   - type: branches_from
     target: ENT-0008
@@ -67,6 +70,6 @@ relationships:
 # 6. Revision History
 |Version|Date|Status|Description|
 |---|---|---|---|
-|0.1|2026-07-21|Draft|Created at INV-0016 circuit. `tradition_type: syncretic`; `dating_claims` CLM-0091 (12th-c. ʿAdī crystallisation; earlier substrate disputed); `display_range` render-only. `branches_from` ENT-0008 qualifier `disputed` (warrant CLM-0091 — the disputedness is the finding), with the target-stretch and out-of-family-alternative strains flagged for Anchor Fit. Distinctness met. Pending Critical Review and structural validation.|
+|0.2|2026-07-22|Draft|Added the OPTIONAL render-only positioning bounds (STD-0002 §11 v1.11) for the proportional SVG timeline: `range_start_year: 1100`, `range_end_year: present`, `range_uncertainty: moderate`. **Derived from and bounded by the dating claim CLM-0091** — the earliest defensible bound is the 12th-c. crystallisation around Sheikh ʿAdī ibn Musāfir (the bar deliberately does NOT extend into the undated, disputed pre-Islamic substrate — that contestation lives in CLM-0091 and the `disputed` lineage qualifier, not in a fabricated earlier start); `present` because Yazidism is a living tradition; `moderate` inherits CLM-0091's Moderate crystallization-dating component. (The brief's looser "high uncertainty on any earlier extension" concerns the substrate the bar excludes; the crystallisation the bar represents is Moderate — claim wins. Reported.) **Non-evidential, render-only; `display_range` remains authoritative.** No other field touched.|
 
 # End ENT-0011
