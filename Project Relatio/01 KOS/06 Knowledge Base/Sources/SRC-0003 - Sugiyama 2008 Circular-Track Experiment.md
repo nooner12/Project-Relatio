@@ -1,7 +1,7 @@
 ---
 title: SRC-0003 - Sugiyama 2008 Circular-Track Experiment
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-09
@@ -30,6 +30,13 @@ relationships:
     target: CLM-0004
   - type: related_to
     target: SRC-0004
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0003
@@ -83,6 +90,7 @@ Sugiyama et al., "Traffic jams without bottlenecks — experimental evidence for
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-09|Draft|Created for RQ-0002|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

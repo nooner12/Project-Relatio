@@ -1,7 +1,7 @@
 ---
 title: SRC-0025 - Rhodes de Bruijn 2013 Physical Activity Intention-Behaviour Gap Meta-Analysis
 document_type: Source Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-11
@@ -29,6 +29,13 @@ relationships:
     target: CLM-0019
   - type: defines
     target: ENT-0004
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-11
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0025
@@ -67,5 +74,6 @@ Meta-analysis quantifying the gap between physical-activity **intention** and **
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created for RQ-0006. Directional finding (gap driven by non-acting intenders) verified this session; exact intender-failure percentage flagged as variably restated (~46–54%) and reported as "approximately half," not a precise figure. Full text behind paywall (Wiley 403); abstract-level verification only.|
 |0.2|2026-07-11|Draft|Remediation pass (remediation #2): overall ≈46% gap and "only ~2% of the sample were active non-intenders" re-confirmed via the abstract; softened the non-intender "~97–98% correspondence" wording (unconfirmable to full text; reconstruction ⇒ ~91%) to "large majority remained inactive." Reconciled in CLM-0019 and ENT-0004.|
+|0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0025

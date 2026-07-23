@@ -1,7 +1,7 @@
 ---
 title: KOS-0001 - Research Operating System Foundation & Charter
 document_type: Kernel Operating System Document
-version: 1.2
+version: 1.3
 status: Adopted
 operational_status: Active
 category:
@@ -24,14 +24,20 @@ tags:
   - ResearchOS
   - KnowledgeArchitecture
   - FoundationalDocument
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # KOS-0001
 
 # Project Relatio Research Operating System Foundation & Charter
 
-## Version 1.2
-
+## Version 1.3
 ## Adopted Kernel Document
 
 ---
@@ -369,6 +375,7 @@ Project Relatio adopts:
 |1.0|2026-07-09|Adopted|Formalized Research OS Foundation & Charter|
 |1.1|2026-07-11|Adopted|Kernel audit (GB-2026-018): §7 corrected — the "currently consists of" list named only the five founding Kernel docs; added a note deferring to the Kernel Index as the authoritative inventory and naming the later additions (KOS-0007…0012, ADR-GOV-0001). No change to the founding conceptual core.|
 |1.2|2026-07-11|Adopted|**GB-2026-022 resolved (owner-directed):** softened §2's "ultimate reality and **creation**" → "ultimate reality and the question of origins (including creation claims)," with a note framing origin/ultimate-reality as open questions under ontological humility (CON-0004 §2) — no account (creator-based, naturalistic, or other) is presumed; all remain open to evidence and revision.|
+|1.3|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

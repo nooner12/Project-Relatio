@@ -1,7 +1,7 @@
 ---
 title: SRC-0096 - Ehrman Forgery and Counterforgery
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -31,6 +31,13 @@ relationships:
     target: CLM-0072
   - type: part_of
     target: INV-0013
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0096
@@ -71,5 +78,6 @@ Bart D. Ehrman, *Forgery and Counterforgery: The Use of Literary Deceit in Early
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0013. Scholarly monograph on early Christian pseudonymity; H-band H-e. Supports the Pauline authorship gradient; deceit-framing minority-disputed. Live-verified strong on citation.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0096

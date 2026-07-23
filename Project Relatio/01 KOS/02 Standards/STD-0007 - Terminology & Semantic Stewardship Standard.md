@@ -1,7 +1,7 @@
 ---
 title: STD-0007 - Terminology & Semantic Stewardship Standard
 document_type: Standards Document
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -22,14 +22,20 @@ tags:
   - Terminology
   - Semantics
   - KnowledgeArchitecture
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # STD-0007
 
 # Project Relatio Terminology & Semantic Stewardship Standard
 
-## Version 1.0
-
+## Version 1.1
 ## Adopted Standards Document
 
 ---
@@ -454,6 +460,7 @@ Semantic stewardship preserves the ability of knowledge to remain understandable
 |Version|Date|Status|Description|
 |---|---|---|---|
 |1.0|2026-07-09|Adopted|Initial semantic stewardship standard|
+|1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

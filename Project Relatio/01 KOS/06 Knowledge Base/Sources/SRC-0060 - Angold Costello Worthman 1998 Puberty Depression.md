@@ -1,7 +1,7 @@
 ---
 title: SRC-0060 - Angold Costello Worthman 1998 Puberty Depression
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-15
@@ -29,6 +29,13 @@ relationships:
     target: CLM-0045
   - type: part_of
     target: INV-0010
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-15
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0060
@@ -69,5 +76,6 @@ Angold, A., Costello, E. J., & Worthman, C. M. (1998), "Puberty and depression: 
 |---|---|---|---|
 |0.1|2026-07-15|Draft|Created for RQ-0010. Psychol. Med. 28(1):51–61 — verified via PubMed 9483683. Construct-provenance: `SEX-MEASURED` (physically assessed Tanner pubertal status with a maturational mechanism) — the single source that can license a bounded sex/biology-attributed timing claim; mechanism (hormonal vs socially-mediated) remains contested and caps the claim.|
 |0.1a|2026-07-15|Draft|Added F-2 limitation per Critical Review – RQ-0010: puberty occurs in both sexes, so pubertal-stage measurement does not establish between-sex biological causation (sex × puberty interaction unmeasured). `SEX-MEASURED` code stands (census 7/1 unchanged; verified by reviewer).|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0060

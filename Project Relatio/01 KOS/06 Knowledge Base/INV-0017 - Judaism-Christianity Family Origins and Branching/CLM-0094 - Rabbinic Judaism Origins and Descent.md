@@ -1,7 +1,7 @@
 ---
 title: CLM-0094 - Rabbinic Judaism Origins and Descent
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-22
@@ -52,6 +52,13 @@ reliance_note: "verification-light review; not cleared for external reliance"
 review_cycle: 6
 review_date: 2027-01-22
 last_reviewed: 2026-07-22
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-22
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0094
@@ -129,5 +136,6 @@ Type: **Historical.**
 |---|---|---|---|
 |0.1|2026-07-22|Draft|Created for RQ-0017 (Specialist pass) — **the anchor stress-test claim.** Post-70 CE emergence; Mishnah c. 200 CE anchor (SRC-0142; live-verified framing), consolidation process contested (Yavneh narrative disputed). Descent from Second Temple Judaism as the CONTINUATION / main line (via the Pharisaic stream), Moderate — bounded by the rupture-vs-continuity debate. `branches_from` Second Temple Judaism qualifier `reform` chosen as **least-wrong under explicit protest**: the controlled list contains no value for main-line continuation (`schism`/`heterodox-offshoot`/`syncretic-descent`/`disputed` each wrong; `reform` understates the least-departed line); `reform_qualifier_fit` graded Low to encode the vocabulary strain (mirroring CLM-0089's strained-component Low), with a routed recommendation for a new `continuation`/`main-line` qualifier. `tradition_type: reform` noted DISTINCT from the qualifier `reform` per §2.8 (same word, different vocabulary, both flagged). Rupture rival (Neusner) and continuity counter-pole both steelmanned — the two poles squeeze the qualifier off `reform` in opposite directions. Metaphysical/neutrality bracket acute — no polemical "residue" framing. Interiors parametric; verification-light; R0; not cleared for external reliance. Pending Critical Review and structural validation.|
 |0.2|2026-07-22|Draft|**Anchor stress-test RESOLVED — ADR-GOV-0010 enactment (D2), warrant re-grade.** The routed recommendation was adopted: ADR-GOV-0010 D1 added a `continuation` qualifier (STD-0004 §7.2 v1.3) and D2 re-qualified the ENT-0014 → ENT-0012 edge `reform` → `continuation`. The qualifier-fit confidence component is **renamed `reform_qualifier_fit` → `continuation_qualifier_fit`** and **re-graded Low (Level 2) → Moderate (Level 3)**: the Low encoded only the *missing word*, never descent doubt; with the right word supplied the fit is good, held at Moderate (not High) by the live rupture-vs-continuity debate and R0 interiors — **not inflated** (does not exceed the Moderate descent grade, which is unchanged). Prose updated throughout (Claim head, element (ii) edge + vocabulary block + `tradition_type` note, element (iii) squeeze, Assumptions, §8 Confidence, Limitations, Relationships) to reflect resolution; the split-list confidence structure is preserved (three components). No other grade changed; the two-`reform` disambiguation lifted to STD-0004 §7.2 (D3). Anchors stay PROVISIONAL (D5).|
+|0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0094

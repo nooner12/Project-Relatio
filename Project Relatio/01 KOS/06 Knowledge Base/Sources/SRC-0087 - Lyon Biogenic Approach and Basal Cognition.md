@@ -1,7 +1,7 @@
 ---
 title: SRC-0087 - Lyon Biogenic Approach and Basal Cognition
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -28,6 +28,13 @@ relationships:
     target: CLM-0066
   - type: part_of
     target: INV-0012
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0087
@@ -66,5 +73,6 @@ Pamela Lyon (University of Adelaide), "The biogenic approach to cognition," *Cog
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0012. Basal-cognition grading framework for CLM-0066; contested-construct status flagged; sentience explicitly outside it. Live-verified moderate-to-strong.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0087

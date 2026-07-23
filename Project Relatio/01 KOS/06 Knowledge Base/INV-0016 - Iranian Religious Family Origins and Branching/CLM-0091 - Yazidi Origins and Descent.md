@@ -1,7 +1,7 @@
 ---
 title: CLM-0091 - Yazidi Origins and Descent
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-21
@@ -43,6 +43,13 @@ reliance_note: "verification-light review; not cleared for external reliance"
 review_cycle: 9
 review_date: 2027-04-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-21
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0091
@@ -110,5 +117,6 @@ Type: **Historical (monograph + documentary history; oral-tradition-mediated).**
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-21|Draft|Created for RQ-0016 (Specialist pass). 12th-c. crystallisation around Sheikh ʿAdī/Lalish (Kreyenbroek) Moderate; deeper descent genuinely disputed (Iranian-substrate advocacy vs Sufi-origin account) Moderate — the disputedness is the finding, neither derivation established. In-family `branches_from` Zoroastrianism qualifier `disputed` (scaffold hypothesis confirmed) with two flagged strains (target = family-root stand-in for broad Iranian substrate; strongest alternative is out-of-family Sufi origin). `tradition_type: syncretic`. Distinctness met. Sufi-origin rival steelmanned as fully live. Verification-light; R0; not cleared for external reliance. Pending Critical Review and structural validation.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0091

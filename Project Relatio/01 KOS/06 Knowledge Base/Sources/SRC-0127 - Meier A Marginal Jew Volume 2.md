@@ -1,7 +1,7 @@
 ---
 title: SRC-0127 - Meier A Marginal Jew Volume 2
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -35,6 +35,13 @@ relationships:
     target: CLM-0080
   - type: part_of
     target: INV-0014
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-20
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0127
@@ -79,5 +86,6 @@ John P. Meier, *A Marginal Jew: Rethinking the Historical Jesus, vol. 2: Mentor,
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-20|Draft|Created for RQ-0014. Meier vol. 2 (distinct work from SRC-0098 vol. 1): baptism-by-John via embarrassment, Kingdom proclamation, miracle tradition as repute-not-event. H-band H-e in prose. Live-verified strong (bibliographic + structure + the embarrassment formulation).|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0127

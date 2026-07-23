@@ -1,7 +1,7 @@
 ---
 title: CLM-0061 - Electrical Signaling Datum and Language Overreach
 document_type: Claim Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -49,6 +49,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 3
 review_date: 2026-10-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0061
@@ -140,5 +147,6 @@ The four sources bracket the question well: a pre-hype 1995 datum (Olsson), the 
 |0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 |0.1a|2026-07-19|Draft|**Remediated per Critical Review – RQ-0012 F-2 (documentation only; no level change).** Added a cross-note to the Confidence section pointing to the shared two-level headline-selection rule (stated in full in CLM-0063): this is a hold-the-datum claim, so it headlines at the higher sub-level (Moderate) — the same rule that lands CLM-0063 at its lower sub-level. No confidence changed.|
 |0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.4|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0061

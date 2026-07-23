@@ -1,7 +1,7 @@
 ---
 title: SRC-0141 - Becker Reed The Ways That Never Parted
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-22
@@ -29,6 +29,13 @@ relationships:
     target: SRC-0139
   - type: contrasts_with
     target: SRC-0140
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-22
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0141
@@ -68,5 +75,6 @@ Adam H. Becker & Annette Yoshiko Reed (eds.), *The Ways That Never Parted: Jews 
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-22|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as the "never (cleanly) parted" pole of the INV-0017 rival readings. Bibliographically live-verified; interior parametric; edited-volume caveat disclosed. `contrasts_with` SRC-0140 reciprocated. English; in print.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0141

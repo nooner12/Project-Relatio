@@ -1,7 +1,7 @@
 ---
 title: SRC-0061 - Lewinsohn et al 1998 Anxiety Gender Differences
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-15
@@ -28,6 +28,13 @@ relationships:
     target: CLM-0046
   - type: part_of
     target: INV-0010
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-15
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0061
@@ -65,5 +72,6 @@ Lewinsohn, P. M., Gotlib, I. H., Lewinsohn, M., Seeley, J. R., & Allen, N. B. (1
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-15|Draft|Created for RQ-0010. J. Abnorm. Psychol. 107(1):109–117 — verified via PubMed 9505043. Construct-provenance: `CONFLATED` (female/male category on retrospective self-report; no mechanism, no gender measure). Supports only a gender-patterned/unattributed early-divergence claim; the exact age-6 figure is a soft retrospective anchor.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0061

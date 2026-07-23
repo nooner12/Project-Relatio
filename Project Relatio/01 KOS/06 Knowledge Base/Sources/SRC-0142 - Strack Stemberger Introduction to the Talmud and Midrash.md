@@ -1,7 +1,7 @@
 ---
 title: SRC-0142 - Strack Stemberger Introduction to the Talmud and Midrash
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-22
@@ -26,6 +26,13 @@ tags:
 relationships:
   - type: related_to
     target: SRC-0138
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-22
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0142
@@ -64,5 +71,6 @@ Hermann L. Strack & Günter Stemberger, *Introduction to the Talmud and Midrash*
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-22|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as the INV-0017 base's Rabbinic-literature dating authority (Mishnah c. 200 CE). Bibliographically live-verified; interior parametric; 1991/1992/1996 edition landscape disclosed rather than collapsed. `related_to` SRC-0138 reciprocated. English; in print.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0142

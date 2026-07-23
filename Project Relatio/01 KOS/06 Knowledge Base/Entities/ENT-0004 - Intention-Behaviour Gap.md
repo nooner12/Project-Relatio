@@ -1,7 +1,7 @@
 ---
 title: ENT-0004 - Intention-Behaviour Gap
 document_type: Entity Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-11
@@ -35,6 +35,13 @@ relationships:
     target: SRC-0024
   - type: part_of
     target: INV-0006
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-11
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # ENT-0004
@@ -72,5 +79,6 @@ The intention–behaviour gap is the **conceptual hinge of the whole investigati
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created for RQ-0006. Classified as an empirical-regularity construct with magnitude-variability caveat. Grounds the investigation's factor/intervention structure and cross-links the health-behaviour investigations.|
 |0.2|2026-07-11|Draft|Remediation pass (Critical Review remediation #2): softened the non-intender "~97–98% inactive" figure to "the large majority of non-intenders remained inactive" — precise figure unconfirmed to the paywalled full text (abstract reconstruction ⇒ ~91%); reconciled identically in CLM-0019 and SRC-0025. Also refreshed the FND-0006 display title after its rename.|
+|0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End ENT-0004

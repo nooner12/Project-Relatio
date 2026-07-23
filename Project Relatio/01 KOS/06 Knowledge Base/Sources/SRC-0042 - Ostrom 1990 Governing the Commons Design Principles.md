@@ -1,7 +1,7 @@
 ---
 title: SRC-0042 - Ostrom 1990 Governing the Commons Design Principles
 document_type: Source Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-12
@@ -26,6 +26,13 @@ tags:
 relationships:
   - type: supports
     target: CLM-0033
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-12
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0042
@@ -62,5 +69,6 @@ Ostrom, E. (1990), *Governing the Commons: The Evolution of Institutions for Col
 |---|---|---|---|
 |0.1|2026-07-12|Draft|Created for RQ-0007. Book, publisher (Cambridge University Press, 1990), Nobel recognition, and the design-principles set verified this session via multiple scholarly summaries; principle wording paraphrased. Transfer to knowledge-systems governance flagged as analogical.|
 |0.2|2026-07-12|Draft|Post-review remediation (Critical Review - RQ-0007): reviewer re-confirmed the design-principle set as used. Removed the unverified ISBN from source_url (§12.1); short-title cross-reference to CLM-0033 (STD-0001 §10). No content change.|
+|0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0042

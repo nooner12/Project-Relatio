@@ -1,7 +1,7 @@
 ---
 title: FND-0014 - What the Historical Record Supports About Jesus of Nazareth
 document_type: Finding Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -54,6 +54,13 @@ reliance_note: "verification-light review; not cleared for external reliance."
 review_cycle: 6
 review_date: 2027-01-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-20
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # FND-0014
@@ -135,5 +142,6 @@ last_reviewed: 2026-07-21
 |0.1|2026-07-20|Draft|Created for RQ-0014. Layered verdict: core (existence, crucifixion-fact) Level 4 on the contemporary Pauline layer; ministry profile (Pilate frame, baptism, kingdom-proclamation, exorcist-healer repute) Level 3 on the reconstructed Gospel/external layers with three §9 consensus-surpluses recorded; teaching split — characteristic voice Level 3, specific wording Level 2 (invention rival wins item level, recorded). No Level 5; both poles steelmanned and refused; metaphysics bracketed both directions throughout. Verification moderate; not cleared for external reliance (§7.5). Pending ROLE-0004 review and ROLE-0001 validation.|
 |0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End FND-0014

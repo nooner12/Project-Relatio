@@ -1,7 +1,7 @@
 ---
 title: SRC-0051 - Rosanbalm Murray 2017 Co-Regulation Practice Brief
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -29,6 +29,13 @@ relationships:
     target: CLM-0038
   - type: defines
     target: ENT-0006
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-14
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0051
@@ -67,5 +74,6 @@ Rosanbalm, K. D., & Murray, D. W. (2017), *Co-Regulation From Birth Through Youn
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-14|Draft|Created for RQ-0008. OPRE Report 2017-79 (Rosanbalm & Murray, FPG/ACF) verified this session via ACF/OPRE + FPG pages and PDF. Three co-regulation components and predictability/felt-safety framing recorded. Flagged as a synthesis brief (no effect sizes) with parenting-research provenance and partial clinical-population roots.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0051

@@ -1,7 +1,7 @@
 ---
 title: SRC-0005 - Slingerland, Effortless Action
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-09
@@ -33,6 +33,13 @@ relationships:
     target: ENT-0001
   - type: related_to
     target: SRC-0002
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0005
@@ -86,6 +93,7 @@ Edward Slingerland, *Effortless Action: Wu-wei as Conceptual Metaphor and Spirit
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-09|Draft|Created for RQ-0003|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

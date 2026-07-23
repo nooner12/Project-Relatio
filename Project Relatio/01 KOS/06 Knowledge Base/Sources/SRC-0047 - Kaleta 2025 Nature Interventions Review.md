@@ -1,7 +1,7 @@
 ---
 title: SRC-0047 - Kaleta et al 2025 Nature-Based Interventions Review of Reviews
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -26,6 +26,13 @@ tags:
 relationships:
   - type: supports
     target: CLM-0034
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-14
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0047
@@ -64,5 +71,6 @@ Kaleta, B., Campbell, S., O'Keeffe, J., & Burke, J. (2025), "Nature-based interv
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-14|Draft|Created for RQ-0008. Authors, journal (Frontiers in Psychology 2025), review-of-reviews design (61 reviews), attention/short-term conclusion, and 7/61-moderator quality caveat verified this session via WebFetch of the full text. Funding not verified.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0047

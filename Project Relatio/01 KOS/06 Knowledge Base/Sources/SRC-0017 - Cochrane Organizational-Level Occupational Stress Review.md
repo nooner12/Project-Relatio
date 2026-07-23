@@ -1,7 +1,7 @@
 ---
 title: SRC-0017 - Cochrane Organizational-Level Occupational Stress Review
 document_type: Source Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -29,6 +29,13 @@ relationships:
     target: CLM-0017
   - type: related_to
     target: SRC-0016
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-10
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0017
@@ -68,5 +75,6 @@ Cochrane systematic review (**Ruotsalainen et al., 2015, Cochrane Database Syst 
 |---|---|---|---|
 |0.1|2026-07-10|Draft|Created for RQ-0005. **Citation details unconfirmed** (author/year/DOI) — flagged for reviewer verification; claim graded down accordingly.|
 |0.2|2026-07-11|Draft|Citation corrected per Critical Review – RQ-0005 §3/§9: attributed to **Ruotsalainen et al. (2015)**; recorded that the prior PMC6494543 / CD013014 (Giga et al. 2018) is the protocol only. Exact DOI still to confirm (KOS-0003 §12.1).|
+|0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0017

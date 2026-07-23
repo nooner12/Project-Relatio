@@ -1,7 +1,7 @@
 ---
 title: CLM-0075 - Existence of Jesus as a Historical Figure
 document_type: Claim Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -46,6 +46,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 12
 review_date: 2027-07-20
 last_reviewed: 2026-07-20
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-20
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0075
@@ -159,5 +166,6 @@ Type: **Historical.**
 |0.1|2026-07-20|Draft|Created for RQ-0014. Level 4 (High) — existence only; load-bearing layer the undisputed Pauline letters + pre-literary creed (CLM-0068/CLM-0074, both L4, inherited); external notices corroborative (CLM-0073, L3). Elements (a)/(b)/(c) in discrete sections; mythicist rival steelmanned via SRC-0101. Pending review/validation.|
 |0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0075

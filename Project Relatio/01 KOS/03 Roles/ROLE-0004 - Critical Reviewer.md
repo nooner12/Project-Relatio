@@ -1,7 +1,7 @@
 ---
 title: ROLE-0004 - Critical Reviewer
 document_type: Role Definition
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -22,14 +22,20 @@ tags:
   - Roles
   - CriticalReviewer
   - EpistemicValidation
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # ROLE-0004
 
 # Critical Reviewer
 
-## Version 1.0
-
+## Version 1.1
 ## Adopted Role Definition
 
 > **Adopted 2026-07-09.** Not a new role — the implementation of the stewardship function the architecture already defined (KOS-0011 ST-004; CON-0003 §4.3 & §4.5). Authority (§4) and Boundaries (§5) were **ratified by the owner**, with one refinement applied at ratification: the §5 *procedural-independence* limit, which states plainly that in this implementation the reviewer and specialist are the same model and that high-stakes findings warrant genuinely independent review.
@@ -164,6 +170,7 @@ Per STD-0006 §6, a Flagged finding is **recorded**, not necessarily fixed react
 |0.1|2026-07-09|Draft|Proposed as a new role on demonstrated need (adversarial function performed inside all three investigations; STD-0006 §8 epistemic-validation slot unassigned).|
 |0.2|2026-07-09|Draft|Governance assessment (R4/R6/R7): corrected provenance — **not a new role**, but the implementation of KOS-0011 ST-004 / CON-0003 §4.3 & §4.5. Added Architectural Warrant; §4.4 Accountability of the Reviewer (cited criteria, right of appeal, preserved dissent, CR-001/2/3 taxonomy); escalation rerouted to ROLE-0005 after ROLE-0003's retirement. STD-0006 §8 amended to grant epistemic validation authority. Authority/Boundaries still PROPOSED.|
 |1.0|2026-07-09|Adopted|Owner ratified Authority & Boundaries, with refinement 2 applied: §5 procedural-independence limit (reviewer and specialist are the same model in the RRI; high-stakes findings warrant a different model or human review). Fixed version-heading mismatch. Standing Authorization SA-003 now non-provisional.|
+|1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

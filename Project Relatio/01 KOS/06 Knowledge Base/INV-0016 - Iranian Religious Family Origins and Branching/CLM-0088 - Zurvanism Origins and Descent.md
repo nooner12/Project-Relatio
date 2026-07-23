@@ -1,7 +1,7 @@
 ---
 title: CLM-0088 - Zurvanism Origins and Descent
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-21
@@ -46,6 +46,13 @@ reliance_note: "verification-light review; not cleared for external reliance"
 review_cycle: 6
 review_date: 2027-01-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-21
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0088
@@ -111,5 +118,6 @@ Type: **Historical (hostile-outsider primary + reconstructive secondary).**
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-21|Draft|Created for RQ-0016 (Specialist pass). Zurvanite ideas attested (5th c., Eznik) Moderate; distinct-tradition status disputed and, on §2.3, not cleared (no attested separate community; sources frame it as a current within Zoroastrianism) Low. **Modelled as a heterodox current of Zoroastrianism — no entity, no `branches_from` edge** (the scaffold's `heterodox-offshoot` hypothesis not confirmed/not applied). Zaehner maximalism steelmanned; survives as a contested minority reading. Central Anchor Fit test case. Verification-light; R0; not cleared for external reliance. Pending Critical Review and structural validation.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0088

@@ -1,7 +1,7 @@
 ---
 title: ENT-0006 - Co-Regulation
 document_type: Entity Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -29,6 +29,13 @@ relationships:
     target: CLM-0038
   - type: part_of
     target: INV-0008
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-14
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # ENT-0006
@@ -71,5 +78,6 @@ Co-regulation is the **construct linking domains 4 and 5** — mentored adult pr
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-14|Draft|Created for RQ-0008. Load-bearing across domains 4–5 and plausibly cross-investigation. Defined from Rosanbalm & Murray 2017; classified as a developmental process construct with a "framework, not measured law" caveat; parenting/partly-clinical provenance and program-transfer cautions recorded.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End ENT-0006

@@ -1,7 +1,7 @@
 ---
 title: FND-0017 - Origins and Branching of the Judaism-Christianity Family
 document_type: Finding Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-22
@@ -52,6 +52,13 @@ reliance_note: "verification-light review; not cleared for external reliance"
 review_cycle: 6
 review_date: 2027-01-22
 last_reviewed: 2026-07-22
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-22
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # FND-0017
@@ -139,5 +146,6 @@ The tradition-vs-period criterion was applied to "Second Temple Judaism as one t
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-22|Draft|Created for RQ-0017 (Specialist pass). Layered verdict by tradition: Second Temple Judaism root, one internally-plural tradition (Moderate; §2.3 threshold applied via common-Judaism substrate, plural-Judaisms rival costed in; no hub edge, upstream descent deferred); Christianity 1st-c. CE schism-class branch (emergence+descent High inherited from CLM-0058/0068/0075/0076; `schism` qualifier Moderate with a gradual/late-parting sharpness caveat); Rabbinic Judaism post-70 CE continuation/main line (emergence+descent Moderate; `reform` qualifier Low — the anchor stress-test, no listed value fits main-line continuation, recommendation for a new `continuation`/`main-line` qualifier routed to Anchor Fit). Anchor Fit Assessment completed as routed recommendations (continuation-qualifier centerpiece; schism sharpness; fork semantics; §2.3 internally-plural root; double-`reform` note) — none self-applied. One High (inherited Christianity spine), rest Moderate/Low; no Level 5. Metaphysical/neutrality bracket acute — neither supersessionist nor polemical. Verification-light (Christianity spine firm/inherited; Jewish-tradition datings on parametric interiors); R0; not cleared for external reliance. Pending Critical Review and structural validation.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End FND-0017

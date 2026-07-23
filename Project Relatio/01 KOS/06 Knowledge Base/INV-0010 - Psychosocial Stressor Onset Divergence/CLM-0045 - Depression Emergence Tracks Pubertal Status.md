@@ -1,7 +1,7 @@
 ---
 title: CLM-0045 - Depression Emergence Tracks Pubertal Status
 document_type: Claim Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-15
@@ -41,6 +41,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 9
 review_date: 2027-04-20
 last_reviewed: 2026-07-20
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-15
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0045
@@ -134,5 +141,6 @@ SRC-0060 is the investigation's strongest construct-provenance source precisely 
 |0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.1a|2026-07-15|Draft|Added F-2 bound per Critical Review – RQ-0010: puberty occurs in both sexes, so pubertal-stage measurement does not establish biological-sex causation of the *between-sex* divergence (sex × puberty interaction unmeasured); the claim licenses only "timing co-varies with a measured maturational variable." **Confidence unchanged (Level 3).**|
 |0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.4|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0045

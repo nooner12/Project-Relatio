@@ -1,7 +1,7 @@
 ---
 title: SRC-0064 - Allen et al 2013 Eating Disorder Trajectories
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-15
@@ -28,6 +28,13 @@ relationships:
     target: CLM-0048
   - type: part_of
     target: INV-0010
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-15
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0064
@@ -67,5 +74,6 @@ Allen, K. L., Crosby, R. D., Oddy, W. H., & Byrne, S. M. (2013), "Eating disorde
 |---|---|---|---|
 |0.1|2026-07-15|Draft|Created for RQ-0010. J. Eat. Disord. 1:32, DOI 10.1186/2050-2974-1-32 — verified via PMC4081731. Construct-provenance: `CONFLATED` — sex recorded as grouping variable, no mechanism and no gender/body-image construct measured despite that being the dominant explanatory literature. Supports only a gender-patterned/unattributed divergence claim.|
 |0.1a|2026-07-15|Draft|**Recoded `CONFLATED` → `UNRESOLVED` per Critical Review – RQ-0010 F-1.** The paper gives no basis to determine whether the data is biologically or socially patterned (mechanism undetermined per its own limitation notes), which is `UNRESOLVED`, not `CONFLATED`. No change to constraint (both barred from sex-attribution) or to CLM-0048 confidence.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0064

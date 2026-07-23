@@ -1,7 +1,7 @@
 ---
 title: SRC-0036 - Hansen Nohria Tierney 1999 Strategy for Managing Knowledge
 document_type: Source Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-12
@@ -26,6 +26,13 @@ tags:
 relationships:
   - type: supports
     target: CLM-0029
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-12
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0036
@@ -63,5 +70,6 @@ Practitioner/strategy article: Hansen, M. T., Nohria, N., & Tierney, T. (1999), 
 |---|---|---|---|
 |0.1|2026-07-12|Draft|Created for RQ-0007. Authors, venue (HBR March–April 1999), and the codification/personalization thesis verified this session via HBR/HBS/PubMed 10387767 records. Exact pagination (77(2):106–116) is the standard recorded citation but was not independently re-verified to the page this session; flagged.|
 |0.2|2026-07-12|Draft|Post-review remediation (Critical Review - RQ-0007): short-title cross-reference to CLM-0029 (STD-0001 §10). Pagination limitation retained as disclosed. No content change.|
+|0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0036

@@ -1,7 +1,7 @@
 ---
 title: CLM-0013 - Attention-Regulation Techniques Reduce Stress Short-Term but Durability Is Thin
 document_type: Claim Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -55,6 +55,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 6
 review_date: 2027-01-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-10
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0013
@@ -153,5 +160,6 @@ Goyal (SRC-0014) is the highest-authority, most independent, anti-allegiance syn
 |0.2|2026-07-11|Draft|Reconciled SRC-0012 pre-post ES figure (0.55→0.66) per Critical Review – RQ-0005 §6.4. Non-load-bearing; grades unchanged.|
 |0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0013

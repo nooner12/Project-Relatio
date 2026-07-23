@@ -1,7 +1,7 @@
 ---
 title: CLM-0069 - Dating of the Gospels
 document_type: Claim Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -46,6 +46,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 9
 review_date: 2027-04-20
 last_reviewed: 2026-07-20
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0069
@@ -140,5 +147,6 @@ Ehrman (SRC-0093) and Brown (SRC-0094) — different confessional backgrounds, c
 |0.2|2026-07-19|Draft|**Axis characterization corrected per Critical Review – RQ-0013 F-1 (no grade change).** Recharacterized from "DIVERGE" to a **KOS-0003 §9 consensus-exceeds-evidence outlier** — High consensus over an H-e evidence class — which is *not* a band-vs-confidence divergence. Level 3 (Moderate) unchanged. Consistency edit propagating the INV-0013 §4.2 correction.|
 |0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0069

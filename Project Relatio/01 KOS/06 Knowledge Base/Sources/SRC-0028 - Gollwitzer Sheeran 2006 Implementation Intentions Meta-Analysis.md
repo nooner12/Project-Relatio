@@ -1,7 +1,7 @@
 ---
 title: SRC-0028 - Gollwitzer Sheeran 2006 Implementation Intentions Meta-Analysis
 document_type: Source Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-11
@@ -26,6 +26,13 @@ tags:
 relationships:
   - type: supports
     target: CLM-0024
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-11
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0028
@@ -61,5 +68,6 @@ Meta-analysis of **implementation intentions** — "if situation X arises, I wil
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created for RQ-0006. 94-tests / d≈0.65 figure verified this session via Konstanz repository, SciRP, and NCI-hosted PDF.|
 |0.2|2026-07-11|Draft|Remediation pass (Critical Review remediation #1): d≈0.65 across 94 independent tests **re-verified** via KOPS/Konstanz, SciRP and Semantic Scholar — exact match. No content change.|
+|0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0028

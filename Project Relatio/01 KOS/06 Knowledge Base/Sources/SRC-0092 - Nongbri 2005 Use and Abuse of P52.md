@@ -1,7 +1,7 @@
 ---
 title: SRC-0092 - Nongbri 2005 Use and Abuse of P52
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -31,6 +31,13 @@ relationships:
     target: CLM-0069
   - type: part_of
     target: INV-0013
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0092
@@ -71,5 +78,6 @@ Brent Nongbri, "The Use and Abuse of P52: Papyrological Pitfalls in the Dating o
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0013. The P52 dating-caution paper; H-band H-e about H-b evidence. Widens the palaeographic window; does not re-date John. Live-verified strong on thesis, moderate on exact citation.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0092

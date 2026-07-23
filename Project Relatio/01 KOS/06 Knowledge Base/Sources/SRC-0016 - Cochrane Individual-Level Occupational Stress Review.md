@@ -1,7 +1,7 @@
 ---
 title: SRC-0016 - Cochrane Individual-Level Occupational Stress Review
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -35,6 +35,13 @@ relationships:
     target: CLM-0015
   - type: related_to
     target: SRC-0017
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-10
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0016
@@ -73,5 +80,6 @@ Cochrane systematic review of **individual-level** interventions to reduce occup
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-10|Draft|Created for RQ-0005. N and certainty verified at abstract/Cochrane-summary level this session.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0016

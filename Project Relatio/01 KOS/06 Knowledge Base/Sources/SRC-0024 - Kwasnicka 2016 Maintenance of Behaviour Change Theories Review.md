@@ -1,7 +1,7 @@
 ---
 title: SRC-0024 - Kwasnicka 2016 Maintenance of Behaviour Change Theories Review
 document_type: Source Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-11
@@ -29,6 +29,13 @@ relationships:
     target: CLM-0021
   - type: related_to
     target: ENT-0004
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-11
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0024
@@ -66,5 +73,6 @@ Systematic review of behaviour theories addressing **maintenance** (rather than 
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created for RQ-0006. Five-domain maintenance framework and "maintenance rarely attained" premise verified against journal + repository abstracts this session. Full text not fetched; figures are qualitative (thematic), so no numeric verification gap.|
 |0.2|2026-07-11|Draft|Remediation pass (remediation #1): five maintenance-theory domains **re-verified** via Health Psychology Review and Stirling repository — maintenance motives, self-regulation, resources, habits, contextual/environmental influences; confirmed. No content change.|
+|0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0024

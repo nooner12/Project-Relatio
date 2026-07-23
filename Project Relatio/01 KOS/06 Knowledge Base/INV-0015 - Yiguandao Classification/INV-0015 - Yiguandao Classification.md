@@ -1,7 +1,7 @@
 ---
 title: INV-0015 - Yiguandao Classification
 document_type: Investigation Record
-version: 0.5
+version: 0.6
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -21,6 +21,13 @@ tags:
   - Investigation
   - Yiguandao
   - ChineseSalvationistReligions
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-20
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # INV-0015
@@ -205,6 +212,7 @@ INV-0015 may close only when all of the following hold:
 |0.3|2026-07-20|Draft|**Executed by the Research Specialist (ROLE-0002).** Created 8 sources (SRC-0129…SRC-0136 — Palmer 2011 category article, **interior paywalled/403 and disclosed as the criteria-mechanics ceiling**; Goossaert & Palmer survey; Billioud 2020 OUP monograph with its "one of the major redemptive societies of Republican China" description sentence live-read; Lu 2008 first dedicated anglophone monograph; Jordan & Overmyer 1986 with an explicit scope restriction; Irons WRSP profile **fully live-read**; World I-Kuan Tao Headquarters English self-presentation **fully live-read** — primary, self-understanding register only; ter Haar 1992 category-critique; SRC-0129⇄SRC-0136 `contrasts_with` reciprocated; every record disclosing verification strength, language, and open/paywalled accessibility). Authored the six mandated claims CLM-0081…CLM-0086, each with elements **(a) source & base / (b) classification bearing / (c) rival counter-reading in discrete, separately answerable sections**: origin/formation L3; doctrinal structure L3 (strand proportions a recorded gap); **classification criteria split L3-placement-and-consensus / L2-criteria-mechanics** (the load-bearing claim — unanimity across the surveyed base reported under the §2.2 asymmetry rule; Palmer's criteria NOT reconstructed from model memory, graded down instead per §2.3); Daoist elements L3 (strands-not-membership; §3.1 slide guarded); self-understanding L3 scope-bounded (primordial-Dao lineage theology, no school-of-Daoism self-claim on the read page; dual-track held both directions; Chinese corpus a recorded gap); dissent L2 (category-level; bounded negative). FND-0015 layered verdict (Moderate spine, Low thin points; **no Level 4 anywhere — verification-light posture as predicted at opening; no Level 5**). Populated §4, §5, §8 connectivity actuals — including the deliberate **non**-building of the planned self-understanding-vs-scholarship `contrasts_with` edge (the tracks diverge on register, not head-on; §8 rationale recorded). No entity created. Native `Level N` only — no H-band/★ in any frontmatter or grading field. Verification: **light overall** (two sources fully live-read + one publisher description; five bibliographically verified with interiors unread; no page-level citation asserted); not cleared for external reliance (§7.5-analog). §1–§3, §6, §7 protocol text untouched. Pending ROLE-0004 review and ROLE-0001 structural validation.|
 |0.2|2026-07-20|Draft|**Two owner rulings applied (circuit brief 2 of 2), before Specialist execution.** (A) §1 primary RQ re-worded to the owner's revised symmetric, non-prejudging form — how the field classifies Yiguandao *in relation to* Daoism and to the Chinese-salvationist-religions category, with the consensus/dissent distribution now explicit in the question; body H1 updated to match; the six-claim decomposition deliberately unchanged (the revised RQ maps onto the same six claims; claim 3 remains load-bearing). (B) §2.2 consensus-asymmetry rule added verbatim as a new operative sub-section (symmetric framing does not require symmetric findings; a lopsided consensus is reported at its actual weight — no false balance, no prejudging); former §2.2–2.8 renumbered §2.3–2.9 with internal cross-references updated (§6, §8); §6 gains the consensus-asymmetry bracket. No claims, sources, or findings yet — Specialist execution follows in this circuit.|
 |0.1|2026-07-20|Draft|Opened as scaffold per owner-ratified brief. Reading C (classification question). Zero claims/sources/findings — awaiting full OPS-0003 circuit under a separate brief. Thin-base and verification-light outcomes pre-authorized.|
+|0.6|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

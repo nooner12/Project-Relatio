@@ -1,7 +1,7 @@
 ---
 title: CLM-0034 - Nature and Attention
 document_type: Claim Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -40,6 +40,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 6
 review_date: 2027-01-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-14
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0034
@@ -135,5 +142,6 @@ SRC-0047: high-authority umbrella review, transparent about its own quality limi
 |0.2|2026-07-14|Draft|RQ-0008 remediation (Critical Review – RQ-0008 §8 item 2): **narrowed** the graded claim to the short-term **attentional** benefit SRC-0047 supports; the "reduced hyperactivity" greenspace–ADHD corroboration explicitly demoted to uncatalogued/noted-not-graded. Confidence levels (U3/A2) unchanged.|
 |0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0034

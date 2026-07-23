@@ -1,7 +1,7 @@
 ---
 title: ADR-GOV-0011 - Contributor Attribution, AI-Assistance Disclosure, and the Single-Seat Anchor
 document_type: Architecture Decision Record
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 created: 2026-07-22
@@ -24,6 +24,13 @@ tags:
   - Attribution
   - Contributors
   - Provenance
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-22
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # ADR-GOV-0011
@@ -306,6 +313,7 @@ own ADR under Decision E.
 |Version|Date|Status|Description|
 |---|---|---|---|
 |1.0|2026-07-22|Adopted|Records the single-seat governance model as a provisional anchor on the human layer; requires record-level `attribution` (list-shaped, one entry at Stage 1) with AI-assistance degree and model-family disclosure on every formal Knowledge Object; backfills the corpus as best-effort with hand-corrected exceptions; binds independence assessment to family-level model matching; sets direction for structured review-outcome capture; installs the metric tripwire. Per-event attribution deferred to Stage 2 with verification events.|
+|1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

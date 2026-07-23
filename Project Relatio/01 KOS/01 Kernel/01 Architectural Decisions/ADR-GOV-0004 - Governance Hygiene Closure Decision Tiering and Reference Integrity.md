@@ -1,7 +1,7 @@
 ---
 title: ADR-GOV-0004 - Governance Hygiene Closure Decision Tiering and Reference Integrity
 document_type: Architecture Decision Record
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 created: 2026-07-20
@@ -21,6 +21,13 @@ tags:
   - Governance
   - Closure
   - ReferenceIntegrity
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-20
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # ADR-GOV-0004
@@ -190,6 +197,7 @@ the rule's home or trigger is wrong.
 |Version|Date|Status|Description|
 |---|---|---|---|
 |1.0|2026-07-20|Adopted|Records the four-rule governance-hygiene package (D1–D4). Closes GB-2026-031.|
+|1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

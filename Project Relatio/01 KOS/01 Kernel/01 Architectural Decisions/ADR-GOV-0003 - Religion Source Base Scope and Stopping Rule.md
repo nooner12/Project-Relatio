@@ -1,7 +1,7 @@
 ---
 title: ADR-GOV-0003 - Religion Source Base Scope and Stopping Rule
 document_type: Architecture Decision Record
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 created: 2026-07-19
@@ -22,6 +22,13 @@ tags:
   - Governance
   - Sources
   - ComparativeReligion
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # ADR-GOV-0003
@@ -169,6 +176,7 @@ family-open extent-statement mechanism proves unworkable in practice.
 |Version|Date|Status|Description|
 |---|---|---|---|
 |1.0|2026-07-19|Adopted|Records the source-base fork resolution and the hybrid stopping rule (GB-2026-030).|
+|1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

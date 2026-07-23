@@ -1,7 +1,7 @@
 ---
 title: CLM-0066 - The Cognition Verdict
 document_type: Claim Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -54,6 +54,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 6
 review_date: 2027-01-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0066
@@ -155,5 +162,6 @@ The verdict deliberately rests its *confidence* on the descriptive claims (which
 |0.1|2026-07-19|Draft|Created for RQ-0012. Ladder verdict: (a)–(b) High, (c) Low, (d) basal cognition Low as a contested framing (Lyon), (e) sentience BRACKETED (Baluška/Reber CBC steelmanned, not adopted). Bounded metaphysical sub-claim: "thought" is definition-relative; fungi borderline on biogenic definitions, not shown on representation-requiring ones. Headline Level 2 (Low); no Level 5. Motivated-reasoning poles named and quarantined. Pending review/validation.|
 |0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 |0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.4|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0066

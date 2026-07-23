@@ -1,7 +1,7 @@
 ---
 title: ROLE-0001 - Knowledge Architect
 document_type: Role Definition
-version: 1.1
+version: 1.2
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -21,14 +21,20 @@ tags:
   - Roles
   - KnowledgeArchitect
   - Governance
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # ROLE-0001
 
 # Knowledge Architect
 
-## Version 1.1
-
+## Version 1.2
 ## Adopted Role Definition
 
 > **Adopted 2026-07-09.** Identity, Mission, Responsibilities, Workflows, Quality Standards, and Interaction Protocols are authored from **observed use** — they describe the function actually performed across the standards, governance, object-model, and three research workflows built in this vault. **Authority (§4) and Boundaries (§5) were ratified by the owner (Brian) as written.** This role is the first Adopted role definition and is the authority template for ROLE-0002, ROLE-0003, and ROLE-0004.
@@ -165,6 +171,7 @@ Success is measured by:
 |0.2|2026-07-09|Draft|Substance authored from observed use. Identity/Mission/Responsibilities/Workflows/Quality/Interaction complete; Authority (§4) and Boundaries (§5) PROPOSED, awaiting owner ratification before adoption.|
 |1.0|2026-07-09|Adopted|Owner ratified Authority (§4) and Boundaries (§5) as written. First Adopted role definition; serves as the authority template for the other roles.|
 |1.1|2026-07-09|Adopted|Governance assessment (R1/R4/R9/R11): added Architectural Warrant (implements CON-0003 §4.2/§4.4; ST-001); §4.3 escalation rerouted to ROLE-0004/ROLE-0005 after ROLE-0003's retirement; added §4.4 Standing Authorizations; added the mandatory *verify before removing* rule to §6.|
+|1.2|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

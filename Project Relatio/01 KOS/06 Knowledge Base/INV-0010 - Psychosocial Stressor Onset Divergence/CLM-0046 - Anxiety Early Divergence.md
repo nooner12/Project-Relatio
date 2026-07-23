@@ -1,7 +1,7 @@
 ---
 title: CLM-0046 - Anxiety Early Divergence
 document_type: Claim Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-15
@@ -43,6 +43,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 6
 review_date: 2027-01-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-15
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0046
@@ -136,5 +143,6 @@ SRC-0061 is a credible cohort but leans on retrospective recall for the onset ag
 |0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 |0.1a|2026-07-15|Draft|F-3 per Critical Review – RQ-0010: rewrote the Level-3 direction warrant to rest on the **catalogued** SRC-0061 (anxiety skew ~age 6) vs SRC-0059/CLM-0044 (depression skew ~12–13) contrast; deleted the appeal to uncatalogued developmental-epidemiology reviews. **Confidence unchanged** (Level 2 exact age / Level 3 direction).|
 |0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.4|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0046

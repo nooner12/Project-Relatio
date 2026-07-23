@@ -1,7 +1,7 @@
 ---
 title: STD-0009 - Review & Revision Standard
 document_type: Standards Document
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 created: 2026-07-21
@@ -26,14 +26,20 @@ tags:
   - Review
   - Revision
   - Governance
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-21
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # STD-0009
 
 # Project Relatio Review & Revision Standard
 
-## Version 1.0
-
+## Version 1.1
 ## Adopted Standards Document
 
 ---
@@ -166,6 +172,7 @@ Maintained under KOS-0011. The trigger vocabulary and act bounds are controlled 
 |Version|Date|Status|Description|
 |---|---|---|---|
 |1.0|2026-07-21|Adopted|Initial review & revision standard enacting ADR-GOV-0008: trigger vocabulary with graph events, trigger→scope→act table, bounded review acts (re-affirmation never changes grades), epistemic-strength cadence with reliance modifier, review-field semantics, optional bounded_by, queue-proposes-governance-disposes.|
+|1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

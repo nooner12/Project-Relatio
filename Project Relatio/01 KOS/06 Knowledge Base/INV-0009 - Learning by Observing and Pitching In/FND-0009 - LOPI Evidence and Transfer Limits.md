@@ -1,7 +1,7 @@
 ---
 title: FND-0009 - LOPI Evidence and Transfer Limits
 document_type: Finding Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -49,6 +49,13 @@ reliance_note: "verification-light review; not cleared for external reliance."
 review_cycle: 3
 review_date: 2026-10-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-14
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # FND-0009
@@ -120,5 +127,6 @@ At the literature level, the evidence supports a **narrow, honest** transfer: a 
 |0.1|2026-07-14|Draft|Created for RQ-0009. Three-part answer (base phenomenon real & Level-3 in its communities / two honest limits: comparative-confound + narrow outcome / transfer to single-child home partial & undemonstrated, Level 1→2). Central result: the best-evidenced mechanism (learning from interactions directed to others) travels worst to a solitary learner. Native `Level N`; ★-translation deferred (crosswalk gap). Gate stated. Pending ROLE-0004 review and ROLE-0001 validation.|
 |0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 |0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.4|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End FND-0009

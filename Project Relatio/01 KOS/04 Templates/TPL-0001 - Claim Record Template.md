@@ -1,7 +1,7 @@
 ---
 title: TPL-0001 - Claim Record Template
 document_type: Template
-version: 1.3
+version: 1.5
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -16,6 +16,13 @@ tags:
   - ProjectRelatio
   - Templates
   - ClaimRecord
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # TPL-0001 — Claim Record Template
@@ -67,6 +74,13 @@ reliance_note: <provenance of the tier — e.g. verification posture at closure>
 review_cycle: <months>    # from STD-0009 §7 cadence (weakest confidence component; ×1.5 if all load-bearing loci R1/R2)
 review_date: <YYYY-MM-DD>       # next review due = last_reviewed + review_cycle
 last_reviewed: <YYYY-MM-DD>     # most recent review act (at creation: the closure date)
+attribution:              # provenance (STD-0002 §6 / ADR-GOV-0011 Decision B) — REQUIRED
+  - actor: <named human>                 # an AI is never the actor; disclose it below
+    role: <ROLE-NNNN … or free string>   # no controlled enum (ADR-GOV-0011 §7)
+    event: created                       # the only Stage 1 value; Stage 2 adds entries, not keys
+    date: <YYYY-MM-DD>
+    ai_degree: ai-delegated              # unassisted | ai-assisted | ai-delegated
+    ai_model_family: Claude              # vendor/family free string; `none` iff unassisted
 ---
 
 # CLM-NNNN
@@ -135,6 +149,8 @@ Level <0–5> (<Very High | High | Moderate | Low | Very Low | Unsupported>) —
 |1.1|2026-07-11|Adopted|Confidence line updated to the canonical hybrid **Level N (Label)** format (GB-2026-021).|
 |1.2|2026-07-11|Adopted|Added `operational_status` (GB-2026-006) and the typed `relationships` example (GB-2026-001) to the object frontmatter block.|
 |1.3|2026-07-21|Adopted|Frontmatter skeleton gains the epistemic fields (`confidence` list with optional `bounded_by`, `reliance_tier`, `reliance_note` — STD-0008 / STD-0002 §11) and the review fields (`review_cycle`, `review_date`, `last_reviewed` — STD-0009 §8) with placeholder guidance, per ADR-GOV-0008: new Claim Records are born conformant and review-ready.|
+|1.4|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
+|1.5|2026-07-22|Adopted|Added the required `attribution` stub to the emitted frontmatter (STD-0002 v1.12 §6 / ADR-GOV-0011 Decision B), so records created from this template are **born conformant** against the now-error-level attribution check. Template-side only — no field, rule, or body section changed.|
 
 ---
 

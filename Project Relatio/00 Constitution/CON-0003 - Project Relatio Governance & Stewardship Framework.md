@@ -1,7 +1,7 @@
 ---
 title: CON-0003 - Project Relatio Governance & Stewardship Framework
 document_type: Constitutional Instrument
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 category:
@@ -18,13 +18,19 @@ tags:
   - Governance
   - Stewardship
   - DecisionMaking
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 # CON-0003
 
 # Project Relatio Governance & Stewardship Framework
 
-## Version 1.0
-
+## Version 1.1
 ## Adopted Constitutional Instrument
 # 1. Purpose
 
@@ -502,6 +508,7 @@ Project Relatio adopts the following governance principle:
 |0.1|2026-07-09|Draft|Initial governance framework|
 |0.2|2026-07-09|Revised Draft|Incorporated architectural critique|
 |1.0|2026-07-09|Adopted|Finalized constitutional governance framework|
+|1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: STD-0002 - Metadata & YAML Standard
 document_type: Standards Document
-version: 1.11
+version: 1.12
 status: Adopted
 operational_status: Active
 category:
@@ -24,14 +24,20 @@ tags:
   - Metadata
   - YAML
   - InformationArchitecture
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # STD-0002
 
 # Project Relatio Metadata & YAML Standard
 
-## Version 1.11
-
+## Version 1.12
 ## Adopted Standards Document
 
 ---
@@ -110,8 +116,11 @@ operational_status:
 created:
 category:
 tags:
+attribution:
 ---
 ```
+
+*(v1.12 note: `attribution` — provenance, with AI-assistance disclosure — is required on every formal Knowledge Object per ADR-GOV-0011 Decision B. Definition and rules in §6; the binding provenance/independence/visibility rules in §6.1.)*
 
 ---
 
@@ -336,6 +345,68 @@ Rules:
 
 ---
 
+# attribution
+
+Purpose:
+
+Records **provenance** — who brought the record into being, in what role, when, and at what degree of AI assistance. Required on every formal Knowledge Object (v1.12, enacting **ADR-GOV-0011** Decision B and Decision C).
+
+Format:
+
+```
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-22
+    ai_degree: ai-delegated
+    ai_model_family: Claude
+```
+
+**Field rules:**
+
+- **`attribution` is ALWAYS A LIST**, minimum one entry. **Never a scalar block.** At **Stage 1** (the current stage) it holds **exactly one entry**, whose `event` is `created`.
+- Each entry requires all six keys: `actor`, `role`, `event`, `date`, `ai_degree`, `ai_model_family`.
+- `actor` — the **named human**. Free string. An AI system is never the actor; it is disclosed through `ai_degree` / `ai_model_family` (ADR-GOV-0011 §4, *Circuit events*: circuit-produced records attribute to the **ratifying human** at degree `ai-delegated`).
+- `role` — free string. Use a **ROLE-#### identifier** where one applies (e.g. `ROLE-0002 Research Specialist`). **There is no controlled enum**, because lanes and roles for contributors do not yet exist (ADR-GOV-0011 §7); introducing one would pre-design the structure that ADR reserves for real friction.
+- `event` — at Stage 1 the **only** value is `created`. The key nonetheless exists now so that Stage 2's per-event values (`reviewed`, `verified`, `ratified`, …) join **additively**, without a shape change.
+- `date` — `YYYY-MM-DD` (§10).
+- `ai_degree` — **controlled vocabulary**, exactly one of:
+  - `unassisted` — hand work; no AI involvement in the judgments recorded.
+  - `ai-assisted` — AI used as a tool; the human's judgment set the conclusions.
+  - `ai-delegated` — AI produced the work; the human reviewed and adopted it.
+- `ai_model_family` — the vendor/family as a **free string** (version optional, e.g. `Claude` or `Claude Opus 4.8`), or the literal `none` when `ai_degree: unassisted`. **Convention, not enum** — the vocabulary of model families is not the vault's to fix. The validator enforces only the pairing: `ai_model_family: none` **if and only if** `ai_degree: unassisted`.
+- **Encouraged, not required** (ADR-GOV-0011 §4): a sentence of free-text specifics on what was and was not delegated ("drafted by model, grades set by hand"), recorded in the record's prose. Degree alone cannot capture *which* judgments were the model's.
+
+**Why a list and not a scalar.** Stage 2 (per-event attribution) is known to be coming and is deferred only for design (ADR-GOV-0011 §8). A scalar would force a migration; a single-entry list makes Stage 2 purely additive. This follows the `confidence` precedent (§11), where always-a-list made the split-grade case structural rather than exceptional.
+
+---
+
+## 6.1 Attribution Is Provenance — Three Fields That Must Not Be Conflated
+
+`attribution` is **provenance**: the record of **who made this record, and how**. Two neighbouring fields answer different questions and are **not** substitutes for it:
+
+| Field | Answers | Domain |
+|---|---|---|
+| **`attribution`** (§6, required) | **Who produced *this record*, in what role, when, at what AI-assistance degree** | **Provenance** |
+| `owner` (§8, optional/reserved) | Who is *responsible for maintaining* this record going forward | **Stewardship** |
+| `source_author` (§11, Source Records) | Who wrote **the external source** the record describes | **The source's authorship** |
+
+- **`attribution` ≠ `owner`.** Stewardship can transfer; provenance cannot. A record whose steward changes still has the same creation provenance, and populating one never populates the other.
+- **`attribution` ≠ `source_author`.** On a Source Record these two are *both* present and mean opposite things: `source_author` is the author of the work being catalogued (an external human, often centuries dead); `attribution` is the vault contributor who created the catalogue record. Conflating them would credit a source's author with a vault record they never saw.
+
+**Independence is assessed at FAMILY level (binding — ADR-GOV-0011 Decision C).** Same model family is **same-kind regardless of version or operator**: a Claude-family review of Claude-family work is **not** independence of kind. Therefore **same-family-assisted work does not sum toward independence**, and every independence assessment — reliance-tier computation (ADR-GOV-0006), reflexive-gate review eligibility (STD-0006 §7.6), and any future R2 determination — MUST treat a shared `ai_model_family` as a **correlation factor**. Correlated AI assistance is the tooling-layer instance of the correlated-agreement failure: many contributors assisted by one model family converge for model reasons, not truth reasons.
+
+**Selective visibility (binding — ADR-GOV-0011 Decision B).** Attribution is **durable but selectively visible**. It is always recorded and always present in the permanent record, and it MUST be **withholdable at review time when a review's independence depends on it**. No tool or surface used for blinded review may render it unconditionally. The discrete `attribution` block exists partly to make that excision **mechanically clean** — which is why provenance is a structured field and not revision-history prose.
+
+> **Honesty limit on blinding at small n** (ADR-GOV-0011 Decision B). With few contributors in barely overlapping lanes, withholding the field produces **procedural blindness only** — a reviewer can often infer authorship from domain and style. Withholding remains required, but a review MUST NOT be recorded as blinded in the STD-0006 §7.6 sense on the strength of field-withholding alone. Whether a review was *epistemically* blind is a judgment recorded with the review.
+
+**Backfill honesty (v1.12).** The 2026-07-22 corpus backfill applied the default entry (owner / Vision Steward / `ai-delegated` / `Claude`, dated from each record's own `created` field) to every pre-existing object. It is a **best-effort characterization at record level**, not an exact per-judgment claim; owner-reserved records that may warrant `unassisted` or `ai-assisted` were reported as a candidate exception list for hand-correction rather than guessed at.
+
+**No metric may be computed from this field** (ADR-GOV-0011 Decision E). Attribution exists to make provenance visible and queryable. Any computed contributor standing, ranking, or gating requires its own governance ADR; **any validator, script, or tool found computing contributor scores absent that ADR is nonconformant by definition.**
+
+---
+
 # 7. Relationship Metadata
 
 Documents may contain:
@@ -418,6 +489,8 @@ revision_history:
 
 *(v1.9 note: `review_date` and `review_cycle` were reserved here from v1.0; they are now **active, document-class-specific fields** on Claim Records and Finding Records — see §11 — per ADR-GOV-0008 and the Review & Revision Standard (STD-0009).)*
 
+*(v1.12 note: `owner` records **stewardship** — who maintains the record going forward. It is **not** provenance and is **not** satisfied by, nor does it satisfy, the required `attribution` field (§6). Stewardship transfers; provenance does not. See §6.1.)*
+
 ---
 
 # 9. Field Naming Convention
@@ -487,6 +560,8 @@ source_url:
 
 publication_date:
 ```
+
+*(v1.12 note: `source_author` is the author of **the external source being catalogued** — not the vault contributor who created the Source Record. That contributor is recorded in the required `attribution` field (§6). Both are present on a Source Record and mean opposite things; see §6.1.)*
 
 ---
 
@@ -683,6 +758,13 @@ related_documents:
 tags:
   - ProjectRelatio
   - Example
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 ```
 
@@ -742,6 +824,7 @@ Project Relatio adopts:
 |1.9|2026-07-21|Adopted|Activated review fields (review_cycle/review_date/last_reviewed) as required Claim/Finding fields per ADR-GOV-0008 and the Review & Revision Standard (STD-0009); promoted them out of §8 reserved status; added optional bounded_by to confidence components (graph-claim rule §12.1 applies). Additive.|
 |1.10|2026-07-21|Adopted|Added §11 subsection **Entity Records (tradition class)**, requiring `tradition_type` (founded/emergent/reform/syncretic), `dating_claims` (graph-claim pointers, §12.1), and `display_range` (render-only string) on tradition-class entities and forbidding them on concept entities (ENT-0001…0007 untouched), enacting ADR-GOV-0009 D3. No `origin_date` field exists by decision (dates are claims). Additive document-class fields per the existing §11 pattern; validator shape-checks co-presence and the tradition_type vocabulary at error level.|
 |1.11|2026-07-22|Adopted|Added to the §11 **Entity Records (tradition class)** subsection three **OPTIONAL, render-only positioning fields** — `range_start_year` (integer, BCE negative), `range_end_year` (integer or the literal `present`), and `range_uncertainty` (`low`/`moderate`/`high`) — enabling the proportional SVG timeline view (owner-ratified upgrade from Path A). **Non-evidential:** derived from and bounded by the entity's dating claim(s), inheriting that claim's confidence; a bar drawn from them must never render more certain than the claim warrants; `display_range` remains the authoritative label. `range_uncertainty` maps reproducibly from the confidence of the claim's **emergence/crystallisation-dating component** (High/VeryHigh→low, Moderate→moderate, Low/VeryLow→high; non-temporal descent/classification components do not govern it — refines the ADR-GOV-0009-brief phrasing "weakest component," which read literally would let a Low *descent* grade mis-mark a well-dated tradition). OPTIONAL: a tradition without them renders by a documented undated/sequence-only fallback (never invented coordinates); when any is present, `range_start_year` and `range_uncertainty` are co-required, `range_end_year` optional (absent = terminus not claim-dated; `present` = living). Additive only — no existing field removed, renamed, or redefined. Validator shape-check (integer years or `present`; uncertainty vocabulary; start+uncertainty co-presence) at error level, enabled only after the four existing tradition entities were backfilled this session (vault green at every boundary).|
+|1.12|2026-07-22|Adopted|Added the **required `attribution` field** on every formal Knowledge Object, enacting **ADR-GOV-0011** Decisions B and C (Stage 1, record-level). Added to §5's required-field list; defined as a new `# attribution` section in §6 (the home of universally-required fields, chosen over a new numbered section so that §7–§18 are **not renumbered** and every external citation of §7/§8/§10/§11/§12.1 stays valid); binding rules in new **§6.1**. **ALWAYS A LIST**, minimum one entry, exactly one at Stage 1 with `event: created` — never a scalar, so Stage 2's per-event attribution (deferred, ADR-GOV-0011 §8) extends it **additively** rather than by migration (the `confidence` always-a-list precedent). Each entry carries `actor` (named human; an AI is never the actor), `role` (free string, ROLE-#### where applicable — **no controlled enum**, lanes/roles do not exist, ADR-GOV-0011 §7), `event` (`created` only at Stage 1), `date` (§10), `ai_degree` (controlled: `unassisted`/`ai-assisted`/`ai-delegated`), and `ai_model_family` (free string, or `none` iff `unassisted`). §6.1 states the three-field distinction that must not be conflated (**`attribution` = provenance** vs §8 `owner` = **stewardship** vs §11 `source_author` = **the external source's author**), the **binding family-level independence rule** (same model family is same-kind regardless of version or operator; same-family-assisted work does not sum toward independence — Decision C), the **binding selective-visibility constraint** (durable but withholdable at review time; no surface used for blinded review may render it unconditionally) with its small-n honesty limit, and the **Decision E metric prohibition**. Cross-reference notes added to §8 and §11; §14's example block updated. The full corpus (335 formal Knowledge Objects, this standard included) was backfilled in **this same commit**, each entry dated from that record's own `created` field — never the migration date — as a **best-effort record-level characterization**, with a candidate exception list reported for owner hand-correction rather than the degree being guessed at. The validator's presence/shape check was enabled at **error** level only in the **following** commit (backfill before enforcement; vault green at every boundary). Additive only — no existing field removed, renamed, or redefined.|
 
 ---
 

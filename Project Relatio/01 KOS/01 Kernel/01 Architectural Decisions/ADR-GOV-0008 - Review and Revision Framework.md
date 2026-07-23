@@ -1,7 +1,7 @@
 ---
 title: ADR-GOV-0008 - Review and Revision Framework
 document_type: Architecture Decision Record
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 created: 2026-07-21
@@ -23,6 +23,13 @@ tags:
   - Review
   - Revision
   - Governance
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-21
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 # ADR-GOV-0008
 
@@ -115,6 +122,7 @@ Revisit if (a) the trigger vocabulary proves incomplete (a real revision need ar
 |Version|Date|Status|Description|
 |---|---|---|---|
 |1.0|2026-07-20|Adopted|Initial review-and-revision framework: typed triggers (graph events in scope), trigger→scope→act resolution, grade-authority bound on re-affirmation, epistemic-strength cadence, optional bounded_by sensitivity structure at ingestion (no retroactive migration), unified queue with ADR-GOV-0007. Operationalizes KOS-0011 §12.|
+|1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

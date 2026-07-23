@@ -1,7 +1,7 @@
 ---
 title: SRC-0134 - Irons 2017 Yiguandao WRSP Profile
 document_type: Source Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -33,6 +33,13 @@ relationships:
     target: CLM-0084
   - type: part_of
     target: INV-0015
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-20
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0134
@@ -75,5 +82,6 @@ Edward Irons, "Yiguandao," World Religions and Spirituality Project (WRSP), publ
 |---|---|---|---|
 |0.2|2026-07-20|Draft|**Critical Review – RQ-0015 F-3 adopted (recommendation):** §4 now itemizes the Yiguandao-specific *fuji* spirit-writing and *fotang* Buddha-hall data (present in the live-read page; reviewer re-confirmed) so CLM-0082's spirit-writing citation routes here rather than through the scope-restricted SRC-0133.|
 |0.1|2026-07-20|Draft|Created for RQ-0015. The base's strongest-verified source (full content read live): dated lineage spine, doctrinal composition, Quanzhen-derived strand datum, classification usage. English; open access.|
+|0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0134

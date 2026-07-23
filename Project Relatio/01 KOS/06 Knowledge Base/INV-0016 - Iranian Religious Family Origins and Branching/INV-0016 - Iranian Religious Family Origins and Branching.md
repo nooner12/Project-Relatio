@@ -1,7 +1,7 @@
 ---
 title: INV-0016 - Iranian Religious Family Origins and Branching
 document_type: Investigation Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-21
@@ -20,6 +20,13 @@ tags:
   - Investigation
   - IranianReligions
   - WorldReligionsTimeline
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-21
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # INV-0016
@@ -230,5 +237,6 @@ INV-0016 may close only when all of the following hold (modelled on INV-0015 §7
 |0.3|2026-07-21|Draft|**Circuit review + remediation + ROLE-0001 structural validation (recorded in-record here per §7 criterion 7).** **Critical Review – RQ-0016 (v1.0): CONFORMANT WITH FLAGS** — verification-light (six of twelve sources read in full, quoted phrases verbatim-matched; same-model, procedural independence only); **per-edge warrant rule verified individually — all three edges PASS + both negatives (Zoroastrianism root, Zurvanism-as-current) PASS**; five flags (two determinate, three non-determinate). **Both determinate flags remediated in-session:** Flag 1 (reflexive AF findings ungated) → §7.6 reflexive-gating disclosure added to the Anchor Fit Assessment; Flag 2 (CLM-0090/ENT-0010 over-specification — "Zaradusht of Fasa", property/women program, mis-sourced skepticism) → hedged parametric + misattribution corrected (CLM-0090 v0.2, ENT-0010 v0.2). Three non-determinate adopted/acknowledged (AF-1 split-leg rewording; ENT-0010 tradition_type base-thinness note; Yazidism target-stretch acknowledged). **No confidence level raised or lowered anywhere.** **ROLE-0001 structural validation (this row is the in-record evidence): validate.py PASS 357 files / 0 errors / 0 warnings** (version coherence at error level; epistemic + review fields well-formed on all six CLM/FND; tradition-entity fields on all four ENT); **graph_integrity.py 0 dangling / 0 branch errors** (three `branches_from` ENT→ENT + controlled qualifier confirmed parsed, not skipped; `dating_claims` resolve; CLM-0087→CLM-0056 `depends_on` into closed INV-0011); advisory delta **0** (39 symmetric / 2 untyped, unchanged — new edges all asymmetric types); scale-discipline grep clean; §8 declared subgraph matches the built graph.|
 |0.2|2026-07-21|Draft|**Executed by the Research Specialist (ROLE-0002)** — owner froze the scaffold as authored (RQ, five-claim decomposition, §2.3 threshold all stand). Created **five tradition claims CLM-0087…CLM-0091** (each with separable (i) dating / (ii) descent+qualifier / (iii) rival elements), **four tradition entities ENT-0008…ENT-0011** (the vault's first tradition-class entities; ENT-0008 Zoroastrianism root, ENT-0009/0010/0011 with `branches_from` ENT-0008 qualified `syncretic-descent`/`heterodox-offshoot`/`disputed`), and **FND-0016** (layered verdict by tradition). **Zurvanism dissolved to a heterodox current of Zoroastrianism — no entity, no edge (hypothesis overturned; §2.3 threshold not cleared)** — five claims, four entities, three edges. Zoroastrian dating inherited from INV-0011 CLM-0056 via one-directional `depends_on` (INV-0011 unmodified). **Anchor Fit Assessment populated (AF-1…AF-4)** and routed as review-queue recommendations (ADR-GOV-0007 §3; no structural change applied). Populated §4/§5/§8 actuals. Native `Level N` only, no Level 4/5 (verification-light); everything R0, not cleared for external reliance. Catalog SRC-0104…0123 cited, unmodified. Pending ROLE-0004 review and ROLE-0001 validation.|
 |0.1|2026-07-21|Draft|Opened as scaffold per owner-ratified brief. First family investigation of the ADR-GOV-0009 timeline program; first consumer of the Iranian standing source base (SRC-0104…SRC-0123) and the lineage anchors (STD-0004 v1.2 `branches_from`, STD-0002 v1.10 tradition-entity fields, TPL-0006). Zero claims/entities/edges — awaiting circuit under brief 2. Five-claim (one-per-tradition) decomposition with separable (i) emergence dating / (ii) descent relationship / (iii) rival reading elements; working `branches_from` hypotheses stated as tests, not conclusions; distinctness threshold (§2.3) and Anchor Fit Assessment (§7(a)) reserved as the stress-test deliverables; source discipline, thin-base authorization, metaphysical bracket, native-Level-N, and R0 §7.5-analog gate declared at opening. No frontmatter relationship edges (D4); no catalog, INV-0011, closed-record, Standard, Baseline, or Architectural Decisions modification.|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End INV-0016

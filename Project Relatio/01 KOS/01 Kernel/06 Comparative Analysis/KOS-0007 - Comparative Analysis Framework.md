@@ -1,7 +1,7 @@
 ---
 title: KOS-0007 - Comparative Analysis Framework
 document_type: Kernel Operating System Document
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 category:
@@ -23,14 +23,20 @@ tags:
   - ComparativeAnalysis
   - ResearchMethodology
   - ComparativeReligion
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # KOS-0007
 
 # Project Relatio Comparative Analysis Framework
 
-## Version 1.0
-
+## Version 1.1
 ## Adopted Kernel Document
 
 ---
@@ -591,6 +597,7 @@ Project Relatio adopts:
 |0.1|2026-07-09|Draft|Initial comparative framework|
 |0.2|2026-07-09|Revised Draft|Added fairness, evidence matching, translation caution, synthesis methodology|
 |1.0|2026-07-09|Adopted|Finalized comparative analysis framework|
+|1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

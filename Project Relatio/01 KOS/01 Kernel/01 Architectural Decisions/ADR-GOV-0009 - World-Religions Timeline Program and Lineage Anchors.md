@@ -1,7 +1,7 @@
 ---
 title: ADR-GOV-0009 - World-Religions Timeline Program and Lineage Anchors
 document_type: Architecture Decision Record
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 created: 2026-07-21
@@ -24,6 +24,13 @@ tags:
   - Timeline
   - Lineage
   - ProvisionalAnchor
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-21
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 # ADR-GOV-0009
 
@@ -116,6 +123,7 @@ Revisit if (a) the first two family investigations find the qualifier list or br
 |Version|Date|Status|Description|
 |---|---|---|---|
 |1.0|2026-07-21|Adopted|Initial world-religions timeline program: per-family repeatable unit on the ADR-GOV-0003 seed pattern; provisional anchors (entities on demand, dates-as-claims + tradition_type, branches_from + qualifier list) under ADR-GOV-0007 §2 anchor discipline; sequencing Iranian → Judaism/Christianity → Chinese → new families; reliance gate travels.|
+|1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

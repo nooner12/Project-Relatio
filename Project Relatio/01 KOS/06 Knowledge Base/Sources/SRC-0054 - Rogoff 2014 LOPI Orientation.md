@@ -1,7 +1,7 @@
 ---
 title: SRC-0054 - Rogoff 2014 LOPI Orientation
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -29,6 +29,13 @@ relationships:
     target: ENT-0007
   - type: supports
     target: CLM-0041
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-14
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0054
@@ -67,5 +74,6 @@ Rogoff, B. (2014), "Learning by Observing and Pitching In to family and communit
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-14|Draft|Created for RQ-0009 (framework anchor). Human Development 57(2-3):69–81 and the seven-facet prism verified this session via Karger + secondary summaries. Flagged as proponent-authored framework, not primary evidence; funding not verified.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0054

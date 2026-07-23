@@ -1,7 +1,7 @@
 ---
 title: CON-0002 - Project Relatio Architectural Principles
 document_type: Constitutional Instrument
-version: 1.1
+version: 1.2
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -12,6 +12,13 @@ tags:
   - ProjectRelatio
   - Architecture
   - SystemsDesign
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 # CON-0002
 
@@ -545,6 +552,7 @@ Future instruments shall remain consistent with both.
 |0.1|2026-07-09|Draft|Initial architectural principles|
 |0.2|2026-07-09|Revised Draft|Added interfaces, auditability, simplicity, expanded lineage, expanded system model|
 |1.1|2026-07-11|Adopted|Recorded the prior v1.0 adoption (frontmatter showed Adopted without a revision entry); added the missing `created` date; added the **Templates and Structures** layer and a note that layer numbering is indicative, reconciling with KOS-0011 §8 (foundational audit fixes 1 & 3, GB-2026-012).|
+|1.2|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

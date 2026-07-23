@@ -1,7 +1,7 @@
 ---
 title: CLM-0082 - Doctrinal and Organizational Structure of Yiguandao
 document_type: Claim Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -46,6 +46,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 9
 review_date: 2027-04-20
 last_reviewed: 2026-07-20
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-20
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0082
@@ -126,5 +133,6 @@ See SRC-0134 (moderate-to-high, open), SRC-0131 (high, paywalled), SRC-0132 (hig
 |0.1|2026-07-20|Draft|Created for RQ-0015. Level 3 (Moderate): Eternal-Mother/three-age architecture with multi-tradition incorporation and Confucian public dominance; strand proportions recorded as a gap, not estimated; Daoist-core counter-reading steelmanned, its content routed to CLM-0084. Elements (a)/(b)/(c) discrete. Pending review/validation.|
 |0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0082

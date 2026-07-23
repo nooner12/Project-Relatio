@@ -1,7 +1,7 @@
 ---
 title: INV-0011 - Zoroastrian Eschatology and Second Temple Apocalypticism
 document_type: Investigation Record
-version: 0.5
+version: 0.6
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -22,6 +22,13 @@ tags:
   - SecondTempleJudaism
   - Apocalypticism
   - HistoricalEvidenceScale
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # INV-0011
@@ -223,6 +230,7 @@ INV-0011 may close only when all of the following hold:
 |0.3|2026-07-19|Draft|**Remediated per Critical Review – RQ-0011 (CONFORMANT WITH FLAGS; 9/10 sources independently re-verified; no fabrication).** F-1 (path a): **resurrection (CLM-0051) lowered Level 3 → Level 2 (Low)** — weak on both load-bearing axes (reconstruction-only/post-Daniel priority *and* Divided consensus; pro-influence case reduces largely to Boyce, Cohn non-independent); Independence score 3 → 2. Updated §4 supporting-claims list, §4.1 table row, §5 confidence summary (Moderate cluster now dualism + judgment only; resurrection joins angelology + savior at Low), and knock-on to FND-0011 (title, §1, §2, §3). **§4.2 corrected: the H-band's one cross-doctrine discrimination proved DECISION-RELEVANT (it surfaced F-1 and lowered CLM-0051), so the draft "not decision-changing" verdict was mildly too hard on the instrument** — corrected to "largely legibility, with one demonstrated decision-changing instance surfaced by the circuit"; deflationary STD-0008 conclusion still stands. F-2: SRC-0071 Collins 1984 first-edition subtitle corrected to "…Jewish Matrix of Christianity." No confidence level raised anywhere. Scale discipline still clean (native `Level N` only; no H-band/★ in any grading field). §1–3, §6, §7 protocol text untouched. Pending ROLE-0001 structural validation.|
 |0.4|2026-07-20|Draft|**Acceptance-criteria assessment under ADR-GOV-0004 §2 D1 + ADR-GOV-0005 §2 — record deliberately LEFT OPEN (NOT closed).** Six criteria assessed as met and ticked with in-record evidence pointers. **#7** (full OPS-0003 circuit incl. ROLE-0001 structural validation) ticked via the **ADR-GOV-0005 §2** evidence-provenance rule, citing **Identifier Registry v1.17**. **#8** (standards-unmodified) established by direct verification: STD-0008 does not exist; STD-0006/Appendix A and the Architecture Baseline uncommitted since this investigation opened; all standards-directory commits in the window attributable to the ADR-GOV-0004 package, not to INV-0011. **Criterion #2 (three sub-questions per doctrine claim) confirmed genuinely UNMET and recorded as the sole blocker** — verification found no doctrine claim answering (i) dating / (ii) contact pathway / (iii) independent-development explicitly and separably ("independent development" appears in none). Per ADR-GOV-0005 §2 this is **substantive research work, not a formality**, and the evidence-provenance rule expressly does not relax it. A STATUS note to that effect added at the head of §7. **No closure banner added; frontmatter unchanged; no research content, claim, confidence level, or finding altered — assessment and annotation only.** Observed inaccuracy recorded (not corrected, per CON-0003 §9.4): the v0.2 row above asserts the claims carry "the three sub-question answers," which the claim objects do not bear out.|
 |0.5|2026-07-21|Draft|**Criterion #2 completed through a full OPS-0003 circuit, and the record formally CLOSED under ADR-GOV-0004 §2 D1 per the owner's conditional pre-authorization (2026-07-21 transfer brief).** **Specialist pass (ROLE-0002):** explicit `Sub-Question Answers (INV-0011 §1)` sections authored in CLM-0051…CLM-0055 (each claim 0.1→0.2 with history row) — (i)/(ii)/(iii) discrete and individually answered; all five (ii) answers are the explicit negative (inherits CLM-0057; no doctrine-specific channel evidence); "independent development" named and steelmanned in every claim (CLM-0053's steelman newly authored — the thinnest prior coverage — from Deut 30:15–19, Isa 45:7, sectarian polarization, and 1QS's created/subordinated shape); confined to SRC-0067…SRC-0076 per the owner's source-discipline decision, no source-base gap encountered; no confidence level changed by the Specialist; no calibration flags raised. **Critical Review (ROLE-0004): CONFORMANT WITH FLAGS**, verification-light disclosure (in-vault record only; no live source re-verification; procedural independence only) — flags both determinate and both remediated in-session (claims 0.2→0.2a): F-A, Isaiah 45:7 disclosed as newly-introduced illustrative primary text with its reading labeled as the record's own inference anchored to SRC-0067/SRC-0070; F-B, explicit defense of CLM-0052's Level 3 against the at-least-equal rival added (single-axis vs CLM-0051's double-axis weakness; downward pressure recorded, not enacted). Reviewer confirmed all five levels unchanged (0051 L2, 0052 L3, 0053 L3, 0054 L2, 0055 L2) — **no level raised, none changed**; two prose citations rerouted through CLM-0056/CLM-0057 to resolve a graph-reciprocity escalation without a graph change. **ROLE-0001 structural validation, evidenced in-record here:** validate.py PASS (307 files, 0 errors, version-coherence at error level) and graph_integrity.py clean (0 dangling references; symmetric-link and legacy advisories pre-existing and unchanged); scale discipline grep-verified (no H-band/★ in any frontmatter or grading field; ★ occurrences are the prohibition text itself); relationship graph unchanged by the circuit. **H-scale note (GB-2026-027):** this circuit produced no new decision-changing H-scale instance — the F-B defense reused the same cross-doctrine dual-axis discrimination §4.2 already credits (F-1); the §4.2 verdict stands as written. §7: criterion #2 ticked (met at v0.5, not v0.2 — decision 3); STATUS note updated to CLOSED; closure banner added at head citing the pre-authorization and its conditions (a)–(d) all met. Frontmatter status fields unaltered per ADR-GOV-0005 §1.|
+|0.6|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

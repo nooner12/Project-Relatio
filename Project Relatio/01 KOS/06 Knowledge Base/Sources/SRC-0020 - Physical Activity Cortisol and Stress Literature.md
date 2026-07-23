@@ -1,7 +1,7 @@
 ---
 title: SRC-0020 - Physical Activity Cortisol and Stress Literature
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -32,6 +32,13 @@ relationships:
     target: SRC-0016
   - type: related_to
     target: ENT-0003
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-10
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0020
@@ -70,5 +77,6 @@ A **cluster** of systematic reviews and meta-analyses on physical activity/exerc
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-10|Draft|Created for RQ-0005. Cluster source; **no single pooled stress effect size verified** — explicitly flagged.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0020

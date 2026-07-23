@@ -1,7 +1,7 @@
 ---
 title: SRC-0019 - Holt-Lunstad 2010 Social Relationships and Mortality
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -29,6 +29,13 @@ relationships:
     target: CLM-0016
   - type: related_to
     target: ENT-0003
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-10
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0019
@@ -65,5 +72,6 @@ Landmark meta-analytic review, *PLOS Medicine* (2010), quantifying the associati
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-10|Draft|Created for RQ-0005. Figures well-established; observational limitation is the load-bearing caveat.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0019

@@ -1,7 +1,7 @@
 ---
 title: SRC-0138 - Cohen From the Maccabees to the Mishnah
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-22
@@ -30,6 +30,13 @@ relationships:
     target: SRC-0137
   - type: related_to
     target: SRC-0142
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-22
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0138
@@ -69,5 +76,6 @@ Shaye J. D. Cohen, *From the Maccabees to the Mishnah* (Library of Early Christi
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-22|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as the INV-0017 base's bridge source (Second Temple ↔ Rabbinic). Bibliographically live-verified; interior parametric; edition drift disclosed. No claim asserted. English; in print.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0138

@@ -1,7 +1,7 @@
 ---
 title: ENT-0008 - Zoroastrianism
 document_type: Entity Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-21
@@ -34,6 +34,13 @@ relationships:
     target: SRC-0104
   - type: derived_from
     target: SRC-0105
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-21
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # ENT-0008
@@ -69,5 +76,6 @@ relationships:
 |---|---|---|---|
 |0.1|2026-07-21|Draft|Created at INV-0016 circuit — the family root; first tradition-class Entity Record in the vault (TPL-0006). `tradition_type: founded` (founder-attributed; emergent tension flagged for Anchor Fit); `dating_claims` CLM-0087; `display_range` render-only. No `branches_from` (root). Zurvanism recorded as a current here rather than as a distinct tradition. Pending Critical Review and structural validation.|
 |0.2|2026-07-22|Draft|Added the OPTIONAL render-only positioning bounds (STD-0002 §11 v1.11) for the proportional SVG timeline: `range_start_year: -1500`, `range_end_year: present`, `range_uncertainty: moderate`. **Derived from and bounded by the dating claim CLM-0087** — the earliest defensible bound is the linguistic Gathic early-dating (c. 1500–1000 BCE; the traditional 6th-c. BCE date is a rejected late construct), `present` because Zoroastrianism is a living tradition; `moderate` inherits CLM-0087's Moderate emergence-dating component. **Non-evidential, render-only; `display_range` remains authoritative and the heavy contestation lives in CLM-0087, not in these bounds.** No other field touched.|
+|0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End ENT-0008

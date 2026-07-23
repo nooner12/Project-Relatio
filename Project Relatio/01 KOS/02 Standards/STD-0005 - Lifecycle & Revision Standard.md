@@ -1,7 +1,7 @@
 ---
 title: STD-0005 - Lifecycle & Revision Standard
 document_type: Standards Document
-version: 1.1
+version: 1.2
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -22,14 +22,20 @@ tags:
   - Lifecycle
   - Revision
   - Governance
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # STD-0005
 
 # Project Relatio Lifecycle & Revision Standard
 
-## Version 1.1
-
+## Version 1.2
 ## Adopted Standards Document
 
 ---
@@ -431,6 +437,7 @@ Lifecycle governance enables both adaptation and continuity.
 |---|---|---|---|
 |1.0|2026-07-09|Adopted|Initial lifecycle and revision standard|
 |1.1|2026-07-11|Adopted|§24 updated: the two lifecycle dimensions are now carried in two independent metadata fields — `status` (Maturity) and `operational_status` (Operational) — implementing the model in STD-0002 v1.5 (GB-2026-006).|
+|1.2|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

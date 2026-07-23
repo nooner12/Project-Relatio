@@ -1,7 +1,7 @@
 ---
 title: SRC-0033 - Ashford 2010 Self-Efficacy and Physical Activity Meta-Analysis
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-11
@@ -26,6 +26,13 @@ tags:
 relationships:
   - type: supports
     target: CLM-0020
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-11
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0033
@@ -62,5 +69,6 @@ Systematic review with meta-analysis of interventions designed to change **self-
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created during the RQ-0006 remediation pass to catalogue the previously un-catalogued self-efficacy leg of CLM-0020 (Critical Review §6.3 / remediation #3). Bibliographic details and headline findings verified this session via Wiley/BJHP and independent listings (abstract-level). Physical-activity-domain and initiation-focus limitations recorded; does not lift CLM-0020 above Level 3.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0033

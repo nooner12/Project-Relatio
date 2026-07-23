@@ -1,7 +1,7 @@
 ---
 title: TPL-0005 - Architecture Decision Record Template
 document_type: Template
-version: 1.0
+version: 1.2
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -15,6 +15,13 @@ tags:
   - Templates
   - ADR
   - Governance
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # TPL-0005 — Architecture Decision Record Template
@@ -54,6 +61,13 @@ tags:
   - ProjectRelatio
   - ADR
   - <TopicTag>
+attribution:              # provenance (STD-0002 §6 / ADR-GOV-0011 Decision B) — REQUIRED
+  - actor: <named human>                 # an AI is never the actor; disclose it below
+    role: <ROLE-NNNN … or free string>   # no controlled enum (ADR-GOV-0011 §7)
+    event: created                       # the only Stage 1 value; Stage 2 adds entries, not keys
+    date: <YYYY-MM-DD>
+    ai_degree: ai-delegated              # unassisted | ai-assisted | ai-delegated
+    ai_model_family: Claude              # vendor/family free string; `none` iff unassisted
 ---
 
 # ADR-CAT-NNNN
@@ -103,6 +117,8 @@ tags:
 |Version|Date|Status|Description|
 |---|---|---|---|
 |1.0|2026-07-09|Adopted|Initial ADR template; adopts CON-0003 §7 ADR practice going forward, without backfill (Governance Backlog GB-2026-010)|
+|1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
+|1.2|2026-07-22|Adopted|Added the required `attribution` stub to the emitted frontmatter (STD-0002 v1.12 §6 / ADR-GOV-0011 Decision B), so records created from this template are **born conformant** against the now-error-level attribution check. Template-side only — no field, rule, or body section changed.|
 
 ---
 

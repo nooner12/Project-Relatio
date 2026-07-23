@@ -1,7 +1,7 @@
 ---
 title: KOS-0009 - Knowledge Representation & Information Architecture Framework
 document_type: Kernel Operating System Document
-version: 1.1
+version: 1.2
 status: Adopted
 operational_status: Active
 category:
@@ -25,14 +25,20 @@ tags:
   - InformationArchitecture
   - Obsidian
   - KnowledgeGraph
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # KOS-0009
 
 # Project Relatio Knowledge Representation & Information Architecture Framework
 
-## Version 1.1
-
+## Version 1.2
 ## Adopted Kernel Document
 
 ---
@@ -692,6 +698,7 @@ Project Relatio adopts:
 |0.2|2026-07-09|Revised Draft|Added maturity states, provenance, contradictions, AI compatibility|
 |1.0|2026-07-09|Adopted|Finalized knowledge representation framework|
 |1.1|2026-07-11|Adopted|Kernel audit (GB-2026-018): added deference notes resolving four competing-authority drifts against the later-adopted Standards — §5 object types → **KOS-0012**; §6 maturity states → **STD-0005** (two-dimensional lifecycle); §7 metadata schema → **STD-0002**; §10 relationship types → **STD-0004** (graph relations) and **KOS-0005** (world/content types). No new definitions introduced; KOS-0009's early vocabularies are retained as conceptual precursors, with the adopted Standards governing.|
+|1.2|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

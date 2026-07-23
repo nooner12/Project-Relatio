@@ -1,7 +1,7 @@
 ---
 title: SRC-0139 - Boyarin 2004 Border Lines
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-22
@@ -29,6 +29,13 @@ relationships:
     target: SRC-0141
   - type: contrasts_with
     target: SRC-0140
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-22
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0139
@@ -67,5 +74,6 @@ Daniel Boyarin, *Border Lines: The Partition of Judaeo-Christianity* (Divination
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-22|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as one pole of the INV-0017 parting-of-the-ways rival readings. Bibliographically live-verified; interior parametric; thesis recorded as a position, not a finding. `contrasts_with` SRC-0140 reciprocated. English; in print.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0139

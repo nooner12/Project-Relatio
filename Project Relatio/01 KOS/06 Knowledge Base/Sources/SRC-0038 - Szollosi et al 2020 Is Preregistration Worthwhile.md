@@ -1,7 +1,7 @@
 ---
 title: SRC-0038 - Szollosi et al 2020 Is Preregistration Worthwhile
 document_type: Source Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-12
@@ -32,6 +32,13 @@ relationships:
     target: CLM-0033
   - type: contrasts_with
     target: SRC-0037
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-12
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0038
@@ -71,5 +78,6 @@ Opinion/Letter: Szollosi, A., Kellen, D., Navarro, D. J., Shiffrin, R., van Rooi
 |0.1|2026-07-12|Draft|Created for RQ-0007. Author list, venue (TiCS 24(2):94–95, 2020), and the central argument verified this session via Cell/TiCS and Semantic Scholar records. Presented explicitly as a contested minority-critique viewpoint.|
 |0.2|2026-07-12|Draft|Post-review remediation (Critical Review - RQ-0007): removed the unverified DOI from source_url (§12.1); short-title cross-references to CLM-0032/CLM-0033 (STD-0001 §10). Contested-minority framing retained. No content change.|
 |0.1.1|2026-07-12|Draft|ROLE-0001 structural validation (SA-001): added SRC-0037 to `related_documents` so the `contrasts_with` SRC-0037 edge already in the typed block and §5 prose also appears in the flat graph list (single-file consistency). No content change.|
+|0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0038

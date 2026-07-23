@@ -1,7 +1,7 @@
 ---
 title: INV-0012 - Mycelial Networks and Fungal Cognition
 document_type: Investigation Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -22,6 +22,13 @@ tags:
   - FungalNetworks
   - BasalCognition
   - NeuralAnalogy
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # INV-0012
@@ -195,6 +202,7 @@ INV-0012 may close only when all of the following hold:
 |0.2|2026-07-19|Draft|**Executed by the Research Specialist (ROLE-0002).** Created 14 sources (SRC-0077…SRC-0090, both poles, all live-verified this session — verification strong for citations, moderate for two spike-parameter sets), 8 claims (CLM-0059…CLM-0066, each explicitly claim-typed and natively graded), and FND-0012. Verdict: sophisticated adaptive network biology (rungs a–b, High); learning only operational (c, Low); basal cognition (d) a contested framing (Low); sentience (e) bracketed; "language," strong wood-wide-web, and "fungal brain" NOT supported. Datum≠interpretation (CLM-0061) and *Physarum*-firewall (CLM-0064/0065, SRC-0090 typed `related_to`) enforced. Populated §4 (findings pointer + claim table), §5 (confidence summary + GB-2026-002 watch-item assessment: prose carried the quantitative content; mild non-decisive strain on the electrical timescale discrepancy and CMN replication counts; logged only), §8 (full relationship graph; entity decision = none, single-use). §1–3/§6/§7 protocol text untouched. Native Level 1–4; no Level 5; no ★; no magnitude ranking. **Pending ROLE-0004 critical review and ROLE-0001 structural validation.**|
 |0.3|2026-07-19|Draft|**Remediated by ROLE-0002 per Critical Review – RQ-0012 (CONFORMANT WITH FLAGS; all four fixes applied).** **F-1 (path (a), lower):** CLM-0064 carry-over sub-grade lowered Moderate → Level 2 (Low, single-group); knock-on tracked in FND-0012 §1/§2 and the §4 claim table here. **F-2:** headline-selection rule for two-level split claims stated in CLM-0063 and cross-noted in CLM-0061 (documentation only; no level change). **F-3:** CLM-0059 Independence 4 → 3 (shared Boddy authorship); Level 4 confidence unchanged. **F-4:** SRC-0077 §4 cross-reference SRC-0085 → SRC-0086. Soft note resolved: "Facts, not fantasy" rebuttal first author pinned to **Tamir Klein** (*Open Research Europe*, doi:10.12688/openreseurope.16594.1) in CLM-0063 and FND-0012 — live-verified this session. **No confidence level raised anywhere; scale discipline clean (native `Level N` only; no ★).** Still pending ROLE-0001 structural validation (validate.py + graph_integrity.py; Identifier Registry — Architect's step).|
 |0.4|2026-07-20|Draft|**Formally CLOSED under ADR-GOV-0004 §2 D1, enabled by ADR-GOV-0005 §2.** All eight §7 acceptance criteria assessed, met, and ticked, each with its in-record evidence pointer. The one criterion that could not previously be ticked was **#7** (full OPS-0003 circuit incl. ROLE-0001 structural validation), because its evidence lives outside this record; **ADR-GOV-0005 §2**'s evidence-provenance rule (*out-of-record evidence may satisfy a criterion only via an in-record citation naming the evidencing document and version*) permits the tick, and the citation is made in-record to **Identifier Registry v1.18**. Dated closure banner added. **Per ADR-GOV-0005 §1, closure state is carried by the banner and this row, not by frontmatter** — `status: Draft` and `operational_status: Active` are deliberately unchanged, matching model instance INV-0010; STD-0005's vocabulary defines no "closed" value. **No research content, claim, source, confidence level, or finding altered; additive only.** The STD-0006 §7.5 verification disclosure and its external-reliance limit are unaffected by closure.|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

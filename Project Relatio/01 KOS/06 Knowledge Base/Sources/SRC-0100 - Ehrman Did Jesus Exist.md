@@ -1,7 +1,7 @@
 ---
 title: SRC-0100 - Ehrman Did Jesus Exist
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -34,6 +34,13 @@ relationships:
     target: SRC-0101
   - type: part_of
     target: INV-0013
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0100
@@ -75,5 +82,6 @@ Bart D. Ehrman, *Did Jesus Exist? The Historical Argument for Jesus of Nazareth*
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0013. The mainstream-historicity pole (agnostic author); H-band H-e. Consensus near-universal; theological claims bracketed; consensus recorded separately from evidence class. Paired with SRC-0101. Live-verified strong.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0100

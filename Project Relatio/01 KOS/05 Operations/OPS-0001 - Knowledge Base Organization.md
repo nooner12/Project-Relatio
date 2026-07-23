@@ -1,7 +1,7 @@
 ---
 title: OPS-0001 - Knowledge Base Organization
 document_type: Operations Document
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -18,14 +18,20 @@ tags:
   - Operations
   - KnowledgeBase
   - Organization
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # OPS-0001
 
 # Knowledge Base Organization
 
-## Version 1.0
-
+## Version 1.1
 ## Adopted Operations Document
 
 ---
@@ -100,6 +106,7 @@ Object files follow STD-0001 (`IDENTIFIER - Title`). Folder names follow `INV-NN
 |Version|Date|Status|Description|
 |---|---|---|---|
 |1.0|2026-07-09|Adopted|Initial KB organization convention; resolves F-7/F-11; sources and entities moved to shared folders|
+|1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

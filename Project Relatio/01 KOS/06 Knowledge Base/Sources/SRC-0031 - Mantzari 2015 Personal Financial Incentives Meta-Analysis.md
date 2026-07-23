@@ -1,7 +1,7 @@
 ---
 title: SRC-0031 - Mantzari 2015 Personal Financial Incentives Meta-Analysis
 document_type: Source Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-11
@@ -26,6 +26,13 @@ tags:
 relationships:
   - type: supports
     target: CLM-0026
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-11
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0031
@@ -63,5 +70,6 @@ Systematic review and meta-analysis of **personal financial incentives** for cha
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created for RQ-0006. Odds ratios (1.53; 2.11; 2.17 deprivation) and the "not sustained beyond ~3 months / no new habits" conclusion verified this session via PMC-4728181 full text.|
 |0.2|2026-07-11|Draft|Remediation pass (remediation #1): all three ORs **re-verified** exactly against PMC-4728181 full text — 1.53 (1.05–2.23) to 18 mo; 2.11 (1.21–3.67) to >2–3 mo post-removal; 2.17 (1.22–3.85) high-deprivation at >6–12 mo. Added the timepoint qualifiers for the 2.11 and 2.17 figures.|
+|0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0031

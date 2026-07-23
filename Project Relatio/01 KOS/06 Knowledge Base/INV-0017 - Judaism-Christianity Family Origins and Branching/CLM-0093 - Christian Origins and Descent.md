@@ -1,7 +1,7 @@
 ---
 title: CLM-0093 - Christian Origins and Descent
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-22
@@ -64,6 +64,13 @@ reliance_note: "verification-light review; not cleared for external reliance"
 review_cycle: 9
 review_date: 2027-04-22
 last_reviewed: 2026-07-22
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-22
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0093
@@ -132,5 +139,6 @@ Type: **Historical.**
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-22|Draft|Created for RQ-0017 (Specialist pass). 1st-c. CE emergence (inherited CLM-0068/0075/0076, High) and descent from Second Temple Judaism (seed warrant CLM-0058, High) — both High. `branches_from` Second Temple Judaism qualifier `schism` (scaffold working hypothesis retained) chosen as least-wrong for "separated to become distinct," with a load-bearing sharpness caveat: the parting was gradual/late/uneven (Boyarin SRC-0139; Becker & Reed SRC-0141) against the earlier-partings pole (Dunn SRC-0140); `schism_qualifier_fit` graded Moderate to encode the tension, routed to Anchor Fit. `tradition_type: emergent` (founded tension flagged). Both rivals (sharp-early / late-gradual) steelmanned. Metaphysical bracket acute — no supersessionist framing. Inherited grades cited not re-derived; parting-source interiors parametric; verification-light; R0; not cleared for external reliance. Pending Critical Review and structural validation.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0093

@@ -1,7 +1,7 @@
 ---
 title: CLM-0028 - Enabling vs Coercive Design Governs Effect
 document_type: Claim Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-12
@@ -40,6 +40,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 9
 review_date: 2027-04-20
 last_reviewed: 2026-07-20
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-12
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0028
@@ -132,5 +139,6 @@ SRC-0035: very high authority and transparency, academic, inform-intent. The fou
 |0.2|2026-07-12|Draft|Post-review remediation (Critical Review - RQ-0007): reviewer verdict Conformant (Independence 2 / Quality 3 candour commended). Title shortened to match filename (STD-0001 §10). No epistemic change.|
 |0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0028

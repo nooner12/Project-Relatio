@@ -1,7 +1,7 @@
 ---
 title: SRC-0069 - Cohn 1993 Cosmos Chaos and the World to Come
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -32,6 +32,13 @@ relationships:
     target: CLM-0053
   - type: part_of
     target: INV-0011
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0069
@@ -73,5 +80,6 @@ Norman Cohn, *Cosmos, Chaos and the World to Come: The Ancient Roots of Apocalyp
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0011. Pro-influence apocalyptic-schema anchor; H-band H-e. Yale UP 1993/2001 verified; dating dependency on Iranology flagged.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0069

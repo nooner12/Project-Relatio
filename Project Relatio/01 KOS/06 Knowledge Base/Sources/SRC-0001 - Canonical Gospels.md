@@ -1,7 +1,7 @@
 ---
 title: SRC-0001 - Canonical Gospels
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-09
@@ -23,6 +23,13 @@ tags:
   - Source
   - Gospels
   - Christianity
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0001
@@ -72,6 +79,7 @@ The four canonical Gospels — Matthew, Mark, Luke, John — as the corpus for "
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-09|Draft|Created for RQ-0001 pressure test|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

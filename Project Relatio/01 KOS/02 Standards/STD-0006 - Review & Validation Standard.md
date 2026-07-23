@@ -1,7 +1,7 @@
 ---
 title: STD-0006 - Review & Validation Standard
 document_type: Standards Document
-version: 1.4
+version: 1.5
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -26,14 +26,20 @@ tags:
   - Validation
   - QualityAssurance
   - Governance
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # STD-0006
 
 # Project Relatio Review & Validation Standard
 
-## Version 1.4
-
+## Version 1.5
 ## Adopted Standards Document
 
 ---
@@ -361,6 +367,7 @@ This mapping is part of an Adopted Standard: amendments are **owner-reserved** a
 |1.2|2026-07-10|Adopted|Added §7.5 Verification Integrity: a review must disclose its own verification strength; a verification-light review may not clear an object for external reliance. Owner-adopted from the RQ-0004 first-agent-circuit run (Backlog GB-2026-014).|
 |1.3|2026-07-14|Adopted|**Appendix A — Cross-Stream Confidence Crosswalk** (GB-2026-025, owner-ratified): recorded the only authorized native-→-house-tier mapping (L5→★★★, L4→★★☆, L3→★☆☆, L2/L1→◇◇◇, L0 not citable) with five mandatory translation rules (no tier gained; dual grades separate; INV-#### and gates travel; receiving-stream review additional). Boundary rule: native ratings only on Knowledge Objects; crosswalk applied on the way out. Also reconciled the stale `## Version` heading (read 1.1 while frontmatter was 1.2).|
 |1.4|2026-07-14|Adopted|**§7.6 Reflexive Findings — independence of kind** (GB-2026-023, owner-ratified): defined reflexive findings; gated them for reflexive use on creation; set blinded independent review (qualified human specialist, or at minimum a different model, working without the vault's framing) as the sole gate-lift; recorded that a same-model reviewer may flag but not certify absence of a shared bias (RQ-0007 §3.6). Enacted at a higher grade than the candidate one-line §7.5 addition, which would have restated §7.5 clause 2 without changing behavior. §7.5 clause 2 cross-referenced to §7.6.|
+|1.5|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

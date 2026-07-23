@@ -1,7 +1,7 @@
 ---
 title: FND-0010 - Psychosocial Stressor Onset Divergence Map
 document_type: Finding Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-15
@@ -61,6 +61,13 @@ reliance_note: "verification-light review; not cleared for external reliance."
 review_cycle: 6
 review_date: 2027-01-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-15
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # FND-0010
@@ -145,5 +152,6 @@ At the literature level, the map says two things a program designer would want t
 |0.2|2026-07-15|Draft|**Remediated per Critical Review – RQ-0010 (CONFORMANT WITH FLAGS).** F-1: eating-disorder (SRC-0064/CLM-0048) and conduct (SRC-0065/CLM-0049) recoded `CONFLATED` → `UNRESOLVED`; census updated to **5 CONFLATED / 2 UNRESOLVED / 1 SEX-MEASURED / 0 GENDER-MEASURED**; prediction verdict rewritten (HELD as "majority fail to cleanly measure a construct") and the corollary — *neither construct is typically measured* — **promoted to the headline** (title + §1b/§1c). F-2: §4 first bullet and §1b now state that puberty occurs in both sexes, so pubertal-stage measurement does not establish biological-sex causation of the between-sex divergence (sex × puberty interaction unmeasured). **No confidence level changed** (operative rule constrains CONFLATED and UNRESOLVED identically). Still pending ROLE-0001 structural validation.|
 |0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End FND-0010

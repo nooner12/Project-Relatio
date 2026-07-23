@@ -1,7 +1,7 @@
 ---
 title: CON-0001 - Project Relatio Vision, Mission & Core Principles
 document_type: Constitutional Instrument
-version: 1.1
+version: 1.2
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -13,6 +13,13 @@ tags:
   - Vision
   - Mission
   - CorePrinciples
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 # CON-0001
 
@@ -443,3 +450,4 @@ Project Relatio adopts:
 |0.1|2026-07-09|Draft|Initial constitutional draft|
 |0.2|2026-07-09|Revised Draft|Incorporated architectural critique|
 |1.1|2026-07-11|Adopted|Recorded the prior v1.0 adoption (frontmatter showed Adopted without a revision entry); added the missing `created` date; reconciled §11 stewardship functions with CON-0003's five (foundational audit fixes 1–2).|
+|1.2|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|

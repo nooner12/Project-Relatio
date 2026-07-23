@@ -1,7 +1,7 @@
 ---
 title: INV-0010 - Psychosocial Stressor Onset Divergence
 document_type: Investigation Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-15
@@ -19,6 +19,13 @@ tags:
   - PsychosocialStressors
   - ChildDevelopment
   - SexGenderConstructs
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-15
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # INV-0010
@@ -176,6 +183,7 @@ INV-0010 may close only when all of the following hold. **All criteria satisfied
 |0.2a|2026-07-15|Draft|**Critical Review – RQ-0010 returned CONFORMANT WITH FLAGS; three flags remediated by ROLE-0002.** F-1: SRC-0064/CLM-0048 (eating) and SRC-0065/CLM-0049 (conduct) recoded `CONFLATED` → `UNRESOLVED`; census updated everywhere (§4, §5, FND-0010 title/§1b/§1c/§2/§3) to **5 CONFLATED / 2 UNRESOLVED / 1 SEX-MEASURED / 0 GENDER-MEASURED**; prediction verdict rewritten and the "neither construct is typically measured" corollary promoted to the finding's headline. F-2: CLM-0045/SRC-0060/FND-0010 §4 now state puberty occurs in both sexes, so pubertal-stage measurement does not establish between-sex biological causation. F-3: CLM-0046's Level-3 direction warrant re-based on the catalogued SRC-0061-vs-SRC-0059 contrast; uncatalogued-review appeal deleted. **No confidence level changed anywhere** (operative rule constrains CONFLATED and UNRESOLVED identically). SEX-MEASURED coding of SRC-0060 stands (census 7-of-8-not-cleanly-measured). Pending ROLE-0001 structural validation.|
 |0.2b|2026-07-15|Draft|**Structural validation (ROLE-0001) — circuit closed; validate.py PASS, graph_integrity.py 0 dangling / 0 new advisories.** Graph reconciliation only (no content, confidence, census, or construct-code change): (1) removed the dangling typed edge `part_of: Knowledge Base` (not a resolvable object) — the classification statement stays in §8 prose, matching INV-0009; (2) removed the redundant v0.2 `related_to` down-edges from INV-0010 to CLM-0044…0050/FND-0010 (over-complete duplicates of the children's upward `part_of`/`supports` edges — INV-0010 is a hub every child points up to); (3) reciprocated the genuine peer edge CLM-0044 ↔ CLM-0046 `contrasts_with` (added the CLM-0044 side; CLM-0046 already declared it). Direction conventions confirmed (SRC→CLM `supports`, CLM→FND `supports`, FND→CLM `derived_from`, SRC/CLM/FND `part_of` INV-0010); all typed targets resolve. Registered in the Identifier Registry (v1.16). §7 acceptance criteria all satisfied.|
 |0.3|2026-07-15|Draft|**Formally closed (owner-authorized).** All eight §7 acceptance criteria confirmed met and ticked (`[x]`); the header status banner updated from "opening scaffold only / not executed" to CLOSED. **Maturity `status` deliberately held at `Draft`** — consistent with every other investigation in the vault (INV-0001…0009 all remain Draft; there is no Draft→Adopted closure step), and honest to the fact that the STD-0006 §7.5 reliance gate is **still in force**: the finding is not cleared for external reliance without independent developmental-psychology re-verification outside the circuit. "Closed" = circuit complete + acceptance criteria satisfied + owner sign-off; it is **not** a maturity promotion and does **not** touch the gate, the confidence levels, the census, or any construct code. INV-0008 non-inference remains intact. Concurrent governance action: GB-2026-026 (the construct-provenance scheme as a standing rule) owner-decided **defer-to-second-use** — Open candidate, not enacted.|
+|0.4|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

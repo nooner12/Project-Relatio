@@ -1,7 +1,7 @@
 ---
 title: SRC-0132 - Lu 2008 The Transformation of Yiguan Dao in Taiwan
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -31,6 +31,13 @@ relationships:
     target: CLM-0082
   - type: part_of
     target: INV-0015
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-20
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0132
@@ -70,5 +77,6 @@ Yunfeng Lu, *The Transformation of Yiguan Dao in Taiwan: Adapting to a Changing 
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-20|Draft|Created for RQ-0015. First dedicated anglophone monograph; trajectory facts (suppression, largest-sect status, 1987 legalization) consumed at review level; interior parametric, disclosed. English; paywalled/print.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0132

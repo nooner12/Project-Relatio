@@ -1,7 +1,7 @@
 ---
 title: SRC-0027 - Harkin 2016 Monitoring Goal Progress Meta-Analysis
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-11
@@ -26,6 +26,13 @@ tags:
 relationships:
   - type: supports
     target: CLM-0023
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-11
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0027
@@ -61,5 +68,6 @@ Meta-analysis of experimental (randomised) tests of whether prompting people to 
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created for RQ-0006. d+ values (1.98 monitoring frequency; 0.40 attainment) and the public/recorded moderator verified this session via White Rose / APA release.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0027

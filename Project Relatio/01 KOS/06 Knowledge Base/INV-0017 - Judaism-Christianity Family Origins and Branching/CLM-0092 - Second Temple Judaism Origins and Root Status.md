@@ -1,7 +1,7 @@
 ---
 title: CLM-0092 - Second Temple Judaism Origins and Root Status
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-22
@@ -43,6 +43,13 @@ reliance_note: "verification-light review; not cleared for external reliance"
 review_cycle: 9
 review_date: 2027-04-22
 last_reviewed: 2026-07-22
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-22
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0092
@@ -110,5 +117,6 @@ Type: **Historical.**
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-22|Draft|Created for RQ-0017 (Specialist pass). Family root — the shared Second-Temple matrix from which both Christianity and Rabbinic Judaism descend. Period bounds c. 516 BCE – 70 CE (live-verified); tradition-emergence contested; single-tradition status a reasoned finding against the §2.3 threshold (common-Judaism substrate; internal parties are currents, not distinct traditions), with the plural-Judaisms rival steelmanned and costed into the Moderate grade. `tradition_type: emergent` (founded tension flagged for Anchor Fit). No `branches_from` (root; upstream Israelite/Yahwistic descent deferred to a later family 2-deep, not asserted). Source interiors parametric; verification-light; R0; not cleared for external reliance. Pending Critical Review and structural validation.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0092

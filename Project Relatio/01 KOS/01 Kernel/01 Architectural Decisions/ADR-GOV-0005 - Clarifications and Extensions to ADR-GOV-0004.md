@@ -21,6 +21,13 @@ tags:
   - Governance
   - Clarification
   - PathIntegrity
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-20
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 ## §1 — D1(d) clarified: closure state lives in banner + history, not frontmatter

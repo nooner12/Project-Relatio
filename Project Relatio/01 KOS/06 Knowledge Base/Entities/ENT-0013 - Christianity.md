@@ -1,7 +1,7 @@
 ---
 title: ENT-0013 - Christianity
 document_type: Entity Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-22
@@ -37,6 +37,13 @@ relationships:
     target: SRC-0103
   - type: derived_from
     target: SRC-0140
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-22
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # ENT-0013
@@ -72,5 +79,6 @@ relationships:
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-22|Draft|Created at INV-0017 circuit — the schism-class branch of the fork; born timeline-ready (TPL-0006 v1.1 / STD-0002 v1.11). `tradition_type: emergent` (founded tension flagged); `dating_claims` CLM-0093 (1st c. CE, inheriting CLM-0068/0075/0076); `display_range` render-only ("1st c. CE"); positioning bounds `range_start_year: 30` (movement origin at the crucifixion), `range_end_year: present`, `range_uncertainty: low` (inherits CLM-0093's High emergence dating). `branches_from` ENT-0012 qualifier `schism` (warrant CLM-0093; seed CLM-0058), least-wrong for "separated to become distinct" with the gradual/late-parting sharpness caveat flagged for Anchor Fit (`schism_qualifier_fit` Moderate). Metaphysical bracket acute — no supersessionist framing. Pending Critical Review and structural validation.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End ENT-0013

@@ -1,7 +1,7 @@
 ---
 title: SRC-0018 - CBT-I Long-Term Meta-Analysis
 document_type: Source Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -28,6 +28,13 @@ relationships:
     target: CLM-0015
   - type: related_to
     target: ENT-0003
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-10
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0018
@@ -64,5 +71,6 @@ relationships:
 |---|---|---|---|
 |0.1|2026-07-10|Draft|Created for RQ-0005. Meta-analysis attribution unconfirmed; effect sizes from abstract summary — flagged for reviewer.|
 |0.2|2026-07-11|Draft|Attribution + effect sizes **live-verified** in Critical Review – RQ-0005 §3 (van der Zweerde et al. 2019, Sleep Medicine Reviews 48:1–11; g 0.64/0.40/0.25). "Attribution unconfirmed" limitation removed; flag cleared (§9 rev #4).|
+|0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0018

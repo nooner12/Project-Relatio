@@ -1,7 +1,7 @@
 ---
 title: SRC-0048 - DuBois et al 2011 How Effective Are Mentoring Programs
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -29,6 +29,13 @@ relationships:
     target: CLM-0037
   - type: related_to
     target: SRC-0049
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-14
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0048
@@ -68,5 +75,6 @@ DuBois, D. L., Portillo, N., Rhodes, J. E., Silverthorn, N., & Valentine, J. C. 
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-14|Draft|Created for RQ-0008. Citation (PSPI 12(2):57–91, 2011), 73-evaluation meta-analysis, overall d ≈ 0.21, and moderator pattern verified this session via SAGE + secondary summaries; primary PDF paywalled (not opened). Funding not verified.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0048

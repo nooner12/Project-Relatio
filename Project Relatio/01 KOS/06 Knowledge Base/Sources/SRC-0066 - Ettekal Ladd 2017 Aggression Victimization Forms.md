@@ -1,7 +1,7 @@
 ---
 title: SRC-0066 - Ettekal Ladd 2017 Aggression Victimization Forms
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-15
@@ -28,6 +28,13 @@ relationships:
     target: CLM-0050
   - type: part_of
     target: INV-0010
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-15
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0066
@@ -66,5 +73,6 @@ Ettekal, I., & Ladd, G. W. (2017), "Developmental continuity and change in physi
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-15|Draft|Created for RQ-0010 (secondary/modal-expression question). Dev. Psychol. 53(9):1709–1721, DOI 10.1037/dev0000357 — verified via PMC5600622. Construct-provenance: `CONFLATED` — sex as covariate, no gender measure or mechanism despite strong socialization theorizing. Supports only a gender-patterned/unattributed form-divergence claim; mean-level form differences are modest.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0066

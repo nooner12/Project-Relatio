@@ -1,7 +1,7 @@
 ---
 title: SRC-0053 - Bandura 1997 Self-Efficacy The Exercise of Control
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -30,6 +30,13 @@ relationships:
     target: CLM-0036
   - type: related_to
     target: SRC-0050
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-14
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0053
@@ -66,5 +73,6 @@ Bandura, A. (1997), *Self-Efficacy: The Exercise of Control* (New York: W. H. Fr
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-14|Draft|Created in RQ-0008 remediation (Critical Review – RQ-0008 §8, item 1) to catalogue the previously-invoked Bandura companion carrying CLM-0036's "strongest source" headline. Four-sources hierarchy with enactive mastery strongest confirmed via WebSearch of secondary summaries; primary not paged this session; no figure asserted from it.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0053

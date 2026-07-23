@@ -1,7 +1,7 @@
 ---
 title: SRC-0063 - Ramtekkar et al 2010 ADHD Community Ratio
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-15
@@ -31,6 +31,13 @@ relationships:
     target: SRC-0062
   - type: part_of
     target: INV-0010
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-15
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0063
@@ -70,5 +77,6 @@ Ramtekkar, U. P., Reiersen, A. M., Todorov, A. A., & Todd, R. D. (2010), "Sex an
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-15|Draft|Created for RQ-0010. JAACAP 49(3):217–228 — verified via PMC3101894. Construct-provenance: `CONFLATED` — sex-labeled parent-report ratings; community ratio (~2.28:1) far below clinical, attributed to reduced referral bias. Supports only a gender/ascertainment-patterned claim; independent convergence with SRC-0062.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0063

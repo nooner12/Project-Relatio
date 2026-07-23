@@ -1,7 +1,7 @@
 ---
 title: CLM-0083 - The Classification Criteria and Their Application
 document_type: Claim Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -49,6 +49,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 6
 review_date: 2027-01-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-20
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0083
@@ -132,5 +139,6 @@ SRC-0129 high authority, paywalled (the disclosed gap); SRC-0130 high; SRC-0131 
 |0.1|2026-07-20|Draft|Created for RQ-0015 — the load-bearing claim. Split grade: placement + consensus Level 3 (Moderate, unanimous across surveyed base, asymmetry reported per §2.2); criteria-mechanics Level 2 (Low — Palmer 2011 interior paywalled; mechanics not reconstructed from model memory per the anti-fabrication rule). Category-artifact counter-reading steelmanned via SRC-0136. Elements (a)/(b)/(c) discrete. Pending review/validation.|
 |0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 |0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.4|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0083

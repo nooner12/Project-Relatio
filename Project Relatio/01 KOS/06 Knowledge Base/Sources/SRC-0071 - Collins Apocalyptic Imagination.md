@@ -1,7 +1,7 @@
 ---
 title: SRC-0071 - Collins Apocalyptic Imagination
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -31,6 +31,13 @@ relationships:
     target: CLM-0058
   - type: part_of
     target: INV-0011
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0071
@@ -73,5 +80,6 @@ John J. Collins, *The Apocalyptic Imagination* — the **1984 Crossroad first ed
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0011. Second-Temple-side anchor; measured on Persian influence; supplies internal-development alternative and firm Jewish-side dating. H-band H-e (over Jewish-side H-a texts). Verified.|
 |0.1a|2026-07-19|Draft|**Edition-subtitle precision fix per Critical Review – RQ-0011 F-2.** Corrected the 1984 Crossroad first-edition subtitle to *"An Introduction to the Jewish Matrix of Christianity"* (the later Eerdmans editions carry *"An Introduction to Jewish Apocalyptic Literature"*); reconciled with CLM-0058's correct "Jewish matrix of Christianity" attribution. No confidence change; no fabrication.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0071

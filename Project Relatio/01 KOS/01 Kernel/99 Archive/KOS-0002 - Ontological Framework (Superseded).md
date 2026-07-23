@@ -18,6 +18,13 @@ tags:
   - reality
   - existence
   - relationships
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-08
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # KOS-0002

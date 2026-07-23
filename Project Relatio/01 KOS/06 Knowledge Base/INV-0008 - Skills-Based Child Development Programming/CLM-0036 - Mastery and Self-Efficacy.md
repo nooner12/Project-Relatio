@@ -1,7 +1,7 @@
 ---
 title: CLM-0036 - Mastery and Self-Efficacy
 document_type: Claim Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -43,6 +43,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 6
 review_date: 2027-01-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-14
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0036
@@ -137,5 +144,6 @@ SRC-0053 (Bandura): very-high-authority foundational theory; anchors "mastery = 
 |0.2|2026-07-14|Draft|RQ-0008 remediation (Critical Review – RQ-0008 §8 item 1): catalogued **SRC-0053 (Bandura 1997)** and re-anchored the "strongest source" half on it (previously invoked-not-catalogued; Multon/SRC-0050 does not establish it). Division of evidentiary labour made explicit. Confidence levels unchanged.|
 |0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0036

@@ -1,7 +1,7 @@
 ---
 title: ENT-0012 - Second Temple Judaism
 document_type: Entity Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-22
@@ -34,6 +34,13 @@ relationships:
     target: SRC-0137
   - type: derived_from
     target: SRC-0138
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-22
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # ENT-0012
@@ -69,5 +76,6 @@ relationships:
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-22|Draft|Created at INV-0017 circuit — the family root and the hub of the Judaism–Christianity fork; born timeline-ready (TPL-0006 v1.1 / STD-0002 v1.11). `tradition_type: emergent` (founded tension flagged for Anchor Fit); `dating_claims` CLM-0092; `display_range` render-only ("c. 516 BCE – 70 CE (Second Temple period)"); positioning bounds `range_start_year: -516`, `range_end_year: 70`, `range_uncertainty: moderate`, derived from CLM-0092 (end at 70 CE — Temple-centred tradition superseded by its two branches). **No `branches_from` (root; upstream Israelite/Yahwistic descent deferred to a later family 2-deep, not asserted/edged).** Internal parties recorded as currents within one tradition (§2.3), not entities. Branched-into by ENT-0013 and ENT-0014 (edges on the children). Pending Critical Review and structural validation.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End ENT-0012

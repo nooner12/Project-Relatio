@@ -1,7 +1,7 @@
 ---
 title: CON-0004 - Project Relatio Knowledge & Epistemic Integrity Charter
 document_type: Constitutional Instrument
-version: 1.1
+version: 1.2
 status: Adopted
 operational_status: Active
 category:
@@ -22,13 +22,19 @@ tags:
   - Epistemology
   - KnowledgeIntegrity
   - ResearchMethodology
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 # CON-0004
 
 # Project Relatio Knowledge & Epistemic Integrity Charter
 
-## Version 1.1
-
+## Version 1.2
 ## Adopted Constitutional Instrument
 
 ---
@@ -534,6 +540,7 @@ Project Relatio commits to:
 |0.2|2026-07-09|Revised Draft|Added comparative evaluation, reasoning accessibility, methodological appropriateness|
 |1.0|2026-07-09|Adopted|Finalized epistemic integrity charter|
 |1.1|2026-07-11|Adopted|§2 revised (owner-directed, foundational audit): replaced the critical-realist orientation with **ontological humility** as the stance and **relationalism** as the working interpretive lens — relationships treated as fundamental to understanding and to how the system's parts interact. Load-bearing minimal commitments (models≠reality, agreement≠truth, understanding≠certainty, anti-solipsism, anti-relativism) retained. Propagation to KOS-0003/KOS-0004 and CON-0001's axioms tracked in the Governance Backlog.|
+|1.2|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

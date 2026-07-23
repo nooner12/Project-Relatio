@@ -1,7 +1,7 @@
 ---
 title: SRC-0006 - DiRECT Trial Programme
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -34,6 +34,13 @@ relationships:
     target: SRC-0007
   - type: related_to
     target: SRC-0010
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-10
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0006
@@ -100,6 +107,7 @@ Verified this session:
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-10|Draft|Created for RQ-0004. Figures verified via Lancet/PubMed abstracts this session.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

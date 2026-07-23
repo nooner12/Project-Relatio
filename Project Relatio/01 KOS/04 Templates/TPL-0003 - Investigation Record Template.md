@@ -1,7 +1,7 @@
 ---
 title: TPL-0003 - Investigation Record Template
 document_type: Template
-version: 1.1
+version: 1.3
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -16,6 +16,13 @@ tags:
   - ProjectRelatio
   - Templates
   - InvestigationRecord
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # TPL-0003 — Investigation Record Template
@@ -56,6 +63,13 @@ relationships:            # typed (STD-0002 §7 / STD-0004) — prefer the most 
     target: <SRC-NNNN>
   - type: related_to
     target: <INV-NNNN>
+attribution:              # provenance (STD-0002 §6 / ADR-GOV-0011 Decision B) — REQUIRED
+  - actor: <named human>                 # an AI is never the actor; disclose it below
+    role: <ROLE-NNNN … or free string>   # no controlled enum (ADR-GOV-0011 §7)
+    event: created                       # the only Stage 1 value; Stage 2 adds entries, not keys
+    date: <YYYY-MM-DD>
+    ai_degree: ai-delegated              # unassisted | ai-assisted | ai-delegated
+    ai_model_family: Claude              # vendor/family free string; `none` iff unassisted
 ---
 
 # INV-NNNN
@@ -105,6 +119,8 @@ Refined: <refined question + rationale for refinement>
 |---|---|---|---|
 |1.0|2026-07-09|Adopted|Initial Investigation Record template; encodes STD-0002 + KOS-0012 §5.1|
 |1.1|2026-07-11|Adopted|Added `operational_status` (GB-2026-006) and the typed `relationships` example (GB-2026-001) to the object frontmatter block.|
+|1.2|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
+|1.3|2026-07-22|Adopted|Added the required `attribution` stub to the emitted frontmatter (STD-0002 v1.12 §6 / ADR-GOV-0011 Decision B), so records created from this template are **born conformant** against the now-error-level attribution check. Template-side only — no field, rule, or body section changed.|
 
 ---
 

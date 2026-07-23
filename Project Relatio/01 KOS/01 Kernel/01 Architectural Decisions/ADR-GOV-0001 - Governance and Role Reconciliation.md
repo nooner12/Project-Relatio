@@ -1,7 +1,7 @@
 ---
 title: ADR-GOV-0001 - Governance and Role Reconciliation
 document_type: Architecture Decision Record
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -27,6 +27,13 @@ tags:
   - ADR
   - Governance
   - Roles
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # ADR-GOV-0001
@@ -120,6 +127,7 @@ Revisit at the next STD-0006 §4.4 periodic audit, or immediately if a ROLE defi
 |Version|Date|Status|Description|
 |---|---|---|---|
 |1.0|2026-07-09|Adopted|First ADR. Records the governance and role reconciliation, and inaugurates ADR practice under CON-0003 §7.|
+|1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

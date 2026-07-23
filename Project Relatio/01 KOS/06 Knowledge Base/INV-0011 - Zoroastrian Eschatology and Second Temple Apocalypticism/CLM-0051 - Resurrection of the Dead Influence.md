@@ -1,7 +1,7 @@
 ---
 title: CLM-0051 - Resurrection of the Dead Influence
 document_type: Claim Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -47,6 +47,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 6
 review_date: 2027-01-20
 last_reviewed: 2026-07-20
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0051
@@ -164,5 +171,6 @@ Pro-influence (SRC-0068, SRC-0069) is authoritative but its early-dating case is
 |0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.2a|2026-07-21|Draft|**Minor edit following ROLE-0004 sub-question review (graph-reciprocity escalation).** Item (ii)'s contact-loci point rerouted through CLM-0057's evidence base (which carries SRC-0075), removing a prose citation to a source not declared in this claim's relationships. No graph change, no evidence change, no confidence change (Level 2 unchanged).|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0051

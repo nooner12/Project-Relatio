@@ -1,7 +1,7 @@
 ---
 title: CLM-0089 - Manichaean Origins and Descent
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-21
@@ -52,6 +52,13 @@ reliance_note: "verification-light review; not cleared for external reliance"
 review_cycle: 6
 review_date: 2027-01-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-21
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0089
@@ -118,5 +125,6 @@ Type: **Historical (in-group primary + philological secondary).**
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-21|Draft|Created for RQ-0016 (Specialist pass). Founded 3rd c. CE (Cologne Codex, Šābuhragān, Henning); deliberately syncretic; multi-parent with the primary (Elchasaite Jewish-Christian) matrix out-of-family. In-family `branches_from` Zoroastrianism qualifier `syncretic-descent` (scaffold hypothesis confirmed as the qualifier) — but single-target edge understates syncretism; `zoroastrian_as_infamily_parent` graded Low to encode the partiality; flagged for Anchor Fit. `tradition_type: founded` with `syncretic` co-applying (Anchor Fit tension). Both rivals steelmanned. Verification-light; R0; not cleared for external reliance. Pending Critical Review and structural validation.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0089

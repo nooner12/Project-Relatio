@@ -1,7 +1,7 @@
 ---
 title: SRC-0109 - Kent 1953 Old Persian Grammar Texts Lexicon
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -26,6 +26,13 @@ tags:
 relationships:
   - type: derived_from
     target: SRC-0108
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0109
@@ -67,5 +74,6 @@ The long-standard English-language edition, grammar, and lexicon of the Old Pers
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created as part of the Iranian-family SRC build; edition record, split from its object (SRC-0108) per the corpus object/edition rule. Parametric; publisher and series marked unknown.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0109

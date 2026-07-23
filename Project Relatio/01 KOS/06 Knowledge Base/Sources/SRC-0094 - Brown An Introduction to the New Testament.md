@@ -1,7 +1,7 @@
 ---
 title: SRC-0094 - Brown An Introduction to the New Testament
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -35,6 +35,13 @@ relationships:
     target: CLM-0072
   - type: part_of
     target: INV-0013
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0094
@@ -76,5 +83,6 @@ Raymond E. Brown, *An Introduction to the New Testament*, Anchor Bible Reference
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0013. Moderate mainstream (Catholic) critical introduction; H-band H-e. The cross-confessional cross-check on Ehrman for dating/authorship. Live-verified strong.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0094

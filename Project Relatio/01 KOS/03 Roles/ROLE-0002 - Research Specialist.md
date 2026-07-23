@@ -1,7 +1,7 @@
 ---
 title: ROLE-0002 - Research Specialist
 document_type: Role Definition
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -22,14 +22,20 @@ tags:
   - Roles
   - ResearchSpecialist
   - ResearchMethodology
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # ROLE-0002
 
 # Research Specialist
 
-## Version 1.0
-
+## Version 1.1
 ## Adopted Role Definition
 
 > **Adopted 2026-07-09.** Authored from **observed use** across INV-0001/0002/0003. Authority (§4) and Boundaries (§5) were **ratified by the owner**, with one refinement applied at ratification: the §4.2a scope boundary distinguishing autonomous disambiguation from material redirection of the question.
@@ -155,6 +161,7 @@ The Specialist's work is **not complete** until it has passed independent episte
 |0.1|2026-07-09|Draft|Conformant skeleton created (ROLE-NNNN migration).|
 |0.2|2026-07-09|Draft|Substance authored from observed use across INV-0001/0002/0003. Authority and Boundaries PROPOSED on the ratified ROLE-0001 pattern.|
 |1.0|2026-07-09|Adopted|Owner ratified Authority & Boundaries, with refinement 1 applied: §4.2a scope boundary (autonomous disambiguation vs. material redirection of the question, which is confirmed with the Steward first). Standing Authorization SA-002 now non-provisional.|
+|1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

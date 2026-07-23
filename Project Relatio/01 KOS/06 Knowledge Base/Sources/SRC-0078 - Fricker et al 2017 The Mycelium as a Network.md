@@ -1,7 +1,7 @@
 ---
 title: SRC-0078 - Fricker et al 2017 The Mycelium as a Network
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -34,6 +34,13 @@ relationships:
     target: CLM-0065
   - type: part_of
     target: INV-0012
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0078
@@ -73,5 +80,6 @@ Mark D. Fricker, Luke L. M. Heaton, Nick S. Jones & Lynne Boddy, "The Mycelium a
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0012. Network-transport and structural-analogy anchor (CLM-0060/0062/0065). Live-verified strong.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0078

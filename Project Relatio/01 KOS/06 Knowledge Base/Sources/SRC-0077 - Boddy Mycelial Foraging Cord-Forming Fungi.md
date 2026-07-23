@@ -1,7 +1,7 @@
 ---
 title: SRC-0077 - Boddy Mycelial Foraging Cord-Forming Fungi
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -31,6 +31,13 @@ relationships:
     target: CLM-0060
   - type: part_of
     target: INV-0012
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0077
@@ -71,5 +78,6 @@ Lynne Boddy (Cardiff University) and collaborators — a multi-decade experiment
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0012. Descriptive anchor for foraging/transport (CLM-0059/0060). Researcher and findings live-verified; the exact 1999 Mycologia pagination flagged parametric.|
 |0.1a|2026-07-19|Draft|**Remediated per Critical Review – RQ-0012 F-4.** Corrected §4 internal cross-reference for the directional carry-over: **SRC-0085 → SRC-0086** (SRC-0085 is Kiers/reciprocal-rewards and does not develop carry-over; the intended reference is the Fukasawa/Savoury/Boddy memory study). No confidence change; no fabrication.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0077

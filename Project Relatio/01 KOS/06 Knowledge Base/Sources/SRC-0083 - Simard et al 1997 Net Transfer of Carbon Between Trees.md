@@ -1,7 +1,7 @@
 ---
 title: SRC-0083 - Simard et al 1997 Net Transfer of Carbon Between Trees
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -28,6 +28,13 @@ relationships:
     target: CLM-0063
   - type: part_of
     target: INV-0012
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0083
@@ -67,5 +74,6 @@ Suzanne W. Simard, David A. Perry, Melanie D. Jones, David D. Myrold, Daniel M. 
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0012. Pro-transfer anchor for CLM-0063; the strong WWW downstream claims flagged as separate/contested. Live-verified strong.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0083

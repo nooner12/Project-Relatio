@@ -1,7 +1,7 @@
 ---
 title: CLM-0015 - Cognitive-Behavioural Skills Are the Best-Evidenced Durable Intervention
 document_type: Claim Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -54,6 +54,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 6
 review_date: 2027-01-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-10
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0015
@@ -150,5 +157,6 @@ SRC-0018 is high-authority and its attribution/effect sizes are now **live-verif
 |0.2|2026-07-11|Draft|Cleared SRC-0018 unconfirmed-attribution caveat per Critical Review – RQ-0005 §3/§9 rev #4 (van der Zweerde et al. 2019 live-verified). Grades unchanged.|
 |0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0015

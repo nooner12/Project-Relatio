@@ -1,7 +1,7 @@
 ---
 title: SRC-0010 - ADA-EASD Consensus on Remission Definition
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -32,6 +32,13 @@ relationships:
     target: CLM-0011
   - type: related_to
     target: INV-0004
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-10
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0010
@@ -91,6 +98,7 @@ Verified this session (Riddle et al., *Diabetes Care* 2021;44(10):2438–2444; D
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-10|Draft|Created for RQ-0004. Definition and monitoring statements verified via the PMC full text this session.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

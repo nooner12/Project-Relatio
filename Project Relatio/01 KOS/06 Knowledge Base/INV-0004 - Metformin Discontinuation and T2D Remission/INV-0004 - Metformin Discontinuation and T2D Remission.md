@@ -1,7 +1,7 @@
 ---
 title: INV-0004 - Metformin Discontinuation and T2D Remission
 document_type: Investigation Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -49,6 +49,13 @@ relationships:
     target: SRC-0011
   - type: related_to
     target: INV-0002
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-10
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # INV-0004
@@ -165,6 +172,7 @@ No claim in this investigation reaches Level 5. Confidence 5 remains reserved.
 |---|---|---|---|
 |0.1|2026-07-10|Draft|Fourth research workflow (RQ-0004); first health/clinical-evidence investigation. Awaiting Critical Reviewer (ROLE-0004) and Knowledge Architect (ROLE-0001).|
 |0.2|2026-07-20|Draft|**Formally CLOSED under ADR-GOV-0004 §2 D1 (closure-convention back-application).** D1 bar assessed: **(a)** explicit RQ answer — satisfied at authoring in §4 Findings / Synthesis; **(b)** acceptance criteria — **none apply**, stated-reason path (the criteria practice began at INV-0010; this record predates it and none were ever declared); **(c)** closure banner — added, dated 2026-07-20; **(d)** frontmatter — matches the model instance INV-0010, which holds `status: Draft` / `operational_status: Active` at closure (no Draft→Adopted closure step exists in this vault, and STD-0005's vocabulary has no distinct closed-state value). **No research content altered** — no claim, confidence level, assumption, or finding touched; closure elements are purely additive.|
+|0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: KOS-0004 - Ontological Framework & Reality Modeling System
 document_type: Kernel Operating System Document
-version: 1.3
+version: 1.4
 status: Adopted
 operational_status: Active
 category:
@@ -21,13 +21,19 @@ tags:
   - Ontology
   - RealityModeling
   - KnowledgeArchitecture
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 # KOS-0004
 
 # Project Relatio Ontological Framework & Reality Modeling System
 
-## Version 1.3
-
+## Version 1.4
 ## Adopted Kernel Document
 
 ---
@@ -684,6 +690,7 @@ Project Relatio adopts:
 |1.1|2026-07-11|Adopted|Foundational audit: fixed `version` field (`1`→`1.1`); aligned §2 to CON-0004 §2 (Commitment One reframed as *minimal* realism under ontological humility + relationalism); RM-003 deferred to KOS-0005 as the authoritative relationship typology and distinguished from STD-0004 graph relations. Deep question (elevate relationships to ontological *primacy* vs. entity-first) referred to the Vision Steward — see Governance Backlog GB-2026-018.|
 |1.2|2026-07-11|Adopted|**GB-2026-019 resolved — Vision-Steward decision: co-primary (option b).** Ontology rebalanced from entity-first to **Entity–Relationship Co-Primacy**: §2 co-primacy statement; §4 names RM-001 Entities and RM-003 Relationships as the two co-foundational dimensions (numbering ≠ priority); OP-003 retitled "Relationship Primacy" → "Entity–Relationship Co-Primacy". *(Initial draft framed co-primacy as rejecting the rival ontologies — refined in v1.3.)*|
 |1.3|2026-07-11|Adopted|**Refined the co-primacy framing (owner-directed) for consistency with the project's own OP-006 / OP-008.** Co-primacy is now stated as the project's **default working modeling lens**, not a metaphysical verdict: entity-first and strong/eliminative relationalism are held as **viable perspectives** (evaluated comparatively per OP-007, tension preserved per OP-008) rather than rejected, until substantiated evidence settles a case. Softened §2, §4 ("mutually constituting" → "mutually informing"), and OP-003 accordingly ("never in isolation" → "rarely"). Preserves operational guidance (co-primacy as default) while restoring ontological humility.|
+|1.4|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: INV-0007 - Formal Constraints in Knowledge Systems
 document_type: Investigation Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-12
@@ -63,6 +63,13 @@ relationships:
     target: SRC-0044
   - type: derived_from
     target: SRC-0045
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-12
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # INV-0007
@@ -189,6 +196,7 @@ No claim reaches Level 5. Confidence 5 remains reserved (interpretive/cross-doma
 |0.1|2026-07-12|Draft|Seventh research workflow (RQ-0007); literature-synthesis question (general evidence). Eight sources (all live-verified; two full texts not machine-readable), seven claims (three value, three failure-mode, one synthesis), one entity (ENT-0005), one finding (FND-0007). Motivated-reasoning guard (self-flattering-to-governed-systems direction) named and guarded; reflexive relevance to Project Relatio noted but self-review bracketed. Awaiting Critical Reviewer (ROLE-0004) and Knowledge Architect (ROLE-0001).|
 |0.2|2026-07-12|Draft|Post-review remediation (Critical Review - RQ-0007). Catalogued three verified sources (SRC-0043 Merton, SRC-0044 Polanyi, SRC-0045 Timmermans & Epstein) — added to references/relationships and the source count. Removed the vault merit-principle vocabulary from the §4 bottom line and attributed it as the vault's frame. Short-title cross-references (STD-0001 §10). No confidence change. (Claim-level remediations recorded on each CLM.)|
 |0.3|2026-07-20|Draft|**Formally CLOSED under ADR-GOV-0004 §2 D1 (closure-convention back-application).** D1 bar assessed: **(a)** explicit RQ answer — satisfied at authoring in §4 Findings / Synthesis; **(b)** acceptance criteria — **none apply**, stated-reason path (the criteria practice began at INV-0010; this record predates it and none were ever declared); **(c)** closure banner — added, dated 2026-07-20; **(d)** frontmatter — matches the model instance INV-0010, which holds `status: Draft` / `operational_status: Active` at closure (no Draft→Adopted closure step exists in this vault, and STD-0005's vocabulary has no distinct closed-state value). **No research content altered** — no claim, confidence level, assumption, or finding touched; closure elements are purely additive. Also corrected this record's version-drift instance under **GB-2026-028** (frontmatter read 0.1 against a 0.2 revision-history row; both now coherent at 0.3).|
+|0.4|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

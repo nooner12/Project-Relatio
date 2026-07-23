@@ -1,7 +1,7 @@
 ---
 title: SRC-0125 - Theissen and Merz The Historical Jesus
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -36,6 +36,13 @@ relationships:
     target: CLM-0080
   - type: part_of
     target: INV-0014
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-20
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0125
@@ -79,5 +86,6 @@ Gerd Theissen and Annette Merz, *The Historical Jesus: A Comprehensive Guide* (M
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-20|Draft|Created for RQ-0014. The mainstream handbook baseline for the deeds-and-ministry claims (baptism, Kingdom proclamation, exorcist-healer repute, crucifixion context). H-band H-e in prose. Live-verified moderate-to-strong (bibliographic data confirmed; page numbers approximate).|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0125

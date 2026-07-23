@@ -1,7 +1,7 @@
 ---
 title: KOS-0005 - Relationship Modeling Framework
 document_type: Kernel Operating System Document
-version: 1.3
+version: 1.4
 status: Adopted
 operational_status: Active
 category:
@@ -21,13 +21,19 @@ tags:
   - Relationships
   - SystemsThinking
   - ComparativeAnalysis
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 # KOS-0005
 
 # Project Relatio Relationship Modeling Framework
 
-## Version 1.3
-
+## Version 1.4
 ## Adopted Kernel Document
 
 ---
@@ -731,6 +737,7 @@ Project Relatio adopts:
 |1.1|2026-07-11|Adopted|Foundational audit (owner-directed). **A:** §5 note distinguishing world/content relationship *types* (RT-001…009) from STD-0004 knowledge-graph *relations*. **B:** added §6A separating descriptive modeling from a **normative overlay** (value is standpoint-relative; RP-012/§7/§10-Human-Impact scoped to the overlay, never determining facts — CON-0001 §5.3/§8.9, CON-0004 EP-008). **C:** softened RP-005 "Transcendent (claimed)" under ontological humility. **D:** §2 cross-referenced as the operational expression of CON-0004 §2 relationalism.|
 |1.2|2026-07-11|Adopted|GB-2026-019 co-primary decision: §3 note operationalizing relationship centrality as **co-primacy with entities**, coherent with KOS-0004 (OP-003). *(Refined in v1.3.)*|
 |1.3|2026-07-11|Adopted|Refined the §3 note (owner-directed, tracking KOS-0004 v1.3): co-primacy stated as the **default modeling lens**, with entity-first and strong-relational ontologies held as viable perspectives under ontological humility (OP-006/OP-008) rather than rejected.|
+|1.4|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

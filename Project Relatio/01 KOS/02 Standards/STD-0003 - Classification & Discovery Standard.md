@@ -1,7 +1,7 @@
 ---
 title: STD-0003 - Classification & Discovery Standard
 document_type: Standards Document
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -22,14 +22,20 @@ tags:
   - Classification
   - Discovery
   - KnowledgeArchitecture
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # STD-0003
 
 # Project Relatio Classification & Discovery Standard
 
-## Version 1.0
-
+## Version 1.1
 ## Adopted Standards Document
 
 ---
@@ -433,6 +439,7 @@ A mature knowledge architecture requires all three.
 |Version|Date|Status|Description|
 |---|---|---|---|
 |1.0|2026-07-09|Adopted|Initial classification and discovery standard|
+|1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

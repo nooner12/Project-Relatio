@@ -1,7 +1,7 @@
 ---
 title: CLM-0009 - Remission Likelihood Declines with Duration and Beta-Cell Loss
 document_type: Claim Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -45,6 +45,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 9
 review_date: 2027-04-20
 last_reviewed: 2026-07-20
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-10
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0009
@@ -138,6 +145,7 @@ SRC-0007 (mechanism, high authority, single-programme dependence); SRC-0006 (hig
 |0.1|2026-07-10|Draft|Created for RQ-0004. Deliberately graded Level 3; DiRECT within-trial null preserved as countervailing evidence.|
 |0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.4|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

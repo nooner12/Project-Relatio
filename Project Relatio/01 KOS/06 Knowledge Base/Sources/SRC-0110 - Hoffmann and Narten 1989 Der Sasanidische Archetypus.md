@@ -1,7 +1,7 @@
 ---
 title: SRC-0110 - Hoffmann and Narten 1989 Der Sasanidische Archetypus
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -23,6 +23,13 @@ tags:
   - Secondary
   - Avesta
   - Philology
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0110
@@ -66,5 +73,6 @@ Catalogued as part of the Iranian-family source base. This is a *study about* th
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created as part of the Iranian-family SRC build. Parametric citation; publisher and series marked unknown.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0110

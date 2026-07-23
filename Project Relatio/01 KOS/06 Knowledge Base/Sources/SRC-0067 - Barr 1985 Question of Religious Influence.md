@@ -1,7 +1,7 @@
 ---
 title: SRC-0067 - Barr 1985 Question of Religious Influence
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -32,6 +32,13 @@ relationships:
     target: CLM-0056
   - type: part_of
     target: INV-0011
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0067
@@ -73,5 +80,6 @@ James Barr, "The Question of Religious Influence: The Case of Zoroastrianism, Ju
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0011. JAAR LIII/2 (1985): 201–236, DOI verified. Skeptical/methodological anchor; H-band H-e. Live-verified citation.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0067

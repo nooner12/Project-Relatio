@@ -1,7 +1,7 @@
 ---
 title: SRC-0070 - Shaked 1984 Iranian Influence on Judaism
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -32,6 +32,13 @@ relationships:
     target: CLM-0057
   - type: part_of
     target: INV-0011
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0070
@@ -73,5 +80,6 @@ Shaul Shaked, "Iranian Influence on Judaism: First Century B.C.E. to Second Cent
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0011. Measured/middle anchor by a dual-corpus specialist; H-band H-e. Cambridge History of Judaism vol.1 (1984) 308–325 verified.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0070

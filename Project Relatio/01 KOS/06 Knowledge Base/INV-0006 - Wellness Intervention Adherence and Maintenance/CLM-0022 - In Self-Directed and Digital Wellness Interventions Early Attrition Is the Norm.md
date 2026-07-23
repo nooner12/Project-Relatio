@@ -1,7 +1,7 @@
 ---
 title: CLM-0022 - In Self-Directed and Digital Wellness Interventions Early Attrition Is the Norm
 document_type: Claim Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-11
@@ -40,6 +40,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 9
 review_date: 2027-04-20
 last_reviewed: 2026-07-20
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-11
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0022
@@ -131,5 +138,6 @@ SRC-0032 (Eysenbach 2005): high authority as the originating concept, but concep
 |0.2|2026-07-11|Draft|Remediation pass (Critical Review remediation #5): catalogued **SRC-0034 (Baumel 2019)** — modern objective usage benchmark (median 15-day retention ≈3.9%, 30-day ≈3.3% across 93 apps) — so the "current-ecosystem applicability / regardless of content quality" wording no longer rests on the dated 2005 viewpoint alone. Independence 2→3. Still asserts no single universal attrition rate; Level 3 retained. Refreshed the FND-0006 display title after its rename.|
 |0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0022

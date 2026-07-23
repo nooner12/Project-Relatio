@@ -1,7 +1,7 @@
 ---
 title: SRC-0056 - Paradise Rogoff 2009 Side by Side
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -29,6 +29,13 @@ relationships:
     target: CLM-0041
   - type: supports
     target: CLM-0042
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-14
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0056
@@ -66,5 +73,6 @@ Paradise, R., & Rogoff, B. (2009), "Side by side: Learning by observing and pitc
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-14|Draft|Created for RQ-0009 (ethnographic anchor). Ethos 37(1):102–138 verified via Wiley/AnthroSource + summaries. Flagged as interpretive/non-experimental; the judicious-speech correction recorded as a guard against the "no instruction" misreading; funding not verified.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0056

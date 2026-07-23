@@ -1,7 +1,7 @@
 ---
 title: SRC-0128 - Allison Constructing Jesus
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -31,6 +31,13 @@ relationships:
     target: SRC-0126
   - type: part_of
     target: INV-0014
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-20
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0128
@@ -74,5 +81,6 @@ Dale C. Allison, Jr., *Constructing Jesus: Memory, Imagination, and History* (Gr
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-20|Draft|Created for RQ-0014. The memory-skeptical pole: criteria cannot certify single sayings; recurrent pattern is the reliable layer. `contrasts_with` SRC-0126 (Dunn). Load-bearing for CLM-0079's split grade. H-band H-e in prose. Live-verified moderate-to-strong.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0128

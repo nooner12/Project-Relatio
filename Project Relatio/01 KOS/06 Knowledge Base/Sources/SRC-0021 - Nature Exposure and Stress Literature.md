@@ -1,7 +1,7 @@
 ---
 title: SRC-0021 - Nature Exposure and Stress Literature
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -26,6 +26,13 @@ tags:
 relationships:
   - type: supports
     target: CLM-0018
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-10
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0021
@@ -61,5 +68,6 @@ A cluster of meta-analyses and scoping reviews on nature/greenspace exposure and
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-10|Draft|Created for RQ-0005. Cluster source; acute-only evidence base emphasised. Exact edition/DOI of the 2021 meta-analysis not confirmed — flagged.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0021

@@ -1,7 +1,7 @@
 ---
 title: FND-0011 - Zoroastrian Influence on Second Temple Apocalypticism
 document_type: Finding Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -62,6 +62,13 @@ reliance_note: "verification-light review; not cleared for external reliance."
 review_cycle: 6
 review_date: 2027-01-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # FND-0011
@@ -145,5 +152,6 @@ last_reviewed: 2026-07-21
 |0.2|2026-07-19|Draft|**Remediated per Critical Review – RQ-0011 (CONFORMANT WITH FLAGS).** F-1: **resurrection (CLM-0051) lowered Level 3 → Level 2 (Low)** — it is the only doctrine weak on both load-bearing axes at once (reconstruction-only/post-Daniel priority *and* Divided consensus; pro-influence case reduces largely to Boyce). Recast out of the "best-supported cluster": Moderate cluster is now **dualism + judgment only**; **resurrection joins angelology + savior at Low**. Updated title, §1 statement, §2 supporting-claims line, and §3 confidence accordingly. No confidence level raised anywhere. Firewall and scale discipline intact. Still pending ROLE-0001 structural validation.|
 |0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End FND-0011

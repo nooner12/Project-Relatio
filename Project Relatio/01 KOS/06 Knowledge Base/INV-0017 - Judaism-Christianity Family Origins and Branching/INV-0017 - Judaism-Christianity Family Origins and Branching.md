@@ -1,7 +1,7 @@
 ---
 title: INV-0017 - Judaism-Christianity Family Origins and Branching
 document_type: Investigation Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-22
@@ -20,6 +20,13 @@ tags:
   - Investigation
   - JudaismChristianity
   - WorldReligionsTimeline
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-22
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # INV-0017
@@ -295,5 +302,6 @@ INV-0017 may close only when all of the following hold (modelled on INV-0016 §7
 |0.3|2026-07-22|Draft|**Circuit closed (Critical Review + ROLE-0001 validation + conditional closure), brief 2 of 2.** Critical Review — RQ-0017 verdict **CONFORMANT WITH FLAGS** ([[Critical Review - RQ-0017]]): zero determinate flags, three advisory (non-blocking), **no confidence level raised**, no fabrication; both `branches_from` edge-warrant pairs verified per-edge (Christianity `schism` and Rabbinic `reform` each edge- and qualifier-warranted); neutral register held both directions; single-hub §2.3 justification confirmed genuinely made (Essene/Qumran door-open honored); Anchor Fit substantive. ROLE-0001 structural validation clean (`validate.py` 371 files 0/0; `graph_integrity.py` 0 dangling / 0 branch errors; scale-discipline grep clean; subgraph matches §8) — recorded in §6b. Added the RQ-0017 review record; added §6b circuit-outcome; ticked all eight §7 criteria with in-record evidence; added the CLOSED banner. **Formally CLOSED per ADR-GOV-0004 D1 under owner pre-authorization** (all four closure conditions met). Frontmatter `status` untouched (Draft, ADR-GOV-0005 §1); everything R0, findings NOT cleared for external reliance; Anchor Fit recommendations §7.6-gated (GB-2026-041). No Standard, template, tool, Baseline, closed-record, or Iranian-base modification.|
 |0.2|2026-07-22|Draft|**Circuit executed (Specialist pass, brief 2 of 2).** Created the three tradition claims (**CLM-0092** Second Temple Judaism root / **CLM-0093** Christianity / **CLM-0094** Rabbinic Judaism), the three tradition entities born timeline-ready (**ENT-0012**/**ENT-0013**/**ENT-0014**, TPL-0006 v1.1 / STD-0002 v1.11), and the synthesis **FND-0017**. **The fork:** two `branches_from` edges, both on the children — ENT-0013 → ENT-0012 (`schism`, warrant CLM-0093, seed CLM-0058) and ENT-0014 → ENT-0012 (`reform`, warrant CLM-0094); **no edge on the hub** (upstream Israelite/Yahwistic descent deferred). Layered verdict: Christianity emergence/descent High (inherited CLM-0058/0068/0075/0076), `schism` qualifier Moderate (sharpness caveat); Second Temple root/dating Moderate (single-tradition modelling via common-Judaism substrate, §2.3); Rabbinic emergence/descent Moderate, `reform` continuation-qualifier **Low** — the anchor stress-test, list lacks a word for main-line continuation, `continuation`/`main-line` recommendation routed to Anchor Fit (never self-applied). Populated §4/§5/§6/§6a and the Anchor Fit Assessment with actuals. Metaphysical/neutrality bracket held both directions; native `Level N` only; everything R0, not cleared for external reliance. Sources SRC-0137…0142 cited from parametric interiors (no page-level claim); closed records, Standards, Baseline, templates, tools unmodified. Pending Critical Review (ROLE-0004) and structural validation (ROLE-0001).|
 |0.1|2026-07-22|Draft|Opened as scaffold per owner-ratified brief (brief 1 of 2). **Family 2 of the ADR-GOV-0009 world-religions timeline program (the Judaism–Christianity "parting of the ways").** Modelled as one fork: **three tradition claims / three entities / two `branches_from` edges** — both edges from the hub **Second Temple Judaism** (→ Christianity, → Rabbinic Judaism); deeper Israelite/Yahwistic roots **deferred** to a later "family 2-deep" investigation (no edge on the hub). **Zero claims/entities/edges — awaiting circuit under brief 2.** Three-claim decomposition (Second Temple Judaism / Christianity / Rabbinic Judaism), each with separable (i) emergence-dating / (ii) descent-or-root / (iii) rival-reading elements; working qualifiers stated as tests, not conclusions, with the **Rabbinic Judaism continuation-qualifier as the reserved Anchor Fit centerpiece** (the list may lack a right word for main-line continuation). **Source-coverage assessment included (§2.4): Christianity side covered by NT corpus SRC-0091…SRC-0103; descent partly by inheritance CLM-0058 / INV-0013 / INV-0014; dating the two Jewish traditions as traditions likely needs a Jewish-studies source extension — a SEPARATE owner-approved step (ADR-GOV-0003 precedent), not created or assumed here.** Metaphysical bracket declared acute (neither supersessionist nor polemical); native `Level N` only; everything R0, §7.5-analog gate, findings not cleared for external reliance. No frontmatter relationship edges (D4); no source, closed-record, Standard, template, tool, Baseline, Iranian-base, or Architectural-Decisions modification.|
+|0.4|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End INV-0017

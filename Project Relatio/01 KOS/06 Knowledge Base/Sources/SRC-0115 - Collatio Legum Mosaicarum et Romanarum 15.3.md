@@ -1,7 +1,7 @@
 ---
 title: SRC-0115 - Collatio Legum Mosaicarum et Romanarum 15.3
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -23,6 +23,13 @@ tags:
   - PrimaryText
   - Manichaeism
   - RomanLaw
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0115
@@ -65,5 +72,6 @@ Catalogued as a **primary text**: it is the principal witness to the rescript's 
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created as part of the Iranian-family SRC build. Single record — no edition named in the source base, so no object/edition split made. Parametric; compilation date and compiler marked unknown.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0115

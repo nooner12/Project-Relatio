@@ -1,7 +1,7 @@
 ---
 title: SRC-0124 - Keith and Le Donne Demise of Authenticity
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -28,6 +28,13 @@ relationships:
     target: CLM-0079
   - type: part_of
     target: INV-0014
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-20
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0124
@@ -71,5 +78,6 @@ Chris Keith and Anthony Le Donne (eds.), *Jesus, Criteria, and the Demise of Aut
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-20|Draft|Created for RQ-0014. The criteria-of-authenticity critique (methodological counter-weight for every element (b) in INV-0014; load-bearing for CLM-0079's discount). H-band H-e in prose. Live-verified strong (publisher + multiple journal reviews).|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0124

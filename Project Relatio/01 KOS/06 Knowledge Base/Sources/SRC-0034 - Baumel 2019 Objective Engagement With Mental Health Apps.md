@@ -1,7 +1,7 @@
 ---
 title: SRC-0034 - Baumel 2019 Objective Engagement With Mental Health Apps
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-11
@@ -26,6 +26,13 @@ tags:
 relationships:
   - type: supports
     target: CLM-0022
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-11
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0034
@@ -61,5 +68,6 @@ Panel-based analysis of **objective** real-world engagement with mental-health a
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created during the RQ-0006 remediation pass to catalogue a modern empirical attrition source for CLM-0022 (Critical Review §6.2 / remediation #5), so the "current-ecosystem applicability" wording no longer rests on the dated Eysenbach 2005 viewpoint alone. Retention figures verified this session via JMIR/PMC-6785720. Reported with IQRs as a single-study benchmark; no universal attrition rate asserted.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0034

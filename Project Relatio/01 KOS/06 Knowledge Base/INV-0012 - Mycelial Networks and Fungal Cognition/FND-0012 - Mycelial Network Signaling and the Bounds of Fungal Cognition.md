@@ -1,7 +1,7 @@
 ---
 title: FND-0012 - Mycelial Network Signaling and the Bounds of Fungal Cognition
 document_type: Finding Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -68,6 +68,13 @@ reliance_note: "verification-light review; not cleared for external reliance."
 review_cycle: 3
 review_date: 2026-10-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # FND-0012
@@ -150,5 +157,6 @@ last_reviewed: 2026-07-21
 |0.2|2026-07-19|Draft|**Remediated per Critical Review – RQ-0012 (CONFORMANT WITH FLAGS).** F-1 knock-on: rung (c) carry-over datum updated **Moderate → Level 2 (Low), single-group** in §1 and §2 (tracking CLM-0064's F-1 lowering). Soft note: pinned the "Facts, not fantasy" rebuttal to first author **Tamir Klein** (Klein et al. 2023, *Open Research Europe*, doi:10.12688/openreseurope.16594.1) in §5 — first author live-verified this session. No confidence level raised; asymmetric verdict shape unchanged (headline for cognition already Level 2). Scale discipline intact. Still pending ROLE-0001 structural validation.|
 |0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End FND-0012

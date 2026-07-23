@@ -1,7 +1,7 @@
 ---
 title: CLM-0073 - Non-Christian Attestation
 document_type: Claim Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -46,6 +46,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 9
 review_date: 2027-04-20
 last_reviewed: 2026-07-20
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0073
@@ -145,5 +152,6 @@ Meier (SRC-0098, a Catholic scholar reaching a partial-authenticity — not maxi
 |0.2|2026-07-19|Draft|**Remediated per Critical Review – RQ-0013 F-2 (precision; no confidence change).** H1 title softened "Independently Establish" → "Corroborate... With Partial Independence" to match the body's Independence = 3 / "partial independence"; the parallel claim-statement phrase aligned. Frontmatter `title` and filename stem unchanged (parity intact). Level 3 (Moderate) unchanged; no fabrication; scale discipline clean. Pending ROLE-0001 structural validation.|
 |0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0073

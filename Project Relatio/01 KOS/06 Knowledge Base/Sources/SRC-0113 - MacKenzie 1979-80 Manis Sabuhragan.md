@@ -1,7 +1,7 @@
 ---
 title: SRC-0113 - MacKenzie 1979-80 Manis Sabuhragan
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -23,6 +23,13 @@ tags:
   - Secondary
   - Manichaeism
   - MiddleIranian
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0113
@@ -66,5 +73,6 @@ This record is a **scholarly edition of primary fragments**, catalogued as Secon
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created as part of the Iranian-family SRC build. Live-verified citation (both parts).|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0113

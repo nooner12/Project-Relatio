@@ -1,7 +1,7 @@
 ---
 title: SRC-0099 - Non-Christian Primary Testimonia Josephus Tacitus Pliny
 document_type: Source Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -31,6 +31,13 @@ relationships:
     target: SRC-0098
   - type: part_of
     target: INV-0013
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0099
@@ -79,5 +86,6 @@ In this KB these are the **external, non-Christian attestation** evaluated in CL
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0013. The three non-Christian primary notices (Josephus, Tacitus, Pliny) as one primary-source record; H-band H-c. Establishes the movement's early existence/belief and the execution-under-Pilate datum; does not corroborate the Gospel narrative. Josephus/Tacitus live-verified strong; Pliny parametric (flagged).|
 |0.2|2026-07-19|Draft|**Verification upgrade per Critical Review – RQ-0013 (optional note applied).** Pliny *Ep.* 10.96 upgraded parametric → **live-verified** (reviewer independently re-located "carmen Christo quasi deo" this session). §6 verification strength now strong across all three notices. No content/grade change.|
+|0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0099

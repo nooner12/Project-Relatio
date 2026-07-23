@@ -1,7 +1,7 @@
 ---
 title: SRC-0055 - Rogoff et al 2003 Intent Participation
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -29,6 +29,13 @@ relationships:
     target: CLM-0041
   - type: supports
     target: CLM-0042
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-14
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0055
@@ -66,5 +73,6 @@ Rogoff, B., Paradise, R., Mejía-Arauz, R., Correa-Chávez, M., & Angelillo, C. 
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-14|Draft|Created for RQ-0009. Annu. Rev. Psychol. 54:175–203 verified via PubMed 12499516 / Annual Reviews. Flagged as ideal-typical review synthesis (not primary), evidence embedded in community structure; funding not verified.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0055

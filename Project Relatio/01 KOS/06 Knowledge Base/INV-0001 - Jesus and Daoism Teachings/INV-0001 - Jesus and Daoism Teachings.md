@@ -1,7 +1,7 @@
 ---
 title: INV-0001 - Comparative Teachings of Jesus and Philosophical Daoism
 document_type: Investigation Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-09
@@ -33,14 +33,20 @@ relationships:
     target: SRC-0001
   - type: derived_from
     target: SRC-0002
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # INV-0001
 
 # Comparative Teachings of Jesus and Philosophical Daoism
 
-## Version 0.3
-
+## Version 0.4
 ## Draft Investigation Record
 
 > **NOW CONFORMANT (v0.2).** When first created, `Investigation Record` / `INV-` did not exist in the standards — this object was a provisional instance flagging that gap. **KOS-0012 (Knowledge Object Model) subsequently defined the INV type** (STD-0001 §5, STD-0002 §6), so this is now a conformant Knowledge Object. Its synthesis has been extracted into [[FND-0001 - Resonant Ethic Opposed Ultimates]]. This closes Pressure Test Report findings F-1 and F-2.
@@ -154,6 +160,7 @@ No claim in this investigation reaches Level 5; cross-tradition interpretive com
 |0.1|2026-07-09|Draft|First real research workflow (RQ-0001 pressure test); provisional Investigation Record pending object-model governance|
 |0.2|2026-07-09|Draft|Regularized after KOS-0012 defined the INV type (now conformant); synthesis extracted to FND-0001; added KOS-0012 parent and FND-0001 relation. Closes F-1, F-2.|
 |0.3|2026-07-20|Draft|**Formally CLOSED under ADR-GOV-0004 §2 D1 (closure-convention back-application).** D1 bar assessed: **(a)** explicit RQ answer — satisfied at authoring in §5 *Synthesis (Answer to RQ-0001)*; **(b)** acceptance criteria — **none apply**, stated-reason path: the criteria practice began at INV-0010 and this record predates it, so none were ever declared; **(c)** closure banner — added above, dated 2026-07-20; **(d)** frontmatter — matches the model instance INV-0010, which holds `status: Draft` / `operational_status: Active` at closure (there is no Draft→Adopted closure step in this vault, and no distinct closed-state value exists in STD-0005's vocabulary). **No research content altered** — no claim, confidence level, assumption, or finding touched; closure elements are purely additive. Also corrected this record's version-drift instance under **GB-2026-028** (the body `## Version` heading read 0.1 against `version: 0.2` frontmatter; both now coherent at 0.3), which was occurrence (5) of that class and the first found outside the two operations records.|
+|0.4|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

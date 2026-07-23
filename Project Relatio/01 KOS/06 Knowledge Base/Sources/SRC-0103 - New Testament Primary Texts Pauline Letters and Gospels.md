@@ -1,7 +1,7 @@
 ---
 title: SRC-0103 - New Testament Primary Texts Pauline Letters and Gospels
 document_type: Source Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -36,6 +36,13 @@ relationships:
     target: CLM-0074
   - type: part_of
     target: INV-0013
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0103
@@ -82,5 +89,6 @@ Cited in this KB from the standard critical text (Nestle-Aland 28). This record 
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0013. The H-a/H-b primary-document anchor (undisputed Pauline letters + Gospels; earliest manuscript witnesses P52/P46/P66/P75/Sinaiticus/Vaticanus). Attests what was written/believed, not the truth of the content (bracketed). Live-verified moderate-to-strong on manuscript facts; Gallio synchronism parametric (flagged).|
 |0.2|2026-07-19|Draft|**Verification upgrade per Critical Review – RQ-0013 (optional note applied).** Gallio-inscription synchronism (Gallio proconsul of Achaia mid-51–mid-52 CE, Delphi) upgraded parametric → **live-verified** (reviewer independently re-located this session). §6 verification strength now strong. No content/grade change.|
+|0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0103

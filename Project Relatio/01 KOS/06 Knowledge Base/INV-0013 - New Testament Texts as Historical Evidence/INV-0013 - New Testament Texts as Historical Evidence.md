@@ -1,7 +1,7 @@
 ---
 title: INV-0013 - New Testament Texts as Historical Evidence
 document_type: Investigation Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -21,6 +21,13 @@ tags:
   - NewTestament
   - TextualCriticism
   - HistoricalEvidenceScale
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # INV-0013
@@ -220,6 +227,7 @@ INV-0013 may close only when all of the following hold:
 |0.3|2026-07-19|Draft|**Remediated per Critical Review – RQ-0013 (CONFORMANT WITH FLAGS; no fabrication; every flagged-hardest citation independently re-verified — Nongbri, TF partial-authenticity, Pliny 10.96, Gallio 51–52 CE, Lüdemann, Carrier; the two self-graded parametric, Pliny + Gallio, both confirmed).** **F-1 (reflexive §7.6, path (a) RECHARACTERIZE):** §4.2 GB-2026-027 verdict corrected — the draft's "4 diverge / 4 collinear... materially STRONGER than INV-0011... four straightforwardly legible" was an inflation in the flattering direction. Honest recount on the strict band-vs-confidence axis: **~1 genuine divergence (CLM-0070, same H-e band two Levels) / 6 collinear / 1 §9 consensus-exceeds-evidence outlier (CLM-0069)** — CLM-0071/0072 mis-coded as "diverge" are in fact **collinear** (band tracks confidence), their real value being band *diagnostic/explanatory* work, not value-divergence. "Materially stronger than INV-0011" and "four straightforwardly legible" struck; the genuine gain is one clean, review-independent orthogonality case — modest, not material; predominantly collinear like INV-0011. Surviving conclusion kept ("coherent, diagnostically useful typology distinct from confidence"); counter-weight strengthened. Propagated to §4 findings-pointer axis notes, §4.1 table (CLM-0069→§9 outlier; CLM-0071/0072→Collinear/diagnostic), and this row. **F-2:** CLM-0073 H1 title softened ("independently establish" → "corroborate... with partial independence") to match Independence = 3. Optional: SRC-0099 (Pliny) and SRC-0103 (Gallio) verification notes upgraded parametric→live-verified (reviewer re-located both). **No confidence Level changed anywhere; scale discipline still clean (native `Level N` only; no H-band/★ in any grading field).** §1–3, §6, §7 protocol text untouched. Pending ROLE-0001 structural validation.|
 |0.2|2026-07-19|Draft|**Executed by the Research Specialist (ROLE-0002).** Created 13 sources (SRC-0091…SRC-0103 — spanning the spectrum: Metzger/Ehrman text; Nongbri P52 caution; Ehrman/Brown introductions; Goodacre anti-Q; Ehrman *Forgery*; Sanders; Meier; the non-Christian primary testimonia; Ehrman *Did Jesus Exist?* vs. Carrier steelman; Lüdemann creed; NT primary texts — each live-verification-disclosed and H-band-coded in prose), 8 claims (CLM-0067…CLM-0074 spanning manuscripts / Pauline dating / Gospel dating / Synoptic problem / Gospel authorship / Pauline gradient / external attestation / pre-literary tradition, each with the three attestation layers kept distinct and dual-coding in prose), and FND-0013 (**layered verdict**: anchors High, reconstructed layers Moderate, weakly-evidenced authorship Low; no single undifferentiated verdict; metaphysics bracketed; both poles steelmanned). Populated §4 (findings pointer + supporting-claims list), §4.1 (dual-coding table), **§4.2 (GB-2026-027 axis-divergence verdict — as later CORRECTED in v0.3 per Critical Review F-1: the draft's "4 diverge / 4 collinear... materially stronger than INV-0011" was inflated; honest read is predominantly collinear with ONE clean orthogonality case CLM-0070 and one §9 consensus-outlier CLM-0069 — a modest, not material, gain over INV-0011)**, §5 (confidence summary), §8 (relationship graph; no ENT). No frontmatter/grading field carries an H-band or ★; native `Level N` only. Verification moderate-to-strong; not cleared for external reliance (§7.5). §1–3, §6, §7 protocol text untouched. Pending ROLE-0004 review and ROLE-0001 structural validation.|
 |0.1|2026-07-19|Draft|Opened as scaffold (RQ-0013, owner-scoped — the **GB-2026-027 descriptive circuit / second data point**). Reframed from an initial historical-Jesus framing to **texts-as-evidence** per owner methodological direction (evaluate the source base before building reconstruction on it; historical-Jesus reconstruction deferred to candidate INV-0014). Contains the primary question, the metaphysical bracket and neutral historical-critical register, the three-attestation-layer disambiguation (text/date/authorship as distinct evidence classes — §2.3), the candidate H-a…H-e scale as protocol, the 8-claim decomposition (§3.1: manuscripts; Pauline dating; Gospel dating; Synoptic problem/Q; Gospel authorship; Pauline authorship gradient; non-Christian attestation; pre-literary tradition incl. the bracketed 1 Cor 15 resurrection-proclamation terminus), the dual-coding + **GB-2026-027 axis-divergence instrument** (§3.2–3.3, §4.2), the Appendix A boundary discipline, the §7.5 verification requirement, and acceptance criteria. Zero claims, zero sources, zero findings — awaiting execution through the full OPS-0003 circuit.|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: FND-0016 - Origins and Branching of the Iranian Religious Family
 document_type: Finding Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-21
@@ -58,6 +58,13 @@ reliance_note: "verification-light review; not cleared for external reliance"
 review_cycle: 6
 review_date: 2027-01-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-21
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # FND-0016
@@ -123,5 +130,6 @@ Native `Level N`, per-tradition, never averaged:
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-21|Draft|Created for RQ-0016 (Specialist pass). Layered verdict by tradition: Zoroastrianism root (Moderate); Zurvanism a heterodox current, not a branch (Low; §2.3 threshold not cleared — the decisive anchor-stress result); Manichaeism founded syncretic branch, `syncretic-descent`, multi-parent/partial (Low in-family); Mazdakism `heterodox-offshoot`, hostile/late base (Low); Yazidism `disputed` descent, 12th-c. crystallisation (Moderate). No Level 4/5; three of five components Low — the honest thin-base outcome. Verification-light; R0; not cleared for external reliance. Pending Critical Review and structural validation.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End FND-0016

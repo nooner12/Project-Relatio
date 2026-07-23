@@ -1,7 +1,7 @@
 ---
 title: SRC-0081 - Blatt et al 2024 Does Electrical Activity in Fungi Function as a Language
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -28,6 +28,13 @@ relationships:
     target: CLM-0061
   - type: part_of
     target: INV-0012
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0081
@@ -68,5 +75,6 @@ Michael R. Blatt, D. Pullum, Andreas Draguhn, D. Bowman, David G. Robinson & Lin
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0012. Deflationary-skeptic anchor on CLM-0061 (the "language" interpretation). Thesis verified strong; author list flagged.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0081

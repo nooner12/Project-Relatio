@@ -1,7 +1,7 @@
 ---
 title: STD-0008 - Epistemic State Standard
 document_type: Standards Document
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 created: 2026-07-20
@@ -27,14 +27,20 @@ tags:
   - EpistemicState
   - Confidence
   - Reliance
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-20
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # STD-0008
 
 # Project Relatio Epistemic State Standard
 
-## Version 1.0
-
+## Version 1.1
 ## Adopted Standards Document
 
 ---
@@ -180,6 +186,7 @@ Maintained under KOS-0011. Changes require documentation, review, version update
 | Version | Date | Status | Description |
 |---|---|---|---|
 | 1.0 | 2026-07-20 | Adopted | Initial epistemic state standard: two independent sub-axes (confidence / reliance); Level N on-record with ★-tier and H-band as informing-not-field; confidence-as-list split rule (never averaged); layer-inheritance bound; no-inheritance-across-adaptation doctrine; reliance tier R0/R1/R2 per ADR-GOV-0006, per-locus with floor roll-up; gate-travels-with-data rule. §5.1 labels verified against KOS-0003 §8 at authoring — the candidate text's proposed labels (Level 5 "Established", Level 1 "Minimal / Speculative") were corrected to the canonical **Very High / High / Moderate / Low / Very Low**, and Level 0 (Unsupported) documented as KB-excluded, fixing the field range at 1–5. |
+|1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

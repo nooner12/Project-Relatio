@@ -1,7 +1,7 @@
 ---
 title: ENT-0005 - Enabling vs Coercive Formalization
 document_type: Entity Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-12
@@ -33,6 +33,13 @@ relationships:
     target: FND-0007
   - type: part_of
     target: INV-0007
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-12
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # ENT-0005
@@ -76,5 +83,6 @@ This distinction is **one of the load-bearing design constructs** of the investi
 |---|---|---|---|
 |0.1|2026-07-12|Draft|Created for RQ-0007. Classified as a design-typology construct with a "framework, not law" caveat. Grounds the investigation's value/failure synthesis (design orientation as the pivot) and links the value, failure-mode, and governance literatures.|
 |0.2|2026-07-12|Draft|Post-review remediation (Critical Review - RQ-0007, #5): softened overstated centrality — "the conceptual hinge of the whole synthesis" → "one of the load-bearing design constructs (the enabling leg)," noting the fitted/revisable legs (Ostrom) and the four failure modes are anchored elsewhere. Short-title cross-references (STD-0001 §10).|
+|0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End ENT-0005

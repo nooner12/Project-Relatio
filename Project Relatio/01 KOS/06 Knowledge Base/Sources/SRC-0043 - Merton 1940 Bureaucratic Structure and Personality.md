@@ -1,7 +1,7 @@
 ---
 title: SRC-0043 - Merton 1940 Bureaucratic Structure and Personality
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-12
@@ -26,6 +26,13 @@ tags:
 relationships:
   - type: supports
     target: CLM-0031
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-12
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0043
@@ -61,5 +68,6 @@ Merton, R. K. (1940), "Bureaucratic Structure and Personality," *Social Forces* 
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-12|Draft|Created during post-review remediation (Critical Review - RQ-0007, remediation #6): catalogues the previously-invoked Merton goal-displacement companion for CLM-0031. Citation (Social Forces 18(4):560–568, 1940) and the goal-displacement / trained-incapacity concepts verified this session via Oxford Academic and multiple bibliographic records.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0043

@@ -1,7 +1,7 @@
 ---
 title: SRC-0030 - Teixeira 2012 Exercise and Self-Determination Theory Systematic Review
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-11
@@ -26,6 +26,13 @@ tags:
 relationships:
   - type: supports
     target: CLM-0020
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-11
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0030
@@ -61,5 +68,6 @@ Systematic review of Self-Determination Theory (SDT) applied to exercise/physica
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created for RQ-0006. Autonomous-motivation pattern verified this session via PubMed/PMC abstract. Narrative-review (not pooled effect) and correlational-evidence limitations recorded.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0030

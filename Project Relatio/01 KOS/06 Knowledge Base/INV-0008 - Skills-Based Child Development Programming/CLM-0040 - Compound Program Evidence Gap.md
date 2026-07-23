@@ -1,7 +1,7 @@
 ---
 title: CLM-0040 - Compound Program Evidence Gap
 document_type: Claim Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -38,6 +38,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 12
 review_date: 2027-07-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-14
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0040
@@ -129,5 +136,6 @@ Rests on the absence observed across SRC-0046…SRC-0052 and the general child-d
 |0.1|2026-07-14|Draft|Created for RQ-0008 (integrative). Underlying Level 4 that the compound program is untested and ingredient evidence does not license a compound claim; sets the Level 1–2 application ceiling. Absence-of-evidence, search-incompleteness, and composition fallacies named.|
 |0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 |0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.4|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0040

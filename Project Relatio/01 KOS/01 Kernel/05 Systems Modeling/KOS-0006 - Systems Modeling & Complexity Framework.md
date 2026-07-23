@@ -1,7 +1,7 @@
 ---
 title: KOS-0006 - Systems Modeling & Complexity Framework
 document_type: Kernel Operating System Document
-version: 1.1
+version: 1.2
 status: Adopted
 operational_status: Active
 category:
@@ -24,13 +24,19 @@ tags:
   - Complexity
   - Emergence
   - AdaptiveSystems
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 # KOS-0006
 
 # Project Relatio Systems Modeling & Complexity Framework
 
-## Version 1.1
-
+## Version 1.2
 ## Adopted Kernel Document
 
 ---
@@ -686,6 +692,7 @@ Project Relatio adopts:
 |0.2|2026-07-09|Revised Draft|Added agency, system interaction, historical evolution, flourishing|
 |1.0|2026-07-09|Adopted|Finalized systems modeling framework|
 |1.1|2026-07-11|Adopted|Kernel audit (GB-2026-018): scoped §10 Flourishing Assessment as a **normative overlay** under KOS-0005 §6A — declares standpoint, does not determine descriptive/factual conclusions (CON-0001 §5.3/§8.9, CON-0004 EP-008). Aligns KOS-0006 with the descriptive/normative separation already applied to KOS-0005.|
+|1.2|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

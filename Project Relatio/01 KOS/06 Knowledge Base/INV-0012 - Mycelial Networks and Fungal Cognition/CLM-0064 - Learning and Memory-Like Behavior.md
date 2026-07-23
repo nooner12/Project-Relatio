@@ -1,7 +1,7 @@
 ---
 title: CLM-0064 - Learning and Memory-Like Behavior
 document_type: Claim Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -43,6 +43,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 6
 review_date: 2027-01-20
 last_reviewed: 2026-07-20
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0064
@@ -133,5 +140,6 @@ Fukasawa/Boddy is the right kind of source: a *fungal* experiment whose authors 
 |0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.1a|2026-07-19|Draft|**Remediated per Critical Review – RQ-0012 F-1, path (a) (lower).** Carry-over sub-grade **lowered Level 3 (Moderate) → Level 2 (Low)**: its entire datum-weight is one unreplicated Boddy-group study (SRC-0086; Independence 2, Reliability 3), fitting KOS-0003 §8 Level 2 ("limited support") at least as well as Moderate. Updated Evidence Evaluation, Confidence, and Alternative-Interpretation #2 prose to state the single-group/no-replication basis. **Headline Level 2 (Low) unchanged; no confidence level raised.** Physarum firewall and scale discipline intact.|
 |0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.4|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0064

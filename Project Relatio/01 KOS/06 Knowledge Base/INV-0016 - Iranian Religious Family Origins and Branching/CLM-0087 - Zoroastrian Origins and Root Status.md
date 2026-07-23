@@ -1,7 +1,7 @@
 ---
 title: CLM-0087 - Zoroastrian Origins and Root Status
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-21
@@ -46,6 +46,13 @@ reliance_note: "verification-light review; not cleared for external reliance"
 review_cycle: 9
 review_date: 2027-04-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-21
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0087
@@ -112,5 +119,6 @@ Type: **Historical / philological.**
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-21|Draft|Created for RQ-0016 (Specialist pass). Root tradition; emergence contested (traditional 6th-c.-BCE date rejected per SRC-0104; early linguistic dating indirect per SRC-0105); dating inherited from CLM-0056, not re-derived. `tradition_type: founded` with the founded/emergent tension flagged for Anchor Fit. No `branches_from` (root). Verification-light; R0; not cleared for external reliance. Pending Critical Review and structural validation.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0087

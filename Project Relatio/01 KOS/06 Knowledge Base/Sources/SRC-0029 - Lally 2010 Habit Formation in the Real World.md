@@ -1,7 +1,7 @@
 ---
 title: SRC-0029 - Lally 2010 Habit Formation in the Real World
 document_type: Source Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-11
@@ -26,6 +26,13 @@ tags:
 relationships:
   - type: supports
     target: CLM-0025
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-11
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0029
@@ -62,5 +69,6 @@ Prospective real-world study of habit (automaticity) formation: 96 participants 
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created for RQ-0006. 66-day median (range 18–254) and the missed-opportunity finding verified this session via PMC/Wiley/Surrey. Small-sample and self-report limitations recorded.|
 |0.2|2026-07-11|Draft|Remediation pass (remediation #1): 66-day median / 18–254 range **re-verified** via Wiley/EJSP and independent summaries — confirmed. No content change.|
+|0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0029

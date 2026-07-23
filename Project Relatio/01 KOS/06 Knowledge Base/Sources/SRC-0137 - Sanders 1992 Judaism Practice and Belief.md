@@ -1,7 +1,7 @@
 ---
 title: SRC-0137 - Sanders 1992 Judaism Practice and Belief
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-22
@@ -26,6 +26,13 @@ tags:
 relationships:
   - type: related_to
     target: SRC-0138
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-22
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0137
@@ -64,5 +71,6 @@ E. P. Sanders, *Judaism: Practice and Belief, 63 BCE–66 CE* (London: SCM Press
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-22|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as candidate Second Temple Judaism coverage for INV-0017. Bibliographically live-verified; interior parametric. No claim asserted. English; in print.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0137

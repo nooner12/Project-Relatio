@@ -1,7 +1,7 @@
 ---
 title: SRC-0039 - Meyer Rowan 1977 Institutionalized Organizations Myth and Ceremony
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-12
@@ -26,6 +26,13 @@ tags:
 relationships:
   - type: supports
     target: CLM-0030
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-12
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0039
@@ -62,5 +69,6 @@ Meyer, J. W., & Rowan, B. (1977), "Institutionalized Organizations: Formal Struc
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-12|Draft|Created for RQ-0007. Citation (AJS 83(2):340–363, 1977) and the myth/ceremony/decoupling thesis verified this session via multiple bibliographic records and scholarly summaries.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0039

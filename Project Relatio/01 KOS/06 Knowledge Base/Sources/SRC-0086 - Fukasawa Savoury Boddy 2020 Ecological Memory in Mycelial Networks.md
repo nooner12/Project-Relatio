@@ -1,7 +1,7 @@
 ---
 title: SRC-0086 - Fukasawa Savoury Boddy 2020 Ecological Memory in Mycelial Networks
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -28,6 +28,13 @@ relationships:
     target: CLM-0064
   - type: part_of
     target: INV-0012
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0086
@@ -66,5 +73,6 @@ Yu Fukasawa, Melanie Savoury & Lynne Boddy, "Ecological memory and relocation de
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0012. Fungal-specific memory-like anchor for CLM-0064; authors' own operational hedging captured. Live-verified strong.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0086

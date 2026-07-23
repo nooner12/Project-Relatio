@@ -1,7 +1,7 @@
 ---
 title: ADR-GOV-0010 - Continuation Qualifier and the First Reflexive Anchor Revision
 document_type: Architecture Decision Record
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 created: 2026-07-22
@@ -24,6 +24,13 @@ tags:
   - ReflexiveEvolution
   - Lineage
   - AnchorRevision
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-22
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # ADR-GOV-0010
@@ -202,6 +209,7 @@ to need more than a disambiguation note.
 |Version|Date|Status|Description|
 |---|---|---|---|
 |1.0|2026-07-22|Adopted|Anchor-vocabulary review (ADR-GOV-0009 §7(a)): added the `continuation` qualifier to provisional `branches_from` in response to INV-0017's demonstrated main-line-continuation gap (Rabbinic Judaism); re-qualified that edge reform→continuation; lifted the reform-collision disambiguation note to STD-0004; deferred the Iranian-family cardinality/target/type recommendations (AF-2/3/4) under defer-to-second-use; explicitly did NOT lift the reflexive gate or promote any anchor from provisional to durable. First structural change driven by the system's own findings — the ADR-GOV-0007 reflexive loop's first completed turn.|
+|1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

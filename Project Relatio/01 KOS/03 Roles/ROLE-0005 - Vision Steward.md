@@ -1,7 +1,7 @@
 ---
 title: ROLE-0005 - Vision Steward
 document_type: Role Definition
-version: 1.1
+version: 1.2
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -21,14 +21,20 @@ tags:
   - Roles
   - VisionSteward
   - Governance
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # ROLE-0005
 
 # Vision Steward
 
-## Version 1.1
-
+## Version 1.2
 ## Adopted Role Definition
 
 > **Adopted 2026-07-09.** Currently performed by **Brian Noon**. In ratifying this role, the owner did more than grant himself authority — he **accepted the constitutional limits in §4.2 as binding on himself** (may not determine truth, override evidence, dictate conclusions, discard dissent, or exempt himself from review). That acceptance is what makes the governance real rather than decorative. Written down so the function is auditable and, per CON-0003 GP-006, **transferable** beyond any single person.
@@ -133,6 +139,7 @@ To ensure Project Relatio remains **what it is for** — currently, a system tha
 |0.1|2026-07-09|Draft|Created by the governance assessment (R12) to complete and make transferable the authority model. Implements CON-0003 §4.1. Authority and Boundaries PROPOSED, including explicit constitutional limits on the owner.|
 |1.0|2026-07-09|Adopted|Owner ratified. In doing so, accepted the §4.2 constitutional limits as binding on himself. No changes to the drafted authority were required.|
 |1.1|2026-07-11|Adopted|Duty §6 and the §-success-check reworded per **ADR-GOV-0002**: "guard the scope guardrail" → "steward the merit principle" (judge additions by merit/use regardless of source; don't suppress warranted work; architecture that earns its place is a legitimate aim). No change to authority or boundaries.|
+|1.2|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

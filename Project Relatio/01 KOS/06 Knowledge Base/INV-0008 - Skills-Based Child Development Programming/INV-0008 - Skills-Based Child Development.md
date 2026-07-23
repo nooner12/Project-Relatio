@@ -1,7 +1,7 @@
 ---
 title: INV-0008 - Skills-Based Child Development Programming
 document_type: Investigation Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -55,6 +55,13 @@ relationships:
     target: SRC-0052
   - type: derived_from
     target: SRC-0053
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-14
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # INV-0008
@@ -183,6 +190,7 @@ No claim reaches Level 5 (reserved; interpretive/cross-domain transfer does not 
 |0.1|2026-07-14|Draft|Eighth research workflow (RQ-0008); **health/high-stakes class**. Seven live-verified sources, seven claims (six domains + one integrative evidence-gap claim), one entity (ENT-0006 Co-Regulation), one finding (FND-0008). Dual grading (underlying + application) on every claim. Motivated-reasoning guard (wholesome-program direction) named; compound-program gate stated. Awaiting Critical Reviewer (ROLE-0004) and Knowledge Architect (ROLE-0001).|
 |0.2|2026-07-14|Draft|Circuit completed. **Critical Review – RQ-0008: Conformant with Flags** (no Blocked objects, no fabrication; DuBois d ≈ 0.21, Multon, Bandura independently re-verified). Remediations applied: catalogued **SRC-0053 (Bandura 1997)** to anchor CLM-0036's "strongest source" half (now eight sources); narrowed CLM-0034 to the attentional benefit SRC-0047 supports; harmonised CLM-0037 application grade to "Level 2 → 3"; added CLM-0037↔CLM-0040 reciprocal. No confidence levels changed. Reliance gate (STD-0006 §7.5) remains **absolute** pending outside re-verification.|
 |0.3|2026-07-20|Draft|**Formally CLOSED under ADR-GOV-0004 §2 D1 (closure-convention back-application).** D1 bar assessed: **(a)** explicit RQ answer — satisfied at authoring in §4 Findings / Synthesis; **(b)** acceptance criteria — **none apply**, stated-reason path (the criteria practice began at INV-0010; this record predates it and none were ever declared); **(c)** closure banner — added, dated 2026-07-20; **(d)** frontmatter — matches the model instance INV-0010, which holds `status: Draft` / `operational_status: Active` at closure (no Draft→Adopted closure step exists in this vault, and STD-0005's vocabulary has no distinct closed-state value). **No research content altered** — no claim, confidence level, assumption, or finding touched; closure elements are purely additive. Also corrected this record's version-drift instance under **GB-2026-028** (frontmatter read 0.1 against a 0.2 revision-history row; both now coherent at 0.3).|
+|0.4|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

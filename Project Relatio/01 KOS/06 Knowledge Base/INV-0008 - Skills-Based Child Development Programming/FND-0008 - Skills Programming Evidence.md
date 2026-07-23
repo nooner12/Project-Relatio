@@ -1,7 +1,7 @@
 ---
 title: FND-0008 - Skills Programming Evidence
 document_type: Finding Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -64,6 +64,13 @@ reliance_note: "verification-light review; not cleared for external reliance."
 review_cycle: 6
 review_date: 2027-01-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-14
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # FND-0008
@@ -139,5 +146,6 @@ At the literature level, the evidence supports a **build-and-evaluate** posture:
 |0.2|2026-07-14|Draft|Circuit completed — Critical Review – RQ-0008 **Conformant with Flags** (no vocabulary leak; §5 build-and-evaluate framing confirmed descriptive-not-prescriptive and must be quoted verbatim if cited). Mentoring application harmonised to "Level 2 → 3." Underlying grades and the compound Level-2 cap unchanged. Reliance gate remains absolute (STD-0006 §7.5).|
 |0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End FND-0008

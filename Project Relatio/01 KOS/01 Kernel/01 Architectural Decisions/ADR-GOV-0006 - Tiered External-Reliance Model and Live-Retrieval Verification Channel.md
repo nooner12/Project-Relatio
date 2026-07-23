@@ -1,7 +1,7 @@
 ---
 title: ADR-GOV-0006 - Tiered External-Reliance Model and Live-Retrieval Verification Channel
 document_type: Architecture Decision Record
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 created: 2026-07-20
@@ -21,6 +21,13 @@ tags:
   - Reliance
   - Verification
   - EpistemicIntegrity
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-20
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 # ADR-GOV-0006
 
@@ -131,6 +138,7 @@ Revisit if (a) a second-model or institutional-access channel is tested and prov
 | Version | Date       | Status  | Description                                                                                                                                                                                                                    |
 | ------- | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 1.0     | 2026-07-20 | Adopted | Initial tiered external-reliance model (R0/R1/R2), per-locus with floor roll-up; edition-discipline for R1; grounded in the 2026-07-20 live-retrieval capability probe. Constitutional source of the reliance-tier vocabulary. |
+|1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: CLM-0007 - Substantial Weight Loss Can Induce T2D Remission
 document_type: Claim Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -49,6 +49,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 12
 review_date: 2027-07-20
 last_reviewed: 2026-07-20
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-10
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0007
@@ -140,6 +147,7 @@ SRC-0006: very high authority, charity-funded, transparent, candid about relapse
 |0.1|2026-07-10|Draft|Created for RQ-0004.|
 |0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.4|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: SRC-0040 - Campbell 1979 Assessing the Impact of Planned Social Change
 document_type: Source Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-12
@@ -26,6 +26,13 @@ tags:
 relationships:
   - type: supports
     target: CLM-0031
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-12
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0040
@@ -62,5 +69,6 @@ Campbell, D. T. (1979), "Assessing the Impact of Planned Social Change," *Evalua
 |---|---|---|---|
 |0.1|2026-07-12|Draft|Created for RQ-0007. Citation (Evaluation and Program Planning 2(1):67–90, 1979) and the Campbell's Law formulation verified this session via multiple bibliographic records and the Wikipedia/primary abstract. Reported as a corroborated regularity, not a quantified law.|
 |0.2|2026-07-12|Draft|Post-review remediation (Critical Review - RQ-0007): short-title cross-reference to CLM-0031 (STD-0001 §10). The Merton goal-displacement companion, previously invoked only in CLM-0031, is now separately catalogued as SRC-0043. No content change.|
+|0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0040

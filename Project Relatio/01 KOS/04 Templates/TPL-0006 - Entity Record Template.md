@@ -1,7 +1,7 @@
 ---
 title: TPL-0006 - Entity Record Template
 document_type: Template
-version: 1.1
+version: 1.3
 status: Adopted
 operational_status: Active
 created: 2026-07-21
@@ -17,6 +17,13 @@ tags:
   - ProjectRelatio
   - Templates
   - EntityRecord
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-21
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # TPL-0006 — Entity Record Template
@@ -62,6 +69,13 @@ relationships:            # typed (STD-0002 §7 / STD-0004) — prefer the most 
     target: <ENT-NNNN>
   - type: derived_from
     target: <SRC-NNNN>
+attribution:              # provenance (STD-0002 §6 / ADR-GOV-0011 Decision B) — REQUIRED
+  - actor: <named human>                 # an AI is never the actor; disclose it below
+    role: <ROLE-NNNN … or free string>   # no controlled enum (ADR-GOV-0011 §7)
+    event: created                       # the only Stage 1 value; Stage 2 adds entries, not keys
+    date: <YYYY-MM-DD>
+    ai_degree: ai-delegated              # unassisted | ai-assisted | ai-delegated
+    ai_model_family: Claude              # vendor/family free string; `none` iff unassisted
 ---
 
 # ENT-NNNN
@@ -144,6 +158,13 @@ relationships:            # typed (STD-0002 §7 / STD-0004)
     qualifier: schism      # schism | reform | syncretic-descent | heterodox-offshoot | disputed
   - type: derived_from
     target: <SRC-NNNN>
+attribution:              # provenance (STD-0002 §6 / ADR-GOV-0011 Decision B) — REQUIRED
+  - actor: <named human>                 # an AI is never the actor; disclose it below
+    role: <ROLE-NNNN … or free string>   # no controlled enum (ADR-GOV-0011 §7)
+    event: created                       # the only Stage 1 value; Stage 2 adds entries, not keys
+    date: <YYYY-MM-DD>
+    ai_degree: ai-delegated              # unassisted | ai-assisted | ai-delegated
+    ai_model_family: Claude              # vendor/family free string; `none` iff unassisted
 ---
 
 # ENT-NNNN
@@ -190,6 +211,8 @@ relationships:            # typed (STD-0002 §7 / STD-0004)
 |---|---|---|---|
 |1.0|2026-07-21|Adopted|Initial Entity Record template, closing the gap the seven hand-authored entities (ENT-0001…0007) predated. Two skeletons: **concept-class** (the existing entities' shape) and **tradition-class** (adding `tradition_type`/`dating_claims`/`display_range` and a `branches_from`+`qualifier` example), enacting ADR-GOV-0009 D2/D3/D4 and STD-0002 v1.10 / STD-0004 v1.2. States the warrant rule for lineage edges. Registered TPL-0006.|
 |1.1|2026-07-22|Adopted|Added the three STD-0002 §11 v1.11 render-only positioning fields (`range_start_year`/`range_end_year`/`range_uncertainty`) to the tradition-class skeleton with placeholder guidance, the OPTIONAL/co-requirement rule, and the render-only/non-evidential honesty note; added a §3 dating note on the same. Concept-class skeleton unchanged. Owner-ratified template refresh (INV-0017 prep brief); makes tradition entities born-conformant with v1.11 so the timeline bounds need not be hand-added post hoc as at INV-0016.|
+|1.2|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
+|1.3|2026-07-22|Adopted|Added the required `attribution` stub to the emitted frontmatter (STD-0002 v1.12 §6 / ADR-GOV-0011 Decision B), so records created from this template are **born conformant** against the now-error-level attribution check. Template-side only — no field, rule, or body section changed.|
 
 ---
 

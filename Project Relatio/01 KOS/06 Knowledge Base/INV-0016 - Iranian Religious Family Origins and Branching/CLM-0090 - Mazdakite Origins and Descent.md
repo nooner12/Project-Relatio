@@ -1,7 +1,7 @@
 ---
 title: CLM-0090 - Mazdakite Origins and Descent
 document_type: Claim Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-21
@@ -40,6 +40,13 @@ reliance_note: "verification-light review; not cleared for external reliance"
 review_cycle: 6
 review_date: 2027-01-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-21
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0090
@@ -104,5 +111,6 @@ Type: **Historical (source-critical over late/hostile tradition).**
 |---|---|---|---|
 |0.2|2026-07-21|Draft|**ROLE-0004 remediation (Flag 2, determinate):** hedged two over-specifications as parametric — the precursor figure "Zaradusht of Fasa" (element (i)) and the property/women social-program specifics (element (ii)) are reported in the scholarship but **not itemised in the SRC-0123 record and not live-verified**; corrected the misattribution — the source-skepticism SRC-0123 §3 actually documents is toward the *massacre narrative and chronology*, not the women-charge specifically. No confidence level changed (both components remain Level 2 Low); no source added; illustrative/non-load-bearing detail only.|
 |0.1|2026-07-21|Draft|Created for RQ-0016 (Specialist pass). Kavad-era (late 5th–early 6th c. CE) heterodox offshoot of Zoroastrianism; single hostile/late source (Crone over al-Ṭabarī/*Šāhnāme*); every component Low — the family's thinnest case, honest not papered over. In-family `branches_from` Zoroastrianism qualifier `heterodox-offshoot` (chosen over the scaffold's alternative `reform`, recorded for Anchor Fit); `tradition_type: reform` distinct from the qualifier. Distinctness threshold met (unlike Zurvanism). Source-skeptic rival steelmanned. Verification-light; R0; not cleared for external reliance. Pending Critical Review and structural validation.|
+|0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0090

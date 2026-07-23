@@ -1,7 +1,7 @@
 ---
 title: SRC-0104 - Shahbazi 1977 Traditional Date of Zoroaster Explained
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -23,6 +23,13 @@ tags:
   - Secondary
   - Zoroastrianism
   - IranianReligions
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0104
@@ -65,5 +72,6 @@ Catalogued here as part of the Iranian-family source base (Zoroastrianism, Zurva
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created as part of the Iranian-family SRC build (source cataloguing; no investigation open). Live-verified citation.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0104

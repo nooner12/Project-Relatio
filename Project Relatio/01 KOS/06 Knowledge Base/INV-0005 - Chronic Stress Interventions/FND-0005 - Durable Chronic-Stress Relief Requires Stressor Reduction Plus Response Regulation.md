@@ -1,7 +1,7 @@
 ---
 title: FND-0005 - Durable Chronic-Stress Relief Requires Stressor Reduction Plus Response Regulation
 document_type: Finding Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -54,6 +54,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 9
 review_date: 2027-04-20
 last_reviewed: 2026-07-20
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-10
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # FND-0005
@@ -113,5 +120,6 @@ last_reviewed: 2026-07-20
 |0.2|2026-07-11|Draft|Applied Critical Review – RQ-0005: §1 "decisively" softened to "on mechanistic grounds" (§9 rev #2); §2 CLM-0014 restated as durable-stress Level 2 + separate Level-4 collateral-health durability (§6.1, rev #3). Moderate cap unchanged.|
 |0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End FND-0005

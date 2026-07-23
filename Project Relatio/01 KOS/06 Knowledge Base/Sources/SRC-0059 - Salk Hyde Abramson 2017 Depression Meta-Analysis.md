@@ -1,7 +1,7 @@
 ---
 title: SRC-0059 - Salk Hyde Abramson 2017 Depression Meta-Analysis
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-15
@@ -28,6 +28,13 @@ relationships:
     target: CLM-0044
   - type: part_of
     target: INV-0010
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-15
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0059
@@ -67,5 +74,6 @@ Salk, R. H., Hyde, J. S., & Abramson, L. Y. (2017), "Gender differences in depre
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-15|Draft|Created for RQ-0010. Psychol. Bull. 143(8):783–822, DOI 10.1037/bul0000102 — verified via PMC5532074. Construct-provenance: `CONFLATED` (epidemiological female/male category, no mechanism assessed) — documents timing divergence, cannot support a sex-attributed causal claim.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0059

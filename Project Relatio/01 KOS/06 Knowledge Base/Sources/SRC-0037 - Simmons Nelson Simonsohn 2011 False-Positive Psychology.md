@@ -1,7 +1,7 @@
 ---
 title: SRC-0037 - Simmons Nelson Simonsohn 2011 False-Positive Psychology
 document_type: Source Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-12
@@ -29,6 +29,13 @@ relationships:
     target: CLM-0027
   - type: contrasts_with
     target: SRC-0038
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-12
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0037
@@ -68,5 +75,6 @@ Simmons, J. P., Nelson, L. D., & Simonsohn, U. (2011), "False-Positive Psycholog
 |0.1|2026-07-12|Draft|Created for RQ-0007. Citation (Psych Science 22(11):1359–1366, 2011), the four degrees of freedom, and the combined 61% false-positive rate verified this session via SAGE/SSRN records and multiple secondary summaries. Per-degree decimal rates reported as approximate (not re-derived to the decimal this session); full-text PDFs located but not machine-readable.|
 |0.2|2026-07-12|Draft|Post-review remediation (Critical Review - RQ-0007, #7): corrected the per-degree band "~9–13%" → "~8–13%" (optional stopping ≈7.7%, gender covariate ≈11.7% — the latter re-confirmed by the reviewer this session). Combined 61% and citation unchanged (verified).|
 |0.1.1|2026-07-12|Draft|ROLE-0001 structural validation (SA-001): added the reciprocal `contrasts_with` SRC-0038 edge (typed block + `related_documents` + §5) to complete the symmetric peer relationship SRC-0038 already asserted one-directionally. Non-semantic reciprocity correction; no content change.|
+|0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0037

@@ -1,7 +1,7 @@
 ---
 title: FND-0015 - How Religious Studies Classifies Yiguandao
 document_type: Finding Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -64,6 +64,13 @@ reliance_note: "verification-light review; not cleared for external reliance."
 review_cycle: 6
 review_date: 2027-01-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-20
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # FND-0015
@@ -110,5 +117,6 @@ last_reviewed: 2026-07-21
 |0.1|2026-07-20|Draft|Created for RQ-0015. Layered verdict: placement + consensus Moderate (near-unanimous, family-consistent labels, no located Daoist-school classification); criteria-mechanics and placement-dissent negative Low (paywalled / search-bounded — thin-base authorization honored); Daoist elements as strands Moderate; read self-understanding Moderate, register-divergent rather than proposition-colliding with the classification; no Level 4 anywhere (verification-light); not cleared for external reliance. Pending review/validation.|
 |0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 |0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.4|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End FND-0015

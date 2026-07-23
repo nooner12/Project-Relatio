@@ -1,7 +1,7 @@
 ---
 title: ENT-0003 - Allostatic Load
 document_type: Entity Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -36,6 +36,13 @@ relationships:
     target: CLM-0018
   - type: part_of
     target: INV-0005
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-10
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # ENT-0003
@@ -71,5 +78,6 @@ Allostatic load is why **durability is the right question** for RQ-0005. If chro
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-10|Draft|Created for RQ-0005. Grounds the durability framing; classified as a theoretical construct with operationalisation caveat.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End ENT-0003

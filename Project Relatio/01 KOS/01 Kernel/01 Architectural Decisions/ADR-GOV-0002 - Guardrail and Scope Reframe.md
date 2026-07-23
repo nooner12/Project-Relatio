@@ -1,7 +1,7 @@
 ---
 title: ADR-GOV-0002 - Guardrail and Scope Reframe
 document_type: Architecture Decision Record
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 created: 2026-07-11
@@ -28,6 +28,13 @@ relationships:
     target: Architecture Baseline
   - type: related_to
     target: OPS-0003
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-11
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # ADR-GOV-0002
@@ -108,5 +115,6 @@ Revisit if (a) the justify-by-use test is observed drifting back into either ove
 |Version|Date|Status|Description|
 |---|---|---|---|
 |1.0|2026-07-11|Adopted|Initial decision record. Reframes the over-architecture guardrail (fear → merit-based purpose principle; origin as a ChatGPT-restraint disclosed) and clarifies the health/education scope (inquiry unbounded; outward individualized claims and third-party reliance bounded). Motivated-reasoning hazard of an AI recommending looser AI-constraints recorded and mitigated by keeping the justify-by-use discipline.|
+|1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End ADR-GOV-0002

@@ -1,7 +1,7 @@
 ---
 title: CLM-0072 - Pauline Corpus Authorship Gradient
 document_type: Claim Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -52,6 +52,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 6
 review_date: 2027-01-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0072
@@ -153,5 +160,6 @@ The native rating carried in the confidence summary is the gradient: **Level 4 (
 |0.2|2026-07-19|Draft|**Axis characterization corrected per Critical Review – RQ-0013 F-1 (no grade change).** The "DIVERGE" label recharacterized to **COLLINEAR — band tracks confidence across the gradient (H-a→High, H-e→Low/Moderate)**; the band's value is **diagnostic**, not value-divergence. All three sub-Levels unchanged. Consistency edit propagating the INV-0013 §4.2 correction.|
 |0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0072

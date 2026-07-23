@@ -1,7 +1,7 @@
 ---
 title: SRC-0035 - Adler Borys 1996 Two Types of Bureaucracy Enabling and Coercive
 document_type: Source Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-12
@@ -32,6 +32,13 @@ relationships:
     target: CLM-0033
   - type: defines
     target: ENT-0005
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-12
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0035
@@ -71,5 +78,6 @@ Theoretical/conceptual article: Adler, P. S., & Borys, B. (1996), "Two Types of 
 |---|---|---|---|
 |0.1|2026-07-12|Draft|Created for RQ-0007. Citation (ASQ 41(1):61–89, 1996) and the four design features (repair, internal/global transparency, flexibility) verified this session via ASQ/ERIC records and scholarly summaries; full-text PDF located but not machine-readable, so the four features are taken from converging secondary summaries and flagged accordingly.|
 |0.2|2026-07-12|Draft|Post-review remediation (Critical Review - RQ-0007): reviewer independently confirmed the PDF is not machine-readable and the four features via summaries. Removed the unverified JSTOR/DOI id from source_url (§12.1). Short-title cross-references (STD-0001 §10). No content change.|
+|0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0035

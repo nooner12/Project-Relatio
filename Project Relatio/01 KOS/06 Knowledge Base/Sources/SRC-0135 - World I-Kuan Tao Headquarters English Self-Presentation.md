@@ -1,7 +1,7 @@
 ---
 title: SRC-0135 - World I-Kuan Tao Headquarters English Self-Presentation
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -28,6 +28,13 @@ relationships:
     target: CLM-0085
   - type: part_of
     target: INV-0015
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-20
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0135
@@ -68,5 +75,6 @@ relationships:
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-20|Draft|Created for RQ-0015. Primary self-presentation for the self-understanding track (dual-track rule): name-gloss, Fuxi-anchored lineage self-account, and the negative datum (no school-of-Daoism self-claim on the read page). Divergences from the scholarly spine recorded, not resolved. English; open access; Chinese internal corpus recorded as gap.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0135

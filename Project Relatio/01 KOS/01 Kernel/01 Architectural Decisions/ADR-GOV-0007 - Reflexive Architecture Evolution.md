@@ -1,7 +1,7 @@
 ---
 title: ADR-GOV-0007 - Reflexive Architecture Evolution
 document_type: Architecture Decision Record
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 created: 2026-07-20
@@ -22,6 +22,13 @@ tags:
   - ReflexiveEvolution
   - Governance
   - ArchitectureEvolution
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-20
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # ADR-GOV-0007
@@ -116,6 +123,7 @@ Revisit if (a) the deferred self-execution capability (§5) is seriously conside
 | Version | Date       | Status  | Description                                                                                                                                                                                                                                                                                                                                            |
 | ------- | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 1.0     | 2026-07-20 | Adopted | Initial reflexive-evolution instrument: provisional-anchor doctrine with anchor discipline; reflexive-findings-inform-not-self-execute rule; deferred maturity-gated self-execution with evidenced-threshold requirement and transferable-ratification-seat design; graduation path to KOS-0011 recorded. Cites STD-0005 §27; relates to ADR-GOV-0006. |
+|1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

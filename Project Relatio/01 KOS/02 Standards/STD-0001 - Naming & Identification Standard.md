@@ -1,7 +1,7 @@
 ---
 title: STD-0001 - Naming & Identification Standard
 document_type: Standards Document
-version: 1.5
+version: 1.6
 status: Adopted
 operational_status: Active
 category:
@@ -24,14 +24,20 @@ tags:
   - Naming
   - Identification
   - Architecture
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # STD-0001
 
 # Project Relatio Naming & Identification Standard
 
-## Version 1.5
-
+## Version 1.6
 ## Adopted Standards Document
 
 ---
@@ -714,6 +720,7 @@ Project Relatio adopts:
 |1.3|2026-07-09|Adopted|§18 updated: the Identifier Registry now exists (05 Operations), fulfilling the standard's registry requirement|
 |1.4|2026-07-20|Adopted|**Path Length Constraint added as a subsection of §8, per ADR-GOV-0005 §5(c)** (which directed the operative text be amended into the document owning file-naming/path conventions; STD-0001 §7/§8/§10 is that owner). Records **§5(a) the hazard** — paths over the 260-character Windows `MAX_PATH` are invisible to naive scanners (four such files as of 2026-07-20, one carrying drift a clean-reporting validator had passed), making extended-length path handling **mandatory for all vault tooling** and any scan without it non-conforming and invalid; and **§5(b) the preventive rule** — relative path from vault root **≤180 characters**, with existing violators **grandfathered** because renames rewrite graph references and are owner-reserved. Cross-referenced to §10 title discipline as the practical lever. Placed as a `##` subsection to avoid renumbering §9–§22; no existing rule altered.|
 |1.5|2026-07-21|Adopted|**§8 Path Length Constraint — grandfather set closed.** The four files grandfathered when the rule was placed (CLM-0020, CLM-0023, CLM-0025, CLM-0026, all in INV-0006, at 186/185/209/182 relative characters) were **renamed under owner approval 2026-07-21** to 175/176/171/179, all within the 180-character budget; graph references were updated in the same commit. **No vault file now exceeds the 180 budget or the 260 `MAX_PATH` ceiling.** The grandfather clause is rewritten to record this and to state that clearing the backlog does **not** retire the rule: the hazard record, the ≤180 preventive rule, and the unconditional extended-length-path-handling requirement all remain in force for files created hereafter. No identifier, claim, evidence, grading, or relationship changed.|
+|1.6|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

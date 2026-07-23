@@ -1,7 +1,7 @@
 ---
 title: CLM-0029 - Codification Value and Tacit Tradeoff
 document_type: Claim Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-12
@@ -40,6 +40,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 9
 review_date: 2027-04-20
 last_reviewed: 2026-07-20
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-12
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0029
@@ -132,5 +139,6 @@ SRC-0036: moderate-to-high authority (HBR, strong authors), moderate transparenc
 |0.2|2026-07-12|Draft|Post-review remediation (Critical Review - RQ-0007, #6): catalogued Polanyi 1966 (SRC-0044) for the tacit-loss half (previously an uncatalogued invocation); noted Hansen and Polanyi are complementary (different halves), not corroborating, so Independence 3 holds; the managerial Nonaka extension remains an explicit invocation. #9: de-asserted the prose-only `related_to CLM-0032` (now prose adjacency, not a typed edge). Title shortened (STD-0001 §10). No confidence change — remains Level 3.|
 |0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0029

@@ -1,7 +1,7 @@
 ---
 title: OPS-0002 - Relationship Integrity & Graph Maintenance
 document_type: Operations Document
-version: 1.2
+version: 1.3
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -18,14 +18,20 @@ tags:
   - Operations
   - Relationships
   - GraphIntegrity
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # OPS-0002
 
 # Relationship Integrity & Graph Maintenance
 
-## Version 1.2
-
+## Version 1.3
 ## Adopted Operations Document
 
 ---
@@ -109,6 +115,7 @@ This replaces the Knowledge Architect's manual graph check on the routine path �
 |1.0|2026-07-09|Adopted|Initial relationship-integrity practice; resolves the practice-gap behind F-12. Included a first reciprocity pass and repair of the finding↔claim subgraph.|
 |1.1|2026-07-10|Adopted|§6 rewritten: the graph-integrity automation is built (`tools/graph_integrity.py`), replacing manual checking on the routine path. Resolves GB-2026-004.|
 |1.2|2026-07-11|Adopted|§6 updated for the **type-aware** graph check (GB-2026-001): typed `relationships:` targets are dangling-checked; reciprocity now distinguishes symmetric from directional types. Stale phantom-ADR exit note corrected (tool exits 0).|
+|1.3|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

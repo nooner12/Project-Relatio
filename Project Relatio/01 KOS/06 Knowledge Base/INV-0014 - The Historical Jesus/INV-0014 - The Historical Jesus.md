@@ -1,7 +1,7 @@
 ---
 title: INV-0014 - The Historical Jesus
 document_type: Investigation Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -27,6 +27,13 @@ relationships:
     target: INV-0013
   - type: depends_on
     target: CLM-0074
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-20
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # INV-0014
@@ -191,6 +198,7 @@ INV-0014 may close only when all of the following hold:
 |0.3|2026-07-20|Draft|**Circuit completed: ROLE-0004 review, remediation, and ROLE-0001 structural validation (recorded in-record here per §7 criterion 7).** **Critical Review – RQ-0014 (v1.0): CONFORMANT WITH FLAGS** — F-1 (maximalist steelman under-engaged at finding level) remediated path (a) at FND-0014 v0.2 (Bauckham eyewitness-testimony form engaged in prose as a named rival, shown to fail structurally against the §3.1 layer-consumption discipline); F-2 (Carrier's actual *Ant.* 20.200 form — accidental "called Christ" gloss + ben-Damneus referent — engaged and rebutted) remediated at CLM-0075 v0.2; F-3 (SRC-0125 page-loci disclosure) confirmed honest, no action; CLM-0077 independence-2/Level-3 reconciliation sentence adopted (v0.2). **No confidence level raised or lowered anywhere — all nine grades reviewer-confirmed** (owner calibration condition satisfied trivially). Reviewer verification-strength: SPLIT (live-verified on secondary-source identity incl. two verbatim anchors; parametric on primary-text loci — a disclosed shared-model blind spot); independent re-verification recommended before thesis-supporting use. **ROLE-0001 structural validation (this row is the in-record evidence): validate.py PASS 321 files / 0 errors / 0 warnings** (version-coherence checks at error level — every touched object's `version:`, `## Version` where present, and max history row agree); **graph_integrity.py: 0 dangling references**; symmetric-link advisory delta exactly **+1** (CLM-0075→SRC-0101 `contrasts_with`, deliberate one-directional typing into the closed INV-0013 pole-source — CLM-0073/Registry-v1.20 precedent; reciprocating would modify a closed record); SRC-0126⇄SRC-0128 `contrasts_with` reciprocity confirmed; untyped-legacy advisories unchanged (2, both Iranian-corpus, pre-existing); scale-discipline grep clean (no ★/H-band outside rule-text prose); §8 declared subgraph shape matches the built graph; title/filename parity clean on all 13 new files. §7 acceptance criteria assessed and ticked with evidence pointers (criterion 8 by direct git-status verification). All §1–3/§6 protocol text untouched.|
 |0.2|2026-07-20|Draft|**Executed by the Research Specialist (ROLE-0002).** Created 5 sources (SRC-0124…SRC-0128 — Keith & Le Donne criteria critique; Theissen & Merz handbook; Dunn *Jesus Remembered*; Meier *Marginal Jew* vol. 2 (distinct from SRC-0098 vol. 1); Allison *Constructing Jesus* — each live-verification-disclosed; SRC-0126⇄SRC-0128 `contrasts_with` reciprocated), reusing seven of INV-0013's sources by citation (SRC-0097/0099/0100/0101/0103 with typed edges; SRC-0098/0102 in prose). Authored the six mandated claims CLM-0075…CLM-0080, each with elements **(a)/(b)/(c) in discrete, separately answerable sections** and its load-bearing INV-0013 layer(s) named per §3.1: existence L4; crucifixion **split** L4-fact / L3-Pilate-frame; baptism L3 (the flagged divergence showcase — embarrassment at full strength on a modest layer, §9 surplus); kingdom-proclamation L3 (dissimilarity asymmetry, Q-uncertainty carried); teaching **split** L3-voice / L2-item-wording (community-invention rival steelmanned hardest, wins item level, recorded); exorcist-healer repute L3 with **events bracketed both directions at no level**. FND-0014 layered verdict (core High / ministry Moderate / item floor Low; no Level 5; both poles steelmanned and refused). Populated §4, §5, §8 connectivity actuals; three §9 consensus-surpluses recorded; CLM-0074 consumed by inheritance, not re-derived; no entity created. Native `Level N` only — no H-band/★ in any frontmatter or grading field. Verification moderate (five new sources live-verified; INV-0013 base consumed at its own level; primary-text loci parametric); not cleared for external reliance (§7.5 analog). §1–3, §6, §7 protocol text untouched. Pending ROLE-0004 review and ROLE-0001 structural validation.|
 |0.1|2026-07-20|Draft|Opened as scaffold per owner-ratified brief (support surface). Contains the authoritative primary question (method split out per the INV-0011 pattern), the six-claim decomposition mandate with the (a)/(b)/(c) element structure, the CLM-0074 inheritance (owner decision 3; `depends_on` edge), the metaphysical bracket guarded in both directions, the INV-0001/INV-0013 boundaries, the §3.1 layer-inheritance rule, the §7 acceptance criteria with the §7.5-analog reliance note, and the optional-H-band status (GB-2026-027 option b). Zero claims, zero sources, zero findings — awaiting execution through the full OPS-0003 circuit under a separate brief.|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

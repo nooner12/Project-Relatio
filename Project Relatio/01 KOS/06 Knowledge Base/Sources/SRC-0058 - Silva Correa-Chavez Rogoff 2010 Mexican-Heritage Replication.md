@@ -1,7 +1,7 @@
 ---
 title: SRC-0058 - Silva Correa-Chavez Rogoff 2010 Mexican-Heritage Replication
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -29,6 +29,13 @@ relationships:
     target: CLM-0042
   - type: related_to
     target: SRC-0057
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-14
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0058
@@ -66,5 +73,6 @@ Silva, K. G., Correa-Chávez, M., & Rogoff, B. (2010), "Mexican-heritage childre
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-14|Draft|Created for RQ-0009 (replication anchor). Child Development 81(3):898–912, n=44 vs 36, ages 5–11 — verified via PubMed 20573112 / ERIC EJ883383. Same comparative-confound and single-child-home substrate limits as SRC-0057; convergence strengthens the mechanism, not the transfer.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0058

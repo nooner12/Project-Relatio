@@ -1,7 +1,7 @@
 ---
 title: SRC-0116 - Lieu 1992 Manichaeism in the Later Roman Empire and Medieval China
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -23,6 +23,13 @@ tags:
   - Source
   - Secondary
   - Manichaeism
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0116
@@ -68,5 +75,6 @@ The standard synthetic history of Manichaeism's diffusion westward into the Roma
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created as part of the Iranian-family SRC build. Parametric citation; publisher and series marked unknown. Non-inheritance of the shared-row verification tick recorded explicitly.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0116

@@ -1,7 +1,7 @@
 ---
 title: SRC-0046 - Brussoni et al 2015 Risky Outdoor Play and Health
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -26,6 +26,13 @@ tags:
 relationships:
   - type: supports
     target: CLM-0035
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-14
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0046
@@ -64,5 +71,6 @@ Brussoni, M., et al. (2015), "What is the Relationship between Risky Outdoor Pla
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-14|Draft|Created for RQ-0008. Citation (IJERPH 12(6):6423–6454, 2015; PMID 26062038), 21-study count, GRADE method, and PA/social-health findings verified this session via PubMed/PMC/MDPI. Funding not verified this session. Self-regulation/anxiety outcomes flagged as weakly evidenced.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0046

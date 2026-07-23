@@ -1,7 +1,7 @@
 ---
 title: SRC-0091 - Metzger and Ehrman Text of the New Testament
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -28,6 +28,13 @@ relationships:
     target: CLM-0067
   - type: part_of
     target: INV-0013
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0091
@@ -70,5 +77,6 @@ Bruce M. Metzger & Bart D. Ehrman, *The Text of the New Testament: Its Transmiss
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0013. Standard NT textual-criticism handbook; H-band H-e (evaluates H-a/H-b evidence). Recoverability, not inerrancy; variant-count framing bounded. Live-verified moderate-to-strong.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0091

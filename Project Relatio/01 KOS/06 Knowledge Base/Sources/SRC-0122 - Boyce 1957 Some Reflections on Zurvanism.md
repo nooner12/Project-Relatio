@@ -1,7 +1,7 @@
 ---
 title: SRC-0122 - Boyce 1957 Some Reflections on Zurvanism
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -26,6 +26,13 @@ tags:
 relationships:
   - type: related_to
     target: SRC-0121
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0122
@@ -72,5 +79,6 @@ A short article engaging the Zurvanism question in the period immediately follow
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created as part of the Iranian-family SRC build as a work distinct from SRC-0068 (which is reused, not extended). Parametric; page range unknown and the article's specific argument left explicitly unestablished rather than inferred.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0122

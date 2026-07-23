@@ -1,7 +1,7 @@
 ---
 title: CLM-0052 - Individual and Final Judgment Influence
 document_type: Claim Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -46,6 +46,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 9
 review_date: 2027-04-20
 last_reviewed: 2026-07-20
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0052
@@ -163,5 +170,6 @@ Judgment is the doctrine case with the **least reliance on the late Pahlavi corp
 |0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.2a|2026-07-21|Draft|**Remediated per ROLE-0004 sub-question review, flag F-B (determinate).** Item (iii) now closes with an explicit defense of Level 3 against the at-least-equal-strength rival: the KOS-0003 §8 Level-2 pattern (applied in CLM-0051's F-1 lowering) requires weakness on both load-bearing axes, and judgment is weak on one only — its Gathic-layer H-a attestation is the best dating position of the five cases. Also rerouted item (i)'s transmission-philology citation through CLM-0056's evidence base (which carries SRC-0073), resolving the reviewer's graph-reciprocity escalation without a graph change. Level 3 confirmed unchanged; downward pressure recorded, not enacted.|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0052

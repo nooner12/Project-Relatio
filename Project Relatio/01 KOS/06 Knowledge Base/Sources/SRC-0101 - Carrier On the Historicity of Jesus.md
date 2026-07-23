@@ -1,7 +1,7 @@
 ---
 title: SRC-0101 - Carrier On the Historicity of Jesus
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -31,6 +31,13 @@ relationships:
     target: CLM-0073
   - type: part_of
     target: INV-0013
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0101
@@ -71,5 +78,6 @@ Richard Carrier, *On the Historicity of Jesus: Why We Might Have Reason for Doub
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0013. The steelmanned mythicist pole (peer-reviewed academic press); H-band H-e; fringe minority. Included to test the consensus, not to endorse it; anti-confessional prior named as a bias to check. Live-verified strong on citation/positioning.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0101

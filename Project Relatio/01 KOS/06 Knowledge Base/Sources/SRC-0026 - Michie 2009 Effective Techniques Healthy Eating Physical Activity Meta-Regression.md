@@ -1,7 +1,7 @@
 ---
 title: SRC-0026 - Michie 2009 Effective Techniques Healthy Eating Physical Activity Meta-Regression
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-11
@@ -26,6 +26,13 @@ tags:
 relationships:
   - type: supports
     target: CLM-0023
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-11
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0026
@@ -62,5 +69,6 @@ Meta-regression linking specific behaviour-change techniques to intervention eff
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-11|Draft|Created for RQ-0006. Pooled effect (0.31), self-monitoring heterogeneity share, and 0.42-vs-0.26 combination finding verified this session via PubMed/DARE abstract.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0026

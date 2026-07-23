@@ -1,7 +1,7 @@
 ---
 title: SRC-0107 - Kellens and Pirart 1988-91 Les textes vieil-avestiques
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -29,6 +29,13 @@ relationships:
     target: SRC-0076
   - type: contrasts_with
     target: SRC-0106
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0107
@@ -73,5 +80,6 @@ A critical edition of the Old Avestan corpus representing a distinct — and mar
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created as part of the Iranian-family SRC build. Parametric citation; publisher and volume structure marked unknown.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0107

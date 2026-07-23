@@ -1,7 +1,7 @@
 ---
 title: CLM-0053 - Cosmic Dualism and Periodized History Influence
 document_type: Claim Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -46,6 +46,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 9
 review_date: 2027-04-20
 last_reviewed: 2026-07-20
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0053
@@ -163,5 +170,6 @@ This is the case where the pro-influence pole (Cohn) and the measured pole (Shak
 |0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.2a|2026-07-21|Draft|**Remediated per ROLE-0004 sub-question review, flag F-A (determinate).** Isaiah 45:7 in item (iii) now carries an explicit disclosure: newly introduced at v0.2 as illustrative primary-text material (outside the ten source records and the v0.1 claims), with the "generate and control this polarity internally" reading labeled as this record's own inference, anchored to the SRC-0067/SRC-0070 monotheist-reshaping point. The v0.2 row's "standard primary-text common ground" assertion above is corrected by this disclosure for the Isaiah citation (the row itself unaltered, per CON-0003 §9.4); it remains accurate for Deuteronomy 30:15–19 (already cited in v0.1). No evidence class added, no confidence change (Level 3 unchanged).|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0053

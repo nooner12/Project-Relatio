@@ -1,7 +1,7 @@
 ---
 title: SRC-0130 - Goossaert and Palmer 2011 The Religious Question in Modern China
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -31,6 +31,13 @@ relationships:
     target: CLM-0083
   - type: part_of
     target: INV-0015
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-20
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0130
@@ -69,5 +76,6 @@ Vincent Goossaert and David A. Palmer, *The Religious Question in Modern China* 
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-20|Draft|Created for RQ-0015. The standard-survey placement source (ch. 4 redemptive societies; Yiguandao named among them). Live-verified bibliographically with placement confirmed from publisher/indexing surfaces; chapter interior parametric, disclosed. English; paywalled/print.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0130

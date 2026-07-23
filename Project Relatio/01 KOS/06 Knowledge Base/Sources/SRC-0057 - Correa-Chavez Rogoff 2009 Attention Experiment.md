@@ -1,7 +1,7 @@
 ---
 title: SRC-0057 - Correa-Chavez Rogoff 2009 Attention Experiment
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -32,6 +32,13 @@ relationships:
     target: CLM-0043
   - type: related_to
     target: SRC-0058
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-14
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0057
@@ -71,5 +78,6 @@ Correa-Chávez, M., & Rogoff, B. (2009), "Children's attention to interactions d
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-14|Draft|Created for RQ-0009 (experimental anchor). Dev. Psychol. 45(3):630–641, three groups n=40, ages 5–11, one-week delayed reproduction — verified via PubMed 19413421 / ERIC EJ838530. Flagged as comparative-not-randomized (cultural confound), narrow measured competence, and — critically — dependent on an interaction directed to *another* child (single-child-home substrate gap).|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0057

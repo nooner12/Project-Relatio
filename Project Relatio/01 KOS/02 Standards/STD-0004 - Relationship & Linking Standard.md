@@ -1,7 +1,7 @@
 ---
 title: STD-0004 - Relationship & Linking Standard
 document_type: Standards Document
-version: 1.3
+version: 1.4
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -22,14 +22,20 @@ tags:
   - Relationships
   - KnowledgeGraph
   - SemanticArchitecture
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # STD-0004
 
 # Project Relatio Relationship & Linking Standard
 
-## Version 1.3
-
+## Version 1.4
 ## Adopted Standards Document
 
 ---
@@ -499,6 +505,7 @@ Meaningful relationships transform stored information into structured knowledge.
 |1.1|2026-07-11|Adopted|Added §7.1 Machine-Readable Encoding: the vocabulary is now carried in the typed `relationships` frontmatter block (STD-0002 §7 v1.6), closing F-4 / GB-2026-001. No vocabulary change — the twelve approved types are unchanged.|
 |1.2|2026-07-21|Adopted|Added the **provisional `branches_from`** relationship type (ENT → ENT, asymmetric, REQUIRED qualifier from schism/reform/syncretic-descent/heterodox-offshoot/disputed, warrant-by-graded-claim) enacting ADR-GOV-0009 D4; added §7.2 defining the optional `qualifier` frontmatter key (valid only on branches_from). PROVISIONAL under ADR-GOV-0007 §2 anchor discipline; revision trigger ADR-GOV-0009 §7(a). Additive — the existing twelve types are unchanged.|
 |1.3|2026-07-22|Adopted|**Anchor-vocabulary review (ADR-GOV-0009 §7(a)) enacting ADR-GOV-0010 D1/D3.** Added a sixth `branches_from` qualifier **`continuation`** (B carries forward A's principal/main line rather than departing — the least-departed descendant after a rupture; distinguished from `reform` by the absence of a departure connotation) in response to INV-0017's demonstrated inability to name a main-line-continuation edge (Rabbinic Judaism); list now schism/reform/syncretic-descent/heterodox-offshoot/disputed/continuation. Added §7.2 the two-`reform`-vocabularies disambiguation note (the `branches_from` qualifier `reform` and the STD-0002 `tradition_type` value `reform` are different fields sharing a word, never conflated). **Additive repair of a demonstrated gap — the qualifier list stays PROVISIONAL (ADR-GOV-0010 D5); NOT a promotion toward durable.** The `graph_integrity.py` enforced set was extended to match.|
+|1.4|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: CLM-0043 - Single-Child Home Transfer
 document_type: Claim Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -50,6 +50,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 3
 review_date: 2026-10-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-14
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0043
@@ -144,5 +151,6 @@ Rests on the *requirements* of SRC-0057/0058 and the *structure* of SRC-0054, pl
 |0.2|2026-07-14|Draft|RQ-0009 remediation (Critical Review – RQ-0009 §7, F-1): sharpened the Level-2 reach to privilege the **observation** facet (most transferable) over the **contribution-to-a-shared-endeavor** facet (thinner substrate — consequential shared work is scarce in a modern single-child home). Confidence level unchanged (Level 1 → 2); sub-structure of the reach clarified.|
 |0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0043

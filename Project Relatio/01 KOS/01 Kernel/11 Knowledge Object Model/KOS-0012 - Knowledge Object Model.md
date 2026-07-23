@@ -1,7 +1,7 @@
 ---
 title: KOS-0012 - Knowledge Object Model
 document_type: Kernel Operating System Document
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -21,14 +21,20 @@ tags:
   - KnowledgeObject
   - ObjectModel
   - KnowledgeArchitecture
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # KOS-0012
 
 # Project Relatio Knowledge Object Model
 
-## Version 1.0
-
+## Version 1.1
 ## Adopted Kernel Document
 
 ---
@@ -211,6 +217,7 @@ Project Relatio adopts:
 |Version|Date|Status|Description|
 |---|---|---|---|
 |1.0|2026-07-09|Adopted|Initial Knowledge Object Model. Un-deferred and authored on demonstrated need from the RQ-0001 pressure test (findings F-1, F-2, F-6). Introduces Investigation (INV) and Finding (FND) types; reconciles the metadata layer (STD-0002) with the content layer (KOS-0003 §12).|
+|1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

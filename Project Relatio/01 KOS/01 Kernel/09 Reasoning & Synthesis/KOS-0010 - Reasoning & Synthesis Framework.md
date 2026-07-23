@@ -1,7 +1,7 @@
 ---
 title: KOS-0010 - Reasoning & Synthesis Framework
 document_type: Kernel Operating System Document
-version: 1.2
+version: 1.3
 status: Adopted
 operational_status: Active
 category:
@@ -25,14 +25,20 @@ tags:
   - Reasoning
   - Synthesis
   - KnowledgeIntegration
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # KOS-0010
 
 # Project Relatio Reasoning & Synthesis Framework
 
-## Version 1.2
-
+## Version 1.3
 ## Adopted Kernel Document
 
 ---
@@ -689,6 +695,7 @@ Project Relatio adopts:
 |1.0|2026-07-09|Adopted|Finalized reasoning and synthesis framework|
 |1.1|2026-07-11|Adopted|Kernel audit (GB-2026-018): structural + coherence fixes. Filled the empty **RS-004 Application Ethics Standard** (with a KOS-0005 §6A normative-overlay caveat — the ethics review does not determine factual conclusions); closed the RS-numbering gap by labelling §12 Pattern Validation as **RS-003**; added a role-reconciliation note mapping the legacy "Research Architect" to the adopted **Knowledge Architect (ROLE-0001)** and flagging a possible rename (GB-2026-020).|
 |1.2|2026-07-11|Adopted|**GB-2026-020 resolved (owner-directed):** renamed §17 "Research Architect Function/Role" → **"Knowledge Architect Function"**, pointing to the adopted **ROLE-0001**. Removes the legacy name that referred to no adopted role. "Research Architect" now survives only as a noted historical alias.|
+|1.3|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

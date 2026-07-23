@@ -1,7 +1,7 @@
 ---
 title: CLM-0033 - Constraints Capture Value When Enabling Fitted Revisable
 document_type: Claim Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-12
@@ -49,6 +49,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 9
 review_date: 2027-04-20
 last_reviewed: 2026-07-20
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-12
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0033
@@ -145,5 +152,6 @@ SRC-0035, SRC-0042, SRC-0038 all high authority, transparent, academic. Ostrom's
 |0.2|2026-07-12|Draft|Post-review remediation (Critical Review - RQ-0007). #3: catalogued a verified adversarial anchor (SRC-0045 Timmermans & Epstein 2010) for the "rigidity sometimes wins" steelman (previously uncatalogued), added to Evidence/Alternatives/relationships; **Independence lowered 4 → 3** (convergence is abstraction-level, not phenomena-level). #1: aligned Alternative 2 with FND-0007 §5 — the reflexive self-flattering reading cannot be certified by the same-model circuit. Title shortened (STD-0001 §10). Confidence unchanged — remains Level 3 (the level never rested on Independence 4).|
 |0.3|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0033

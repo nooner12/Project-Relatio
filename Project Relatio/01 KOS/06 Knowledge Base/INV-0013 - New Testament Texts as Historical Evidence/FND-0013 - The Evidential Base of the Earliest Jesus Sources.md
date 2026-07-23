@@ -1,7 +1,7 @@
 ---
 title: FND-0013 - The Evidential Base of the Earliest Jesus Sources
 document_type: Finding Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -61,6 +61,13 @@ reliance_note: "verification-light review; not cleared for external reliance."
 review_cycle: 6
 review_date: 2027-01-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # FND-0013
@@ -146,5 +153,6 @@ last_reviewed: 2026-07-21
 |0.1|2026-07-19|Draft|Created for RQ-0013. Layered verdict: anchors High (wording recoverability; undisputed Pauline dating; early creedal proclamation; Markan priority; Gospel anonymity; the seven undisputed Paulines), reconstructed layers Moderate (precise Gospel dating; external attestation; Pastorals), weakly-evidenced layers Low (traditional Gospel authorship; Q; disputed Paulines). No single undifferentiated verdict; confidence by attestation layer. Metaphysics bracketed (resurrection as event not graded); mythicist and maximalist poles both steelmanned. Native Level 2–4; no Level 5; no ★; no magnitude ranking. Verification moderate-to-strong; not cleared for external reliance (§7.5). Pending ROLE-0004 review and ROLE-0001 validation.|
 |0.3|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 |0.4|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.5|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End FND-0013

@@ -1,7 +1,7 @@
 ---
 title: SRC-0052 - Fiese et al 2002 Family Routines and Rituals Review
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -26,6 +26,13 @@ tags:
 relationships:
   - type: supports
     target: CLM-0039
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-14
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0052
@@ -63,5 +70,6 @@ Fiese, B. H., Tomcho, T. J., Douglas, M., Josephs, K., Poltrock, S., & Baker, T.
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-14|Draft|Created for RQ-0008. Citation (J. Family Psychology 16(4), 2002), narrative-review design, 32-study count, and routine/ritual distinction verified via APA press release + APA PDF + ResearchGate. Page range reported as commonly cited ~381–390, NOT verified to the page. Correlational/confounded nature and absence of effect sizes flagged.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0052

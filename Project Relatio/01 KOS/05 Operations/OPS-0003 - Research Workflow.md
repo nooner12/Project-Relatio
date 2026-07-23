@@ -1,7 +1,7 @@
 ---
 title: OPS-0003 - Research Workflow
 document_type: Operations Document
-version: 1.3
+version: 1.4
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -21,14 +21,20 @@ tags:
   - Operations
   - ResearchWorkflow
   - Roles
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # OPS-0003
 
 # Research Workflow
 
-## Version 1.3
-
+## Version 1.4
 ## Adopted Operations Document
 
 ---
@@ -162,6 +168,7 @@ Roles: ROLE-0001…0004. Object model: KOS-0012. Epistemics: KOS-0003. Methodolo
 |1.1|2026-07-09|Adopted|Governance assessment: rerouted coordination from the retired ROLE-0003 to the Vision Steward (ROLE-0005) and the main session (ADR-GOV-0001)|
 |1.2|2026-07-10|Adopted|Efficiency refinements from the first agent-circuit run (RQ-0004): §2.1 proportionality/tiering by stakes; §3.1 review-targeting handoff, parallel Reviewer∥Architect, and automated structural check (`tools/graph_integrity.py`). Owner-authorized; ADR waived by owner. Full tiering build remains trigger-gated (GB-2026-013).|
 |1.3|2026-07-11|Adopted|§2 Scope Guardrail reframed per **ADR-GOV-0002**: architecture-building is a legitimate concurrent aim (not a risk to defend against); additions judged by merit/use regardless of source; warranted work is not suppressed to stay minimal. (Also fixed a stale `## Version` heading that read 1.1.)|
+|1.4|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: SRC-0098 - Meier A Marginal Jew Volume One
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -28,6 +28,13 @@ relationships:
     target: CLM-0073
   - type: part_of
     target: INV-0013
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0098
@@ -69,5 +76,6 @@ John P. Meier, *A Marginal Jew: Rethinking the Historical Jesus*, Volume 1: *The
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0013. Standard critical evaluation of the Josephan evidence; H-band H-e about H-c testimonia. TF partial-authenticity consensus (with fully-interpolated minority live); Ant. 20.200 more secure. Live-verified strong on positions.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0098

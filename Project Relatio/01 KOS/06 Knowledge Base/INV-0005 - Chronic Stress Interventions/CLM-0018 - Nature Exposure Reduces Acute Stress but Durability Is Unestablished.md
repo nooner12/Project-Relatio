@@ -1,7 +1,7 @@
 ---
 title: CLM-0018 - Nature Exposure Reduces Acute Stress but Durability Is Unestablished
 document_type: Claim Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-10
@@ -47,6 +47,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 6
 review_date: 2027-01-21
 last_reviewed: 2026-07-21
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-10
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0018
@@ -138,5 +145,6 @@ SRC-0021 is a cluster of moderate-authority reviews read at summary level, with 
 |0.1|2026-07-10|Draft|Created for RQ-0005. Acute (moderate) vs durable (speculative-low) split; the acute-masquerading-as-durable risk guarded explicitly.|
 |0.2|2026-07-21|Draft|epistemic-field backfill, Stage 3|
 |0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.4|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0018

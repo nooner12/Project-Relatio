@@ -1,7 +1,7 @@
 ---
 title: ENT-0007 - Learning by Observing and Pitching In
 document_type: Entity Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-14
@@ -31,6 +31,13 @@ relationships:
     target: CLM-0041
   - type: part_of
     target: INV-0009
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-14
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # ENT-0007
@@ -75,5 +82,6 @@ LOPI is the **organizing construct of the whole investigation**: the primary cla
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-14|Draft|Created for RQ-0009. Seven-facet definition from Rogoff 2014; classified as a community-embedded cultural-learning construct with a "descriptive lens, not portable method / not measured law" caveat. Constellation and "not absence-of-instruction" cautions recorded as the load-bearing limits for the transfer claim.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End ENT-0007

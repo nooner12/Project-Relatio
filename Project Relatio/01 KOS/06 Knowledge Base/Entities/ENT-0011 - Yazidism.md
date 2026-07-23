@@ -1,7 +1,7 @@
 ---
 title: ENT-0011 - Yazidism
 document_type: Entity Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-21
@@ -37,6 +37,13 @@ relationships:
     target: SRC-0118
   - type: derived_from
     target: SRC-0119
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-21
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # ENT-0011
@@ -71,5 +78,6 @@ relationships:
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.2|2026-07-22|Draft|Added the OPTIONAL render-only positioning bounds (STD-0002 §11 v1.11) for the proportional SVG timeline: `range_start_year: 1100`, `range_end_year: present`, `range_uncertainty: moderate`. **Derived from and bounded by the dating claim CLM-0091** — the earliest defensible bound is the 12th-c. crystallisation around Sheikh ʿAdī ibn Musāfir (the bar deliberately does NOT extend into the undated, disputed pre-Islamic substrate — that contestation lives in CLM-0091 and the `disputed` lineage qualifier, not in a fabricated earlier start); `present` because Yazidism is a living tradition; `moderate` inherits CLM-0091's Moderate crystallization-dating component. (The brief's looser "high uncertainty on any earlier extension" concerns the substrate the bar excludes; the crystallisation the bar represents is Moderate — claim wins. Reported.) **Non-evidential, render-only; `display_range` remains authoritative.** No other field touched.|
+|0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End ENT-0011

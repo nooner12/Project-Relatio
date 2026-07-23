@@ -1,7 +1,7 @@
 ---
 title: CLM-0086 - Scholarly Dissent from the Majority Classification
 document_type: Claim Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-20
@@ -40,6 +40,13 @@ reliance_note: "unassessed floor; predates verification-pass procedure."
 review_cycle: 6
 review_date: 2027-01-20
 last_reviewed: 2026-07-20
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-20
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # CLM-0086
@@ -119,5 +126,6 @@ SRC-0136 high authority, paywalled, thesis review-verified — and its Yiguandao
 |0.1|2026-07-20|Draft|Created for RQ-0015. Level 2 (Low): located dissent is category-level (ter Haar; Palmer's reflexive question); no Daoist-school classification located; the negative bounded to the surveyed base and graded per the thin-base authorization; hidden-dissent counter-reading steelmanned as the constitutive ceiling. Elements (a)/(b)/(c) discrete. Pending review/validation.|
 |0.2|2026-07-20|Draft|epistemic-field backfill, Stage 3|
 |0.3|2026-07-21|Draft|review-field initialization per ADR-GOV-0008|
+|0.4|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End CLM-0086

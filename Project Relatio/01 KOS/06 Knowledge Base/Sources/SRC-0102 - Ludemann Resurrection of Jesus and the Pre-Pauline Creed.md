@@ -1,7 +1,7 @@
 ---
 title: SRC-0102 - Ludemann Resurrection of Jesus and the Pre-Pauline Creed
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-19
@@ -28,6 +28,13 @@ relationships:
     target: CLM-0074
   - type: part_of
     target: INV-0013
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-19
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0102
@@ -68,5 +75,6 @@ Gerd Lüdemann, *The Resurrection of Jesus: History, Experience, Theology* (Fort
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-19|Draft|Created for RQ-0013. Non-Christian scholar's source-critical dating of the pre-Pauline 1 Cor 15:3-7 creed to c. 30-33 CE; H-band H-e about H-a-embedded material. Dates the proclamation, not the event (bracketed). Live-verified strong on dating.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0102

@@ -1,7 +1,7 @@
 ---
 title: SRC-0065 - Moffitt Caspi 2001 Antisocial Pathways
 document_type: Source Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-15
@@ -28,6 +28,13 @@ relationships:
     target: CLM-0049
   - type: part_of
     target: INV-0010
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-15
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # SRC-0065
@@ -67,5 +74,6 @@ Moffitt, T. E., & Caspi, A. (2001), "Childhood predictors differentiate life-cou
 |---|---|---|---|
 |0.1|2026-07-15|Draft|Created for RQ-0010. Dev. Psychopathol. 13(2):355–375 — verified via PubMed 11393651. Construct-provenance: `CONFLATED` — sex-labeled behavioral trajectories, mechanism not isolated. Supports only a gender-patterned/unattributed onset-timing claim; the ~10:1 childhood-onset vs ~1.5:1 adolescence-onset ratios are cohort-specific but directionally robust.|
 |0.1a|2026-07-15|Draft|**Recoded `CONFLATED` → `UNRESOLVED` per Critical Review – RQ-0010 F-1.** The paper gives no basis to determine whether the early-onset male preponderance is neurodevelopmental, socialization-driven, or ascertainment-influenced (its own cautions); construct undetermined = `UNRESOLVED`, not `CONFLATED`. No change to constraint or to CLM-0049 confidence.|
+|0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 # End SRC-0065

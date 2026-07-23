@@ -1,7 +1,7 @@
 ---
 title: KOS-0011 - Governance, Stewardship & Evolution Framework
 document_type: Kernel Operating System Document
-version: 1.3
+version: 1.4
 status: Adopted
 operational_status: Active
 category:
@@ -24,14 +24,20 @@ tags:
   - Stewardship
   - Evolution
   - Architecture
+attribution:
+  - actor: Brian Noon
+    role: Vision Steward
+    event: created
+    date: 2026-07-09
+    ai_degree: ai-delegated
+    ai_model_family: Claude
 ---
 
 # KOS-0011
 
 # Project Relatio Governance, Stewardship & Evolution Framework
 
-## Version 1.3
-
+## Version 1.4
 ## Adopted Kernel Document
 
 ---
@@ -688,6 +694,7 @@ Project Relatio adopts:
 |1.1|2026-07-09|Adopted|Added §10 reconciliation note mapping CON-0003 Stewardship Functions → KOS-0011 ST-roles → ROLE-NNNN implementations, closing the terminology drift found in the governance assessment (R1/R4). ST-003 Domain Specialist recorded as unimplemented.|
 |1.2|2026-07-10|Adopted|Resolved a phantom ADR reference (M-3/GB-2026-005): replaced the non-existent `ADR-KOS-0010 Governance Architecture Decisions` `related_documents` entry — surfaced as dangling by `graph_integrity.py` — with the genuine, existing **ADR-GOV-0001** (Governance and Role Reconciliation).|
 |1.3|2026-07-21|Adopted|§12 operationalized: review cycles pointed at the Review & Revision Standard (STD-0009), enacting ADR-GOV-0008. Declares-vs-operationalizes split per the §5/STD-0005 precedent. Additive.|
+|1.4|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 
 ---
 
