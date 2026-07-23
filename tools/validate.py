@@ -17,6 +17,7 @@ from common import (
     review_field_problems,
     tradition_entity_problems,
     tradition_range_problems,
+    attribution_problems,
 )
 
 ROOT = Path(__file__).parent
@@ -367,6 +368,57 @@ for file in files:
     if range_problems:
         detail = "\n".join(f"  {p}" for p in range_problems)
         errors.append(f"Positioning fields malformed: {file.name}\n{detail}")
+
+# ----------------------------
+# Attribution pass (STD-0002 §6/§6.1 v1.12 / ADR-GOV-0011 Decisions B + C)
+#
+# Every **formal Knowledge Object** carries `attribution` -- provenance, with
+# AI-assistance disclosure. Scope is the `identified_documents` rule from
+# validator_rules.yaml (the same classification the first pass uses for the
+# identifier check), so infrastructure documents (Registry, Backlog, Indexes,
+# CLAUDE.md) are correctly out of scope: they are not Knowledge Objects.
+#
+# Enforced at **ERROR** from introduction. There is no migration gap to
+# warning-gate: the full corpus (335 objects) was backfilled in the immediately
+# preceding commit, and TPL-0001…0006 emit the field, so new records are born
+# conformant. This is the ordering GB-2026-035 and the STD-0002 v1.11 pass both
+# used -- backfill first, enforce second, vault green at every boundary.
+#
+# Shape only. Whether a disclosed `ai_degree` is *honest* is not a machine
+# question: ADR-GOV-0011 §4 rests its integrity on the permanent-record
+# principle, and gate-critical events additionally require a method description
+# (a review obligation, not a validator one). Per **Decision E**, this pass
+# counts problems and never contributors -- no standing, ranking, or gating may
+# be computed from attribution absent its own governance ADR.
+#
+# Inherits extended-length path handling from common.read_text (STD-0001 §8).
+# ----------------------------
+
+for file in files:
+
+    if not classify(file.name).get("requires_identifier"):
+        continue
+
+    text = read_text(file)
+
+    frontmatter, _ = parse_frontmatter(text)
+
+    if frontmatter is None:
+        continue  # already an error in the first pass
+
+    try:
+        meta = yaml.safe_load(frontmatter)
+    except Exception:
+        continue  # already an error in the first pass
+
+    if not isinstance(meta, dict):
+        continue
+
+    problems = attribution_problems(meta)
+
+    if problems:
+        detail = "\n".join(f"  {p}" for p in problems)
+        errors.append(f"Attribution malformed: {file.name}\n{detail}")
 
 if epistemic_unmigrated:
     warnings.append(

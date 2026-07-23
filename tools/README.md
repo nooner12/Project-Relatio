@@ -75,6 +75,43 @@ Checks, per STD-0001/STD-0002:
   graph_integrity's job (they are graph claims, §12.1). Enforced at error to guard
   *births*: zero tradition entities exist yet, so nothing can fail, but the first one
   authored wrong fails the build. Detection is proven by `tests/test_tradition_entity.py`.
+- **Attribution shape** (**error**; STD-0002 §6/§6.1 v1.12 / ADR-GOV-0011 Decisions B+C) —
+  every **formal Knowledge Object** carries `attribution`: provenance, with AI-assistance
+  disclosure. Scope is the `identified_documents` rule in `validator_rules.yaml` — the
+  same classification the identifier check uses — so infrastructure documents (Registry,
+  Backlog, Indexes, CLAUDE.md) are correctly out of scope; they are not Knowledge Objects.
+  Checked: the field is a **non-empty list**; each entry carries `actor` / `role` /
+  `event` / `date` / `ai_degree` / `ai_model_family`; `ai_degree` is in the controlled set
+  `unassisted` / `ai-assisted` / `ai-delegated`; `date` is YYYY-MM-DD; and
+  `ai_model_family: none` **iff** `ai_degree: unassisted`.
+
+  **The pairing rule is implemented at error, not warning.** The brief that introduced it
+  asked for a warning-with-reason if error proved too strict in practice; it does not. An
+  `unassisted` entry naming a model family, and an AI-assisted entry naming `none`, are
+  each self-contradictory on their face, and neither has a legitimate use the free-string
+  field would otherwise permit.
+
+  **Two things are deliberately NOT checked.** The list length is **not capped at one**,
+  and `event` is **not** vocabulary-checked. Stage 1 writes exactly one `event: created`
+  entry, but ADR-GOV-0011 §8 defers per-event attribution to Stage 2, which extends this
+  same list — a Stage-1 checker that rejected a second entry, or an unfamiliar event
+  value, would turn that extension into a migration, which is the whole reason the field
+  is list-shaped. `tests/test_attribution.py` pins both with a **two-entry additivity
+  case** and a future-`event` case that must pass.
+
+  Whether a disclosed degree is **honest** is not a machine question: ADR-GOV-0011 §4
+  rests its integrity on the permanent-record principle, and gate-critical events
+  additionally require a method description — a review obligation, not a validator one.
+
+  Enforced at error from introduction, with no warning-gated migration window: the full
+  corpus (335 objects) was backfilled in the **immediately preceding commit** and
+  TPL-0001…0006 emit the field, so new records are born conformant. Same
+  backfill-then-enforce ordering as the STD-0002 v1.11 positioning-field pass.
+
+  **Decision E (metric tripwire):** no contributor standing, ranking, or gating may be
+  computed from this field by any tool absent its own governance ADR. This pass counts
+  problems, never contributors — and any tool found doing otherwise is nonconformant by
+  definition.
 - **Version coherence** (**error**; GB-2026-035) — a document's `version:` frontmatter,
   its `## Version` body heading, and the newest row of its own `# Revision History`
   table must agree.
@@ -187,6 +224,22 @@ shareable directly from the public repo. Each carries a **generated-from header*
 short hash + generation date) so a stale copy identifies itself. Output is
 **deterministic** (every list id-sorted); only the header hash/date vary, so
 regeneration diffs are meaningful.
+
+**`attribution` is DELIBERATELY NOT RENDERED — in either view.** ADR-GOV-0011 Decision B
+makes provenance **durable but selectively visible**: it must be withholdable at review
+time when a review's independence depends on it, and **no surface used for blinded review
+may render it unconditionally.** These views are exactly such a surface — the shareable,
+whole-graph picture — so the honest default is not to surface it at all. Whether it should
+ever appear here, and under what condition, belongs to the blinded-review design and to
+governance, not to a renderer; the question is open, and this omission stands until it is
+decided.
+
+The mechanism is structural, not a filter: `_parse_object()` builds an **explicit
+known-field dict**, with no `**meta` passthrough and no dump of parsed frontmatter
+anywhere in either emitter, so a new frontmatter field cannot leak into a view by default.
+Omission from that dict is sufficient — **do not replace it with a passthrough.**
+ADR-GOV-0011 Decision E applies equally: no contributor metric, standing, or ranking may
+be computed or displayed from attribution by this or any tool.
 
 **The reliance gate is load-bearing and MUST NOT be removed from the generator.** A
 standing banner ("Findings not cleared for external reliance — reliance tiers shown per
@@ -308,3 +361,16 @@ failure in GB-2026-028 is the standing lesson, having reported clean while silen
 skipping four files. `tests/fixtures/` holds three deliberately-shaped documents (two
 drifted, one coherent control) kept **outside the vault** so they are never scanned as
 content. The control fixture is versioned `2.10` specifically to catch float comparison.
+
+```
+python tests/test_attribution.py
+```
+
+Proves the `attribution` shape check (STD-0002 §6 v1.12) detects malformed provenance —
+the same lesson, sharpened: the whole corpus was backfilled **to conformance** in the
+commit before enforcement, so a green vault is guaranteed and proves nothing on its own.
+Eight fixtures cover a well-formed single entry (silent), a missing field, a scalar block,
+a bad `ai_degree`, a malformed `date`, both directions of the `none`-iff-`unassisted`
+pairing rule, and a half-authored entry. Two cases exist specifically to keep the check
+from over-constraining Stage 2: a **two-entry list must PASS** (the additivity proof for
+ADR-GOV-0011 §8) and a non-`created` `event` must not be flagged.

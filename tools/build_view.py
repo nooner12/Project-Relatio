@@ -273,6 +273,26 @@ def object_from_text(text):
         "range_start_year": meta.get("range_start_year") if prefix == "ENT" else None,
         "range_end_year": meta.get("range_end_year") if prefix == "ENT" else None,
         "range_uncertainty": meta.get("range_uncertainty") if prefix == "ENT" else None,
+        # `attribution` (STD-0002 §6 v1.12) is DELIBERATELY ABSENT from this dict
+        # and from both emitters. ADR-GOV-0011 Decision B makes provenance
+        # durable but SELECTIVELY VISIBLE: it must be withholdable at review time
+        # when a review's independence depends on it, and **no surface used for
+        # blinded review may render it unconditionally.** These views are exactly
+        # such a surface — they are the shareable, whole-graph picture.
+        #
+        # Whether attribution should ever be rendered here (and under what
+        # condition) is an open question that belongs to the blinded-review
+        # design, not to a renderer. Until that is decided by governance, the
+        # honest default is not to surface it at all.
+        #
+        # NOTE the shape of this function: it builds an EXPLICIT known-field
+        # dict. There is no wildcard `**meta` and no dump of the parsed
+        # frontmatter anywhere in either emitter, so a new frontmatter field
+        # cannot leak into a view by default — omission here is sufficient, and
+        # is the mechanism relied on. Do not replace this with a passthrough.
+        #
+        # Decision E also applies: no contributor metric, standing, or ranking
+        # may be computed or displayed from attribution by any tool.
     }
 
 

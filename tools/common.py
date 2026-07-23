@@ -317,6 +317,124 @@ def review_field_problems(meta):
 
 
 # ----------------------------------------------------------------------------
+# Attribution shape check (STD-0002 §6/§6.1 v1.12 / ADR-GOV-0011 Decisions B+C)
+#
+# Every formal Knowledge Object carries `attribution`: provenance, with
+# AI-assistance disclosure. This helper checks *shape* only -- whether a
+# disclosed degree is *honest* is not a machine question, and is deliberately
+# left to the permanent-record principle (ADR-GOV-0011 §4).
+#
+# **ALWAYS A LIST**, minimum one entry. At Stage 1 the vault writes exactly one
+# entry (`event: created`), but the check does NOT cap the list length: Stage 2
+# (per-event attribution, deferred per ADR-GOV-0011 §8) extends the same list
+# additively, and a Stage-1 checker that rejected a second entry would make that
+# extension a migration -- precisely the outcome the list shape exists to avoid.
+# tests/test_attribution.py pins this with a two-entry additivity case.
+#
+# `event` is likewise NOT vocabulary-checked. `created` is the only value Stage 1
+# writes, but the Stage 2 vocabulary (reviewed / verified / ratified / …) is not
+# yet decided, and hard-coding a one-value enum here would have to be unwound.
+#
+# **No metric may be computed from this field** (ADR-GOV-0011 Decision E): any
+# tool computing contributor standing, ranking, or gating absent its own
+# governance ADR is nonconformant by definition. This checker counts problems,
+# never contributors.
+# ----------------------------------------------------------------------------
+
+AI_DEGREES = ("unassisted", "ai-assisted", "ai-delegated")
+
+ATTRIBUTION_KEYS = ("actor", "role", "event", "date", "ai_degree",
+                    "ai_model_family")
+
+
+def attribution_problems(meta):
+    """Shape-check the STD-0002 §6 `attribution` field of a frontmatter dict.
+
+    Returns a list of problem strings; empty means well-formed.
+    """
+    problems = []
+    attribution = meta.get("attribution")
+
+    if attribution is None:
+        problems.append(
+            "missing `attribution` (STD-0002 §6 v1.12: required list, "
+            "minimum one entry)"
+        )
+        return problems
+
+    if not isinstance(attribution, list) or not attribution:
+        problems.append(
+            "`attribution` must be a non-empty list -- a single entry is a "
+            "one-item list, never a scalar block (STD-0002 §6; the list shape "
+            "is what makes ADR-GOV-0011 Stage 2 additive)"
+        )
+        return problems
+
+    for i, entry in enumerate(attribution):
+        if not isinstance(entry, dict):
+            problems.append(
+                f"attribution[{i}] must be a mapping with "
+                f"{'/'.join(ATTRIBUTION_KEYS)}"
+            )
+            continue
+
+        for key in ATTRIBUTION_KEYS:
+            if entry.get(key) is None:
+                problems.append(f"attribution[{i}].{key} is required")
+
+        for key in ("actor", "role", "event"):
+            value = entry.get(key)
+            if value is not None and (
+                not isinstance(value, str) or not value.strip()
+            ):
+                problems.append(
+                    f"attribution[{i}].{key} must be a non-empty string "
+                    f"(got {value!r})"
+                )
+
+        date = entry.get("date")
+        if date is not None and _parse_date(date) is None:
+            problems.append(
+                f"attribution[{i}].date must be YYYY-MM-DD (§10) (got {date!r})"
+            )
+
+        degree = entry.get("ai_degree")
+        if degree is not None and degree not in AI_DEGREES:
+            problems.append(
+                f"attribution[{i}].ai_degree must be one of "
+                f"{list(AI_DEGREES)} (got {degree!r})"
+            )
+
+        family = entry.get("ai_model_family")
+        if family is not None and (
+            not isinstance(family, str) or not family.strip()
+        ):
+            problems.append(
+                f"attribution[{i}].ai_model_family must be a non-empty string "
+                f"(a vendor/family, or the literal `none`) (got {family!r})"
+            )
+        elif degree in AI_DEGREES and isinstance(family, str):
+            # The pairing rule, enforced as a biconditional (STD-0002 §6):
+            # `none` iff `unassisted`. Implemented at ERROR, not warning -- an
+            # `unassisted` entry naming a model family, or an AI-assisted entry
+            # naming none, is self-contradictory on its face, and neither has a
+            # legitimate use the free-string field would otherwise permit.
+            is_none = family.strip().lower() == "none"
+            if degree == "unassisted" and not is_none:
+                problems.append(
+                    f"attribution[{i}].ai_model_family must be `none` when "
+                    f"ai_degree is `unassisted` (got {family!r})"
+                )
+            elif degree != "unassisted" and is_none:
+                problems.append(
+                    f"attribution[{i}].ai_model_family must name a model "
+                    f"family when ai_degree is {degree!r} (got `none`)"
+                )
+
+    return problems
+
+
+# ----------------------------------------------------------------------------
 # Tradition-entity fields + branches_from lineage edge (ADR-GOV-0009 / STD-0002
 # v1.10 §11 / STD-0004 v1.2 §7.2).
 #
