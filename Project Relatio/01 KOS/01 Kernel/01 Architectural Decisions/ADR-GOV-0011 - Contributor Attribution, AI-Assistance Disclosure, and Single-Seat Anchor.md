@@ -1,5 +1,5 @@
 ---
-title: ADR-GOV-0011 - Contributor Attribution, AI-Assistance Disclosure, and the Provisional Single-Seat Anchor
+title: ADR-GOV-0011 - Contributor Attribution, AI-Assistance Disclosure, and the Single-Seat Anchor
 document_type: Architecture Decision Record
 version: 1.0
 status: Adopted
