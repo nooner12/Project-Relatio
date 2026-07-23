@@ -1,7 +1,7 @@
 ---
 title: STD-0004 - Relationship & Linking Standard
 document_type: Standards Document
-version: 1.2
+version: 1.3
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -28,7 +28,7 @@ tags:
 
 # Project Relatio Relationship & Linking Standard
 
-## Version 1.2
+## Version 1.3
 
 ## Adopted Standards Document
 
@@ -303,8 +303,15 @@ Tradition B `branches_from` tradition A — the historical descent of one religi
 - `syncretic-descent`
 - `heterodox-offshoot`
 - `disputed`
+- `continuation`
 
 An edge without a qualifier is **malformed** (a graph-integrity error, not an advisory). Different kinds of branching render differently.
+
+**`continuation` (added v1.3 — ADR-GOV-0010 D1).**
+
+> `continuation` — B `branches_from` A where B carries forward A's principal or main line rather than departing from it: the least-departed descendant after a rupture or transformation. Distinguished from `reform` (reconstitution-with-change) by the absence of a departure connotation.
+
+This value was added by the anchor-vocabulary review (ADR-GOV-0009 §7(a)) in response to INV-0017's demonstrated inability to name a main-line-continuation edge (Rabbinic Judaism carrying forward Second Temple Judaism after 70 CE): every prior value connoted departure. Adding it is **additive repair of a demonstrated gap, not a promotion of the list from provisional to durable** — the qualifier list stays provisional (ADR-GOV-0010 D5); it simply has one more tool in it.
 
 **Warrant rule.** Every `branches_from` edge must be supported by a **graded claim** — the edge is the render; the claim is the warrant. An unwarranted edge is a graph-integrity error. (Because a warrant is a claim about lineage rather than a structured pointer on the edge, this rule is **review-checked, not tool-checked** — see §7.2 and `tools/README.md`.)
 
@@ -329,7 +336,9 @@ relationships:
     qualifier: schism
 ```
 
-`qualifier` takes one value from the controlled list in the `branches_from` entry above (`schism` / `reform` / `syncretic-descent` / `heterodox-offshoot` / `disputed`). `graph_integrity.py` enforces the qualifier-required rule, the vocabulary, and the ENT → ENT restriction as errors.
+`qualifier` takes one value from the controlled list in the `branches_from` entry above (`schism` / `reform` / `syncretic-descent` / `heterodox-offshoot` / `disputed` / `continuation`). `graph_integrity.py` enforces the qualifier-required rule, the vocabulary, and the ENT → ENT restriction as errors.
+
+**Disambiguation note — the two `reform` vocabularies (D3, ADR-GOV-0010).** The `branches_from` **qualifier** `reform` (this field, STD-0004 §7.2 — a *kind of descent relationship*) and the STD-0002 §11 **`tradition_type`** value `reform` (a different field — *how a tradition came to be*) are **different vocabularies on different fields that coincidentally share a word.** They are never conflated: a tradition may carry `tradition_type: reform` while its lineage edge carries any qualifier (or vice versa), and the two are graded and reviewed independently. (Rabbinic Judaism is the case that exposed the collision: `tradition_type: reform` with a `branches_from` qualifier of `continuation`.)
 
 ---
 
@@ -489,6 +498,7 @@ Meaningful relationships transform stored information into structured knowledge.
 |1.0|2026-07-09|Adopted|Initial relationship and linking standard|
 |1.1|2026-07-11|Adopted|Added §7.1 Machine-Readable Encoding: the vocabulary is now carried in the typed `relationships` frontmatter block (STD-0002 §7 v1.6), closing F-4 / GB-2026-001. No vocabulary change — the twelve approved types are unchanged.|
 |1.2|2026-07-21|Adopted|Added the **provisional `branches_from`** relationship type (ENT → ENT, asymmetric, REQUIRED qualifier from schism/reform/syncretic-descent/heterodox-offshoot/disputed, warrant-by-graded-claim) enacting ADR-GOV-0009 D4; added §7.2 defining the optional `qualifier` frontmatter key (valid only on branches_from). PROVISIONAL under ADR-GOV-0007 §2 anchor discipline; revision trigger ADR-GOV-0009 §7(a). Additive — the existing twelve types are unchanged.|
+|1.3|2026-07-22|Adopted|**Anchor-vocabulary review (ADR-GOV-0009 §7(a)) enacting ADR-GOV-0010 D1/D3.** Added a sixth `branches_from` qualifier **`continuation`** (B carries forward A's principal/main line rather than departing — the least-departed descendant after a rupture; distinguished from `reform` by the absence of a departure connotation) in response to INV-0017's demonstrated inability to name a main-line-continuation edge (Rabbinic Judaism); list now schism/reform/syncretic-descent/heterodox-offshoot/disputed/continuation. Added §7.2 the two-`reform`-vocabularies disambiguation note (the `branches_from` qualifier `reform` and the STD-0002 `tradition_type` value `reform` are different fields sharing a word, never conflated). **Additive repair of a demonstrated gap — the qualifier list stays PROVISIONAL (ADR-GOV-0010 D5); NOT a promotion toward durable.** The `graph_integrity.py` enforced set was extended to match.|
 
 ---
 

@@ -330,6 +330,7 @@ TRADITION_TYPES = ("founded", "emergent", "reform", "syncretic")
 
 BRANCH_QUALIFIERS = (
     "schism", "reform", "syncretic-descent", "heterodox-offshoot", "disputed",
+    "continuation",  # ADR-GOV-0010 D1 (STD-0004 v1.3) — main-line carry-forward
 )
 
 # The three co-required tradition-class fields (STD-0002 §11 v1.10).

@@ -25,6 +25,9 @@ relationships:
   - type: branches_from
     target: CLM-9099
     qualifier: reform
+  - type: branches_from
+    target: ENT-9008
+    qualifier: continuation
   - type: derived_from
     target: SRC-9001
 ---
@@ -36,3 +39,4 @@ Edge cases for the branches_from integrity check:
 - ENT-9006 / bogus-qualifier — invalid qualifier.
 - ENT-9007 / (none) — missing required qualifier.
 - CLM-9099 / reform — target is not an ENT.
+- ENT-9008 / continuation — VALID (ADR-GOV-0010 D1; the sixth qualifier).

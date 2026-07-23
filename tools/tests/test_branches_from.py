@@ -47,13 +47,15 @@ meta = yaml.safe_load(fm)
 entries = relationship_entries(meta)
 branches = [(e["target"], e["qualifier"]) for e in entries if e["type"] == "branches_from"]
 
-if len(branches) != 4:
-    failures.append(f"expected 4 branches_from edges extracted, got {len(branches)}: {branches}")
+if len(branches) != 5:
+    failures.append(f"expected 5 branches_from edges extracted, got {len(branches)}: {branches}")
 by_target = dict(branches)
 if by_target.get("ENT-9000") != "schism":
     failures.append(f"ENT-9000 qualifier should be 'schism', got {by_target.get('ENT-9000')!r}")
 if by_target.get("ENT-9007") is not None:
     failures.append(f"ENT-9007 qualifier should be None (absent), got {by_target.get('ENT-9007')!r}")
+if by_target.get("ENT-9008") != "continuation":
+    failures.append(f"ENT-9008 qualifier should be 'continuation', got {by_target.get('ENT-9008')!r}")
 print(f"  extraction -> {len(branches)} edges; qualifiers={[q for _, q in branches]}")
 
 # 2. Integrity: type_of maps every ENT-* to 'ENT' and the CLM target to 'CLM'.
@@ -75,6 +77,9 @@ if not has("CLM-9099", "target is not an ENT"):
     failures.append(f"non-ENT target (CLM-9099) not caught: {problems}")
 if any(t == "ENT-9000" for t, _ in problems):
     failures.append(f"valid edge ENT-9000/schism must NOT be flagged: {problems}")
+# prove the positive: the sixth qualifier `continuation` (ADR-GOV-0010 D1) is accepted.
+if any(t == "ENT-9008" for t, _ in problems):
+    failures.append(f"valid edge ENT-9008/continuation must NOT be flagged: {problems}")
 print(f"  integrity (ENT source) -> {len(problems)} problems: {reasons}")
 
 # 3. Non-ENT source is flagged for every edge.
@@ -84,10 +89,11 @@ if not any("source is not an ENT" in why for _, why in src_problems):
 print(f"  integrity (non-ENT source) -> {len(src_problems)} problems")
 
 # 4. Vocabulary sanity: 'reform' is shared between tradition_type and qualifiers
-#    but the two lists are independent; assert the qualifier list is exactly D4's.
+#    but the two lists are independent; assert the qualifier list is exactly the
+#    ADR-GOV-0009 D4 set + the ADR-GOV-0010 D1 addition (`continuation`).
 if set(BRANCH_QUALIFIERS) != {"schism", "reform", "syncretic-descent",
-                              "heterodox-offshoot", "disputed"}:
-    failures.append(f"BRANCH_QUALIFIERS drifted from ADR-GOV-0009 D4: {BRANCH_QUALIFIERS}")
+                              "heterodox-offshoot", "disputed", "continuation"}:
+    failures.append(f"BRANCH_QUALIFIERS drifted from ADR-GOV-0009 D4 + ADR-GOV-0010 D1: {BRANCH_QUALIFIERS}")
 
 # 5. Wiring: graph_integrity uses the helper and exits on branch errors;
 #    build_view renders the qualifier on the chip.

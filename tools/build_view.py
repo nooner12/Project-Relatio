@@ -834,7 +834,18 @@ QUALIFIER_STYLE = {
     "syncretic-descent":  ("#5e3b7a", "2 3",    "⊕"),   # ⊕ fusion (dotted)
     "heterodox-offshoot": ("#7a5e3b", "6 4",    "≠"),   # ≠ divergence (dashed)
     "disputed":           ("#6b6b66", "3 3",    "?"),   # ? contested (fine dash)
+    # continuation (ADR-GOV-0010 D1): the parent's own main line carried forward.
+    # Design call — reads as "main-line carry-forward": SOLID (unbroken = carried
+    # forward without rupture) + HEAVIER stroke (see QUALIFIER_WIDTH) + a distinct
+    # dark charcoal "trunk" hue (deliberately away from the confidence greens/
+    # ambers/reds and reliance blue-greys, per the palette note above) + a heavy
+    # double-arrow glyph. Distinct from schism (also solid) by hue, glyph, weight.
+    "continuation":       ("#2f2a26", "",       "⟹"),   # ⟹ main line carried forward (solid/heavy)
 }
+
+# Per-qualifier connector stroke width (default 2). `continuation` is drawn
+# heavier so the parent's carried-forward main line reads as the backbone.
+QUALIFIER_WIDTH = {"continuation": 3.2}
 
 QUALIFIER_MEANING = {
     "schism": "a split within one tradition",
@@ -842,6 +853,7 @@ QUALIFIER_MEANING = {
     "syncretic-descent": "descent absorbing the parent among other sources",
     "heterodox-offshoot": "a heterodox movement diverging from the parent",
     "disputed": "descent itself contested — the uncertainty IS the finding",
+    "continuation": "the parent's own main line carried forward (least-departed descent)",
 }
 
 # Curated notes (Path A honesty: an overturned hypothesis renders as PRESENCE,
@@ -1203,6 +1215,7 @@ def _svg_connector(child_geom, parent_geom, qual, parent_lane_mid):
     cx1, _cx2, cmid = child_geom
     px1, px2, _pmid = parent_geom
     color, ldash, glyph = QUALIFIER_STYLE.get(qual, ("#888", "", "→"))
+    width = QUALIFIER_WIDTH.get(qual, 2)
     dash = f' stroke-dasharray="{ldash}"' if ldash else ""
     origin_x = min(max(cx1, px1), px2)
     # Elbow: down from the parent bar at origin_x, across to the child node.
@@ -1215,7 +1228,7 @@ def _svg_connector(child_geom, parent_geom, qual, parent_lane_mid):
                      f'fill="{color}">descent disputed — uncertainty is the finding</text>')
     return (
         f'<g><title>branches_from ({esc(qual or "?")})</title>'
-        f'<path d="{path}" fill="none" stroke="{color}" stroke-width="2"{dash}/>'
+        f'<path d="{path}" fill="none" stroke="{color}" stroke-width="{_num(width)}"{dash}/>'
         f'<circle cx="{_num(origin_x)}" cy="{_num(parent_lane_mid)}" r="3" '
         f'fill="{color}"/>'
         f'<text x="{_num(origin_x + 4)}" y="{_num((parent_lane_mid + cmid) / 2)}" '
@@ -1466,11 +1479,11 @@ def _tl_legend():
     quals = "".join(
         f'<div class="grp"><svg width="30" height="12">'
         f'<line x1="1" y1="6" x2="29" y2="6" stroke="{QUALIFIER_STYLE[q][0]}" '
-        f'stroke-width="2"'
+        f'stroke-width="{_num(QUALIFIER_WIDTH.get(q, 2))}"'
         + (f' stroke-dasharray="{QUALIFIER_STYLE[q][1]}"' if QUALIFIER_STYLE[q][1] else "")
         + f'/></svg> {QUALIFIER_STYLE[q][2]} {esc(q)} — {esc(QUALIFIER_MEANING[q])}</div>'
         for q in ("schism", "reform", "syncretic-descent",
-                  "heterodox-offshoot", "disputed"))
+                  "heterodox-offshoot", "disputed", "continuation"))
     conf = "".join(
         f'<div class="grp"><span class="swatch" style="background:{LEVEL_COLOR[l]}"></span>'
         f'{l} {esc(EPISTEMIC_LEVEL_LABELS[l])}</div>' for l in (5, 4, 3, 2, 1))

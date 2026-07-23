@@ -13,8 +13,9 @@ assertions target the emitted SVG/HTML:
     end stops at that year, and an OMITTED end renders a terminus-undated stub
     (never extended to present, never a fabricated coordinate);
   * high uncertainty renders visibly weaker than low (dashed + most-faded);
-  * each of the five qualifier connectors renders distinctly (colour + dash +
-    glyph), and `disputed` is marked uncertain;
+  * each of the six qualifier connectors renders distinctly (colour + dash +
+    glyph), `disputed` is marked uncertain, and `continuation` (ADR-GOV-0010 D1)
+    renders its distinct heavier main-line-carry-forward stroke;
   * a bounds-less tradition renders in the undated/sequence-only fallback lane
     with its verbatim display_range, and is NOT placed on the axis;
   * the reliance badge appears on EVERY tradition (count == tradition count,
@@ -64,6 +65,7 @@ FIX = [
     "tl_branch_syncretic.md",  # ENT-9103 syncretic-descent, 700.., low (OPEN)
     "tl_branch_heterodox.md",  # ENT-9104 heterodox-offshoot, 900..950, high
     "tl_branch_disputed.md",   # ENT-9105 disputed, 1100..present, moderate
+    "tl_branch_continuation.md",  # ENT-9107 continuation, 200..1000, moderate (ADR-GOV-0010 D1)
     "tl_undated.md",         # ENT-9106 undated (no bounds) -> fallback lane
     "tl_claim_moderate.md",  # CLM-9101 (Moderate)
     "tl_claim_low.md",       # CLM-9102 (Low)
@@ -131,6 +133,9 @@ want(len(pairs) == len(QUALIFIER_STYLE),
 # disputed is marked uncertain.
 want("descent disputed — uncertainty is the finding" in svg,
      "disputed connector must carry the explicit uncertainty note")
+# continuation (ADR-GOV-0010 D1) renders its distinct HEAVIER main-line stroke.
+want('stroke-width="3.2"' in svg,
+     "continuation connector must render its heavier (3.2) main-line-carry-forward stroke")
 
 # --- undated fallback lane: verbatim, not on the axis ----------------------
 want("undated-lane" in html, "undated/sequence-only fallback lane missing")
