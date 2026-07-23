@@ -31,9 +31,9 @@ The vault lives under [`Project Relatio/`](./Project%20Relatio) and is organised
 |---|---|---|
 | **Constitution** | `00 Constitution/` | Vision, principles, governance & epistemic charters (CON-0001…0004) |
 | **Kernel** | `01 KOS/01 Kernel/` | The conceptual foundation — epistemology, ontology, relationship & systems modelling, the Knowledge Object Model (KOS-0001…0012) |
-| **Standards** | `01 KOS/02 Standards/` | The 7 operating standards — naming, metadata, classification, relationships, lifecycle, review, terminology (STD-0001…0007) |
+| **Standards** | `01 KOS/02 Standards/` | The 9 operating standards — naming, metadata, classification, relationships, lifecycle, review & validation, terminology, epistemic state, review & revision (STD-0001…0009) |
 | **Roles** | `01 KOS/03 Roles/` | The four active roles of the research circuit (ROLE-0001/0002/0004/0005) |
-| **Templates** | `01 KOS/04 Templates/` | Object templates (Claim, Source, Investigation, Finding, ADR) |
+| **Templates** | `01 KOS/04 Templates/` | Object templates (Claim, Source, Investigation, Finding, ADR, Entity — TPL-0001…0006) |
 | **Operations** | `01 KOS/05 Operations/` | The research workflow, identifier registry, governance backlog, standing authorizations, architecture baseline |
 | **Knowledge Base** | `01 KOS/06 Knowledge Base/` | The actual research — investigations and their sources, claims, entities, findings |
 
@@ -57,14 +57,20 @@ Six investigations have been run end-to-end through the full circuit, spanning v
 ```
 Research OS/                 ← git repository root
 ├── README.md                ← you are here
-├── Project Relatio/         ← the RRI vault (the knowledge system itself, ~140 Markdown objects)
+├── Project Relatio/         ← the RRI vault (the knowledge system itself, ~390 Markdown files)
 │   ├── 00 Constitution/
 │   ├── 01 KOS/              ← Kernel · Standards · Roles · Templates · Operations · Knowledge Base · Archive
 │   └── CLAUDE.md            ← orientation for AI coding sessions working in the vault
-└── tools/                   ← RRI implementation tooling (not architecture)
-    ├── validate.py          ← structural conformance (identifiers, metadata, uniqueness)
-    ├── graph_integrity.py   ← relationship-graph integrity (dangling refs, typed reciprocity)
-    └── README.md
+├── tools/                   ← RRI implementation tooling (not architecture)
+│   ├── validate.py          ← structural conformance (identifiers, metadata, epistemic/review/attribution fields)
+│   ├── graph_integrity.py   ← relationship-graph integrity (dangling refs, typed reciprocity, lineage edges)
+│   ├── build_view.py        ← read-only, frontmatter-only generator for the two views
+│   ├── review_queue.py      ← read-only review queue (proposes; never writes to a record)
+│   ├── tests/               ← detection tests for the tooling
+│   └── README.md
+└── views/                   ← generated, committed HTML views (outside the KOS numbering and lifecycle)
+    ├── relatio-view.html    ← the investigation → claims/findings → sources tree
+    └── relatio-timeline.html ← the world-religions timeline (tradition entities on a time axis)
 ```
 
 **Where to start reading:** [`KOS-0001`](./Project%20Relatio/01%20KOS/01%20Kernel/00%20Foundational%20Documents) (the charter), then the **Architecture Baseline** and **Identifier Registry** under `01 KOS/05 Operations/`.

@@ -89,20 +89,37 @@ TYPE_LABEL = {
 # Confidence level -> accessible colour (Okabe-Ito derived; distinct in the two
 # common colour-vision deficiencies). Kept well away from the reliance palette so
 # the two axes are never confused (STD-0008 §4 independence, rendered literally).
+#
+# DIFFERENTIATION IS A REQUIREMENT, NOT A PREFERENCE (owner-requested polish,
+# 2026-07-23). Levels 5 and 4 were previously two shades of the same green
+# (CIE76 dE 21.8) and read as one grade at a glance — a view that blurs a
+# Very High into a High misreports the epistemic record. They are now separated
+# on BOTH lightness and hue (5 = very dark blue-green, 4 = mid yellow-green;
+# dE 47.6, a 2.2x increase), and never on hue alone. Levels 3/2/1 are unchanged
+# and verified still clearly distinct (minimum adjacent dE 31.5).
+# `tests/test_view_palette.py` asserts these separations; do not narrow them.
 LEVEL_COLOR = {
-    5: "#0b6e4f",  # Very High — deep green
-    4: "#3d8f4e",  # High       — green
+    5: "#04452e",  # Very High — very dark blue-green (deepest, heaviest)
+    4: "#3f8c28",  # High       — mid yellow-green (distinct hue AND lightness)
     3: "#b8860b",  # Moderate   — amber
     2: "#c65a11",  # Low        — orange
     1: "#a4243b",  # Very Low   — red
 }
 
-# Reliance tiers use a deliberately non-confidence palette (blue-greys), so a
+# Reliance tiers use a deliberately non-confidence palette (blues), so a
 # reliance badge is never mistaken for a confidence badge.
+#
+# The three tiers must be READILY DISTINGUISHABLE AT A GLANCE (owner-requested
+# polish, 2026-07-23): the reliance gate is load-bearing on both views, and a
+# badge whose tier cannot be read carries no gate. The previous trio sat within
+# dE 14.5 at its closest pair; the tiers now span slate blue-grey -> vivid blue
+# -> near-navy (minimum pairwise dE 24.6, a 70% improvement), stay in the blue
+# family as required, and every tier keeps >= 4.5:1 contrast against the white
+# badge text. `tests/test_view_palette.py` asserts both; do not narrow them.
 RELIANCE_COLOR = {
-    "R0": "#5a6b8c",
-    "R1": "#3a5a99",
-    "R2": "#1f3a6e",
+    "R0": "#5d7392",  # slate blue-grey — lightest (weakest tier)
+    "R1": "#2563a8",  # vivid mid blue
+    "R2": "#101f47",  # near-navy — darkest (strongest tier)
 }
 RELIANCE_MEANING = {
     "R0": "Parametric only — not externally verified.",
@@ -767,6 +784,8 @@ def build_html(objects, git_hash, gen_date):
         + "".join(
             f'<div class="grp"><span class="swatch" style="background:{RELIANCE_COLOR[t]}"></span>'
             f'{t}</div>' for t in ("R0", "R1", "R2"))
+        + '<div class="grp">tiers run light slate → vivid blue → near-navy '
+        '(weakest → strongest); confidence never uses the blue family</div>'
         + '<div class="grp"><strong>Edges:</strong> derived_from = spine · '
         'contrasts_with / depends_on / supports = cross-links (chips)</div>'
         '<div class="grp"><span class="pastdue">⚠ PAST DUE</span> = review_date elapsed</div>'
@@ -1516,12 +1535,16 @@ def _tl_legend():
         'reform · syncretic</div>'
         '<div class="grp"><strong>branches_from:</strong></div>' + quals
         + '<div class="grp"><strong>Confidence (dating):</strong></div>' + conf
+        + '<div class="grp">5 and 4 differ in hue as well as lightness (dark '
+        'blue-green vs mid yellow-green) — never distinguished by shade alone</div>'
         + '<div class="grp">Low / Very Low get a dashed weak-grade outline '
         '(not colour-only)</div>'
         + '<div class="grp"><strong>Uncertainty → bar:</strong> low = solid/strong · '
         'moderate = solid/faded, fuzzy start · high = dashed/most faded (visibly '
         'weakest)</div>'
         + '<div class="grp"><strong>Reliance:</strong></div>' + reliance
+        + '<div class="grp">tiers run light slate → vivid blue → near-navy '
+        '(weakest → strongest); confidence never uses the blue family</div>'
         + '<div class="grp"><strong>Axis:</strong> piecewise-COMPRESSED — each era '
         'segment is equal width regardless of its real duration; positions are '
         'approximate, not pixel-proportional across the whole span</div>'
