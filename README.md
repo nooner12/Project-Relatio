@@ -41,7 +41,7 @@ The vault lives under [`Project Relatio/`](./Project%20Relatio) and is organised
 
 ### The research so far
 
-Six investigations have been run end-to-end through the full circuit, spanning very different domains — a deliberate stress test of the architecture:
+Eighteen investigations have been run end-to-end through the full circuit, spanning very different domains — a deliberate stress test of the architecture:
 
 1. **INV-0001** — Convergence and divergence between the teachings of Jesus and Daoism
 2. **INV-0002** — Phantom traffic jams (emergent instability, not bottlenecks)
@@ -49,8 +49,20 @@ Six investigations have been run end-to-end through the full circuit, spanning v
 4. **INV-0004** — Type-2-diabetes remission and safe metformin de-prescribing
 5. **INV-0005** — Durable interventions for chronic stress
 6. **INV-0006** — Why people abandon wellness interventions, and what best sustains them
+7. **INV-0007** — The value and failure of formal constraints in knowledge systems
+8. **INV-0008** — Skills-based child-development programming
+9. **INV-0009** — Learning by Observing and Pitching In (LOPI)
+10. **INV-0010** — Psychosocial stressor-onset divergence by sex or gender, ages 5–17
+11. **INV-0011** — Zoroastrian eschatology and Second Temple Jewish apocalypticism
+12. **INV-0012** — Mycelial networks and the bounds of fungal cognition
+13. **INV-0013** — The New Testament texts as historical evidence
+14. **INV-0014** — The historical Jesus
+15. **INV-0015** — The academic classification of Yiguandao
+16. **INV-0016** — Origins and branching of the Iranian religious family
+17. **INV-0017** — Origins and branching of the Judaism–Christianity family
+18. **INV-0018** — Islam's origins and its Abrahamic relationships
 
-> The clinical and behavioural investigations (INV-0004/0005/0006) are **educational evidence reviews, not medical advice**, and are gated from external/client-facing reliance pending genuine independent and clinician review.
+> The clinical, behavioural, and child-facing investigations (INV-0004/0005/0006/0008/0010) are **educational evidence reviews, not medical advice**. All eighteen investigations' findings currently land **R0** and are **gated from external/client-facing reliance** pending genuine independent (and, for the health items, clinician) re-verification outside Relatio's own circuit.
 
 ---
 

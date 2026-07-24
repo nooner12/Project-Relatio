@@ -4,7 +4,17 @@ Implementation tooling that operates *on* the Project Relatio vault. This is
 **RRI** (reference-implementation) tooling, not architecture (RKA): it enforces
 the standards, it does not define them.
 
-Requires: `pip install -r requirements.txt` (PyYAML).
+Requires: `pip install -r requirements.txt` (PyYAML `>= 6.0`).
+
+**Supported Python: 3.14.** This is the one stated source of truth for the interpreter
+version, so CI, local development, and any future reader reference the same figure. The
+CI workflow (`.github/workflows/validate.yml`) pins `python-version: "3.14"`, local
+development runs on 3.14.x, and a **`.python-version` file at the repository root**
+records `3.14` for pyenv / `actions/setup-python` auto-detection. Previously nothing in
+the repo declared a version — `requirements.txt` carried only `PyYAML>=6.0` — so the CI
+pin was the *de facto* version by accident of one machine; the declaration makes it
+deliberate. (The tools use only the standard library plus PyYAML and are not known to
+require 3.14 specifically; 3.14 is the **declared, tested** version, not a hard floor.)
 
 **Windows long paths:** both tools read files through `common.read_text` / `write_text`,
 which apply the `\\?\` extended-length prefix so deep vault folders plus long object
