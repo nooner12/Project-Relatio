@@ -40,6 +40,24 @@ Reports, and writes `output/graph_integrity_report.md`:
   qualifier + ENT→ENT are enforced mechanically now and the warrant rule is recorded
   as review-checked. Zero branches_from edges exist at introduction (INV-0016 populates
   them); detection is proven by `tests/test_branches_from.py`.
+- **projects_to edge integrity** (error; STD-0004 v1.5 §7.3 / ADR-GOV-0012 D5) — the
+  **NON-EVIDENTIAL** projection relation. It runs **non-tradition entity → tradition
+  entity** (source and target `rendering_class` are both checked), is **machine-
+  traversable** (a dangling target fails the build via the dangling pass, because
+  roll-up rendering will traverse it), and takes **NO `qualifier`, NO `warrant`, and NO
+  `confidence` component** — any of them present **fails the build**. Enforcing the
+  *absences* is the mechanism that keeps a rendering convenience from quietly becoming
+  a historical claim; the check reads the **raw** relationship entries for exactly that
+  reason, since a normalizer that drops unknown keys would hide the key it must reject.
+- **influenced_by edge integrity** (error; STD-0004 v1.5 §7.3 / ADR-GOV-0012 D6) —
+  **ENT → ENT**, directional (never a reciprocity candidate; mutual influence is two
+  explicit edges), **qualifier REQUIRED** from `documented` / `contested`, a non-empty
+  and fully **resolvable `warrant`** list, and a present, resolvable **`not_descent`**
+  pointer. Unlike `branches_from`, this warrant rule **IS tool-checked**: ADR-GOV-0012
+  D6 makes the not-descent determination *constitutive* of the type, so it is encoded
+  as a structured pointer a tool can refuse an edge for lacking. Without that check
+  `influenced_by` is the soft option that empties the edge-restraint rule of force.
+  Both checks' detection is proven by `tests/test_rendering_class.py`.
 - **Non-reciprocated symmetric typed links** — advisory; type-aware (GB-2026-001).
   Among KB objects, a *symmetric*-type edge (`related_to`, `contrasts_with`) with no
   reciprocal back. Directional types (`derived_from`, `supports`, `part_of`, …) are
@@ -75,6 +93,29 @@ Checks, per STD-0001/STD-0002:
   graph_integrity's job (they are graph claims, §12.1). Enforced at error to guard
   *births*: zero tradition entities exist yet, so nothing can fail, but the first one
   authored wrong fails the build. Detection is proven by `tests/test_tradition_entity.py`.
+- **Rendering class** (STD-0002 §11 v1.13 / ADR-GOV-0012 D2/D3) — `rendering_class` is
+  **REQUIRED AT MINT** on every entity carrying a class field set, drawn from the
+  controlled vocabulary `tradition` / `substrate` / `community`. The declared class and
+  the field set must agree, and each field set is **forbidden on the wrong class** —
+  most consequentially, a `community` entity may **not** carry the render-only
+  positioning bounds, because those are the mechanism by which a bar gets drawn and a
+  community entity has an **attestation window, not a founding date** (D4). The seven
+  concept entities carry no class field set and no `rendering_class`, and are never
+  flagged. `substrate` is a reachable class with **no field set** (D7 defers its build);
+  an entity declaring it and carrying fields anyway is an error.
+
+  **The PRESENCE check was warning-gated for exactly one commit**, the
+  `RENDERING_CLASS_ENFORCED` flag, while ENT-0008…0015 were backfilled — define →
+  backfill → enforce, so the vault was never red between two commits of one enactment.
+  Everything else is error-level from introduction, because it guards births rather
+  than describing migration debt.
+- **Community-entity field shape** (**error**; STD-0002 §11 v1.13 / ADR-GOV-0012 D4) —
+  `attestation_claims` (graph-claim pointers to graded records), `attestation_window`
+  (render-only string), and `attestation_uncertainty` (`low`/`moderate`/`high`) are
+  **co-required** exactly as the tradition trio is. Shape only — whether a window is
+  *correctly derived* from its warranting records, and whether the non-temporal
+  components were rightly excluded from the uncertainty, are review questions. Both
+  checks' detection is proven by `tests/test_rendering_class.py`.
 - **Attribution shape** (**error**; STD-0002 §6/§6.1 v1.12 / ADR-GOV-0011 Decisions B+C) —
   every **formal Knowledge Object** carries `attribution`: provenance, with AI-assistance
   disclosure. Scope is the `identified_documents` rule in `validator_rules.yaml` — the

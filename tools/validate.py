@@ -17,6 +17,8 @@ from common import (
     review_field_problems,
     tradition_entity_problems,
     tradition_range_problems,
+    rendering_class_problems,
+    community_entity_problems,
     attribution_problems,
 )
 
@@ -329,7 +331,29 @@ for file in files:
 # fails the build. The seven concept entities (ENT-0001..0007) carry none of the
 # three fields and so are never flagged. Inherits extended-length path handling
 # from common.read_text, like every other pass.
+#
+# EXTENDED 2026-07-24 (ADR-GOV-0012 D2/D3/D4 / STD-0002 §11 v1.13) with the
+# `rendering_class` presence/vocabulary check and the community-class field
+# shape check. Both run in this same ENT loop.
+#
+# MIGRATION GATE -- the `rendering_class` PRESENCE check is warning-gated by
+# RENDERING_CLASS_ENFORCED below, and nothing else is. The field is required at
+# mint, but ENT-0008..0015 predate it and are backfilled by their own commit;
+# enforcing presence before that commit lands would turn the vault red between
+# two of this enactment's own commits, which the migration discipline (define ->
+# backfill -> enforce) exists to prevent. Every OTHER problem -- an
+# out-of-vocabulary class, a class declared without its field set, a field set
+# forbidden on the declared class, and the whole community-class shape check --
+# is an ERROR from introduction, because those guard births rather than
+# describing migration debt: no entity in the vault can trip them, and the first
+# one authored wrong must fail the build.
+#   * False: a missing `rendering_class` is an individual WARNING.
+#   * True (set by the commit AFTER the backfill): it is an ERROR. The promotion
+#     is this one flag flip plus the gate guard in
+#     tests/test_rendering_class.py; the check logic does not change.
 # ----------------------------
+
+RENDERING_CLASS_ENFORCED = False
 
 for file in files:
 
@@ -368,6 +392,29 @@ for file in files:
     if range_problems:
         detail = "\n".join(f"  {p}" for p in range_problems)
         errors.append(f"Positioning fields malformed: {file.name}\n{detail}")
+
+    # rendering_class (ADR-GOV-0012 D3) — presence migration-gated, the rest
+    # error-level. `missing` is returned separately for exactly that reason.
+    missing_class, class_problems = rendering_class_problems(meta)
+
+    if missing_class:
+        target = errors if RENDERING_CLASS_ENFORCED else warnings
+        target.append(
+            f"Rendering class missing: {file.name}\n  {missing_class}"
+        )
+
+    if class_problems:
+        detail = "\n".join(f"  {p}" for p in class_problems)
+        errors.append(f"Rendering class malformed: {file.name}\n{detail}")
+
+    # Community-class fields (ADR-GOV-0012 D4 / STD-0002 §11 v1.13). Error level
+    # from introduction: this guards births, and no community entity existed
+    # before this ADR, so nothing pre-existing can fail.
+    community_problems, _attest = community_entity_problems(meta)
+
+    if community_problems:
+        detail = "\n".join(f"  {p}" for p in community_problems)
+        errors.append(f"Community-entity fields malformed: {file.name}\n{detail}")
 
 # ----------------------------
 # Attribution pass (STD-0002 §6/§6.1 v1.12 / ADR-GOV-0011 Decisions B + C)

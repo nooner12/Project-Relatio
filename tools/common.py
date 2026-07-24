@@ -576,6 +576,323 @@ def tradition_range_problems(meta):
     return problems
 
 
+# ----------------------------------------------------------------------------
+# Entity rendering class + community-class fields (ADR-GOV-0012 D2/D3/D4 /
+# STD-0002 §11 v1.13).
+#
+# The entity layer is multi-granularity. `rendering_class` declares which
+# resolution an entity occupies and is REQUIRED AT MINT on every entity carrying
+# a class field set. Concept entities (ENT-0001…0007) are outside the timeline
+# program: they carry no class field set and no `rendering_class`, and must never
+# be flagged.
+#
+# The `substrate` class is ESTABLISHED but has NO FIELD SET (ADR-GOV-0012 D7
+# defers substrate rendering and no substrate entity is minted). Both field sets
+# are therefore forbidden on it — the value exists so the class is reachable
+# later without reopening governance, not so a session can improvise one.
+# ----------------------------------------------------------------------------
+
+RENDERING_CLASSES = ("tradition", "substrate", "community")
+
+# The three co-required community-class fields (STD-0002 §11 v1.13).
+COMMUNITY_FIELDS = ("attestation_claims", "attestation_window",
+                    "attestation_uncertainty")
+
+
+def rendering_class_problems(meta):
+    """Check `rendering_class` presence, vocabulary, and class/field-set fit.
+
+    Returns (missing, problems):
+      * `missing` is the single "required at mint" problem string, or None. It is
+        returned SEPARATELY so the caller can warning-gate it during the
+        define -> backfill -> enforce migration window (the EPISTEMIC_FIELDS
+        precedent); every other problem is an error from introduction because it
+        guards births rather than describing migration debt.
+      * `problems` is everything else: an out-of-vocabulary value, a class
+        declared without its field set, and any field set forbidden on the
+        declared class.
+
+    A concept entity (no rendering_class, no class fields) yields (None, []).
+    """
+    problems = []
+    trad = [f for f in TRADITION_FIELDS if meta.get(f) is not None]
+    comm = [f for f in COMMUNITY_FIELDS if meta.get(f) is not None]
+    rng = [f for f in RANGE_FIELDS if meta.get(f) is not None]
+    rc = meta.get("rendering_class")
+
+    if rc is None:
+        if trad or comm:
+            return (
+                "missing `rendering_class` (STD-0002 §11 v1.13 / ADR-GOV-0012 "
+                f"D3: REQUIRED AT MINT; class fields present {sorted(trad + comm)})",
+                problems,
+            )
+        return None, problems  # concept entity: outside the timeline program
+
+    if rc not in RENDERING_CLASSES:
+        problems.append(
+            f"`rendering_class` must be one of {list(RENDERING_CLASSES)} (got {rc!r})"
+        )
+        return None, problems
+
+    if rc == "tradition":
+        if not trad:
+            problems.append(
+                "`rendering_class: tradition` requires the tradition-class field "
+                f"set {list(TRADITION_FIELDS)} (none present)"
+            )
+        if comm:
+            problems.append(
+                f"community-class fields {sorted(comm)} are forbidden on "
+                "`rendering_class: tradition`"
+            )
+    elif rc == "community":
+        if not comm:
+            problems.append(
+                "`rendering_class: community` requires the community-class field "
+                f"set {list(COMMUNITY_FIELDS)} (none present)"
+            )
+        if trad:
+            problems.append(
+                f"tradition-class fields {sorted(trad)} are forbidden on "
+                "`rendering_class: community` (a community entity carries an "
+                "ATTESTATION WINDOW, never a founding date — ADR-GOV-0012 D4)"
+            )
+        if rng:
+            problems.append(
+                f"render-only positioning bounds {sorted(rng)} are forbidden on "
+                "`rendering_class: community` — a community entity has no numeric "
+                "geometry and no founding-date-style bar (ADR-GOV-0012 D4)"
+            )
+    else:  # substrate
+        if trad or comm or rng:
+            problems.append(
+                "`rendering_class: substrate` has NO field set — substrate "
+                "rendering is deferred (ADR-GOV-0012 D7) and no substrate entity "
+                f"is minted; remove {sorted(trad + comm + rng)}"
+            )
+
+    return None, problems
+
+
+def community_entity_problems(meta):
+    """Shape-check the community-class entity fields (STD-0002 §11 v1.13).
+
+    Returns (problems, attestation_claims). The three fields are **co-required**:
+    presence of ANY one requires ALL three, exactly as the tradition trio. Shape
+    only -- whether a window is *correctly derived* from its warranting records
+    is a review question. Resolution of `attestation_claims` targets is
+    graph_integrity's job (they are graph claims, §12.1), so this returns them
+    rather than resolving.
+    """
+    problems = []
+    present = {f: meta.get(f) for f in COMMUNITY_FIELDS if meta.get(f) is not None}
+
+    if not present:
+        return problems, []  # not a community entity: nothing to check
+
+    missing = [f for f in COMMUNITY_FIELDS if meta.get(f) is None]
+    if missing:
+        problems.append(
+            "community-class entity fields are co-required (STD-0002 §11 v1.13): "
+            f"present {sorted(present)}, missing {missing}"
+        )
+
+    claims = meta.get("attestation_claims")
+    claim_list = []
+    if claims is not None:
+        if not isinstance(claims, list) or not claims:
+            problems.append(
+                "`attestation_claims` must be a non-empty list of graded-record "
+                "identifiers (Claim or Finding Records)"
+            )
+        else:
+            for i, entry in enumerate(claims):
+                ident = extract_identifier(str(entry).strip())
+                if ident is None:
+                    problems.append(
+                        f"attestation_claims[{i}] must be a record identifier "
+                        f"(got {entry!r})"
+                    )
+                else:
+                    claim_list.append(str(entry).strip())
+
+    window = meta.get("attestation_window")
+    if window is not None and (not isinstance(window, str) or not window.strip()):
+        problems.append(
+            "`attestation_window` must be a non-empty string (render-only; a "
+            "WINDOW, never a founding date)"
+        )
+
+    unc = meta.get("attestation_uncertainty")
+    if unc is not None and unc not in RANGE_UNCERTAINTIES:
+        problems.append(
+            f"`attestation_uncertainty` must be one of "
+            f"{list(RANGE_UNCERTAINTIES)} (got {unc!r})"
+        )
+
+    return problems, claim_list
+
+
+# ----------------------------------------------------------------------------
+# projects_to + influenced_by edge integrity (ADR-GOV-0012 D5/D6 / STD-0004 v1.5
+# §7 and §7.3).
+#
+# Two new relationship types with opposite characters, deliberately checked in
+# one place so the difference cannot blur:
+#
+#   * `projects_to` is NON-EVIDENTIAL. It says "for rendering, re-anchor here"
+#     and asserts nothing about the world. It takes NO qualifier, NO warrant, and
+#     NO confidence component, and any of them present is an ERROR -- the
+#     enforcement is what keeps it out of the evidential vocabulary, rather than
+#     trusting it to stay there. It IS machine-traversable (roll-up rendering
+#     will traverse it), so a dangling target is an error like any graph claim.
+#
+#   * `influenced_by` is evidential and its warrant rule is CONSTITUTIVE: a
+#     graded warrant PLUS a recorded not-descent determination. Unlike
+#     `branches_from` (whose warrant is prose and therefore review-checked), both
+#     are structured resolvable pointers here, precisely because ADR-GOV-0012 D6
+#     makes "no instance without a not-descent determination" a rule a tool can
+#     hold. Without it the type becomes the soft option that empties the
+#     edge-restraint rule of force.
+# ----------------------------------------------------------------------------
+
+INFLUENCE_QUALIFIERS = ("documented", "contested")
+
+# Keys that make a projects_to entry malformed (STD-0004 §7.3). `confidence` is
+# listed because a graded projection would be an evidential edge by another name.
+PROJECTS_TO_FORBIDDEN = ("qualifier", "warrant", "not_descent", "confidence")
+
+
+def relationship_raw(meta):
+    """Every typed relationship as its RAW dict (type/target present).
+
+    `relationship_entries` normalizes to type/target/qualifier and drops
+    everything else, which is exactly wrong for a check whose job is to notice an
+    extra key. This returns the entries as authored so
+    `projects_to_problems` can see a forbidden `confidence`/`qualifier`.
+    """
+    return [r for r in (meta.get("relationships") or [])
+            if isinstance(r, dict) and r.get("type") and r.get("target")]
+
+
+def projects_to_problems(source_id, entries, class_of):
+    """Integrity-check a source object's projects_to edges (STD-0004 §7.3).
+
+    `entries` is the list of RAW relationship dicts whose type is projects_to;
+    `class_of` maps a target identifier to (object_type, rendering_class), with
+    object_type None when the target does not resolve (the dangling pass owns
+    that case). Returns a list of (target, reason) problems.
+
+    Enforced as errors: source is an ENT; source is NOT tradition-class (a
+    tradition does not project); target resolves to a tradition-class ENT; and
+    the entry carries none of the forbidden evidential keys.
+    """
+    problems = []
+    src_type, src_class = class_of(source_id) if source_id else (None, None)
+    for entry in entries:
+        target = str(entry.get("target")).strip()
+        if src_type != "ENT":
+            problems.append(
+                (target, f"source is not an ENT (got {src_type or 'unidentified'})")
+            )
+        elif src_class == "tradition":
+            problems.append(
+                (target, "source is tradition-class — projects_to runs "
+                         "non-tradition -> tradition (ADR-GOV-0012 D5)")
+            )
+        elif src_class is None:
+            problems.append(
+                (target, "source carries no `rendering_class` (required at mint)")
+            )
+        tgt_type, tgt_class = class_of(target)
+        if tgt_type is not None:
+            if tgt_type != "ENT":
+                problems.append((target, f"target is not an ENT (got {tgt_type})"))
+            elif tgt_class != "tradition":
+                problems.append(
+                    (target, f"target must be tradition-class (got "
+                             f"{tgt_class!r}) — projects_to re-anchors to the "
+                             f"tradition layer")
+                )
+        for key in PROJECTS_TO_FORBIDDEN:
+            if entry.get(key) is not None:
+                problems.append(
+                    (target, f"`{key}` is forbidden on projects_to — the relation "
+                             f"is NON-EVIDENTIAL (STD-0004 §7.3 / ADR-GOV-0012 D5)")
+                )
+    return problems
+
+
+def influenced_by_problems(source_id, entries, type_of, resolves):
+    """Integrity-check a source object's influenced_by edges (STD-0004 §7.3).
+
+    `entries` is the list of RAW relationship dicts whose type is influenced_by;
+    `type_of` maps a target identifier to its object type (None if unresolved);
+    `resolves` is a predicate saying whether an identifier resolves to an
+    existing object. Returns a list of (target, reason) problems.
+
+    Enforced as errors: ENT -> ENT; a REQUIRED qualifier from
+    INFLUENCE_QUALIFIERS; a non-empty, fully resolvable `warrant` list; and a
+    present, resolvable `not_descent` pointer. The last is the constitutive one
+    (ADR-GOV-0012 D6) -- an edge without a recorded not-descent determination may
+    not exist, and that is checked here rather than left to review.
+    """
+    problems = []
+    src_type = source_id.split("-")[0] if source_id else None
+    for entry in entries:
+        target = str(entry.get("target")).strip()
+        if src_type != "ENT":
+            problems.append(
+                (target, f"source is not an ENT (got {src_type or 'unidentified'})")
+            )
+        tgt_type = type_of(target)
+        if tgt_type is not None and tgt_type != "ENT":
+            problems.append((target, f"target is not an ENT (got {tgt_type})"))
+
+        qual = entry.get("qualifier")
+        if qual is None:
+            problems.append((target, "missing REQUIRED qualifier"))
+        elif str(qual).strip() not in INFLUENCE_QUALIFIERS:
+            problems.append(
+                (target, f"invalid qualifier {qual!r} "
+                         f"(one of {list(INFLUENCE_QUALIFIERS)})")
+            )
+
+        warrant = entry.get("warrant")
+        if warrant is None:
+            problems.append(
+                (target, "missing REQUIRED `warrant` (graded claim(s) — the edge "
+                         "renders, the claim warrants)")
+            )
+        elif not isinstance(warrant, list) or not warrant:
+            problems.append(
+                (target, f"`warrant` must be a non-empty list of graded-record "
+                         f"identifiers (got {warrant!r})")
+            )
+        else:
+            for w in warrant:
+                w = str(w).strip()
+                if not resolves(w):
+                    problems.append(
+                        (target, f"`warrant` entry {w!r} does not resolve")
+                    )
+
+        nd = entry.get("not_descent")
+        if nd is None:
+            problems.append(
+                (target, "missing REQUIRED `not_descent` determination — "
+                         "CONSTITUTIVE (ADR-GOV-0012 D6): no influenced_by edge "
+                         "may exist without a recorded statement of why "
+                         "branches_from was refused")
+            )
+        elif not resolves(str(nd).strip()):
+            problems.append(
+                (target, f"`not_descent` pointer {str(nd).strip()!r} does not resolve")
+            )
+    return problems
+
+
 def branches_from_problems(source_id, edges, type_of):
     """Integrity-check a source object's branches_from edges (STD-0004 v1.2 §7.2).
 
