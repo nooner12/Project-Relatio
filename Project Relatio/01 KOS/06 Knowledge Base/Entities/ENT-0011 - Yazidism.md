@@ -1,7 +1,7 @@
 ---
 title: ENT-0011 - Yazidism
 document_type: Entity Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-21
@@ -22,6 +22,7 @@ tags:
   - Tradition
   - Yazidism
   - IranianReligions
+rendering_class: tradition
 tradition_type: syncretic
 dating_claims:
   - CLM-0091
@@ -79,5 +80,6 @@ attribution:
 |---|---|---|---|
 |0.2|2026-07-22|Draft|Added the OPTIONAL render-only positioning bounds (STD-0002 §11 v1.11) for the proportional SVG timeline: `range_start_year: 1100`, `range_end_year: present`, `range_uncertainty: moderate`. **Derived from and bounded by the dating claim CLM-0091** — the earliest defensible bound is the 12th-c. crystallisation around Sheikh ʿAdī ibn Musāfir (the bar deliberately does NOT extend into the undated, disputed pre-Islamic substrate — that contestation lives in CLM-0091 and the `disputed` lineage qualifier, not in a fabricated earlier start); `present` because Yazidism is a living tradition; `moderate` inherits CLM-0091's Moderate crystallization-dating component. (The brief's looser "high uncertainty on any earlier extension" concerns the substrate the bar excludes; the crystallisation the bar represents is Moderate — claim wins. Reported.) **Non-evidential, render-only; `display_range` remains authoritative.** No other field touched.|
 |0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
+|0.4|2026-07-24|Draft|**ADR-GOV-0012 D3 backfill.** Added `rendering_class: tradition`, declaring the resolution this entity occupies now that the entity layer is multi-granularity (D2). **Field addition and this history row ONLY — no other content in this record changed.** Migration discipline: define → backfill → enforce; the validator's presence check is promoted from warning to error level in the commit immediately after this one.|
 
 # End ENT-0011

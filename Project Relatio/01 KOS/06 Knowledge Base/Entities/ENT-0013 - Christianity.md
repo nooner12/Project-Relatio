@@ -1,7 +1,7 @@
 ---
 title: ENT-0013 - Christianity
 document_type: Entity Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-22
@@ -22,6 +22,7 @@ tags:
   - Tradition
   - Christianity
   - JudaismChristianity
+rendering_class: tradition
 tradition_type: emergent
 dating_claims:
   - CLM-0093
@@ -80,5 +81,6 @@ attribution:
 |---|---|---|---|
 |0.1|2026-07-22|Draft|Created at INV-0017 circuit — the schism-class branch of the fork; born timeline-ready (TPL-0006 v1.1 / STD-0002 v1.11). `tradition_type: emergent` (founded tension flagged); `dating_claims` CLM-0093 (1st c. CE, inheriting CLM-0068/0075/0076); `display_range` render-only ("1st c. CE"); positioning bounds `range_start_year: 30` (movement origin at the crucifixion), `range_end_year: present`, `range_uncertainty: low` (inherits CLM-0093's High emergence dating). `branches_from` ENT-0012 qualifier `schism` (warrant CLM-0093; seed CLM-0058), least-wrong for "separated to become distinct" with the gradual/late-parting sharpness caveat flagged for Anchor Fit (`schism_qualifier_fit` Moderate). Metaphysical bracket acute — no supersessionist framing. Pending Critical Review and structural validation.|
 |0.2|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
+|0.3|2026-07-24|Draft|**ADR-GOV-0012 D3 backfill.** Added `rendering_class: tradition`, declaring the resolution this entity occupies now that the entity layer is multi-granularity (D2). **Field addition and this history row ONLY — no other content in this record changed.** Migration discipline: define → backfill → enforce; the validator's presence check is promoted from warning to error level in the commit immediately after this one. The entity gap recorded on this record by INV-0018 **stands as history** — the community entities minted under D8 are the remedy, not a retrofit, and no part of that record is revised here.|
 
 # End ENT-0013

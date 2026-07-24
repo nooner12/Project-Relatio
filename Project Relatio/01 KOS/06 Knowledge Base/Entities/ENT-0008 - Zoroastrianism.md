@@ -1,7 +1,7 @@
 ---
 title: ENT-0008 - Zoroastrianism
 document_type: Entity Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-21
@@ -22,6 +22,7 @@ tags:
   - Tradition
   - Zoroastrianism
   - IranianReligions
+rendering_class: tradition
 tradition_type: founded
 dating_claims:
   - CLM-0087
@@ -77,5 +78,6 @@ attribution:
 |0.1|2026-07-21|Draft|Created at INV-0016 circuit — the family root; first tradition-class Entity Record in the vault (TPL-0006). `tradition_type: founded` (founder-attributed; emergent tension flagged for Anchor Fit); `dating_claims` CLM-0087; `display_range` render-only. No `branches_from` (root). Zurvanism recorded as a current here rather than as a distinct tradition. Pending Critical Review and structural validation.|
 |0.2|2026-07-22|Draft|Added the OPTIONAL render-only positioning bounds (STD-0002 §11 v1.11) for the proportional SVG timeline: `range_start_year: -1500`, `range_end_year: present`, `range_uncertainty: moderate`. **Derived from and bounded by the dating claim CLM-0087** — the earliest defensible bound is the linguistic Gathic early-dating (c. 1500–1000 BCE; the traditional 6th-c. BCE date is a rejected late construct), `present` because Zoroastrianism is a living tradition; `moderate` inherits CLM-0087's Moderate emergence-dating component. **Non-evidential, render-only; `display_range` remains authoritative and the heavy contestation lives in CLM-0087, not in these bounds.** No other field touched.|
 |0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
+|0.4|2026-07-24|Draft|**ADR-GOV-0012 D3 backfill.** Added `rendering_class: tradition`, declaring the resolution this entity occupies now that the entity layer is multi-granularity (D2). **Field addition and this history row ONLY — no other content in this record changed.** Migration discipline: define → backfill → enforce; the validator's presence check is promoted from warning to error level in the commit immediately after this one.|
 
 # End ENT-0008

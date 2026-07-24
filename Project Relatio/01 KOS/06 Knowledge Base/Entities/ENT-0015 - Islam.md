@@ -1,7 +1,7 @@
 ---
 title: ENT-0015 - Islam
 document_type: Entity Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-23
@@ -24,6 +24,7 @@ tags:
   - Tradition
   - Islam
   - WorldReligionsTimeline
+rendering_class: tradition
 tradition_type: founded
 dating_claims:
   - CLM-0095
@@ -83,5 +84,6 @@ attribution:
 |Version|Date|Status|Description|
 |---|---|---|---|
 |0.1|2026-07-23|Draft|Created at INV-0018 circuit — **FAMILY 3 of the ADR-GOV-0009 timeline program, and the program's first deliberately UNCONNECTED tradition node.** Born timeline-ready (TPL-0006 v1.1 / STD-0002 v1.11): `tradition_type: founded` (least-wrong for the historical register, with the restorationist-self-account strain and the late-crystallisation strain both recorded and routed, and the ENT-0013 `emergent` asymmetry justified on evidence rather than convention); `dating_claims` CLM-0095; `display_range` render-only; positioning bounds `range_start_year: 610` (earliest defensible emergence bound; 622 *hijra* recorded as the firmer alternative), `range_end_year: present`, `range_uncertainty: moderate` inheriting CLM-0095's weakest **emergence-dating** component with the non-temporal components' exclusion documented. **NO `branches_from` edge — a reasoned refusal under the edge-restraint rule, not an omission:** influence-not-descent to both Judaism (CLM-0096) and Christianity (CLM-0097), plus two distinct entity-target gaps (chronological incoherence/character mismatch on the Jewish side; over-generality on the Christian side), both recorded and routed to Anchor Fit. `disputed` explicitly refused as an influence hedge. No sub-tradition entity (Sunni/Shia deferred). Metaphysical bracket total; no confessional or supersessionist framing in any direction. Pending Critical Review and structural validation.|
+|0.2|2026-07-24|Draft|**ADR-GOV-0012 D3 backfill.** Added `rendering_class: tradition`, declaring the resolution this entity occupies now that the entity layer is multi-granularity (D2). **Field addition and this history row ONLY — no other content in this record changed.** Migration discipline: define → backfill → enforce; the validator's presence check is promoted from warning to error level in the commit immediately after this one.|
 
 # End ENT-0015

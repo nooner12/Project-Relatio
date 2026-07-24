@@ -1,7 +1,7 @@
 ---
 title: ENT-0010 - Mazdakism
 document_type: Entity Record
-version: 0.4
+version: 0.5
 status: Draft
 operational_status: Active
 created: 2026-07-21
@@ -22,6 +22,7 @@ tags:
   - Tradition
   - Mazdakism
   - IranianReligions
+rendering_class: tradition
 tradition_type: reform
 dating_claims:
   - CLM-0090
@@ -79,5 +80,6 @@ attribution:
 |0.2|2026-07-21|Draft|**ROLE-0004 remediation (Flags 2+4):** hedged the "Zaradusht of Fasa" precursor as parametric/not-itemised-in-record (§1); recorded that the `reform` `tradition_type` classification rests on the same late/hostile Low-confidence base as the graded components, with `emergent` nearly as defensible (§2, least-wrong not established). No `tradition_type`, edge, qualifier, or `dating_claims` changed.|
 |0.1|2026-07-21|Draft|Created at INV-0016 circuit. `tradition_type: reform` (distinct from the descent qualifier); `dating_claims` CLM-0090 (Kavad-era; hostile/late base, Low); `display_range` render-only. `branches_from` ENT-0008 qualifier `heterodox-offshoot` (warrant CLM-0090; chosen over the scaffold alternative `reform`, recorded for Anchor Fit). Distinctness threshold met. Pending Critical Review and structural validation.|
 |0.4|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
+|0.5|2026-07-24|Draft|**ADR-GOV-0012 D3 backfill.** Added `rendering_class: tradition`, declaring the resolution this entity occupies now that the entity layer is multi-granularity (D2). **Field addition and this history row ONLY — no other content in this record changed.** Migration discipline: define → backfill → enforce; the validator's presence check is promoted from warning to error level in the commit immediately after this one.|
 
 # End ENT-0010

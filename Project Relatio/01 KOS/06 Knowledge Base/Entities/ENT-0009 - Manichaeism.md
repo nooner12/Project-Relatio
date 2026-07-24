@@ -1,7 +1,7 @@
 ---
 title: ENT-0009 - Manichaeism
 document_type: Entity Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-21
@@ -22,6 +22,7 @@ tags:
   - Tradition
   - Manichaeism
   - IranianReligions
+rendering_class: tradition
 tradition_type: founded
 dating_claims:
   - CLM-0089
@@ -79,5 +80,6 @@ attribution:
 |0.1|2026-07-21|Draft|Created at INV-0016 circuit — first `branches_from` edge in the vault. `tradition_type: founded` (syncretic co-applies — Anchor Fit); `dating_claims` CLM-0089 (3rd c. CE, best-dated in the family); `display_range` render-only. `branches_from` ENT-0008 qualifier `syncretic-descent` (warrant CLM-0089), with the multi-parent partiality (primary Elchasaite matrix out-of-family) flagged for Anchor Fit. Pending Critical Review and structural validation.|
 |0.2|2026-07-22|Draft|Added the OPTIONAL render-only positioning bounds (STD-0002 §11 v1.11) for the proportional SVG timeline: `range_start_year: 240`, `range_uncertainty: moderate`. **Derived from and bounded by the dating claim CLM-0089** — the earliest defensible bound is Mani's public ministry (from c. 240 CE, the 3rd-c. founding); `moderate` inherits CLM-0089's Moderate emergence-dating component (the descent component graded Low does not govern temporal positioning — STD-0002 §11 v1.11). **`range_end_year` is deliberately OMITTED: CLM-0089 states no terminus** (it dates only the founding; `display_range` is "3rd c. CE"). Manichaeism is historically extinct, but no extinction date is claim-supported, so none is invented — the timeline renders it as terminus-undated rather than assigning a fabricated end (the brief's suggested ~1400 is not in the claim; claim wins — reported). Non-evidential, render-only; `display_range` remains authoritative. No other field touched.|
 |0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
+|0.4|2026-07-24|Draft|**ADR-GOV-0012 D3 backfill.** Added `rendering_class: tradition`, declaring the resolution this entity occupies now that the entity layer is multi-granularity (D2). **Field addition and this history row ONLY — no other content in this record changed.** Migration discipline: define → backfill → enforce; the validator's presence check is promoted from warning to error level in the commit immediately after this one.|
 
 # End ENT-0009

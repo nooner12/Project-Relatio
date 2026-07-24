@@ -1,7 +1,7 @@
 ---
 title: ENT-0014 - Rabbinic Judaism
 document_type: Entity Record
-version: 0.3
+version: 0.4
 status: Draft
 operational_status: Active
 created: 2026-07-22
@@ -22,6 +22,7 @@ tags:
   - Tradition
   - RabbinicJudaism
   - JudaismChristianity
+rendering_class: tradition
 tradition_type: reform
 dating_claims:
   - CLM-0094
@@ -81,5 +82,6 @@ attribution:
 |0.1|2026-07-22|Draft|Created at INV-0017 circuit — the **continuation / main-line branch and the anchor stress-test**; born timeline-ready (TPL-0006 v1.1 / STD-0002 v1.11). `tradition_type: reform` (reconstituted an existing tradition; noted DISTINCT from the qualifier `reform` per §2.8 — same word, different vocabulary; emergent alternative flagged); `dating_claims` CLM-0094 (post-70 CE; Mishnah c. 200 CE); `display_range` render-only; positioning bounds `range_start_year: 70`, `range_end_year: present`, `range_uncertainty: moderate`. `branches_from` ENT-0012 qualifier `reform` (warrant CLM-0094) — **least-wrong under protest**: the controlled list has no value for main-line continuation; `reform_qualifier_fit` graded Low to encode the vocabulary strain, with a routed recommendation for a new `continuation`/`main-line` qualifier (Anchor Fit centerpiece). Metaphysical/neutrality bracket acute — no "residue" framing. Pending Critical Review and structural validation.|
 |0.2|2026-07-22|Draft|**Anchor stress-test RESOLVED — ADR-GOV-0010 enactment (D2).** The routed recommendation was adopted: ADR-GOV-0010 D1 added a `continuation` qualifier (STD-0004 v1.3), and this edge is re-qualified **`branches_from` ENT-0012 `reform` → `continuation`** (frontmatter + §4 Lineage + §5). §2.8 note updated: the double-`reform` coincidence no longer arises on this edge (the disambiguation is lifted to STD-0004 §7.2 per D3); `tradition_type` **left `reform` unchanged** (a separate field, ADR-GOV-0010 D2). Warrant CLM-0094 concurrently re-graded (component renamed `continuation_qualifier_fit`, Low → Moderate; descent grade unchanged). Anchors stay PROVISIONAL (ADR-GOV-0010 D5) — additive repair, not graduation.|
 |0.3|2026-07-22|Draft|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
+|0.4|2026-07-24|Draft|**ADR-GOV-0012 D3 backfill.** Added `rendering_class: tradition`, declaring the resolution this entity occupies now that the entity layer is multi-granularity (D2). **Field addition and this history row ONLY — no other content in this record changed.** Migration discipline: define → backfill → enforce; the validator's presence check is promoted from warning to error level in the commit immediately after this one. The entity gap recorded on this record by INV-0018 **stands as history** — the community entities minted under D8 are the remedy, not a retrofit, and no part of that record is revised here.|
 
 # End ENT-0014
