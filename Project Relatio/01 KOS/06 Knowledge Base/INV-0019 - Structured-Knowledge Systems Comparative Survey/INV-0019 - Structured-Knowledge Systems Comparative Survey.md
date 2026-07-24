@@ -1,7 +1,7 @@
 ---
 title: INV-0019 - Structured-Knowledge Systems Comparative Survey
 document_type: Investigation Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-07-24
@@ -140,19 +140,38 @@ The two characterizations named in the opening banner **(a)** (Cochrane PLS adhe
 
 # 4. Findings / Synthesis
 
-**RESERVED — filled by the circuit (brief 3 of 3).** This scaffold creates **no** finding and answers **none** of the research question. The primary synthesis (a **FND**, identifier assigned at execution, expected **FND-0019**) will synthesize the four claims **at grades no stronger than their weakest necessary components, with no Level 5** (§7 criterion 9). **Nothing is written here at scaffold.**
+**FILLED at circuit (brief 3 of 3, 2026-07-24).** The four mandated claims and the synthesis exist:
+
+- **CLM-0099 — Claim Atomicity (CLM A; warrant GB-2026-045).** Three individuation approaches — formalized assertion (nanopublication), argumentative role (micropublication's single principal Statement), author judgment under no stated rule (discourse graphs) — with IBIS at surface level; no surveyed system states an operational split procedure or enforces one by tooling. Elements (i)–(iv): Moderate / Moderate / Moderate / Moderate; (iii) explicitly empty for three systems, qualitative-only for the fourth.
+- **CLM-0100 — Expert-to-Lay Register (CLM B; warrant GB-2026-044).** The one surveyed practice: medicine's mandated parallel plain-language summary under PLEACS with GRADE as the expert-side certainty vocabulary; the one measurement (SRC-0159, derived at execution): 1738 summaries, zero full adherence, 57% overall, 0.7% on the certainty item. **Single-domain basis stated in the claim itself.** Elements: High / High / Moderate / Moderate.
+- **CLM-0101 — Recoverable Source-to-Claim Mapping (CLM C; warrant GB-2026-046).** A capture-depth spectrum from whole-work typed citation (CiTO) to full support-graph resolution (micropublications); the one measured practice (SRC-0160, derived at execution): three citators, 11% three-way substantive agreement, 33%/38%/72% failure on 309 clearly negative treatments, results rendered as fact with no ambiguity marking. Elements: Moderate / Moderate / Moderate / Moderate.
+- **CLM-0102 — Warranted Typed Relationships (CLM D; warrant GB-2026-043).** Vocabularies from 3 relations to ~98 classes; **typing is assertion in every surveyed system — none requires or tool-checks a warrant**; the only enforcement instance (editorial) is the measured one above; the one deployment report shows the typed-relation layer under-authored in practice. Elements: Moderate / Moderate / Moderate / Moderate.
+- **FND-0019 — the synthesis:** approaches articulate, rationales explicit, **measured evidence confined to exactly two studies**, both finding deployed practice far short of design; element (iii) explicitly empty everywhere else; recurrent documented pressure points (formalization burden, unenforced standards, unauthored relation layers, editorial subjectivity rendered as fact). Six components, no Level 5 and no Level 4, weakest Low (the disclosed unread-interior cost).
+
+Full content, per-element sourcing, and the two support-surface-hypothesis dispositions (both derived from SRC-0159/SRC-0160 directly, both matching the sources in shape, scope conditions carried) are in the claim records; the coverage limits are in FND-0019 §4.
 
 ---
 
 # 5. Confidence Summary (KOS-0003 §8)
 
-**RESERVED — filled by the circuit.** **No claim exists to grade in this session**, so no confidence component is recorded. At circuit, every component is native **`Level N (Label)`**, per-component, **never averaged**; split confidence is a **list**. Everything lands **R0**.
+**FILLED at circuit.** Native `Level N (Label)`, per component, never averaged. Sixteen claim components (four separable elements × four claims) plus six finding components:
+
+| Record | (i) approach | (ii) stated rationale | (iii) evidence of performance | (iv) documented costs |
+|---|---|---|---|---|
+| **CLM-0099** (A — atomicity) | 3 (Moderate) | 3 (Moderate) | 3 (Moderate) | 3 (Moderate) |
+| **CLM-0100** (B — register) | 4 (High) | 4 (High) | 3 (Moderate) | 3 (Moderate) |
+| **CLM-0101** (C — mapping) | 3 (Moderate) | 3 (Moderate) | 3 (Moderate) | 3 (Moderate) |
+| **CLM-0102** (D — typed relationships) | 3 (Moderate) | 3 (Moderate) | 3 (Moderate) | 3 (Moderate) |
+
+- **FND-0019:** atomicity_picture 3 (Moderate) · register_picture 3 (Moderate) · mapping_picture 3 (Moderate) · typed_relationships_picture 3 (Moderate) · measured_evidence_confined_to_two_studies 3 (Moderate) · **unread_interior_coverage 2 (Low)**.
+- **The only two High components are CLM-0100's descriptive elements (i)/(ii)**, earned on full interior reading of all three of that claim's sources including the standard itself in the exact edition its adherence study cites. **No Level 5 anywhere; the finding carries no Level 4** (capped at its weakest necessary components). The one Low is deliberate: what the survey can say about the two unread-interior sources (SRC-0152, SRC-0154).
+- **Everything R0** — not cleared for external reliance regardless of closure; the reflexive section is additionally §7.6-gated.
 
 ---
 
 # 6. Assumptions & Bracketing (KOS-0003 §10)
 
-*Expanded at circuit execution. The standing brackets and disciplines below bind from opening:*
+*Expanded at circuit execution (2026-07-24). The standing brackets and disciplines below bound throughout; the circuit actuals follow the list.*
 
 - **External systems only (§2).** No claim or element is about Relatio; no Relatio comparison appears in §1–§8.
 - **Design intent ≠ evidence; maturity ≠ efficacy (§2).** Element (ii) never populates element (iii); a dominant system with an empty (iii) is recorded as such.
@@ -164,17 +183,66 @@ The two characterizations named in the opening banner **(a)** (Cochrane PLS adhe
 - **Adoption/persistence is out of scope as a claim (§2).** It is routed to the reserved reflexive section and the Governance Backlog as a successor-investigation warrant, not developed here.
 - **Everything R0; reflexive output additionally §7.6-gated (§2.2).** No finding is cleared for external reliance regardless of closure; no reflexive observation is self-applied.
 
+**Circuit actuals (2026-07-24):**
+- **Interior-reading actuals (§3.1):** seven of nine interiors READ this session — SRC-0156, SRC-0157, SRC-0158 (via the Wayback Machine capture of the exact URL SRC-0159 cites; live URL dead), SRC-0159, SRC-0160 read directly; SRC-0153 and SRC-0155 read via structured extraction with every load-bearing quotation grep-verified verbatim against the retrieved full texts. **Two NOT read, disclosed and confined:** SRC-0152 (the eScholarship copy is a page-image scan with no text layer; no OCR tooling available) and SRC-0154 (publisher access blocked by an anti-bot challenge; Wayback and repository/aggregator routes checked and empty). Per-source verification strength is recorded in each claim's Verification section, not averaged.
+- **The two support-surface observations (§3.3):** both were DERIVED from their sources directly at execution. Hypothesis (a) matched SRC-0159's own reported result (zero full adherence; 57%; certainty item 0.7%); hypothesis (b) matched SRC-0160's (substantial missed negative treatment; 11% three-way type agreement). No discrepancy of shape; scope conditions carried with every figure; neither characterization was transcribed from the brief or scaffold.
+- **A cross-source divergence found and recorded, not adjudicated (CLM-0100):** SRC-0159 describes PLEACS as containing 14 items (12 mandatory); the archived v3.0 standard itself contains 12 items (10 mandatory, 2 highly desirable). Recorded as a divergence between sources.
+- **Adoption/persistence observations surfaced by the sources** (named prior systems no longer active; maintenance-role and originator-scaffolding documentation; a build-adopt-abandon arc inside the base) are recorded in the Reserved Reflexive Section and appended to GB-2026-048 — **not** developed into any claim element.
+
 ---
 
-# Reserved Reflexive Section (RESERVED — EMPTY at scaffold; the circuit fills it)
+# Reserved Reflexive Section (FILLED at circuit, 2026-07-24 — ROUTED, NOT APPLIED)
 
-**This section is reserved and named now, and left EMPTY.** The circuit fills it. Its governing rule is recorded here:
+**Governing rule (from scaffold, in force):**
 
 > **Observations about what these external systems imply for Relatio's own architecture are RECOMMENDATIONS.** They are **routed to the Governance Backlog per ADR-GOV-0007 §3**, are **§7.6-reflexively-gated**, and are **NEVER self-applied in session.** **No refinement to Relatio follows from this investigation except through separately recorded governance after closure.**
 
-**Also routed here (per §2):** any **adoption/persistence** observation the circuit surfaces — why structured-knowledge systems do or do not persist, who bears the maintenance burden, what happens when the originator stops — is **recorded here and routed to the Governance Backlog as the warrant for a successor investigation** (candidate opened at scaffold as **GB-2026-048**). It is **not developed, not graded, and not folded into claims A–D.** Likewise, any **undocumented cost or failure mode** the analyst can see but no source discusses (a weakness that fails the element-(iv) documentation bar, §3.2) is recorded here as an observation and routed — **not** written into a claim element.
+**Independence disclosure (ADR-GOV-0011, binding):** this circuit is Claude-family throughout — it supplies **no independence of kind** for any §7.6 purpose, and nothing below may count toward promoting any anchor or practice from provisional toward durable.
 
-*(No content below this line at scaffold. The circuit adds it.)*
+**Nothing below is enacted.** No standard, template, tool, field, or vocabulary was created or amended on account of anything in this section; no existing record was revised; **GB-2026-047 is untouched (owner-reserved).**
+
+## Routed to GB-2026-044 (register legibility)
+
+What the survey found that bears on the recorded question, offered as input only:
+1. **The only surveyed mechanism serving expert and lay readers from one record is a SECOND, MANDATED REGISTER** — a parallel plain-language summary — governed by an itemized standard naming what MUST appear (CLM-0100 (i)). No surveyed system makes the expert record itself legible to outsiders; the documented pattern is a second artifact with its own governance.
+2. **The surveyed standard operationalizes legibility as an item list** (title, wording, headings, word band, named jargon to avoid, standardized uncertainty wording, certainty translation) rather than as a principle.
+3. **The item that fails without enforcement is the epistemic one:** measured adherence collapsed precisely on certainty communication (0.7%), and the standard's nominal publication gate went unenforced (zero of 1738 fully adherent). A register standard without an enforcement mechanism decayed in the one place it was measured.
+4. **Single-domain caution:** all of this is medicine; portability to Relatio's context is an inference the owner would be making, not a surveyed result.
+
+## Routed to GB-2026-045 (atomicity under-firing)
+
+1. **No surveyed system states an operational split rule, and none enforces atomicity by tooling** (CLM-0099 (i)). Where the split line is defined at all it is structural (one formalized assertion; one principal claim per argument); where it is undefined, the one field deployment observed **non-atomic authoring** — the same shape as the under-firing GB-2026-045 records.
+2. **The surveyed experience suggests atomicity does not self-enforce:** the discipline fired in systems that made the unit structural, and under-fired where individuation was left to author judgment. If the owner wants Relatio's splitting discipline to fire reliably, the surveyed material points toward an operational rule and/or a review-checked separability test rather than a stated principle — offered as input, not as a proposal.
+3. One deployed community, allowed to extend its grammar, **invented a finer granularity distinction itself** (higher-level conclusions vs "more atomic" propositions) — evidence that the need for a split-line vocabulary recurs in practice.
+
+## Routed to GB-2026-046 (application transparency)
+
+1. **The most complete documented design for a recoverable source-to-claim path is micropublications'** (support graph; asserts/quotes responsibility localization; claim lineages resolvable past the whole work to the statement, data, and method) — a design, with no performance evidence (CLM-0101).
+2. **Capture-at-writing versus reconstruction-later:** SRC-0155 documents that backing "was readily available" at extraction time and is "laborious" to reconstruct afterwards. Bearing on GB-2026-046's open question (uncaptured vs unrendered): the surveyed literature's documented failure is *uncaptured-at-source*, and its documented remedy is capturing the mapping when the mapping is made.
+3. **Rendered mappings that carry no uncertainty marking are the documented anti-pattern:** the citators render every editorial judgment as fact, and the one measurement shows what that conceals (11% three-way agreement). If Relatio ever renders its source→claim mappings, the surveyed failure mode argues for uncertainty marking on the rendering — consonant with, not additional to, the view generators' existing confidence/reliance badges; offered as input only.
+4. **Designed capture is not practiced capture:** discourse graphs' evidence nodes were observed as empty placeholders often enough for the designers to name it a limitation. A capture field existing does not mean it is populated; only review catches that.
+
+## Routed to GB-2026-043 (warrant asymmetry residue — bearing on enactment observation 2)
+
+1. **Unwarranted typing is the surveyed field's norm:** every surveyed system types relationships by bare assertion (author, annotator, or editor); **no surveyed counterpart exists to a tool-checked warrant** of the kind `influenced_by` carries (CLM-0102 (i)). Relatio's structured-warrant design is beyond surveyed practice, not behind it.
+2. **The one measured unwarranted practice was substantially inconsistent** (cross-product type agreement 11%; 11–15% incorrect applied labels) — but **no source tests whether warrant requirements improve consistency**, so the counterfactual GB-2026-043's observation 2 turns on (would `branches_from` benefit from a structured `warrant` pointer?) is **unmeasured in this base**. The survey supplies context for the owner's decision, not a verdict.
+3. **Vocabulary-size trade documented once:** the short-label product missed what it had no word for; the long-label products disagreed on which word applied. Bearing (input only) on any future extension of Relatio's qualifier or relationship vocabularies: both directions of the size trade have documented costs in the one measured practice.
+
+## APPENDED to GB-2026-048 (adoption/persistence — successor-investigation warrant; recorded, not developed, not graded)
+
+1. **SRC-0153 documents by name that three prior discourse-graph infrastructures are "no longer active"** — ScholOnto; SWAN (in Alzforum); micropublications (in Domeo) — attributing this partly to "changes in funding and infrastructure … leading to deprecation of technical infrastructure," and states that "the impact of these deployments has not been empirically evaluated."
+2. **A build-adopt-abandon arc exists inside the base itself:** SRC-0155's Domeo implementation (reported in 2014 as deployed, open-source, with industrial users) is among the systems SRC-0153 lists as no longer active in 2024.
+3. **Maintenance burden is documented as a paid role** (a lab "cybrarian" hired to structure and enforce conventions) and **originator dependence as standing scaffolding** (designer-led office hours; the first author personally assisting users; one team's documented departure over substrate frictions).
+4. **SRC-0156 records CiTO at publication as "not yet widely used elsewhere,"** with early version churn (renamed/deprecated classes across v1.3→v1.6).
+5. **SRC-0159 documents that a mandated organizational standard decayed in practice without enforcement** — an institutional-persistence observation as much as a register one.
+
+These are appended to the existing GB-2026-048 as recorded observations strengthening the successor-investigation warrant. **They are not a fifth claim, they reshape nothing in claims A–D, and no remedy is proposed** (the GB-2026-048 no-remedy note binds).
+
+## Analyst observations that failed the element-(iv) documentation bar (§3.2 — observations only, routed)
+
+1. **No surveyed source documents any review or re-verification cadence** for previously captured claims or relations — how a captured graph ages is unaddressed across the base. (Possibly a base-coverage artifact; recorded as an observation, not an absence claim.)
+2. **The instrument-description drift found between SRC-0159 and the archived PLEACS** (14 vs 12 items — recorded as a source divergence in CLM-0100) is, reflexively, an instance of exactly the checkability problem a knowledge system might make structural: the description of a standard drifted from the standard, and nothing in the surveyed practice would have caught it.
+3. **Both empirical studies measure human editorial application, and both found practice diverging from design.** No source measures a tool-enforced discipline; Relatio's validator-enforced fields have no surveyed counterpart. Recorded as an observation about the base's coverage, with no inference drawn.
 
 ---
 
@@ -221,12 +289,25 @@ The nine catalogued sources are recorded below against the design problem each i
 - **The `contrasts_with` / `related_to` edges catalogued among these sources at PREP** (including the honest weak `related_to` between SRC-0159 and SRC-0158 whose precise "evaluates-adherence-of" relationship is routed as **GB-2026-047**) are **existing catalogued edges** and are **not modified by this scaffold.**
 - **`branches_from` / `projects_to` / `influenced_by` (the timeline-program types) do not apply** — this investigation is knowledge-systems engineering, not the world-religions timeline program; **no ENT is created and no timeline edge is contemplated.**
 
+## 8.2 Realized subgraph at circuit (2026-07-24)
+
+The subgraph now exists, carried on the child records per the house pattern (this record itself declares no frontmatter edges; the children edge to it):
+
+- **CLM-0099** `derived_from` SRC-0152, SRC-0153, SRC-0154, SRC-0155 · `supports` FND-0019 · `part_of` INV-0019.
+- **CLM-0100** `derived_from` SRC-0157, SRC-0158, SRC-0159 · `supports` FND-0019 · `part_of` INV-0019.
+- **CLM-0101** `derived_from` SRC-0153, SRC-0154, SRC-0155, SRC-0156, SRC-0160 · `supports` FND-0019 · `part_of` INV-0019.
+- **CLM-0102** `derived_from` SRC-0152, SRC-0153, SRC-0155, SRC-0156, SRC-0160 · `supports` FND-0019 · `part_of` INV-0019.
+- **FND-0019** `derived_from` CLM-0099…CLM-0102 · `part_of` INV-0019.
+
+**Actual bearing versus the §8.1 expectation table:** the expectations held, with these recorded refinements — SRC-0152 bore on **A and D at surface level only** (interior unreadable); SRC-0154 bore on **A and C at surface level only** (interior blocked), with its model's characterization carried substantially by SRC-0155's read interior; SRC-0153 bore on **A, C, and D** as expected; SRC-0155 additionally bore on **D** (its predicate vocabulary and warrant posture), as the table anticipated; SRC-0156 bore on **D and C** as expected; SRC-0157/0158/0159 bore on **B** as expected; SRC-0160 bore on **C and D** as expected. No source bore on nothing; no source was cited outside its claims. **Identifiers consumed at circuit: CLM-0099, CLM-0100, CLM-0101, CLM-0102, FND-0019. No ENT consumed; SRC-0161 unconsumed; no new relationship type minted; the catalogued source-base edges unmodified.**
+
 ---
 
 # 9. Revision History
 
 |Version|Date|Status|Description|
 |---|---|---|---|
+|0.2|2026-07-24|Draft|**Specialist pass (ROLE-0002) executed under the circuit brief (3 of 3) with the RQ FROZEN BY THE OWNER as authored.** Created CLM-0099 (atomicity), CLM-0100 (register), CLM-0101 (mapping), CLM-0102 (typed relationships) — each with the four separable elements (i)–(iv) as discrete headed sections, separately graded, (iii) and (iv) never merged — and FND-0019 (six components, no Level 5, no Level 4, weakest Low). §4/§5 filled with actuals; §6 gains circuit actuals (interior-reading: seven of nine READ — SRC-0156/0157/0158/0159/0160 directly, SRC-0153/0155 via grep-verified structured extraction; SRC-0152 scan-unreadable and SRC-0154 access-blocked, both disclosed); both support-surface hypotheses DERIVED from SRC-0159/SRC-0160 directly, matching the sources in shape, scope conditions carried; the SRC-0159-vs-archived-PLEACS item-count divergence recorded, not adjudicated. Reserved Reflexive Section FILLED and ROUTED (GB-2026-044/045/046/043 inputs; adoption/persistence observations APPENDED to GB-2026-048; three analyst observations failing the (iv) bar routed) — nothing enacted, GB-2026-047 untouched. §8.2 records the realized subgraph and actual-vs-expected bearing. Identifiers consumed: CLM-0099…0102, FND-0019 only; no ENT; SRC-0161 unconsumed. Everything R0. Pending Critical Review (ROLE-0004) and structural validation (ROLE-0001).|
 |0.1|2026-07-24|Draft|**Opened as a scaffold (UNFILLED), per STD-0006 §7.6 independence — the opening session creates no claim, entity, edge, or finding.** Authored from **TPL-0003**. Records the §1 primary RQ **verbatim, authoritative pending owner freeze** (freeze happens at the owner's review of this scaffold report, not here); the §1.1 **four-claim decomposition mandate** with the four separable elements **(i) approach / (ii) stated rationale / (iii) evidence of performance / (iv) documented costs and failure modes** and the **(iii)-vs-(iv) separability test**; the §2 **scope disciplines**; the §3 **method** with its operative blockquote rules and the interior-reading posture; §4/§5 **reserved for the circuit**; §6 **standing brackets**; the **Reserved Reflexive Section** named, empty, with its governing rule (ADR-GOV-0007 §3, §7.6-gated); the **ten §7 acceptance criteria**; and §8 **prose relationships** (no frontmatter edges to non-existent objects, ADR-GOV-0004 D4). Source base **fixed at nine (SRC-0152…SRC-0160)**; gIBIS stays cut; no SRC/CLM/ENT/FND identifier consumed. Template-section mapping (TPL-0003 → this record): §1 RQ → §1; §2 Scope → §2; §3 Method → §3; §4 Findings → §4 (reserved); §5 Confidence → §5 (reserved); §6 Assumptions → §6; template §7 Relationships → **§8** here; template §8 Revision History → **§9** here; the record additionally carries a **§7 Acceptance Criteria** section and a **Reserved Reflexive Section** (house pattern per INV-0016/0017/0018, which the brief's numbering matches).|
 
 # End INV-0019
