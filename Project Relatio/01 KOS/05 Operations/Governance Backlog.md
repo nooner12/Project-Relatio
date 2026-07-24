@@ -1,7 +1,7 @@
 ---
 title: Governance Backlog
 document_type: Governance Record
-version: 1.39
+version: 1.40
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -22,7 +22,7 @@ tags:
 
 # Governance Backlog
 
-## Version 1.39
+## Version 1.40
 
 ## Active Governance Record
 
@@ -455,6 +455,14 @@ The owner adjudicated the items above, hand-authored **[[ADR-GOV-0012 - Entity R
 
 > **Why GB-2026-044/045/046 propose no solutions (binding on these three).** They are recorded as **questions for INV-0019 to answer**, not problems with remembered answers. Pre-writing a remedy here would prejudge the comparative survey and corrupt the very finding it is meant to produce; these three exist so the survey answers **recorded** questions instead of **remembered** ones. Do not add a proposed solution to any of the three ahead of the survey.
 
+## GB-2026-047 — Relationship-type gap: no approved STD-0004 type expresses "empirically evaluates adherence/compliance with a standard"
+
+- **Source.** INV-0019 **PREP** source-base cataloguing (this session, 2026-07-24; the ADR-GOV-0003 catalog-only pass that minted SRC-0152…SRC-0160). Attributed to the ratifying human (Brian Noon) at `ai-delegated`. **This entry is a logged candidate; it is enacted nowhere and self-applied to nothing, and it is expressly NOT a claim, finding, or investigation.**
+- **Finding (problem).** Task 3 of the prep brief surfaced a **real, structural relationship the literature carries** for which **no approved STD-0004 type honestly fits**: **SRC-0159 (Jelicic Kadic et al. 2016) empirically evaluates the adherence/compliance of Cochrane plain-language summaries to the PLEACS standard (SRC-0158).** Checked against the approved vocabulary (`defines · implements · extends · depends_on · derived_from · supports · contrasts_with · supersedes · part_of · instance_of · explains · related_to`, plus the ENT-only timeline types), **none captures "empirically measures conformance to":** it is not `derived_from` (the study is not derived from the standard), not `depends_on` (the KB sense would misstate the standard's validity as contingent on the study), not `supports` (it reports *low* adherence *to* the standard, the opposite of endorsing it), not `contrasts_with` (a measurement is not a rival position), and not `explains`/`extends`/`implements`. This is the exact case the brief names — *"evaluates the compliance of" is not obviously any of the approved types.*
+- **What was done in-record (not forced, not minted).** Per Task 3 discipline, **no type was forced and none was minted.** The genuine connection between SRC-0159 and SRC-0158 is recorded with the honest weak type `related_to` (reciprocated), and the **precise relationship is routed here** rather than mislabelled. A sparsely typed edge is an honest rendering.
+- **Candidate offered (NOT adopted).** A candidate directional type along the lines of `evaluates_adherence_of` / `evaluates_compliance_of` / `assesses_conformance_to` (source = the empirical study; target = the standard evaluated), asymmetric, KB-object → KB-object. **Naming and adoption are owner-reserved (a STD-0004 change);** this entry proposes, it does not decide. Whether the relation recurs enough to warrant a type is itself part of the question — a single instance may not clear a demonstrated-need bar, and one more instance would be the natural trigger. This mirrors the discipline that produced ADR-GOV-0010's `continuation` qualifier (a routed vocabulary gap, adopted only by the owner) and the deferred candidates under GB-2026-041.
+- **Status: OPEN — logged candidate.** Not enacted, not self-applied; no standard, template, tool, or record changed by this entry. INV-0019 is not opened by it.
+
 # 3. Resolved (retained for institutional memory)
 
 | Item | Resolution |
@@ -501,6 +509,7 @@ Any role may **add** an item. Only the Vision Steward may mark an item **Decided
 
 |Version|Date|Status|Description|
 |---|---|---|---|
+|1.40|2026-07-24|Active|**GB-2026-047 added — relationship-type gap surfaced by the INV-0019 PREP source-base cataloguing.** During Task 3 of the ADR-GOV-0003 catalog-only pass that minted SRC-0152…SRC-0160, a real structural relationship the literature carries — **SRC-0159 (Jelicic Kadic et al. 2016) empirically evaluates the adherence of Cochrane plain-language summaries to the PLEACS standard (SRC-0158)** — was found to have **no honest fit in the approved STD-0004 vocabulary** ("evaluates the compliance of," the case the brief flags). Per Task 3, **no type was forced and none minted**: the edge is recorded with the honest weak `related_to` (reciprocated) and the precise "evaluates-adherence/compliance-of" relationship is **routed here as an OPEN logged candidate** (a candidate type is offered, adoption owner-reserved). Mirrors the ADR-GOV-0010 `continuation` discipline. No knowledge object graded, no standard/template/tool/record changed by this entry; INV-0019 not opened. (Source-base records themselves are catalogued under the SRC range; see the Identifier Registry bump for SRC-0152…SRC-0160.)|
 |1.0|2026-07-09|Active|Created per KOS-0011 §9 (GB-001), consolidating open items previously scattered across the Retrospective, CLAUDE.md, and three assessment reports.|
 |1.1|2026-07-09|Active|GB-2026-011 resolved: ROLE-0002/0004/0005 ratified to Adopted with two refinements. Moved to §3.|
 |1.2|2026-07-10|Active|Circuit-efficiency work (owner-authorized, ADR waived): GB-2026-014 resolved (STD-0006 §7.5 verification rule); GB-2026-004 resolved (graph_integrity.py built); GB-2026-013 partially addressed (OPS-0003 §2.1 tiering rule + §3.1 refinements, fuller build trigger-gated); GB-2026-016 added (validate.py alignment); GB-2026-005 phantom-ADR cost now tool-surfaced, cleanup recommended pending owner go-ahead.|
