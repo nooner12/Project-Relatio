@@ -348,12 +348,16 @@ for file in files:
 # describing migration debt: no entity in the vault can trip them, and the first
 # one authored wrong must fail the build.
 #   * False: a missing `rendering_class` is an individual WARNING.
-#   * True (set by the commit AFTER the backfill): it is an ERROR. The promotion
-#     is this one flag flip plus the gate guard in
-#     tests/test_rendering_class.py; the check logic does not change.
+#   * True (CURRENT STATE, set 2026-07-24 in the commit after the backfill): it
+#     is an ERROR. The promotion was this one flag flip plus the gate guard in
+#     tests/test_rendering_class.py; the check logic did not change.
+#
+# The backfill has landed (ENT-0008..0015 all carry `rendering_class: tradition`),
+# so the gate is CLOSED: a class-fielded entity authored without the field now
+# fails the build, and every new entity is born conformant from TPL-0006 v1.4.
 # ----------------------------
 
-RENDERING_CLASS_ENFORCED = False
+RENDERING_CLASS_ENFORCED = True
 
 for file in files:
 

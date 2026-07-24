@@ -77,6 +77,34 @@ from common import (
 KB_TYPES = ("INV", "CLM", "SRC", "ENT", "FND")
 LEAF_TYPES = ("CLM", "FND")  # the graded, reliance-bearing records
 SPINE_TYPES = ("part_of", "derived_from")
+# Types whose qualifier is rendered on the cross-edge chip, each from its own
+# controlled list (STD-0004 §7.2 / §7.3). `projects_to` is absent by design: it
+# takes no qualifier at all.
+QUALIFIED_TYPES = ("branches_from", "influenced_by")
+
+# ---------------------------------------------------------------------------
+# DEFAULT TIMELINE RENDER FILTERS (ADR-GOV-0012 D7) — load-bearing, not styling.
+#
+# The default timeline renders the TRADITION class ONLY, and draws DESCENT
+# connectors only. Community entities are off-timeline at launch and
+# `influenced_by` edges do not render at launch.
+#
+# These are named constants rather than inline literals so the filter is a single
+# auditable decision rather than a condition buried in a loop, and so the fixture
+# tests can assert on the same names the emitter uses. Widening either of them is
+# a governance change, not a rendering tweak:
+#   * adding `community` here would put a node on the axis that has an
+#     ATTESTATION WINDOW and no honest coordinates — it would have to invent
+#     geometry the evidence never carried (D4);
+#   * adding `influenced_by` here would draw an influence connector into the tree
+#     geometry, where it can make a node with no descent edge read as a BRANCH.
+#     Islam is exactly that node. Roll-up rendering (re-anchoring an influence
+#     edge upward through `projects_to`, VISIBLY MARKED as a projection) is
+#     specified by D7 as the intended future behaviour and is NOT BUILT; building
+#     it is a later ADR-GOV-0009 amendment.
+# ---------------------------------------------------------------------------
+TIMELINE_RENDER_CLASSES = ("tradition",)
+TIMELINE_EDGE_TYPES = ("branches_from",)
 
 TYPE_LABEL = {
     "INV": "Investigation",
@@ -168,8 +196,9 @@ def _typed_relationships(meta):
 def _rel_qualifiers(meta):
     """Map (type, target_identifier) -> qualifier for entries that carry one.
 
-    Only branches_from entries carry a qualifier (STD-0004 §7.2). Keyed the same
-    way _typed_relationships resolves targets so the view can look a qualifier up
+    Two types carry a qualifier, from separate controlled lists: `branches_from`
+    (STD-0004 §7.2) and `influenced_by` (§7.3). Keyed the same way
+    _typed_relationships resolves targets so the view can look a qualifier up
     when rendering the cross-edge chip.
     """
     out = {}
@@ -281,6 +310,14 @@ def object_from_text(text):
         # Read here so BOTH emitters share one parse; the tree emitter does not
         # render them (its output is unchanged by their presence — regression-
         # asserted in tests). display_range is verbatim text, render-only.
+        # The entity's declared resolution (STD-0002 §11 v1.13 / ADR-GOV-0012 D3).
+        # Read for ONE purpose: the default timeline's tradition-only filter.
+        # Note what is NOT read — the community-class attestation fields never
+        # enter this dict, so a community entity's window cannot leak onto any
+        # surface by default. That is the same explicit-known-field mechanism
+        # that keeps `attribution` out of both views; do not turn it into a
+        # passthrough.
+        "rendering_class": meta.get("rendering_class") if prefix == "ENT" else None,
         "tradition_type": meta.get("tradition_type") if prefix == "ENT" else None,
         "dating_claims": _id_list(meta, "dating_claims") if prefix == "ENT" else [],
         "display_range": meta.get("display_range") if prefix == "ENT" else None,
@@ -525,8 +562,11 @@ def _cross_edge_badges(node, by_id):
     for rt, t in edges:
         # branches_from renders with its qualifier (STD-0004 §7.2) so the KIND of
         # branching is visible on the chip, e.g. "branches_from (schism) →".
+        # influenced_by does the same (§7.3) for the same reason: `contested` is
+        # what makes a contested influence claim READ as contested, and a chip
+        # that hid it would show a contested influence as a settled one.
         q = quals.get((rt, t))
-        kind = f"{rt} ({q})" if (rt == "branches_from" and q) else rt
+        kind = f"{rt} ({q})" if (rt in QUALIFIED_TYPES and q) else rt
         chips.append(_chip(t, by_id, kind))
     return (f'<div class="cross-edges"><span class="cross-label">links:</span>'
             f'{"".join(chips)}</div>')
@@ -962,7 +1002,12 @@ def timeline_entries(objects):
     errors = []
     entries = []
     for o in objects:
+        # ADR-GOV-0012 D7: the default timeline renders the TRADITION class only.
+        # A community entity is off-timeline at launch — it has an attestation
+        # window, not coordinates, and placing it here would mean inventing them.
         if o["type"] != "ENT" or not o.get("tradition_type"):
+            continue
+        if o.get("rendering_class") not in TIMELINE_RENDER_CLASSES:
             continue
         claims = []
         for cid in o.get("dating_claims", []):
@@ -976,7 +1021,10 @@ def timeline_entries(objects):
                 claims.append({"id": cid, "node": c})
         branches = []
         for rt, tgt in o["relationships"]:
-            if rt == "branches_from":
+            # Descent connectors only (ADR-GOV-0012 D7). `influenced_by` edges do
+            # NOT render at launch: an influence connector inside the tree
+            # geometry can make a node with no descent edge read as a branch.
+            if rt in TIMELINE_EDGE_TYPES:
                 q = o.get("rel_qualifiers", {}).get((rt, tgt))
                 branches.append((tgt, q))
         entries.append({

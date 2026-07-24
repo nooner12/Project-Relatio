@@ -41,6 +41,7 @@ from common import read_text  # noqa: E402
 from build_view import (  # noqa: E402
     object_from_text, build_html, build_timeline_html, timeline_entries,
     QUALIFIER_STYLE, _make_year_to_x, _num,
+    TIMELINE_RENDER_CLASSES, TIMELINE_EDGE_TYPES,
 )
 
 FIXTURES = Path(__file__).resolve().parent / "fixtures"
@@ -67,6 +68,8 @@ FIX = [
     "tl_branch_disputed.md",   # ENT-9105 disputed, 1100..present, moderate
     "tl_branch_continuation.md",  # ENT-9107 continuation, 200..1000, moderate (ADR-GOV-0010 D1)
     "tl_undated.md",         # ENT-9106 undated (no bounds) -> fallback lane
+    "tl_community.md",       # ENT-9108 COMMUNITY class -> must NOT render (D7)
+    "tl_influence.md",       # ENT-9109 influence-only tradition -> renders as a ROOT
     "tl_claim_moderate.md",  # CLM-9101 (Moderate)
     "tl_claim_low.md",       # CLM-9102 (Low)
 ]
@@ -151,7 +154,8 @@ want("ENT-9106" not in svg,
 # trad-reliance" (the same token main()'s self-check counts).
 badge_count = html.count('trad-reliance"')
 n_traditions = sum(1 for n in nodes if n and n["type"] == "ENT"
-                   and n.get("tradition_type"))
+                   and n.get("tradition_type")
+                   and n.get("rendering_class") in TIMELINE_RENDER_CLASSES)
 want(badge_count == n_traditions,
      f"reliance badge count {badge_count} != tradition count {n_traditions}")
 want("Findings not cleared for external reliance" in html,
@@ -170,6 +174,68 @@ want("compress" in html.lower(),
 want("Zurvanism" in html and "curated note — not field-derived" in html,
      "the Zurvanism overturned-hypothesis note must be present and flagged curated")
 want("INV-0016" in html, "the curated note must cite INV-0016")
+
+# --- ADR-GOV-0012 D7: THE TWO DEFAULT-TIMELINE FILTERS, PROVEN TO FIRE ------
+# House convention is prove-the-positive, and these two filters are the ones
+# that keep the default view VISUALLY UNCHANGED by this enactment. A live run
+# proves nothing (the community entities and influence edges would simply be
+# absent), so each is fired against a fixture built to be excluded.
+
+entries_all, _ = timeline_entries(nodes)
+rendered = {e["node"]["id"] for e in entries_all}
+
+# (1) A community-class node does NOT render — not on the axis, not in the
+#     undated fallback lane, not in the tradition count, nowhere in the output.
+want("ENT-9108" not in rendered,
+     "FILTER 1 FAILED: the community-class entity reached timeline_entries")
+want("ENT-9108" not in html,
+     "FILTER 1 FAILED: the community-class entity appears in the timeline HTML")
+want("ENT-9108" not in svg,
+     "FILTER 1 FAILED: the community-class entity was placed on the axis")
+want("attestation" not in html.lower(),
+     "FILTER 1 FAILED: a community attestation window leaked into the timeline")
+# ...and it is excluded for the right REASON: it is not the tradition class.
+# Same node re-declared `tradition` (with bounds) would render, so the filter is
+# keyed on rendering_class, not on some incidental property of the fixture.
+community_node = next(n for n in nodes if n and n["id"] == "ENT-9108")
+promoted = dict(community_node)
+promoted.update(tradition_type="founded", rendering_class="tradition",
+                dating_claims=["CLM-9101"], display_range="fixture")
+entries_promoted, _ = timeline_entries(
+    [n for n in nodes if n and n["id"] != "ENT-9108"] + [promoted])
+want("ENT-9108" in {e["node"]["id"] for e in entries_promoted},
+     "the community filter must key on rendering_class — the same node declared "
+     "`tradition` must render, or the exclusion proves nothing")
+want(TIMELINE_RENDER_CLASSES == ("tradition",),
+     f"the default timeline must render the tradition class ONLY (D7); "
+     f"got {TIMELINE_RENDER_CLASSES}")
+print()
+print("  D7 filter 1: community-class node does NOT render — and the same node "
+      "declared `tradition` does")
+
+# (2) An influenced_by edge does NOT render as a connector, and the node whose
+#     ONLY edges are influence edges still renders as a ROOT (the Islam case).
+influence_entry = next(e for e in entries_all if e["node"]["id"] == "ENT-9109")
+want(influence_entry["branches"] == [],
+     f"FILTER 2 FAILED: an influenced_by edge became a timeline connector: "
+     f"{influence_entry['branches']}")
+want("influenced_by" not in html,
+     "FILTER 2 FAILED: `influenced_by` appears in the timeline HTML")
+want(TIMELINE_EDGE_TYPES == ("branches_from",),
+     f"the default timeline must draw DESCENT connectors only (D7); "
+     f"got {TIMELINE_EDGE_TYPES}")
+# The node itself DOES render — the finding is "no descent," not "no node".
+want("ENT-9109" in rendered and "ENT-9109" in svg,
+     "the influence-only tradition must still render, as a ROOT — an "
+     "unconnected node is an honest rendering of 'no descent'")
+# And it is a root: no connector terminates on it. Every connector in the SVG is
+# titled `branches_from (<qualifier>)`, and none of the fixture's branch edges
+# targets ENT-9109, so its start node carries no inbound line.
+want(all(t != "ENT-9109" for e in entries_all for t, _ in e["branches"]),
+     "nothing may branch from the influence-only node in this fixture set")
+print("  D7 filter 2: influenced_by does NOT render — and the influence-only "
+      "node still renders as a ROOT")
+print()
 
 # --- unresolvable dating_claims pointer is a reported graph error -----------
 bad = dict(nodes[0])
@@ -198,6 +264,7 @@ for n in nodes:
         m["range_start_year"] = None
         m["range_end_year"] = None
         m["range_uncertainty"] = None
+        m["rendering_class"] = None
     stripped.append(m)
 tree_without = build_html(stripped, "abc1234", GEN)
 want(tree_with == tree_without,

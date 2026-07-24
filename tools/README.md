@@ -297,7 +297,9 @@ cross-edges (`contrasts_with` / `depends_on` / `supports` / `related_to` / the
 provisional `branches_from`, beyond the spine) are chips/badges pointing at those
 canonical nodes, never duplicate full nodes. A `branches_from` chip renders **with its
 qualifier** — e.g. `branches_from (schism) →` (STD-0004 §7.2) — so the *kind* of
-lineage is visible.
+lineage is visible, and an `influenced_by` chip does the same (§7.3), because
+`contested` is what makes a contested influence claim *read* as contested. A
+`projects_to` chip carries no qualifier, because the relation has none.
 Sources attach to an INV by `part_of`, or by the sole INV in their relationships/
 `related_documents` when exactly one is referenced (no cross-investigation ambiguity
 exists in the vault); sources with no INV signal, and the KB-shared **entities**, render
@@ -320,6 +322,28 @@ tree-on-a-time-axis**: a horizontal, compressed time axis; each tradition a hori
 **bar** from `range_start_year` to `range_end_year`; `branches_from` drawn as
 **connectors** between bars. (This replaced the earlier Path-A block layout — the
 owner-ratified upgrade — once the entities carried structured numeric bounds.)
+
+**Two render filters, and they are load-bearing (ADR-GOV-0012 D7).** They live as the
+named constants `TIMELINE_RENDER_CLASSES` and `TIMELINE_EDGE_TYPES` so the decision is
+auditable in one place rather than buried in a loop:
+
+1. **`rendering_class: tradition` ONLY.** Community entities are **off-timeline at
+   launch**. They carry an **attestation window**, not coordinates — putting one on the
+   axis would mean inventing geometry the evidence never carried (D4).
+2. **Descent connectors ONLY (`branches_from`).** `influenced_by` edges **do not render
+   at launch**. An influence connector inside the tree geometry can make a node with no
+   descent edge read as a **branch**, and the hard constraint on any future influence
+   render is that such a node must still read as a **ROOT**.
+
+**Roll-up rendering — specified, NOT built.** D7 specifies the intended future behaviour:
+an influence edge whose honest target is off-timeline is re-anchored upward through
+`projects_to` to the bound tradition node, **visibly marked as a projection** so the
+display never claims what the model does not. Building it is a later ADR-GOV-0009
+amendment. The one thing it forces today is that `projects_to` must be
+**machine-traversable**, which is why a dangling one fails the build. Substrate rendering
+(background bands, not peer bars) is likewise deferred. Both filters are proven to FIRE
+against fixtures in `tests/test_timeline_view.py` — including the Islam-shaped case, a
+tradition whose only edges are influence edges, which must still render as a root.
 
 **Where the geometry comes from — and its honesty keystone.** Position and length come
 **only** from the OPTIONAL render-only positioning bounds `range_start_year` /

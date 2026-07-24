@@ -9,6 +9,7 @@ category:
   - Knowledge Base
   - Entity
   - Tradition
+rendering_class: tradition
 tradition_type: reform
 dating_claims:
   - CLM-9101

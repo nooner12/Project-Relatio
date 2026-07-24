@@ -9,6 +9,7 @@ category:
   - Knowledge Base
   - Entity
   - Tradition
+rendering_class: tradition
 tradition_type: emergent
 dating_claims:
   - CLM-9101

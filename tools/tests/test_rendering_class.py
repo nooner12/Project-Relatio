@@ -317,13 +317,13 @@ want("Rendering class malformed" in v_src,
      "validate.py must append non-presence rendering_class problems to `errors`")
 
 # GATE GUARD (ADR-GOV-0012 D3 migration: define -> backfill -> enforce).
-# MIGRATION WINDOW: ENT-0008…0015 do not yet carry the field, so the presence
-# check is WARNING-gated and the vault is green rather than red between two of
-# this enactment's own commits. Flip this expectation to `= True` in the SAME
-# commit that flips the flag, immediately after the backfill commit lands.
-want("RENDERING_CLASS_ENFORCED = False" in v_src,
-     "during the ENT-0008…0015 backfill window the rendering_class presence "
-     "check must stay warning-gated (define -> backfill -> enforce)")
+# The ENT-0008…0015 backfill is COMPLETE, so the presence check runs at error
+# level and this guard asserts it stays there (the inverse of its pre-migration
+# form, following the EPISTEMIC_FIELDS_ENFORCED precedent).
+want("RENDERING_CLASS_ENFORCED = True" in v_src,
+     "validate.py must hold RENDERING_CLASS_ENFORCED = True now that the "
+     "ENT-0008…0015 backfill has landed: a class-fielded entity without "
+     "`rendering_class` is an error, not a warning")
 
 want("projects_to_problems" in gi_src and "influenced_by_problems" in gi_src,
      "graph_integrity.py must import/use both new edge checks")
