@@ -1,7 +1,7 @@
 ---
 title: INV-0019 - Structured-Knowledge Systems Comparative Survey
 document_type: Investigation Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-07-24
@@ -33,12 +33,14 @@ attribution:
 
 ## Draft Investigation Record
 
-> ## 🟡 OPENED AS A SCAFFOLD — 2026-07-24 (UNFILLED; the circuit fills it under a separate brief)
-> **This record OPENS INV-0019 and does nothing else.** Per **STD-0006 §7.6** independence, **the session that opens a scaffold does not fill it**: **no claim, entity, edge, or finding is created here.** The scaffold states the question, the decomposition mandate, the scope disciplines, the method, and the acceptance criteria. The **circuit brief (3 of 3)** answers it after the owner reviews this scaffold. Authored using **TPL-0003** (mapping to the template's section numbering recorded in the Revision-History note and reported in the scaffold report). Nineteenth research workflow (RQ-0019).
+> ## ✅ CLOSED — 2026-07-24 (full OPS-0003 circuit complete)
+> **This investigation is formally CLOSED per ADR-GOV-0004 D1, under the owner's conditional pre-authorization in the circuit brief (brief 3 of 3).** The full adversarial circuit ran: Research Specialist (ROLE-0002) → Critical Reviewer (ROLE-0004, verdict **Conformant with Flags**, [[Critical Review - RQ-0019]]) → Knowledge Architect (ROLE-0001, structural validation clean, §6b). **The owner FROZE the §1 RQ as authored** at the scaffold review; the circuit executed against it unedited. All ten §7 acceptance criteria are met with in-record evidence (§7, ticked individually). Closure conditions verified: **(a)** all ten criteria genuinely met; **(b)** verdict Conformant with Flags with **both determinate flags (F1, F2) remediated in-session** (three advisory, non-blocking, recorded); **(c)** **no confidence level raised — and none lowered**; **(d)** both validators clean (`validate.py` 411 files 0 errors / 0 warnings, exit 0; `graph_integrity.py` 0 dangling / 0 branch / 0 projects_to / 0 influenced_by errors, exit 0; advisories 39 + 2 unchanged).
 >
-> **RQ FREEZE CHECKPOINT.** The §1 primary wording is **authoritative pending owner freeze**, and the freeze happens at the **owner's review of THIS scaffold report** — not in this session. The RQ is recorded **verbatim as authored** and is **not** edited, improved, narrowed, or broadened here.
+> **Created: CLM-0099, CLM-0100, CLM-0101, CLM-0102, FND-0019 — and nothing else.** No entity, no timeline edge, no new relationship type; SRC-0161 unconsumed; the source base fixed at nine and unmodified. **A THIN RESULT WAS PRE-AUTHORIZED AND IS THE RESULT:** element (iii) is explicitly empty for every semantic-publishing and argumentation system in the base, the measured evidence is confined to two studies that bind only their subjects, and CLM B rests on a single domain — none of which barred closure, per the brief.
 >
-> **"Opened" is NOT a maturity promotion** — the frontmatter `status` stays **Draft** (ADR-GOV-0005 §1: closure/opening state lives in this banner and the history row, not in frontmatter).
+> **"Closed" is NOT a maturity promotion** — the frontmatter `status` stays **Draft** (ADR-GOV-0005 §1: closure state lives in this banner and the history row, not in frontmatter). **"Closed" is NOT a clearance for external reliance:** everything lands **R0** and the **findings are NOT cleared for external reliance regardless of closure** (STD-0006 §7.5-analog, declared at opening and re-affirmed here). **The Reserved Reflexive Section's output is additionally §7.6-reflexively-gated** — routed to the Governance Backlog per ADR-GOV-0007 §3, never self-applied, and this circuit supplied **no independence of kind** (same model family throughout, ADR-GOV-0011).
+>
+> *Provenance: opened 2026-07-24 as an unfilled scaffold (v0.1, STD-0006 §7.6 — the opening session created no claim, entity, edge, or finding); filled and closed by the circuit under brief 3 of 3 (v0.2–v0.3). Authored using TPL-0003; nineteenth research workflow (RQ-0019).*
 
 > **WHAT THIS INVESTIGATION IS.** A **comparative survey of how OTHER, EXTERNAL structured-knowledge systems** — in argumentation modelling, evidence synthesis, semantic publishing, and professional citation practice — solve four recurring design problems. **It is not a review of Relatio, and it produces no recommendation about Relatio in this session or the next.** External systems only (§2).
 
@@ -65,7 +67,7 @@ attribution:
 
 # 1. Research Question
 
-**Primary (authoritative wording pending owner freeze at this scaffold's review — recorded verbatim, not edited, narrowed, or broadened):**
+**Primary (FROZEN BY THE OWNER as authored, at the scaffold review — executed verbatim by the circuit, not edited, narrowed, or broadened):**
 
 > Across established structured-knowledge systems — in argumentation modelling, evidence synthesis, semantic publishing, and professional citation practice — how does each system individuate a claim, serve expert and lay readers from a single record, make the path from source to claim recoverable, and warrant its typed relationships; what empirical evidence exists that these approaches perform as their designers intended; and what is documented about where they break down and what they cost to operate?
 
@@ -246,6 +248,19 @@ These are appended to the existing GB-2026-048 as recorded observations strength
 
 ---
 
+# 6b. Structural Validation (ROLE-0001 — Knowledge Architect, 2026-07-24)
+
+Recorded in-record per the circuit brief (Task 3):
+
+- **`validate.py` at error level: PASS** — 411 files scanned, **0 errors / 0 warnings**, exit 0. Epistemic fields (`confidence` lists with matching STD-0008 labels; `reliance_tier: R0`), review fields (`review_cycle`/`review_date`/`last_reviewed`, arithmetic checked: Moderate-weakest records at 9 months → 2027-04-24; Low-weakest at 6 months → 2027-01-24), attribution (Stage-1 shape, `ai-delegated`/Claude), and version coherence all well-formed at birth on all five new records.
+- **`graph_integrity.py`: exit 0** — 0 dangling references, 0 `branches_from` / 0 `projects_to` / 0 `influenced_by` edge errors; no malformed typed edges; advisories unchanged (39 non-reciprocated symmetric + 2 legacy).
+- **Full detection suite: all 12 `tools/tests/test_*.py` PASS**, run exactly as CI runs them.
+- **Scale discipline grep-verified:** no ★-glyphs, no H-band, and no Level 5 in any INV-0019 record or field — every "Level 5" string in the subtree is a prohibition or "No Level 5" statement; every confidence entry is native `Level N (Label)` in a list.
+- **Subgraph confirmed against §8.2 programmatically:** the frontmatter `relationships` blocks of CLM-0099…0102 and FND-0019 were parsed and matched edge-for-edge against the §8.2 declaration (20 `derived_from` + 4 `supports` + 5 `part_of`); grades in frontmatter match the §5 table component-for-component. No edge exists that §8.2 does not declare; §8.2 declares no edge that does not exist.
+- **Identifier discipline confirmed:** CLM-0099…0102 and FND-0019 consumed; **no ENT consumed; SRC-0161 unconsumed**; no relationship type minted; the catalogued source-base records byte-unmodified.
+
+---
+
 # 7. Acceptance Criteria for Closing
 
 INV-0019 may close only when all ten of the following hold, each **independently checkable**:
@@ -260,6 +275,19 @@ INV-0019 may close only when all ten of the following hold, each **independently
 8. **Base coverage limits are recorded as limits.**
 9. **A finding (FND) synthesizes the four claims at grades no stronger than their weakest necessary components, with no Level 5.**
 10. **The reserved reflexive section is completed and ROUTED, not applied** — including any adoption/persistence observation, **routed as the warrant for a successor investigation** rather than developed here.
+
+## 7.1 Criteria assessment at closure (2026-07-24 — each ticked with in-record evidence)
+
+1. ✅ **Met.** CLM-0099…0102 exist, one per design problem, each with elements (i)/(ii)/(iii)/(iv) as discrete headed sections and per-element confidence components (§5 table); (iii)/(iv) separability reviewer-verified including the one recurrence case (Critical Review – RQ-0019 §2(a), advisory A1).
+2. ✅ **Met.** Every element cites its specific sources in place; the two unread-interior sources (SRC-0152, SRC-0154) support only surface-establishable content, with that confinement stated in each citing claim's element and Verification section (reviewer check (j)).
+3. ✅ **Met.** (iii) and (iv) populated or explicitly empty for every system in every claim (reviewer check (e), verified per system); no (iv) entry rests on analyst inference — the three analyst observations are in the Reflexive Section, routed (reviewer check (c); two attribution rewordings F1/F2 remediated).
+4. ✅ **Met.** Per-source verification strength disclosed and not averaged: seven interiors READ (five directly, two via grep-verified extraction), two NOT read with reasons (§6 circuit actuals; per-claim Verification sections).
+5. ✅ **Met.** Both support-surface observations DERIVED from SRC-0159/SRC-0160 directly; both matched the sources in shape; scope conditions carried; the one cross-source discrepancy found (PLEACS 14-vs-12 item count) reported in CLM-0100 and §6, unadjudicated.
+6. ✅ **Met.** No claim or element is about Relatio; §1–§8 contain no Relatio comparison (reviewer check (f) — in-record Relatio mentions are mandated STD-0007 drift notes and R0 boilerplate only).
+7. ✅ **Met.** Terminological differences recorded where they arose — a drift note in each claim's Limitations, aggregated in FND-0019 §4 (reviewer check (h)).
+8. ✅ **Met.** Base coverage limits recorded as limits: FND-0019 §4 (nine sources; single-domain CLM B; two studies bind only their subjects; within-base absence), §8.1/§8.2 here.
+9. ✅ **Met.** FND-0019 synthesizes the four claims at six components, all capped at weakest necessary components — **no Level 5, and no Level 4** (the finding declines even the available High).
+10. ✅ **Met.** The Reserved Reflexive Section is completed and ROUTED (GB-2026-044/045/046/043 inputs; adoption/persistence APPENDED to GB-2026-048 as the successor-investigation warrant); nothing enacted; GB-2026-047 untouched (reviewer check (k)).
 
 **Verification & reliance (§7.5 analog).** Interior-readable base (§3.1), so the achievable ceiling is higher than in verification-light investigations — **but findings are NOT cleared for external reliance regardless of closure**, and per-source verification strength is disclosed and not averaged. **Everything lands R0.** The reserved reflexive section's output is additionally **§7.6-reflexively-gated.**
 
@@ -307,6 +335,7 @@ The subgraph now exists, carried on the child records per the house pattern (thi
 
 |Version|Date|Status|Description|
 |---|---|---|---|
+|0.3|2026-07-24|Draft|**Circuit completed and INVESTIGATION CLOSED per ADR-GOV-0004 D1 under the owner's conditional pre-authorization (brief 3 of 3).** Critical Review – RQ-0019 (ROLE-0004): verdict **Conformant with Flags** — two determinate flags (F1 CLM-0099 SWAN-scalability attribution; F2 CLM-0101 CiTO register), **both remediated in-session** (CLM-0099/CLM-0101 → v0.2); three advisory, non-blocking; **no confidence level raised, none lowered**; all eleven brief checks (a)–(k) individually addressed. Structural validation (ROLE-0001) recorded in-record at **§6b**: validate.py 411/0/0 exit 0; graph_integrity 0/0/0/0 exit 0, advisories 39+2 unchanged; all 12 detection tests pass; scale discipline grep-verified; subgraph parsed and matched edge-for-edge against §8.2; identifier discipline confirmed. **All ten §7 criteria re-assessed and ticked with in-record evidence (§7.1).** Closure banner installed citing the pre-authorization and its four conditions (a)–(d), all verified; §1 marked FROZEN BY THE OWNER as authored; scaffold provenance retained in the banner. Frontmatter `status` untouched (Draft — ADR-GOV-0005 §1). **Findings NOT cleared for external reliance regardless of closure (everything R0); the Reserved Reflexive Section's output additionally §7.6-reflexively-gated.** The thin result (two measured islands; empty (iii) elsewhere; single-domain CLM B) is the pre-authorized honest outcome, not a deficiency.|
 |0.2|2026-07-24|Draft|**Specialist pass (ROLE-0002) executed under the circuit brief (3 of 3) with the RQ FROZEN BY THE OWNER as authored.** Created CLM-0099 (atomicity), CLM-0100 (register), CLM-0101 (mapping), CLM-0102 (typed relationships) — each with the four separable elements (i)–(iv) as discrete headed sections, separately graded, (iii) and (iv) never merged — and FND-0019 (six components, no Level 5, no Level 4, weakest Low). §4/§5 filled with actuals; §6 gains circuit actuals (interior-reading: seven of nine READ — SRC-0156/0157/0158/0159/0160 directly, SRC-0153/0155 via grep-verified structured extraction; SRC-0152 scan-unreadable and SRC-0154 access-blocked, both disclosed); both support-surface hypotheses DERIVED from SRC-0159/SRC-0160 directly, matching the sources in shape, scope conditions carried; the SRC-0159-vs-archived-PLEACS item-count divergence recorded, not adjudicated. Reserved Reflexive Section FILLED and ROUTED (GB-2026-044/045/046/043 inputs; adoption/persistence observations APPENDED to GB-2026-048; three analyst observations failing the (iv) bar routed) — nothing enacted, GB-2026-047 untouched. §8.2 records the realized subgraph and actual-vs-expected bearing. Identifiers consumed: CLM-0099…0102, FND-0019 only; no ENT; SRC-0161 unconsumed. Everything R0. Pending Critical Review (ROLE-0004) and structural validation (ROLE-0001).|
 |0.1|2026-07-24|Draft|**Opened as a scaffold (UNFILLED), per STD-0006 §7.6 independence — the opening session creates no claim, entity, edge, or finding.** Authored from **TPL-0003**. Records the §1 primary RQ **verbatim, authoritative pending owner freeze** (freeze happens at the owner's review of this scaffold report, not here); the §1.1 **four-claim decomposition mandate** with the four separable elements **(i) approach / (ii) stated rationale / (iii) evidence of performance / (iv) documented costs and failure modes** and the **(iii)-vs-(iv) separability test**; the §2 **scope disciplines**; the §3 **method** with its operative blockquote rules and the interior-reading posture; §4/§5 **reserved for the circuit**; §6 **standing brackets**; the **Reserved Reflexive Section** named, empty, with its governing rule (ADR-GOV-0007 §3, §7.6-gated); the **ten §7 acceptance criteria**; and §8 **prose relationships** (no frontmatter edges to non-existent objects, ADR-GOV-0004 D4). Source base **fixed at nine (SRC-0152…SRC-0160)**; gIBIS stays cut; no SRC/CLM/ENT/FND identifier consumed. Template-section mapping (TPL-0003 → this record): §1 RQ → §1; §2 Scope → §2; §3 Method → §3; §4 Findings → §4 (reserved); §5 Confidence → §5 (reserved); §6 Assumptions → §6; template §7 Relationships → **§8** here; template §8 Revision History → **§9** here; the record additionally carries a **§7 Acceptance Criteria** section and a **Reserved Reflexive Section** (house pattern per INV-0016/0017/0018, which the brief's numbering matches).|
 
