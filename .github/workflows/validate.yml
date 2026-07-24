@@ -1,0 +1,66 @@
+name: Vault Integrity
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the vault
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Install dependencies
+        run: pip install -r tools/requirements.txt
+
+      - name: Record resolved dependency versions
+        run: |
+          python --version
+          pip show PyYAML | head -2
+
+      - name: Structural conformance (validate.py)
+        working-directory: tools
+        run: python validate.py
+
+      - name: Graph integrity (graph_integrity.py)
+        working-directory: tools
+        run: python graph_integrity.py
+
+      - name: Detection tests (prove-the-positive suite)
+        run: |
+          set -e
+          shopt -s nullglob
+          files=(tools/tests/test_*.py)
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "No detection tests found — the suite must never be empty."
+            exit 1
+          fi
+          for f in "${files[@]}"; do
+            echo "::group::$f"
+            python "$f"
+            echo "::endgroup::"
+          done
+        shell: bash
+
+      - name: Upload integrity report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: graph-integrity-report
+          path: tools/output/
+          if-no-files-found: ignore
