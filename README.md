@@ -1,5 +1,7 @@
 # Project Relatio
 
+[![Vault Integrity](https://github.com/nooner12/Project-Relatio/actions/workflows/validate.yml/badge.svg)](https://github.com/nooner12/Project-Relatio/actions/workflows/validate.yml)
+
 **A knowledge architecture for conducting thorough, disciplined, evidence-graded research — not a note-taking system.**
 
 Project Relatio treats knowledge as *a structured network of meaningful relationships, not a collection of stored information*. Its purpose is concrete: to answer real research questions rigorously, with every claim graded for evidence, every conclusion independently challenged, and nothing fabricated.

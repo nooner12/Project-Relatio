@@ -11,6 +11,42 @@ which apply the `\\?\` extended-length prefix so deep vault folders plus long ob
 titles (absolute path > 260 chars) don't raise `FileNotFoundError`. This surfaced on
 INV-0006, whose long finding title pushed the path past `MAX_PATH`.
 
+## Continuous integration — boundary enforcement (`.github/workflows/validate.yml`)
+
+As of 2026-07-24 these tools also run at the **repository boundary**. The **Vault
+Integrity** GitHub Actions workflow runs on **every push and every pull request** (and
+on demand via `workflow_dispatch`): it installs `tools/requirements.txt`, then runs
+`validate.py`, `graph_integrity.py`, and **the full `tests/test_*.py` detection suite**
+(every test, each as a standalone `python tools/tests/test_<name>.py`, with an
+empty-suite guard so a future refactor that moves the tests fails loudly instead of
+passing vacuously). This makes the vault's "validators clean at every commit boundary"
+discipline an **enforced invariant** rather than a per-session habit — a session's
+"validators clean" claim is now independently checkable on the run log.
+
+Two properties are load-bearing and match the tools' own semantics:
+
+- **Advisories never fail the build.** `validate.py` fails only on errors (warnings do
+  not), and `graph_integrity.py` fails only on dangling references / `branches_from` /
+  `projects_to` / `influenced_by` edge errors. The **non-reciprocated symmetric (39)**
+  and **untyped-legacy (2)** counts are **advisory** and stay green — CI does not gate on
+  them, and their exit-code semantics were not changed to suit CI.
+- **CI is READ-ONLY over the vault.** The workflow declares `permissions: contents:
+  read`. It may read the vault, run the tools, and write only to `tools/output/`
+  (gitignored, uploaded as an `if: always()` artifact so a failing run still yields its
+  report). It **never** edits a record, auto-fixes, auto-formats, auto-commits, or
+  pushes. No linter, formatter, or style gate is installed — CI enforces the vault's
+  **existing** rules and nothing else.
+
+The workflow pins **Python 3.14** to match the local interpreter (PyYAML resolved from
+the `>=6.0` spec, same as local), because CI silently resolving a different
+Python/PyYAML than local is a real date-parsing failure mode this vault has hit before.
+The extended-length path handling (STD-0001 §8) is inert on the Linux runner and is left
+untouched. Adding CI is an **operational** decision (CON-0003 §5.3) — it automates
+enforcement of rules that already exist, introduces no rule and amends no Standard — so
+it carries **no ADR**; the decision is recorded here and in the Governance Backlog. The
+fire tests proving CI actually fails red on a broken vault (local and remote) are
+recorded with the enactment.
+
 ## graph_integrity.py — relationship-graph integrity (OPS-0002 automation)
 
 Automates the OPS-0002 (Relationship Integrity & Graph Maintenance) check so the
