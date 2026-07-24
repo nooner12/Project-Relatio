@@ -41,7 +41,7 @@ The vault lives under [`Project Relatio/`](./Project%20Relatio) and is organised
 
 ### The research so far
 
-Eighteen investigations have been run end-to-end through the full circuit, spanning very different domains — a deliberate stress test of the architecture:
+Nineteen investigations have been run end-to-end through the full circuit, spanning very different domains — a deliberate stress test of the architecture:
 
 1. **INV-0001** — Convergence and divergence between the teachings of Jesus and Daoism
 2. **INV-0002** — Phantom traffic jams (emergent instability, not bottlenecks)
@@ -61,8 +61,9 @@ Eighteen investigations have been run end-to-end through the full circuit, spann
 16. **INV-0016** — Origins and branching of the Iranian religious family
 17. **INV-0017** — Origins and branching of the Judaism–Christianity family
 18. **INV-0018** — Islam's origins and its Abrahamic relationships
+19. **INV-0019** — How external structured-knowledge systems solve four recurring design problems (a comparative survey)
 
-> The clinical, behavioural, and child-facing investigations (INV-0004/0005/0006/0008/0010) are **educational evidence reviews, not medical advice**. All eighteen investigations' findings currently land **R0** and are **gated from external/client-facing reliance** pending genuine independent (and, for the health items, clinician) re-verification outside Relatio's own circuit.
+> The clinical, behavioural, and child-facing investigations (INV-0004/0005/0006/0008/0010) are **educational evidence reviews, not medical advice**. All nineteen investigations' findings currently land **R0** and are **gated from external/client-facing reliance** pending genuine independent (and, for the health items, clinician) re-verification outside Relatio's own circuit.
 
 ---
 
