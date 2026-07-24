@@ -1,7 +1,7 @@
 ---
 title: Governance Backlog
 document_type: Governance Record
-version: 1.40
+version: 1.41
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -22,7 +22,7 @@ tags:
 
 # Governance Backlog
 
-## Version 1.40
+## Version 1.41
 
 ## Active Governance Record
 
@@ -463,6 +463,17 @@ The owner adjudicated the items above, hand-authored **[[ADR-GOV-0012 - Entity R
 - **Candidate offered (NOT adopted).** A candidate directional type along the lines of `evaluates_adherence_of` / `evaluates_compliance_of` / `assesses_conformance_to` (source = the empirical study; target = the standard evaluated), asymmetric, KB-object → KB-object. **Naming and adoption are owner-reserved (a STD-0004 change);** this entry proposes, it does not decide. Whether the relation recurs enough to warrant a type is itself part of the question — a single instance may not clear a demonstrated-need bar, and one more instance would be the natural trigger. This mirrors the discipline that produced ADR-GOV-0010's `continuation` qualifier (a routed vocabulary gap, adopted only by the owner) and the deferred candidates under GB-2026-041.
 - **Status: OPEN — logged candidate.** Not enacted, not self-applied; no standard, template, tool, or record changed by this entry. INV-0019 is not opened by it.
 
+## GB-2026-048 — Successor investigation: why structured-knowledge systems do or do not persist (adoption, maintenance burden, originator dependence)
+
+- **Source.** **INV-0019 scaffold, §2 scope discipline (this session, 2026-07-24).** Attributed to the ratifying human (Brian Noon) at `ai-delegated`. **This entry is a logged candidate for a FUTURE investigation; it is enacted nowhere, self-applied to nothing, and it is expressly NOT a claim, finding, or investigation.**
+- **Warrant.** **INV-0019** names this question as **out of its own scope, and routes it.** The INV-0019 base carries a field-level observation that is **not about any one of its four design problems**: that structured-knowledge systems have repeatedly failed to displace document-based practice, and that several named systems were **built, adopted, and then abandoned.** INV-0019 §2 rules this a **different investigation with different evidence and different methods** — **not a fifth claim, and not folded into claims A–D** — and records that it is to be routed here as the warrant for a successor investigation. This entry is that routing.
+- **The question (for a future investigation, NOT answered here).** **Why do these systems do or do not persist** — what governs adoption and abandonment; **who bears the maintenance burden** of a structured-knowledge system over time; and **what happens when the originator stops** (the single-maintainer / originator-dependence failure mode). Kept deliberately unresolved: it is a question **to be investigated**, not a problem with a remembered answer.
+- **Why no remedy is proposed (binding on this item).** Per the INV-0019 §2 discipline and the GB-2026-044/045/046 precedent, **no solution is offered here.** Pre-writing a remedy would prejudge a survey/investigation that has not run. The entry exists so a future investigation answers a **recorded** question rather than a **remembered** one. **Do not add a proposed solution ahead of that investigation.**
+- **Relationship to INV-0019.** This is the **successor** question, **not** part of INV-0019 — INV-0019 surveys **four design problems** on external systems and produces **no** finding on adoption/persistence. When the INV-0019 circuit surfaces adoption/persistence observations, they are recorded in that record's **reserved reflexive section** and routed **here** (they do not reshape claims A–D). Whether and when to open the successor investigation is **owner-reserved** (next-free INV at that time; the Registry wins).
+- **Status: OPEN — logged candidate.** Not enacted, not self-applied; no standard, template, tool, or record changed by this entry. **No INV identifier is consumed by it, and INV-0019 is not altered by it.**
+
+> **Why GB-2026-048 proposes no solution (binding on this item, sibling to the GB-2026-044/045/046 note above).** It is recorded as a **question for a future investigation to answer**, not a problem with a remembered answer. Do not add a proposed solution ahead of that investigation.
+
 # 3. Resolved (retained for institutional memory)
 
 | Item | Resolution |
@@ -509,6 +520,7 @@ Any role may **add** an item. Only the Vision Steward may mark an item **Decided
 
 |Version|Date|Status|Description|
 |---|---|---|---|
+|1.41|2026-07-24|Active|**GB-2026-048 added — the adoption/persistence successor-investigation candidate, routed out of the INV-0019 scaffold.** INV-0019 (opened as a scaffold this session) rules the field-level question of **why structured-knowledge systems do or do not persist — adoption/abandonment, the maintenance burden, and originator-dependence** — **out of its own scope** (§2): it is a different investigation with different evidence and methods, **not a fifth claim and not folded into claims A–D**, and INV-0019 routes it here as the warrant for a successor. Logged as an **OPEN candidate with NO remedy proposed** (sibling discipline to GB-2026-044/045/046: a recorded question, not a remembered answer), **INV-0019 named as the source of its warrant**, and **no INV identifier consumed** — whether and when to open the successor is owner-reserved. No standard, template, tool, or record changed by this entry; INV-0019 is not altered by it.|
 |1.40|2026-07-24|Active|**GB-2026-047 added — relationship-type gap surfaced by the INV-0019 PREP source-base cataloguing.** During Task 3 of the ADR-GOV-0003 catalog-only pass that minted SRC-0152…SRC-0160, a real structural relationship the literature carries — **SRC-0159 (Jelicic Kadic et al. 2016) empirically evaluates the adherence of Cochrane plain-language summaries to the PLEACS standard (SRC-0158)** — was found to have **no honest fit in the approved STD-0004 vocabulary** ("evaluates the compliance of," the case the brief flags). Per Task 3, **no type was forced and none minted**: the edge is recorded with the honest weak `related_to` (reciprocated) and the precise "evaluates-adherence/compliance-of" relationship is **routed here as an OPEN logged candidate** (a candidate type is offered, adoption owner-reserved). Mirrors the ADR-GOV-0010 `continuation` discipline. No knowledge object graded, no standard/template/tool/record changed by this entry; INV-0019 not opened. (Source-base records themselves are catalogued under the SRC range; see the Identifier Registry bump for SRC-0152…SRC-0160.)|
 |1.0|2026-07-09|Active|Created per KOS-0011 §9 (GB-001), consolidating open items previously scattered across the Retrospective, CLAUDE.md, and three assessment reports.|
 |1.1|2026-07-09|Active|GB-2026-011 resolved: ROLE-0002/0004/0005 ratified to Adopted with two refinements. Moved to §3.|
