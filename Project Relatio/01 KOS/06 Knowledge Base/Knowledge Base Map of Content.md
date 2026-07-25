@@ -1,8 +1,8 @@
 ---
 title: Knowledge Base Map of Content
 document_type: Navigation Document
-version: 0.2
-status: Draft
+version: 0.3
+status: Reviewed
 operational_status: Active
 category:
   - Knowledge Base
@@ -24,9 +24,9 @@ tags:
 
 # Knowledge Base Map of Content
 
-## Version 0.2
+## Version 0.3
 
-## Draft Navigation Document
+## Reviewed Navigation Document
 
 ---
 
@@ -82,6 +82,8 @@ One honest caveat about the shape: **the corpus does not cluster evenly.** Nine 
 ## 4.1 Comparative teachings and concepts
 
 *What this cluster answers:* what a teaching or a concept **means**, and how two traditions' teachings compare when read as texts. These are interpretive questions about meaning, not historical questions about events or descent. Both records bracket historicity, both name translation loss as a live risk, and both cap their integrated interpretation at Moderate because an interpretive synthesis is a defensible reading rather than a fact.
+
+**Neither record carries an owner's-thesis posture, and that absence is chronological, not a clearance.** Both were authored 2026-07-09, eleven days before that discipline first appears (INV-0014 and INV-0015, both 2026-07-20). INV-0001 in particular reads two traditions side by side on the owner's own comparative ground, and is the record here most likely to be reached for in a thesis's service. It sits under the same general R0 gate as everything else in this Knowledge Base — **not cleared for external reliance, and specifically not for supporting a thesis** (§3). Throughout this document, the absence of a named thesis gate means the practice postdates the record, never that the record is cleared.
 
 **INV-0001 — Comparative Teachings of Jesus and Philosophical Daoism**
 Asked: on two selected themes, how do the teachings attributed to Jesus in the canonical Gospels compare with those of philosophical Daoism — one apparent convergence, one substantive divergence, with the interpretive risk of each.
@@ -255,6 +257,7 @@ Closed 2026-07-24.
 |---|---|---|---|
 |0.1|2026-07-25|Draft|Created. First navigation surface for the Knowledge Base: an interpretive STD-0003 §13 Map of Content over INV-0001…INV-0019, with the R0 reliance gate carried at the top. Clusters derived from reading the nineteen investigation and finding records. The §12 generated inventory is deliberately deferred and is not begun here. Born at Draft for owner ratification.|
 |0.2|2026-07-25|Draft|**Rewritten, not patched**, on the eleven defects found by the cluster-by-cluster review (owner ruling: eleven defects with the review complete makes patching the wrong instrument). Fixed: the INV-0008 ↔ INV-0010 non-inference now stated on **both** sides; the 0.7% adherence figure now carries the unadjudicated 14-vs-12 item-count divergence between the study and the archived standard; INV-0001's entry now gives both components (convergence Level 3, divergence Level 4) as INV-0003's does; INV-0014's §7.5-analog externally-consequential gate surfaced on its entry and §3's gate enumeration extended to that class, which it previously could not hold; §4's cluster count removed rather than corrected (§2 argues against hand-maintained enumeration); 4.4's does-not-reduce count derived (two, not three); 4.2's metaphysical bracket explicitly disambiguated from INV-0011's separately graded transmission claim, and INV-0011's differently-worded bracket noted; 4.6's intro rewritten to describe what both members actually are, INV-0002's limits being scope and precision with no interpretive over-reach to report; one standard **`Does not reduce`** marker adopted, applied to every entry that carries the warning **including INV-0012**, and the total derived (nine); 4.3's "these three" referent made explicit; 4.4's motivated-reasoning attribution rewritten per record. **Three further defects of the same class found at write time and corrected:** §4's "two of which hold two records each" (three do), 4.3's "all four hold a dual-track discipline" (two do explicitly; all four bracket truth claims), and INV-0008's "caps every domain's application confidence at Level 1–2" (structured mentoring's application component is Level 3). Every count in this version derived from the records at write time. No confidence re-graded, averaged, or restated more strongly; no cluster added, removed, or re-assigned; no inventory begun; `status` unchanged at `Draft`; no identifier consumed.|
+|0.3|2026-07-25|Reviewed|**One owner-authored caveat in cluster 4.1, and promotion `Draft` → `Reviewed`.** The 4.1 paragraph is **owner-authored text, placed by the owner before promotion** and verified rather than written by this session: it records that neither INV-0001 nor INV-0003 carries an owner's-thesis posture, that the absence is **chronological and not a clearance** (both created 2026-07-09, eleven days before the posture first appears on INV-0014/INV-0015, both 2026-07-20 — all four `created:` dates re-derived from the records at execution), and it scopes that reading **document-wide**, so the absence of a named thesis gate anywhere in this document never reads as a clearance. The hazard it answers was created by v0.2's own F4 fix, which surfaced INV-0014's thesis gate and thereby made two entries display one and seventeen not. Recorded as owner decision **R1** in **GB-2026-050**, which also dismisses **R2**; no closed record was modified and no posture backfilled. **A paste artifact was corrected and is named here:** the pasted paragraph had consumed the blank line separating the cluster's orienting paragraph from the INV-0001 entry, leaving it with no blank line either side — against this document's own convention at 4.3 and 4.7 and against strict Markdown block separation. Blank lines were restored either side; **not one word of the owner's text was changed** (verified character-identical, 708 characters). **Promotion rationale:** the document has now had two support-surface review passes, a rewrite, and an execution-time derivation pass, satisfying STD-0005 §8's review considerations — clarity, dependencies, terminology, consistency. **`Adopted` is deliberately WITHHELD pending first real querier use**; `Reviewed` is the terminus here. Bump convention verified against STD-0005 (§16–§18 semantic versioning, §20 history requirement, §24 maturity in `status:`) and STD-0002 (`Reviewed` an approved maturity value) — neither carries a maturity change differently for this object class, so no divergence to report. No cluster, entry, count, grade, gate, or marker changed; no identifier consumed; no view regenerated.|
 
 ---
 
