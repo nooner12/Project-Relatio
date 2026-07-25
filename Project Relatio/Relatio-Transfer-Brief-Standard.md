@@ -261,6 +261,18 @@ read better and survive better as a quoted rule than as prose.
 recommendations about Relatio's own structure. Recommendations route to the
 Governance Backlog per ADR-GOV-0007 §3; they are NEVER self-applied in session.
 
+**Mark what you have not verified.** A brief may state an unverified contextual
+claim **only if it is marked unverified.** Verify it, omit it, or flag it — never
+state it flatly as the record's. The drafter's instinct is to verify load-bearing
+numbers and transcribe surrounding prose as context, but a claim about *where*
+something lives, *whether* a field exists, or *which* document carries a history
+is an assertion about the vault exactly as much as a count is. Across three
+consecutive briefs this produced seven drafter errors — a host name the record
+never names, a field class that does not exist, a revision history attributed to
+the wrong document, and support-surface planning notes cited as Backlog items
+among them. Every one would have been caught by marking rather than by more
+checking, and marking tells the executing session which claims to test.
+
 **Ask to be contradicted.** Put a standing line in every OUTPUT block asking that
 any place the record contradicts the brief be **flagged rather than silently
 reconciled**, with the record winning. It costs one sentence and it is the only
@@ -325,7 +337,9 @@ DO NOT
   divergence under **"no adjudication, no ranking, no recommendation"** and stops.
   The instruction was a support-surface review question promoted to a record
   statement across two handoffs. Verify the record's own words before putting
-  them in a brief as the record's.
+  them in a brief as the record's. **This entry reads as being about quotations;
+  its real scope is every assertion about what a record contains or where it
+  lives** — see §6, *Mark what you have not verified.*
 - **Stopping at the first match.** Reading the first grep hit, the first status
   line, or the first section mentioning a term rather than the one that
   *governs*. Two instances in a single session: a Backlog entry carrying four
