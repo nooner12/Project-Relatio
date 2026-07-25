@@ -3,10 +3,15 @@
 
 **Status.** This is a DESCRIPTIVE working convention, not a governed vault
 object. It has no identifier, no version in the Registry, and no authority over
-the vault. It captures the brief-writing practice developed across ~15 briefs
-(2026-07-20 → 2026-07-23) so a new support-surface chat can write briefs to the
-same standard instead of re-deriving it. Adjust it freely; it describes craft,
-not law.
+the vault. It captures the brief-writing practice developed across some two
+dozen briefs (2026-07-20 → 2026-07-25) so a new support-surface chat can write
+briefs to the same standard instead of re-deriving it. Adjust it freely; it
+describes craft, not law.
+
+*The count stays approximate on purpose.* Briefs are not vault objects and are
+tracked nowhere in the repo, so no exact figure is derivable; "some two dozen"
+is a floor read off the session arcs recorded in CLAUDE.md's currency notes and
+the Backlog history rows. Do not sharpen it into a precise number.
 
 ---
 
@@ -103,6 +108,18 @@ These do not live in the agent's head. If a brief needs one, it states it.
   invent authors, titles, or editions — verify and disclose, or record the gap.
 - Do not paraphrase untranslated material from model knowledge.
 
+**Counts and derived summaries**
+- **Derive every count at write time** from the object being written — never from
+  the brief, never from a prior version, never from an adjacent sentence.
+- **Re-derivation is not selective.** A sentence already being edited for one
+  reason is exactly where a second error hides. On the MOC review, two of the
+  three write-time defects sat inside sentences the review had already flagged
+  for a *different* reason.
+- **A cross-member generalization is a count in disguise.** "Both records…",
+  "all four…", "each of these…" must be checked against every member, or
+  rewritten to claim only what holds. The MOC carried three such claims that one
+  member each contradicted.
+
 **Commit hygiene (the graph must validate at every boundary)**
 - Backfill BEFORE flipping enforcement on. Never leave the vault red between
   commits.
@@ -190,6 +207,29 @@ an ESCALATION VALVE: if an auto-fill record turns out to need judgment, the
 agent adds it to the interactive queue rather than guessing. (This caught 17
 records the pre-classification missed.)
 
+**H. Document revision from a recorded defect list** — an existing vault
+document has been reviewed and found defective; the job fixes it. The input is a
+defect list with diagnoses, not a spec; the output is a version bump, not a new
+object; no identifier is consumed. State the patch-vs-rewrite threshold and which
+instrument was chosen, and say what is **sound and must be preserved** — a
+rewrite that discards the good parts costs more than it saves. Three things
+belong in every H brief:
+
+- **Per-defect disposition in the OUTPUT** — for each defect: what the record
+  says, what the current version says, what the new version says.
+- **An explicit instruction to flag brief-vs-record contradictions.** The
+  drafter's diagnoses are second-hand. Ask to be challenged, with the record
+  winning. On the MOC v0.2 job this fired twice and caught two real drafter
+  errors that no amount of re-reading the brief would have surfaced.
+- **Pre-authorization to fix further defects of the same class found at write
+  time**, naming each in the history row. Knowingly re-writing a false
+  generalization in order to stay in scope would contradict the derivation
+  discipline. Three of the MOC's fourteen defects were found only this way.
+
+*Still unresolved:* the **creation** of an interpretive navigation document (the
+MOC v0.1 job) fits no type and has one instance. H covers revising such a
+document, not authoring one. Do not stretch it.
+
 ---
 
 ## 6. WRITING PRINCIPLES (the judgment, not the format)
@@ -218,6 +258,11 @@ read better and survive better as a quoted rule than as prose.
 **Reserve a section for reflexive findings** on any job that could produce
 recommendations about Relatio's own structure. Recommendations route to the
 Governance Backlog per ADR-GOV-0007 §3; they are NEVER self-applied in session.
+
+**Ask to be contradicted.** Put a standing line in every OUTPUT block asking that
+any place the record contradicts the brief be **flagged rather than silently
+reconciled**, with the record winning. It costs one sentence and it is the only
+mechanism that catches a drafter error the drafter cannot see.
 
 **Ask for the report you need to review.** The OUTPUT block should enumerate
 exactly what you will check: per-edge warrant verdicts, the exception list, the
@@ -272,7 +317,20 @@ DO NOT
   verification. Numbers move between sessions.
 - **Transcribing values through the support surface.** Values that inherit
   confidence from a vault record must be derived AT EXECUTION from that record,
-  never copied into the brief by the drafter.
+  never copied into the brief by the drafter. An assertion about what a record
+  *says* is transcription too. A MOC brief attributed a "resolve this before
+  citing the figure" instruction to INV-0019's closure; the record files that
+  divergence under **"no adjudication, no ranking, no recommendation"** and stops.
+  The instruction was a support-surface review question promoted to a record
+  statement across two handoffs. Verify the record's own words before putting
+  them in a brief as the record's.
+- **Stopping at the first match.** Reading the first grep hit, the first status
+  line, or the first section mentioning a term rather than the one that
+  *governs*. Two instances in a single session: a Backlog entry carrying four
+  dated status lines where only the last governs (the first read OPEN, the last
+  read RESOLVED), and a record whose motivated-reasoning guard lives on its
+  finding record while the first hit was in its critical review. Read the
+  section, not the hit.
 - **Referencing an artifact that does not exist.** A precondition once cited
   "in-repo verification-channel evidence" that lived only on the support
   surface. The agent correctly searched, found nothing, and flagged it. Check
