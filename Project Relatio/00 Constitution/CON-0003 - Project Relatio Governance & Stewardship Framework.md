@@ -1,7 +1,7 @@
 ---
 title: CON-0003 - Project Relatio Governance & Stewardship Framework
 document_type: Constitutional Instrument
-version: 1.1
+version: 1.2
 status: Adopted
 operational_status: Active
 category:
@@ -23,14 +23,14 @@ attribution:
     role: Vision Steward
     event: created
     date: 2026-07-09
-    ai_degree: ai-delegated
+    ai_degree: ai-assisted
     ai_model_family: Claude
 ---
 # CON-0003
 
 # Project Relatio Governance & Stewardship Framework
 
-## Version 1.1
+## Version 1.2
 ## Adopted Constitutional Instrument
 # 1. Purpose
 
@@ -509,6 +509,7 @@ Project Relatio adopts the following governance principle:
 |0.2|2026-07-09|Revised Draft|Incorporated architectural critique|
 |1.0|2026-07-09|Adopted|Finalized constitutional governance framework|
 |1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
+|1.2|2026-07-25|Adopted|`ai_degree` corrected from the ADR-GOV-0011 backfill default to the owner's determination (GB-2026-042; authorized by GB-2026-056). Field only; no content change.|
 
 ---
 

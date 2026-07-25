@@ -1,7 +1,7 @@
 ---
 title: KOS-0003 - Epistemic Framework & Knowledge Validation System
 document_type: Kernel Operating System Document
-version: 1.5
+version: 1.6
 status: Adopted
 operational_status: Active
 created: 2026-07-08
@@ -27,7 +27,7 @@ attribution:
     role: Vision Steward
     event: created
     date: 2026-07-08
-    ai_degree: ai-delegated
+    ai_degree: ai-assisted
     ai_model_family: Claude
 ---
 
@@ -37,7 +37,7 @@ attribution:
 
 # Epistemic Framework & Knowledge Validation System
 
-## Version 1.5
+## Version 1.6
 ---
 
 # 1. Purpose
@@ -760,6 +760,7 @@ Open review questions (for future refinement):
 |1.3|2026-07-11|Adopted|Kernel audit (GB-2026-018): corrected stale "Version 1.0" reference in the Document Status block (→ 1.3); propagated KOS-0004 Entity–Relationship Co-Primacy into §10 Assumption Mapping (ontological assumptions may concern required entities, required relationships, or both).|
 |1.4|2026-07-11|Adopted|**GB-2026-021 resolved (owner-directed):** reconciled the two Kernel confidence scales into **one canonical hybrid** — numeric **Level 0–5** paired with a qualitative label (**Very High → Very Low**, plus an Unsupported floor), written together as "Level 4 (High)." §8 restated in hybrid form; KOS-0008 §8 aligned to the same scale (its label-only table gains the Level column). Level 1 label unified to "Very Low" (was "Speculative"; sense retained in the description). Matches the "Level N (Label)" form already used by Knowledge Base objects — no object migration required.|
 |1.5|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
+|1.6|2026-07-25|Adopted|`ai_degree` corrected from the ADR-GOV-0011 backfill default to the owner's determination (GB-2026-042; authorized by GB-2026-056). Field only; no content change.|
 
 ---
 

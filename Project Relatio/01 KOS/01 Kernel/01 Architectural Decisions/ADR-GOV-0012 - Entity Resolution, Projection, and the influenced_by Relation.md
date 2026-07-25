@@ -1,7 +1,7 @@
 ---
 title: ADR-GOV-0012 - Entity Resolution, Projection, and the influenced_by Relation
 document_type: Architecture Decision Record
-version: 1.0
+version: 1.1
 status: Adopted
 operational_status: Active
 created: 2026-07-24
@@ -32,7 +32,7 @@ attribution:
     role: Vision Steward
     event: created
     date: 2026-07-24
-    ai_degree: ai-delegated
+    ai_degree: ai-assisted
     ai_model_family: Claude
 ---
 
@@ -338,5 +338,6 @@ This ADR is reopened by any of:
 |Version|Date|Status|Description|
 |---|---|---|---|
 |1.0|2026-07-24|Adopted|Initial decision record. Resolves GB-2026-041: joint-scoping rule, multi-granularity entity layer with `rendering_class`, non-evidential `projects_to`, `influenced_by` created to its INV-0018 specification, community entities minted under governance warrant, tradition-only default render with roll-up and substrate deferred.|
+|1.1|2026-07-25|Adopted|`ai_degree` corrected from the ADR-GOV-0011 backfill default to the owner's determination (GB-2026-042; authorized by GB-2026-056). Field only; no content change.|
 
 # End ADR-GOV-0012

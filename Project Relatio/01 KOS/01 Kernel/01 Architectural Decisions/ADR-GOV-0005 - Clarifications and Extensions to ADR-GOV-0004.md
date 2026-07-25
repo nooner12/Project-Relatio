@@ -26,7 +26,7 @@ attribution:
     role: Vision Steward
     event: created
     date: 2026-07-20
-    ai_degree: ai-delegated
+    ai_degree: ai-assisted
     ai_model_family: Claude
 ---
 

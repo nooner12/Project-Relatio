@@ -1,7 +1,7 @@
 ---
 title: KOS-0005 - Relationship Modeling Framework
 document_type: Kernel Operating System Document
-version: 1.4
+version: 1.5
 status: Adopted
 operational_status: Active
 category:
@@ -26,14 +26,14 @@ attribution:
     role: Vision Steward
     event: created
     date: 2026-07-09
-    ai_degree: ai-delegated
+    ai_degree: ai-assisted
     ai_model_family: Claude
 ---
 # KOS-0005
 
 # Project Relatio Relationship Modeling Framework
 
-## Version 1.4
+## Version 1.5
 ## Adopted Kernel Document
 
 ---
@@ -738,6 +738,7 @@ Project Relatio adopts:
 |1.2|2026-07-11|Adopted|GB-2026-019 co-primary decision: §3 note operationalizing relationship centrality as **co-primacy with entities**, coherent with KOS-0004 (OP-003). *(Refined in v1.3.)*|
 |1.3|2026-07-11|Adopted|Refined the §3 note (owner-directed, tracking KOS-0004 v1.3): co-primacy stated as the **default modeling lens**, with entity-first and strong-relational ontologies held as viable perspectives under ontological humility (OP-006/OP-008) rather than rejected.|
 |1.4|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
+|1.5|2026-07-25|Adopted|`ai_degree` corrected from the ADR-GOV-0011 backfill default to the owner's determination (GB-2026-042; authorized by GB-2026-056). Field only; no content change.|
 
 ---
 

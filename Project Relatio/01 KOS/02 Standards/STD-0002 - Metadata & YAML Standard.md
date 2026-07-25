@@ -1,7 +1,7 @@
 ---
 title: STD-0002 - Metadata & YAML Standard
 document_type: Standards Document
-version: 1.13
+version: 1.14
 status: Adopted
 operational_status: Active
 category:
@@ -29,7 +29,7 @@ attribution:
     role: Vision Steward
     event: created
     date: 2026-07-09
-    ai_degree: ai-delegated
+    ai_degree: ai-assisted
     ai_model_family: Claude
 ---
 
@@ -37,7 +37,7 @@ attribution:
 
 # Project Relatio Metadata & YAML Standard
 
-## Version 1.13
+## Version 1.14
 ## Adopted Standards Document
 
 ---
@@ -883,6 +883,7 @@ Project Relatio adopts:
 |1.11|2026-07-22|Adopted|Added to the §11 **Entity Records (tradition class)** subsection three **OPTIONAL, render-only positioning fields** — `range_start_year` (integer, BCE negative), `range_end_year` (integer or the literal `present`), and `range_uncertainty` (`low`/`moderate`/`high`) — enabling the proportional SVG timeline view (owner-ratified upgrade from Path A). **Non-evidential:** derived from and bounded by the entity's dating claim(s), inheriting that claim's confidence; a bar drawn from them must never render more certain than the claim warrants; `display_range` remains the authoritative label. `range_uncertainty` maps reproducibly from the confidence of the claim's **emergence/crystallisation-dating component** (High/VeryHigh→low, Moderate→moderate, Low/VeryLow→high; non-temporal descent/classification components do not govern it — refines the ADR-GOV-0009-brief phrasing "weakest component," which read literally would let a Low *descent* grade mis-mark a well-dated tradition). OPTIONAL: a tradition without them renders by a documented undated/sequence-only fallback (never invented coordinates); when any is present, `range_start_year` and `range_uncertainty` are co-required, `range_end_year` optional (absent = terminus not claim-dated; `present` = living). Additive only — no existing field removed, renamed, or redefined. Validator shape-check (integer years or `present`; uncertainty vocabulary; start+uncertainty co-presence) at error level, enabled only after the four existing tradition entities were backfilled this session (vault green at every boundary).|
 |1.12|2026-07-22|Adopted|Added the **required `attribution` field** on every formal Knowledge Object, enacting **ADR-GOV-0011** Decisions B and C (Stage 1, record-level). Added to §5's required-field list; defined as a new `# attribution` section in §6 (the home of universally-required fields, chosen over a new numbered section so that §7–§18 are **not renumbered** and every external citation of §7/§8/§10/§11/§12.1 stays valid); binding rules in new **§6.1**. **ALWAYS A LIST**, minimum one entry, exactly one at Stage 1 with `event: created` — never a scalar, so Stage 2's per-event attribution (deferred, ADR-GOV-0011 §8) extends it **additively** rather than by migration (the `confidence` always-a-list precedent). Each entry carries `actor` (named human; an AI is never the actor), `role` (free string, ROLE-#### where applicable — **no controlled enum**, lanes/roles do not exist, ADR-GOV-0011 §7), `event` (`created` only at Stage 1), `date` (§10), `ai_degree` (controlled: `unassisted`/`ai-assisted`/`ai-delegated`), and `ai_model_family` (free string, or `none` iff `unassisted`). §6.1 states the three-field distinction that must not be conflated (**`attribution` = provenance** vs §8 `owner` = **stewardship** vs §11 `source_author` = **the external source's author**), the **binding family-level independence rule** (same model family is same-kind regardless of version or operator; same-family-assisted work does not sum toward independence — Decision C), the **binding selective-visibility constraint** (durable but withholdable at review time; no surface used for blinded review may render it unconditionally) with its small-n honesty limit, and the **Decision E metric prohibition**. Cross-reference notes added to §8 and §11; §14's example block updated. The full corpus (335 formal Knowledge Objects, this standard included) was backfilled in **this same commit**, each entry dated from that record's own `created` field — never the migration date — as a **best-effort record-level characterization**, with a candidate exception list reported for owner hand-correction rather than the degree being guessed at. The validator's presence/shape check was enabled at **error** level only in the **following** commit (backfill before enforcement; vault green at every boundary). Additive only — no existing field removed, renamed, or redefined.|
 |1.13|2026-07-24|Adopted|**Enacts ADR-GOV-0012 D2/D3/D4 — the multi-granularity entity layer.** Added to §11 the **REQUIRED-AT-MINT `rendering_class` field** carrying the D2 controlled vocabulary `tradition` / `substrate` / `community`, required on any entity carrying a class field set and **absent on the seven concept entities**, which stay outside the timeline program and untouched. Added the §11 subsection **Entity Records (community class)** with the D4 **attestation-window** semantics — `attestation_claims` (graph-claim pointers, §12.1; Claim or Finding Records), `attestation_window` (render-only string), and `attestation_uncertainty` (`low`/`moderate`/`high`, confidence-inheriting from the weakest **temporally relevant** component of the warranting records, non-temporal components excluded per the v1.11 precedent and the exclusion recorded per entity). **A community entity carries a WINDOW, NEVER a founding date:** the tradition-class trio and the render-only positioning bounds are **forbidden** on the community class, so no numeric geometry and no founding-date-style bar can exist for one; honest imprecision is preserved, and widening a window under uncertainty is permitted where narrowing it is not. `rendering_class: substrate` is established as a class with **no field set** — substrate rendering and its dating question are deferred by ADR-GOV-0012 D7 and no substrate entity is minted; the value exists so the class is reachable later without reopening governance. Community entities are **off-timeline at launch** (D7) and bind to the tradition layer through the non-evidential `projects_to` relation (STD-0004). Additive only — no existing field removed, renamed, or redefined; ENT-0008…ENT-0015 were backfilled as `tradition` (field + history row only) in a **separate, preceding commit**, and the validator's `rendering_class` presence check was promoted from warning to **error** only in the commit **after** that backfill (define → backfill → enforce; vault green at every boundary). Community-class shape checks (co-presence, list/string/vocabulary, forbidden-field rule) land at error level from introduction, since they guard births and no community entity existed before this ADR.|
+|1.14|2026-07-25|Adopted|`ai_degree` corrected from the ADR-GOV-0011 backfill default to the owner's determination (GB-2026-042; authorized by GB-2026-056). Field only; no content change.|
 
 ---
 

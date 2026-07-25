@@ -1,7 +1,7 @@
 ---
 title: ADR-GOV-0004 - Governance Hygiene Closure Decision Tiering and Reference Integrity
 document_type: Architecture Decision Record
-version: 1.1
+version: 1.2
 status: Adopted
 operational_status: Active
 created: 2026-07-20
@@ -26,7 +26,7 @@ attribution:
     role: Vision Steward
     event: created
     date: 2026-07-20
-    ai_degree: ai-delegated
+    ai_degree: ai-assisted
     ai_model_family: Claude
 ---
 
@@ -198,6 +198,7 @@ the rule's home or trigger is wrong.
 |---|---|---|---|
 |1.0|2026-07-20|Adopted|Records the four-rule governance-hygiene package (D1–D4). Closes GB-2026-031.|
 |1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
+|1.2|2026-07-25|Adopted|`ai_degree` corrected from the ADR-GOV-0011 backfill default to the owner's determination (GB-2026-042; authorized by GB-2026-056). Field only; no content change.|
 
 ---
 

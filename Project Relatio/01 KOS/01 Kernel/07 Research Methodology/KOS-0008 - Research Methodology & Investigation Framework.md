@@ -1,7 +1,7 @@
 ---
 title: KOS-0008 - Research Methodology & Investigation Framework
 document_type: Kernel Operating System Document
-version: 1.2
+version: 1.3
 status: Adopted
 operational_status: Active
 category:
@@ -29,7 +29,7 @@ attribution:
     role: Vision Steward
     event: created
     date: 2026-07-09
-    ai_degree: ai-delegated
+    ai_degree: ai-assisted
     ai_model_family: Claude
 ---
 
@@ -37,7 +37,7 @@ attribution:
 
 # Project Relatio Research Methodology & Investigation Framework
 
-## Version 1.2
+## Version 1.3
 ## Adopted Kernel Document
 
 ---
@@ -689,6 +689,7 @@ Project Relatio adopts:
 |1.0|2026-07-09|Adopted|Finalized research methodology framework|
 |1.1|2026-07-11|Adopted|**GB-2026-021 (owner-directed):** §8 aligned to the single canonical hybrid confidence scale defined in KOS-0003 §8 — added the numeric **Level** column (Level 5…0) to the qualitative table and an **Unsupported** (Level 0) floor, so KOS-0008 and KOS-0003 present one scale ("Level N (Label)"), not two.|
 |1.2|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
+|1.3|2026-07-25|Adopted|`ai_degree` corrected from the ADR-GOV-0011 backfill default to the owner's determination (GB-2026-042; authorized by GB-2026-056). Field only; no content change.|
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: CON-0001 - Project Relatio Vision, Mission & Core Principles
 document_type: Constitutional Instrument
-version: 1.2
+version: 1.3
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -18,7 +18,7 @@ attribution:
     role: Vision Steward
     event: created
     date: 2026-07-09
-    ai_degree: ai-delegated
+    ai_degree: ai-assisted
     ai_model_family: Claude
 ---
 # CON-0001
@@ -451,3 +451,4 @@ Project Relatio adopts:
 |0.2|2026-07-09|Revised Draft|Incorporated architectural critique|
 |1.1|2026-07-11|Adopted|Recorded the prior v1.0 adoption (frontmatter showed Adopted without a revision entry); added the missing `created` date; reconciled §11 stewardship functions with CON-0003's five (foundational audit fixes 1–2).|
 |1.2|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
+|1.3|2026-07-25|Adopted|`ai_degree` corrected from the ADR-GOV-0011 backfill default to the owner's determination (GB-2026-042; authorized by GB-2026-056). Field only; no content change.|

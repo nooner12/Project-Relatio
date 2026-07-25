@@ -1,7 +1,7 @@
 ---
 title: ADR-GOV-0002 - Guardrail and Scope Reframe
 document_type: Architecture Decision Record
-version: 1.1
+version: 1.2
 status: Adopted
 operational_status: Active
 created: 2026-07-11
@@ -33,7 +33,7 @@ attribution:
     role: Vision Steward
     event: created
     date: 2026-07-11
-    ai_degree: ai-delegated
+    ai_degree: ai-assisted
     ai_model_family: Claude
 ---
 
@@ -116,5 +116,6 @@ Revisit if (a) the justify-by-use test is observed drifting back into either ove
 |---|---|---|---|
 |1.0|2026-07-11|Adopted|Initial decision record. Reframes the over-architecture guardrail (fear → merit-based purpose principle; origin as a ChatGPT-restraint disclosed) and clarifies the health/education scope (inquiry unbounded; outward individualized claims and third-party reliance bounded). Motivated-reasoning hazard of an AI recommending looser AI-constraints recorded and mitigated by keeping the justify-by-use discipline.|
 |1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
+|1.2|2026-07-25|Adopted|`ai_degree` corrected from the ADR-GOV-0011 backfill default to the owner's determination (GB-2026-042; authorized by GB-2026-056). Field only; no content change.|
 
 # End ADR-GOV-0002

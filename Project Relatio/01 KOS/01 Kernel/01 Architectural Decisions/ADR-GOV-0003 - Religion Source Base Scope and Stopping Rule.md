@@ -1,7 +1,7 @@
 ---
 title: ADR-GOV-0003 - Religion Source Base Scope and Stopping Rule
 document_type: Architecture Decision Record
-version: 1.1
+version: 1.2
 status: Adopted
 operational_status: Active
 created: 2026-07-19
@@ -27,7 +27,7 @@ attribution:
     role: Vision Steward
     event: created
     date: 2026-07-19
-    ai_degree: ai-delegated
+    ai_degree: ai-assisted
     ai_model_family: Claude
 ---
 
@@ -177,6 +177,7 @@ family-open extent-statement mechanism proves unworkable in practice.
 |---|---|---|---|
 |1.0|2026-07-19|Adopted|Records the source-base fork resolution and the hybrid stopping rule (GB-2026-030).|
 |1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
+|1.2|2026-07-25|Adopted|`ai_degree` corrected from the ADR-GOV-0011 backfill default to the owner's determination (GB-2026-042; authorized by GB-2026-056). Field only; no content change.|
 
 ---
 

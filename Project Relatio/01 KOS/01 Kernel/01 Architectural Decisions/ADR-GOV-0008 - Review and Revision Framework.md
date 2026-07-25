@@ -1,7 +1,7 @@
 ---
 title: ADR-GOV-0008 - Review and Revision Framework
 document_type: Architecture Decision Record
-version: 1.1
+version: 1.2
 status: Adopted
 operational_status: Active
 created: 2026-07-21
@@ -28,7 +28,7 @@ attribution:
     role: Vision Steward
     event: created
     date: 2026-07-21
-    ai_degree: ai-delegated
+    ai_degree: ai-assisted
     ai_model_family: Claude
 ---
 # ADR-GOV-0008
@@ -123,6 +123,7 @@ Revisit if (a) the trigger vocabulary proves incomplete (a real revision need ar
 |---|---|---|---|
 |1.0|2026-07-20|Adopted|Initial review-and-revision framework: typed triggers (graph events in scope), trigger→scope→act resolution, grade-authority bound on re-affirmation, epistemic-strength cadence, optional bounded_by sensitivity structure at ingestion (no retroactive migration), unified queue with ADR-GOV-0007. Operationalizes KOS-0011 §12.|
 |1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
+|1.2|2026-07-25|Adopted|`ai_degree` corrected from the ADR-GOV-0011 backfill default to the owner's determination (GB-2026-042; authorized by GB-2026-056). Field only; no content change.|
 
 ---
 

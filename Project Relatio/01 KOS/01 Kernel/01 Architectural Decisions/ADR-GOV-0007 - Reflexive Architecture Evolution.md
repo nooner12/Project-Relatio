@@ -1,7 +1,7 @@
 ---
 title: ADR-GOV-0007 - Reflexive Architecture Evolution
 document_type: Architecture Decision Record
-version: 1.1
+version: 1.2
 status: Adopted
 operational_status: Active
 created: 2026-07-20
@@ -27,7 +27,7 @@ attribution:
     role: Vision Steward
     event: created
     date: 2026-07-20
-    ai_degree: ai-delegated
+    ai_degree: ai-assisted
     ai_model_family: Claude
 ---
 
@@ -124,6 +124,7 @@ Revisit if (a) the deferred self-execution capability (§5) is seriously conside
 | ------- | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 1.0     | 2026-07-20 | Adopted | Initial reflexive-evolution instrument: provisional-anchor doctrine with anchor discipline; reflexive-findings-inform-not-self-execute rule; deferred maturity-gated self-execution with evidenced-threshold requirement and transferable-ratification-seat design; graduation path to KOS-0011 recorded. Cites STD-0005 §27; relates to ADR-GOV-0006. |
 |1.1|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
+|1.2|2026-07-25|Adopted|`ai_degree` corrected from the ADR-GOV-0011 backfill default to the owner's determination (GB-2026-042; authorized by GB-2026-056). Field only; no content change.|
 
 ---
 

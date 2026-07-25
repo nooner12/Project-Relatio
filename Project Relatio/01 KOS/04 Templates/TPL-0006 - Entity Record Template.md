@@ -1,7 +1,7 @@
 ---
 title: TPL-0006 - Entity Record Template
 document_type: Template
-version: 1.4
+version: 1.5
 status: Adopted
 operational_status: Active
 created: 2026-07-21
@@ -22,7 +22,7 @@ attribution:
     role: Vision Steward
     event: created
     date: 2026-07-21
-    ai_degree: ai-delegated
+    ai_degree: ai-assisted
     ai_model_family: Claude
 ---
 
@@ -310,6 +310,7 @@ attribution:              # provenance (STD-0002 §6 / ADR-GOV-0011 Decision B) 
 |1.2|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 |1.3|2026-07-22|Adopted|Added the required `attribution` stub to the emitted frontmatter (STD-0002 v1.12 §6 / ADR-GOV-0011 Decision B), so records created from this template are **born conformant** against the now-error-level attribution check. Template-side only — no field, rule, or body section changed.|
 |1.4|2026-07-24|Adopted|**Made the template mint ADR-GOV-0012-conformant entities.** Added the REQUIRED-AT-MINT `rendering_class` field to the tradition-class skeleton (D3) and added a third, **community-class skeleton** (D2/D4/D8): `rendering_class: community`, the attestation-window trio (`attestation_claims` / `attestation_window` / `attestation_uncertainty`), a `projects_to` example with its no-qualifier/no-warrant/no-confidence rule stated inline, and a body whose §3 forces the derivation to be shown — which component the window comes from, and **which components were excluded as non-temporal and what they grade instead**. The skeleton carries **no** tradition fields and **no** render-only positioning bounds, and says why: a community entity has an **attestation window, not a founding date**, so it has no numeric geometry to draw. The `substrate` class is named in the how-to-use note as **established but skeleton-less** (D7 defers its build) so no session invents one. Concept-class skeleton unchanged except for the note that it carries no `rendering_class`. **Not named in ADR-GOV-0012 §5's affected-objects list, and updated anyway on a mechanical reading of D3:** a field required *at mint* whose mint instrument does not emit it would make every future entity born non-conformant. Template-side only — no field, rule, or vocabulary was decided here that STD-0002 v1.13 and STD-0004 v1.5 do not already carry.|
+|1.5|2026-07-25|Adopted|`ai_degree` corrected from the ADR-GOV-0011 backfill default to the owner's determination (GB-2026-042; authorized by GB-2026-056). Field only; no content change.|
 
 ---
 
