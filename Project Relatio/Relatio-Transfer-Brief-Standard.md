@@ -228,9 +228,32 @@ belong in every H brief:
   generalization in order to stay in scope would contradict the derivation
   discipline. Three of the MOC's fourteen defects were found only this way.
 
+**H2. Structural relocation** — an existing vault document is **reorganized**:
+content moves, nothing is rewritten. Shares H's input class (a recorded finding)
+and H's output (a version bump, no identifier consumed), but differs **in kind,
+not size**. H's instrument choice is patch-versus-rewrite; in H2 neither applies,
+because no text is patched and none is rewritten. Four things belong in every H2
+brief:
+
+- **Classification before execution.** Where the defect is structural and the
+  subjects are many, the OUTPUT carries a per-subject classification with the
+  governing evidence, **reported before the change is made**. The A1 job had one
+  defect and fifty-four subjects; the labour was classifying, not dispositioning.
+- **Verbatim relocation with an entry-count reconciliation.** State the count
+  before and after. A silently dropped subject cannot hide in a large diff.
+- **Heading-level stability as an anchor guarantee.** Moving content must not
+  change heading levels, or `[[Document#Anchor]]` links break. Insert **siblings
+  rather than subsections**; §2A and KOS-0005 §6A are the house precedent.
+- **Report, do not fix, same-class discoveries.** This **inverts H's
+  pre-authorization.** In H, finding another defect of the same class licenses
+  fixing it. In H2, fixing it would mean editing content that is only supposed to
+  be moving, so it is reported and left. A drafter working from H's text alone
+  will write exactly the wrong clause.
+
 *Still unresolved:* the **creation** of an interpretive navigation document (the
 MOC v0.1 job) fits no type and has one instance. H covers revising such a
-document, not authoring one. Do not stretch it.
+document and H2 relocating content within one; neither covers authoring one. Do
+not stretch either.
 
 ---
 
