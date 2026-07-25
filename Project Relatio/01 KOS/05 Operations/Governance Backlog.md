@@ -1,7 +1,7 @@
 ---
 title: Governance Backlog
 document_type: Governance Record
-version: 1.43
+version: 1.44
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -22,7 +22,7 @@ tags:
 
 # Governance Backlog
 
-## Version 1.43
+## Version 1.44
 
 ## Active Governance Record
 
