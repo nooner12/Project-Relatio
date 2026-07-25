@@ -1,7 +1,7 @@
 ---
 title: STD-0004 - Relationship & Linking Standard
 document_type: Standards Document
-version: 1.5
+version: 1.6
 status: Adopted
 operational_status: Active
 created: 2026-07-09
@@ -35,7 +35,7 @@ attribution:
 
 # Project Relatio Relationship & Linking Standard
 
-## Version 1.5
+## Version 1.6
 ## Adopted Standards Document
 
 ---
@@ -185,6 +185,8 @@ Examples:
 # 7. Approved Relationship Vocabulary
 
 Version 1.0 adopts the following foundational relationship types.
+
+> **Two relationship vocabularies — do not confuse them.** Every type defined below connects **Knowledge Objects to one another** (a claim to its source, a finding to its claims, a standard to what it defines). None of them describes the world being studied. Relationships **in the world** — causal, ethical, spiritual, and the rest — are a **separate vocabulary** (RT-001…RT-009), modeled *inside* objects rather than as links between them, and **KOS-0005 is authoritative for it.** A single investigation uses both layers. Never encode a world/content relationship as a graph relation from this vocabulary, and never read a graph relation as a claim about the world. Reciprocal to the note at KOS-0005 §5.
 
 ---
 
@@ -585,6 +587,7 @@ Meaningful relationships transform stored information into structured knowledge.
 |1.3|2026-07-22|Adopted|**Anchor-vocabulary review (ADR-GOV-0009 §7(a)) enacting ADR-GOV-0010 D1/D3.** Added a sixth `branches_from` qualifier **`continuation`** (B carries forward A's principal/main line rather than departing — the least-departed descendant after a rupture; distinguished from `reform` by the absence of a departure connotation) in response to INV-0017's demonstrated inability to name a main-line-continuation edge (Rabbinic Judaism); list now schism/reform/syncretic-descent/heterodox-offshoot/disputed/continuation. Added §7.2 the two-`reform`-vocabularies disambiguation note (the `branches_from` qualifier `reform` and the STD-0002 `tradition_type` value `reform` are different fields sharing a word, never conflated). **Additive repair of a demonstrated gap — the qualifier list stays PROVISIONAL (ADR-GOV-0010 D5); NOT a promotion toward durable.** The `graph_integrity.py` enforced set was extended to match.|
 |1.4|2026-07-22|Adopted|attribution backfill (Stage 1, record-level, best-effort) per ADR-GOV-0011 Decision B|
 |1.5|2026-07-24|Adopted|**Enacts ADR-GOV-0012 D5 and D6 in ONE bump** (both landed in a single commit; the two vocabulary entries are one governance package under D1 and are never scoped separately). **D5 — `projects_to` created (NON-EVIDENTIAL).** Directional non-tradition entity → tradition entity, multi-target, **machine-traversable** (entries are graph claims; a dangling `projects_to` is an error, because roll-up rendering will traverse it). It asserts a **modeling projection for display** and nothing about the world: **no `qualifier` key, no warrant rule, no confidence component** — each recorded explicitly and enforced at error level so a later reader cannot mistake it for an evidential edge. Reuse of `bounded_by`, `part_of`, and `instance_of` was considered and rejected on the record (ADR-GOV-0012 §3). **Scope limit carried into the entry: defined and demonstrated for the community-to-tradition case ONLY; substrate adequacy expressly untested and deferred (D7), and `projects_to` sets no precedent for how the substrate case is eventually modeled.** **D6 — `influenced_by` created**, exactly to INV-0018's Anchor Fit Part 2 specification and neither weakened nor extended: **asymmetric** (mutual influence is two explicit edges; never auto-reciprocated, never a reciprocity-advisory candidate), **ENT → ENT**, **multi-target from birth**, a **minimal, explicitly provisional** `documented` / `contested` qualifier list (minimal by design — freezing a list before use is the error ADR-GOV-0010 had to repair), and a warrant rule of **graded claim(s) PLUS a REQUIRED recorded not-descent determination**, the latter **constitutive**: without it the type becomes the soft option that empties the edge-restraint rule of force, so no instance may exist without one. **Render posture at creation: NOT rendered on the default timeline** (D7); roll-up through `projects_to` is specified as intended future behavior and **not built**, carrying the hard constraint that a node whose only edges are `influenced_by` must still read as a **root**. Added **§7.3** defining the encoding of both types — `influenced_by`'s `qualifier` + the two **structured, resolvable** keys `warrant` (non-empty list of graded records) and `not_descent` (the record carrying the determination, which may also appear in `warrant`), and `projects_to`'s deliberately empty encoding — with the reason the `influenced_by` warrant is **tool-checked** where `branches_from`'s is review-checked. Extended **§7.2**: `qualifier` is now required on two types with **separate** controlled lists and is **expressly forbidden on `projects_to`** (malformed, not ignored). `graph_integrity.py` enforces every rule above at error level, with fixtures proving each check FIRES. Additive — the thirteen existing types are unchanged, and INV-0018's `branches_from` refusal is untouched.|
+|1.6|2026-07-25|Adopted|**Added the reciprocal two-vocabulary cross-reference to KOS-0005, at the head of §7** — supplying the follow-up GB-2026-018 recorded as outstanding ("STD-0004 reciprocal cross-ref for the two-vocabulary distinction remains a small pending follow-up") and never performed. **STD-0004 previously contained ZERO references to KOS-0005** (verified by search across `02 Standards` before the edit), so the distinction was stated from one side only: a reader arriving at this standard's vocabulary had nothing telling them a second, different relationship vocabulary exists. The note states the distinction from STD-0004's side — every type in §7 connects **Knowledge Objects to one another** and none describes the world being studied — and points to **KOS-0005 as authoritative** for the world/content vocabulary (RT-001…RT-009), which is modeled inside objects rather than as links between them. Deliberately short: a cross-reference, not a restatement of KOS-0005's model. **No vocabulary change, no type added, amended, or removed; no encoding rule altered.** Closes the GB-2026-018 follow-up (Governance Backlog v1.47).|
 
 ---
 
