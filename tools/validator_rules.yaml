@@ -34,6 +34,8 @@ document_types:
       - Identifier Registry
       - Standing Authorizations
       - CLAUDE
+      - Map of Content
+      - Transfer-Brief
 
     requires_yaml: false
     requires_identifier: false
