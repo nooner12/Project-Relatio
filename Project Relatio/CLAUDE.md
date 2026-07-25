@@ -135,7 +135,7 @@ The essentials (full detail in ROLE-0001):
 
 **Delegated standing authority** (what a session may do without asking) is recorded in `05 Operations/Standing Authorizations.md`. In-session grants like "keep going" are **session-scoped only** and don't persist.
 
-**Transfer Brief Standard** — `Relatio-Transfer-Brief-Standard.md`, at the **repo root** (beside `README.md`, outside the `Project Relatio` vault directory). It records the owner's working convention for writing the transfer briefs that carry work from the claude.ai support surface into a Claude Code session. It is **DESCRIPTIVE and has no authority over the vault**: no identifier, no Registry entry, not a Knowledge Object, and governed by nothing here. Read it when writing or receiving a brief; never cite it as a rule.
+**Transfer Brief Standard** — `Relatio-Transfer-Brief-Standard.md`, in the vault root beside this file. It records the owner's working convention for writing the transfer briefs that carry work from the claude.ai support surface into a Claude Code session. It is **DESCRIPTIVE and has no authority over the vault**: no identifier, no Registry entry, not a Knowledge Object, and governed by nothing here. Read it when writing or receiving a brief; never cite it as a rule.
 
 ## Current position and priority order
 
