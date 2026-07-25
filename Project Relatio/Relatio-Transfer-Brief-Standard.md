@@ -3,15 +3,9 @@
 
 **Status.** This is a DESCRIPTIVE working convention, not a governed vault
 object. It has no identifier, no version in the Registry, and no authority over
-the vault. It captures the brief-writing practice developed across some two
-dozen briefs (2026-07-20 → 2026-07-25) so a new support-surface chat can write
-briefs to the same standard instead of re-deriving it. Adjust it freely; it
-describes craft, not law.
-
-*The count stays approximate on purpose.* Briefs are not vault objects and are
-tracked nowhere in the repo, so no exact figure is derivable; "some two dozen"
-is a floor read off the session arcs recorded in CLAUDE.md's currency notes and
-the Backlog history rows. Do not sharpen it into a precise number.
+the vault. It captures the brief-writing practice developed 2026-07-20 →
+2026-07-25 so a new support-surface chat can write briefs to the same standard
+instead of re-deriving it. Adjust it freely; it describes craft, not law.
 
 ---
 
@@ -119,6 +113,14 @@ These do not live in the agent's head. If a brief needs one, it states it.
   "all four…", "each of these…" must be checked against every member, or
   rewritten to claim only what holds. The MOC carried three such claims that one
   member each contradicted.
+- **A count that cannot be derived is not carried at all.** If nothing in the
+  repo tracks the thing being counted, there is no honest figure to write —
+  approximate, hedged, or protected by a do-not-sharpen note. Delete it rather
+  than maintain it. This document's own header carried "some two dozen briefs"
+  under exactly such a note until 2026-07-25; briefs leave no tracked artifact,
+  so the figure was unverifiable by construction and an unverifiable figure is
+  worse than none. Same instrument the Knowledge Base Map of Content used when
+  it deleted its cluster count rather than correcting it.
 
 **Commit hygiene (the graph must validate at every boundary)**
 - Backfill BEFORE flipping enforcement on. Never leave the vault red between
