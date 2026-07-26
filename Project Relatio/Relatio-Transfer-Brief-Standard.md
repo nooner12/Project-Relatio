@@ -93,6 +93,46 @@ Rules embedded there, each learned the hard way:
 
 These do not live in the agent's head. If a brief needs one, it states it.
 
+**Transfer integrity**
+- **A verbatim payload travels as a FILE, never as pasted chat text.** Any text
+  destined to be written into the vault unchanged is delivered as an attached
+  file. Chat renderers consume markdown emphasis and alter code markers in
+  transit, and they do it UNEVENLY, so partial survival reads as a style
+  inconsistency rather than as corruption. On 2026-07-25 a pasted brief arrived
+  with its `**` pairs eaten; the executing agent correctly refused to write the
+  flattened payload into the vault, and the same brief re-sent as a file arrived
+  intact.
+- **Every verbatim payload carries a MARKER-COUNT CHECKSUM** the receiving agent
+  can verify before it writes anything — the total emphasis-marker count and a
+  per-line breakdown. It is mechanical, it is cheap, and it fires before the
+  damage reaches the vault rather than after.
+- **The checksum EXCLUDES code spans.** A payload that *discusses* markdown
+  carries emphasis characters as literal content, and a naive count reads them
+  as markup. This is not hypothetical: the count that produced this entry
+  reported four defects in a brief that had one, because the brief quoted `**`
+  inside backticks. A checksum that fails on every document about formatting is
+  worse than no checksum, because its false alarms are indistinguishable from
+  its true ones.
+- **An ODD marker count is a defect in the brief itself**, independent of
+  transit — an unpaired marker is bad markdown before anyone pastes it. It is
+  also the signature of corruption elsewhere, because a renderer cannot consume
+  an unpaired marker, so the unpaired one is exactly what survives.
+- **The RETURN leg needs the same protection.** An execution report carrying
+  text the drafter intends to check byte-for-byte comes back as a file, or with
+  its own fingerprint. A flattened brief announces itself; a flattened report
+  just looks like a report.
+- **A verbatim-match precondition must NAME THE DIMENSION of the match** —
+  content, or bytes including whitespace and line wrapping. Never "if it differs
+  in any respect." A brief that wraps its quoted target for readability and then
+  demands byte-equality has written a precondition the vault cannot satisfy in
+  any state.
+- **Any fingerprint or count states the SCOPE it was computed over, in the same
+  breath as the number.** "Two top-level bullets" is not a check until it says
+  two top-level bullets *of what*. The authority of a mechanical figure makes a
+  mis-scoped one harder to question than a plain assertion would have been.
+
+*The incidents behind this group are recorded in §8.*
+
 **Provenance and derivation**
 - DERIVE FROM THE RECORD, NOT FROM THE BRIEF. Where a brief offers guidance
   values (dates, bounds, grades), instruct the agent to derive them from the
@@ -109,6 +149,15 @@ These do not live in the agent's head. If a brief needs one, it states it.
   reason is exactly where a second error hides. On the MOC review, two of the
   three write-time defects sat inside sentences the review had already flagged
   for a *different* reason.
+- **A SURPRISING check result is re-derived by a second method before it is
+  reported.** The check itself can be wrong. A drafter's own shell one-liner
+  reported a doubled-backtick count of 1 where the true value was 0 — a quoting
+  artifact inside the check, not a defect in the thing checked — caught only by
+  re-deriving the result with a different tool, and one relay-hop away from
+  sending an agent to repair a defect that did not exist. This is a companion to
+  the other derivation disciplines, not a substitute for any of them: derive at
+  write time, re-derive without selection, and re-derive a surprise by another
+  route.
 - **A cross-member generalization is a count in disguise.** "Both records…",
   "all four…", "each of these…" must be checked against every member, or
   rewritten to claim only what holds. The MOC carried three such claims that one
@@ -129,6 +178,23 @@ These do not live in the agent's head. If a brief needs one, it states it.
   precedes its warrant in history.
 - Interactive/long jobs commit in small batches so an interruption leaves a
   clean, resumable state.
+
+**Version coherence**
+- **The check is SELF-SCOPING, and silent below two elements.** `validate.py`
+  compares whichever of three it finds — the `version:` frontmatter field, a
+  `## Version <n.n>` body heading, and the newest row of the document's own
+  `# Revision History` table (newest by parse-and-max, never by position) — and
+  runs only where at least two are present, because one element has nothing to
+  disagree with. **A `## Version` heading is NOT universally required.** Derived
+  2026-07-25 over the 413 files in the validator's scan set: 356 carry a
+  `version:` field and no `## Version` heading at all.
+- **So instruct that ALL the elements a document actually carries move together
+  — and never state the rule as an absolute.** "A version bump must change both
+  the frontmatter field and the `## Version` heading" is true of the minority of
+  records that carry both and false of the rest; stated absolutely it invites a
+  session to INVENT a heading, or a history table, to satisfy a check that does
+  not demand one. Name the elements the target actually has, instruct that those
+  move together, and forbid adding new ones to satisfy the rule.
 
 **Testing**
 - PROVE THE POSITIVE (house convention): every new check gets a fixture proving
@@ -382,6 +448,35 @@ DO NOT
   instead (cite standards without a version unless load-bearing).
 - **Assuming a scaffold's working hypotheses are conclusions.** State that
   hypotheses are TESTED, not assumed. Two have now been overturned by evidence.
+- **Writing an unsatisfiable precondition.** A brief's Task 0 quoted its target
+  line WRAPPED across three indented lines for readability, then instructed
+  "VERIFY VERBATIM. If it differs in any respect, STOP." The vault carried the
+  line unwrapped, so no state of the vault could satisfy the precondition and
+  execution halted on a false positive. The agent behaved correctly; the brief
+  was unsatisfiable by construction. Name the dimension of the match — see §4,
+  *Transfer integrity.*
+- **Reading uneven corruption as inconsistent style.** A pasted brief lost its
+  `**` pairs to a chat renderer — but not all of them. One marker in the payload
+  was UNPAIRED, and a renderer cannot consume an unpaired marker, so that one
+  survived. The survivor made transit damage look like careless formatting.
+  Uneven emphasis in a received payload is a corruption signal until shown
+  otherwise, and the odd count that produces it is a defect in its own right —
+  see §4, *Transfer integrity.*
+- **Trusting the return leg.** The outbound brief was protected and the inbound
+  execution report was not. A report pasted back through the chat surface
+  arrived with single backticks doubled and its bullet indentation lost: the
+  vault file was clean and the *report* was the lossy copy, so the drafter was
+  reviewing damage that existed nowhere but in the review. Confirmed by natural
+  experiment — the same content arrived corrupted as pasted text and byte-exact
+  as a file. Protect both legs — see §4, *Transfer integrity.*
+- **Fingerprinting the wrong scope.** A drafter computed a structural
+  fingerprint over the REPLACEMENT PAYLOAD — 2 top-level bullets, 3 sub-bullets
+  — and then asked for those counts over the WHOLE BACKLOG ENTRY, which carried
+  seven other bullets; over that scope the correct values were 8 and 6. The
+  check was right and the scope was wrong, and the false alarm would have sent
+  an agent to "correct" indentation that was already correct — a checksum
+  causing the damage it exists to prevent. State the scope in the same breath as
+  the number — see §4, *Transfer integrity.*
 
 ---
 
