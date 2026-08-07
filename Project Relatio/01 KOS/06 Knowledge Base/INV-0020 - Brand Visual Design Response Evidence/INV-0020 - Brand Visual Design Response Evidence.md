@@ -1,7 +1,7 @@
 ---
 title: INV-0020 - Brand Visual Design Response Evidence
 document_type: Investigation Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-08-07
@@ -133,13 +133,34 @@ Interiors are read where accessible (several records are open-access or live pag
 
 # 4. Findings / Synthesis
 
-**RESERVED for the circuit.** The six mandated claims and the synthesis (FND) do not exist at scaffold; identifiers are assigned at execution.
+**FILLED at circuit (Specialist pass, 2026-08-07).** The six mandated claims and the synthesis exist:
+
+- **CLM-0103 — Single-Hue Response Prescriptions (CLM-A).** The circulated hue code (live-read artifact, zero citations) against: universal-but-modulated color-emotion ASSOCIATIONS (30 nations, association-level, developmentally emergent preference), the field's own review stating application recommendations are not yet warranted (abstract verbatim), and the red-attraction replication record READ in full — pooled d = 0.26→0.19 / 0.13, I² 89%/53%, decline effect, preregistered subset d = −0.10, adversarial collaboration ending at odds. Explicit absence of any measured brand-asset hue-response transfer. Elements: Moderate ×4.
+- **CLM-0104 — Color Combination and Harmony Prescriptions (CLM-B).** The pre-authorized near-empty (iii), found emptier: NO measured response evidence for combinations in base; the nearest measured work (READ) is single-color preference (r = .893, 80% variance, explicitly no combination content); the harmony family sourceable only via the critique literature ("contradictory and ambiguous"); the 60-30-10 rule unsourceable in base. Elements: Low / Low / Moderate / Low.
+- **CLM-0105 — Typeface Character and Congruence (CLM-C, calibration anchor).** The base's most measured region — 210-typeface six-dimension impression measurement; font-product congruity on Osgood dimensions — at abstract-level access, single studies, no in-base replication, perception outcomes; population sub-elements explicitly absent. Elements: Moderate / Moderate / Moderate / Low.
+- **CLM-0106 — Mark Shape and Symbolism (CLM-D, calibration anchor).** Measured geometry (foundational 1998 logo study; five-experiment circularity/angularity program, abstract-level) kept structurally separate from symbolic-content claims beyond geometry, which have NO measured base here. Elements: Low / Moderate / Moderate / Low.
+- **CLM-0107 — Placement and Layout Attention Claims (CLM-E).** The three mandated strata: measured gaze allocation (232-user F-pattern, read live, with its own "rough, general shape" qualification); the visible-but-unmeasured extrapolation from gaze to effectiveness (located inside the origin artifact); the golden-ratio stratum verified to the accessible surface (peer-reviewed examination scoped to "false or seriously misleading" claims; interior scan-blocked, disclosed). Elements: Moderate / Moderate / Moderate / Low.
+- **CLM-0108 — Physiological Response Claims (CLM-F).** The least sourceable family; room-scale EEG/EKG evidence with the abstract's own PARADOXICAL heart-rate slowing; lab-vs-field divergence documented in the read meta (waiter/waitress minimal-to-negative); and the central explicit absence — no measured physiological response to any brand asset in this base; the transfer step uniformly unmeasured. Elements: Low / Low / Moderate / Moderate.
+- **FND-0020 — the synthesis:** prescriptions outrun measured response evidence in **all six regions within this base**, and the measured regions that exist are non-prescriptive in character (association-level, perception-level, small, context-dependent, adversely replicated, or setting-bound). Eight components; no Level 4, no Level 5; weakest Low (unread-interior coverage).
 
 ---
 
 # 5. Confidence Summary (KOS-0003 §8)
 
-**RESERVED for the circuit.** Native `Level N (Label)`, per component, never averaged: twenty-four claim components (four separable elements × six claims) plus the finding's components, filled at execution.
+**FILLED at circuit.** Native `Level N (Label)`, per component, never averaged. Twenty-four claim components (four separable elements × six claims) plus eight finding components:
+
+| Record | (i) prescriptive approach | (ii) stated rationale | (iii) measured response evidence | (iv) documented costs |
+|---|---|---|---|---|
+| **CLM-0103** (A — hue) | 3 (Moderate) | 3 (Moderate) | 3 (Moderate) | 3 (Moderate) |
+| **CLM-0104** (B — combination) | 2 (Low) | 2 (Low) | 3 (Moderate) | 2 (Low) |
+| **CLM-0105** (C — typeface) | 3 (Moderate) | 3 (Moderate) | 3 (Moderate) | 2 (Low) |
+| **CLM-0106** (D — mark shape) | 2 (Low) | 3 (Moderate) | 3 (Moderate) | 2 (Low) |
+| **CLM-0107** (E — placement) | 3 (Moderate) | 3 (Moderate) | 3 (Moderate) | 2 (Low) |
+| **CLM-0108** (F — physiological) | 2 (Low) | 2 (Low) | 3 (Moderate) | 3 (Moderate) |
+
+- **FND-0020:** six region pictures 3 (Moderate) · replication_record_adversity 3 (Moderate) · **unread_interior_coverage 2 (Low)** — the binding weakest component.
+- **No Level 5 anywhere; no Level 4 anywhere** — the pre-authorized outcome class realized. The absence of any Level 4 is driven jointly by genuine thinness and by access limits (fourteen of eighteen interiors unread) — the distinction is recorded per claim and in the reflexive section.
+- **Everything R0** — not cleared for external reliance regardless of closure; the reflexive section is additionally §7.6-gated.
 
 ---
 
@@ -158,6 +179,12 @@ Standing brackets, recorded at scaffold; circuit actuals are appended at executi
 - **The base is fixed at eighteen and does not represent the field (§2, §8).** Under-coverage is disclosed, never compensated for by reaching outside the base.
 - **Everything R0; reflexive output additionally §7.6-gated (§2.2).**
 
+**Circuit actuals (2026-08-07):**
+- **Interior-reading actuals (§3.1): four of eighteen interiors READ this session** — SRC-0165 (PMC full text), SRC-0172 (live article), SRC-0176 (PMC full text), SRC-0178 (live page); SRC-0161's **abstract retrieved verbatim** (PubMed) and used at abstract level only. **Fourteen interiors NOT read, disclosed and confined per claim:** SRC-0162/0163/0164/0166/0167/0168/0169/0170/0171/0174/0175 (paywalled or no open copy located; the one repository copy attempt for SRC-0169 failed on a certificate error), SRC-0173 (both hosted mirrors are JBIG2 page-image scans with no text layer — the INV-0019 SRC-0152 access-failure class), SRC-0177 (book form, no interior access). Per-source verification strength is recorded in each claim's Verification section, not averaged.
+- **The domain discipline held:** no organization, brand, product, or application decision is named anywhere in the six claims, the finding, or this record; the practitioner artifact's own use of brand logos is described generically in the records that cite it.
+- **The legibility boundary held:** SRC-0171's reading-behavior territory and the typeface literature's readability adjacency were noted and left unabsorbed (boundary notes in the reflexive section).
+- **Two candidate (iv) inferences were withheld at write time** rather than removed post-hoc, per §3.2, and are recorded in the reflexive section.
+
 ---
 
 # Reserved Reflexive Section (EMPTY at scaffold — filled and ROUTED at circuit, never applied)
@@ -167,6 +194,38 @@ Standing brackets, recorded at scaffold; circuit actuals are appended at executi
 > **Observations about what this investigation implies for Relatio's own structure, grading vocabulary, or method are RECOMMENDATIONS.** They are **routed to the Governance Backlog per ADR-GOV-0007 §3**, are **§7.6-reflexively-gated**, and are **NEVER self-applied in session.** No refinement to Relatio follows from this investigation except through separately recorded governance after closure.
 
 **Mandated contents at circuit (per the brief):** (a) any element-(iv) removals re-routed here; (b) the carried-forward **Moderate-discrimination observation** (does Moderate discriminate adequately when the content is absence? — including whether the CLM-C/D calibration anchors graded flat with the rest); (c) any routed Governance Backlog candidates, with identifiers; (d) the boundary notes toward the queued legibility investigation.
+
+## FILLED at circuit (2026-08-07) — ROUTED, NOT APPLIED
+
+**Independence disclosure (ADR-GOV-0011, binding):** this circuit is Claude-family throughout — it supplies **no independence of kind** for any §7.6 purpose, and nothing below may count toward promoting any anchor or practice from provisional toward durable.
+
+**Nothing below is enacted.** No standard, template, tool, field, or vocabulary was created or amended on account of anything in this section; no existing record was revised on account of it.
+
+### (a) Element-(iv) dispositions — two candidate inferences withheld at write time
+
+Per §3.2, an analyst-visible weakness no source discusses is an observation, not a claim element. Two candidate (iv) entries were identified during drafting and **withheld from the claims at write time** (so no post-hoc removal was needed; the reviewer is asked to verify none remains):
+
+1. *"Nationally modulated associations imply a single global hue code misfits somewhere"* — the modulation is documented (SRC-0162 abstract); the implication for palettes is analyst inference. Recorded here only.
+2. *"Documented individual-difference moderators imply uniform physiological prescriptions are unreliable"* — the moderation is documented (SRC-0174 abstract); the implication for prescriptions is analyst inference. Recorded here only.
+
+### (b) The Moderate-discrimination observation (carried forward from INV-0019's closure — second data point)
+
+**The question materialized in this circuit, sharply.** Level 3 (Moderate) is carrying at least three distinguishable epistemic situations in this investigation's grades: (1) a **well-documented absence** (CLM-0104 (iii): the emptiness is the finding, and it is well-established over the fixed base); (2) a **measured-but-access-capped positive** (CLM-0105 (iii): real peer-reviewed measurement, establishable only at abstract level); and (3) a **measured-and-read mixed picture** (CLM-0103 (iii): a fully read meta-analysis inside an otherwise surface-level element). The calibration anchors (CLM-C/D) **did grade flat with the absence-dominated claims** — driven substantially by access limits rather than by evidential equivalence — so within this record the discrimination among these situations is being done by prose and `reliance_note`, not by the grade. This is the second investigation in which the observation has arisen (INV-0019's reviewer raised it; this circuit reproduces it with more component contrast). **Routed as GB-2026-058** (below); nothing changed in-session.
+
+### (c) Routed Governance Backlog candidates
+
+- **GB-2026-058** — *Moderate-on-absence discrimination: second data point.* The observation in (b), routed per ADR-GOV-0007 §3 as an owner-reserved candidate (input only; no scale change, no new field, no vocabulary proposed by this session). Recorded in the Governance Backlog concurrently with this circuit's close-out.
+
+### (d) Boundary notes toward the queued reading-performance/legibility investigation
+
+1. **SRC-0171** (eye-tracking monograph) contains reading-behavior territory (how people read, not just where they look) that this investigation deliberately did not use; the queued INV should treat it as a candidate source rather than assuming this record consumed it.
+2. **SRC-0172's F-pattern** is a reading-of-text observation; its comprehension and reading-efficiency implications (as opposed to attention allocation) were left unabsorbed and belong to the queued INV.
+3. **The typeface literature (SRC-0167/0168) adjoins legibility research** (readability, reading speed) that is a different measured object from impression/congruence; the queued INV needs its own catalog pass there — nothing in this base covers legibility psychophysics, contrast thresholds, or aging vision, and that absence is a coverage note for the queued brief, not a finding of this one.
+
+### Analyst observations recorded here because they fail the element bar
+
+1. **The (i) pole was hardest to source for the strongest-sounding claims:** the physiological and combination families' canonical prescriptions could not be sourced in-base at all, while their measured literatures could — an inversion worth noting for future prep phases (catalog the prescription artifacts, not only the measurement literature).
+2. **The base's one live prescription artifact carries zero citations** (the executed trace); whether the wider practitioner literature is better-cited is unknown to this base and recorded as unknown.
 
 ---
 
@@ -222,12 +281,27 @@ From the catalog surface only; a source may bear on other claims, or on none —
 - The prep-phase source-to-source edges (`contrasts_with` SRC-0161↔SRC-0175; `related_to` SRC-0175↔SRC-0176, SRC-0167↔SRC-0168, SRC-0169↔SRC-0170) are existing catalogued edges recording documented literature relations; they are **not modified by this scaffold**.
 - The timeline-program types (`branches_from` / `projects_to` / `influenced_by`) do not apply; **no ENT is created and no timeline edge is contemplated.**
 
+## 8.2 Realized subgraph at circuit (2026-08-07)
+
+The subgraph now exists, carried on the child records per the house pattern (this record itself declares no frontmatter edges; the children edge to it):
+
+- **CLM-0103** `derived_from` SRC-0161, SRC-0162, SRC-0163, SRC-0164, SRC-0175, SRC-0176, SRC-0178 · `supports` FND-0020 · `part_of` INV-0020.
+- **CLM-0104** `derived_from` SRC-0165, SRC-0166, SRC-0177 · `supports` FND-0020 · `part_of` INV-0020.
+- **CLM-0105** `derived_from` SRC-0167, SRC-0168, SRC-0177 · `supports` FND-0020 · `part_of` INV-0020.
+- **CLM-0106** `derived_from` SRC-0169, SRC-0170, SRC-0177 · `supports` FND-0020 · `part_of` INV-0020.
+- **CLM-0107** `derived_from` SRC-0171, SRC-0172, SRC-0173 · `supports` FND-0020 · `part_of` INV-0020.
+- **CLM-0108** `derived_from` SRC-0161, SRC-0174, SRC-0176 · `supports` FND-0020 · `part_of` INV-0020.
+- **FND-0020** `derived_from` CLM-0103…CLM-0108 · `part_of` INV-0020.
+
+**Totals: 22 `derived_from` (claims→sources) + 6 `derived_from` (finding→claims) + 6 `supports` + 7 `part_of`. Every one of the eighteen catalogued sources is cited by at least one claim; no source is cited outside its claims.** Actual bearing versus the §8.1 expectation table: expectations held throughout, with one refinement — SRC-0176 additionally bore on **F** (its lab-vs-field supplementary analyses), which §8.1 anticipated under "A, F (replication record)"; SRC-0177 bore on **B/C/D only at publisher-surface level**, each citing claim saying so. **Identifiers consumed at circuit: CLM-0103…CLM-0108, FND-0020. No ENT consumed; SRC-0179 unconsumed; no new relationship type minted; the catalogued source-base records byte-unmodified.**
+
 ---
 
 # 9. Revision History
 
 |Version|Date|Status|Description|
 |---|---|---|---|
+|0.2|2026-08-07|Draft|**Specialist pass (ROLE-0002) executed under the owner's three-phase brief.** Created CLM-0103 (hue), CLM-0104 (combination/harmony), CLM-0105 (typeface), CLM-0106 (mark shape), CLM-0107 (placement), CLM-0108 (physiological) — each with the four separable elements (i)–(iv) as discrete headed sections, separately graded, (iii) and (iv) never merged, replication status recorded inside (iii) per effect — and FND-0020 (eight components, no Level 5, no Level 4, weakest Low = unread-interior coverage). §4/§5 filled with actuals; §6 gains circuit actuals (interior-reading: four of eighteen READ — SRC-0165/0172/0176/0178 — plus the SRC-0161 abstract verbatim; fourteen unread, disclosed and confined; SRC-0173 scan-blocked at two mirrors; SRC-0169 repository attempt failed on a certificate error). Reserved Reflexive Section FILLED and ROUTED: two withheld (iv) inferences recorded; the carried-forward Moderate-discrimination observation materialized (three distinguishable situations under one label; calibration anchors graded flat, access-driven) and routed as **GB-2026-058**; legibility boundary notes recorded; nothing enacted. §8.2 records the realized subgraph (22+6 `derived_from`, 6 `supports`, 7 `part_of`; all eighteen sources cited). Identifiers consumed: CLM-0103…0108, FND-0020 only; no ENT; SRC-0179 unconsumed. Everything R0. Pending Critical Review (ROLE-0004) and structural validation (ROLE-0001).|
 |0.1|2026-08-07|Draft|**Opened as a scaffold (UNFILLED) — the scaffold commit creates no claim, entity, edge, or finding** (house pattern per INV-0016…INV-0019 and ADR-GOV-0004 D4; the executing brief directs scaffold and circuit in one session, a recorded deviation from the two-brief pattern — the circuit fills this record under the same brief after this commit). Authored from **TPL-0003**. Records the §1 primary RQ **verbatim from the owner's 2026-08-06 transfer brief** (which directs end-to-end execution; no separate owner freeze checkpoint is scheduled between scaffold and circuit — reported in the execution report); the §1.1 **six-claim decomposition mandate** (CLM-A hue / CLM-B combination-harmony / CLM-C typeface / CLM-D mark shape / CLM-E placement-attention / CLM-F physiological) with the four separable elements **(i) prescriptive approach / (ii) stated rationale / (iii) measured response evidence incl. mandatory replication status / (iv) documented costs and failure modes**, the (iii)-vs-(iv) separability test, and the (iv) analyst-inference removal rule; the §2 scope disciplines (domain-general; practitioner (i)/(ii) pole; association ≠ response; preference ≠ response outcome; replication mandatory; absence is a finding; the legibility boundary; base limits); the §3 method with operative blockquote rules incl. **prescriptive-strength testing**; §4/§5 reserved; §6 standing brackets; the **Reserved Reflexive Section** (named, empty, §7.6-gated, four mandated contents incl. the carried-forward Moderate-discrimination question); the **ten §7 acceptance criteria**; §8 prose relationships (no frontmatter edges to non-existent objects). Source base **fixed at eighteen (SRC-0161…SRC-0178, Registry v1.48)**; no SRC/CLM/ENT/FND identifier consumed by this scaffold. Template-section mapping matches the INV-0019 precedent (template §7 Relationships → §8 here; template §8 Revision History → §9 here; §7 here is Acceptance Criteria).|
 
 # End INV-0020
