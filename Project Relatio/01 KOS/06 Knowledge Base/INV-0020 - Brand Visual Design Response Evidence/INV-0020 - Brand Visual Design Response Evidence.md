@@ -1,7 +1,7 @@
 ---
 title: INV-0020 - Brand Visual Design Response Evidence
 document_type: Investigation Record
-version: 0.2
+version: 0.3
 status: Draft
 operational_status: Active
 created: 2026-08-07
@@ -31,6 +31,15 @@ attribution:
 # Evidence Status of Psychological and Physiological Response Claims in Brand Visual Design
 
 ## Draft Investigation Record
+
+> ## ✅ CLOSED — 2026-08-07 (full OPS-0003 circuit complete)
+> **This investigation is formally CLOSED per ADR-GOV-0004 D1, under the owner's authorization in the 2026-08-06 transfer brief (end-to-end execution directed; closure per the operations documents) and the owner's in-session approval of 2026-08-07.** The full adversarial circuit ran: Research Specialist (ROLE-0002) → Critical Reviewer (ROLE-0004, verdict **Conformant with Flags**, [[Critical Review - RQ-0020]]) → Knowledge Architect (ROLE-0001, structural validation clean, §6b). All ten §7 acceptance criteria are met with in-record evidence (§7.1). Closure conditions verified: **(a)** all ten criteria genuinely met; **(b)** verdict Conformant with Flags with **all three determinate flags (F1 quotation fidelity, F2 unread-interior absence rebounding, F3 verification disclosure) remediated in-session** (five advisory items, A1/A2/A3/A5 adopted in-session, A4 the routed GB-2026-058 observation); **(c)** **no confidence level raised — and none lowered** (all 32 components reviewer-confirmed); **(d)** both validators clean (`validate.py` 440 files, 0 errors / 0 warnings, exit 0; `graph_integrity.py` 0 dangling / 0 branch / 0 projects_to / 0 influenced_by errors; advisories 39 + 2 unchanged) and all 13 detection tests pass.
+>
+> **Created: CLM-0103…CLM-0108, FND-0020, Critical Review – RQ-0020 — and nothing else.** No entity, no timeline edge, no new relationship type; SRC-0179 and ENT-0019 unconsumed; the source base fixed at eighteen and byte-unmodified. **THE PRE-AUTHORIZED OUTCOME CLASS IS THE RESULT:** prescriptions outrun measured response evidence in all six regions within this base; the measured regions are non-prescriptive in character; no Level 4 or Level 5 anywhere; mostly-Moderate grading with the Moderate-discrimination question addressed in the reflexive section and routed as GB-2026-058.
+>
+> **"Closed" is NOT a maturity promotion** — frontmatter `status` stays **Draft** (ADR-GOV-0005 §1: closure state lives in this banner and the history row). **"Closed" is NOT a clearance for external reliance:** everything lands **R0** and the **findings are NOT cleared for external reliance regardless of closure** (STD-0006 §7.5-analog, declared at opening and re-affirmed here). **The reflexive section's output is additionally §7.6-reflexively-gated** — routed per ADR-GOV-0007 §3, never self-applied; this circuit was Claude-family throughout and supplies no independence of kind.
+>
+> *Provenance: opened 2026-08-07 as an unfilled scaffold (v0.1); filled by the Specialist pass (v0.2), reviewed and remediated, closed at v0.3 — all under the single three-phase brief of 2026-08-06, a recorded deviation from the two-brief pattern. Authored using TPL-0003; twentieth research workflow (RQ-0020).*
 
 > **WHAT THIS INVESTIGATION IS.** A **domain-general** examination of which prescriptive practices in brand visual design — hue selection, color combination, typeface character, mark shape and symbolism, spatial placement, and claimed physiological effects — rest on **measured psychological or physiological response evidence**, which rest on stated rationale, practitioner consensus, or uncited assertion, and what the measured literatures document about robustness (including replication status and context dependence), costs and failure modes, and variation across populations. **It is not a review of Relatio and it names no organization, brand, product, or application decision anywhere in the investigation record** — application happens outside Relatio through the confidence-scale crosswalk.
 
@@ -229,6 +238,19 @@ Per §3.2, an analyst-visible weakness no source discusses is an observation, no
 
 ---
 
+# 6b. Structural Validation (ROLE-0001 — Knowledge Architect, 2026-08-07)
+
+Recorded in-record per the OPS-0003 circuit:
+
+- **`validate.py` at error level: PASS** — 440 files scanned, **0 errors / 0 warnings**, exit 0. Epistemic fields (`confidence` lists with matching STD-0008 labels, all components level 2 or 3; `reliance_tier: R0` throughout), review fields (arithmetic checked: Moderate-weakest CLM-0103 at 9 months → 2027-05-07; Low-weakest records at 6 months → 2027-02-07), attribution (Stage-1 shape, `ai-delegated`/Claude), and version coherence all well-formed on all eight new/bumped records after remediation.
+- **`graph_integrity.py`: clean** — 0 dangling references, 0 `branches_from` / 0 `projects_to` / 0 `influenced_by` edge errors; advisories unchanged (39 non-reciprocated symmetric + 2 legacy) — the circuit added no advisory.
+- **Full detection suite: all 13 `tools/tests/test_*.py` PASS**, run as CI runs them.
+- **Scale discipline grep-verified:** no ★-glyph outside the two prohibition statements, no H-band token, no "Level 4"/"Level 5" string outside no-Level-4/5 statements, and no `level: 4` or `level: 5` in any frontmatter in the INV-0020 subtree.
+- **Subgraph confirmed against §8.2 programmatically:** the frontmatter `relationships` blocks of CLM-0103…0108 and FND-0020 were parsed and matched edge-for-edge against the §8.2 declaration (22 + 6 `derived_from`, 6 `supports`, 7 `part_of` = 41 edges). No edge exists that §8.2 does not declare; §8.2 declares no edge that does not exist.
+- **Identifier discipline confirmed:** CLM-0103…0108 and FND-0020 consumed; **no ENT consumed; SRC-0179 unconsumed**; no relationship type minted; the eighteen catalogued source-base records byte-unmodified by the circuit.
+
+---
+
 # 7. Acceptance Criteria for Closing
 
 INV-0020 may close only when all ten of the following hold, each **independently checkable**:
@@ -244,7 +266,20 @@ INV-0020 may close only when all ten of the following hold, each **independently
 9. **The reserved reflexive section is completed and ROUTED, not applied** — carrying its four mandated contents ((iv) removals; the Moderate-discrimination observation; routed GB candidates with identifiers; legibility boundary notes).
 10. **Base coverage limits are recorded as limits**, and the record contains no reach outside the fixed base.
 
-**Verification & reliance (§7.5 analog).** Per-source verification strength is disclosed and not averaged. **Everything lands R0 — findings are NOT cleared for external reliance regardless of closure.** The reflexive section's output is additionally **§7.6-reflexively-gated.**
+## 7.1 Criteria assessment at closure (2026-08-07 — each ticked with in-record evidence)
+
+1. ✅ **Met.** CLM-0103…0108 exist, one per territory, each with (i)/(ii)/(iii)/(iv) as discrete headed sections and per-element confidence components (§5 table); separability reviewer-verified (Critical Review – RQ-0020 check (a)).
+2. ✅ **Met.** Every element cites its specific sources in place; unread-interior confinement stated per assertion (reviewer check (j)); the flat-absence overreach class found there (F2) remediated in-session across CLM-0104/0106/0108 and FND-0020.
+3. ✅ **Met.** Replication status recorded inside (iii) for every cited effect, and stated as absent where the base carries none (reviewer check (b)).
+4. ✅ **Met.** (iii)/(iv) populated or explicitly empty throughout; no (iv) entry rests on analyst inference — the two withheld inferences sit in the reflexive section, and the reviewer verified no third remains (checks (c)/(e)); the near-line entries carry their adopted advisory clarifications (A1, A3).
+5. ✅ **Met.** Domain discipline held: no organization, brand, product, or application decision named anywhere (reviewer check (f)).
+6. ✅ **Met.** Population/cultural variation recorded as sub-elements within CLM-0103 and as explicit absences in CLM-0105/0106; no seventh claim (reviewer check (h)).
+7. ✅ **Met.** Per-source verification strength disclosed per claim, not averaged (reviewer check (i)); the one mis-disclosure (F3) remediated in-session.
+8. ✅ **Met.** FND-0020 synthesizes at eight components capped at weakest necessary; **no Level 5 and no Level 4**; the CLM-E three-strata distinction and the CLM-A prescriptive-strength verdict are stated in the finding.
+9. ✅ **Met.** The reflexive section is completed and ROUTED with all four mandated contents: the two withheld (iv) inferences; the Moderate-discrimination observation (reviewer-confirmed as real, A4); GB-2026-058 routed with its identifier (Backlog v1.54, reviewer-verified present); the legibility boundary notes (reviewer check (k)).
+10. ✅ **Met.** Base limits recorded as limits (FND-0020 §4; §8 here); the one near-line out-of-base citation (the 2017 follow-up's title in CLM-0107 (iv)) now states its out-of-base status explicitly (A1 adopted).
+
+**Verification & reliance (§7.5 analog).** Per-source verification strength is disclosed and not averaged; four of eighteen interiors were read, and the Critical Review independently live-verified ten targets against primaries (its §1). **Everything lands R0 — findings are NOT cleared for external reliance regardless of closure.** The reflexive section's output is additionally **§7.6-reflexively-gated.**
 
 ---
 
@@ -301,6 +336,7 @@ The subgraph now exists, carried on the child records per the house pattern (thi
 
 |Version|Date|Status|Description|
 |---|---|---|---|
+|0.3|2026-08-07|Draft|**Circuit completed and INVESTIGATION CLOSED per ADR-GOV-0004 D1, under the owner's brief-directed authorization and in-session approval.** Critical Review – RQ-0020 (ROLE-0004): verdict **Conformant with Flags** — three determinate flags (F1 quotation fidelity in CLM-0108; F2 flat unread-interior absence claims in CLM-0104/0106/0108 + FND-0020; F3 verification mis-disclosure in CLM-0105), **all remediated in-session** (affected records → v0.2 with per-flag history rows); five advisory items — A1/A2/A3/A5 adopted in-session, A4 (the Moderate-discrimination confirmation) carried by the routed GB-2026-058; **no confidence level raised, none lowered** (all 32 components confirmed); the review was NOT verification-light — ten targets live-verified against primaries, no fabrication found. Structural validation (ROLE-0001) recorded at **§6b**: validate.py 440/0/0 exit 0; graph_integrity 0/0/0/0, advisories 39+2 unchanged; all 13 detection tests pass; scale discipline grep-verified; subgraph parsed and matched edge-for-edge against §8.2 (41 edges); identifier discipline confirmed. **All ten §7 criteria re-assessed and ticked with in-record evidence (§7.1).** Closure banner installed citing the four conditions (a)–(d), all verified. Frontmatter `status` untouched (Draft — ADR-GOV-0005 §1). **Findings NOT cleared for external reliance regardless of closure (everything R0); the reflexive output additionally §7.6-gated.** The all-six-regions dissolution result is the pre-authorized honest outcome, not a deficiency.|
 |0.2|2026-08-07|Draft|**Specialist pass (ROLE-0002) executed under the owner's three-phase brief.** Created CLM-0103 (hue), CLM-0104 (combination/harmony), CLM-0105 (typeface), CLM-0106 (mark shape), CLM-0107 (placement), CLM-0108 (physiological) — each with the four separable elements (i)–(iv) as discrete headed sections, separately graded, (iii) and (iv) never merged, replication status recorded inside (iii) per effect — and FND-0020 (eight components, no Level 5, no Level 4, weakest Low = unread-interior coverage). §4/§5 filled with actuals; §6 gains circuit actuals (interior-reading: four of eighteen READ — SRC-0165/0172/0176/0178 — plus the SRC-0161 abstract verbatim; fourteen unread, disclosed and confined; SRC-0173 scan-blocked at two mirrors; SRC-0169 repository attempt failed on a certificate error). Reserved Reflexive Section FILLED and ROUTED: two withheld (iv) inferences recorded; the carried-forward Moderate-discrimination observation materialized (three distinguishable situations under one label; calibration anchors graded flat, access-driven) and routed as **GB-2026-058**; legibility boundary notes recorded; nothing enacted. §8.2 records the realized subgraph (22+6 `derived_from`, 6 `supports`, 7 `part_of`; all eighteen sources cited). Identifiers consumed: CLM-0103…0108, FND-0020 only; no ENT; SRC-0179 unconsumed. Everything R0. Pending Critical Review (ROLE-0004) and structural validation (ROLE-0001).|
 |0.1|2026-08-07|Draft|**Opened as a scaffold (UNFILLED) — the scaffold commit creates no claim, entity, edge, or finding** (house pattern per INV-0016…INV-0019 and ADR-GOV-0004 D4; the executing brief directs scaffold and circuit in one session, a recorded deviation from the two-brief pattern — the circuit fills this record under the same brief after this commit). Authored from **TPL-0003**. Records the §1 primary RQ **verbatim from the owner's 2026-08-06 transfer brief** (which directs end-to-end execution; no separate owner freeze checkpoint is scheduled between scaffold and circuit — reported in the execution report); the §1.1 **six-claim decomposition mandate** (CLM-A hue / CLM-B combination-harmony / CLM-C typeface / CLM-D mark shape / CLM-E placement-attention / CLM-F physiological) with the four separable elements **(i) prescriptive approach / (ii) stated rationale / (iii) measured response evidence incl. mandatory replication status / (iv) documented costs and failure modes**, the (iii)-vs-(iv) separability test, and the (iv) analyst-inference removal rule; the §2 scope disciplines (domain-general; practitioner (i)/(ii) pole; association ≠ response; preference ≠ response outcome; replication mandatory; absence is a finding; the legibility boundary; base limits); the §3 method with operative blockquote rules incl. **prescriptive-strength testing**; §4/§5 reserved; §6 standing brackets; the **Reserved Reflexive Section** (named, empty, §7.6-gated, four mandated contents incl. the carried-forward Moderate-discrimination question); the **ten §7 acceptance criteria**; §8 prose relationships (no frontmatter edges to non-existent objects). Source base **fixed at eighteen (SRC-0161…SRC-0178, Registry v1.48)**; no SRC/CLM/ENT/FND identifier consumed by this scaffold. Template-section mapping matches the INV-0019 precedent (template §7 Relationships → §8 here; template §8 Revision History → §9 here; §7 here is Acceptance Criteria).|
 

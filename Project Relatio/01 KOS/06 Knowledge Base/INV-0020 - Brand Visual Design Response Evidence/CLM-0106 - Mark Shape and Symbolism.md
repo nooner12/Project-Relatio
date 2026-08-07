@@ -1,7 +1,7 @@
 ---
 title: CLM-0106 - Mark Shape and Symbolism
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-08-07
@@ -77,7 +77,7 @@ attribution:
 # Element (i) — The Prescriptive Approach (as stated in the practice literature)
 
 - The shape-prescription family (round marks read as soft/friendly/harmonious, angular marks as hard/strong/dynamic; marks should symbolize the organization's values) is documented in this base **thinly and mostly indirectly**: the measurement literature's own framings (SRC-0170's title poses "Does your company have the right logo?"; SRC-0169 produces "guidelines for selecting or modifying logos") show the guideline-consuming practice exists. The practitioner manual (SRC-0177) is establishable only at publisher-surface level; its specific shape and symbolism prescriptions are **not asserted** (unread interior).
-- **No primary practitioner artifact in this base states the shape-symbolism code directly** (the base's one read practitioner artifact, SRC-0178, covers color only). Recorded as a base limit on the (i) pole.
+- **No shape-symbolism code could be sourced from a primary practitioner artifact at any surface accessible this session** (the base's one read practitioner artifact, SRC-0178, covers color only; **the practitioner manual SRC-0177's unread 336-page interior is the most likely in-base location for such a code, and this absence claim does not cover it** — F2 rebounding). Recorded as a limit on the (i) pole at the accessible surfaces.
 
 # Element (ii) — The Stated Rationale
 
@@ -149,6 +149,7 @@ Both measurement studies are peer-reviewed academic sources; the practitioner ma
 # Revision History
 |Version|Date|Status|Description|
 |---|---|---|---|
+|0.2|2026-08-07|Draft|**Critical Review – RQ-0020 remediation (F2). No grade changed.** The element (i) absence claim rebounded from "no primary practitioner artifact in this base states" to "could not be sourced at any surface accessible this session," naming SRC-0177's unread interior as the most likely in-base location the absence claim does not cover. All four components reviewer-confirmed and unchanged.|
 |0.1|2026-08-07|Draft|Created for RQ-0020 (Specialist pass), CLM-D of six — a calibration anchor. Four separable elements: (i) shape/symbolism prescriptions documented only indirectly, no primary in-base artifact (Low); (ii) semantic-association transfer rationale at abstract level (Moderate); (iii) the real measurement program — foundational 1998 logo study, five-experiment circularity/angularity program — at abstract-level access, single studies, no in-base replication, perception outcomes; symbolic-content-beyond-geometry EXPLICITLY EMPTY; population sub-elements EXPLICITLY ABSENT (Moderate); (iv) explicitly empty at surfaces read, graded weak by construction (Low). No Level 4/5; R0. Pending Critical Review and structural validation.|
 
 # End CLM-0106

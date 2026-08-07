@@ -1,7 +1,7 @@
 ---
 title: CLM-0104 - Color Combination and Harmony Prescriptions
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-08-07
@@ -70,14 +70,14 @@ attribution:
 ---
 
 # Claim
-> **The color-combination prescription family (complementary/analogous scheme rules, proportion rules such as 60-30-10, and palette-structure response claims) has, in this base, no measured psychological or physiological response evidence at all — element (iii) is EXPLICITLY EMPTY for response outcomes, which is the pre-authorized finding. The nearest measured work is single-color PREFERENCE measurement (read in full this session: 80% of preference variance predicted by object-valence associations, with no combination content whatsoever), and the field's own specialist-journal critique states that colour-harmony guidance lacks consensus and is contradictory and ambiguous. This base cannot even source the 60-30-10 rule's canonical statement — the proportion rule enters the record as a named prescription with no in-base artifact stating it.**
+> **The color-combination prescription family (complementary/analogous scheme rules, proportion rules such as 60-30-10, and palette-structure response claims) has, in this base, no measured psychological or physiological response evidence at all — element (iii) is EXPLICITLY EMPTY for response outcomes, which is the pre-authorized finding. The nearest measured work is single-color PREFERENCE measurement (read in full this session: 80% of preference variance predicted by object-valence associations, with no combination content whatsoever), and the field's own specialist-journal critique states that colour-harmony guidance lacks consensus and is contradictory and ambiguous. The 60-30-10 rule's canonical statement could not be sourced at any surface accessible this session — the proportion rule enters the record as a named prescription with no statement locatable in the base's accessible surfaces; the practitioner manual's unread interior (SRC-0177) is the most likely in-base location, and this absence claim does not cover it.**
 
 ---
 
 # Element (i) — The Prescriptive Approach (as stated in the practice literature)
 
 - **What this base can and cannot source:** the harmony-scheme prescription family (complementary, analogous, and kindred scheme rules offered as guidance to designers) is documented **indirectly** — SRC-0166's abstract states that colour-harmony theories exist, offer designers and architects guidance, and lack consensus. The practitioner manual (SRC-0177) is establishable only at publisher-surface level (a brand-identity manual covering design execution); what it prescribes about palettes is **not asserted** (unread interior).
-- **The 60-30-10 proportion rule:** named in the investigation's research question as a circulating prescription, but **no source in this base states it.** Recorded as: a prescription whose canonical statement this base cannot source — itself a datum about the family's citation trail.
+- **The 60-30-10 proportion rule:** named in the investigation's research question as a circulating prescription, but **its statement could not be located at any surface accessible this session** — and **the one in-base document most likely to state it, the practitioner manual SRC-0177, has an unread 336-page interior this absence claim does not cover** (F2 rebounding). Recorded as: a prescription whose canonical statement the session's accessible surfaces cannot source — itself a datum about the family's citation trail at those surfaces.
 
 # Element (ii) — The Stated Rationale
 
@@ -85,7 +85,7 @@ attribution:
 
 # Element (iii) — Measured Psychological/Physiological Response Evidence (including replication status and explicit absence)
 
-- **EXPLICITLY EMPTY for response outcomes:** no source in this base measures any psychological or physiological **response** to color combinations, palette structures, or proportion rules — no affective outcome, no behavioral outcome, no physiological outcome. **This emptiness is the element's content, per the pre-authorization: an empty (iii) here is the finding, not a failure.**
+- **EXPLICITLY EMPTY for response outcomes:** no source in this base, at the access achieved, measures any psychological or physiological **response** to color combinations, palette structures, or proportion rules — no affective outcome, no behavioral outcome, no physiological outcome. **This emptiness is the element's content, per the pre-authorization: an empty (iii) here is the finding, not a failure.** *(A2 hedge and dependency, stated in-element: the unread interiors — SRC-0166's in particular, whose abstract says the paper examines "the relationship between colour and aesthetic response" — could contain combination-aesthetic-response survey material; such material would sit outside this element only under the investigation's preference/aesthetic-judgment bracket, which classes aesthetic-response ratings as preference-family rather than response outcomes. The emptiness verdict depends on that bracket and on the catalogued scopes of the unread interiors, and says so.)*
 - **The nearest measured work, read in full (SRC-0165, PMC full text):** single-color preference measurement — 32 chromatic colors, four participant groups totaling 251, Weighted Affective Valence Estimates from object associations predicting color preference at r = +0.893 ("accounting for 80% of the variance with a single predictor"), outperforming cone-opponent (37%), color-appearance (60%), and color-emotion (55%) models. **The read interior contains no combination, harmony, or palette content — the study is explicitly about single-color preference.** Scope conditions carried: preference ratings, mostly UC Berkeley undergraduates, and **preference is not a response outcome** (the investigation's binding bracket).
 - **The critique literature (SRC-0166, abstract-level):** consensus regarding colour harmony is lacking; existing guidance is contradictory and ambiguous; the paper proposes a probabilistic, context-and-individual-dependent reframing — i.e., the field's own specialist journal records the predictive harmony principles as unsettled rather than evidenced.
 - **Replication status:** with no measured combination-response effect in the base, there is nothing to replicate; stated. SRC-0165's preference result is a single study in this base with no replication record here.
@@ -151,6 +151,7 @@ SRC-0165 is a peer-reviewed empirical study read in full (authoritative for what
 # Revision History
 |Version|Date|Status|Description|
 |---|---|---|---|
+|0.2|2026-08-07|Draft|**Critical Review – RQ-0020 remediation (F2) and advisory adoption (A2). No grade changed.** F2: the claim-statement and element (i) absence claims about the 60-30-10 rule rebounded from "this base cannot source" to "could not be sourced at any surface accessible this session," naming SRC-0177's unread interior as the most likely in-base location the absence claim does not cover. A2: the element (iii) "EXPLICITLY EMPTY" now carries an in-element unread-interior hedge and states its dependency on the preference/aesthetic-judgment bracket (the SRC-0166 interior hazard named). The (iii) Moderate was reviewer-confirmed conditional on exactly this hedge; all four components unchanged.|
 |0.1|2026-08-07|Draft|Created for RQ-0020 (Specialist pass), CLM-B of six — the pre-authorized near-empty-(iii) claim, and the result is emptier than anticipated: (iii) EXPLICITLY EMPTY for response outcomes (the nearest measured work, read in full, is single-color preference — r = .893 / 80% variance — with no combination content); the harmony-prescription family sourceable only via the critique literature (consensus lacking, guidance contradictory/ambiguous); the 60-30-10 rule unsourceable in base; (iv) one documented entry. Grades Low/Low/Moderate/Low; the (iii) Moderate-on-absence flagged for the reflexive section's discrimination question. No Level 4/5; R0. Pending Critical Review and structural validation.|
 
 # End CLM-0104

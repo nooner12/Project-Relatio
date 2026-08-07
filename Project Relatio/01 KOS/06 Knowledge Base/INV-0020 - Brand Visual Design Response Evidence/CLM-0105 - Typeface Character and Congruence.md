@@ -1,7 +1,7 @@
 ---
 title: CLM-0105 - Typeface Character and Congruence
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-08-07
@@ -145,11 +145,12 @@ Both measurement studies are peer-reviewed academic sources with no commercial s
 - `part_of` INV-0020.
 
 # Verification (STD-0006 §7.5 — Specialist disclosure)
-**Verification-light for this claim:** neither measurement interior could be read this session (paywalled; a repository copy attempt failed on a certificate error, disclosed); all content is abstract/surface-established, marked in place. Everything **R0; not cleared for external reliance regardless of closure.**
+**Verification-light for this claim:** neither measurement interior could be read this session (both paywalled; no open repository copy was located for either — the certificate-error repository attempt recorded in INV-0020 §6 concerned SRC-0169, a different claim's source, and is not part of this claim's access history; corrected per Critical Review – RQ-0020 F3); all content is abstract/surface-established, marked in place. Everything **R0; not cleared for external reliance regardless of closure.**
 
 # Revision History
 |Version|Date|Status|Description|
 |---|---|---|---|
+|0.2|2026-08-07|Draft|**Critical Review – RQ-0020 remediation (F3). No grade changed.** The Verification section's access-attempt history corrected: the certificate-error repository attempt belonged to SRC-0169 (CLM-0106's source), not to this claim's typeface sources — the mis-imported disclosure removed and the true history stated (both interiors paywalled, no open copy located). All four components reviewer-confirmed and unchanged.|
 |0.1|2026-08-07|Draft|Created for RQ-0020 (Specialist pass), CLM-C of six — a calibration anchor. Four separable elements: (i) the fit-the-offering prescription documented via the measurement literature's own framing (Moderate); (ii) the connotative-meaning/transfer rationale (Moderate); (iii) the territory's real measured studies — 210-typeface six-dimension impression measurement; font-product congruity on Osgood dimensions with an independent font-meaning contribution — establishable at abstract level only, single studies, no replication record in base, perception-level outcomes, population sub-elements explicitly absent (Moderate); (iv) the abstract-stated impression trade-off, explicitly empty beyond (Low). Anchor graded flat with absence-dominated claims — flagged to the reflexive section's discrimination question. No Level 4/5; R0. Pending Critical Review and structural validation.|
 
 # End CLM-0105

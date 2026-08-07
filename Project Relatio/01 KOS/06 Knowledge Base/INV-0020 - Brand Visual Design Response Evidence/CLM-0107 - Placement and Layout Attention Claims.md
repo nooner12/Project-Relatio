@@ -1,7 +1,7 @@
 ---
 title: CLM-0107 - Placement and Layout Attention Claims
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-08-07
@@ -100,7 +100,7 @@ attribution:
 
 # Element (iv) — Documented Costs and Failure Modes (from the sources; not inferred)
 
-- **Misapplication of the F-pattern is documented by its own originator:** the same organization's 2017 follow-up is titled to the point — the pattern is "Misunderstood, But Still Relevant" — documenting at surface level that the prescription family is misapplied in practice. (Surface-level: the follow-up's existence and title; its interior was not read.)
+- **Misapplication of the F-pattern is documented by its own originator:** the same organization's 2017 follow-up is titled to the point — the pattern is "Misunderstood, But Still Relevant" — documenting at surface level that the prescription family is misapplied in practice. (Surface-level: the follow-up's existence and title only; its interior was not read. **The follow-up is not itself a record in the fixed base — it is known via SRC-0172's catalog context note, and this entry cites it at that catalog-surface level; its out-of-base status is stated here per A1.**)
 - **EXPLICITLY EMPTY beyond that** at the surfaces read. Costs of golden-ratio composition practice are documented nowhere in this base.
 
 ---
@@ -159,6 +159,7 @@ SRC-0172 is practitioner research with a disclosed commercial stake (its self-qu
 # Revision History
 |Version|Date|Status|Description|
 |---|---|---|---|
+|0.2|2026-08-07|Draft|**Critical Review – RQ-0020 advisory adoption (A1). No grade changed.** The element (iv) entry now states explicitly that the 2017 NN/g follow-up is not a record in the fixed base and is cited only at the catalog-surface level carried by SRC-0172's context note. All four components reviewer-confirmed and unchanged.|
 |0.1|2026-08-07|Draft|Created for RQ-0020 (Specialist pass), CLM-E of six. The three mandated strata recorded: stratum 1 measured attention (eye-tracking literature at monograph scale; the 232-user F-pattern observation with its own "rough, general shape" qualification, read live); stratum 2 extrapolation (the origin artifact derives layout rules from gaze without measuring comprehension/response — the step visible in the read source); stratum 3 folklore (golden-ratio family verified to the accessible surface: peer-reviewed debunking scoped to "false or seriously misleading" claims; interior scan-blocked at two mirrors, disclosed; advocacy rebuttal noted as live dispute; no measured support in base). Response-outcome absence explicit across the element. Grades Moderate/Moderate/Moderate/Low. No Level 4/5; R0. Pending Critical Review and structural validation.|
 
 # End CLM-0107

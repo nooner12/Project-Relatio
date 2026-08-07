@@ -1,7 +1,7 @@
 ---
 title: CLM-0103 - Single-Hue Response Prescriptions
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-08-07
@@ -88,7 +88,7 @@ attribution:
 
 # Element (i) — The Prescriptive Approach (as stated in the practice literature)
 
-- **The circulated code, from the live-read artifact (SRC-0178):** the Color Emotion Guide page prescribes hue-emotion pairings as selection guidance — yellow = optimism/clarity/warmth; orange = creativity/youthfulness/enthusiasm; red = warmth/excitement/sexuality/urgency; purple = royalty/imagination/wisdom; blue = calm/strength/dependability/trust/professionalism; green = serenity/growth/health; black = professional/credible; white = clean/pure. The prescriptions are stated as general properties of the hues, without context conditions, population conditions, or citations.
+- **The circulated code, from the live-read artifact (SRC-0178):** the Color Emotion Guide page prescribes hue-emotion pairings as selection guidance — yellow = optimism/clarity/warmth; orange = creativity/youthfulness/enthusiasm/confidence; red = warmth/excitement/sexiness/urgency (with energy, romance, positivity, and affection also listed); purple = royalty/imagination/wisdom; blue = calm/strength/dependability/trust/professionalism; green = serenity/growth/health; black = professional/credible; white = clean/pure. (Wording aligned to the page's own terms per A5.) The prescriptions are stated as general properties of the hues, without context conditions, population conditions, or citations.
 - **Breadth of the practice:** the artifact's wide circulation is documented (independent republication from at least January 2013 onward, per the SRC-0178 catalog record). The standard practitioner manual in the base (SRC-0177, interior unread) is establishable only at its publisher-surface level — a comprehensive brand-identity manual covering design execution — and is cited here **only** as evidence that a practitioner manual literature exists; what it specifically prescribes about hue is **not asserted** (unread interior).
 
 # Element (ii) — The Stated Rationale
@@ -181,6 +181,7 @@ SRC-0178 is a commercial prescription artifact (definitive for what the prescrip
 # Revision History
 |Version|Date|Status|Description|
 |---|---|---|---|
+|0.2|2026-08-07|Draft|**Critical Review – RQ-0020 advisory adoption (A5). No grade changed.** Element (i)'s summary of the live-read artifact aligned to the page's own wording ("sexiness" not "sexuality"; orange gains "confidence"; red's additional listed terms noted), per the reviewer's second live read. All four components reviewer-confirmed and unchanged.|
 |0.1|2026-08-07|Draft|Created for RQ-0020 (Specialist pass), CLM-A of six. Four separable elements recorded and separately graded: (i) the circulated hue code from the live-read artifact, uncited on its face (Moderate); (ii) the asserted color-psychology rationale, trail terminating in assertion (Moderate); (iii) measured picture — universal-but-modulated ASSOCIATIONS (30 nations, r = .88, associations-not-response carried), developmentally emergent preference (~age 2), the field's own "nascent stage / application recommendations unwarranted" abstract statement, and the red-attraction replication record READ in full (d = 0.26→0.19 / 0.13; I² 89%/53%; decline effect; preregistered subset d = −0.10; adversarial collaboration ending at odds); explicit absence of any measured brand-asset hue-response transfer (Moderate); (iv) documented instability of the underlying effects, application-prematurity stated by the field's own review, association modulation (Moderate). No Level 4/5; R0. Pending Critical Review and structural validation.|
 
 # End CLM-0103
