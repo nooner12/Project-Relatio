@@ -1,7 +1,7 @@
 ---
 title: CLM-0114 - Small-Screen and Handheld Reading Prescriptions
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-08-08
@@ -80,7 +80,7 @@ attribution:
 # Element (i) — The Prescriptive Approach (as stated in the practice literature)
 
 - **The platform-vendor artifact (SRC-0193, live-read):** the per-platform default/minimum table — iOS/iPadOS 17 pt default, 11 pt minimum; macOS 13/10; tvOS 29/23; visionOS 17/12; watchOS 16/12 — plus "avoid light font weights" at small sizes, Dynamic Type scales, and per-size tracking tables. The most widely applied small-screen prescription set.
-- The tvOS row's far larger values embody an unstated viewing-distance adjustment across platforms — recorded as a fact about the table's structure (the page does not state the distance reasoning).
+- The tvOS row's far larger values are **consistent with** an unstated cross-platform viewing-distance adjustment; the page states no such reasoning, and none is asserted here — the table's structure is recorded, its rationale is not inferred (Critical Review – RQ-0021 A4 adopted).
 
 # Element (ii) — The Stated Rationale
 
@@ -154,6 +154,7 @@ The vendor artifact carries its recorded commercial stake and contributes (i)/(i
 # Revision History
 |Version|Date|Status|Description|
 |---|---|---|---|
+|0.2|2026-08-08|Draft|**Critical Review – RQ-0021 advisory adoption (A4). No grade changed.** The tvOS-row observation softened from an embodiment assertion to a consistency observation — the table's structure is recorded, its unstated rationale is not inferred. All four components reviewer-confirmed and unchanged.|
 |0.1|2026-08-08|Draft|Created for RQ-0021 (Specialist pass), CLM-F of six. Four separable elements: (i) the vendor per-platform size/weight table, live-read (Moderate); (ii) the stated capability/distance register with the zero-citation trail re-confirmed (Moderate); (iii) the absence-dominated element — abstract-level viewing distances (36.2/32.2 cm), the read angular frame, the explicitly non-significant device contrast, and bounded absence of any direct small-screen performance measurement (Low, access-contributing — the GB-2026-058 contrast case); (iv) the vendor's own documented failure modes (truncation, multicolumn, light weights, 3D depth) + the closer-distance fact, with the performance inference withheld to the reflexive section (Moderate). No Level 4/5; R0. Pending Critical Review and structural validation.|
 
 # End CLM-0114

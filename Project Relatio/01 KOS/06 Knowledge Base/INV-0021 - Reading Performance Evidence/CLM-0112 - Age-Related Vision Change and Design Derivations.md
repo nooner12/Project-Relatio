@@ -1,7 +1,7 @@
 ---
 title: CLM-0112 - Age-Related Vision Change and Design Derivations
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-08-08
@@ -137,7 +137,7 @@ The read review is a peer-reviewed field synthesis with no commercial stake; the
 # Confidence (KOS-0003 §8)
 - **c_prescriptive_approach — Level 3 (Moderate):** the prescriptions read in full from one artifact plus the read normative derivation; specific values uncited in the artifact.
 - **c_stated_rationale — Level 3 (Moderate):** mechanism-level rationale read directly; matches the measured optical account at the level stated.
-- **c_measured_performance_evidence — Level 4 (High):** the anchor interior was READ; the core findings are convergent, mechanism-attributed, multi-study, multi-laboratory results reported by the field's principal review, with an independent convergent reserve frame and an independent clinical association (Arditi-Faye, via the read WCAG companion) — the strongest-evidenced element in this investigation. **Recorded for the reflexive section: with the interior actually read, the calibration anchor grades ABOVE the absence-dominated components — the GB-2026-058 access-flattening did not recur (data point (a): the anchor discriminated).** Not Level 5: review-level access, one review carrying the core, and the blue-region hole cap it.
+- **c_measured_performance_evidence — Level 4 (High):** the anchor interior was READ; the core findings are convergent, mechanism-attributed, multi-study, multi-laboratory results reported by the field's principal review, with an independent convergent reserve frame and a clinical association leg (Arditi-Faye) whose independence is partial since it reaches this base through the read WCAG companion — the grade stands on the read review's internal multi-laboratory convergence plus the reserve frame without that leg (Critical Review – RQ-0021 A2 adopted) — the strongest-evidenced element in this investigation. **Recorded for the reflexive section: with the interior actually read, the calibration anchor grades ABOVE the absence-dominated components — the GB-2026-058 access-flattening did not recur (data point (a): the anchor discriminated).** Not Level 5: review-level access, one review carrying the core, and the blue-region hole cap it.
 - **c_documented_costs_failure_modes — Level 3 (Moderate):** four read entries, all from the artifacts' own statements.
 - **No Level 5. Everything R0.**
 
@@ -161,6 +161,7 @@ The read review is a peer-reviewed field synthesis with no commercial stake; the
 # Revision History
 |Version|Date|Status|Description|
 |---|---|---|---|
+|0.2|2026-08-08|Draft|**Critical Review – RQ-0021 advisory adoption (A2). No grade changed.** The (iii) High's independence structure clarified: the Arditi-Faye clinical-association leg reaches this base through the read WCAG companion (partial independence), and the grade is stated to stand on the read review's internal multi-laboratory convergence plus the reserve frame without that leg — as the reviewer verified it does. All four components reviewer-confirmed and unchanged.|
 |0.1|2026-08-08|Draft|Created for RQ-0021 (Specialist pass), CLM-D of six — the calibration anchor, interiors READ per the brief's priority instruction. Four separable elements: (i) the read derived prescriptions incl. the read WCAG age-anchored derivation (Moderate); (ii) mechanism rationale, read (Moderate); (iii) the read aging-vision core — contrast-sensitivity decline with optical attribution, threefold low-luminance requirement, 10-minute dark-adaptation delay, processing-speed slowing, visual-span reading evidence — plus the bounded blue-region absence (High — the anchor discriminated; GB-2026-058 data point recorded); (iv) aesthetic tension, oversizing bound, the artifact's own hedges, glare (Moderate). Direction-match vs value-derivation kept separate throughout. No Level 5; R0. Pending Critical Review and structural validation.|
 
 # End CLM-0112

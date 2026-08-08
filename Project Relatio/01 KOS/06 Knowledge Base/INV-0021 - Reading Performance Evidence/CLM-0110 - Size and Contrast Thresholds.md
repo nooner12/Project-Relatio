@@ -1,7 +1,7 @@
 ---
 title: CLM-0110 - Size and Contrast Thresholds
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-08-08
@@ -79,7 +79,7 @@ attribution:
 ---
 
 # Claim
-> **The WCAG 2.x contrast thresholds (4.5:1 body / 3:1 large text) do not descend from reading measurement: by the normative document's own read provenance chain, the 3:1 floor is adopted from display-ergonomics standards (ISO 9241-3; ANSI/HFES 100-1988) "for standard text and vision," and the 4.5:1 figure is that floor multiplied by 1.5 for the contrast-sensitivity loss empirically associated with 20/40 acuity (the Arditi-Faye clinical relation), 20/40 being described as typical acuity at roughly age 80 — a derivation routed through display standards and clinical low-vision measurement, not through reading-performance studies. Meanwhile the reading psychophysics that does exist (read this session) reports normal fluent reading as strikingly tolerant of contrast reduction at fluent sizes — less than a factor-of-two speed loss over a tenfold contrast reduction for 1° characters — with the tolerance collapsing at small character sizes, exactly the size-contrast interaction a single blanket ratio cannot express; and the read critique documentation for the candidate successor model (APCA) asserts polarity mis-ranking and spatial-frequency blindness against WCAG 2.x while itself citing no peer-reviewed validation of its own thresholds at the surfaces read. Minimum-size prescriptions in the base's practitioner artifact state values inside the psychophysically measured fluent range without claiming derivation from it.**
+> **The WCAG 2.x contrast thresholds (4.5:1 body / 3:1 large text) do not descend from reading measurement: by the normative document's own read provenance chain, the 3:1 floor is adopted from display-ergonomics standards (ISO 9241-3; ANSI/HFES 100-1988) "for standard text and vision," and the 4.5:1 figure is that floor multiplied by 1.5 for the contrast-sensitivity loss empirically associated with 20/40 acuity (the Arditi-Faye clinical relation), 20/40 being described as typical acuity at roughly age 80 — a derivation routed through display standards and clinical low-vision measurement, not through reading-performance studies. Meanwhile the reading psychophysics that does exist (read this session) reports normal fluent reading as strikingly tolerant of contrast reduction at fluent sizes — less than a factor-of-two speed loss over a tenfold contrast reduction for 1° characters — with the tolerance collapsing at small character sizes, exactly the size-contrast interaction a single blanket ratio cannot express; and the read critique documentation for the candidate successor model (APCA) asserts contrast mis-ranking against WCAG 2.x — most acutely for dark colors ("4.5:1 can be functionally unreadable when a color is near black," the polarity/dark-mode critique as documented on the read "Why APCA" page) — and spatial-frequency (size/weight) blindness, while itself citing no peer-reviewed validation of its own thresholds at the surfaces read. Minimum-size prescriptions in the base's practitioner artifact state values inside the psychophysically measured fluent range without claiming derivation from it.**
 
 ---
 
@@ -106,7 +106,7 @@ attribution:
 
 - **Small-size contrast collapse (SRC-0182, read):** the measured fourfold-to-total failure at 0.25° under reduced contrast — the documented failure mode of treating contrast adequacy as size-independent.
 - **Fluent-range upper bound (SRC-0179, read):** reading rate declines for very large print (beyond ~2° x-height) — oversizing is a measured cost, not a free safety margin.
-- **Documented mis-ranking claims against WCAG 2.x (SRC-0185, read; competing-model stake recorded):** the critique documentation asserts WCAG 2 "can pass colors that should fail as not readable" and can fail pairs that should pass, with dark-color/dark-mode over-statement ("4.5:1 can be functionally unreadable when a color is near black") — carried as the documented critique of the prescription, at its recorded stake, not as an adjudicated verdict.
+- **Documented mis-ranking claims against WCAG 2.x (SRC-0185 — specifically the "Why APCA as a New Contrast Method?" page, read; competing-model stake recorded):** that page asserts WCAG 2 "can pass colors that should fail as not readable" and can fail pairs that should pass, with dark-color/dark-mode over-statement ("4.5:1 can be functionally unreadable when a color is near black") — carried as the documented critique of the prescription, pinned to the page that carries it, at its recorded stake, not as an adjudicated verdict.
 - **Reserve insufficiency (SRC-0183, abstract level):** contrast reserves near 3:1 are associated with spot reading rather than fluent reading — the documented cost of minimum-threshold compliance read as adequacy.
 
 ---
@@ -165,6 +165,7 @@ The two psychophysics papers are peer-reviewed academic sources; the normative d
 # Revision History
 |Version|Date|Status|Description|
 |---|---|---|---|
+|0.2|2026-08-08|Draft|**Critical Review – RQ-0021 advisory adoption (A1). No grade changed.** The APCA "polarity mis-ranking" attribution pinned to its carrying surface: the claim statement now anchors the polarity/dark-mode critique on the read "Why APCA" page's own words, and element (iv) names that page as the carrier of the pass/fail mis-ranking assertions. All four components reviewer-confirmed and unchanged.|
 |0.1|2026-08-08|Draft|Created for RQ-0021 (Specialist pass), CLM-B of six — the WCAG-provenance interrogation the brief mandates. Four separable elements: (i) the 4.5:1/3:1 thresholds and size rules, read from the live artifacts (Moderate); (ii) the read derivation chain — ISO/ANSI 3:1 for standard vision, ×1.5 Arditi-Faye clinical adjustment, age-80 20/40 framing — verbatim from Understanding SC 1.4.3 (High); (iii) read contrast-tolerance and fluent-range psychophysics with the size-contrast interaction, the abstract-level reserve model, and bounded absences for any reading-validation of the specific thresholds on either side of the WCAG/APCA dispute (Moderate); (iv) small-size collapse, oversize cost, staked mis-ranking claims, reserve insufficiency (Moderate). Provenance verdict: the thresholds rest on standards adapted from other domains plus clinical adjustment, not reading measurement — recorded descriptively. No Level 5; R0. Pending Critical Review and structural validation.|
 
 # End CLM-0110

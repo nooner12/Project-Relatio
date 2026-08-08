@@ -1,7 +1,7 @@
 ---
 title: CLM-0109 - Typeface and Letterform Prescriptions
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-08-08
@@ -79,7 +79,7 @@ attribution:
 ---
 
 # Claim
-> **The typeface and letterform prescriptions — serif-vs-sans-serif selection rules, letter-spacing and line-spacing values, size-and-spacing rules of professional custom — are stated in this base's read prescription artifacts at specific values, while their measured reading-performance support at the surfaces accessible this session is either null (the serif question: one parametric measurement finding no significant reading-speed difference, and a doctoral critique of the 72-study lineage finding no valid conclusion in either direction), indirect (x-height as the operative size variable and font effects on critical print size, from the read vision-science review), or absent (no measured reading-performance evidence for the specific letter-spacing and line-spacing values prescribed). Where measurement exists it dissociates from preference: readers preferred the sans-serif variants of a font whose serif and sans-serif forms they read equally fast.**
+> **The typeface and letterform prescriptions — serif-vs-sans-serif selection rules, letter-spacing and line-spacing values, size-and-spacing rules of professional custom — are stated in this base's read prescription artifacts at specific values, while their measured reading-performance support at the surfaces accessible this session is either near-null (the serif question: one parametric measurement whose reading speeds "showed no effect of serifs" in RSVP and continuous reading, alongside a small size-threshold legibility advantage for slight (5%) serifs that the study attributes to the letter-spacing increase serifs impose — smaller than spacing alone predicts — and a doctoral critique of the 72-study lineage finding no valid conclusion in either direction), indirect (x-height as the operative size variable and font effects on critical print size, from the read vision-science review), or absent (no measured reading-performance evidence for the specific letter-spacing and line-spacing values prescribed). A reported preference for the sans-serif variants — carried from the citing literature, not establishable from the abstract — dissociates from the null speed result if it stands.**
 
 ---
 
@@ -98,7 +98,7 @@ attribution:
 
 # Element (iii) — Measured Human-Performance Evidence (including explicit bounded absence)
 
-- **The serif question, measured (SRC-0180, interior unread; abstract-establishable):** a specially designed parametric font varying only serif presence found **no significant reading-speed differences** between serif and sans-serif variants (RSVP and paper), alongside a **preference for the sans-serif variants** — a measured preference-performance dissociation. Single study; no replication record in this base.
+- **The serif question, measured (SRC-0180, interior unread; abstract-establishable except where marked):** using lower-case fonts varying only in serif size (0%, 5%, 10% of cap height), the study assessed legibility by **size thresholds and reading speed**. Abstract-verbatim: "RSVP and continuous reading speeds showed no effect of serifs"; "Five percentage serif fonts were slightly more legible than sans serif" on size thresholds, "but the average inter-letter spacing increase that serifs themselves impose, predicts greater enhancement than we observed"; the study's own summary — "our data exhibited no difference in legibility between typefaces that differ only in the presence or absence of serifs." A **reported preference for the sans-serif variants** circulates in the citing literature but is **not establishable from the abstract** and is carried at that lower access level only. Single study; no replication record in this base.
 - **The lineage's evidential status (SRC-0181, interior unread; surface-establishable):** the University of Reading doctoral examination of the serif/sans-serif legibility-research corpus is consistently described at the surfaces read as reviewing 72 comparison studies and finding **no valid conclusion in favour of either**. Carried at surface level only.
 - **The read guideline's own statement (SRC-0189, interior read):** "there is little reliable information on the comparative legibility of typefaces," with "some evidence" for sans-serif at small character sizes relative to acuity and "some evidence" for roman over italic — the prescription artifact itself reports the measured base as thin.
 - **Indirect size-variable evidence (SRC-0179, interior read):** x-height, not nominal point size, is the operative size measure in the psychophysics; critical print size varies with font (the review cites a measured font effect on CPS) — measured evidence that letterform proportion affects the size-speed relationship, without ranking any typeface.
@@ -107,7 +107,7 @@ attribution:
 
 # Element (iv) — Documented Costs and Failure Modes (from the sources; not inferred)
 
-- **Preference-performance dissociation (SRC-0180, abstract-level):** selection by preference does not track measured speed — readers preferred what they did not read faster. The one documented entry for the territory.
+- **Preference-performance dissociation (SRC-0180, citing-literature level — NOT abstract-establishable, disclosed):** the reported sans-serif preference beside the null speed result would mean selection by preference does not track measured speed; carried at the access level it actually has. The one documented entry for the territory, and a weak one.
 - **EXPLICITLY EMPTY beyond that** at the surfaces read; unread interiors may document more (the grade reflects this).
 
 ---
@@ -150,7 +150,7 @@ The measurement study and thesis are academic; the three prescription artifacts 
 - **May not be cited outside Relatio or for any external reliance (R0), regardless of INV-0021's closure state.**
 
 # Alternative Interpretations
-1. **"The null result vindicates sans-serif prescriptions."** Rejected — a no-difference finding supports neither pole's prescription; it dissolves the performance ground both cite.
+1. **"The null result vindicates sans-serif prescriptions."** Rejected — the speed null supports neither pole's prescription; and the abstract's small size-threshold advantage for slight serifs (attributed by the study to spacing) cuts against a sans-serif vindication reading rather than for it.
 2. **"Professional custom encodes accumulated implicit measurement."** Not established and not refuted — the custom's values (10–12 pt, 120–145%) fall inside the read psychophysical fluent range (SRC-0179), which is consistent with the custom tracking real constraints; but consistency is not derivation, and the sources claim no derivation.
 3. **"The absence of spacing-value evidence is a search failure."** Possible — bounded in place: the absence binds surfaces accessible this session, with the unread interiors named.
 
@@ -165,6 +165,7 @@ The measurement study and thesis are academic; the three prescription artifacts 
 # Revision History
 |Version|Date|Status|Description|
 |---|---|---|---|
+|0.2|2026-08-08|Draft|**Critical Review – RQ-0021 remediation (F2). No grade changed.** The serif-measurement content aligned to the primary's abstract, retrieved verbatim during the review: reading speeds "showed no effect of serifs" in **RSVP and continuous reading** (the "paper" misstatement removed); the abstract's **5%-serif size-threshold advantage** (attributed by the study to inter-letter spacing, smaller than spacing predicts) added to element (iii), which scopes thresholds; the **sans-serif preference relabeled to its true access level** (citing-literature, not abstract-establishable) in the claim statement, element (iii), and element (iv), with the dissociation carried conditionally. Alternative 1 adjusted for the size-threshold nuance. All four components reviewer-confirmed and unchanged.|
 |0.1|2026-08-08|Draft|Created for RQ-0021 (Specialist pass), CLM-A of six. Four separable elements: (i) the read prescription artifacts' typeface/spacing rules (Moderate); (ii) craft-custom and mechanism rationales, read (Moderate); (iii) the serif null at abstract level + the Lund lineage critique at surface + read indirect size-variable evidence + bounded absences for spacing values and populations (Moderate); (iv) the preference-performance dissociation, explicitly empty beyond (Low). Absences bounded to accessible surfaces from first draft. No Level 4/5; R0. Pending Critical Review and structural validation.|
 
 # End CLM-0109

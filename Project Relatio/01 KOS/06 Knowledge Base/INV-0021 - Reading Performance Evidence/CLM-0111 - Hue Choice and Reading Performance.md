@@ -1,7 +1,7 @@
 ---
 title: CLM-0111 - Hue Choice and Reading Performance
 document_type: Claim Record
-version: 0.1
+version: 0.2
 status: Draft
 operational_status: Active
 created: 2026-08-08
@@ -92,7 +92,7 @@ attribution:
 
 - **Chromatic-contrast reading, program one (SRC-0186, interior READ — abstract and conclusions extracted):** eight normal and ten low-vision subjects; drifting text on a color monitor; luminance contrast, red/green color contrast, and combinations. Verbatim: "When color contrast is high, normal subjects can read as rapidly as with high luminance contrast (>300 words/min)"; curves "are superimposed when contrast is measured in multiples of a threshold value"; "there is no sign of additive interaction."
 - **Chromatic-contrast reading, program two (SRC-0187, interior unread; abstract-establishable):** with moderate luminance contrast added, chromatic contrast neither helped nor hurt across a 30-fold character-size range; near the luminance-contrast reading threshold, chromatic contrast alone sustained reading rates near 300 words/min. Convergent with program one; different laboratory.
-- **Population sub-element — low vision (SRC-0186, read, verbatim):** "We found no advantages of color contrast for low-vision reading. For text composed of 60' characters, all low-vision subjects read better with luminance contrast than with color contrast."
+- **Population sub-element — low vision (SRC-0186, read, verbatim):** "We found no advantages of color contrast for low-vision reading. For text composed of 6° characters, all low-vision subjects read better with luminance contrast than with color contrast."
 - **EXPLICITLY ABSENT at the surfaces accessible this session:** measured hue effects on reading performance beyond the chromatic-contrast paradigm (e.g., specific-hue text/background pairings at matched contrast; color coding of continuous text; aging-reader hue effects; child-reader hue effects). The unread interiors (SRC-0187 and the rest of the base) are the disclosed holes this absence claim does not cover.
 
 # Element (iv) — Documented Costs and Failure Modes (from the sources; not inferred)
@@ -156,6 +156,7 @@ Both measurement papers are peer-reviewed academic sources; the guideline and no
 # Revision History
 |Version|Date|Status|Description|
 |---|---|---|---|
+|0.2|2026-08-08|Draft|**Critical Review – RQ-0021 remediation (F1). No grade changed.** The verbatim low-vision quote's character size corrected from "60' characters" to "6° characters" — a PDF-extraction artifact (the primary's degree symbol rendered as a stray digit in extracted text; the reviewer verified 6° against the primary's own rendering). All four components reviewer-confirmed and unchanged.|
 |0.1|2026-08-08|Draft|Created for RQ-0021 (Specialist pass), CLM-C of six. Four separable elements: (i) the thin hue-for-reading prescription pole — read restraint prescription + hue-blind normative formula, bounded (Low); (ii) the achievable-contrast rationale, read (Moderate); (iii) the two-program chromatic-contrast convergence — read verbatim equivalence findings + abstract-level second program + the read low-vision reversal + bounded absence beyond the paradigm (Moderate); (iv) the low-vision reversal and achievable-contrast costs, explicitly empty beyond (Moderate). The INV-0020 boundary honored; hue-response territory untouched. No Level 4/5; R0. Pending Critical Review and structural validation.|
 
 # End CLM-0111
