@@ -4,7 +4,7 @@ document_type: Source Record
 version: 0.1
 status: Draft
 operational_status: Active
-created: 2026-08-07
+created: 2026-08-08
 source_author: "Arditi, Aries; Cho, Jianna (2005)"
 source_url: "Serifs and font legibility. Vision Research, 45(23), 2926-2933 (2005). DOI 10.1016/j.visres.2005.06.013. https://doi.org/10.1016/j.visres.2005.06.013"
 publication_date: "2005"
@@ -29,7 +29,7 @@ attribution:
   - actor: Brian Noon
     role: Vision Steward
     event: created
-    date: 2026-08-07
+    date: 2026-08-08
     ai_degree: ai-delegated
     ai_model_family: Claude
 ---
@@ -70,6 +70,6 @@ An **academic experimental paper** in a principal vision-science journal, from t
 
 |Version|Date|Status|Description|
 |---|---|---|---|
-|0.1|2026-08-07|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED (authors, title, Vision Research 45(23):2926-2933, 2005, DOI 10.1016/j.visres.2005.06.013). Stake note recorded (shared authorship with the SRC-0189 prescription artifact). `related_to` SRC-0181 reciprocated as a topical relationship. Interior parametric; R0.|
+|0.1|2026-08-08|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED (authors, title, Vision Research 45(23):2926-2933, 2005, DOI 10.1016/j.visres.2005.06.013). Stake note recorded (shared authorship with the SRC-0189 prescription artifact). `related_to` SRC-0181 reciprocated as a topical relationship. Interior parametric; R0.|
 
 # End SRC-0180

@@ -4,7 +4,7 @@ document_type: Source Record
 version: 0.1
 status: Draft
 operational_status: Active
-created: 2026-08-07
+created: 2026-08-08
 source_author: "Dillon, Andrew (1992)"
 source_url: "Reading from paper versus screens: a critical review of the empirical literature. Ergonomics, 35(10), 1297-1326 (1992). DOI 10.1080/00140139208967394. Open repository copy: https://repository.arizona.edu/handle/10150/105748"
 publication_date: "1992"
@@ -29,7 +29,7 @@ attribution:
   - actor: Brian Noon
     role: Vision Steward
     event: created
-    date: 2026-08-07
+    date: 2026-08-08
     ai_degree: ai-delegated
     ai_model_family: Claude
 ---
@@ -69,6 +69,6 @@ An **academic critical review** in a principal ergonomics journal, written at th
 
 |Version|Date|Status|Description|
 |---|---|---|---|
-|0.1|2026-08-07|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED (author, title, Ergonomics 35(10):1297-1326, 1992, DOI 10.1080/00140139208967394) via T&F, Arizona repository, Semantic Scholar. Era-boundedness noted descriptively. `related_to` SRC-0191 reciprocated. Interior parametric (open repository copy, expected readable at circuit); R0.|
+|0.1|2026-08-08|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED (author, title, Ergonomics 35(10):1297-1326, 1992, DOI 10.1080/00140139208967394) via T&F, Arizona repository, Semantic Scholar. Era-boundedness noted descriptively. `related_to` SRC-0191 reciprocated. Interior parametric (open repository copy, expected readable at circuit); R0.|
 
 # End SRC-0190

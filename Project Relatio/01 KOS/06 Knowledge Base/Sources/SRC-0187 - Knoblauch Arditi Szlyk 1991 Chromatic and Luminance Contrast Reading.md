@@ -4,7 +4,7 @@ document_type: Source Record
 version: 0.1
 status: Draft
 operational_status: Active
-created: 2026-08-07
+created: 2026-08-08
 source_author: "Knoblauch, Kenneth; Arditi, Aries; Szlyk, Janet (1991)"
 source_url: "Effects of chromatic and luminance contrast on reading. Journal of the Optical Society of America A, 8(2), 428-439 (1991). PMID 2007918. https://opg.optica.org/josaa/abstract.cfm?uri=josaa-8-2-428"
 publication_date: "1991"
@@ -29,7 +29,7 @@ attribution:
   - actor: Brian Noon
     role: Vision Steward
     event: created
-    date: 2026-08-07
+    date: 2026-08-08
     ai_degree: ai-delegated
     ai_model_family: Claude
 ---
@@ -70,6 +70,6 @@ An **academic experimental paper** in a principal optics/vision journal, from th
 
 |Version|Date|Status|Description|
 |---|---|---|---|
-|0.1|2026-08-07|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED (authors, title, JOSA A 8(2):428-439, 1991, PMID 2007918) via Optica, PubMed, Semantic Scholar. Stake note recorded (Lighthouse program spans measurement and guidance records in this base). `related_to` SRC-0186 reciprocated as a topical relationship. Interior parametric, paywalled; R0.|
+|0.1|2026-08-08|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED (authors, title, JOSA A 8(2):428-439, 1991, PMID 2007918) via Optica, PubMed, Semantic Scholar. Stake note recorded (Lighthouse program spans measurement and guidance records in this base). `related_to` SRC-0186 reciprocated as a topical relationship. Interior parametric, paywalled; R0.|
 
 # End SRC-0187

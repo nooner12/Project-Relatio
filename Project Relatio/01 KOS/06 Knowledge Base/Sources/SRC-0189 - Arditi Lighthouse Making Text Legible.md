@@ -4,9 +4,9 @@ document_type: Source Record
 version: 0.1
 status: Draft
 operational_status: Active
-created: 2026-08-07
+created: 2026-08-08
 source_author: "Arditi, Aries (Lighthouse International)"
-source_url: "Making Text Legible: Designing for People with Partial Sight. Lighthouse International guideline brochure, c. 1995 onward; mirrored PDF and successor pages live as of 2026-08-07. https://accessible-techcomm.org/wp-content/uploads/making_text_legible.pdf and https://lighthouseguild.org/training/low-vision-resources/making-text-legible/"
+source_url: "Making Text Legible: Designing for People with Partial Sight. Lighthouse International guideline brochure, c. 1995 onward; mirrored PDF and successor pages live as of 2026-08-08. https://accessible-techcomm.org/wp-content/uploads/making_text_legible.pdf and https://lighthouseguild.org/training/low-vision-resources/making-text-legible/"
 publication_date: "c. 1995 (undated editions circulate; Lighthouse International is now Lighthouse Guild)"
 category:
   - Knowledge Base
@@ -25,7 +25,7 @@ attribution:
   - actor: Brian Noon
     role: Vision Steward
     event: created
-    date: 2026-08-07
+    date: 2026-08-08
     ai_degree: ai-delegated
     ai_model_family: Claude
 ---
@@ -67,6 +67,6 @@ A **prescription artifact authored by a vision scientist** whose own laboratory 
 
 |Version|Date|Status|Description|
 |---|---|---|---|
-|0.1|2026-08-07|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED at surface (existence, authorship, title, content outline; mirrored PDF + Lighthouse Guild successor page). Derived-prescription role and shared-authorship stake note recorded. Interior unread at cataloguing (mirrored PDF expected readable at circuit); edition identity weak, disclosed. R0.|
+|0.1|2026-08-08|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED at surface (existence, authorship, title, content outline; mirrored PDF + Lighthouse Guild successor page). Derived-prescription role and shared-authorship stake note recorded. Interior unread at cataloguing (mirrored PDF expected readable at circuit); edition identity weak, disclosed. R0.|
 
 # End SRC-0189

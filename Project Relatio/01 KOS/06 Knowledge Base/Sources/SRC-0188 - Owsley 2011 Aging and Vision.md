@@ -4,7 +4,7 @@ document_type: Source Record
 version: 0.1
 status: Draft
 operational_status: Active
-created: 2026-08-07
+created: 2026-08-08
 source_author: "Owsley, Cynthia (2011)"
 source_url: "Aging and vision. Vision Research, 51(13), 1610-1622 (2011). DOI 10.1016/j.visres.2010.10.020. PMID 20974168. https://doi.org/10.1016/j.visres.2010.10.020"
 publication_date: "2011"
@@ -24,7 +24,7 @@ attribution:
   - actor: Brian Noon
     role: Vision Steward
     event: created
-    date: 2026-08-07
+    date: 2026-08-08
     ai_degree: ai-delegated
     ai_model_family: Claude
 ---
@@ -63,6 +63,6 @@ An **academic narrative review** in a principal vision-science journal, marking 
 
 |Version|Date|Status|Description|
 |---|---|---|---|
-|0.1|2026-08-07|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED (author, title, Vision Research 51(13):1610-1622, 2011, DOI 10.1016/j.visres.2010.10.020, PMID 20974168) via ScienceDirect and PubMed. CLM-D anchor candidate; interior prioritized for circuit reading per the brief. Interior parametric at cataloguing; R0.|
+|0.1|2026-08-08|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED (author, title, Vision Research 51(13):1610-1622, 2011, DOI 10.1016/j.visres.2010.10.020, PMID 20974168) via ScienceDirect and PubMed. CLM-D anchor candidate; interior prioritized for circuit reading per the brief. Interior parametric at cataloguing; R0.|
 
 # End SRC-0188

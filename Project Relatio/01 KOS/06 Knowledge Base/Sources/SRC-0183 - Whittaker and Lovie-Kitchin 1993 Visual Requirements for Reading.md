@@ -4,7 +4,7 @@ document_type: Source Record
 version: 0.1
 status: Draft
 operational_status: Active
-created: 2026-08-07
+created: 2026-08-08
 source_author: "Whittaker, Stephen G.; Lovie-Kitchin, Jan (1993)"
 source_url: "Visual requirements for reading. Optometry and Vision Science, 70(1), 54-65 (1993). PMID 8430009. https://journals.lww.com/optvissci/abstract/1993/01000/visual_requirements_for_reading.10.aspx"
 publication_date: "1993"
@@ -24,7 +24,7 @@ attribution:
   - actor: Brian Noon
     role: Vision Steward
     event: created
-    date: 2026-08-07
+    date: 2026-08-08
     ai_degree: ai-delegated
     ai_model_family: Claude
 ---
@@ -63,6 +63,6 @@ An **academic review/synthesis paper** in the principal optometry research journ
 
 |Version|Date|Status|Description|
 |---|---|---|---|
-|0.1|2026-08-07|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED (authors, title, Optom Vis Sci 70(1):54-65, 1993, PMID 8430009) via PubMed, LWW, Semantic Scholar; reserve thresholds recorded from abstract and citing surfaces, so marked. Interior parametric, paywalled; R0.|
+|0.1|2026-08-08|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED (authors, title, Optom Vis Sci 70(1):54-65, 1993, PMID 8430009) via PubMed, LWW, Semantic Scholar; reserve thresholds recorded from abstract and citing surfaces, so marked. Interior parametric, paywalled; R0.|
 
 # End SRC-0183

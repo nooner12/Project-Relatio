@@ -4,7 +4,7 @@ document_type: Source Record
 version: 0.1
 status: Draft
 operational_status: Active
-created: 2026-08-07
+created: 2026-08-08
 source_author: "Delgado, Pablo; Vargas, Cristina; Ackerman, Rakefet; Salmerón, Ladislao (2018)"
 source_url: "Don't throw away your printed books: A meta-analysis on the effects of reading media on reading comprehension. Educational Research Review, 25, 23-38 (2018). DOI 10.1016/j.edurev.2018.09.003. Author-hosted copy: https://www.uv.es/lasalgon/papers/Delgado%202018%20dont%20throw%20away%20your%20printed%20books.pdf"
 publication_date: "2018"
@@ -29,7 +29,7 @@ attribution:
   - actor: Brian Noon
     role: Vision Steward
     event: created
-    date: 2026-08-07
+    date: 2026-08-08
     ai_degree: ai-delegated
     ai_model_family: Claude
 ---
@@ -68,6 +68,6 @@ An **academic meta-analysis** in a principal educational-research review journal
 
 |Version|Date|Status|Description|
 |---|---|---|---|
-|0.1|2026-08-07|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED (authors, title, Educ Res Rev 25:23-38, 2018, DOI 10.1016/j.edurev.2018.09.003) via Elsevier, institutional repositories, Semantic Scholar. Population-sub-element carrier for the medium question. `related_to` SRC-0190 reciprocated. Interior parametric (author-hosted copy, expected readable at circuit); R0.|
+|0.1|2026-08-08|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED (authors, title, Educ Res Rev 25:23-38, 2018, DOI 10.1016/j.edurev.2018.09.003) via Elsevier, institutional repositories, Semantic Scholar. Population-sub-element carrier for the medium question. `related_to` SRC-0190 reciprocated. Interior parametric (author-hosted copy, expected readable at circuit); R0.|
 
 # End SRC-0191

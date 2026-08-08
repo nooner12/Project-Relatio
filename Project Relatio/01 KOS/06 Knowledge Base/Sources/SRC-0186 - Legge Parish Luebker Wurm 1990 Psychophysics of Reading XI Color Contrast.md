@@ -4,7 +4,7 @@ document_type: Source Record
 version: 0.1
 status: Draft
 operational_status: Active
-created: 2026-08-07
+created: 2026-08-08
 source_author: "Legge, Gordon E.; Parish, David H.; Luebker, Andrew; Wurm, Lee H. (1990)"
 source_url: "Psychophysics of reading. XI. Comparing color contrast and luminance contrast. Journal of the Optical Society of America A, 7(10), 2002-2010 (1990). PMID 2231110. https://opg.optica.org/josaa/abstract.cfm?uri=josaa-7-10-2002"
 publication_date: "1990"
@@ -29,7 +29,7 @@ attribution:
   - actor: Brian Noon
     role: Vision Steward
     event: created
-    date: 2026-08-07
+    date: 2026-08-08
     ai_degree: ai-delegated
     ai_model_family: Claude
 ---
@@ -68,6 +68,6 @@ An **academic experimental paper** in a principal optics/vision journal, part of
 
 |Version|Date|Status|Description|
 |---|---|---|---|
-|0.1|2026-08-07|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED (authors, title, JOSA A 7(10):2002-2010, 1990, PMID 2231110) via Optica, PubMed, Experts@Minnesota. `related_to` SRC-0187 reciprocated as a topical relationship. Interior parametric (lab-hosted PDF, expected readable at circuit); R0.|
+|0.1|2026-08-08|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED (authors, title, JOSA A 7(10):2002-2010, 1990, PMID 2231110) via Optica, PubMed, Experts@Minnesota. `related_to` SRC-0187 reciprocated as a topical relationship. Interior parametric (lab-hosted PDF, expected readable at circuit); R0.|
 
 # End SRC-0186

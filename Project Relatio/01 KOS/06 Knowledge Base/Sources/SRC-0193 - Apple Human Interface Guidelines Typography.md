@@ -4,9 +4,9 @@ document_type: Source Record
 version: 0.1
 status: Draft
 operational_status: Active
-created: 2026-08-07
+created: 2026-08-08
 source_author: "Apple Inc. (corporate; no individual author stated)"
-source_url: "Typography. Apple Human Interface Guidelines, Apple Developer Documentation, live page as of 2026-08-07. https://developer.apple.com/design/human-interface-guidelines/typography"
+source_url: "Typography. Apple Human Interface Guidelines, Apple Developer Documentation, live page as of 2026-08-08. https://developer.apple.com/design/human-interface-guidelines/typography"
 publication_date: "n/a — living platform documentation"
 category:
   - Knowledge Base
@@ -25,7 +25,7 @@ attribution:
   - actor: Brian Noon
     role: Vision Steward
     event: created
-    date: 2026-08-07
+    date: 2026-08-08
     ai_degree: ai-delegated
     ai_model_family: Claude
 ---
@@ -62,12 +62,12 @@ A **primary artifact of the practice being studied**: the most widely applied sm
 
 # 5. Verification (STD-0006 §5.7 / §7.5)
 
-**Live-read this session (page text) — the strongest-verified platform record in this base.** URL live and serving the documentation as of 2026-08-07; the size tables, weight guidance, and the absence of cited research verified by direct reading of the retrieved page text. Language: English. **Reliance: R0 — not cleared for external reliance; not citable outside Relatio.** No fabrication.
+**Live-read this session (page text) — the strongest-verified platform record in this base.** URL live and serving the documentation as of 2026-08-08; the size tables, weight guidance, and the absence of cited research verified by direct reading of the retrieved page text. Language: English. **Reliance: R0 — not cleared for external reliance; not citable outside Relatio.** No fabrication.
 
 # 6. Revision History
 
 |Version|Date|Status|Description|
 |---|---|---|---|
-|0.1|2026-08-07|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. Page LIVE-READ this session: per-platform default/minimum size tables recorded (iOS 17/11 pt etc.); ZERO cited studies or research references found on the page — the citation trail terminates in assertion at the artifact (recorded at the surface read). Platform-vendor (i)/(ii)-pole-only role and commercial stake note recorded. Living-document limitation disclosed. R0.|
+|0.1|2026-08-08|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. Page LIVE-READ this session: per-platform default/minimum size tables recorded (iOS 17/11 pt etc.); ZERO cited studies or research references found on the page — the citation trail terminates in assertion at the artifact (recorded at the surface read). Platform-vendor (i)/(ii)-pole-only role and commercial stake note recorded. Living-document limitation disclosed. R0.|
 
 # End SRC-0193

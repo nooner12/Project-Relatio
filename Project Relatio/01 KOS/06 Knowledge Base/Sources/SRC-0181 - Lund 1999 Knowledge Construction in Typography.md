@@ -4,7 +4,7 @@ document_type: Source Record
 version: 0.1
 status: Draft
 operational_status: Active
-created: 2026-08-07
+created: 2026-08-08
 source_author: "Lund, Ole (1999)"
 source_url: "Knowledge construction in typography: the case of legibility research and the legibility of sans serif typefaces. PhD thesis, Department of Typography & Graphic Communication, The University of Reading (1999). https://www.researchgate.net/publication/33775804"
 publication_date: "1999"
@@ -29,7 +29,7 @@ attribution:
   - actor: Brian Noon
     role: Vision Steward
     event: created
-    date: 2026-08-07
+    date: 2026-08-08
     ai_degree: ai-delegated
     ai_model_family: Claude
 ---
@@ -68,6 +68,6 @@ A **doctoral thesis at the field's principal typographic research department**, 
 
 |Version|Date|Status|Description|
 |---|---|---|---|
-|0.1|2026-08-07|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED (author, title, University of Reading PhD thesis, 1999) via ResearchGate, NVA, and citing bibliographies; 72-study count from secondary surfaces, so marked. `related_to` SRC-0180 reciprocated as a topical relationship. Interior parametric, access uncertain; R0.|
+|0.1|2026-08-08|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED (author, title, University of Reading PhD thesis, 1999) via ResearchGate, NVA, and citing bibliographies; 72-study count from secondary surfaces, so marked. `related_to` SRC-0180 reciprocated as a topical relationship. Interior parametric, access uncertain; R0.|
 
 # End SRC-0181

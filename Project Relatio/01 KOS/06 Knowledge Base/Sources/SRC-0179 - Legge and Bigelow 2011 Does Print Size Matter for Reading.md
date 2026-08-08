@@ -4,7 +4,7 @@ document_type: Source Record
 version: 0.1
 status: Draft
 operational_status: Active
-created: 2026-08-07
+created: 2026-08-08
 source_author: "Legge, Gordon E.; Bigelow, Charles A. (2011)"
 source_url: "Does print size matter for reading? A review of findings from vision science and typography. Journal of Vision, 11(5):8, 1-22 (2011). DOI 10.1167/11.5.8. https://jov.arvojournals.org/article.aspx?articleid=2191906"
 publication_date: "2011"
@@ -29,7 +29,7 @@ attribution:
   - actor: Brian Noon
     role: Vision Steward
     event: created
-    date: 2026-08-07
+    date: 2026-08-08
     ai_degree: ai-delegated
     ai_model_family: Claude
 ---
@@ -70,6 +70,6 @@ An **academic review in an open-access vision-science journal**, spanning both t
 
 |Version|Date|Status|Description|
 |---|---|---|---|
-|0.1|2026-08-07|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED (authors, title, J Vision 11(5):8, 2011, DOI 10.1167/11.5.8, PMID 21828237). Stake notes recorded (type-designer co-author; originator-review provenance). `related_to` SRC-0182 reciprocated as a research-program relationship. Interior parametric (open access, expected readable at circuit); R0.|
+|0.1|2026-08-08|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED (authors, title, J Vision 11(5):8, 2011, DOI 10.1167/11.5.8, PMID 21828237). Stake notes recorded (type-designer co-author; originator-review provenance). `related_to` SRC-0182 reciprocated as a research-program relationship. Interior parametric (open access, expected readable at circuit); R0.|
 
 # End SRC-0179

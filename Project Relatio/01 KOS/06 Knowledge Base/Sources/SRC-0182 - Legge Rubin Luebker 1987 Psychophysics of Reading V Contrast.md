@@ -4,7 +4,7 @@ document_type: Source Record
 version: 0.1
 status: Draft
 operational_status: Active
-created: 2026-08-07
+created: 2026-08-08
 source_author: "Legge, Gordon E.; Rubin, Gary S.; Luebker, Andrew (1987)"
 source_url: "Psychophysics of reading - V. The role of contrast in normal vision. Vision Research, 27(7), 1165-1177 (1987). https://legge.psych.umn.edu/sites/legge.psych.umn.edu/files/2020-08/psychophysics_of_reading-v._the_role_of_contrast_in_normal_vision_legge_rubin_luebker_1987.pdf"
 publication_date: "1987"
@@ -29,7 +29,7 @@ attribution:
   - actor: Brian Noon
     role: Vision Steward
     event: created
-    date: 2026-08-07
+    date: 2026-08-08
     ai_degree: ai-delegated
     ai_model_family: Claude
 ---
@@ -68,6 +68,6 @@ An **academic experimental paper** in a principal vision-science journal, part o
 
 |Version|Date|Status|Description|
 |---|---|---|---|
-|0.1|2026-08-07|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED (authors, title, Vision Research 27(7):1165-1177, 1987) via Experts@Minnesota and the laboratory-hosted PDF header. `related_to` SRC-0179 reciprocated as a research-program relationship. Interior parametric (lab-hosted PDF, expected readable at circuit); R0.|
+|0.1|2026-08-08|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED (authors, title, Vision Research 27(7):1165-1177, 1987) via Experts@Minnesota and the laboratory-hosted PDF header. `related_to` SRC-0179 reciprocated as a research-program relationship. Interior parametric (lab-hosted PDF, expected readable at circuit); R0.|
 
 # End SRC-0182

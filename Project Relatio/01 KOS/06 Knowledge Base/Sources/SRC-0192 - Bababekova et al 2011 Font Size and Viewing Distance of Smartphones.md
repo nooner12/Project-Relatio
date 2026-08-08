@@ -4,7 +4,7 @@ document_type: Source Record
 version: 0.1
 status: Draft
 operational_status: Active
-created: 2026-08-07
+created: 2026-08-08
 source_author: "Bababekova, Yuliya; Rosenfield, Mark; Hue, Jennifer E.; Huang, Rae R. (2011)"
 source_url: "Font size and viewing distance of handheld smart phones. Optometry and Vision Science, 88(7), 795-797 (2011). DOI 10.1097/OPX.0b013e3182198792. https://journals.lww.com/optvissci/Fulltext/2011/07000/Font_Size_and_Viewing_Distance_of_Handheld_Smart.5.aspx"
 publication_date: "2011"
@@ -24,7 +24,7 @@ attribution:
   - actor: Brian Noon
     role: Vision Steward
     event: created
-    date: 2026-08-07
+    date: 2026-08-08
     ai_degree: ai-delegated
     ai_model_family: Claude
 ---
@@ -63,6 +63,6 @@ A **short academic measurement paper** in the principal optometry research journ
 
 |Version|Date|Status|Description|
 |---|---|---|---|
-|0.1|2026-08-07|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED (authors, title, Optom Vis Sci 88(7):795-797, 2011, DOI 10.1097/OPX.0b013e3182198792) via LWW, Wiley, Semantic Scholar. Interior parametric; R0.|
+|0.1|2026-08-08|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. VERIFIED (authors, title, Optom Vis Sci 88(7):795-797, 2011, DOI 10.1097/OPX.0b013e3182198792) via LWW, Wiley, Semantic Scholar. Interior parametric; R0.|
 
 # End SRC-0192

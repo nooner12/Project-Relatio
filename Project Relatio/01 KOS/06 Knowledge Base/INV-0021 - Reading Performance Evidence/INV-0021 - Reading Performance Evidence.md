@@ -4,7 +4,7 @@ document_type: Investigation Record
 version: 0.1
 status: Draft
 operational_status: Active
-created: 2026-08-07
+created: 2026-08-08
 category:
   - Knowledge Base
   - Design Psychology
@@ -21,7 +21,7 @@ attribution:
   - actor: Brian Noon
     role: Vision Steward
     event: created
-    date: 2026-08-07
+    date: 2026-08-08
     ai_degree: ai-delegated
     ai_model_family: Claude
 ---
@@ -225,6 +225,6 @@ From the catalog surface only; a source may bear on other claims, or on none —
 
 |Version|Date|Status|Description|
 |---|---|---|---|
-|0.1|2026-08-07|Draft|**Opened as a scaffold (UNFILLED) — the scaffold commit creates no claim, entity, edge, or finding** (house pattern per INV-0016…INV-0020 and ADR-GOV-0004 D4; the executing brief — REISSUE v2, 2026-08-07, classified C+A+B combined three-phase per the Transfer Brief Standard §5 — directs prep, scaffold, and circuit in one session, a recorded deviation from the two-brief RQ-freeze pattern as precedented by INV-0020; the circuit fills this record under the same brief after this commit; no separate owner freeze checkpoint is scheduled between scaffold and circuit — reported in the execution report). Authored from **TPL-0003**. Records the §1 primary RQ **verbatim from the owner's brief**; the §1.1 **six-claim decomposition mandate** (CLM-A typeface/letterform / CLM-B size-contrast thresholds incl. WCAG provenance / CLM-C hue and reading / CLM-D aging vision, the calibration anchor / CLM-E print vs screen / CLM-F small-screen) with the four separable elements **(i) prescriptive approach / (ii) stated rationale / (iii) measured human-performance evidence incl. explicit bounded absence / (iv) documented costs and failure modes**, the (iii)-vs-(iv) separability test, and the (iv) analyst-inference removal rule; the §2 scope disciplines (domain-general; the INV-0020 boundary; prescription-pole brackets; preference ≠ performance; threshold ≠ optimum ≠ prescription; absence bounded from birth per INV-0020 F2; stakes recorded not adjudicated; base limits); the §3 method with operative blockquote rules incl. **prescriptive-strength testing and derivation testing**; §4/§5 reserved; §6 standing brackets; the **Reserved Reflexive Section** (named, empty, §7.6-gated, four mandated contents incl. the GB-2026-058 third-data-point discipline); the **ten §7 acceptance criteria**; §8 prose relationships (no frontmatter edges to non-existent objects). Source base **fixed at sixteen (SRC-0179…SRC-0194, Registry v1.52)**; no SRC/CLM/ENT/FND identifier consumed by this scaffold. Template-section mapping matches the INV-0019/INV-0020 precedent (template §7 Relationships → §8 here; template §8 Revision History → §9 here; §7 here is Acceptance Criteria).|
+|0.1|2026-08-08|Draft|**Opened as a scaffold (UNFILLED) — the scaffold commit creates no claim, entity, edge, or finding** (house pattern per INV-0016…INV-0020 and ADR-GOV-0004 D4; the executing brief — REISSUE v2, 2026-08-07, classified C+A+B combined three-phase per the Transfer Brief Standard §5 — directs prep, scaffold, and circuit in one session, a recorded deviation from the two-brief RQ-freeze pattern as precedented by INV-0020; the circuit fills this record under the same brief after this commit; no separate owner freeze checkpoint is scheduled between scaffold and circuit — reported in the execution report). Authored from **TPL-0003**. Records the §1 primary RQ **verbatim from the owner's brief**; the §1.1 **six-claim decomposition mandate** (CLM-A typeface/letterform / CLM-B size-contrast thresholds incl. WCAG provenance / CLM-C hue and reading / CLM-D aging vision, the calibration anchor / CLM-E print vs screen / CLM-F small-screen) with the four separable elements **(i) prescriptive approach / (ii) stated rationale / (iii) measured human-performance evidence incl. explicit bounded absence / (iv) documented costs and failure modes**, the (iii)-vs-(iv) separability test, and the (iv) analyst-inference removal rule; the §2 scope disciplines (domain-general; the INV-0020 boundary; prescription-pole brackets; preference ≠ performance; threshold ≠ optimum ≠ prescription; absence bounded from birth per INV-0020 F2; stakes recorded not adjudicated; base limits); the §3 method with operative blockquote rules incl. **prescriptive-strength testing and derivation testing**; §4/§5 reserved; §6 standing brackets; the **Reserved Reflexive Section** (named, empty, §7.6-gated, four mandated contents incl. the GB-2026-058 third-data-point discipline); the **ten §7 acceptance criteria**; §8 prose relationships (no frontmatter edges to non-existent objects). Source base **fixed at sixteen (SRC-0179…SRC-0194, Registry v1.52)**; no SRC/CLM/ENT/FND identifier consumed by this scaffold. Template-section mapping matches the INV-0019/INV-0020 precedent (template §7 Relationships → §8 here; template §8 Revision History → §9 here; §7 here is Acceptance Criteria).|
 
 # End INV-0021

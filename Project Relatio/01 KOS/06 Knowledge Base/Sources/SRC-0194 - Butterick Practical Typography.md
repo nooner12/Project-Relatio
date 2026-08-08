@@ -4,7 +4,7 @@ document_type: Source Record
 version: 0.1
 status: Draft
 operational_status: Active
-created: 2026-08-07
+created: 2026-08-08
 source_author: "Butterick, Matthew"
 source_url: "Butterick's Practical Typography (2nd edition, web book), 'Summary of key rules' page live-read this session. https://practicaltypography.com/summary-of-key-rules.html"
 publication_date: "2010-present (web book, continuously revised; 2nd edition)"
@@ -25,7 +25,7 @@ attribution:
   - actor: Brian Noon
     role: Vision Steward
     event: created
-    date: 2026-08-07
+    date: 2026-08-08
     ai_degree: ai-delegated
     ai_model_family: Claude
 ---
@@ -62,12 +62,12 @@ A **primary artifact of the practice being studied**: a professional practitione
 
 # 5. Verification (STD-0006 §5.7 / §7.5)
 
-**Live-read this session (summary page text).** URL live and serving the web book as of 2026-08-07; the point-size, line-spacing, and line-length rules and the absence of citations on that page verified by direct reading of the retrieved page text. Language: English. **Reliance: R0 — not cleared for external reliance; not citable outside Relatio.** No fabrication.
+**Live-read this session (summary page text).** URL live and serving the web book as of 2026-08-08; the point-size, line-spacing, and line-length rules and the absence of citations on that page verified by direct reading of the retrieved page text. Language: English. **Reliance: R0 — not cleared for external reliance; not citable outside Relatio.** No fabrication.
 
 # 6. Revision History
 
 |Version|Date|Status|Description|
 |---|---|---|---|
-|0.1|2026-08-07|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. Summary page LIVE-READ this session: point-size (10-12pt print / 15-25px web), line-spacing (120-145%), and line-length (45-90 chars) rules recorded; no citations on the surface read, so recorded and bounded. Practitioner (i)/(ii)-pole-only role and commercial stake note recorded. Living-document limitation disclosed. R0.|
+|0.1|2026-08-08|Draft|Created (cataloguing only, ADR-GOV-0003 pattern) as a reading-performance prep source-base record. Summary page LIVE-READ this session: point-size (10-12pt print / 15-25px web), line-spacing (120-145%), and line-length (45-90 chars) rules recorded; no citations on the surface read, so recorded and bounded. Practitioner (i)/(ii)-pole-only role and commercial stake note recorded. Living-document limitation disclosed. R0.|
 
 # End SRC-0194
